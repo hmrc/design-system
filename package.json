@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp",
     "start": "",
-    "build": "DEBUG=metalsmith-in-place ./node_modules/.bin/metalsmith && gulp scss:compile"
+    "build": "DEBUG=metalsmith-in-place ./node_modules/.bin/metalsmith && gulp"
   },
   "engines": {
     "node": "8.12.0"
