@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HMRC Design System</title>
+    <link type="text/css" rel="stylesheet" href="govuk-frontend.min.css">
+    <!--[if lt IE 8]>
+        <link type="text/css" rel="stylesheet" href="govuk-frontend-ie8.min.css">
+    <[endif]-->
+</head>
+<body>
+{% include './partials/header.njk' %}
+{% include './partials/'+layout+'.njk' %}
+{%- block content -%}{%- endblock -%}
+</body>
+</html>

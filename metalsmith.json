@@ -5,7 +5,8 @@
     "metalsmith-in-place": {
       "engineOptions": {
         "path": [
-          "./src"
+          "./src",
+          "./templates"
         ]
       }
     }
