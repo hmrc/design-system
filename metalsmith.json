@@ -1,0 +1,13 @@
+{
+  "source": "src/",
+  "destination": "dist",
+  "plugins": {
+    "metalsmith-in-place": {
+      "engineOptions": {
+        "path": [
+          "./src"
+        ]
+      }
+    }
+  }
+}
