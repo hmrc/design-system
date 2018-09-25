@@ -16,7 +16,23 @@ const errorHandler = function (error) {
   this.emit('end')
 }
 
-gulp.task('scss:compile', () => {
+gulp.task('scss:compile', ['scss:govuk-frontend', 'scss:hmrc-design-system'])
+
+gulp.task('scss:hmrc-design-system', () => {
+  return gulp.src('./scss/hmrc-design-system.scss')
+    .pipe(plumber(errorHandler))
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer,
+      cssnano
+    ]))
+    .pipe(rename({
+      extname: '.min.css'
+    }))
+    .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('scss:govuk-frontend', () => {
   let compile = gulp.src('./node_modules/govuk-frontend/all.scss')
     .pipe(plumber(errorHandler))
     .pipe(sass())
@@ -26,9 +42,9 @@ gulp.task('scss:compile', () => {
       cssnano
     ]))
     .pipe(rename({
-        basename: 'govuk-frontend',
-        extname: '.min.css'
-      })
+      basename: 'govuk-frontend',
+      extname: '.min.css'
+    })
     )
     .pipe(gulp.dest('./dist'))
 
@@ -41,20 +57,20 @@ gulp.task('scss:compile', () => {
       cssnano,
       // transpile css for ie https://github.com/jonathantneal/oldie
       require('oldie')({
-        rgba: {filter: true},
-        rem: {disable: true},
-        unmq: {disable: true},
-        pseudo: {disable: true}
+        rgba: { filter: true },
+        rem: { disable: true },
+        unmq: { disable: true },
+        pseudo: { disable: true }
         // more rules go here
       })
     ]))
     .pipe(postcss([
       autoprefixer,
       require('oldie')({
-        rgba: {filter: true},
-        rem: {disable: true},
-        unmq: {disable: true},
-        pseudo: {disable: true}
+        rgba: { filter: true },
+        rem: { disable: true },
+        unmq: { disable: true },
+        pseudo: { disable: true }
         // more rules go here
       })
     ]))
@@ -68,4 +84,3 @@ gulp.task('scss:compile', () => {
 
   return merge(compile, compileOldIe)
 })
-
