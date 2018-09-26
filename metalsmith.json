@@ -6,7 +6,7 @@
       "engineOptions": {
         "path": [
           "./src",
-          "./templates"
+          "./application/templates"
         ]
       }
     }

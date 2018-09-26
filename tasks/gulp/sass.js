@@ -19,7 +19,7 @@ const errorHandler = function (error) {
 gulp.task('scss:compile', ['scss:govuk-frontend', 'scss:hmrc-design-system'])
 
 gulp.task('scss:hmrc-design-system', () => {
-  return gulp.src('./scss/hmrc-design-system.scss')
+  return gulp.src('./application/scss/hmrc-design-system.scss')
     .pipe(plumber(errorHandler))
     .pipe(sass())
     .pipe(postcss([
