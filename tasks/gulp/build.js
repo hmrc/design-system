@@ -1,7 +1,8 @@
 const gulp = require('gulp')
-const { log } = require('gulp-util')
+const logger = require('gulp-util').log
+
 gulp.task('build', () => {
-  log('Metalsmith build starting')
+  logger('Metalsmith build starting')
   const Metalsmith = require('metalsmith')
   const inPlace = require('metalsmith-in-place')
   const path = require('path')
@@ -14,7 +15,7 @@ gulp.task('build', () => {
   ]
 
   return Metalsmith(projectRoot)
-    .use(debug)
+    .use(debug())
     .source('./src')
     .destination('./dist')
     .clean(true)
