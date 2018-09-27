@@ -33,6 +33,7 @@ gulp.task('scss:hmrc-design-system', () => {
 })
 
 gulp.task('scss:govuk-frontend', () => {
+  // ToDo: compile an Old IE version of our local css
   let compile = gulp.src('./node_modules/govuk-frontend/all.scss')
     .pipe(plumber(errorHandler))
     .pipe(sass())
