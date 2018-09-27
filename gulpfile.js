@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const { execSync } = require('child_process')
 
+require('./tasks/gulp/clean')
 require('./tasks/gulp/build')
 require('./tasks/gulp/sass')
 require('./tasks/gulp/copy-assets')
