@@ -1,11 +1,10 @@
 // 1. Expect example macro to render a header
+/* global DOMParser describe test expect */
 
-const fs = require('fs')
+const { JSDOM } = require('jsdom')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
-// const macro = fs.readFileSync(path.join(__dirname, '..', 'macros', 'example.macro.njk')).toString()
-let HtmlDomDoc = new Document()
-console.log(HtmlDomDoc)
+let baseDocument = new JSDOM('<!DOCTYPE html><html><head></head><body><div id="exampleContainer"></div></body></html>', { contentType: 'text/html' }).window.document
 const options = {
   path: path.join(__dirname, '..', 'macros')
 }
@@ -17,9 +16,9 @@ describe('Example macro', () => {
     
     {{ example({html: 'Hello'}) }}`
 
-    const htmlString = nunjucks.render(templateString, options)
-    console.log(htmlString)
+    const htmlString = nunjucks.render(templateString, options).body
+    baseDocument.getElementById('exampleContainer').innerHTML = htmlString
+    console.log(baseDocument.body.innerHTML)
     expect(htmlString).toContain('Hello')
   })
 })
-
