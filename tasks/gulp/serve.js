@@ -1,6 +1,19 @@
 const gulp = require('gulp')
-const { execSync } = require('child_process')
+const webserver = require('gulp-webserver')
+const pathFromRoot = require('./util').pathFromRoot
 
 gulp.task('serve', () => {
-  execSync('./node_modules/.bin/http-server ./dist -a 127.0.0.1 -p 3000')
+  gulp.src(pathFromRoot('dist'))
+    .pipe(webserver({
+      livereload: true,
+      open: false,
+      middleware: (req, res, next) => {
+        if (req.url === '/') {
+          res.writeHead(302, { location: '/index.html' })
+          res.end()
+        } else {
+          next()
+        }
+      }
+    }))
 })

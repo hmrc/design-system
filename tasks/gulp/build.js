@@ -1,33 +1,38 @@
 const gulp = require('gulp')
-const util = require('gulp-util')
+const logger = require('gulp-util').log
+const path = require('path')
+const Metalsmith = require('metalsmith')
+const inPlace = require('metalsmith-in-place')
+const debug = require('metalsmith-debug')
+const pathFromRoot = require('./util').pathFromRoot
 
-gulp.task('build', (done) => {
-  util.log('Metalsmith build starting')
-  const Metalsmith = require('metalsmith')
-  const inPlace = require('metalsmith-in-place')
-  const debug = require('metalsmith-debug')
-  const path = require('path')
-  const projectRoot = path.join(__dirname, '..', '..')
+const projectRoot = pathFromRoot()
+const pattern = '**/*.njk'
 
-  const templatePaths = [
-    path.join(projectRoot, 'application', 'templates'),
-    path.join(projectRoot, 'src')
-  ]
+const templatePaths = [
+  pathFromRoot('application', 'templates'),
+  pathFromRoot('src')
+]
 
-  Metalsmith(projectRoot)
-    .use(debug())
-    .source('./src')
-    .destination('./dist')
-    .clean(true)
-    .use(inPlace({
-      engine: 'nunjucks',
-      pattern: '**/*.njk',
-      engineOptions: {
-        path: templatePaths
-      }
-    }))
-    .build((err) => {
-      if (err) throw err
-      done()
-    })
+gulp.task('build', (done) => Metalsmith(projectRoot)
+  .use(debug())
+  .source('./src')
+  .destination('./dist')
+  .use(inPlace({
+    engine: 'nunjucks',
+    pattern: pattern,
+    engineOptions: {
+      path: templatePaths
+    }
+  }))
+  .build((err) => {
+    if (err) throw err
+    done()
+  })
+)
+
+gulp.task('build:watch', () => {
+  templatePaths.forEach(pathStr => {
+    gulp.watch(path.join(pathStr, pattern), ['build:full'])
+  })
 })

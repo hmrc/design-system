@@ -6,6 +6,7 @@ const rename = require('gulp-rename')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 const merge = require('merge-stream')
+const pathFromRoot = require('./util').pathFromRoot
 
 const errorHandler = function (error) {
   // Log the error to the console
@@ -17,6 +18,10 @@ const errorHandler = function (error) {
 }
 
 gulp.task('scss:compile', ['scss:govuk-frontend', 'scss:hmrc-design-system'])
+
+gulp.task('scss:watch', () => {
+  return gulp.watch(pathFromRoot('**', '*.scss'), ['build:full'])
+})
 
 gulp.task('scss:hmrc-design-system', () => {
   return gulp.src('./application/scss/hmrc-design-system.scss')
