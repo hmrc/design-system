@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "gulp",
     "start": "",
-    "build": "DEBUG=metalsmith-in-place ./node_modules/.bin/metalsmith && gulp"
+    "build": "DEBUG=metalsmith-in-place ./node_modules/.bin/metalsmith && gulp",
+    "test": "jest"
   },
   "engines": {
     "node": "8.12.0"
@@ -37,6 +38,7 @@
     "gulp-sass": "^4.0.1",
     "http-server": "^0.11.1",
     "jest": "^23.6.0",
+    "jstransformer": "^1.0.0",
     "jstransformer-nunjucks": "^0.5.0",
     "merge-stream": "^1.0.1",
     "metalsmith": "^2.3.0",

@@ -1,3 +1,4 @@
+{% extends 'fullWidthPage.njk' %}
 {% block content %}
 
     <h1>Notification badge</h1>
@@ -25,10 +26,9 @@
 
     <p class="govuk-body">There are 2 ways to use the notification badge examples. You can use HTML or, if you are using Nunjucks or <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com">version 7 or later of the GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
-    {#{{ example({#}
-        {#html: 'example-one.html',#}
-        {#nunjucks: 'example-one.njk'#}
-    {#}) }}#}
+    {{ example({
+        name: 'Hello world'
+    }) }}
 
     <p class="govuk-body">If the number is more than 99, display “99+”.</p>
 

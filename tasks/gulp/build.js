@@ -11,6 +11,7 @@ gulp.task('build', (done) => {
 
   const templatePaths = [
     path.join(projectRoot, 'application', 'templates'),
+    path.join(projectRoot, 'application', 'macros'),
     path.join(projectRoot, 'src')
   ]
 
