@@ -1,12 +1,12 @@
 const gulp = require('gulp')
-const logger = require('gulp-util').log
+const util = require('gulp-util')
 
-gulp.task('build', () => {
-  logger('Metalsmith build starting')
+gulp.task('build', (done) => {
+  util.log('Metalsmith build starting')
   const Metalsmith = require('metalsmith')
   const inPlace = require('metalsmith-in-place')
-  const path = require('path')
   const debug = require('metalsmith-debug')
+  const path = require('path')
   const projectRoot = path.join(__dirname, '..', '..')
 
   const templatePaths = [
@@ -14,7 +14,7 @@ gulp.task('build', () => {
     path.join(projectRoot, 'src')
   ]
 
-  return Metalsmith(projectRoot)
+  Metalsmith(projectRoot)
     .use(debug())
     .source('./src')
     .destination('./dist')
@@ -28,5 +28,6 @@ gulp.task('build', () => {
     }))
     .build((err) => {
       if (err) throw err
+      done()
     })
 })
