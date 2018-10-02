@@ -8,6 +8,7 @@ gulp.task('build', (done) => {
   const debug = require('metalsmith-debug')
   const path = require('path')
   const projectRoot = path.join(__dirname, '..', '..')
+  const filters = require('../../application/filters/filters')
 
   const templatePaths = [
     path.join(projectRoot, 'application', 'templates'),
@@ -24,7 +25,8 @@ gulp.task('build', (done) => {
       engine: 'nunjucks',
       pattern: '**/*.njk',
       engineOptions: {
-        path: templatePaths
+        path: templatePaths,
+        filters: { is_array: filters.isArray }
       }
     }))
     .build((err) => {
