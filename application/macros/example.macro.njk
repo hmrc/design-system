@@ -1,3 +1,25 @@
-{%- macro example(params) -%}
-    <h1>{{ params.html }}</h1>
+{% macro example(params) %}
+    {% set multiPage = (params.html | is_array)  %}
+    {% set exampleLocation = params.html %}
+
+    {% if multiPage %}
+    <p>I'm a multiPage</P>
+        {% set exampleLocation = params.html[0] %}
+    {% endif %}
+    
+
+    {% set exampleId = (exampleLocation | replace(".html", "")) %}
+    {% set iframeHeight = params.height | default(153, true) %}
+
+    <div class="app-example-wrapper js-example">
+        <div class="app-example app-example--tabs">
+            <iframe name="{{ exampleId }}_frame"
+                    class="app-example__frame app-example__frame--resizable js-example__frame"
+                    src="/example{{ pathname }}/{{ exampleLocation }}"
+                    frameborder="0"
+                    id="{{ exampleId }}_frame"
+                    height="{{ iframeHeight }}"
+                    scrolling="auto"></iframe>
+        </div>
+    </div>
 {%- endmacro -%}
