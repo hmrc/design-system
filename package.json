@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp",
     "start": "",
-    "build": "DEBUG=metalsmith-in-place ./node_modules/.bin/metalsmith && gulp",
+    "build": "gulp build",
     "test": "jest"
   },
   "engines": {
