@@ -11,8 +11,8 @@ const options = {
   path: path.join(__dirname, '..', 'macros'),
   trimBlocks: true,
   lstripBlocks: true,
-  globals: { pathname: '/__test__' },
-  filters: { is_array: isArray }
+  filters: { is_array: isArray },
+  globals: {}
 }
 
 const defaultHeight = 153
@@ -33,7 +33,7 @@ const templateFactory = (parameters) => {
 
 describe('Example macro', () => {
   const exampleId = 'test'
-  const exampleSrc = path.join('/', 'example', options.globals.pathname, exampleId + '.html').toString()
+  const exampleSrc = path.join('examples', exampleId + '.html').toString()
   const parameters = { html: `${exampleId}.html` }
   const templateString = templateFactory(parameters)
 
@@ -90,6 +90,6 @@ describe('When the example has multiple pages the example macro', () => {
     exampleContainer.innerHTML = nunjucks.render(templateString, options).body
     const exampleFrame = document.getElementById('example1_frame')
     expect(exampleFrame.name).toBe('example1_frame')
-    expect(exampleFrame.src).toBe('/example' + options.globals.pathname + '/' + parameters.html[0])
+    expect(exampleFrame.src).toBe('examples' + '/' + parameters.html[0])
   })
 })

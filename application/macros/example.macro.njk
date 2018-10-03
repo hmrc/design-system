@@ -1,21 +1,19 @@
-{% set pathname = "/__test__" %}
 {% macro example(params) %}
 {% set multiPage = (params.html | is_array) %}
 {% set exampleLocation = params.html %}
 
 {% if multiPage %}
-{% set exampleLocation = params.html[0] %}
+    {% set exampleLocation = params.html[0] %}
 {% endif %}
 
 
 {% set exampleId = (exampleLocation | replace(".html", "")) %}
 {% set iframeHeight = params.height | default(153, true) %}
 
-<h1>{{ url }}</h1>
 <div class="app-example-wrapper js-example">
     <div class="app-example app-example--tabs">
         <span class="app-example__link">
-            <a href="/example{{ pathname }}/{{ exampleLocation }}" target="_blank" class="new-window-link">
+            <a href="examples/{{ exampleLocation }}" target="_blank" class="new-window-link">
                 Open this <span class="govuk-visually-hidden">{{ exampleId }}</span> example in a new window
             </a>
         </span>
@@ -27,7 +25,7 @@
         </span>
         {% endif %}
         <iframe name="{{ exampleId }}_frame" class="app-example__frame app-example__frame--resizable js-example__frame"
-            src="/example{{ pathname }}/{{ exampleLocation }}" frameborder="0" id="{{ exampleId }}_frame" height="{{ iframeHeight }}"
+            src="examples/{{ exampleLocation }}" frameborder="0" id="{{ exampleId }}_frame" height="{{ iframeHeight }}"
             scrolling="auto"></iframe>
     </div>
 </div>

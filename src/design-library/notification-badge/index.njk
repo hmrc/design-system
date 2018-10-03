@@ -1,6 +1,11 @@
 {% extends 'fullWidthPage.njk' %}
 {% block content %}
 
+    {{ example({ 
+        html: 'notification-badge.html', 
+        hasWelsh: true 
+        }) }}
+
     <h1>Notification badge</h1>
 
     <p class="govuk-body">The notification badge shows a number to let a user know how many of a thing there are.</p>
@@ -26,18 +31,16 @@
 
     <p class="govuk-body">There are 2 ways to use the notification badge examples. You can use HTML or, if you are using Nunjucks or <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com">version 7 or later of the GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
-    {{ example({
-        html: 'notification-badge.html'
-    }) }}
 
     <p class="govuk-body">If the number is more than 99, display “99+”.</p>
 
     <p class="govuk-body">If there are 0 things, do not show the badge.</p>
 
-    {#{{ example({#}
-        {#html: 'example-two.html',#}
-        {#nunjucks: 'example-two.njk'#}
-    {#}) }}#}
+    {{ example({
+        html: 'example-two.html',
+        nunjucks: 'example-two.njk'
+        })
+    }}
 
     <h2 class="govuk-heading-l" id="research">Research</h2>
 
