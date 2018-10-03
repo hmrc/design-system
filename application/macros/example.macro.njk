@@ -1,11 +1,12 @@
 {% macro example(params) %}
+
 {% set multiPage = (params.html | is_array) %}
+
 {% set exampleLocation = params.html %}
 
 {% if multiPage %}
     {% set exampleLocation = params.html[0] %}
 {% endif %}
-
 
 {% set exampleId = (exampleLocation | replace(".html", "")) %}
 {% set iframeHeight = params.height | default(153, true) %}
@@ -17,16 +18,16 @@
                 Open this <span class="govuk-visually-hidden">{{ exampleId }}</span> example in a new window
             </a>
         </span>
-        {% if hasWelsh %}
-        <span class="app-example__link app-example__link--right">
-            <a class="language-toggle" href="#">
-                <span class="language-toggle__language">Welsh</span> version
-            </a>
-        </span>
-        {% endif %}
-        <iframe name="{{ exampleId }}_frame" class="app-example__frame app-example__frame--resizable js-example__frame"
-            src="examples/{{ exampleLocation }}" frameborder="0" id="{{ exampleId }}_frame" height="{{ iframeHeight }}"
-            scrolling="auto"></iframe>
+
+        {% if hasWelsh %}{% include '../partials/welsh-toggle.njk' %}{% endif %}
+        
+        <iframe name="{{ exampleId }}_frame" 
+                class="app-example__frame app-example__frame--resizable js-example__frame"
+                src="examples/{{ exampleLocation }}" 
+                frameborder="0" 
+                id="{{ exampleId }}_frame" 
+                height="{{ iframeHeight }}"
+                scrolling="auto"></iframe>
     </div>
 </div>
 {%- endmacro -%}

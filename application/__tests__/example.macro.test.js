@@ -8,7 +8,10 @@ const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
 function isArray (obj) { return Array.isArray(obj) }
 
 const options = {
-  path: path.join(__dirname, '..', 'macros'),
+  path: [
+    path.join(__dirname, '..', 'macros'),
+    path.join(__dirname, '..', 'partials')
+  ],
   trimBlocks: true,
   lstripBlocks: true,
   filters: { is_array: isArray },
