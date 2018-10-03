@@ -49,6 +49,7 @@ describe('Example macro', () => {
     expect(exampleFrame.name).toBe(`${exampleId}_frame`)
     expect(parseInt(exampleFrame.height)).toEqual(defaultHeight)
     expect(exampleFrame.src).toMatch(exampleSrc)
+    expect(document.getElementsByClassName('app-tabs__item')).not.toBeNull()
   })
 
   test('should set the iframe height when it is supplied', () => {
@@ -94,5 +95,12 @@ describe('When the example has multiple pages the example macro', () => {
     const exampleFrame = document.getElementById('example1_frame')
     expect(exampleFrame.name).toBe('example1_frame')
     expect(exampleFrame.src).toBe('examples' + '/' + parameters.html[0])
+  })
+  test('should not include the example code buttons by default', () => {
+    const parameters = { html: ['example1.html', 'example2.html'] }
+    const templateString = templateFactory(parameters)
+
+    exampleContainer.innerHTML = nunjucks.render(templateString, options).body
+    expect(document.getElementById('exampleCode')).toBeNull()
   })
 })
