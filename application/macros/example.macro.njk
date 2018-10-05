@@ -1,8 +1,10 @@
 {%- macro example(params) -%}
-{%- set multiPage = (params.html | is_array) -%}
-{%- set showExampleCode = params.showExampleCode | default(false if multiPage) %}
+{%  set directoryPath = filepath | dirname %}
 {%- set exampleLocation = params.html -%}
+{%- set multiPage = (params.html | is_array) -%}
+{%- set showExampleCode = params.showExampleCode | default(false if multiPage else true, true) %}
 {%- if multiPage -%}{%- set exampleLocation = params.html[0] -%}{%- endif -%}
+{%  set htmlExampleLocation = directoryPath + '/examples/' + exampleLocation %}
 {%- set exampleId = (exampleLocation | replace(".html", "")) %}
 {%- set iframeHeight = params.height | default(153, true) -%}
 <div class="app-example-wrapper js-example">
@@ -22,22 +24,25 @@
         {% if showExampleCode %}
             <ul class="app-tabs" role="tablist">
                 <li class="app-tabs__item js-tabs__item" role="presentation">
-                    <a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></li>
+                    <a href="#{{ exampleId }}_html" role="tab" aria-controls="{{ exampleId }}_html" data-track="tab-html">HTML</a></li>
                 {% if params.nunjucks %}
                     <li class="app-tabs__item js-tabs__item" role="presentation">
-                        <a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a>
+                        <a href="#{{ exampleId }}_nunjucks" role="tab" aria-controls="{{ exampleId }}_nunjucks" data-track="tab-nunjucks">Nunjucks</a>
                     </li>
                 {% endif %}
             </ul>
-            <div class="app-tabs__heading js-tabs__heading">
-                <a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html" class="html-toggle">HTML</a></div>
-            <div class="app-tabs__container js-tabs__container app-tabs__container--with-close-button" id="{{ exampleId }}-html" role="tabpanel" style="display: none;">
-                <div id="{{ exampleId }}-english" aria-hidden="false">
-                    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive">Copy</a>
-                    <pre><code class="language-html">{# {{ getHTML(exampleLocation, pagePath, 'English') }} #}</code></pre>
+            <div class="app-tabs__container js-tabs__container app-tabs__container--with-close-button js-hidden" 
+                 id="{{ exampleId }}_html" 
+                 role="tabpanel">
+                <div id="{{ exampleId }}_english" 
+                     aria-hidden="false">
+                    <a class="govuk-link app-link--copy" 
+                       href="#copy" 
+                       aria-live="assertive">Copy</a>
+                    <pre><code class="language-html">{% filter escape %}{% include htmlExampleLocation %}{% endfilter %}</code></pre>
                 </div>
                 {% if hasWelsh %}
-                    <div id="{{ exampleId }}-welsh" class="govuk-visually-hidden" aria-hidden="true">
+                    <div id="{{ exampleId }}_welsh" class="govuk-visually-hidden" aria-hidden="true">
                         <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive">Copy</a>
                         <pre><code class="language-html">{# {{ getHTML(exampleLocation, pagePath, 'Welsh') }} #}</code></pre>
                     </div>
@@ -46,8 +51,8 @@
             </div>
             {% if params.nunjucks %}
                 <div class="app-tabs__heading js-tabs__heading">
-                    <a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
-                <div class="app-tabs__container js-tabs__container app-tabs__container--with-close-button" id="{{ exampleId }}-nunjucks"
+                    <a href="#{{ exampleId }}_nunjucks" role="tab" aria-controls="{{ exampleId }}_nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
+                <div class="app-tabs__container js-tabs__container app-tabs__container--with-close-button" id="{{ exampleId }}_nunjucks"
                     role="tabpanel" style="display: none;">
                     <a class="app-link app-link--copy" href="#copy" aria-live="assertive">Copy</a>
 

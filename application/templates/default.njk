@@ -12,7 +12,8 @@
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
 </head>
 <body class="govuk-template__body govuk-body">
-{% from "../macros/example.macro.njk"  import example %}
+{% include '../macros/example.macro.njk' %}
+{% from "../macros/example.macro.njk"  import example with context %}
 {%- include './partials/header.njk' -%}
 {%- block page -%}{%- endblock -%}
 </body>

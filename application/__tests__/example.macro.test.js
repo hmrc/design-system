@@ -5,17 +5,22 @@ const { JSDOM } = require('jsdom')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
 
+function getDirectoryFromFilepath (filepath) { return path.dirname(filepath) }
+
 function isArray (obj) { return Array.isArray(obj) }
 
 const options = {
   path: [
     path.join(__dirname, '..', 'macros'),
-    path.join(__dirname, '..', 'partials')
+    path.join(__dirname, '..', 'partials'),
+    path.join(__dirname, '..', '..', 'src'),
+    path.join(__dirname, '..', '..', 'src'),
+    path.join(__dirname, 'fixtures')
   ],
   trimBlocks: true,
   lstripBlocks: true,
-  filters: { is_array: isArray },
-  globals: {}
+  filters: { is_array: isArray, dirname: getDirectoryFromFilepath },
+  globals: { filepath: 'test-component/index.njk' }
 }
 
 const defaultHeight = 153
@@ -29,12 +34,12 @@ let exampleContainer = document.getElementById('exampleContainer')
 
 const templateFactory = (parameters) => {
   // ToDo: check if there's a better way of handling the object passed in
-  return `{%- from "example.macro.njk"  import example -%} 
+  return `{%- from "example.macro.njk"  import example with context-%} 
   {{ example(${JSON.stringify(parameters)})
   }}`.toString()
 }
 
-describe('Example macro', () => {
+describe('Single page example macro', () => {
   const exampleId = 'test'
   const exampleSrc = path.join('examples', exampleId + '.html').toString()
   const parameters = { html: `${exampleId}.html` }
@@ -49,7 +54,6 @@ describe('Example macro', () => {
     expect(exampleFrame.name).toBe(`${exampleId}_frame`)
     expect(parseInt(exampleFrame.height)).toEqual(defaultHeight)
     expect(exampleFrame.src).toMatch(exampleSrc)
-    expect(document.getElementsByClassName('app-tabs__item')).not.toBeNull()
   })
 
   test('should set the iframe height when it is supplied', () => {
@@ -84,9 +88,41 @@ describe('Example macro', () => {
 
     options.globals = savedGlobals
   })
+  test('should have a button to show HTML code examples', () => {
+    exampleContainer.innerHTML = nunjucks.render(templateString, options).body
+    const codeExampleTabsContainer = document.getElementsByClassName('app-tabs')[0]
+    const exampleToggleLinks = codeExampleTabsContainer.querySelectorAll('li.app-tabs__item a')
+    const htmlExampleToggleLink = codeExampleTabsContainer.querySelector('li.app-tabs__item a')
+    expect(exampleToggleLinks.length).toBe(1)
+    expect(codeExampleTabsContainer.nodeName.toLowerCase()).toBe('ul')
+    expect(htmlExampleToggleLink.nodeName.toLowerCase()).toBe('a')
+    expect(htmlExampleToggleLink.getAttribute('href')).toBe(`#${exampleId}_html`)
+    expect(htmlExampleToggleLink.getAttribute('aria-controls')).toBe(`${exampleId}_html`)
+    expect(htmlExampleToggleLink.text).toBe('HTML')
+  })
+  test('should have a button to show Nunjucks example when a nunjucks parameter is included', () => {
+    const parameters = { html: `${exampleId}.html`, nunjucks: `${exampleId}.html` }
+    const templateString = templateFactory(parameters)
+    exampleContainer.innerHTML = nunjucks.render(templateString, options).body
+    const codeExampleTabsContainer = document.getElementsByClassName('app-tabs')[0]
+    const exampleToggleLinks = codeExampleTabsContainer.querySelectorAll('li.app-tabs__item a')
+    expect(codeExampleTabsContainer.nodeName.toLowerCase()).toBe('ul')
+    expect(exampleToggleLinks.length).toBe(2)
+    expect(exampleToggleLinks[1].nodeName.toLowerCase()).toBe('a')
+    expect(exampleToggleLinks[1].getAttribute('href')).toBe(`#${exampleId}_nunjucks`)
+    expect(exampleToggleLinks[1].getAttribute('aria-controls')).toBe(`${exampleId}_nunjucks`)
+    expect(exampleToggleLinks[1].text).toBe('Nunjucks')
+  })
+  test('Should include the escaped HTML markup from the examples', () => {
+    exampleContainer.innerHTML = nunjucks.render(templateString, options).body
+    const exampleHTMLCode = document.getElementById(`${exampleId}_html`)
+  })
+  // ToDo: Example HTML markup & Nunjucks code container elements
 })
 
-describe('When the example has multiple pages the example macro', () => {
+// ToDo: Welsh Language flag stuff
+
+describe('Multipage example macro', () => {
   test('should set the iframe to use the first example page when the html parameter is an Array', () => {
     const parameters = { html: ['example1.html', 'example2.html'] }
     const templateString = templateFactory(parameters)
@@ -99,8 +135,18 @@ describe('When the example has multiple pages the example macro', () => {
   test('should not include the example code buttons by default', () => {
     const parameters = { html: ['example1.html', 'example2.html'] }
     const templateString = templateFactory(parameters)
-
     exampleContainer.innerHTML = nunjucks.render(templateString, options).body
-    expect(document.getElementById('exampleCode')).toBeNull()
+    // ToDo make this easier to read
+    expect(document.getElementsByClassName('app-tabs__item').length).toBe(0)
+  })
+  test('should include the example code buttons when requested', () => {
+    const parameters = {
+      html: ['test.html', 'test.html'],
+      showExampleCode: true
+    }
+    const templateString = templateFactory(parameters)
+    exampleContainer.innerHTML = nunjucks.render(templateString, options).body
+    // ToDo make this easier to read
+    expect(document.getElementsByClassName('app-tabs__item').length).toBeGreaterThan(0)
   })
 })
