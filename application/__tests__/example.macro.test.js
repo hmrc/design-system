@@ -4,10 +4,7 @@
 const { JSDOM } = require('jsdom')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
-
-function getDirectoryFromFilepath (filepath) { return path.dirname(filepath) }
-
-function isArray (obj) { return Array.isArray(obj) }
+const { getDirectoryFromFilepath, isArray } = require('../filters/filters')
 
 const options = {
   path: [

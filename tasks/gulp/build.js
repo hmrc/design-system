@@ -32,7 +32,7 @@ gulp.task('build', (done) => {
       engineOptions: {
         noCache: true,
         path: templatePaths,
-        filters: { is_array: filters.isArray }
+        filters: { is_array: filters.isArray, dirname: filters.getDirectoryFromFilepath }
       }
     }))
     .build((err) => {
