@@ -2,6 +2,7 @@
 /* globals describe test expect */
 
 const { JSDOM } = require('jsdom')
+const fs = require('fs')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
 const { getDirectoryFromFilepath, isArray } = require('../filters/filters')
@@ -20,6 +21,7 @@ const options = {
   globals: { filepath: 'test-component/index.njk' }
 }
 
+const fixturePath = 'fixtures/test-component/examples/test.html'
 const defaultHeight = 153
 
 const { document } = (new JSDOM(
@@ -98,7 +100,7 @@ describe('Single page example macro', () => {
     expect(htmlExampleToggleLink.text).toBe('HTML')
   })
   test('should have a button to show Nunjucks example when a nunjucks parameter is included', () => {
-    const parameters = { html: `${exampleId}.html`, nunjucks: `${exampleId}.html` }
+    const parameters = { html: `${exampleId}.html`, nunjucks: `${exampleId}.njk` }
     const templateString = templateFactory(parameters)
     exampleContainer.innerHTML = nunjucks.render(templateString, options).body
     const codeExampleTabsContainer = document.getElementsByClassName('app-tabs')[0]
@@ -113,6 +115,9 @@ describe('Single page example macro', () => {
   test('Should include the escaped HTML markup from the examples', () => {
     exampleContainer.innerHTML = nunjucks.render(templateString, options).body
     const exampleHTMLCode = document.getElementById(`${exampleId}_html`)
+    const fixtureHTML = fs.readFileSync(path.join(__dirname, 'fixtures/test-component/examples/test.html')).toString()
+    console.log(fixtureHTML)
+    console.log(exampleHTMLCode.outerHTML)
   })
   // ToDo: Example HTML markup & Nunjucks code container elements
 })
