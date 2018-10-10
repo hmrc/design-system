@@ -5,6 +5,7 @@ const Metalsmith = require('metalsmith')
 const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
+const ignore = require('metalsmith-ignore')
 const pathFromRoot = require('./util').pathFromRoot
 const projectRoot = pathFromRoot()
 const pattern = '**/*.njk'
@@ -20,10 +21,10 @@ gulp.task('build', (done) => {
   const filters = require('../../application/filters/hmrc-design-system')
 
   Metalsmith(projectRoot)
-    .use(debug())
     .source('./src')
     .destination('./dist')
     .clean(true)
+    .use(debug())
     .use(metalsmithPath({
       property: 'filepath',
       extensions: ['.njk', '.html']

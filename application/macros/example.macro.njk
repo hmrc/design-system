@@ -4,6 +4,7 @@
 {%- set multiPage = (params.html | is_array) -%}
 {%- set showExampleCode = params.showExampleCode | default(false if multiPage else true, true) %}
 {%- if multiPage -%}{%- set exampleLocation = params.html[0] -%}{%- endif -%}
+{%- set welshExampleLocation = exampleLocation | replace(".html", ".cy.html") -%}
 {%  set htmlExampleLocation = directoryPath + '/examples/' + exampleLocation %}
 {%- set exampleId = (exampleLocation | replace(".html", "")) %}
 {%- set iframeHeight = params.height | default(153, true) -%}
