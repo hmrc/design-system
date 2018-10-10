@@ -41,7 +41,6 @@ gulp.task('build', (done) => {
       if (err) throw err
       done()
     })
-  console.log(Metalsmith)
 })
 
 gulp.task('build:watch', () => {
