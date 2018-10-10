@@ -6,6 +6,7 @@ const fs = require('fs')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
 const { getDirectoryFromFilepath, isArray } = require('../filters/hmrc-design-system')
+const htmlEscape = htmlString => htmlString.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
 
 const options = {
   path: [
@@ -21,9 +22,12 @@ const options = {
   globals: { filepath: 'test-component/index.njk' }
 }
 
-const fixturePath = 'fixtures/test-component/examples/test.html'
+const fixturePath = path.join(__dirname, 'fixtures', 'test-component', 'examples', 'test.html')
 const defaultHeight = 153
 
+// ToDo:  simplyfy all this by using JSDOM.fragment(nunjucks.render(templateString, options).body)
+//        to create the individual dom objects in each test.
+//        see: https://www.npmjs.com/package/jsdom#fragment
 const { document } = (new JSDOM(
   '<!DOCTYPE html><html><head></head><body><div id="exampleContainer"></div></body></html>',
   { contentType: 'text/html' }))
@@ -115,11 +119,10 @@ describe('Single page example macro', () => {
   test('Should include the escaped HTML markup from the examples', () => {
     exampleContainer.innerHTML = nunjucks.render(templateString, options).body
     const exampleHTMLCode = document.getElementById(`${exampleId}_html`)
-    const fixtureHTML = fs.readFileSync(path.join(__dirname, 'fixtures/test-component/examples/test.html')).toString()
-    console.log(fixtureHTML)
-    console.log(exampleHTMLCode.outerHTML)
+    const fixtureHTML = fs.readFileSync(path.join(fixturePath)).toString()
+    expect(exampleHTMLCode.querySelector('pre code').innerHTML).toEqual(htmlEscape(fixtureHTML))
   })
-  // ToDo: Example HTML markup & Nunjucks code container elements
+  // ToDo: Example Nunjucks code container element
 })
 
 // ToDo: Welsh Language flag stuff
