@@ -5,7 +5,7 @@ const { JSDOM } = require('jsdom')
 const fs = require('fs')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
-const { getDirectoryFromFilepath, isArray } = require('../filters/filters')
+const { getDirectoryFromFilepath, isArray } = require('../filters/hmrc-design-system')
 
 const options = {
   path: [

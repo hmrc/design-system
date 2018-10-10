@@ -1,6 +1,10 @@
 const gulp = require('gulp')
-const { execSync } = require('child_process')
+const connect = require('gulp-connect')
+const pathFromRoot = require('./util').pathFromRoot
 
 gulp.task('serve', () => {
-  execSync('./node_modules/.bin/http-server ./dist -a 127.0.0.1 -p 3000')
+  connect.server({
+    root: pathFromRoot('dist'),
+    port: process.env.PORT || process.env.port || 3000
+  })
 })

@@ -1,21 +1,23 @@
 const gulp = require('gulp')
 const util = require('gulp-util')
+const path = require('path')
+const Metalsmith = require('metalsmith')
+const inPlace = require('metalsmith-in-place')
+const debug = require('metalsmith-debug')
+const metalsmithPath = require('metalsmith-path')
+const pathFromRoot = require('./util').pathFromRoot
+const projectRoot = pathFromRoot()
+const pattern = '**/*.njk'
+
+const templatePaths = [
+  pathFromRoot('application', 'templates'),
+  pathFromRoot('application', 'macros'),
+  pathFromRoot('src')
+]
 
 gulp.task('build', (done) => {
   util.log('Metalsmith build starting')
-  const Metalsmith = require('metalsmith')
-  const inPlace = require('metalsmith-in-place')
-  const debug = require('metalsmith-debug')
-  const metalsmithPath = require('metalsmith-path')
-  const path = require('path')
-  const projectRoot = path.join(__dirname, '..', '..')
-  const filters = require('../../application/filters/filters')
-
-  const templatePaths = [
-    path.join(projectRoot, 'application', 'templates'),
-    path.join(projectRoot, 'application', 'macros'),
-    path.join(projectRoot, 'src')
-  ]
+  const filters = require('../../application/filters/hmrc-design-system')
 
   Metalsmith(projectRoot)
     .use(debug())
@@ -28,7 +30,7 @@ gulp.task('build', (done) => {
     }))
     .use(inPlace({
       engine: 'nunjucks',
-      pattern: '**/*.njk',
+      pattern: pattern,
       engineOptions: {
         noCache: true,
         path: templatePaths,
@@ -39,5 +41,11 @@ gulp.task('build', (done) => {
       if (err) throw err
       done()
     })
-    console.log(Metalsmith)
+  console.log(Metalsmith)
+})
+
+gulp.task('build:watch', () => {
+  templatePaths.forEach(pathStr => {
+    gulp.watch(path.join(pathStr, pattern), ['build:full'])
+  })
 })

@@ -1,9 +1,7 @@
 const gulp = require('gulp')
 const del = require('del')
-const path = require('path')
-
-const projectRoot = path.join(__dirname, '..', '..')
+const pathFromRoot = require('./util').pathFromRoot
 
 gulp.task('clean', () => del.sync([
-  path.join(projectRoot, 'dist', '/**/*')
+  pathFromRoot('dist', '/**/*')
 ]))
