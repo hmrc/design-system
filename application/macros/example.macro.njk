@@ -6,6 +6,7 @@
 {%- if multiPage -%}{%- set exampleLocation = params.html[0] -%}{%- endif -%}
 {%- set welshExampleLocation = exampleLocation | replace(".html", ".cy.html") -%}
 {%  set htmlExampleLocation = directoryPath + "/examples/" + exampleLocation %}
+{%- set welshHtmlExampleLocation = htmlExampleLocation | replace(".html", ".cy.html") -%}
 {%  set nunjucksExampleLocation = directoryPath + "/examples/" + params.nunjucks %}
 {# {%- if paramas.nunjucks -%}{%- set nunjucksExampleLocation = directoryPath + "/examples/" + params.nunjucks -%}{%- endif -%} #}
 {%- set exampleId = (exampleLocation | replace(".html", "")) %}
@@ -47,7 +48,7 @@
                 {% if hasWelsh %}
                     <div id="{{ exampleId }}_welsh" class="govuk-visually-hidden" aria-hidden="true">
                         <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive">Copy</a>
-                        <pre><code class="language-html">{# {{ getHTML(exampleLocation, pagePath, 'Welsh') }} #}</code></pre>
+                        <pre><code class="language-html">{% filter escape %}{% include welshHtmlExampleLocation %}{% endfilter %}</code></pre>
                     </div>
                 {% endif %}
                 <a class="govuk-link app-link--close js-link--close app-chevron--top" href="#close">Close</a>

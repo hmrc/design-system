@@ -1,4 +1,4 @@
-/* globals describe test expect */
+/* globals describe test expect afterAll */
 
 const { JSDOM } = require('jsdom')
 const fs = require('fs')
@@ -95,17 +95,6 @@ describe('Single page example macro english html only', () => {
     expect(parseInt(exampleFrame.height)).toBe(256)
   })
 
-  test('Should include a language toggle for examples', () => {
-    const savedGlobals = JSON.parse(JSON.stringify(options.globals))
-    options.globals = Object.assign({ hasWelsh: true }, options.globals)
-
-    const document = documentFactory(parameters, options)
-
-    const languageToggleLink = document.querySelector('a.language-toggle')
-    expect(languageToggleLink).not.toBeNull()
-
-    options.globals = savedGlobals
-  })
   test('Should include the escaped HTML markup from the examples', () => {
     const exampleHTMLCode = document.getElementById(`${exampleId}_html`)
     const fixtureHTML = fs.readFileSync(path.join(fixturePath, 'test.html')).toString()
@@ -134,13 +123,33 @@ describe('When a pattern has a nunjucks example', () => {
     const exampleCode = document.getElementById(`${exampleId}_nunjucks`)
     const fixtureCode = fs.readFileSync(path.join(fixturePath, 'test.njk')).toString()
     expect(exampleCode.querySelector('pre code').innerHTML).toEqual(nunjucksEscape(fixtureCode))
-    /*
-    expect(exampleCode.querySelector('pre code').innerHTML).toEqual(htmlEscape(fixtureCode))
-   */
   })
 })
 
-// ToDo: Welsh Language example version in a hidden div
+describe('When a pattern has Welsh content', () => {
+  const savedGlobals = JSON.parse(JSON.stringify(options.globals))
+  const parameters = { html: `${exampleId}.html` }
+  options.globals = Object.assign({ hasWelsh: true }, options.globals)
+  const document = documentFactory(parameters, options)
+
+  afterAll(() => {
+    options.globals = savedGlobals
+  })
+
+  test('Should include a language toggle for examples', () => {
+    const languageToggleLink = document.querySelector('a.language-toggle')
+    expect(languageToggleLink).not.toBeNull()
+  })
+
+  test('Should have a Welsh Language example version in a hidden div', () => {
+    const exampleHTMLCode = document.getElementById(`${exampleId}_welsh`)
+    expect(exampleHTMLCode.classList).toContain('govuk-visually-hidden')
+    expect(exampleHTMLCode.getAttribute('aria-hidden')).toBe('true')
+
+    const fixtureHTML = fs.readFileSync(path.join(fixturePath, 'test.cy.html')).toString()
+    expect(exampleHTMLCode.querySelector('pre code').innerHTML).toEqual(htmlEscape(fixtureHTML))
+  })
+})
 
 describe('Multipage example macro', () => {
   const parameters = { html: ['example1.html', 'example2.html'] }
@@ -159,8 +168,7 @@ describe('Multipage example macro', () => {
       html: ['test.html', 'test.html'],
       showExampleCode: true
     }
-    const document = documentFactory(parameters, options)
-
-    expect(document.getElementsByClassName('app-tabs__item').length).toBeGreaterThan(0)
+    const exampleToggleLinks = documentFactory(parameters, options).getElementsByClassName('app-tabs__item')
+    expect(exampleToggleLinks.length).toBeGreaterThan(0)
   })
 })
