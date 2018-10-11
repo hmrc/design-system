@@ -8,7 +8,6 @@
 {%  set htmlExampleLocation = directoryPath + "/examples/" + exampleLocation %}
 {%- set welshHtmlExampleLocation = htmlExampleLocation | replace(".html", ".cy.html") -%}
 {%  set nunjucksExampleLocation = directoryPath + "/examples/" + params.nunjucks %}
-{# {%- if paramas.nunjucks -%}{%- set nunjucksExampleLocation = directoryPath + "/examples/" + params.nunjucks -%}{%- endif -%} #}
 {%- set exampleId = (exampleLocation | replace(".html", "")) %}
 {%- set iframeHeight = params.height | default(153, true) -%}
 <div class="app-example-wrapper js-example">
