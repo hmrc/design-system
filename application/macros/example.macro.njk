@@ -5,7 +5,9 @@
 {%- set showExampleCode = params.showExampleCode | default(false if multiPage else true, true) %}
 {%- if multiPage -%}{%- set exampleLocation = params.html[0] -%}{%- endif -%}
 {%- set welshExampleLocation = exampleLocation | replace(".html", ".cy.html") -%}
-{%  set htmlExampleLocation = directoryPath + '/examples/' + exampleLocation %}
+{%  set htmlExampleLocation = directoryPath + "/examples/" + exampleLocation %}
+{%  set nunjucksExampleLocation = directoryPath + "/examples/" + params.nunjucks %}
+{# {%- if paramas.nunjucks -%}{%- set nunjucksExampleLocation = directoryPath + "/examples/" + params.nunjucks -%}{%- endif -%} #}
 {%- set exampleId = (exampleLocation | replace(".html", "")) %}
 {%- set iframeHeight = params.height | default(153, true) -%}
 <div class="app-example-wrapper js-example">
@@ -57,7 +59,7 @@
                     role="tabpanel" style="display: none;">
                     <a class="app-link app-link--copy" href="#copy" aria-live="assertive">Copy</a>
 
-                    <pre><code class="language-jinja">{# {{ getContents(params.nunjucks, pagePath) }} #}</code></pre>
+                    <pre><code class="language-jinja">{% filter escape %}{%- include nunjucksExampleLocation -%}{% endfilter %}</code></pre>
 
                     <p class="app-tabs__text">You can configure this component using the
                         <a href="{# {{ params.macroParameters }} #}"

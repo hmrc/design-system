@@ -1,12 +1,13 @@
 // 1. Expect example macro to render a header
-/* globals describe test expect beforeEach */
+/* globals describe test expect */
 
 const { JSDOM } = require('jsdom')
 const fs = require('fs')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
 const { getDirectoryFromFilepath, isArray } = require('../filters/hmrc-design-system')
-const htmlEscape = htmlString => htmlString.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+const htmlEscape = htmlString => htmlString.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+const nunjucksEscape = nunjucksString => nunjucksString.replace(/\{% raw %\}\n/, '').replace(/\{% endraw %\}/, '')
 const exampleId = 'test'
 
 const options = {
@@ -23,7 +24,6 @@ const options = {
   globals: { filepath: 'test-component/index.njk' }
 }
 
-//const fixturePath = path.join(__dirname, 'fixtures', 'test-component', 'examples', 'test.html')
 const fixturePath = path.join(__dirname, 'fixtures', 'test-component', 'examples')
 const defaultHeight = 153
 
@@ -33,7 +33,7 @@ const templateFactory = (parameters) => {
   {{ example(${JSON.stringify(parameters)})
   }}`.toString()
 }
-const newDocument = function() { 
+const newDocument = function () {
   return new JSDOM('<!DOCTYPE html><html><head></head><body><div id="exampleContainer"></div></body></html>',
     { contentType: 'text/html' }
   ).window.document
@@ -62,7 +62,7 @@ describe('Single page example macro english html only', () => {
     expect(exampleLink.href).toBe(exampleSrc)
     expect(exampleLink.target).toBe('_blank')
   })
-  
+
   test('Should not have a language toggle for English only examples', () => {
     const languageToggleLink = document.querySelector('a.language-toggle')
     expect(languageToggleLink).toBeNull()
@@ -79,10 +79,10 @@ describe('Single page example macro english html only', () => {
     expect(htmlExampleToggleLink.getAttribute('aria-controls')).toBe(`${exampleId}_html`)
     expect(htmlExampleToggleLink.text).toBe('HTML')
   })
-    
+
   test('should set the iframe height when it is supplied', () => {
     const document = newDocument()
-    const exampleContainer = document.getElementById('exampleContainer')  
+    const exampleContainer = document.getElementById('exampleContainer')
     const frameHeight = 256
     const templateString = templateFactory(Object.assign({ height: frameHeight }, parameters))
     exampleContainer.innerHTML = nunjucks.render(templateString, options).body
@@ -105,7 +105,7 @@ describe('Single page example macro english html only', () => {
   })
   test('Should include the escaped HTML markup from the examples', () => {
     const exampleHTMLCode = document.getElementById(`${exampleId}_html`)
-    const fixtureHTML = fs.readFileSync(path.join(fixturePath, "test.html")).toString()
+    const fixtureHTML = fs.readFileSync(path.join(fixturePath, 'test.html')).toString()
     expect(exampleHTMLCode.querySelector('pre code').innerHTML).toEqual(htmlEscape(fixtureHTML))
   })
 })
@@ -129,17 +129,17 @@ describe('When a pattern has a nunjucks example', () => {
     expect(exampleToggleLinks[1].text).toBe('Nunjucks')
   })
   // ToDo: Example Nunjucks code container element
-  test('\u001b[33;1mTODO: Should include the Nunjcks macro code for the example\u001b[0m', () => {
+  test('\u001b[33;1mTODO: Should needs a better way to include the Nunjcks macro code for the example\u001b[0m', () => {
     const exampleCode = document.getElementById(`${exampleId}_nunjucks`)
     const fixtureCode = fs.readFileSync(path.join(fixturePath, 'test.njk')).toString()
-    return Promise.resolve()
+    expect(exampleCode.querySelector('pre code').innerHTML).toEqual(nunjucksEscape(fixtureCode))
     /*
     expect(exampleCode.querySelector('pre code').innerHTML).toEqual(htmlEscape(fixtureCode))
    */
   })
 })
 
-// ToDo: Welsh Language flag stuff
+// ToDo: Welsh Language example version in a hidden div
 
 describe('Multipage example macro', () => {
   const document = newDocument()
