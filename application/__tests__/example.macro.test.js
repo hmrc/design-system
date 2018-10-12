@@ -4,7 +4,7 @@ const { JSDOM } = require('jsdom')
 const fs = require('fs')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
-const { getDirectoryFromFilepath, isArray } = require('../filters/hmrc-design-system')
+const { getDirectoryFromFilepath, is_array } = require('../filters/hmrc-design-system')
 const htmlEscape = htmlString => htmlString.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 const nunjucksEscape = nunjucksString => nunjucksString.replace(/\{% raw %\}\n/, '').replace(/\{% endraw %\}/, '')
 const exampleId = 'test'
@@ -19,7 +19,7 @@ const options = {
   ],
   trimBlocks: true,
   lstripBlocks: true,
-  filters: { is_array: isArray, dirname: getDirectoryFromFilepath },
+  filters: { is_array: is_array, dirname: getDirectoryFromFilepath },
   globals: { filepath: 'test-component/index.njk' }
 }
 
@@ -127,14 +127,13 @@ describe('When a pattern has a nunjucks example', () => {
 })
 
 describe('When a pattern has Welsh content', () => {
-  const savedGlobals = JSON.parse(JSON.stringify(options.globals))
-  const parameters = { html: `${exampleId}.html` }
-  options.globals = Object.assign({ hasWelsh: true }, options.globals)
-  const document = documentFactory(parameters, options)
+  const welshOptions = JSON.parse(JSON.stringify(options))
+  welshOptions.filters = Object.assign({}, options.filters)
+  welshOptions.globals = Object.assign({ hasWelsh: true }, welshOptions.globals)
 
-  afterAll(() => {
-    options.globals = savedGlobals
-  })
+  const parameters = { html: `${exampleId}.html` }
+
+  const document = documentFactory(parameters, welshOptions)
 
   test('Should include a language toggle for examples', () => {
     const languageToggleLink = document.querySelector('a.language-toggle')
