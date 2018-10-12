@@ -47,11 +47,6 @@ describe('Single page example macro english html only', () => {
   const parameters = { html: `${exampleId}.html` }
   const document = documentFactory(parameters, options)
   const exampleSrc = path.join('examples', exampleId + '.html').toString()
-  /*
-  const templateString = templateFactory(parameters)
-  const exampleContainer = document.getElementById('exampleContainer')
-  exampleContainer.innerHTML = nunjucks.render(templateString, options).body
-   */
   const exampleFrame = document.getElementById(`${exampleId}_frame`)
   const exampleLink = document.querySelector('.app-example__link a')
 
@@ -118,7 +113,7 @@ describe('When a pattern has a nunjucks example', () => {
     expect(nunjucksExampleToggleLink.getAttribute('aria-controls')).toBe(`${exampleId}_nunjucks`)
     expect(nunjucksExampleToggleLink.text).toBe('Nunjucks')
   })
-  // ToDo: Example Nunjucks code container element
+
   test(' Should include the Nunjcks macro code for the example\n\t\u001b[33;1mTODO: needs a better way to do the inclusion\u001b[0m', () => {
     const exampleCode = document.getElementById(`${exampleId}_nunjucks`)
     const fixtureCode = fs.readFileSync(path.join(fixturePath, 'test.njk')).toString()
