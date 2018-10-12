@@ -1,10 +1,10 @@
-/* globals describe test expect afterAll */
+/* globals describe test expect */
 
 const { JSDOM } = require('jsdom')
 const fs = require('fs')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
-const { getDirectoryFromFilepath, is_array } = require('../filters/hmrc-design-system')
+const { getDirectoryFromFilepath, isArray } = require('../filters/hmrc-design-system')
 const htmlEscape = htmlString => htmlString.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 const nunjucksEscape = nunjucksString => nunjucksString.replace(/\{% raw %\}\n/, '').replace(/\{% endraw %\}/, '')
 const exampleId = 'test'
@@ -19,7 +19,7 @@ const options = {
   ],
   trimBlocks: true,
   lstripBlocks: true,
-  filters: { is_array: is_array, dirname: getDirectoryFromFilepath },
+  filters: { is_array: isArray, dirname: getDirectoryFromFilepath },
   globals: { filepath: 'test-component/index.njk' }
 }
 
@@ -119,7 +119,7 @@ describe('When a pattern has a nunjucks example', () => {
     expect(nunjucksExampleToggleLink.text).toBe('Nunjucks')
   })
   // ToDo: Example Nunjucks code container element
-  test('\u001b[33;1mTODO: Should needs a better way to include the Nunjcks macro code for the example\u001b[0m', () => {
+  test(' Should include the Nunjcks macro code for the example\n\t\u001b[33;1mTODO: needs a better way to do the inclusion\u001b[0m', () => {
     const exampleCode = document.getElementById(`${exampleId}_nunjucks`)
     const fixtureCode = fs.readFileSync(path.join(fixturePath, 'test.njk')).toString()
     expect(exampleCode.querySelector('pre code').innerHTML).toEqual(nunjucksEscape(fixtureCode))
