@@ -1,0 +1,9 @@
+.hmrc-width-container {
+// nothing to override from govuk-witdth-container
+}
+
+// Modify govuk-width-container
+.hmrc-width-container--wide {
+    max-width: 1100px;
+}
+
