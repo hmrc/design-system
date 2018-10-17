@@ -14,7 +14,6 @@ const options = {
     path.join(__dirname, '..', 'macros'),
     path.join(__dirname, '..', 'partials'),
     path.join(__dirname, '..', '..', 'src'),
-    path.join(__dirname, '..', '..', 'src'),
     path.join(__dirname, 'fixtures')
   ],
   trimBlocks: true,
@@ -28,7 +27,7 @@ const defaultHeight = 153
 
 const templateFactory = (parameters) => {
   // ToDo: check if there's a better way of handling the object passed in
-  return `{%- from "example.macro.njk"  import example with context-%} 
+  return `{%- from "example.macro.njk"  import example with context-%}
   {{ example(${JSON.stringify(parameters)})
   }}`.toString()
 }
