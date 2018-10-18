@@ -1,14 +1,12 @@
 {% extends 'default.njk' %}
-{% block fullBody %}
-  <body class="govuk-template__body">
-
+{% block page %}
   <div class="app-pane app-pane--enabled">
     <div class="app-pane__header">
       {%- include './partials/header.njk' -%}
     </div>
     <div class="app-pane__body">
       <div class="app-pane__subnav">
-        <nav><p>Nav will go here</p></nav>
+        <nav><!-- Generate nav to go here --></nav>
       </div>
       <div class="app-pane__content">
         <main role="main" class="app-content" id="main-content">
@@ -22,5 +20,4 @@
       </div>
     </div>
   </div>
-  </body>
 {% endblock %}
