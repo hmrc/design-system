@@ -1,5 +1,26 @@
-<nav role="navigation">
-</nav>
-<main role="main">
-</main>
-{% include 'footer.njk' %}
+{% extends 'default.njk' %}
+{% block fullBody %}
+  <body class="govuk-template__body">
+
+  <div class="app-pane app-pane--enabled">
+    <div class="app-pane__header">
+      {%- include './partials/header.njk' -%}
+    </div>
+    <div class="app-pane__body">
+      <div class="app-pane__subnav">
+        <nav><p>Nav will go here</p></nav>
+      </div>
+      <div class="app-pane__content">
+        <main role="main" class="app-content" id="main-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              {%- block content -%}{%- endblock -%}
+            </div>
+          </div>
+        </main>
+        {% include './partials/footer.njk' %}
+      </div>
+    </div>
+  </div>
+  </body>
+{% endblock %}
