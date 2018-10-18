@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp",
     "start": "",
-    "build": "gulp",
+    "build": "gulp build:full",
     "test": "jest"
   },
   "engines": {
