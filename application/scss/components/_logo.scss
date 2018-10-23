@@ -1,0 +1,29 @@
+
+.hmrc-logo {
+  border-left: 2px solid #009390;
+}
+
+.hmrc-logo__link{
+  display: table;
+  &::before{
+    content: '';
+    display: table-cell;
+    background: url(/assets/images/hmrc-crown-logo_black.svg) no-repeat;
+    background-size: 100% 100%;
+    width: 52px;
+    height: 32px;
+  }
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    line-height:32px;
+  }
+}
+
+.hmrc-logo__img {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}

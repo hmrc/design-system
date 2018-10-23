@@ -1,7 +1,13 @@
 <header role="banner" class="hmrc-internal-header">
     <div class="hmrc-logo">
-        <a href="/hmrc-design-system-prototype/" title="Go to the HMRC Design Library homepage" class="hmrc-logo__link">
-            <span class="hmrc-logo__title"> HM Revenue &amp; Customs <strong>Designing for HMRC</strong></span>
+        <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" title="Go to the HMRC Design Library homepage" class="hmrc-logo__link">
+          HM Revenue &amp; Customs
+        </a>
+    </div>
+
+    <div class="hmrc-internal-service-name">
+        <a href="/" title="Go to the internal service homepage" class="hmrc-internal-service-name__link">
+         {{ serviceName | default('') }}
         </a>
     </div>
 </header>
