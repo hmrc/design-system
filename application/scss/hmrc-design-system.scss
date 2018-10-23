@@ -1,12 +1,13 @@
 //govuk-frontend dependencies* @import 'node_modules/govuk-frontend/settings/_media-queries.scss';
 @import 'node_modules/govuk-frontend/all.scss';
+@import 'node_modules/govuk-frontend/core/all.scss';
 
 // HMRC Design System Base Styles template
 @import 'settings/colours.scss';
 @import 'settings/images.scss';
 
 @import 'objects/width-container';
-
-@import 'components/hmrc-internal-header.scss';
+@import 'components/_logo.scss';
+@import 'components/_hmrc-internal-header.scss';
 @import 'components/_pane.scss';
 @import 'components/_collapsible-subsections.scss'
