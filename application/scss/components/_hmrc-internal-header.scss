@@ -1,10 +1,11 @@
+
 .hmrc-internal-header {
   padding: 20px 15px;
   @include govuk-media-query(desktop) {
     padding: 20px 30px;
     min-height: 35px;
   }
-  border-bottom : 10px solid $hmrc-green; 
+  border-bottom : 10px solid $hmrc-green;
 }
 
 .hmrc-logo {

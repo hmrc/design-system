@@ -1,10 +1,5 @@
-//govuk-frontend dependencies
-@import 'node_modules/govuk-frontend/settings/_media-queries.scss';
-@import 'node_modules/govuk-frontend/helpers/_media-queries.scss';
-@import 'node_modules/govuk-frontend/helpers/clearfix.scss';
-@import 'node_modules/govuk-frontend/helpers/_colour.scss';
-@import 'node_modules/govuk-frontend/settings/_colours-applied.scss';
-@import 'node_modules/govuk-frontend/tools/_exports.scss';
+//govuk-frontend dependencies* @import 'node_modules/govuk-frontend/settings/_media-queries.scss';
+@import 'node_modules/govuk-frontend/all.scss';
 
 // HMRC Design System Base Styles template
 @import 'settings/colours.scss';
@@ -14,3 +9,4 @@
 
 @import 'components/hmrc-internal-header.scss';
 @import 'components/_pane.scss';
+@import 'components/_collapsible-subsections.scss'
