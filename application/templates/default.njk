@@ -12,9 +12,15 @@
       <link type="text/css" rel="stylesheet" href="govuk-frontend-ie8.min.css">
   <[endif]-->
   <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
+  <script src="/assets/javascripts/vendor/jquery/jquery.min.js" type="application/javascript"></script>
 </head>
 <body class="govuk-template__body govuk-body">
 <!-- ToDo: tidy up the below -->
 {%- block page -%}{%- endblock -%}
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script src="/assets/javascripts/vendor/govuk/current_location.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible_collection.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/application.js" type="application/javascript"></script>
 </body>
 </html>
