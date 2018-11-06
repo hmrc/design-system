@@ -1,9 +1,7 @@
 
-# design-system
+# design at hmrc
 
- [ ![Download](https://api.bintray.com/packages/hmrc/releases/design-system/images/download.svg) ](https://bintray.com/hmrc/releases/design-system/_latestVersion)
-
-This is a placeholder README.md for a new repository
+Coming Soon
 
 ### License
 
