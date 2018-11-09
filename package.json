@@ -1,8 +1,8 @@
 {
-  "name": "design-system",
+  "name": "@hmrc/design-system",
   "version": "0.1.0",
+  "private": true,
   "description": "Static site generator for the HMRC Design System",
-  "main": "index.js",
   "scripts": {
     "dev": "gulp",
     "start": "",
@@ -19,7 +19,7 @@
   "keywords": [
     "UK Government",
     "HMRC",
-    "\"Design System\""
+    "Design System"
   ],
   "author": "HMRC",
   "license": "Apache-2.0",
@@ -27,11 +27,12 @@
     "url": "https://github.com/hmrc/design-system/issues"
   },
   "homepage": "https://github.com/hmrc/design-system#readme",
-  "dependencies": {},
+  "dependencies": {
+    "govuk-frontend": "^2.0.0"
+  },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "cssnano": "^4.1.0",
-    "govuk-frontend": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.6.1",
     "gulp-plumber": "^1.2.0",
