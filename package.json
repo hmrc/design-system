@@ -4,10 +4,10 @@
   "private": true,
   "description": "Static site generator for the HMRC Design System",
   "scripts": {
-    "dev": "gulp",
-    "start": "",
-    "build": "gulp",
-    "test": "jest"
+    "start": "gulp",
+    "test": "jest",
+    "build": "npm run test && gulp build",
+    "serve": "gulp serve"
   },
   "engines": {
     "node": "8.12.0"

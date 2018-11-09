@@ -20,7 +20,7 @@ const errorHandler = function (error) {
 gulp.task('scss:compile', ['scss:govuk-frontend', 'scss:hmrc-design-system'])
 
 gulp.task('scss:watch', () => {
-  return gulp.watch(pathFromRoot('**', '*.scss'), ['build:full'])
+  return gulp.watch(pathFromRoot('**', '*.scss'), ['build'])
 })
 
 gulp.task('scss:hmrc-design-system', () => {

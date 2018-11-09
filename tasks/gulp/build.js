@@ -7,6 +7,7 @@ const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
 const ignore = require('metalsmith-ignore')
 const pathFromRoot = require('./util').pathFromRoot
+
 const projectRoot = pathFromRoot()
 const pattern = '**/*.njk'
 
@@ -16,7 +17,7 @@ const templatePaths = [
   pathFromRoot('src')
 ]
 
-gulp.task('build', (done) => {
+gulp.task('compile', (done) => {
   util.log('Metalsmith build starting')
   const filters = require('../../application/filters/hmrc-design-system')
 
@@ -46,6 +47,6 @@ gulp.task('build', (done) => {
 
 gulp.task('build:watch', () => {
   templatePaths.forEach(pathStr => {
-    gulp.watch(path.join(pathStr, pattern), ['build:full'])
+    gulp.watch(path.join(pathStr, pattern), ['build'])
   })
 })
