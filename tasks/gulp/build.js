@@ -9,7 +9,7 @@ const ignore = require('metalsmith-ignore')
 const pathFromRoot = require('./util').pathFromRoot
 
 const projectRoot = pathFromRoot()
-const pattern = '**/*.njk'
+const pattern = '**/*{.njk,.html}'
 
 const templatePaths = [
   pathFromRoot('application', 'templates'),
