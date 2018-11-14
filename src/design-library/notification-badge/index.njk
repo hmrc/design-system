@@ -1,16 +1,17 @@
 {%- extends 'twoColumnPage.njk' -%}
 
-{% from "_example.njk" import example with context %}
+{% from "_example.njk" import example %}
 
 {%- block content -%}
   <h1>Notification badge</h1>
 
-  {{
-    example({
-      html: 'notification-badge.html',
-      hasWelsh: true
-    })
-  }}
+  {{ example({
+    item: "notification-badge",
+    example: "default",
+    html: true,
+    nunjucks: true,
+    open: false
+  }) }}
 
   <p class="govuk-body">The notification badge shows a number to let a user know how many of a thing there are.</p>
 
@@ -40,17 +41,21 @@
 
   <p class="govuk-body">If there are 0 things, do not show the badge.</p>
 
-  {{
-    example({
-      html: 'notification-badge.html'
-    })
-  }}
+  {{ example({
+    item: "notification-badge",
+    example: "default",
+    html: true,
+    nunjucks: true,
+    open: false
+  }) }}
 
-  {{
-    example({
-      html: 'notification-badge.html'
-    })
-  }}
+  {{ example({
+    item: "notification-badge",
+    example: "default",
+    html: true,
+    nunjucks: true,
+    open: false
+  }) }}
 
   <h2 class="govuk-heading-l" id="research">Research</h2>
 

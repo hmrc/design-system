@@ -1,4 +1,4 @@
-var exampleIframes = document.querySelectorAll('.js-example__frame')
+var exampleIframes = document.querySelectorAll('[data-module="app-example-frame"]')
 
 const stylesheets = [
   '/assets/stylsheets/govuk-frontend.min.css',
