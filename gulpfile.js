@@ -7,7 +7,7 @@ require('./tasks/gulp/sass')
 require('./tasks/gulp/copy-assets')
 require('./tasks/gulp/serve')
 
-gulp.task('watch', ['build:watch', 'scss:watch'])
+gulp.task('watch', ['build:watch', 'scss:watch', 'copy-assets:watch'])
 
 gulp.task('build', ['clean', 'compile', 'scss:compile', 'copy-assets'])
 

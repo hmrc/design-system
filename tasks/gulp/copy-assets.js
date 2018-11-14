@@ -10,3 +10,6 @@ gulp.task('copy-assets', () => {
   return gulp.src(assetPaths).pipe(gulp.dest(pathFromRoot('dist', 'assets')))
 })
 
+gulp.task('copy-assets:watch', () => {
+  gulp.watch(assetPaths, ['copy-assets'])
+})
