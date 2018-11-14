@@ -12,6 +12,7 @@ const projectRoot = pathFromRoot()
 const pattern = '**/*{.njk,.html}'
 
 const templatePaths = [
+  pathFromRoot('node_modules', 'hmrc-frontend', 'components'),
   pathFromRoot('application', 'templates'),
   pathFromRoot('application', 'templates', 'partials'),
   pathFromRoot('src')
