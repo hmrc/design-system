@@ -1,6 +1,6 @@
+const path = require('path')
 const gulp = require('gulp')
 const util = require('gulp-util')
-const path = require('path')
 const Metalsmith = require('metalsmith')
 const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
@@ -13,13 +13,13 @@ const pattern = '**/*{.njk,.html}'
 
 const templatePaths = [
   pathFromRoot('application', 'templates'),
-  pathFromRoot('application', 'macros'),
+  pathFromRoot('application', 'templates', 'partials'),
   pathFromRoot('src')
 ]
 
 gulp.task('compile', (done) => {
   util.log('Metalsmith build starting')
-  const filters = require('../../application/filters/hmrc-design-system')
+  const filters = require(pathFromRoot('application', 'filters', 'hmrc-design-system'))
 
   Metalsmith(projectRoot)
     .source('./src')

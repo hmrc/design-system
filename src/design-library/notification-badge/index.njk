@@ -1,6 +1,8 @@
 {%- extends 'twoColumnPage.njk' -%}
-{%- block content -%}
 
+{% from "_example.njk" import example with context %}
+
+{%- block content -%}
   <h1>Notification badge</h1>
 
   {{
@@ -66,5 +68,4 @@
   <p class="govuk-body">
     <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/142">Discuss the notification badge on GitHub</a>
   </p>
-
 {%- endblock -%}
