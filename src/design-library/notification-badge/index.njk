@@ -1,62 +1,76 @@
 {%- extends 'twoColumnPage.njk' -%}
+
+{% from "_example.njk" import example %}
+
 {%- block content -%}
+  <h1>Notification badge</h1>
 
-    <h1>Notification badge</h1>
+  {{ example({
+    item: "notification-badge",
+    example: "default",
+    html: true,
+    nunjucks: true,
+    open: false
+  }) }}
 
-    {{ example({
-        html: 'notification-badge.html',
-        hasWelsh: true
-        }) }}
+  <p class="govuk-body">The notification badge shows a number to let a user know how many of a thing there are.</p>
 
-    <p class="govuk-body">The notification badge shows a number to let a user know how many of a thing there are.</p>
+  <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
-    <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+  <p class="govuk-body">Use the notification badge to grab attention and show how many there are of something. For example, how many unread messages a user has received. Only use it if the number changes when the user performs an action.</p>
 
-    <p class="govuk-body">Use the notification badge to grab attention and show how many there are of something. For example, how many unread messages a user has received. Only use it if the number changes when the user performs an action.</p>
+  <h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
 
-    <h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+  <p class="govuk-body">Do not use the notification badge when:</p>
 
-    <p class="govuk-body">Do not use the notification badge when:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>the number of things is 0</li>
+    <li>there is no action</li>
+  </ul>
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>the number of things is 0</li>
-        <li>there is no action</li>
-    </ul>
+  <p class="govuk-body">Unless there is a strong user need, only use one as a part of navigation.</p>
 
-    <p class="govuk-body">Unless there is a strong user need, only use one as a part of navigation.</p>
+  <h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
 
-    <h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+  <p class="govuk-body">The notification badge is a number displayed to the right-hand side of the component it refers to.</p>
 
-    <p class="govuk-body">The notification badge is a number displayed to the right-hand side of the component it refers to.</p>
+  <p class="govuk-body">There are 2 ways to use the notification badge examples. You can use HTML or, if you are using Nunjucks or
+    <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com">version 7 or later of the GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
-    <p class="govuk-body">There are 2 ways to use the notification badge examples. You can use HTML or, if you are using Nunjucks or <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com">version 7 or later of the GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
+  <p class="govuk-body">If the number is more than 99, display “99+”.</p>
 
+  <p class="govuk-body">If there are 0 things, do not show the badge.</p>
 
-    <p class="govuk-body">If the number is more than 99, display “99+”.</p>
+  {{ example({
+    item: "notification-badge",
+    example: "default",
+    html: true,
+    nunjucks: true,
+    open: false
+  }) }}
 
-    <p class="govuk-body">If there are 0 things, do not show the badge.</p>
+  {{ example({
+    item: "notification-badge",
+    example: "default",
+    html: true,
+    nunjucks: true,
+    open: false
+  }) }}
 
-    {{ example({
-        html: 'notification-badge.html'
-        })
-    }}
+  <h2 class="govuk-heading-l" id="research">Research</h2>
 
-    {{ example({
-        html: 'notification-badge.html'
-        })
-    }}
+  <p class="govuk-body">The notification badge is part of the
+    <a class="govuk-link" href="components/account-header/index.html">account header</a>
+    and is common in many services. Research showed:</p>
 
-    <h2 class="govuk-heading-l" id="research">Research</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>people understand what it is for</li>
+    <li>it does not distract people from their task</li>
+  </ul>
 
-    <p class="govuk-body">The notification badge is part of the <a class="govuk-link" href="components/account-header/index.html">account header</a> and is common in many services. Research showed:</p>
+  <p class="govuk-body">We need more research. If you have used the notification badge, get in touch to share your research findings.</p>
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>people understand what it is for</li>
-        <li>it does not distract people from their task</li>
-    </ul>
-
-    <p class="govuk-body">We need more research. If you have used the notification badge, get in touch to share your research findings.</p>
-
-    <p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/142">Discuss the notification badge on GitHub</a></p>
-
+  <p class="govuk-body">
+    <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/142">Discuss the notification badge on GitHub</a>
+  </p>
 {%- endblock -%}
