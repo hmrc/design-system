@@ -2,3 +2,6 @@ leakDetectionExemptions:
  - ruleId: 'tax_service_gov_uk'
    filePaths:
       - '/CNAME'
+ - ruleId: 'ip_address'
+   filePaths:
+     - '/application/assets/images/hmrc-crown-logo_black.svg'
