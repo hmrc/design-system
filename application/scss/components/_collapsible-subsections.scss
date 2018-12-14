@@ -1,0 +1,163 @@
+
+$arrowSprite: "https://assets.publishing.service.gov.uk/manuals-frontend/arrows_sprite-2x-cda6c9d94bf009bcb92f089fb8e97f78ba5865f667b41b305e0351ab35c3e39e.png";
+.collapsible-subsections {
+  @include govuk-media-query($from: tablet) {
+    .call-to-action p {
+      margin: 0;
+    }
+  }
+}
+
+.collapsible-subsections .js-subsection-title {
+  @include govuk-font(19, $weight: bold);
+  display: block;
+  border-top: 1px solid blue;
+  padding: govuk-spacing(2) govuk-spacing(6) govuk-spacing(2) 0;
+  margin: govuk-spacing(6) 0;
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.subsection-collection {
+  margin-top: govuk-spacing(3);
+
+
+  @include govuk-media-query($from: tablet) {
+    margin-top: govuk-spacing(6);
+  }
+
+  .js-title-controls-wrap {
+    @include govuk-clearfix;
+
+    .section-title {
+      @extend %govuk-heading-m;
+
+      @include govuk-media-query($from: tablet) {
+        float: left;
+        width: 25%;
+      }
+    }
+
+    .js-collection-controls {
+      display: block;
+      margin-left: -5px;
+      margin-bottom: govuk-spacing(3);
+
+      @include govuk-media-query($from: tablet) {
+        margin: 0 0 govuk-spacing(6) -5px;
+        float: right;
+        display: inline-block;
+      }
+
+      a {
+        @include govuk-font(16);
+        padding: 0 5px 0 5px;
+        display: inline-block;
+
+        // We're nesting quite deep here...
+        // scss-lint:disable NestingDepth
+        &.disabled {
+          color: $govuk-secondary-text-colour;
+          text-decoration: none;
+          cursor: default;
+        }
+
+        // scss-lint:enable NestingDepth
+      }
+    }
+  }
+}
+
+.js-openable {
+  border-top: 1px solid $govuk-border-colour;
+  padding-bottom: govuk-spacing(6);
+
+  @include govuk-media-query($from: tablet) {
+    padding-bottom: govuk-spacing(6) * 2;
+  }
+
+  .js-subsection-title {
+    cursor: pointer;
+    margin: 0;
+    border: none;
+
+    .js-toggle {
+      height: 25px;
+      width: 25px;
+      display: block;
+      background: url(https://assets.publishing.service.gov.uk/manuals-frontend/arrows_sprite-22a9b88c738b2052e81ad3376ef8bb73bc3fc21fb2eb3182dd82b83c1c84bf4c.png) no-repeat;
+      position: absolute;
+      right: 0;
+      top: govuk-spacing(2);
+
+      @include govuk-device-pixel-ratio() {
+        background-image: url(https://assets.publishing.service.gov.uk/manuals-frontend/arrows_sprite-22a9b88c738b2052e81ad3376ef8bb73bc3fc21fb2eb3182dd82b83c1c84bf4c.png);
+        background-size: 32px 50px;
+      }
+    }
+  }
+
+  .js-subsection-body {
+    margin-top: govuk-space(3);
+    @include govuk-media-query($from: tablet) {
+      margin-top: govuk-spacing(6);
+    }
+  }
+
+  .js-enabled &.closed {
+    padding: 0;
+
+    .js-toggle {
+      background: url(https://assets.publishing.service.gov.uk/manuals-frontend/arrows_sprite-22a9b88c738b2052e81ad3376ef8bb73bc3fc21fb2eb3182dd82b83c1c84bf4c.png) no-repeat 0 -32px;
+
+      @include govuk-device-pixel-ratio() {
+        background-image: image-url(arrowSprite);
+        background-size: 32px 50px;
+      }
+    }
+
+    .js-subsection-body {
+      position: absolute;
+      left: -9999px;
+      width: 100px;
+      height: 1px;
+      overflow: hidden;
+    }
+  }
+}
+
+.hmrc.section-list {
+  margin-top: govuk-spacing(6);
+  padding-bottom: govuk-spacing(6);
+
+  a {
+    padding-right: 0;
+  }
+
+ @include govuk-media-query($from: tablet) {
+    .title-wrap {
+      display: table-row;
+
+      div {
+        display: table-cell;
+      }
+    }
+  }
+}
+
+.subsection-id {
+  min-width: 135px;
+  color: $govuk-secondary-text-colour;
+  padding-right: govuk-spacing(6);
+}
+
+.print-page {
+  display: none;
+
+  .js-enabled & {
+    display: block;
+  }
+}
