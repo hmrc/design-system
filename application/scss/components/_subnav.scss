@@ -1,0 +1,36 @@
+.app-subnav {
+  @include govuk-font(16);
+}
+
+.app-subnav__section {
+  margin: 0 0 govuk-spacing(4);
+  padding: 0;
+  list-style-type: none;
+}
+
+.app-subnav__link {
+  display: block;
+  padding: 8px govuk-spacing(6) 8px govuk-spacing(2);
+  border-left: 4px solid transparent;
+  text-decoration: none;
+
+  &:focus {
+    background: inherit;
+  }
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: $govuk-link-colour;
+  }
+
+  &:hover {
+    border-left-color: $govuk-link-hover-colour;
+  }
+}
+
+.app-subnav__section-item--current .app-subnav__link {
+  border-left-color: $govuk-link-colour;
+  background: $app-light-grey;
+  font-weight: bold;
+}
