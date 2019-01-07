@@ -6,6 +6,7 @@ const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
 const ignore = require('metalsmith-ignore')
+const navigation = require('../../lib/navigaiton')
 const pathFromRoot = require('./util').pathFromRoot
 
 const projectRoot = pathFromRoot()
@@ -26,11 +27,11 @@ gulp.task('compile', (done) => {
     .source('./src')
     .destination('./dist')
     .clean(true)
-    .use(debug())
     .use(metalsmithPath({
       property: 'filepath',
       extensions: ['.njk', '.html']
     }))
+    .use(navigation())
     .use(inPlace({
       engine: 'nunjucks',
       pattern: pattern,
@@ -40,6 +41,7 @@ gulp.task('compile', (done) => {
         filters: { is_array: filters.isArray, dirname: filters.getDirectoryFromFilepath }
       }
     }))
+    .use(debug())
     .build((err) => {
       if (err) throw err
       done()
