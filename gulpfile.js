@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const gulpSequence = require('gulp-sequence')
 
 require('./tasks/gulp/clean')
+require('./tasks/gulp/lint')
 require('./tasks/gulp/build')
 require('./tasks/gulp/sass')
 require('./tasks/gulp/copy-assets')
