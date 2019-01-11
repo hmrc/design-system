@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HMRC Design System</title>
+  <title>{% block pageTitle %}HMRC Design System{% endblock %}</title>
   <link rel="icon" href="/assets/images/favicon.ico">
   <link type="text/css" rel="stylesheet" href="/assets/stylsheets/govuk-frontend.min.css">
   <!--[if lt IE 8]>
-      <link type="text/css" rel="stylesheet" href="/assets/stylsheets/govuk-frontend-ie8.min.css">
+    <link type="text/css" rel="stylesheet" href="/assets/stylsheets/govuk-frontend-ie8.min.css">
   <[endif]-->
   <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
   <script src="/assets/javascripts/vendor/jquery/jquery.min.js" type="application/javascript"></script>
 </head>
-<body class="govuk-template__body govuk-body">
-<!-- TODO: tidy up the below -->
-{%- block page -%}{%- endblock -%}
+
+<body class="govuk-template__body">
+  {% set serviceName = "Design resources for HMRC" %}
+
+  <!-- TODO: tidy up the below -->
+  {%- block page -%}{%- endblock -%}
+
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   <script src="/assets/javascripts/vendor/govuk/current_location.js" type="application/javascript"></script>
   <script src="/assets/javascripts/vendor/govuk/collapsible.js" type="application/javascript"></script>

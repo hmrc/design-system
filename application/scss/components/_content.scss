@@ -1,0 +1,71 @@
+// Taken from https://github.com/alphagov/govuk-design-system/blob/d1da30e74aa85bfbd6359c582ef58ed8db2659e3/src/stylesheets/main.scss#L80 on 2019-01-11
+
+.app-content {
+  @include govuk-responsive-padding(6);
+
+  h1 {
+    max-width: 15em;
+  }
+
+  h2 {
+    max-width: 20em;
+  }
+
+  h3 {
+    max-width: 30em;
+  }
+
+  h4,
+  h5,
+  h6,
+  p,
+  ul:not(.app-tabs),
+  ol,
+  img,
+  video,
+  .app-table--constrained {
+    max-width: 38em;
+  }
+
+  video,
+  img {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    @include govuk-responsive-margin(2, "top");
+    @include govuk-responsive-margin(6, "bottom");
+    border: 1px solid $govuk-border-colour;
+  }
+
+  img {
+    padding: govuk-spacing(2);
+  }
+
+  video {
+    @include govuk-focusable;
+  }
+
+  // IE8 does not support the video element, so we hide the element entirely.
+  @if $govuk-is-ie8 == true {
+    video {
+      display: none;
+    }
+  }
+
+  // Fix monospace font size when used with relative typography
+  //
+  // Browsers automatically reduce monospace font size
+  //
+  // [1] restores the normal text size in Mozilla Firefox, Google Chrome,
+  // and Safari; this unusual style rule should also be used anywhere where
+  // you would otherwise set the font-family property to ‘monospace’.
+  // [2] restores the normal text size in Internet Explorer and Opera.
+  //
+  // source:
+  // http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/
+  pre,
+  code {
+    font-family: monospace, monospace; // [1]
+    font-size: 1em; // [2]
+  }
+}
