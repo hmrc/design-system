@@ -7,7 +7,6 @@ const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
-const merge = require('merge-stream')
 const pathFromRoot = require('./util').pathFromRoot
 
 const scssPaths = [

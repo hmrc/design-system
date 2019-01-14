@@ -7,8 +7,11 @@
 
 @import 'objects/width-container';
 
+@import 'components/content';
+@import 'components/header';
 @import 'components/logo';
 @import 'components/hmrc-internal-header';
 @import 'components/pane';
 @import 'components/subnav';
-@import 'components/collapsible-subsections'
+@import 'components/collapsible-subsections';
+@import 'components/footer';

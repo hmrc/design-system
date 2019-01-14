@@ -1,0 +1,34 @@
+// Taken from https://github.com/alphagov/govuk-design-system/blob/d1da30e74aa85bfbd6359c582ef58ed8db2659e3/src/stylesheets/components/_header.scss on 2019-01-11
+
+.app-header__title {
+  @include govuk-font(24);
+}
+
+.app-header__link {
+  // Font size needs to be set on the link so that the box sizing is correct
+  // in Firefox
+  @include govuk-typography-common;
+  @include govuk-typography-weight-bold;
+  display: inline-block;
+
+  font-size: 30px; // We do not have a mixin that produces 30px font size\
+  line-height: 30px;
+  @include govuk-clearfix;
+
+  &:link,
+  &:visited {
+    margin-bottom: -1px; // Negate transparent bottom border
+    border-bottom: 1px solid transparent;
+    color: govuk-colour("white");
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active {
+    border-bottom-color: currentColor;
+  }
+
+  &:focus {
+    color: $govuk-focus-text-colour;
+  }
+}

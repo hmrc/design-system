@@ -5,8 +5,6 @@ const Metalsmith = require('metalsmith')
 const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
-// 'metalsmith-ignore'added to allow for Nunjucks code examples to be excluded from Metalsmith rendering
-const ignore = require('metalsmith-ignore')
 const navigation = require('../../lib/navigaiton')
 const pathFromRoot = require('./util').pathFromRoot
 
