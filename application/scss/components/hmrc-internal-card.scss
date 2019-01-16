@@ -1,0 +1,29 @@
+.hmrc-internal-cards {
+
+  .hmrc-internal-cards__group + .hmrc-internal-cards__group {
+    border-top: 1px solid #bfc1c3;
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+
+  .hmrc-internal-cards__card {
+    text-decoration: none;
+    background-color: #f8f8f8;
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    h3 {
+      color: #005ea5;
+    }
+
+    &:hover {
+      background-color: #005ea5;
+      color: white;
+
+      h3, p {
+        color: inherit;
+      }
+    }
+  }
+}
