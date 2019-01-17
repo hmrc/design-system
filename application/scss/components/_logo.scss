@@ -1,11 +1,11 @@
-
 .hmrc-logo {
   border-left: 2px solid #009390;
 }
 
 .hmrc-logo__link{
   display: table;
-  &::before{
+
+  &:before{
     content: '';
     display: table-cell;
     background: url(/assets/images/hmrc-crown-logo_black.svg) no-repeat;
@@ -13,6 +13,7 @@
     width: 52px;
     height: 32px;
   }
+
   &:link,
   &:visited {
     text-decoration: none;
