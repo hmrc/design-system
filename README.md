@@ -1,9 +1,9 @@
 
-# design-system
+# Design resources for HMRC
 
  [ ![Download](https://api.bintray.com/packages/hmrc/releases/design-system/images/download.svg) ](https://bintray.com/hmrc/releases/design-system/_latestVersion)
 
-This is a placeholder README.md for a new repository
+Guidance and documentation for designing and building HMRC services.
 
 ### License
 
