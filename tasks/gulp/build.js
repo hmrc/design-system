@@ -6,9 +6,10 @@ const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
 const navigation = require('../../lib/navigaiton')
-const pathFromRoot = require('./util').pathFromRoot
 
+const pathFromRoot = require('./util').pathFromRoot
 const projectRoot = pathFromRoot()
+
 const pattern = '**/*{.njk,.html}'
 
 const templatePaths = [
@@ -36,8 +37,13 @@ gulp.task('compile', (done) => {
       pattern: pattern,
       engineOptions: {
         noCache: true,
+        trimBlocks: true,
+        lstripBlocks: true,
         path: templatePaths,
-        filters: { is_array: filters.isArray, dirname: filters.getDirectoryFromFilepath }
+        filters: {
+          is_array: filters.isArray,
+          dirname: filters.getDirectoryFromFilepath
+        }
       }
     }))
     .use(debug())
