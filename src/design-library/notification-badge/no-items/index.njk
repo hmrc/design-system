@@ -3,5 +3,5 @@
 {%- from "hmrc-notification-badge/macro.njk" import hmrcNotificationBadge -%}
 
 {%- block content -%}
-<a class="govuk-link" href="#">Messages {{ hmrcNotificationBadge({ text: '32' }) }}</a>
+<a class="govuk-link" href="#">Messages {{ hmrcNotificationBadge() }}</a>
 {%- endblock -%}
