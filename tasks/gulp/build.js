@@ -5,6 +5,11 @@ const Metalsmith = require('metalsmith')
 const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
+
+const rollup = require('metalsmith-rollup')
+const resolve = require('rollup-plugin-node-resolve')
+const commonjs = require('rollup-plugin-commonjs')
+
 const navigation = require('../../lib/navigaiton')
 
 const pathFromRoot = require('./util').pathFromRoot
@@ -32,6 +37,18 @@ gulp.task('compile', (done) => {
       extensions: ['.njk', '.html']
     }))
     .use(navigation())
+    .use(rollup({
+      input: pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js'),
+      output: {
+        legacy: true,
+        format: 'iife',
+        file: 'assets/javascripts/hmrc-design-system.js'
+      },
+      plugins: [
+        resolve(),
+        commonjs()
+      ]
+    }))
     .use(inPlace({
       engine: 'nunjucks',
       pattern: pattern,

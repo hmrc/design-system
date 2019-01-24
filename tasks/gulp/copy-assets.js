@@ -5,7 +5,9 @@ const pathFromRoot = require('./util').pathFromRoot
 
 const assetPaths = [
   pathFromRoot('node_modules', 'govuk-frontend', 'assets', '**', '*'),
-  pathFromRoot('application', 'assets', '**', '*')
+  pathFromRoot('application', 'assets', '**', '*'),
+  '!' + pathFromRoot('application', 'assets', 'javascripts', 'components', '**', '*'),
+  '!' + pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js')
 ]
 
 gulp.task('copy-assets', () => {
@@ -19,7 +21,9 @@ gulp.task('copy-assets', () => {
     'collapsible.js',
     'collapsible_collection.js',
     'current_location.js'
-  ], { base: 'https://raw.githubusercontent.com/alphagov/manuals-frontend/master/app/assets/javascripts/modules/' })
+  ], {
+    base: 'https://raw.githubusercontent.com/alphagov/manuals-frontend/master/app/assets/javascripts/modules/'
+  })
     .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'javascripts', 'vendor', 'govuk')))
 
   return merge(assets, jquery, collapsible)

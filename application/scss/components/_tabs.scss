@@ -1,0 +1,138 @@
+// Taken from https://github.com/alphagov/govuk-design-system/blob/29b9cf8c30ac1514d16fc97adaf15100e5040f7d/src/stylesheets/components/_tabs.scss
+
+// Tabs styles
+.app-tabs {
+  margin: -1px auto;
+  padding: 0;
+  overflow: visible;
+  list-style-type: none;
+  border: 1px solid $govuk-border-colour;
+
+  @include govuk-media-query($until: desktop) {
+    display: none;
+  }
+
+  .app-prose-scope & { // A specific selector to reset .app-prose-scope ul
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.app-tabs__item {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+
+  a {
+    display: block;
+    margin-top: -1px;
+    padding: govuk-spacing(3);
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    color: $govuk-link-colour;
+    background: inherit;
+    font-weight: bold;
+    text-decoration: none;
+
+    .app-prose-scope &:focus { // A specific selector to reset .app-prose-scope a:focus
+      color: $govuk-link-colour;
+      background: inherit;
+    }
+
+    .app-prose-scope &:visited {
+      color: $govuk-link-colour;
+    }
+  }
+
+  .app-prose-scope & { // A specific selector to reset .app-prose-scope ul li
+    margin: 0;
+  }
+}
+
+.app-tabs__item--current {
+  a {
+    border-top-color: govuk-colour("blue");
+    border-bottom-color: govuk-colour("blue");
+    background-color: darken(govuk-colour("grey-4"), 3%);
+  }
+}
+
+// Tab drawer heading for accordion look on mobile
+.app-tabs__heading {
+  a {
+    display: none;
+    position: relative;
+    z-index: 2;
+    padding: govuk-spacing(3);
+    border: 1px solid $govuk-border-colour;
+    border-top: 0;
+    color: $govuk-link-colour;
+    background: inherit;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:visited {
+      color: $govuk-link-colour;
+    }
+
+    &:focus {
+      color: govuk-colour("black");
+    }
+
+    @include govuk-media-query($until: desktop) {
+      display: block;
+    }
+  }
+}
+
+.app-tabs__heading--current {
+  background-color: darken(govuk-colour("grey-4"), 3%);
+}
+
+// Tab containers
+.app-tabs__container {
+  margin-top: -2px;
+  border: 1px solid $govuk-border-colour;
+}
+
+.app-tabs__container--hidden {
+  display: none;
+}
+
+.app-tabs__container pre {
+  position: relative;
+  max-width: inherit;
+  margin-bottom: 0;
+  border: 0;
+  font-size: inherit;
+}
+
+.app-tabs__container pre code {
+  display: block;
+  padding-right: govuk-spacing(4);
+  padding-bottom: govuk-spacing(4);
+  overflow-x: auto;
+}
+
+.app-tabs__container pre {
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+
+.app-tabs__container--with-close-button pre {
+  padding-bottom: govuk-spacing(6);
+}
+
+.app-tabs__text {
+  padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(4) govuk-spacing(4);
+
+  // magical number 1080px below as the content is inside a narrow panel
+  // and cannot rely on predefined media queries
+  // govuk-media-query converts pixels to ems
+
+  @include govuk-media-query($from: 1080px) {
+    padding-bottom: 0;
+  }
+}

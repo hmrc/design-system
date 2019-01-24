@@ -56,7 +56,10 @@
     "metalsmith-in-place": "^4.2.0",
     "metalsmith-jstransformer": "^0.13.2",
     "metalsmith-path": "^0.3.1",
+    "metalsmith-rollup": "^2.0.0",
     "oldie": "^1.3.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
     "run-sequence": "^2.2.1",
     "standard": "^12.0.1"
   }
