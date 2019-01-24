@@ -70,7 +70,7 @@ gulp.task('scss:pattern-libraries', () => {
     ])))
     .pipe(rename((path) => {
       path.basename = path.basename.replace('all', path.dirname)
-      path.dirname = 'assets/stylsheets'
+      path.dirname = 'assets/stylesheets'
       path.extname = '.min.css'
     }))
     .pipe(gulp.dest('./dist'))

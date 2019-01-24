@@ -1,8 +1,8 @@
 var exampleIframes = document.querySelectorAll('[data-module="app-example-frame"]')
 
 const stylesheets = [
-  '/assets/stylsheets/govuk-frontend.min.css',
-  '/assets/stylsheets/hmrc-frontend.min.css'
+  '/assets/stylesheets/govuk-frontend.min.css',
+  '/assets/stylesheets/hmrc-frontend.min.css'
 ]
 
 function createStylesheetLink (filename) {
