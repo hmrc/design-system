@@ -4,6 +4,9 @@
   display: block;
   padding: 20px;
   margin-bottom: 20px;
+  @include govuk-media-query(desktop) {
+    min-height: 168px;
+  }
 }
 
 .app-card__heading {
