@@ -12,7 +12,9 @@
   </head>
 
   <body class="app-example-page">
-    {% block content %}{% endblock %}
+    {%- block body -%}
+      {{ contents | safe }}
+    {%- endblock -%}
   </body>
 
   <script src="/assets/javascripts/hmrc-design-system.js"></script>

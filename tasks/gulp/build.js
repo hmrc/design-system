@@ -5,6 +5,7 @@ const Metalsmith = require('metalsmith')
 const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
+const layouts = require('metalsmith-layouts')
 
 const rollup = require('metalsmith-rollup')
 const resolve = require('rollup-plugin-node-resolve')
@@ -61,6 +62,14 @@ gulp.task('compile', (done) => {
           is_array: filters.isArray,
           dirname: filters.getDirectoryFromFilepath
         }
+      }
+    }))
+    .use(layouts({
+      default: 'default.njk',
+      directory: pathFromRoot('application', 'templates'),
+      pattern: '**/*.html',
+      engineOptions: {
+        path: templatePaths
       }
     }))
     .use(debug())

@@ -1,7 +1,6 @@
-{%- extends 'layout-example.njk' -%}
-
+---
+layout: layout-example.njk
+---
 {%- from "hmrc-notification-badge/macro.njk" import hmrcNotificationBadge -%}
 
-{%- block content -%}
 <a class="govuk-link" href="#">Messages {{ hmrcNotificationBadge({ text: '32' }) }}</a>
-{%- endblock -%}
