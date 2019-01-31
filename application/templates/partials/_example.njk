@@ -113,7 +113,7 @@
           })}} #}
         {% endif %}
         <pre data-module="app-copy"><code class="hljs js">
-          {# {{- getNunjucksCode(examplePath) | highlight('js') | safe -}} #}
+          {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
         </code></pre>
       </div>
     {% endif %}

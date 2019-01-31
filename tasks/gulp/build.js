@@ -66,7 +66,8 @@ gulp.task('compile', (done) => {
           highlight: highlighter
         },
         globals: {
-          getHTMLCode: fileHelper.getHTMLCode
+          getHTMLCode: fileHelper.getHTMLCode,
+          getNunjucksCode: fileHelper.getNunjucksCode,
         }
       }
     }))
