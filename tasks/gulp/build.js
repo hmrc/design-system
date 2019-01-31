@@ -13,6 +13,7 @@ const commonjs = require('rollup-plugin-commonjs')
 
 const navigation = require('../../lib/navigaiton')
 
+const fileHelper = require('../../lib/file-helper.js')
 const pathFromRoot = require('./util').pathFromRoot
 const projectRoot = pathFromRoot()
 
@@ -61,6 +62,9 @@ gulp.task('compile', (done) => {
         filters: {
           is_array: filters.isArray,
           dirname: filters.getDirectoryFromFilepath
+        },
+        globals: {
+          getHTMLCode: fileHelper.getHTMLCode
         }
       }
     }))
@@ -83,4 +87,6 @@ gulp.task('build:watch', () => {
   templatePaths.forEach(pathStr => {
     gulp.watch(path.join(pathStr, pattern), ['build'])
   })
+
+  gulp.watch(pathFromRoot('application', 'assets', 'javascripts', '**', '*'), ['build'])
 })
