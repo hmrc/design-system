@@ -12,6 +12,7 @@ const resolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 
 const navigation = require('../../lib/navigaiton')
+const highlighter = require('../../lib/highlighter')
 
 const fileHelper = require('../../lib/file-helper.js')
 const pathFromRoot = require('./util').pathFromRoot
@@ -61,7 +62,8 @@ gulp.task('compile', (done) => {
         path: templatePaths,
         filters: {
           is_array: filters.isArray,
-          dirname: filters.getDirectoryFromFilepath
+          dirname: filters.getDirectoryFromFilepath,
+          highlight: highlighter
         },
         globals: {
           getHTMLCode: fileHelper.getHTMLCode

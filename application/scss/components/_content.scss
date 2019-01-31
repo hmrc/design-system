@@ -68,4 +68,15 @@
     font-family: monospace, monospace; // [1]
     font-size: 1em; // [2]
   }
+
+  pre {
+    max-width: 38em;
+    margin: 0;
+    padding: govuk-spacing(4);
+    overflow: auto;
+    border: 1px solid $govuk-border-colour;
+    background-color: $app-light-grey;
+    font-size: 16px;
+    @include govuk-responsive-margin(4, "bottom");
+  }
 }
