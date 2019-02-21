@@ -1,27 +1,10 @@
-var exampleIframes = document.querySelectorAll('[data-module="app-example-frame"]')
+import common from 'govuk-frontend/common'
+import AppTabs from './components/tabs.js'
 
-const stylesheets = [
-  '/assets/stylsheets/govuk-frontend.min.css',
-  '/assets/stylsheets/hmrc-frontend.min.css'
-]
+var nodeListForEach = common.nodeListForEach
 
-function createStylesheetLink (filename) {
-  var cssLink = document.createElement('link')
-
-  cssLink.href = filename
-  cssLink.rel = 'stylesheet'
-  cssLink.type = 'text/css'
-
-  return cssLink
-}
-
-exampleIframes.forEach(function (iframe) {
-  iframe.onload = function (event) {
-    const iframe = event.target
-
-    stylesheets.forEach(function (stylesheet) {
-      var stylesheetLink = createStylesheetLink(stylesheet)
-      iframe.contentDocument.head.appendChild(stylesheetLink)
-    })
-  }
+// Initialise tabs
+var $tabs = document.querySelectorAll('[data-module="app-tabs"]')
+nodeListForEach($tabs, function ($tabs) {
+  new AppTabs($tabs).init()
 })

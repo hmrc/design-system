@@ -33,7 +33,9 @@ gulp.task('scss:hmrc-design-system', () => {
   // TODO: compile an Old IE version of our local css
   return gulp.src('./application/scss/hmrc-design-system.scss')
     .pipe(plumber(errorHandler))
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }))
     .pipe(postcss([
       autoprefixer,
       cssnano
@@ -49,7 +51,9 @@ gulp.task('scss:pattern-libraries', () => {
 
   return gulp.src(scssPaths, { base: 'node_modules' })
     .pipe(plumber(errorHandler))
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }))
     // minify css add vendor prefixes and normalize to compiled css
     .pipe(postcss([
       autoprefixer,
@@ -66,7 +70,7 @@ gulp.task('scss:pattern-libraries', () => {
     ])))
     .pipe(rename((path) => {
       path.basename = path.basename.replace('all', path.dirname)
-      path.dirname = 'assets/stylsheets'
+      path.dirname = 'assets/stylesheets'
       path.extname = '.min.css'
     }))
     .pipe(gulp.dest('./dist'))

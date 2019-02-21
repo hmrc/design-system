@@ -5,10 +5,19 @@ const Metalsmith = require('metalsmith')
 const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
-const navigation = require('../../lib/navigaiton')
-const pathFromRoot = require('./util').pathFromRoot
+const layouts = require('metalsmith-layouts')
 
+const rollup = require('metalsmith-rollup')
+const resolve = require('rollup-plugin-node-resolve')
+const commonjs = require('rollup-plugin-commonjs')
+
+const navigation = require('../../lib/navigaiton')
+const highlighter = require('../../lib/highlighter')
+
+const fileHelper = require('../../lib/file-helper.js')
+const pathFromRoot = require('./util').pathFromRoot
 const projectRoot = pathFromRoot()
+
 const pattern = '**/*{.njk,.html}'
 
 const templatePaths = [
@@ -31,13 +40,43 @@ gulp.task('compile', (done) => {
       extensions: ['.njk', '.html']
     }))
     .use(navigation())
+    .use(rollup({
+      input: pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js'),
+      output: {
+        legacy: true,
+        format: 'iife',
+        file: 'assets/javascripts/hmrc-design-system.js'
+      },
+      plugins: [
+        resolve(),
+        commonjs()
+      ]
+    }))
     .use(inPlace({
       engine: 'nunjucks',
       pattern: pattern,
       engineOptions: {
         noCache: true,
+        trimBlocks: true,
+        lstripBlocks: true,
         path: templatePaths,
-        filters: { is_array: filters.isArray, dirname: filters.getDirectoryFromFilepath }
+        filters: {
+          is_array: filters.isArray,
+          dirname: filters.getDirectoryFromFilepath,
+          highlight: highlighter
+        },
+        globals: {
+          getHTMLCode: fileHelper.getHTMLCode,
+          getNunjucksCode: fileHelper.getNunjucksCode,
+        }
+      }
+    }))
+    .use(layouts({
+      default: 'default.njk',
+      directory: pathFromRoot('application', 'templates'),
+      pattern: '**/*.html',
+      engineOptions: {
+        path: templatePaths
       }
     }))
     .use(debug())
@@ -51,4 +90,6 @@ gulp.task('build:watch', () => {
   templatePaths.forEach(pathStr => {
     gulp.watch(path.join(pathStr, pattern), ['build'])
   })
+
+  gulp.watch(pathFromRoot('application', 'assets', 'javascripts', '**', '*'), ['build'])
 })
