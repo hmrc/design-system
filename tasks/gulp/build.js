@@ -67,7 +67,7 @@ gulp.task('compile', (done) => {
         },
         globals: {
           getHTMLCode: fileHelper.getHTMLCode,
-          getNunjucksCode: fileHelper.getNunjucksCode,
+          getNunjucksCode: fileHelper.getNunjucksCode
         }
       }
     }))
