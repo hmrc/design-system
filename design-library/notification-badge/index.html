@@ -63,6 +63,16 @@
             </li>
             
           
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/open-in-a-new-window">
+                Open in a new window
+              </a>
+            </li>
+            
+          
           </ul>
         </nav>
       </div>
@@ -124,7 +134,8 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a href="#example-default-nunjucks" role="tab" aria-controls="example-default-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">        <pre data-module="app-copy"><code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
+      <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
+        <pre data-module="app-copy"><code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
 
 &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Messages {{ hmrcNotificationBadge({ <span class="hljs-attr">text</span>: <span class="hljs-string">'32'</span> }) }}&lt;<span class="hljs-regexp">/a&gt;</span></code></pre>
       </div>
@@ -159,7 +170,8 @@
     </div>
       <div class="app-tabs__heading js-tabs__heading"><a href="#example-no-items-nunjucks" role="tab" aria-controls="example-no-items-nunjucks" data-track="tab-nunjucks">Nunjucks</a></div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-no-items-nunjucks" role="tabpanel">        <pre data-module="app-copy"><code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
+      <div class="app-tabs__container js-tabs__container" id="example-no-items-nunjucks" role="tabpanel">
+        <pre data-module="app-copy"><code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
 
 &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Messages {{ hmrcNotificationBadge() }}&lt;<span class="hljs-regexp">/a&gt;</span></code></pre>
       </div>
