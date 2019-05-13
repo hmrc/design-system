@@ -11,13 +11,18 @@
           Open this example in a new window
         </a>
       </span>
-      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="{{ exampleURL }}" frameBorder="0"></iframe>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="{{ exampleURL }}" frameBorder="0"></iframe>
     </div>
 
     <span id="options-{{ exampleId }}"></span>
     <ul class="app-tabs" role="tablist">
-      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></li>
-      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-nunjucks" role="tab" aria-controls="{{ exampleId }}-nunjucks" data-track="tab-nunjucks">Nunjucks</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-html" role="tab"
+        aria-controls="{{ exampleId }}-html"
+        data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-nunjucks" role="tab"
+        aria-controls="{{ exampleId }}-nunjucks"
+        data-track="tab-nunjucks">Nunjucks</a></li>
     </ul>
 
     <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
@@ -26,10 +31,10 @@
       </code></pre>
     </div>
 
-      <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
+    <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
         <pre data-module="app-copy"><code class="hljs js">
           {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
         </code></pre>
-      </div>
+    </div>
   </div>
 {% endmacro %}
