@@ -1,7 +1,6 @@
 ---
 layout: twoColumnPage.njk
 title: Open links in a new window or tab
-menuText: Open in a new window
 ---
 
 {% from "_example.njk" import example %}
@@ -56,21 +55,14 @@ menuText: Open in a new window
 </div>
 
 {{ example({
-  item: "new-tab-link",
-  example: "default",
-  html: true,
-  nunjucks: true,
-  open: false
+  item: "new-tab-link"
 }) }}
 
 <p class="govuk-body">This component is also available in welsh:</p>
 
 {{ example({
   item: "new-tab-link",
-  example: "welsh",
-  html: true,
-  nunjucks: true,
-  open: false
+  example: "welsh"
 }) }}
 <h2 id="research" class="govuk-heading-l">Research</h2>
 
