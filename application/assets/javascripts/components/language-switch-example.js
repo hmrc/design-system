@@ -34,8 +34,11 @@ LanguageSwitchExample.prototype.handleClick = function (event) {
   nodeListForEach(this.$module.querySelectorAll('.' + this.currentClassName), function ($option) {
     $option.classList.remove(self.currentClassName)
   })
-  this.$iframe.setAttribute('href', $target.getAttribute('href'))
+  this.$iframe.setAttribute('src', $target.getAttribute('href'))
   $target.classList.add(this.currentClassName)
+  this.$module.classList.remove('en-mode')
+  this.$module.classList.remove('cy-mode')
+  this.$module.classList.add($target.getAttribute('data-lang') + '-mode')
 }
 
 export default LanguageSwitchExample

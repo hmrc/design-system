@@ -52,6 +52,14 @@
   display: none;
 }
 
+.en-mode .cy-only {
+  display: none
+}
+
+.cy-mode .en-only {
+  display: none
+}
+
 .app-example__frame {
   display: block;
   width: 100%;
