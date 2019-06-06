@@ -52,11 +52,11 @@
   display: none;
 }
 
-.en-mode .cy-only {
+.app-example__language-switch--en-activated .app-example__language-switch--cy-only-content {
   display: none
 }
 
-.cy-mode .en-only {
+.app-example__language-switch--cy-activated .app-example__language-switch--en-only-content {
   display: none
 }
 

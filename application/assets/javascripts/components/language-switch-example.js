@@ -12,6 +12,9 @@ function LanguageSwitchExample ($module) {
   this.$switches = this.$module.querySelectorAll('.app-example__language-switch')
   this.$iframe = this.$module.querySelector('[data-module~="app-example-frame"]')
   this.currentClassName = 'app-example__language-switch--current'
+  this.getLanguageClass = function (lang) {
+    return ['app-example__language-switch--', lang, '-activated'].join('')
+  }
 }
 
 LanguageSwitchExample.prototype.init = function () {
@@ -33,12 +36,12 @@ LanguageSwitchExample.prototype.handleClick = function (event) {
   var $target = event.target
   nodeListForEach(this.$module.querySelectorAll('.' + this.currentClassName), function ($option) {
     $option.classList.remove(self.currentClassName)
+    $option.querySelector('a').focus()
   })
   this.$iframe.setAttribute('src', $target.getAttribute('href'))
-  $target.classList.add(this.currentClassName)
-  this.$module.classList.remove('en-mode')
-  this.$module.classList.remove('cy-mode')
-  this.$module.classList.add($target.getAttribute('data-lang') + '-mode')
+  $target.parentNode.classList.add(this.currentClassName)
+  this.$module.classList.remove(this.getLanguageClass('en'), this.getLanguageClass('cy'))
+  this.$module.classList.add(this.getLanguageClass($target.getAttribute('data-lang')))
 }
 
 export default LanguageSwitchExample
