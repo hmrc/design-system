@@ -11,7 +11,7 @@ const rollup = require('metalsmith-rollup')
 const resolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 
-const navigation = require('../../lib/navigaiton')
+const navigation = require('../../lib/navigation')
 const highlighter = require('../../lib/highlighter')
 
 const fileHelper = require('../../lib/file-helper.js')
