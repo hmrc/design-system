@@ -5,7 +5,6 @@
   {% set exampleId = "example-" + exampleRef %}
   {% if params.welsh %}
     {% set welshExampleRef = params.welsh | default("default") %}
-    {% set welshExampleURL = "/design-library/" + params.item + "/" + welshExampleRef + "/" %}
     {% set welshExamplePath = "src" + welshExampleURL + "index.njk" %}
     {% set welshExampleURL = "/design-library/" + params.item + "/" + welshExampleRef + "/" %}
   {% endif %}
