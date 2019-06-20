@@ -1,0 +1,5 @@
+leakDetectionExemptions:
+ - ruleId: 'ip_addresses'
+   filePaths:
+    - '/assets/javascripts/hmrc-design-system.js'
+
