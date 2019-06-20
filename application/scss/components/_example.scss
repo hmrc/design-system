@@ -26,11 +26,10 @@
   }
 }
 
-.app-example__new-window {
+.app-example__link {
   position: absolute;
   z-index: 1;
   top: 0;
-  left: 0;
   padding: 5px govuk-spacing(2);
   @include govuk-font(14);
   background: govuk-colour("grey-3");
@@ -39,6 +38,26 @@
     color: $govuk-link-colour;
     text-decoration: none;
   }
+}
+
+.app-example__new-window {
+  left: 0;
+}
+
+.app-example__language-switch {
+  right: 0;
+}
+
+.app-example__language-switch--current {
+  display: none;
+}
+
+.app-example__language-switch--en-activated .app-example__language-switch--cy-only-content {
+  display: none
+}
+
+.app-example__language-switch--cy-activated .app-example__language-switch--en-only-content {
+  display: none
 }
 
 .app-example__frame {
