@@ -14,7 +14,7 @@ const templatePaths = [
 
 const htmlEscape = htmlString => htmlString.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 const nunjucksEscape = nunjucksString => nunjucksString.replace(/\{% raw %\}\n/, '').replace(/\{% endraw %\}/, '')
-const exampleId = 'test'
+const exampleId = 'example-default'
 
 const options = {
   path: templatePaths,
@@ -25,7 +25,6 @@ const options = {
 }
 
 const fixturePath = path.join(__dirname, 'fixtures', 'test-component', 'examples')
-const defaultHeight = 153
 
 const templateFactory = (parameters) => {
   // ToDo: check if there's a better way of handling the object passed in
@@ -47,15 +46,15 @@ const documentFactory = function (parameters, options) {
 describe.only('Single page example macro english html only', () => {
   const parameters = { item: 'new-tab-link', example: 'default' }
   const document = documentFactory(parameters, options)
-  const exampleSrc = path.join('examples', exampleId + '.html').toString()
-  const exampleFrame = document.getElementById(`${exampleId}_frame`)
+
+  const exampleSrc = "/design-library/new-tab-link/default/"
+
+  const exampleFrame = document.querySelector(`#${exampleId} iframe`)
   const exampleLink = document.querySelector('.app-example__link a')
 
-  test.only('should render an iFrame for the example with the correct attribute values', () => {
+  test('should render an iFrame for the example with the correct attribute values', () => {
     expect(exampleFrame).not.toBeNull()
     expect(exampleFrame.tagName.toLowerCase()).toBe('iframe')
-    expect(exampleFrame.name).toBe(`${exampleId}_frame`)
-    expect(parseInt(exampleFrame.height)).toEqual(defaultHeight)
     expect(exampleFrame.src).toMatch(exampleSrc)
   })
 
@@ -70,17 +69,19 @@ describe.only('Single page example macro english html only', () => {
     expect(languageToggleLink).toBeNull()
   })
 
-  test('should have a button to show HTML code examples', () => {
+  test.only('should have a button to show HTML and Nunjucks code examples', () => {
     const codeExampleTabsContainer = document.getElementsByClassName('app-tabs')[0]
     expect(codeExampleTabsContainer.nodeName.toLowerCase()).toBe('ul')
 
     const exampleToggleLinks = codeExampleTabsContainer.querySelectorAll('li.app-tabs__item a')
-    expect(exampleToggleLinks.length).toBe(1)
+    expect(exampleToggleLinks.length).toBe(2)
 
     const htmlExampleToggleLink = exampleToggleLinks[0]
+    expect(document.getElementById('example-default-html')).not.toBeNull()
+    expect(document.getElementById('example-default-nunjucks')).not.toBeNull()
     expect(htmlExampleToggleLink.nodeName.toLowerCase()).toBe('a')
-    expect(htmlExampleToggleLink.getAttribute('href')).toBe(`#${exampleId}_html`)
-    expect(htmlExampleToggleLink.getAttribute('aria-controls')).toBe(`${exampleId}_html`)
+    expect(htmlExampleToggleLink.getAttribute('href')).toBe('#example-default-html')
+    expect(htmlExampleToggleLink.getAttribute('aria-controls')).toBe('example-default-html')
     expect(htmlExampleToggleLink.text).toBe('HTML')
   })
 
