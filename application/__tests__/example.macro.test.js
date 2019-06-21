@@ -24,7 +24,27 @@ const options = {
   globals
 }
 
+const throwIfUsedWithNotOrRefactoredToArrowFunction = (context) => {
+  if (context.isNot !== false) {
+    throw new Error('This matcher doesn\'t yet support `.not`.')
+  }
+}
+
 const fixturePath = path.join(__dirname, 'fixtures', 'test-component', 'examples')
+expect.extend({
+  toHaveAttributes: function(domElement, expectedAttributes) {
+    throwIfUsedWithNotOrRefactoredToArrowFunction(this)
+
+    const hasAttributes = Object.keys(expectedAttributes)
+      .map(key => domElement.getAttribute(key) !== expectedAttributes[key] && `${key} did not match, expected [${key}] to match [${expectedAttributes[key]}] but received [${domElement.getAttribute(key)}]`)
+      .filter(value => value !== false)
+
+      return {
+        pass: hasAttributes.length === 0,
+        message: () => hasAttributes.join('\n') || 'blah'
+    }
+  }
+})
 
 const templateFactory = (parameters) => {
   // ToDo: check if there's a better way of handling the object passed in
@@ -43,11 +63,11 @@ const documentFactory = function (parameters, options) {
   return document
 }
 
-describe.only('Single page example macro english html only', () => {
+describe('Single page example macro english', () => {
   const parameters = { item: 'new-tab-link', example: 'default' }
   const document = documentFactory(parameters, options)
 
-  const exampleSrc = "/design-library/new-tab-link/default/"
+  const exampleSrc = '/design-library/new-tab-link/default/'
 
   const exampleFrame = document.querySelector(`#${exampleId} iframe`)
   const exampleLink = document.querySelector('.app-example__link a')
@@ -69,85 +89,43 @@ describe.only('Single page example macro english html only', () => {
     expect(languageToggleLink).toBeNull()
   })
 
-  test.only('should have a button to show HTML and Nunjucks code examples', () => {
-    const codeExampleTabsContainer = document.getElementsByClassName('app-tabs')[0]
-    expect(codeExampleTabsContainer.nodeName.toLowerCase()).toBe('ul')
-
-    const exampleToggleLinks = codeExampleTabsContainer.querySelectorAll('li.app-tabs__item a')
-    expect(exampleToggleLinks.length).toBe(2)
-
-    const htmlExampleToggleLink = exampleToggleLinks[0]
-    expect(document.getElementById('example-default-html')).not.toBeNull()
-    expect(document.getElementById('example-default-nunjucks')).not.toBeNull()
-    expect(htmlExampleToggleLink.nodeName.toLowerCase()).toBe('a')
-    expect(htmlExampleToggleLink.getAttribute('href')).toBe('#example-default-html')
-    expect(htmlExampleToggleLink.getAttribute('aria-controls')).toBe('example-default-html')
-    expect(htmlExampleToggleLink.text).toBe('HTML')
+  test('should have a button to show HTML code examples', () => {
+    const tabLink = document.querySelector('ul.app-tabs li.js-tabs__item a[href="#example-default-html"]');
+    const tabContentContainer = document.getElementById('example-default-html')
+    expect(tabContentContainer).not.toBeNull()
+    expect(tabLink).not.toBeNull()
+    expect(tabLink.text).toBe('HTML')
+    expect(tabLink).toHaveAttributes({
+      'aria-controls': 'example-default-html',
+      role: 'tab',
+    })
   })
 
-  test('should set the iframe height when it is supplied', () => {
-    const frameHeight = 256
-    const document = documentFactory(Object.assign({ height: frameHeight }, parameters), options)
-    const exampleFrame = document.getElementById(`${exampleId}_frame`)
-    expect(parseInt(exampleFrame.height)).toBe(256)
+  test('should have a button to show Nunjucks code examples', () => {
+    const tabLink = document.querySelector('ul.app-tabs li.js-tabs__item a[href="#example-default-nunjucks"]');
+    const tabContentContainer = document.getElementById('example-default-nunjucks')
+    expect(tabContentContainer).not.toBeNull()
+    expect(tabLink).not.toBeNull()
+    expect(tabLink.text).toBe('Nunjucks')
+    expect(tabLink).toHaveAttributes({
+      'aria-controls': 'example-default-nunjucks',
+      role: 'tab',
+    })
   })
 
   test('Should include the escaped HTML markup from the examples', () => {
-    const exampleHTMLCode = document.getElementById(`${exampleId}_html`)
-    const fixtureHTML = fs.readFileSync(path.join(fixturePath, 'test.html')).toString()
-    expect(exampleHTMLCode.querySelector('pre code').innerHTML).toEqual(htmlEscape(fixtureHTML))
+    const exampleHTMLCode = document.querySelector('#example-default-html pre code')
+    expect(exampleHTMLCode).toMatchSnapshot()
   })
 })
 
-xdescribe('When a pattern has a nunjucks example', () => {
-  const parameters = { html: `${exampleId}.html`, nunjucks: `${exampleId}.njk` }
-  const document = documentFactory(parameters, options)
-
-  test('should have a button to show Nunjucks example', () => {
-    const codeExampleTabsContainer = document.getElementsByClassName('app-tabs')[0]
-
-    const exampleToggleLinks = codeExampleTabsContainer.querySelectorAll('li.app-tabs__item a')
-    expect(exampleToggleLinks.length).toBe(2)
-
-    const nunjucksExampleToggleLink = exampleToggleLinks[1]
-    expect(nunjucksExampleToggleLink.nodeName.toLowerCase()).toBe('a')
-    expect(nunjucksExampleToggleLink.getAttribute('href')).toBe(`#${exampleId}_nunjucks`)
-    expect(nunjucksExampleToggleLink.getAttribute('aria-controls')).toBe(`${exampleId}_nunjucks`)
-    expect(nunjucksExampleToggleLink.text).toBe('Nunjucks')
-  })
-
-  test(' Should include the Nunjcks macro code for the example\n\t\u001b[33;1mTODO: needs a better way to do the inclusion\u001b[0m', () => {
-    const exampleCode = document.getElementById(`${exampleId}_nunjucks`)
-    const fixtureCode = fs.readFileSync(path.join(fixturePath, 'test.njk')).toString()
-    expect(exampleCode.querySelector('pre code').innerHTML).toEqual(nunjucksEscape(fixtureCode))
+describe('When a pattern has Welsh content', () => {
+  test('test me', () => {
+    expect(true).not.toBeTruthy()
   })
 })
 
-xdescribe('When a pattern has Welsh content', () => {
-  const welshOptions = JSON.parse(JSON.stringify(options))
-  welshOptions.filters = Object.assign({}, options.filters)
-  welshOptions.globals = Object.assign({ hasWelsh: true }, welshOptions.globals)
-
-  const parameters = { html: `${exampleId}.html` }
-
-  const document = documentFactory(parameters, welshOptions)
-
-  test('Should include a language toggle for examples', () => {
-    const languageToggleLink = document.querySelector('a.language-toggle')
-    expect(languageToggleLink).not.toBeNull()
-  })
-
-  test('Should have a Welsh Language example version in a hidden div', () => {
-    const exampleHTMLCode = document.getElementById(`${exampleId}_welsh`)
-    expect(exampleHTMLCode.classList).toContain('govuk-visually-hidden')
-    expect(exampleHTMLCode.getAttribute('aria-hidden')).toBe('true')
-
-    const fixtureHTML = fs.readFileSync(path.join(fixturePath, 'test.cy.html')).toString()
-    expect(exampleHTMLCode.querySelector('pre code').innerHTML).toEqual(htmlEscape(fixtureHTML))
-  })
-})
-
-xdescribe('Multipage example macro', () => {
+describe.only('Multipage example macro', () => {
   const parameters = { html: ['example1.html', 'example2.html'] }
   const document = documentFactory(parameters, options)
   const exampleFrame = document.getElementById('example1_frame')
