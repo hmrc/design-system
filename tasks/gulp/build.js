@@ -11,25 +11,19 @@ const rollup = require('metalsmith-rollup')
 const resolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 
-const navigation = require('../../lib/navigation')
-const highlighter = require('../../lib/highlighter')
+const filters = require('../../lib/filters')
+const globals = require('../../lib/globals')
+const templatePaths = require('../../lib/templatePaths')
 
-const fileHelper = require('../../lib/file-helper.js')
-const pathFromRoot = require('./util').pathFromRoot
+const navigation = require('../../lib/navigation')
+
+const pathFromRoot = require('../../util/pathFromRoot')
 const projectRoot = pathFromRoot()
 
 const pattern = '**/*{.njk,.html}'
 
-const templatePaths = [
-  pathFromRoot('node_modules', 'hmrc-frontend', 'components'),
-  pathFromRoot('application', 'templates'),
-  pathFromRoot('application', 'templates', 'partials'),
-  pathFromRoot('src')
-]
-
 gulp.task('compile', (done) => {
   util.log('Metalsmith build starting')
-  const filters = require(pathFromRoot('application', 'filters', 'hmrc-design-system'))
 
   Metalsmith(projectRoot)
     .source('./src')
@@ -60,15 +54,8 @@ gulp.task('compile', (done) => {
         trimBlocks: true,
         lstripBlocks: true,
         path: templatePaths,
-        filters: {
-          is_array: filters.isArray,
-          dirname: filters.getDirectoryFromFilepath,
-          highlight: highlighter
-        },
-        globals: {
-          getHTMLCode: fileHelper.getHTMLCode,
-          getNunjucksCode: fileHelper.getNunjucksCode
-        }
+        filters,
+        globals
       }
     }))
     .use(layouts({

@@ -1,6 +1,7 @@
 const gulp = require('gulp')
-const pathFromRoot = require('./util').pathFromRoot
 const standard = require('gulp-standard')
+
+const pathFromRoot = require('../../util/pathFromRoot')
 
 gulp.task('lint', [
   'lint:gulpTasks',

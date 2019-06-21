@@ -1,25 +1,27 @@
-/* globals xdescribe test expect */
+/* globals xdescribe describe test expect */
 
 const { JSDOM } = require('jsdom')
 const fs = require('fs')
 const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
-const { getDirectoryFromFilepath, isArray } = require('../filters/hmrc-design-system')
+const filters = require('../../lib/filters')
+const globals = require('../../lib/globals')
+const pathFromRoot = require('../../util/pathFromRoot')
+const templatePaths = [
+  ...require('../../lib/templatePaths'),
+  pathFromRoot('application', '__tests__', 'fixtures')
+]
+
 const htmlEscape = htmlString => htmlString.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 const nunjucksEscape = nunjucksString => nunjucksString.replace(/\{% raw %\}\n/, '').replace(/\{% endraw %\}/, '')
 const exampleId = 'test'
 
 const options = {
-  path: [
-    path.join(__dirname, '..', 'macros'),
-    path.join(__dirname, '..', 'partials'),
-    path.join(__dirname, '..', '..', 'src'),
-    path.join(__dirname, 'fixtures')
-  ],
+  path: templatePaths,
   trimBlocks: true,
   lstripBlocks: true,
-  filters: { is_array: isArray, dirname: getDirectoryFromFilepath },
-  globals: { filepath: 'test-component/index.njk' }
+  filters,
+  globals
 }
 
 const fixturePath = path.join(__dirname, 'fixtures', 'test-component', 'examples')
@@ -27,7 +29,7 @@ const defaultHeight = 153
 
 const templateFactory = (parameters) => {
   // ToDo: check if there's a better way of handling the object passed in
-  return `{%- from "example.macro.njk"  import example with context-%}
+  return `{%- from "_example.njk"  import example with context-%}
   {{ example(${JSON.stringify(parameters)})
   }}`.toString()
 }
@@ -42,14 +44,14 @@ const documentFactory = function (parameters, options) {
   return document
 }
 
-xdescribe('Single page example macro english html only', () => {
-  const parameters = { html: `${exampleId}.html` }
+describe.only('Single page example macro english html only', () => {
+  const parameters = { item: 'new-tab-link', example: 'default' }
   const document = documentFactory(parameters, options)
   const exampleSrc = path.join('examples', exampleId + '.html').toString()
   const exampleFrame = document.getElementById(`${exampleId}_frame`)
   const exampleLink = document.querySelector('.app-example__link a')
 
-  test('should render an iFrame for the example with the correct attribute values', () => {
+  test.only('should render an iFrame for the example with the correct attribute values', () => {
     expect(exampleFrame).not.toBeNull()
     expect(exampleFrame.tagName.toLowerCase()).toBe('iframe')
     expect(exampleFrame.name).toBe(`${exampleId}_frame`)

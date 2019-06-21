@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 const merge = require('merge-stream')
 const remoteSrc = require('gulp-remote-src')
-const pathFromRoot = require('./util').pathFromRoot
+const pathFromRoot = require('../../util/pathFromRoot')
 
 const assetPaths = [
   pathFromRoot('node_modules', 'govuk-frontend', 'assets', '**', '*'),
