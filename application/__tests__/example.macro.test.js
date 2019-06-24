@@ -1,9 +1,8 @@
-/* globals xdescribe describe test expect */
+/* globals describe test expect */
 
 const { JSDOM } = require('jsdom')
-const fs = require('fs')
-const path = require('path')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
+
 const filters = require('../../lib/filters')
 const globals = require('../../lib/globals')
 const pathFromRoot = require('../../util/pathFromRoot')
@@ -11,10 +10,6 @@ const templatePaths = [
   ...require('../../lib/templatePaths'),
   pathFromRoot('application', '__tests__', 'fixtures')
 ]
-
-const htmlEscape = htmlString => htmlString.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-const nunjucksEscape = nunjucksString => nunjucksString.replace(/\{% raw %\}\n/, '').replace(/\{% endraw %\}/, '')
-const exampleId = 'example-default'
 
 const options = {
   path: templatePaths,
@@ -30,7 +25,6 @@ const throwIfUsedWithNotOrRefactoredToArrowFunction = (context) => {
   }
 }
 
-const fixturePath = path.join(__dirname, 'fixtures', 'test-component', 'examples')
 expect.extend({
   toHaveAttributes: function(domElement, expectedAttributes) {
     throwIfUsedWithNotOrRefactoredToArrowFunction(this)
@@ -46,12 +40,11 @@ expect.extend({
   }
 })
 
-const templateFactory = (parameters) => {
-  // ToDo: check if there's a better way of handling the object passed in
-  return `{%- from "_example.njk"  import example with context-%}
+const templateFactory = (parameters) =>
+  `{%- from "_example.njk"  import example with context-%}
   {{ example(${JSON.stringify(parameters)})
   }}`.toString()
-}
+
 const documentFactory = function (parameters, options) {
   const document = new JSDOM('<!DOCTYPE html><html><head></head><body><div id="exampleContainer"></div></body></html>',
     { contentType: 'text/html' }
@@ -69,7 +62,7 @@ describe('Single page example macro english', () => {
 
   const exampleSrc = '/design-library/new-tab-link/default/'
 
-  const exampleFrame = document.querySelector(`#${exampleId} iframe`)
+  const exampleFrame = document.querySelector('#example-default iframe')
   const exampleLink = document.querySelector('.app-example__link a')
 
   test('should render an iFrame for the example with the correct attribute values', () => {
@@ -89,8 +82,15 @@ describe('Single page example macro english', () => {
     expect(languageToggleLink).toBeNull()
   })
 
+  test('Should not have a language toggle for dual language examples', () => {
+    const welshParameters = { ...parameters, welsh: 'welsh' }
+    const welshDocument = documentFactory(welshParameters, options)
+    const languageToggleLink = welshDocument.querySelector('a[href="/design-library/new-tab-link/welsh/"]')
+    expect(languageToggleLink).not.toBeNull()
+  })
+
   test('should have a button to show HTML code examples', () => {
-    const tabLink = document.querySelector('ul.app-tabs li.js-tabs__item a[href="#example-default-html"]');
+    const tabLink = document.querySelector('ul.app-tabs li.js-tabs__item a[href="#example-default-html"]')
     const tabContentContainer = document.getElementById('example-default-html')
     expect(tabContentContainer).not.toBeNull()
     expect(tabLink).not.toBeNull()
@@ -116,33 +116,5 @@ describe('Single page example macro english', () => {
   test('Should include the escaped HTML markup from the examples', () => {
     const exampleHTMLCode = document.querySelector('#example-default-html pre code')
     expect(exampleHTMLCode).toMatchSnapshot()
-  })
-})
-
-describe('When a pattern has Welsh content', () => {
-  test('test me', () => {
-    expect(true).not.toBeTruthy()
-  })
-})
-
-describe.only('Multipage example macro', () => {
-  const parameters = { html: ['example1.html', 'example2.html'] }
-  const document = documentFactory(parameters, options)
-  const exampleFrame = document.getElementById('example1_frame')
-
-  test('should set the iframe to use the first example page when the html parameter is an Array', () => {
-    expect(exampleFrame.name).toBe('example1_frame')
-    expect(exampleFrame.src).toBe('examples' + '/' + parameters.html[0])
-  })
-  test('should not include the example code buttons by default', () => {
-    expect(document.getElementsByClassName('app-tabs__item').length).toBe(0)
-  })
-  test('should include the example code buttons when requested', () => {
-    const parameters = {
-      html: ['test.html', 'test.html'],
-      showExampleCode: true
-    }
-    const exampleToggleLinks = documentFactory(parameters, options).getElementsByClassName('app-tabs__item')
-    expect(exampleToggleLinks.length).toBeGreaterThan(0)
   })
 })
