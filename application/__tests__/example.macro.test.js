@@ -26,16 +26,16 @@ const throwIfUsedWithNotOrRefactoredToArrowFunction = (context) => {
 }
 
 expect.extend({
-  toHaveAttributes: function(domElement, expectedAttributes) {
+  toHaveAttributes: function (domElement, expectedAttributes) {
     throwIfUsedWithNotOrRefactoredToArrowFunction(this)
 
     const hasAttributes = Object.keys(expectedAttributes)
       .map(key => domElement.getAttribute(key) !== expectedAttributes[key] && `${key} did not match, expected [${key}] to match [${expectedAttributes[key]}] but received [${domElement.getAttribute(key)}]`)
       .filter(value => value !== false)
 
-      return {
-        pass: hasAttributes.length === 0,
-        message: () => hasAttributes.join('\n') || 'blah'
+    return {
+      pass: hasAttributes.length === 0,
+      message: () => hasAttributes.join('\n') || 'blah'
     }
   }
 })
@@ -62,6 +62,9 @@ describe('Single page example macro english', () => {
 
   const exampleSrc = '/design-library/new-tab-link/default/'
 
+  const htmlPanelID = 'example-default-html'
+  const nunjucksPanelID = 'example-default-nunjucks'
+
   const exampleFrame = document.querySelector('#example-default iframe')
   const exampleLink = document.querySelector('.app-example__link a')
 
@@ -82,7 +85,7 @@ describe('Single page example macro english', () => {
     expect(languageToggleLink).toBeNull()
   })
 
-  test('Should not have a language toggle for dual language examples', () => {
+  test('Should have a language toggle for dual language examples', () => {
     const welshParameters = { ...parameters, welsh: 'welsh' }
     const welshDocument = documentFactory(welshParameters, options)
     const languageToggleLink = welshDocument.querySelector('a[href="/design-library/new-tab-link/welsh/"]')
@@ -90,31 +93,31 @@ describe('Single page example macro english', () => {
   })
 
   test('should have a button to show HTML code examples', () => {
-    const tabLink = document.querySelector('ul.app-tabs li.js-tabs__item a[href="#example-default-html"]')
-    const tabContentContainer = document.getElementById('example-default-html')
+    const tabLink = document.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${htmlPanelID}"]`)
+    const tabContentContainer = document.getElementById(htmlPanelID)
     expect(tabContentContainer).not.toBeNull()
     expect(tabLink).not.toBeNull()
     expect(tabLink.text).toBe('HTML')
     expect(tabLink).toHaveAttributes({
-      'aria-controls': 'example-default-html',
-      role: 'tab',
+      'aria-controls': htmlPanelID,
+      role: 'tab'
     })
   })
 
   test('should have a button to show Nunjucks code examples', () => {
-    const tabLink = document.querySelector('ul.app-tabs li.js-tabs__item a[href="#example-default-nunjucks"]');
-    const tabContentContainer = document.getElementById('example-default-nunjucks')
+    const tabLink = document.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
+    const tabContentContainer = document.getElementById(nunjucksPanelID)
     expect(tabContentContainer).not.toBeNull()
     expect(tabLink).not.toBeNull()
     expect(tabLink.text).toBe('Nunjucks')
     expect(tabLink).toHaveAttributes({
-      'aria-controls': 'example-default-nunjucks',
-      role: 'tab',
+      'aria-controls': nunjucksPanelID,
+      role: 'tab'
     })
   })
 
   test('Should include the escaped HTML markup from the examples', () => {
-    const exampleHTMLCode = document.querySelector('#example-default-html pre code')
+    const exampleHTMLCode = document.querySelector(`#${htmlPanelID} pre code`)
     expect(exampleHTMLCode).toMatchSnapshot()
   })
 })
