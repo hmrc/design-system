@@ -1,26 +1,32 @@
 ---
 layout: layout-example.njk
 ---
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-      <h1 class="govuk-fieldset__heading">
-        Do you want to get electronic communications instead of letters from HMRC?
-      </h1>
-    </legend>
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios %}
 
-    <div class="govuk-radios govuk-radios--inline">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="yes" type="radio" name="paperless" value="Yes">
-        <label class="govuk-label govuk-radios__label" for="yes">Yes</label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="no" type="radio" name="paperless" value="No">
-        <label class="govuk-label govuk-radios__label" for="no">No</label>
-      </div>
-    </div>
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "paperless",
+  name: "paperless",
+  fieldset: {
+    legend: {
+      text: "Do you want to get electronic communications instead of letters from HMRC?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
 
-  </fieldset>
-</div>
-
-<button type="submit" class="govuk-button">Continue</button>
+{{ govukButton({
+  text: "Continue"
+}) }}

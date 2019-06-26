@@ -1,18 +1,30 @@
 ---
 layout: layout-example.njk
 ---
-<div class="govuk-form-group">
-   <label class="govuk-label" for="access-code">Access code</label>
-    <input class="govuk-input govuk-input--width-10" id="access-code" type="tel" name="access-code">
-</div>
+{% from "button/macro.njk" import govukButton %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% from "input/macro.njk" import govukInput %}
 
-<div class="govuk-form-group">
-  <div class="govuk-checkboxes">
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="access-code-7-days" type="checkbox" value="Keep for 7 days">
-      <label class="govuk-label govuk-checkboxes__label" for="access-code-7-days">Remember this access code for 7 days</label>
-    </div>
-  </div>
-</div>
+{{ govukInput({
+  label: {
+    text: "Access code"
+  },
+  id: "access-code",
+  name: "access-code",
+  classes: "govuk-input--width-10"
+}) }}
 
-<button type="submit" class="govuk-button">Continue</button>
+{{ govukCheckboxes({
+  idPrefix: "access-code-7-days",
+  name: "access-code-7-days",
+  items: [
+    {
+      value: "Keep for 7 days",
+      text: "Remember this access code for 7 days"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
