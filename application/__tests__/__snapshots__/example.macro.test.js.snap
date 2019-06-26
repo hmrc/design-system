@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Single page example macro english Should include the escaped HTML markup from the examples 1`] = `
+<code
+  class="hljs html"
+>
+  <span
+    class="hljs-tag"
+  >
+    &lt;
+    <span
+      class="hljs-name"
+    >
+      a
+    </span>
+     
+    <span
+      class="hljs-attr"
+    >
+      class
+    </span>
+    =
+    <span
+      class="hljs-string"
+    >
+      "govuk-link "
+    </span>
+     
+    <span
+      class="hljs-attr"
+    >
+      target
+    </span>
+    =
+    <span
+      class="hljs-string"
+    >
+      "_blank"
+    </span>
+     
+    <span
+      class="hljs-attr"
+    >
+      rel
+    </span>
+    =
+    <span
+      class="hljs-string"
+    >
+      "noopener noreferrer"
+    </span>
+     
+    <span
+      class="hljs-attr"
+    >
+      href
+    </span>
+    =
+    <span
+      class="hljs-string"
+    >
+      "https://www.gov.uk/working-tax-credit/eligibility"
+    </span>
+    &gt;
+  </span>
+  Find out if you qualify for tax credits (opens in a new window or tab)
+  <span
+    class="hljs-tag"
+  >
+    &lt;/
+    <span
+      class="hljs-name"
+    >
+      a
+    </span>
+    &gt;
+  </span>
+</code>
+`;

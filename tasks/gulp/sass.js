@@ -7,7 +7,8 @@ const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
-const pathFromRoot = require('./util').pathFromRoot
+
+const pathFromRoot = require('../../util/pathFromRoot')
 
 const scssPaths = [
   pathFromRoot('node_modules', 'govuk-frontend', '*.scss'),
