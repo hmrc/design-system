@@ -1,0 +1,23 @@
+---
+layout: layout-example.njk
+---
+{% from "button/macro.njk" import govukButton %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "mixed",
+  name: "mixed",
+  items: [
+    {
+      value: "paperless",
+      text: "I want to get electronic communications instead of letters from HMRC"
+    },
+    {
+      value: "access-code-7-days",
+      text: "Remember this access code for 7 days"
+    }
+  ]
+}) }}
+{{ govukButton({
+  text: "Continue"
+}) }}

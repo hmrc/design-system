@@ -1,0 +1,30 @@
+---
+layout: layout-example.njk
+---
+{% from "button/macro.njk" import govukButton %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Access code"
+  },
+  id: "access-code",
+  name: "access-code",
+  classes: "govuk-input--width-10"
+}) }}
+
+{{ govukCheckboxes({
+  idPrefix: "access-code-7-days",
+  name: "access-code-7-days",
+  items: [
+    {
+      value: "Keep for 7 days",
+      text: "Remember this access code for 7 days"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
