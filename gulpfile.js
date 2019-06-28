@@ -6,10 +6,12 @@ require('./tasks/gulp/lint')
 require('./tasks/gulp/build')
 require('./tasks/gulp/sass')
 require('./tasks/gulp/copy-assets')
-require('./tasks/gulp/serve')
+require('./tasks/gulp/integration')
 
 gulp.task('watch', ['build:watch', 'scss:watch', 'copy-assets:watch'])
 
 gulp.task('build', ['clean', 'compile', 'scss:compile', 'copy-assets'])
+
+gulp.task('integration', gulpSequence('build', ['integration:server', 'integration:test']))
 
 gulp.task('default', gulpSequence('build', ['watch', 'serve']))

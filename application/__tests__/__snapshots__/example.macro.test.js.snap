@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Single page example macro english Should automatically set height on the iFrame to enable the user to view all content 1`] = `
+<iframe
+  class="app-example__frame app-example__frame--resizable"
+  data-module="app-example-frame"
+  frameborder="0"
+  height="200"
+  src="/design-library/new-tab-link/default/"
+/>
+`;
+
 exports[`Single page example macro english Should include the escaped HTML markup from the examples 1`] = `
 <code
   class="hljs html"
