@@ -2,7 +2,7 @@ const gulp = require('gulp')
 const connect = require('gulp-connect')
 
 const pathFromRoot = require('../../util/pathFromRoot')
-const integrationTestPort = process.env.INTEGRATION_PORT || process.env.integration_port || 3000
+const { integrationTestPort } = require('../../constants')
 
 gulp.task('serve', () => {
   connect.server({

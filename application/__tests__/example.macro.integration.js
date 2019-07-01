@@ -1,6 +1,6 @@
 /* globals describe test beforeEach expect page  */
 
-const integrationTestPort = process.env.INTEGRATION_PORT || process.env.integration_port || 3000
+const { integrationTestPort } = require('../../constants')
 
 describe('Localhost', () => {
   beforeEach(async () => {
