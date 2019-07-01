@@ -5,8 +5,8 @@
   "description": "Static site generator for the HMRC Design System",
   "scripts": {
     "start": "gulp",
-    "test:watch": "gulp lint && jest --watch",
-    "test": "gulp lint && jest",
+    "test:watch": "gulp test:watch",
+    "test": "gulp test",
     "build": "npm run test && gulp build",
     "serve": "gulp serve"
   },
@@ -40,6 +40,7 @@
     "gulp": "^3.9.1",
     "gulp-connect": "^5.6.1",
     "gulp-if": "^2.0.2",
+    "gulp-jest": "^4.0.2",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-remote-src": "^0.4.3",
