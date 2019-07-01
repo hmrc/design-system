@@ -15,15 +15,13 @@ gulp.task('integration:server', () => {
 gulp.task('integration:test', () => {
   process.env.NODE_ENV = 'test'
   gulp.src('.').pipe(jest({
-  // return gulp.src('**/__tests__/**/*.integration.js').pipe(jest({
-    "preprocessorIgnorePatterns": [
-      "<rootDir>/dist/", "<rootDir>/node_modules/"
+    'preprocessorIgnorePatterns': [
+      '<rootDir>/dist/', '<rootDir>/node_modules/'
     ],
-    "testMatch": "**/__tests__/**/*.integration.js",
-    "preset": "jest-puppeteer",
-    "automock": false
-  }))
-  .on('finish', () => {
+    'testMatch': '**/__tests__/**/*.integration.js',
+    'preset': 'jest-puppeteer',
+    'automock': false
+  })).on('finish', () => {
     connect.serverClose()
   })
 })
