@@ -13,6 +13,6 @@ gulp.task('watch', ['build:watch', 'scss:watch', 'copy-assets:watch'])
 
 gulp.task('build', ['clean', 'compile', 'scss:compile', 'copy-assets'])
 
-gulp.task('test', ['lint', 'test:unit'])
+gulp.task('test', ['lint', 'jest:unit'])
 
 gulp.task('default', gulpSequence('build', ['watch', 'serve']))

@@ -5,7 +5,7 @@
   "description": "Static site generator for the HMRC Design System",
   "scripts": {
     "start": "gulp",
-    "test:watch": "gulp test:watch",
+    "test:watch": "gulp jest:watch",
     "test": "gulp test",
     "build": "npm run test && gulp build",
     "serve": "gulp serve"
