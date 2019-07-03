@@ -9,7 +9,7 @@ require('./tasks/gulp/sass')
 require('./tasks/gulp/serve')
 require('./tasks/gulp/jest')
 
-gulp.task('watch', ['build:watch', 'scss:watch', 'copy-assets:watch', 'jest:unit:watch'])
+gulp.task('watch', ['build:watch', 'scss:watch', 'copy-assets:watch'])
 
 gulp.task('build', ['clean', 'compile', 'scss:compile', 'copy-assets'])
 

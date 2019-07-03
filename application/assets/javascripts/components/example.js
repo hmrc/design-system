@@ -1,3 +1,2 @@
-const iframes = [ ...document.querySelectorAll('iframe') ]
-iframes.forEach(iframe => iframe.setAttribute('height', '200'))
-
+import iframe from 'iframe-resizer'
+iframe.iframeResizer({}, 'iframe')
