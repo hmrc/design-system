@@ -1,6 +1,9 @@
 import common from 'govuk-frontend/common'
+
 import AppTabs from './components/tabs.js'
 import LanguageSwitchExample from './components/language-switch-example'
+
+import './components/example.js'
 
 var nodeListForEach = common.nodeListForEach
 

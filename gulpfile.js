@@ -9,10 +9,12 @@ require('./tasks/gulp/sass')
 require('./tasks/gulp/serve')
 require('./tasks/gulp/jest')
 
-gulp.task('watch', ['build:watch', 'scss:watch', 'copy-assets:watch', 'jest:watch'])
+gulp.task('watch', ['build:watch', 'scss:watch', 'copy-assets:watch', 'jest:unit:watch'])
 
 gulp.task('build', ['clean', 'compile', 'scss:compile', 'copy-assets'])
 
-gulp.task('test', ['lint', 'jest:unit'])
+gulp.task('test', ['lint', 'jest:unit', 'integration'])
+
+gulp.task('integration', gulpSequence('build', ['serve:integration', 'jest:integration']))
 
 gulp.task('default', gulpSequence('build', ['watch', 'serve']))
