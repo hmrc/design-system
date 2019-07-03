@@ -1,10 +1,11 @@
 /* globals describe test beforeEach expect page  */
 
 const { integrationTestPort } = require('../../constants')
+const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path}`)
 
 describe('Example page rendering', () => {
   beforeEach(async () => {
-    await page.goto(`http://localhost:${integrationTestPort}/design-library/ask-for-consent/`)
+    await visit('/design-library/ask-for-consent/')
   })
 
   test('should be titled "Ask the user for their consent"', async () => {
@@ -18,7 +19,10 @@ describe('Example page rendering', () => {
   })
 
   test('iframes should be resized to display all content', async () => {
-    const resizeFailed = await page.$$eval('iframe', iframes => iframes.filter(iframe => iframe.offsetHeight < iframe.contentWindow.document.body.offsetHeight))
+    const resizeFailed = await page.$$eval('iframe', (iframes) => {
+      const isFrameATardis = iframe => iframe.offsetHeight < iframe.contentWindow.document.body.offsetHeight
+      return iframes.filter(isFrameATardis)
+    })
     expect(resizeFailed).toHaveLength(0)
   })
 })
