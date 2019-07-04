@@ -1,0 +1,11 @@
+---
+layout: layout-example.njk
+---
+{% from "button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-xl">We have confirmed your identity</h1>
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+
