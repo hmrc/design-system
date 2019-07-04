@@ -1,0 +1,92 @@
+---
+layout: layout-example.njk
+---
+
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios %}
+
+<h1 class="govuk-heading-xl">You have added 3 directors</h1>
+<div class="govuk-form-group">
+  <dl class="hmrc-add-to-a-list hmrc-add-to-a-list--short">
+    <div class="hmrc-add-to-a-list__contents">
+      <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+        Sydney Russell
+      </dt>
+      <dd class="hmrc-add-to-a-list__change">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Change</span>
+          <span class="govuk-visually-hidden">Change Sydney Russell</span>
+        </a>
+      </dd>
+      <dd class="hmrc-add-to-a-list__remove">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Remove</span>
+          <span class="govuk-visually-hidden">Remove Sydney Russell’s name</span>
+        </a>
+      </dd>
+    </div>
+    <div class="hmrc-add-to-a-list__contents">
+      <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+        Michael Cain
+      </dt>
+      <dd class="hmrc-add-to-a-list__change">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Change</span>
+          <span class="govuk-visually-hidden">Change Michael Cain</span>
+        </a>
+      </dd>
+      <dd class="hmrc-add-to-a-list__remove">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Remove</span>
+          <span class="govuk-visually-hidden">Remove Michael Cain’s details</span>
+        </a>
+      </dd>
+    </div>
+    <div class="hmrc-add-to-a-list__contents">
+      <dt class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+        Jeremy Winter
+      </dt>
+      <dd class="hmrc-add-to-a-list__change">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Change</span>
+          <span class="govuk-visually-hidden">Change Jeremy Winter</span>
+        </a>
+      </dd>
+      <dd class="hmrc-add-to-a-list__remove">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Remove</span>
+          <span class="govuk-visually-hidden">Remove Jeremy Winter’s details</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+</div>
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "psa-director",
+  name: "another-director",
+  fieldset: {
+    legend: {
+      text: "Do you need to add another director?",
+      hint: "You must tell us about all your directors.",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
