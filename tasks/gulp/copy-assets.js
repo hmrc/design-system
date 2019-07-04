@@ -10,14 +10,20 @@ const assetPaths = [
   '!' + pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js')
 ]
 
-gulp.task('copy-assets', () => {
+gulp.task('copy-assets', ['copy-assets:local', 'copy-assets:remote'])
+
+gulp.task('copy-assets:local', () => {
   const assets = gulp.src(assetPaths)
     .pipe(gulp.dest(pathFromRoot('dist', 'assets')))
 
   const jquery = gulp.src(pathFromRoot('node_modules', 'jquery', 'dist', '*'))
     .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'javascripts', 'vendor', 'jquery')))
 
-  const collapsible = remoteSrc([
+  return merge(assets, jquery)
+})
+
+gulp.task('copy-assets:remote', () =>{
+  return remoteSrc([
     'collapsible.js',
     'collapsible_collection.js',
     'current_location.js'
@@ -25,8 +31,6 @@ gulp.task('copy-assets', () => {
     base: 'https://raw.githubusercontent.com/alphagov/manuals-frontend/master/app/assets/javascripts/modules/'
   })
     .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'javascripts', 'vendor', 'govuk')))
-
-  return merge(assets, jquery, collapsible)
 })
 
 gulp.task('copy-assets:watch', () => {
