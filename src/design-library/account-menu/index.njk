@@ -1,0 +1,42 @@
+---
+title: Account menu
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">The account menu is used in, and was designed for, the <a class="govuk-link" href="https://www.tax.service.gov.uk/personal-account">personal tax account</a>.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">If your service is part of the personal tax account.</p>
+
+{{ example({
+  item: 'account-menu'
+})}}
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+
+<p class="govuk-body">If your service is not part of the personal tax account. Do not use the account menu.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+<p class="govuk-body">The account menu contains:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>an account home link</li>
+  <li>a messages link with a <a class="govuk-link" href="/design-library/notification-badge">notification badge</a></li>
+  <li>a check progress link</li>
+  <li>a menu to manage account settings</li>
+  <li>a sign-out link</li>
+</ul>
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the account menu, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a href="https://github.com/hmrc/design-patterns/issues/128">Discuss account menu on GitHub</a></p>
+
+{% endblock %}
