@@ -4,6 +4,8 @@ layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
 
+{% block content %}
+
 <p class="govuk-body">This pattern lets the user add information with more than one part to a list.</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
@@ -58,3 +60,5 @@ layout: twoColumnPage.njk
 <p class="govuk-body">We need more research. If you have used add to a list, get in touch to share your research findings.</p>
 
 <p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/31">Discuss add to a list on GitHub</a></p>
+
+{% endblock %}
