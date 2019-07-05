@@ -13,7 +13,7 @@
     "serve": "gulp serve"
   },
   "engines": {
-    "node": "8.12.0"
+    "node": "10.16.0"
   },
   "repository": {
     "type": "git",

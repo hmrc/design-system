@@ -22,7 +22,7 @@ gulp.task('copy-assets:local', () => {
   return merge(assets, jquery)
 })
 
-gulp.task('copy-assets:remote', () =>{
+gulp.task('copy-assets:remote', () => {
   return remoteSrc([
     'collapsible.js',
     'collapsible_collection.js',
