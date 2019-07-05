@@ -32,8 +32,7 @@
   "homepage": "https://github.com/hmrc/design-system#readme",
   "dependencies": {
     "govuk-frontend": "^2.11.0",
-    "hmrc-frontend": "^0.5.0",
-    "jest-environment-node": "^24.8.0"
+    "hmrc-frontend": "^0.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
@@ -48,19 +47,20 @@
     "gulp-remote-src": "^0.4.3",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
-    "gulp-sequence": "^1.0.0",
     "gulp-standard": "^12.0.0",
     "gulp-util": "^3.0.8",
     "highlight.js": "^9.15.6",
     "iframe-resizer": "^4.1.1",
     "jest": "^24.8.0",
     "jest-cli": "^24.8.0",
+    "jest-environment-node": "^24.8.0",
     "jest-puppeteer": "^4.2.0",
+    "jest-resolve": "^24.8.0",
     "jquery": "^3.4.1",
     "js-beautify": "^1.10.0",
     "jstransformer": "^1.0.0",
     "jstransformer-nunjucks": "^0.5.0",
-    "merge-stream": "^1.0.1",
+    "merge2": "^1.2.3",
     "metalsmith": "^2.3.0",
     "metalsmith-debug": "^1.2.0",
     "metalsmith-ignore": "^1.0.0",
