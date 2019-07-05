@@ -32,7 +32,8 @@
   "homepage": "https://github.com/hmrc/design-system#readme",
   "dependencies": {
     "govuk-frontend": "^2.11.0",
-    "hmrc-frontend": "^0.5.0"
+    "hmrc-frontend": "^0.5.0",
+    "jest-environment-node": "^24.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
@@ -51,7 +52,7 @@
     "gulp-standard": "^12.0.0",
     "highlight.js": "^9.15.6",
     "iframe-resizer": "^4.1.1",
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "jest-cli": "^24.8.0",
     "jest-puppeteer": "^4.2.0",
     "jquery": "^3.4.1",
