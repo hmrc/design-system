@@ -1,0 +1,11 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc-header/macro.njk" import hmrcHeader %}
+
+{{ hmrcHeader({
+    "serviceName": "Service Name",
+    "serviceUrl" : "/",
+    "phaseBanner" : true,
+    "signOut" : true
+}) }}
