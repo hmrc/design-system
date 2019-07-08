@@ -1,20 +1,21 @@
 const gulp = require('gulp')
-const gulpSequence = require('gulp-sequence')
 
-require('./tasks/gulp/build')
 require('./tasks/gulp/clean')
-require('./tasks/gulp/copy-assets')
-require('./tasks/gulp/lint')
+require('./tasks/gulp/build')
 require('./tasks/gulp/sass')
-require('./tasks/gulp/serve')
+require('./tasks/gulp/lint')
 require('./tasks/gulp/jest')
+require('./tasks/gulp/copy-assets')
+require('./tasks/gulp/serve')
 
-gulp.task('watch', ['build:watch', 'scss:watch', 'copy-assets:watch'])
+gulp.task('watch', gulp.parallel('build:watch', 'scss:watch', 'copy-assets:watch'))
 
-gulp.task('build', ['clean', 'compile', 'scss:compile', 'copy-assets'])
+gulp.task('prepare', gulp.parallel('compile', 'scss:compile', 'copy-assets'))
 
-gulp.task('test', ['lint', 'jest:unit', 'integration'])
+gulp.task('build', gulp.series('clean', 'prepare'))
 
-gulp.task('integration', gulpSequence('build', ['serve:integration', 'jest:integration']))
+gulp.task('integration', gulp.series('build', 'serve:integration', 'jest:integration'))
 
-gulp.task('default', gulpSequence('build', ['watch', 'serve']))
+gulp.task('test', gulp.parallel('lint', 'jest:unit', 'integration'))
+
+gulp.task('default', gulp.series('build', 'watch', 'serve'))

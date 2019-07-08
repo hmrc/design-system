@@ -3,13 +3,6 @@ const standard = require('gulp-standard')
 
 const pathFromRoot = require('../../util/pathFromRoot')
 
-gulp.task('lint', [
-  'lint:gulpTasks',
-  'lint:assetsScripts',
-  'lint:applicationScripts',
-  'lint:tests'
-])
-
 gulp.task('lint:gulpTasks', () => {
   return gulp.src(pathFromRoot('tasks', 'gulp', '*.js'))
     .pipe(standard())
@@ -50,3 +43,10 @@ gulp.task('lint:tests', () => {
       quiet: true
     }))
 })
+
+gulp.task('lint', gulp.parallel(
+  'lint:gulpTasks',
+  'lint:assetsScripts',
+  'lint:applicationScripts',
+  'lint:tests'
+))

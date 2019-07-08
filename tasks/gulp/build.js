@@ -73,10 +73,11 @@ gulp.task('compile', (done) => {
     })
 })
 
-gulp.task('build:watch', () => {
+gulp.task('build:watch', (done) => {
   templatePaths.forEach(pathStr => {
-    gulp.watch(path.join(pathStr, pattern), ['build'])
+    gulp.watch(path.join(pathStr, pattern), gulp.parallel('build'))
   })
 
-  gulp.watch(pathFromRoot('application', 'assets', 'javascripts', '**', '*'), ['build'])
+  gulp.watch(pathFromRoot('application', 'assets', 'javascripts', '**', '*'), gulp.parallel('build'))
+  done()
 })
