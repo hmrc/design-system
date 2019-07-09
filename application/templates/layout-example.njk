@@ -17,5 +17,12 @@
     {%- endblock -%}
   </body>
 
+  <script>
+    // This prevents the account dropdown from closing and triggering
+    // an infinite loop on the auto iframe resize
+    window.addEventListener('resize', function (event) {
+      event.stopImmediatePropagation()
+    });
+  </script>
   <script src="/assets/javascripts/hmrc-design-system.js"></script>
 </html>
