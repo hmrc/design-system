@@ -24,15 +24,14 @@ const errorHandler = function (error) {
   this.emit('end')
 }
 
-gulp.task('scss:compile', ['scss:pattern-libraries', 'scss:hmrc-design-system'])
-
-gulp.task('scss:watch', () => {
-  return gulp.watch(pathFromRoot('**', '*.scss'), ['build'])
+gulp.task('scss:watch', (done) => {
+  gulp.watch(pathFromRoot('**', '*.scss'), gulp.parallel('build'))
+  done()
 })
 
-gulp.task('scss:hmrc-design-system', () => {
+gulp.task('scss:hmrc-design-system', (done) => {
   // TODO: compile an Old IE version of our local css
-  return gulp.src('./application/scss/hmrc-design-system.scss')
+  gulp.src('./application/scss/hmrc-design-system.scss')
     .pipe(plumber(errorHandler))
     .pipe(sass({
       outputStyle: 'compressed'
@@ -45,12 +44,13 @@ gulp.task('scss:hmrc-design-system', () => {
       extname: '.min.css'
     }))
     .pipe(gulp.dest('./dist'))
+  done()
 })
 
-gulp.task('scss:pattern-libraries', () => {
+gulp.task('scss:pattern-libraries', (done) => {
   const isIE = (file) => path.parse(file.path).name.includes('ie')
 
-  return gulp.src(scssPaths, { base: 'node_modules' })
+  gulp.src(scssPaths, { base: 'node_modules' })
     .pipe(plumber(errorHandler))
     .pipe(sass({
       outputStyle: 'compressed'
@@ -75,4 +75,7 @@ gulp.task('scss:pattern-libraries', () => {
       path.extname = '.min.css'
     }))
     .pipe(gulp.dest('./dist'))
+  done()
 })
+
+gulp.task('scss:compile', gulp.parallel('scss:pattern-libraries', 'scss:hmrc-design-system'))
