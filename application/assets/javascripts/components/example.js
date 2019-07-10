@@ -1,3 +1,3 @@
 import iframe from 'iframe-resizer'
 
-iframe.iframeResizer({}, 'iframe')
+iframe.iframeResizer({ minWidth: '100%' }, 'iframe')
