@@ -4,6 +4,8 @@ layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
 
+{% block content %}
+
 <p class="govuk-body">This pattern lets the user know that there is new information to view, like unread messages, and how many of them there are. The notification badge is part of the <a class="govuk-link" href="account-header">account header</a>.</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
@@ -31,20 +33,24 @@ layout: twoColumnPage.njk
   You need HMRC Frontend to use this pattern – <a href="/design-library/using-code-in-prototypes/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
 </div>
 
-{{ example({
-  item: "notification-badge",
-  description: 'Badge with notifications'
-}) }}
+{{
+  example({
+    item: "notification-badge",
+    description: 'Badge with notifications'
+  })
+}}
 
 <p class="govuk-body">If the number is more than 99, display ‘99+’.</p>
 
 <p class="govuk-body">If there are 0 things, do not show the badge.</p>
 
-{{ example({
-  item: "notification-badge",
-  example: "no-items",
-  description: 'Badge without notifications'
-}) }}
+{{
+  example({
+    item: "notification-badge",
+    example: "no-items",
+    description: 'Badge without notifications'
+  })
+}}
 
 <h2 class="govuk-heading-l" id="research">Research</h2>
 
@@ -58,3 +64,5 @@ layout: twoColumnPage.njk
 <p class="govuk-body">We need more research. If you have used the notification badge, get in touch to share your research findings.</p>
 
 <p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/142">Discuss the notification badge on GitHub</a></p>
+
+{% endblock %}

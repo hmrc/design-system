@@ -1,0 +1,30 @@
+---
+layout: layout-example.njk
+---
+
+{%- from "hmrc-account-menu/macro.njk" import hmrcAccountMenu -%}
+
+{{
+  hmrcAccountMenu ({
+    accountHome: {
+      href: "#account-home",
+      active: true
+    },
+    messages: {
+      href: "#messages",
+      messageCount: 2
+    },
+    checkProgress: {
+      href: "#check-progress"
+    },
+    paperlessSettings: {
+      href: "#paperless-settings"
+    },
+    personalDetails: {
+      href: "#personal-details"
+    },
+    signOut: {
+      href: "#sign-out"
+    }
+  })
+}}

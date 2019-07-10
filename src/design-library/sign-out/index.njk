@@ -1,0 +1,38 @@
+---
+title: Sign out
+layout: twoColumnPage.njk
+status: development
+---
+
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">This is the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> with an extra part to let the user sign out of a service.</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">Use this version of the GOV.UK header when the user is signed in to a service, to enable them to sign out.</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Do not use when the service does not require the user to sign in, or when they are already signed out. Use the default <a href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> instead.</p>
+
+<h2 id="when-to-use" class="govuk-heading-l">How it works</h2>
+
+<p class="govuk-body">The sign out link should be inside the GOV.UK header, on the right hand side.</p>
+
+{{
+  example({
+    item: 'sign-out',
+    description: 'Sign out'
+  })
+}}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used sign out, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/4">Discuss sign out on GitHub</a></p>
+
+{% endblock %}

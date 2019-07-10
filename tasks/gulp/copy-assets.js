@@ -14,10 +14,14 @@ gulp.task('copy-assets:local', (done) => {
   const assets = gulp.src(assetPaths)
     .pipe(gulp.dest(pathFromRoot('dist', 'assets')))
 
+  // TODO (https://jira.tools.tax.service.gov.uk/browse/PLATUI-118)
+  const componentImages = gulp.src(pathFromRoot('node_modules', 'hmrc-frontend', 'components', 'hmrc-account-menu', 'images', '*'))
+    .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'stylesheets', 'components', 'hmrc-account-menu', 'images')))
+
   const jquery = gulp.src(pathFromRoot('node_modules', 'jquery', 'dist', '*'))
     .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'javascripts', 'vendor', 'jquery')))
 
-  const mergedStream = merge2(assets, jquery)
+  const mergedStream = merge2(assets, jquery, componentImages)
   mergedStream.on('queueDrain', (done))
 })
 
@@ -29,7 +33,8 @@ gulp.task('copy-assets:remote', (done) => {
   ], {
     base: 'https://raw.githubusercontent.com/alphagov/manuals-frontend/master/app/assets/javascripts/modules/'
   })
-    .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'javascripts', 'vendor', 'govuk')).on('end', done))
+    .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'javascripts', 'vendor', 'govuk'))
+      .on('end', done))
 })
 
 gulp.task('copy-assets:watch', (done) => {

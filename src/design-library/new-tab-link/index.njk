@@ -6,6 +6,8 @@ menuText: Open in a new window
 
 {% from "_example.njk" import example %}
 
+{% block content %}
+
 <p class="govuk-body">This pattern lets the user open links in a new window or tab.</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
@@ -55,11 +57,13 @@ menuText: Open in a new window
   code.
 </div>
 
-{{ example({
-  item: "new-tab-link",
-  welsh: "welsh",
-  description: 'Open in a new window'
-}) }}
+{{
+  example({
+    item: "new-tab-link",
+    welsh: "welsh",
+    description: 'Open in a new window'
+  })
+}}
 
 <h2 id="research" class="govuk-heading-l">Research</h2>
 
@@ -68,3 +72,5 @@ menuText: Open in a new window
 
 <p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/141">Discuss open links
     in a new window or tab on GitHub</a></p>
+
+{% endblock %}
