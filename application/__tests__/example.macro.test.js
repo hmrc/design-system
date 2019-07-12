@@ -86,9 +86,9 @@ describe('Single page example macro english', () => {
   })
 
   test('Should have a language toggle for dual language examples', () => {
-    const welshParameters = { ...parameters, welsh: 'welsh' }
+    const welshParameters = { ...parameters, welsh: 'default-welsh' }
     const welshDocument = documentFactory(welshParameters, options)
-    const languageToggleLink = welshDocument.querySelector('a[href="/design-library/new-tab-link/welsh/"]')
+    const languageToggleLink = welshDocument.querySelector('a[href="/design-library/new-tab-link/default-welsh/"]')
     expect(languageToggleLink).not.toBeNull()
   })
 
