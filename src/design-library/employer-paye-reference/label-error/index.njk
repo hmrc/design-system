@@ -1,0 +1,22 @@
+---
+layout: layout-example.njk
+---
+
+{% from "input/macro.njk" import govukInput %}
+
+{{
+  govukInput({
+    label: {
+      text: 'Your employer PAYE reference'
+    },
+    hint: {
+      text: 'This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on letters from HMRC about PAYE.'
+    },
+    errorMessage: {
+      text: 'Enter your employer PAYE reference'
+    },
+    id: 'employer-paye-reference',
+    name: 'employer-paye-reference',
+    classes: 'govuk-input--width-10'
+  })
+}}

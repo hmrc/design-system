@@ -1,0 +1,172 @@
+---
+layout: twoColumnPage.njk
+title: Employer PAYE reference
+---
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-8 hmrc-experimental">
+  <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">
+    Experimental
+  </strong>
+
+  <p class="govuk-body">
+    This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.
+  </p>
+</div>
+
+<p class="govuk-body">
+  This pattern lets the user enter an employer PAYE reference. Do not call it ‘PAYE employer reference number’, ‘employer PAYE reference number’ or ‘PAYE reference’.
+</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+  When to use
+</h2>
+
+<p class="govuk-body">
+  Use this pattern when the user must enter an employer PAYE reference to use a service.
+</p>
+
+<p class="govuk-body">
+  If there is a good reason for asking for an employer PAYE reference but the user does not have to enter one, make it optional.
+</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">
+  When not to use
+</h2>
+
+<p class="govuk-body">
+  If there is no good reason for asking for an employer PAYE reference and the user does not have to enter one to use the service, do not ask for one.
+</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">
+  How it works
+</h2>
+
+<p class="govuk-body">
+  You can ask for the employer PAYE reference as the main heading or <code>&lt;h1&gt;</code> of the screen. It can be a question or statement.
+</p>
+
+{{
+  example({
+    item: 'employer-paye-reference',
+    example: 'heading',
+    description: 'Employer PAYE reference as main heading'
+  })
+}}
+
+<p class="govuk-body">
+  Or you can ask for the employer PAYE reference as a normal form label, separate from the <code>&lt;h1&gt;</code>.
+</p>
+
+{{
+  example({
+    item: 'employer-paye-reference',
+    example: 'label',
+    description: 'Employer PAYE reference as form label'
+  })
+}}
+
+<p class="govuk-body">
+  Use a single text input and get the user to enter the reference formatted as:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>3 numbers</li>
+  <li>a forward slash (/)</li>
+  <li>between 1 and 10 characters, which can be letters and numbers</li>
+</ul>
+
+<h3 class="govuk-heading-m" id="provide-help">
+  Provide help
+</h3>
+
+<p class="govuk-body">
+  Always provide help in the form label, normal content or hint text that is as clear as possible. This may include:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>a short explanation of what an employer PAYE reference is</li>
+  <li>where the user can find it</li>
+  <li>what it looks like</li>
+  <li>an example – if you show an example, always use ‘123/AB456’</li>
+</ul>
+
+<p class="govuk-body">
+  In a personal tax service, use the company’s name, like ‘Anycompany’s employer PAYE reference’. Try to avoid ‘your employer’s employer PAYE reference’ because it could be confusing.
+</p>
+
+<p class="govuk-body">
+  In a business tax service, if it is not the company the user works for, use the company’s name. If it is the company the user works for, use ‘your employer PAYE reference’.
+</p>
+
+<p class="govuk-body">
+  You can use an image that shows where it is on documents and letters.
+</p>
+
+<p class="govuk-body">
+  Do not use the <a href="https://design-system.service.gov.uk/components/details/">details component</a> to hide any help. Research shows users may:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>not know what an employer PAYE reference is</li>
+  <li>need help to know what an employer PAYE reference looks like</li>
+</ul>
+
+<h3 class="govuk-heading-m" id="error-messages">
+  Error messages
+</h3>
+
+<p class="govuk-body">
+  Error messages should be styled like this:
+</p>
+
+{{
+  example({
+    item: 'employer-paye-reference',
+    example: 'label-error',
+    description: 'Employer PAYE reference with error'
+  })
+}}
+
+<p class="govuk-body">
+  Make sure errors follow the <a href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> in the GOV.UK Design System and have specific error messages for specific error states.
+</p>
+
+<h4 class="govuk-heading-s">
+  If the employer PAYE reference is empty
+</h4>
+
+<p class="govuk-body">
+  Say ‘Enter [whatever it is]’.<br/>
+  For example, ‘Enter Anycompany’s employer PAYE reference’.
+</p>
+
+<h4 class="govuk-heading-s">
+  If the employer PAYE reference is in the wrong format
+</h4>
+
+<p class="govuk-body">
+  Say ‘Enter [whatever it is] in the correct format’.<br>
+  For example, ‘Enter Anycompany’s employer PAYE reference in the correct format’.
+</p>
+
+<h2 class="govuk-heading-l" id="research">
+  Research
+</h2>
+
+<p class="govuk-body">
+  Research has shown that users often expect this kind of information to be pre-populated, especially when they have signed in.
+</p>
+
+<p class="govuk-body">
+  We need more research. If you have used employer PAYE reference, get in touch to share your research findings.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/138">Discuss employer PAYE reference on GitHub</a>
+</p>
+
+{% endblock %}
+
