@@ -1,0 +1,96 @@
+---
+layout: twoColumnPage.njk
+title: Could not confirm identity
+---
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern lets the user know we could not confirm their identity and what they can do next. This is part of confirming their identity when they sign in with a Government Gateway account for the first time.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern when we could not confirm the user’s identity. This may include when the user:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>provides details that do not match those we have on file</li>
+  <li>does not complete the process</li>
+  <li>does not provide enough information</li>
+  <li>makes too many attempts</li>
+</ul>
+
+<p class="govuk-body">Doing this helps the user complete the task they are trying to do. It also helps reduce time and money spent dealing with queries received by phone and post.</p>
+
+<p class="govuk-body">There is also a pattern when we have <a class="govuk-link" href="/design-library/confirmed-identity">confirmed their identity</a>.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+<p class="govuk-body">Use the standard page template from your service and have the same:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>header</li>
+  <li>phase banner</li>
+  <li>footer</li>
+</ul>
+
+<p class="govuk-body">The page should have:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>‘We could not confirm your identity – service name – GOV.UK’ as the page title</li>
+  <li>‘We could not confirm your identity’ as the <code>&lt;h1&gt;</code> page heading</li>
+  <li>content that explains what went wrong and what they can do</li>
+  <li>a call to action</li>
+</ul>
+
+{{
+  example({
+    item: 'could-not-confirm-identity',
+    example: 'no-match',
+    welsh: 'no-match-welsh',
+    description: 'Could not confirm identity, no match'
+  })
+}}
+
+{{
+  example({
+    item: 'could-not-confirm-identity',
+    example: 'insufficient-information',
+    welsh: 'insufficient-information-welsh',
+    description: 'Could not confirm identity, insufficient information'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="avoid-ending-a-journey">Avoid ending a journey</h3>
+
+<p class="govuk-body">Offer the user a way of continuing to use the service where possible.</p>
+
+<p class="govuk-body">If this is not possible, provide another way for the user to do what they need to do. This could be another service where they do not need to confirm their identity.</p>
+
+{{
+  example({
+    item: 'could-not-confirm-identity',
+    example: 'end-of-journey',
+    welsh: 'end-of-journey-welsh',
+    description: 'Could not confirm identity, end of journey'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="understand-the-users-journey">Understand the user’s journey</h3>
+
+<p class="govuk-body">Work with the team responsible for the microservice that confirms a user’s identity to understand how the process works. This will help you decide what is the best thing to tell the user to help them complete the process.</p>
+
+<h3 class="govuk-heading-m" id="tell-the-user-that-they-will-need-to-confirm-their-identity-when-they-start-to-use-the-service">Tell the user they will need to confirm their identity when they start to use the service</h3>
+
+<p class="govuk-body">List what the user needs in the ‘before you start’ information where the service starts.</p>
+
+<h3 class="govuk-heading-m" id="give-the-user-extra-help-when-they-have-a-deadline">Give the user extra help when they have a deadline</h3>
+
+<p class="govuk-body">Help the user confirm their identity as quickly as possible if they must do something by a specific time and the deadline is close. For example, a Self Assessment tax return or tax credit renewal.</p>
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used could not confirm identity, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/117">Discuss could not confirm identity on GitHub</a></p>
+
+{% endblock %}
