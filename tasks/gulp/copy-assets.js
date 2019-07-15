@@ -18,10 +18,7 @@ gulp.task('copy-assets:local', (done) => {
   const componentImages = gulp.src(pathFromRoot('node_modules', 'hmrc-frontend', 'components', 'hmrc-account-menu', 'images', '*'))
     .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'stylesheets', 'components', 'hmrc-account-menu', 'images')))
 
-  const jquery = gulp.src(pathFromRoot('node_modules', 'jquery', 'dist', '*'))
-    .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'javascripts', 'vendor', 'jquery')))
-
-  const mergedStream = merge2(assets, jquery, componentImages)
+  const mergedStream = merge2(assets, componentImages)
   mergedStream.on('queueDrain', (done))
 })
 

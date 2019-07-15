@@ -1,5 +1,6 @@
 import common from 'govuk-frontend/common'
 import hmrcFrontend from 'hmrc-frontend/all'
+import govUkFrontend from 'govuk-frontend/all'
 
 import AppTabs from './components/tabs.js'
 import LanguageSwitchExample from './components/language-switch-example'
@@ -21,3 +22,4 @@ nodeListForEach($languageSwitchExamples, $example => {
 })
 
 hmrcFrontend.initAll()
+govUkFrontend.initAll()
