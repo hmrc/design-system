@@ -1,0 +1,26 @@
+---
+title: Page not found
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">
+  Use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/page-not-found-pages/">Page not found</a> pattern from the GOV.UK Design System.
+</p>
+
+<p class="govuk-body">
+  The GOV.UK Design System does not contain Welsh translations yet. The example includes recommended content in Welsh.
+</p>
+
+{{
+  example({
+    item: "page-not-found",
+    welsh: "default-welsh",
+    description: 'Page not found'
+  })
+}}
+
+{% endblock %}
