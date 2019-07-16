@@ -8,7 +8,7 @@
     "test:integration": "gulp integration",
     "test:watch": "gulp jest:unit:watch",
     "test:unit": "gulp jest:unit",
-    "test": "gulp test",
+    "test": "npm run test:unit",
     "build": "npm run test && gulp build",
     "serve": "gulp serve"
   },
