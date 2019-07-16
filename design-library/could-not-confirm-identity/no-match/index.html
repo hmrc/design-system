@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example – HMRC Design Patterns – Design resources for HMRC – GOV.UK</title>
+
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend.min.css">
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/hmrc-frontend.min.css">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+
+<h1 class="govuk-heading-xl">We could not confirm your identity</h1>
+<p class="govuk-body">The information you have entered does not match our records.</p>
+
+<button type="submit" class="govuk-button">
+  Try again
+</button>
+</body>
+
+  <script>
+    // This prevents the account dropdown from closing and triggering
+    // an infinite loop on the auto iframe resize
+    // Can be removed on copmpletion of https://jira.tools.tax.service.gov.uk/browse/PLATUI-117
+    function getWindowHeight () {
+     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    }
+
+    var initialHeight = getWindowHeight()
+
+    window.addEventListener('resize', function (event) {
+      if (getWindowHeight() !== initialHeight) {
+        event.stopImmediatePropagation()
+        initialHeight = getWindowHeight()
+      }
+    });
+  </script>
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>

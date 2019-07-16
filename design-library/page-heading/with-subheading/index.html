@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example – HMRC Design Patterns – Design resources for HMRC – GOV.UK</title>
+
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend.min.css">
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/hmrc-frontend.min.css">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">What is your name?</h1><p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>Personal details</p></header>
+
+</body>
+
+  <script>
+    // This prevents the account dropdown from closing and triggering
+    // an infinite loop on the auto iframe resize
+    // Can be removed on copmpletion of https://jira.tools.tax.service.gov.uk/browse/PLATUI-117
+    function getWindowHeight () {
+     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    }
+
+    var initialHeight = getWindowHeight()
+
+    window.addEventListener('resize', function (event) {
+      if (getWindowHeight() !== initialHeight) {
+        event.stopImmediatePropagation()
+        initialHeight = getWindowHeight()
+      }
+    });
+  </script>
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>

@@ -10,7 +10,6 @@
     <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
   <[endif]-->
   <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
-  <script src="/assets/javascripts/vendor/jquery/jquery.min.js" type="application/javascript"></script>
 </head>
 
 <body class="govuk-template__body">
@@ -57,8 +56,58 @@
 
             
             <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/account-menu">
+                Account menu
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/accounts-office-reference">
+                Accounts office reference
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
               <a class="app-subnav__link govuk-link" href="/design-library/ask-for-consent">
                 Ask the user for their consent
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/confirmed-identity">
+                Confirmed identity
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/could-not-confirm-identity">
+                Could not confirm identity
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/employer-paye-reference">
+                Employer paye reference
               </a>
             </li>
             
@@ -83,15 +132,56 @@
             </li>
             
           
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/page-heading">
+                Page heading
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/page-not-found">
+                Page not found
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/utr">
+                Unique Taxpayer Reference
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/vat-registration-number">
+                VAT registration number
+              </a>
+            </li>
+            
+          
           </ul>
         </nav>
       </div>
 
       <div class="app-pane__content">
-        <main role="main" class="app-content" id="main-content">
+        <main class="app-content" id="main-content">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               <h1 class="govuk-heading-xl">Notification badge</h1>
+
 <p class="govuk-body">This pattern lets the user know that there is new information to view, like unread messages, and how many of them there are. The notification badge is part of the <a class="govuk-link" href="account-header">account header</a>.</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
@@ -116,18 +206,18 @@
 <p class="govuk-body">There are 2 ways to use the notification badge examples. You can use HTML or, if you are using Nunjucks or <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com">version 7 or later of the GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
 <div class="govuk-inset-text">
-  You need HMRC Frontend to use this pattern – <a href="/design-library/using-code-in-prototypes/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/design-library/using-code-in-prototypes/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
 </div>
 
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-default" data-module="app-tabs app-language-switch-example">
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
-        <a href="/design-library/notification-badge/default/" target="_blank">
+        <a href="/design-library/notification-badge/default/" target="_blank" title="Open Badge with notifications example in a new window">
           Open this example in a new window
         </a>
       </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
-              src="/design-library/notification-badge/default/" frameBorder="0"></iframe>
+              src="/design-library/notification-badge/default/" title="Badge with notifications example"></iframe>
     </div>
 
     <div class="example-example-default-lang example-example-default-lang--en ">
@@ -135,10 +225,10 @@
       <ul class="app-tabs" role="tablist">
         <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#example-default-html" role="tab"
                                                                         aria-controls="example-default-html"
-                                                                        data-track="tab-html">HTML</a></li>
+                                                                        data-track="tab-html" title="Display Badge with notifications example as HTML">HTML</a></li>
         <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#example-default-nunjucks" role="tab"
                                                                         aria-controls="example-default-nunjucks"
-                                                                        data-track="tab-nunjucks">Nunjucks</a></li>
+                                                                        data-track="tab-nunjucks" title="Display Badge with notifications example as Nunjucks">Nunjucks</a></li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
@@ -162,12 +252,12 @@
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-no-items" data-module="app-tabs app-language-switch-example">
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
-        <a href="/design-library/notification-badge/no-items/" target="_blank">
+        <a href="/design-library/notification-badge/no-items/" target="_blank" title="Open Badge without notifications example in a new window">
           Open this example in a new window
         </a>
       </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
-              src="/design-library/notification-badge/no-items/" frameBorder="0"></iframe>
+              src="/design-library/notification-badge/no-items/" title="Badge without notifications example"></iframe>
     </div>
 
     <div class="example-example-no-items-lang example-example-no-items-lang--en ">
@@ -175,10 +265,10 @@
       <ul class="app-tabs" role="tablist">
         <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#example-no-items-html" role="tab"
                                                                         aria-controls="example-no-items-html"
-                                                                        data-track="tab-html">HTML</a></li>
+                                                                        data-track="tab-html" title="Display Badge without notifications example as HTML">HTML</a></li>
         <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#example-no-items-nunjucks" role="tab"
                                                                         aria-controls="example-no-items-nunjucks"
-                                                                        data-track="tab-nunjucks">Nunjucks</a></li>
+                                                                        data-track="tab-nunjucks" title="Display Badge without notifications example as Nunjucks">Nunjucks</a></li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-no-items-html" role="tabpanel">
@@ -206,6 +296,7 @@
 <p class="govuk-body">We need more research. If you have used the notification badge, get in touch to share your research findings.</p>
 
 <p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/142">Discuss the notification badge on GitHub</a></p>
+
 </div>
           </div>
         </main>
@@ -236,6 +327,5 @@
   <script src="/assets/javascripts/vendor/govuk/collapsible.js" type="application/javascript"></script>
   <script src="/assets/javascripts/vendor/govuk/collapsible_collection.js" type="application/javascript"></script>
   <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
-  <script src="/assets/javascripts/application.js" type="application/javascript"></script>
 </body>
 </html>

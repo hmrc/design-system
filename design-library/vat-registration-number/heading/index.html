@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example – HMRC Design Patterns – Design resources for HMRC – GOV.UK</title>
+
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend.min.css">
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/hmrc-frontend.min.css">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="vat-registration-number">
+      What is Anycompany’s VAT registration number?
+    </label>
+    
+  </h1>
+  <span id="vat-registration-number-hint" class="govuk-hint">
+    This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on Anycompany’s VAT registration certificate.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="vat-registration-number" name="vat-registration-number" type="text" aria-describedby="vat-registration-number-hint">
+</div>
+
+
+<button type="submit" class="govuk-button">
+  Continue
+</button>
+</body>
+
+  <script>
+    // This prevents the account dropdown from closing and triggering
+    // an infinite loop on the auto iframe resize
+    // Can be removed on copmpletion of https://jira.tools.tax.service.gov.uk/browse/PLATUI-117
+    function getWindowHeight () {
+     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    }
+
+    var initialHeight = getWindowHeight()
+
+    window.addEventListener('resize', function (event) {
+      if (getWindowHeight() !== initialHeight) {
+        event.stopImmediatePropagation()
+        initialHeight = getWindowHeight()
+      }
+    });
+  </script>
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>
