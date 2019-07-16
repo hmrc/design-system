@@ -1,0 +1,26 @@
+---
+layout: layout-example.njk
+---
+
+{% from "input/macro.njk" import govukInput %}
+{% from "button/macro.njk" import govukButton %}
+
+{{
+  govukInput({
+    label: {
+      text: "What is your Accounts Office reference?",
+      isPageHeading: true,
+      classes: "govuk-label--xl"
+    },
+    hint: {
+      text: 'This is 13 characters, like 123PX00123456 or 123PX0012345X. It will be on letters from HMRC about PAYE and when you registered as an employer.'
+    },
+    id: "accounts-office-reference",
+    name: "accounts-office-reference",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
