@@ -6,6 +6,12 @@
   margin: 0 0 govuk-spacing(4);
   padding: 0;
   list-style-type: none;
+  border-bottom: 1px solid $govuk-border-colour;
+  padding-bottom: govuk-spacing(4);
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .app-subnav__link {

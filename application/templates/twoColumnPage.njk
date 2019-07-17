@@ -37,6 +37,20 @@
             {% endif %}
           {% endfor %}
           </ul>
+
+          <!--
+          {% set installingHMRCFrontendPage = 'design-library/index.njk' %}
+          {% set installingHMRCFrontendPageActive = filepath === installingHMRCFrontendPage %}
+
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item{%if installingHMRCFrontendPageActive%} app-subnav__section-item--current{% endif %}">
+              <a class="app-subnav__link govuk-link" href="{{ installingHMRCFrontendPage }}">
+                Installing HMRC Frontend in your prototype
+              </a>
+            </li>
+          </ul>
+          -->
+
         </nav>
       </div>
 
