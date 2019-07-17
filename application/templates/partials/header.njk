@@ -6,8 +6,10 @@
     </div>
 
     <div class="hmrc-internal-service-name app-header__link">
+        {%- if serviceName -%}
         <a href="/" title="Go to the internal service homepage" class="hmrc-internal-service-name__link">
-         {{ serviceName | default('') }}
+         {{ serviceName }}
         </a>
+        {%- endif -%}
     </div>
 </header>

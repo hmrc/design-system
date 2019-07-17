@@ -6,6 +6,7 @@ const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
 const layouts = require('metalsmith-layouts')
+const livereload = require('gulp-livereload')
 
 const rollup = require('metalsmith-rollup')
 const resolve = require('rollup-plugin-node-resolve')
@@ -24,6 +25,7 @@ const pattern = '**/*{.njk,.html}'
 
 gulp.task('compile', (done) => {
   util.log('Metalsmith build starting')
+  const input = pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js')
 
   Metalsmith(projectRoot)
     .source('./src')
@@ -35,7 +37,7 @@ gulp.task('compile', (done) => {
     }))
     .use(navigation())
     .use(rollup({
-      input: pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js'),
+      input,
       output: {
         legacy: true,
         format: 'iife',
@@ -69,6 +71,7 @@ gulp.task('compile', (done) => {
     .use(debug())
     .build((err) => {
       if (err) throw err
+      gulp.src(input).pipe(livereload())
       done()
     })
 })
