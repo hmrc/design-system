@@ -7,7 +7,6 @@ const filters = require('../../lib/filters')
 const globals = require('../../lib/globals')
 const templatePaths = require('../../lib/templatePaths')
 
-
 const titleSuffix = 'Design resources for HMRC – GOV.UK'
 const defaultTitle = 'Default heading'
 
@@ -19,7 +18,6 @@ const options = {
   globals,
   title: defaultTitle
 }
-
 
 const templateFactory = () => `{% include 'twoColumnPage.njk' %}`.toString()
 
