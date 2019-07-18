@@ -6,7 +6,6 @@ const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
 const layouts = require('metalsmith-layouts')
-const livereload = require('gulp-livereload')
 
 const rollup = require('metalsmith-rollup')
 const resolve = require('rollup-plugin-node-resolve')
@@ -71,7 +70,6 @@ gulp.task('compile', (done) => {
     .use(debug())
     .build((err) => {
       if (err) throw err
-      gulp.src(input).pipe(livereload())
       done()
     })
 })

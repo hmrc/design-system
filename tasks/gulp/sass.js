@@ -77,7 +77,6 @@ gulp.task('scss:pattern-libraries', (done) => {
       path.extname = '.min.css'
     }))
     .pipe(gulp.dest('./dist'))
-    .pipe(livereload())
   done()
 })
 
