@@ -35,7 +35,7 @@ gulp.task('compile', (done) => {
     }))
     .use(navigation())
     .use(rollup({
-      input: pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js')
+      input: pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js'),
       output: {
         legacy: true,
         format: 'iife',
