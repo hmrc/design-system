@@ -24,7 +24,6 @@ const pattern = '**/*{.njk,.html}'
 
 gulp.task('compile', (done) => {
   util.log('Metalsmith build starting')
-  const input = pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js')
 
   Metalsmith(projectRoot)
     .source('./src')
@@ -36,7 +35,7 @@ gulp.task('compile', (done) => {
     }))
     .use(navigation())
     .use(rollup({
-      input,
+      input: pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js')
       output: {
         legacy: true,
         format: 'iife',
