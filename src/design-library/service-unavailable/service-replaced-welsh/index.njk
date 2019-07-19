@@ -1,7 +1,11 @@
 ---
 layout: layout-example.njk
 ---
-<h1 class="govuk-heading-xl">Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd</h1>
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
+}) }}
 
 <p class="govuk-body">Mae Credyd Cynhwysol wedi disodli credydau treth.</p>
 

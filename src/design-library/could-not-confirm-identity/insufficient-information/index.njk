@@ -1,10 +1,13 @@
 ---
 layout: layout-example.njk
 ---
-
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 {% from "button/macro.njk" import govukButton %}
 
-<h1 class="govuk-heading-xl">We could not confirm your identity</h1>
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
 <p class="govuk-body">You have not given us enough information.</p>
 
 {{ govukButton({

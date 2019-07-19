@@ -1,7 +1,11 @@
 ---
 layout: layout-example.njk
 ---
-<h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1>
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Sorry, there is a problem with the service'
+}) }}
 
 <p class="govuk-body">Try again later.</p>
 

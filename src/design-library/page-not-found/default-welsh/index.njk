@@ -1,8 +1,11 @@
 ---
 layout: layout-example.njk
 ---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
-<h1 class="govuk-heading-xl">Heb ddod o hyd i’r dudalen</h1>
+{{ hmrcPageHeading({
+  text: 'Heb ddod o hyd i’r dudalen'
+}) }}
 
 <p class="govuk-body">Os gwnaethoch deipio’r cyfeiriad gwe, dylech wirio ei fod yn gywir.</p>
 

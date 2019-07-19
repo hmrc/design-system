@@ -1,7 +1,11 @@
 ---
 layout: layout-example.njk
 ---
-<h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1>
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth'
+}) }}
 
 <p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
 

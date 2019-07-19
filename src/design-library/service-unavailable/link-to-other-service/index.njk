@@ -1,8 +1,11 @@
 ---
 layout: layout-example.njk
 ---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
-<h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1>
+{{ hmrcPageHeading({
+  text: 'Sorry, the service is unavailable'
+}) }}
 
 <p class="govuk-body">You will be able to use the service from 9am on Monday 19 November 2018.</p>
 

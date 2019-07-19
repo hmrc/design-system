@@ -1,7 +1,11 @@
 ---
 layout: layout-example.njk
 ---
-<h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1>
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Sorry, the service is unavailable'
+}) }}
 
 <p class="govuk-body">You will be able to renew your tax credits from Tuesday 24 April 2018.</p>
 
