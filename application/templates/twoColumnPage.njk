@@ -1,5 +1,9 @@
 {% extends 'default.njk' %}
 
+{% if not section and title != 'HMRC Design Patterns' %}
+  {% set section = 'HMRC Design Patterns' %}
+{% endif %}
+
 {% block page %}
   <div class="app-pane app-pane--enabled">
     <div class="app-pane__header">
