@@ -1,8 +1,12 @@
 ---
 layout: layout-example.njk
 ---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
-<h1 class="govuk-heading-xl">Nid oeddem yn gallu cadarnhau pwy ydych</h1>
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
 <p class="govuk-body">Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
 o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.</p>
 <p class="govuk-body">Gallwch <a class="govuk-link" href="#">newid manylion TAW eraill</a>

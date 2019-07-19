@@ -1,0 +1,17 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Sorry, the service is unavailable'
+}) }}
+
+<p class="govuk-body">You will be able to use the service from 9am on Monday 19 November 2018.</p>
+
+<p class="govuk-body">You can:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="#">change other VAT details</a></li>
+  <li><a class="govuk-link" href="#">contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits</li>
+</ul>

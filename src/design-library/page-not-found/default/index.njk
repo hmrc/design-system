@@ -1,8 +1,11 @@
 ---
 layout: layout-example.njk
 ---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
-<h1 class="govuk-heading-xl">Page not found</h1>
+{{ hmrcPageHeading({
+  text: 'Page not found'
+}) }}
 
 <p class="govuk-body">If you typed the web address, check it is correct.</p>
 

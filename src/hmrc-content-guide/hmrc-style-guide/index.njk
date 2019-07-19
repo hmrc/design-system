@@ -1,10 +1,14 @@
 ---
 layout: oneColumnPage.njk
 ---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">HMRC content style guide</h1>
+
+    {{ hmrcPageHeading({
+      text: 'HMRC content style guide'
+    }) }}
 
     <p class="govuk-body">
       The HMRC style guide only covers content styles and terms that are specific to HMRC, for example, names of taxes and what we call common tasks.

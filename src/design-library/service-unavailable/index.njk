@@ -1,0 +1,113 @@
+---
+title: Service unavailable
+layout: designPatternPage.njk
+---
+
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">
+  Use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/service-unavailable-pages/">Service unavailable</a> pattern from the GOV.UK Design System.
+</p>
+
+<p class="govuk-body">
+  The GOV.UK Design System does not contain Welsh translations yet. These examples include recommended content in Welsh.
+</p>
+
+<h2 class="govuk-heading-m" id="general-page">
+  General page
+</h2>
+
+{{
+  example({
+    item: 'service-unavailable',
+    example: 'general-page',
+    welsh: 'general-page-welsh',
+    description: 'Service unavailable, general page'
+  })
+}}
+
+<h2 class="govuk-heading-m" id="when-you-know-when-a-service=will-be-available">
+  When you know when a service will be available
+</h2>
+
+{{
+  example({
+    item: 'service-unavailable',
+    example: 'service-temporarily-unavailable',
+    welsh: 'service-temporarily-unavailable-welsh',
+    description: 'Service unavailable, when you know when a service will be available'
+  })
+}}
+
+<h2 class="govuk-heading-m" id="a-link-to-another-service">
+  A link to another service
+</h2>
+
+{{
+  example({
+    item: 'service-unavailable',
+    example: 'link-to-other-service',
+    welsh: 'link-to-other-service-welsh',
+    description: 'Service unavailable, link to another service'
+  })
+}}
+
+<h2 class="govuk-heading-m" id="service-is-closed-for-part-of-the-year">
+  Service is closed for part of the year
+</h2>
+
+<h3 class="govuk-heading-s" id="after-a-service-closes">
+  After a service closes
+</h3>
+
+{{
+  example({
+    item: 'service-unavailable',
+    example: 'service-closed',
+    welsh: 'service-closed-welsh',
+    description: 'After a service closes'
+  })
+}}
+
+<h3 class="govuk-heading-s" id="before-a-service-opens">
+  Before a service opens
+</h3>
+
+{{
+  example({
+    item: 'service-unavailable',
+    example: 'service-not-yet-open',
+    welsh: 'service-not-yet-open-welsh',
+    description: 'Before a service opens'
+  })
+}}
+
+<h2 class="govuk-heading-m" id="service-is-closed-forever">
+  Service is closed forever
+</h2>
+
+{{
+  example({
+    item: 'service-unavailable',
+    example: 'service-shut-down',
+    welsh: 'service-shut-down-welsh',
+    description: 'Service is closed forever'
+  })
+}}
+
+<h2 class="govuk-heading-s" id="something-has-replaced-the-service">
+  Something has replaced the service
+</h2>
+
+{{
+  example({
+    item: 'service-unavailable',
+    example: 'service-replaced',
+    welsh: 'service-replaced-welsh',
+    description: 'Something has replaced the service'
+  })
+}}
+
+{% endblock %}

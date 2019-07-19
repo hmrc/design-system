@@ -1,9 +1,13 @@
 ---
 layout: layout-example.njk
 ---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 {% from "button/macro.njk" import govukButton %}
 
-<h1 class="govuk-heading-xl">Rydym wedi cadarnhau pwy ydych</h1>
+{{ hmrcPageHeading({
+  text: 'Rydym wedi cadarnhau pwy ydych'
+}) }}
+
 {{ govukButton({
   text: "Yn eich blaen"
 }) }}
