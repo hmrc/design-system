@@ -9,6 +9,7 @@ const templatePaths = require('../../lib/templatePaths')
 
 const titleSuffix = 'Design resources for HMRC – GOV.UK'
 const defaultTitle = 'Default heading'
+const defaultSection = 'HMRC Design Patterns'
 
 const options = {
   path: templatePaths,
@@ -36,12 +37,18 @@ describe('Two column page layout', () => {
   })
 
   describe('Document title build', () => {
-    it('should use the title arg and suffix by default', () => {
-      expect(document.title).toBe(`${defaultTitle} - ${titleSuffix}`)
+    it('should use the title arg, section default and suffix by default', () => {
+      expect(document.title).toBe(`${defaultTitle} - ${defaultSection} - ${titleSuffix}`)
     })
 
-    it('should incorporate the `section` arg if present', () => {
-      const section = 'A section'
+    it('should not use the default `section` arg if it is the same as the title', () => {
+      const title = defaultSection
+      const document = documentFactory({ title })
+      expect(document.title).toBe(`${defaultSection} - ${titleSuffix}`)
+    })
+
+    it('should use the `section` arg override if present', () => {
+      const section = 'Overriden section'
       const document = documentFactory({ section })
       expect(document.title).toBe(`${defaultTitle} - ${section} - ${titleSuffix}`)
     })
