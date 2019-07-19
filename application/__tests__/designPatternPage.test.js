@@ -20,7 +20,7 @@ const options = {
   title: defaultTitle
 }
 
-const templateFactory = () => `{% include 'twoColumnPage.njk' %}`.toString()
+const templateFactory = () => `{% include 'designPatternPage.njk' %}`.toString()
 
 const documentFactory = (params) => {
   const templateString = templateFactory()
@@ -28,7 +28,7 @@ const documentFactory = (params) => {
   return new JSDOM(html).window.document
 }
 
-describe('Two column page layout', () => {
+describe('Design pattern page layout', () => {
   const document = documentFactory()
   const heading = document.querySelector('h1.govuk-heading-xl')
 
