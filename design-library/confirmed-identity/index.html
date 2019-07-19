@@ -18,6 +18,7 @@
   
 
   <!-- TODO: tidy up the below -->
+
   <div class="app-pane app-pane--enabled">
     <div class="app-pane__header"><header role="banner" class="hmrc-internal-header app-header">
     <div class="hmrc-logo app-header__title">
@@ -158,6 +159,26 @@
 
             
             <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/problem-with-service">
+                There is a problem with the service
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/service-unavailable">
+                Service unavailable
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
               <a class="app-subnav__link govuk-link" href="/design-library/utr">
                 Unique Taxpayer Reference
               </a>
@@ -182,7 +203,9 @@
         <main class="app-content" id="main-content">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-              <h1 class="govuk-heading-xl">Confirmed identity</h1>
+              <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Confirmed identity</h1></header>
+
 
 <p class="govuk-body">This pattern lets the user know we have confirmed their identity. This is part of confirming their identity when they sign in with a Government Gateway account for the first time.</p>
 
@@ -243,28 +266,42 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We have confirmed your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We have confirmed your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Rydym wedi cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Rydym wedi cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Yn eich blaen
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "button/macro.njk" import govukButton %}
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 
-&lt;h1 class="govuk-heading-xl"&gt;We have confirmed your identity&lt;/h1&gt;
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">'We have confirmed your identity'</span>
+}) }}
+
 {{ govukButton({
-  text: "Continue"
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
 }) }}</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "button/macro.njk" import govukButton %}
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 
-&lt;h1 class="govuk-heading-xl"&gt;Rydym wedi cadarnhau pwy ydych&lt;/h1&gt;
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">'Rydym wedi cadarnhau pwy ydych'</span>
+}) }}
+
 {{ govukButton({
-  text: "Yn eich blaen"
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Yn eich blaen"</span>
 }) }}</code></pre>
       </div>
     </div>

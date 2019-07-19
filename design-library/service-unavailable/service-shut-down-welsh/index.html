@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example – HMRC Design Patterns – Design resources for HMRC – GOV.UK</title>
+
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend.min.css">
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/hmrc-frontend.min.css">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd</h1></header>
+
+
+<p class="govuk-body">Mae’r gwasanaeth ar gyfer cyflwyno adroddiad cyfryngwr cyflogaeth wedi dod i ben.</p>
+
+<p class="govuk-body">Cysylltwch â ni os oes angen i chi siarad â rhywun am y gwasanaeth a’ch adroddiadau.</p>
+
+<p class="govuk-body">
+  Ffôn:
+  <br/>
+  <strong class="govuk-!-font-weight-bold">0808 157 3901</strong>
+</p>
+
+<p class="govuk-body">
+  Oriau agor:
+  <br/>
+  <strong class="govuk-!-font-weight-bold">Dydd Llun – Dydd Gwener: 08:30 – 16:30</strong>
+</p>
+</body>
+
+  <script>
+    // This prevents the account dropdown from closing and triggering
+    // an infinite loop on the auto iframe resize
+    // Can be removed on copmpletion of https://jira.tools.tax.service.gov.uk/browse/PLATUI-117
+    function getWindowHeight () {
+     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    }
+
+    var initialHeight = getWindowHeight()
+
+    window.addEventListener('resize', function (event) {
+      if (getWindowHeight() !== initialHeight) {
+        event.stopImmediatePropagation()
+        initialHeight = getWindowHeight()
+      }
+    });
+  </script>
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>

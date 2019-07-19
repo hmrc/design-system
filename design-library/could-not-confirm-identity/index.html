@@ -18,6 +18,7 @@
   
 
   <!-- TODO: tidy up the below -->
+
   <div class="app-pane app-pane--enabled">
     <div class="app-pane__header"><header role="banner" class="hmrc-internal-header app-header">
     <div class="hmrc-logo app-header__title">
@@ -158,6 +159,26 @@
 
             
             <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/problem-with-service">
+                There is a problem with the service
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/design-library/service-unavailable">
+                Service unavailable
+              </a>
+            </li>
+            
+          
+            
+
+            
+            <li class="app-subnav__section-item">
               <a class="app-subnav__link govuk-link" href="/design-library/utr">
                 Unique Taxpayer Reference
               </a>
@@ -182,7 +203,9 @@
         <main class="app-content" id="main-content">
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-              <h1 class="govuk-heading-xl">Could not confirm identity</h1>
+              <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Could not confirm identity</h1></header>
+
 
 <p class="govuk-body">This pattern lets the user know we could not confirm their identity and what they can do next. This is part of confirming their identity when they sign in with a Government Gateway account for the first time.</p>
 
@@ -253,13 +276,19 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-no-match-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We could not confirm your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We could not confirm your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>The information you have entered does not match our records.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Try again
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Nid oeddem yn gallu cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Nid oeddem yn gallu cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>Nid yw’r wybodaeth yr ydych wedi’i nodi yn cyd-fynd â’n cofnodion.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
@@ -268,17 +297,25 @@
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-no-match-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "button/macro.njk" import govukButton %}
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
 
-&lt;h1 class="govuk-heading-xl"&gt;We could not confirm your identity&lt;/h1&gt;
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
 &lt;p class="govuk-body"&gt;The information you have entered does not match our records.&lt;/p&gt;
 
 {{ govukButton({
   text: "Try again"
 }) }}</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "button/macro.njk" import govukButton %}
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
 
-&lt;h1 class="govuk-heading-xl"&gt;Nid oeddem yn gallu cadarnhau pwy ydych&lt;/h1&gt;
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
 &lt;p class="govuk-body"&gt;Nid yw’r wybodaeth yr ydych wedi’i nodi yn cyd-fynd â’n cofnodion.&lt;/p&gt;
 
 {{ govukButton({
@@ -322,13 +359,19 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-insufficient-information-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We could not confirm your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We could not confirm your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>You have not given us enough information.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Try again
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Nid oeddem yn gallu cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Nid oeddem yn gallu cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>Nid ydych wedi rhoi digon o wybodaeth i ni.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
@@ -337,17 +380,25 @@
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-insufficient-information-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "button/macro.njk" import govukButton %}
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
 
-&lt;h1 class="govuk-heading-xl"&gt;We could not confirm your identity&lt;/h1&gt;
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
 &lt;p class="govuk-body"&gt;You have not given us enough information.&lt;/p&gt;
 
 {{ govukButton({
   text: "Try again"
 }) }}</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "button/macro.njk" import govukButton %}
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
 
-&lt;h1 class="govuk-heading-xl"&gt;Nid oeddem yn gallu cadarnhau pwy ydych&lt;/h1&gt;
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
 &lt;p class="govuk-body"&gt;Nid ydych wedi rhoi digon o wybodaeth i ni.&lt;/p&gt;
 
 {{ govukButton({
@@ -397,12 +448,18 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-end-of-journey-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We could not confirm your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We could not confirm your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>You have entered information that does not match our records too many
   times. For security reasons, you must wait 24 hours and then sign in to try again.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>change other VAT details<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   without confirming your identity<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Nid oeddem yn gallu cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Nid oeddem yn gallu cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
   o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>Gallwch <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>newid manylion TAW eraill<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -410,12 +467,22 @@
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-end-of-journey-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">&lt;h1 class="govuk-heading-xl"&gt;We could not confirm your identity&lt;/h1&gt;
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
 &lt;p class="govuk-body"&gt;You have entered information that does not match our records too many
 times. For security reasons, you must wait 24 hours and then sign in to try again.&lt;/p&gt;
 &lt;p class="govuk-body"&gt;You can &lt;a class="govuk-link" href="#"&gt;change other VAT details&lt;/a&gt;
 without confirming your identity&lt;/p&gt;</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">&lt;h1 class="govuk-heading-xl"&gt;Nid oeddem yn gallu cadarnhau pwy ydych&lt;/h1&gt;
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
 &lt;p class="govuk-body"&gt;Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
 o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.&lt;/p&gt;
 &lt;p class="govuk-body"&gt;Gallwch &lt;a class="govuk-link" href="#"&gt;newid manylion TAW eraill&lt;/a&gt;
