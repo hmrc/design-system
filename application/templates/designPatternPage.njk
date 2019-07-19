@@ -2,9 +2,9 @@
 
 {% extends 'default.njk' %}
 
-{%- block pageTitle -%}
-  {{ title }}
-{%- endblock -%}
+{% if not section and title != 'HMRC Design Patterns' %}
+  {% set section = 'HMRC Design Patterns' %}
+{% endif %}
 
 {% block page %}
 
