@@ -2,7 +2,7 @@ const gulp = require('gulp')
 const merge2 = require('merge2')
 const remoteSrc = require('gulp-remote-src')
 const pathFromRoot = require('../../util/pathFromRoot')
-const readExtensionConfigSync = require('../../util/extensions').readExtensionConfigSync
+const readExtensionConfigSync = require('../../util/extensions')
 
 const assetsFromExtensions = readExtensionConfigSync('assets').map(item => pathFromRoot(... `node_modules/${item.module}${item.item}/**/*`.split('/')))
 

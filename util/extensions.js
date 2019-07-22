@@ -1,8 +1,17 @@
 const fs = require('fs')
-const pathFromRoot = require('./pathFromRoot')
-const getConfigFileName = depName => pathFromRoot('node_modules', depName, 'govuk-prototype-kit.config.json')
-const exists = filePath => fs.existsSync(filePath)
 
-const readExtensionConfigSync = keyName => [].concat(...Object.keys(require(pathFromRoot('package.json')).dependencies).filter(depName => exists(getConfigFileName(depName))).map(depName => (require(getConfigFileName(depName))[keyName] || []).map(item => ({module: depName, item}))))
+const pathFromRoot = require('../util/pathFromRoot')
+const packageJson = require('../package.json')
 
-module.exports = {readExtensionConfigSync}
+const getDependencyConfig = dependencyName => pathFromRoot('node_modules', dependencyName, 'govuk-prototype-kit.config.json')
+const exists = dependencyName => fs.existsSync(getDependencyConfig(dependencyName))
+
+const readExtensionConfigSync = keyName => [].concat(
+  ...Object.keys(packageJson.dependencies)
+  .filter(exists)
+  .map(dependencyName => (require(getDependencyConfig(dependencyName))[keyName] || [])
+    .map(item => ({module: dependencyName, item}))
+  )
+)
+
+module.exports = readExtensionConfigSync
