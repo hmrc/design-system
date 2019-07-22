@@ -7,6 +7,7 @@ const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
+const livereload = require('gulp-livereload')
 
 const pathFromRoot = require('../../util/pathFromRoot')
 
@@ -44,6 +45,7 @@ gulp.task('scss:hmrc-design-system', (done) => {
       extname: '.min.css'
     }))
     .pipe(gulp.dest('./dist'))
+    .pipe(livereload())
   done()
 })
 
