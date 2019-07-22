@@ -1,0 +1,16 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Sorry, there is a problem with the service'
+}) }}
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
+
+<p class="govuk-body">
+  <a href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>

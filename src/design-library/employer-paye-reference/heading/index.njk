@@ -1,0 +1,26 @@
+---
+layout: layout-example.njk
+---
+
+{% from "input/macro.njk" import govukInput %}
+{% from "button/macro.njk" import govukButton %}
+
+{{
+  govukInput({
+    label: {
+      text: "What is Anycompany’s employer PAYE reference?",
+      isPageHeading: true,
+      classes: "govuk-label--xl"
+    },
+    hint: {
+      text: 'This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on your P60.'
+    },
+    id: "employer-paye-reference",
+    name: "employer-paye-reference",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

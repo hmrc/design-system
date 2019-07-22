@@ -19,10 +19,7 @@ gulp.task('copy-assets:local', (done) => {
   const extensionAssets = gulp.src(assetsFromExtensions, { base: pathFromRoot('node_modules') })
     .pipe(gulp.dest(pathFromRoot('dist', 'extension-assets')))
 
-  const jquery = gulp.src(pathFromRoot('node_modules', 'jquery', 'dist', '*'))
-    .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'javascripts', 'vendor', 'jquery')))
-
-  const mergedStream = merge2(assets, jquery, extensionAssets)
+  const mergedStream = merge2(assets, extensionAssets)
   mergedStream.on('queueDrain', (done))
 })
 

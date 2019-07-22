@@ -1,0 +1,26 @@
+---
+layout: layout-example.njk
+---
+
+{% from "input/macro.njk" import govukInput %}
+{% from "button/macro.njk" import govukButton %}
+
+{{
+  govukInput({
+    label: {
+      text: "What is Anycompany’s VAT registration number?",
+      isPageHeading: true,
+      classes: "govuk-label--xl"
+    },
+    hint: {
+      text: 'This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on Anycompany’s VAT registration certificate.'
+    },
+    id: "vat-registration-number",
+    name: "vat-registration-number",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

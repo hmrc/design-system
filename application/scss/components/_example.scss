@@ -1,5 +1,6 @@
 // Taken from https://github.com/alphagov/govuk-design-system/blob/29b9cf8c30ac1514d16fc97adaf15100e5040f7d/src/stylesheets/components/_example.scss
 // with the exception of `.app-example-page` taken from https://github.com/alphagov/govuk-design-system/blob/29b9cf8c30ac1514d16fc97adaf15100e5040f7d/src/stylesheets/main.scss#L160-L162
+// and .language-example-code taken from the old prototype codebase
 
 // Example styles
 .app-example-wrapper {
@@ -99,4 +100,15 @@
   @include govuk-media-query($from: desktop) {
     resize: both;
   }
+}
+
+.language-example-code
+{
+  background-color:#f8f8f8;
+  width: calc(135% - 100px);
+  border: 1px solid #bfc1c3;
+  white-space: normal;
+  padding: 20px;
+  display: block;
+
 }
