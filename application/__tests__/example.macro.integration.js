@@ -10,7 +10,7 @@ describe('Example page rendering', () => {
 
   test('should be titled "Ask the user for their consent"', async () => {
     const title = await page.title()
-    expect(title).toMatch('Ask the user for their consent')
+    expect(title).toBe('Ask the user for their consent - HMRC Design Patterns - Design resources for HMRC – GOV.UK')
   })
 
   test('iframes should have a style attribute with a height property', async () => {
