@@ -36,6 +36,7 @@ gulp.task('scss:hmrc-design-system', (done) => {
   // TODO: Given that we are importing hrmc- and govuk-frontend into this file do we need to be
   // copying over the stylesheet assets in the copy-assets task? I have removed the references to these in the layout
   // files and seen no obvious ill-effects
+  // Also pertains to PLATUI-161: https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   gulp.src('./application/scss/hmrc-design-system.scss')
     .pipe(header('$govuk-assets-path: "/extension-assets/govuk-frontend/assets/";\n'))
     .pipe(header('$hmrc-assets-path: "/extension-assets/hmrc-frontend/";\n'))
