@@ -5,6 +5,7 @@ const sass = require('gulp-sass')
 const plumber = require('gulp-plumber')
 const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
+const header = require('gulp-header')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 const livereload = require('gulp-livereload')
@@ -32,7 +33,13 @@ gulp.task('scss:watch', (done) => {
 
 gulp.task('scss:hmrc-design-system', (done) => {
   // TODO: compile an Old IE version of our local css
+  // TODO: Given that we are importing hrmc- and govuk-frontend into this file do we need to be
+  // copying over the stylesheet assets in the copy-assets task? I have removed the references to these in the layout
+  // files and seen no obvious ill-effects
+  // Also pertains to PLATUI-161: https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   gulp.src('./application/scss/hmrc-design-system.scss')
+    .pipe(header('$govuk-assets-path: "/extension-assets/govuk-frontend/assets/";\n'))
+    .pipe(header('$hmrc-assets-path: "/extension-assets/hmrc-frontend/";\n'))
     .pipe(plumber(errorHandler))
     .pipe(sass({
       outputStyle: 'compressed'
@@ -46,7 +53,7 @@ gulp.task('scss:hmrc-design-system', (done) => {
     }))
     .pipe(gulp.dest('./dist'))
     .pipe(livereload())
-  done()
+    .on('end', done)
 })
 
 gulp.task('scss:pattern-libraries', (done) => {
@@ -72,12 +79,12 @@ gulp.task('scss:pattern-libraries', (done) => {
       })
     ])))
     .pipe(rename((path) => {
-      path.basename = path.basename.replace('all', path.dirname)
+      path.basename = path.dirname
       path.dirname = 'assets/stylesheets'
       path.extname = '.min.css'
     }))
     .pipe(gulp.dest('./dist'))
-  done()
+    .on('end', done)
 })
 
 gulp.task('scss:compile', gulp.parallel('scss:pattern-libraries', 'scss:hmrc-design-system'))
