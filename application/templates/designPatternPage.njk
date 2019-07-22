@@ -10,35 +10,31 @@
 
   <div class="app-pane app-pane--enabled">
     <div class="app-pane__header">
-      {%- include './partials/header.njk' -%}
+      {% include './partials/header.njk' %}
     </div>
 
     <div class="app-pane__body">
       <div class="app-pane__subnav">
         <h2 class="govuk-heading-m">
-          {% set designPatternsIndexPage = 'design-library/index.njk' %}
+          {%- set designPatternsIndexPage = 'design-library/index.njk' -%}
 
-          {% if filepath != designPatternsIndexPage %}
-          <a href="/design-library/">
-          {% endif %}
-          HMRC Design Patterns
-          {% if filepath != designPatternsIndexPage %}
-          </a>
-          {% endif %}
+          {%- if filepath != designPatternsIndexPage -%}<a href="/design-library/">{%- endif -%}
+            HMRC Design Patterns
+          {%- if filepath != designPatternsIndexPage -%}</a>{%- endif -%}
         </h2>
         <nav class="app-subnav">
           <ul class="app-subnav__section">
-          {% for item in navigation %}
-            {% set isActive = item.filepath === filepath %}
+          {%- for item in navigation -%}
+            {%- set isActive = item.filepath === filepath -%}
 
-            {% if item.section == 'design-library' %}
-            <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
-              <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
-                {{item.text}}
-              </a>
-            </li>
-            {% endif %}
-          {% endfor %}
+            {%- if item.section == 'design-library' -%}
+              <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
+                <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
+                  {{item.text}}
+                </a>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
           </ul>
         </nav>
       </div>
@@ -61,5 +57,6 @@
         {% include './partials/footer.njk' %}
       </div>
     </div>
+
   </div>
 {% endblock %}

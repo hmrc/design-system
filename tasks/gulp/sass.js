@@ -8,6 +8,7 @@ const rename = require('gulp-rename')
 const header = require('gulp-header')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
+const livereload = require('gulp-livereload')
 
 const pathFromRoot = require('../../util/pathFromRoot')
 
@@ -46,6 +47,7 @@ gulp.task('scss:hmrc-design-system', (done) => {
       extname: '.min.css'
     }))
     .pipe(gulp.dest('./dist'))
+    .pipe(livereload())
     .on('end', done)
 })
 
@@ -72,7 +74,6 @@ gulp.task('scss:pattern-libraries', (done) => {
       })
     ])))
     .pipe(rename((path) => {
-      console.log(path)
       path.basename = path.dirname
       path.dirname = 'assets/stylesheets'
       path.extname = '.min.css'
