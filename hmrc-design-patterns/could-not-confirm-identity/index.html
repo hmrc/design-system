@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<html class="govuk-template" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Could not confirm identity - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
+  <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
+  <!--[if lt IE 8]>
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
+  <[endif]-->
+  <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
+</head>
+
+<body class="govuk-template__body">
+  
+
+  <!-- TODO: tidy up the below -->
+
+  <div class="app-pane app-pane--enabled">
+    <div class="app-pane__header">
+      <header role="banner" class="hmrc-internal-header app-header">
+  <div class="hmrc-logo app-header__title">
+    <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" title="Go to the HMRC Design Library homepage" class="hmrc-logo__link">
+      HM Revenue &amp; Customs
+    </a>
+  </div>
+
+  <div class="hmrc-internal-service-name app-header__link"><a href="/" title="Go to the internal service homepage" class="hmrc-internal-service-name__link">
+        Design resources for HMRC
+      </a></div>
+</header>
+
+    </div>
+
+    <div class="app-pane__body">
+      <div class="app-pane__subnav">
+        <h2 class="govuk-heading-m"><a href="/hmrc-design-patterns/">HMRC Design Patterns</a></h2>
+        <nav class="app-subnav">
+          <ul class="app-subnav__section"><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-menu">
+                  Account menu
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/accounts-office-reference">
+                  Accounts office reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-for-consent">
+                  Ask the user for their consent
+                </a>
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">
+                  Could not confirm identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/confirmed-identity">
+                  Confirmed identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
+                  Employer paye reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/new-tab-link">
+                  Open in a new window
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/notification-badge">
+                  Notification badge
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-heading">
+                  Page heading
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-not-found">
+                  Page not found
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/problem-with-service">
+                  There is a problem with the service
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
+                  Service unavailable
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/utr">
+                  Unique Taxpayer Reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/vat-registration-number">
+                  VAT registration number
+                </a>
+              </li></ul>
+        </nav>
+      </div>
+
+      <div class="app-pane__content">
+        <main class="app-content" id="main-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Could not confirm identity</h1></header>
+
+
+<p class="govuk-body">This pattern lets the user know we could not confirm their identity and what they can do next. This is part of confirming their identity when they sign in with a Government Gateway account for the first time.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern when we could not confirm the user’s identity. This may include when the user:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>provides details that do not match those we have on file</li>
+  <li>does not complete the process</li>
+  <li>does not provide enough information</li>
+  <li>makes too many attempts</li>
+</ul>
+
+<p class="govuk-body">Doing this helps the user complete the task they are trying to do. It also helps reduce time and money spent dealing with queries received by phone and post.</p>
+
+<p class="govuk-body">There is also a pattern when we have <a class="govuk-link" href="/hmrc-design-patterns/confirmed-identity">confirmed their identity</a>.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+<p class="govuk-body">Use the standard page template from your service and have the same:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>header</li>
+  <li>phase banner</li>
+  <li>footer</li>
+</ul>
+
+<p class="govuk-body">The page should have:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>‘We could not confirm your identity – service name – GOV.UK’ as the page title</li>
+  <li>‘We could not confirm your identity’ as the <code>&lt;h1&gt;</code> page heading</li>
+  <li>content that explains what went wrong and what they can do</li>
+  <li>a call to action</li>
+</ul>
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-no-match" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/could-not-confirm-identity/no-match/" target="_blank" title="Open Could not confirm identity, no match example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/hmrc-design-patterns/could-not-confirm-identity/no-match/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Could not confirm identity, no match example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/hmrc-design-patterns/could-not-confirm-identity/no-match-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Could not confirm identity, no match example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/could-not-confirm-identity/no-match/" title="Could not confirm identity, no match example"></iframe>
+    </div>
+
+    <div class="example-example-no-match-lang example-example-no-match-lang--en ">
+      <span id="options-example-no-match"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-no-match-html" role="tab"
+            aria-controls="example-no-match-html"
+            data-track="tab-html" title="Display Could not confirm identity, no match example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-no-match-nunjucks" role="tab"
+            aria-controls="example-no-match-nunjucks"
+            data-track="tab-nunjucks" title="Display Could not confirm identity, no match example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-no-match-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We could not confirm your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>The information you have entered does not match our records.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Try again
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Nid oeddem yn gallu cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>Nid yw’r wybodaeth yr ydych wedi’i nodi yn cyd-fynd â’n cofnodion.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Rhowch gynnig arall arni
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-no-match-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
+&lt;p class="govuk-body"&gt;The information you have entered does not match our records.&lt;/p&gt;
+
+{{ govukButton({
+  text: "Try again"
+}) }}</code></pre>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
+&lt;p class="govuk-body"&gt;Nid yw’r wybodaeth yr ydych wedi’i nodi yn cyd-fynd â’n cofnodion.&lt;/p&gt;
+
+{{ govukButton({
+  text: "Rhowch gynnig arall arni"
+}) }}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-insufficient-information" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/could-not-confirm-identity/insufficient-information/" target="_blank" title="Open Could not confirm identity, insufficient information example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/hmrc-design-patterns/could-not-confirm-identity/insufficient-information/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Could not confirm identity, insufficient information example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/hmrc-design-patterns/could-not-confirm-identity/insufficient-information-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Could not confirm identity, insufficient information example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/could-not-confirm-identity/insufficient-information/" title="Could not confirm identity, insufficient information example"></iframe>
+    </div>
+
+    <div class="example-example-insufficient-information-lang example-example-insufficient-information-lang--en ">
+      <span id="options-example-insufficient-information"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-insufficient-information-html" role="tab"
+            aria-controls="example-insufficient-information-html"
+            data-track="tab-html" title="Display Could not confirm identity, insufficient information example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-insufficient-information-nunjucks" role="tab"
+            aria-controls="example-insufficient-information-nunjucks"
+            data-track="tab-nunjucks" title="Display Could not confirm identity, insufficient information example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-insufficient-information-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We could not confirm your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>You have not given us enough information.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Try again
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Nid oeddem yn gallu cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>Nid ydych wedi rhoi digon o wybodaeth i ni.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Rhowch gynnig arall arni
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-insufficient-information-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
+&lt;p class="govuk-body"&gt;You have not given us enough information.&lt;/p&gt;
+
+{{ govukButton({
+  text: "Try again"
+}) }}</code></pre>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
+&lt;p class="govuk-body"&gt;Nid ydych wedi rhoi digon o wybodaeth i ni.&lt;/p&gt;
+
+{{ govukButton({
+  text: "Rhowch gynnig arall arni"
+}) }}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+<h3 class="govuk-heading-m" id="avoid-ending-a-journey">Avoid ending a journey</h3>
+
+<p class="govuk-body">Offer the user a way of continuing to use the service where possible.</p>
+
+<p class="govuk-body">If this is not possible, provide another way for the user to do what they need to do. This could be another service where they do not need to confirm their identity.</p>
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-end-of-journey" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/could-not-confirm-identity/end-of-journey/" target="_blank" title="Open Could not confirm identity, end of journey example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/hmrc-design-patterns/could-not-confirm-identity/end-of-journey/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Could not confirm identity, end of journey example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/hmrc-design-patterns/could-not-confirm-identity/end-of-journey-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Could not confirm identity, end of journey example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/could-not-confirm-identity/end-of-journey/" title="Could not confirm identity, end of journey example"></iframe>
+    </div>
+
+    <div class="example-example-end-of-journey-lang example-example-end-of-journey-lang--en ">
+      <span id="options-example-end-of-journey"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-end-of-journey-html" role="tab"
+            aria-controls="example-end-of-journey-html"
+            data-track="tab-html" title="Display Could not confirm identity, end of journey example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-end-of-journey-nunjucks" role="tab"
+            aria-controls="example-end-of-journey-nunjucks"
+            data-track="tab-nunjucks" title="Display Could not confirm identity, end of journey example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-end-of-journey-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We could not confirm your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>You have entered information that does not match our records too many
+  times. For security reasons, you must wait 24 hours and then sign in to try again.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>change other VAT details<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  without confirming your identity<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Nid oeddem yn gallu cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
+  o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>Gallwch <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>newid manylion TAW eraill<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  heb gadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-end-of-journey-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
+&lt;p class="govuk-body"&gt;You have entered information that does not match our records too many
+times. For security reasons, you must wait 24 hours and then sign in to try again.&lt;/p&gt;
+&lt;p class="govuk-body"&gt;You can &lt;a class="govuk-link" href="#"&gt;change other VAT details&lt;/a&gt;
+without confirming your identity&lt;/p&gt;</code></pre>
+          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
+&lt;p class="govuk-body"&gt;Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
+o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.&lt;/p&gt;
+&lt;p class="govuk-body"&gt;Gallwch &lt;a class="govuk-link" href="#"&gt;newid manylion TAW eraill&lt;/a&gt;
+heb gadarnhau pwy ydych&lt;/p&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+<h3 class="govuk-heading-m" id="understand-the-users-journey">Understand the user’s journey</h3>
+
+<p class="govuk-body">Work with the team responsible for the microservice that confirms a user’s identity to understand how the process works. This will help you decide what is the best thing to tell the user to help them complete the process.</p>
+
+<h3 class="govuk-heading-m" id="tell-the-user-that-they-will-need-to-confirm-their-identity-when-they-start-to-use-the-service">Tell the user they will need to confirm their identity when they start to use the service</h3>
+
+<p class="govuk-body">List what the user needs in the ‘before you start’ information where the service starts.</p>
+
+<h3 class="govuk-heading-m" id="give-the-user-extra-help-when-they-have-a-deadline">Give the user extra help when they have a deadline</h3>
+
+<p class="govuk-body">Help the user confirm their identity as quickly as possible if they must do something by a specific time and the deadline is close. For example, a Self Assessment tax return or tax credit renewal.</p>
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used could not confirm identity, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/117">Discuss could not confirm identity on GitHub</a></p>
+
+</div>
+          </div>
+        </main>
+
+        <footer class="govuk-footer app-footer app-footer--full " role="contentinfo">
+  <div class="govuk-width-container app-width-container--full">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+
+  </div>
+<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script src="/assets/javascripts/vendor/govuk/current_location.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible_collection.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
+</body>
+</html>

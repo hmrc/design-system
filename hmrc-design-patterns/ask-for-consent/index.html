@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<html class="govuk-template" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ask the user for their consent - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
+  <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
+  <!--[if lt IE 8]>
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
+  <[endif]-->
+  <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
+</head>
+
+<body class="govuk-template__body">
+  
+
+  <!-- TODO: tidy up the below -->
+
+  <div class="app-pane app-pane--enabled">
+    <div class="app-pane__header">
+      <header role="banner" class="hmrc-internal-header app-header">
+  <div class="hmrc-logo app-header__title">
+    <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" title="Go to the HMRC Design Library homepage" class="hmrc-logo__link">
+      HM Revenue &amp; Customs
+    </a>
+  </div>
+
+  <div class="hmrc-internal-service-name app-header__link"><a href="/" title="Go to the internal service homepage" class="hmrc-internal-service-name__link">
+        Design resources for HMRC
+      </a></div>
+</header>
+
+    </div>
+
+    <div class="app-pane__body">
+      <div class="app-pane__subnav">
+        <h2 class="govuk-heading-m"><a href="/hmrc-design-patterns/">HMRC Design Patterns</a></h2>
+        <nav class="app-subnav">
+          <ul class="app-subnav__section"><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-menu">
+                  Account menu
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/accounts-office-reference">
+                  Accounts office reference
+                </a>
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-for-consent">
+                  Ask the user for their consent
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">
+                  Could not confirm identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/confirmed-identity">
+                  Confirmed identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
+                  Employer paye reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/new-tab-link">
+                  Open in a new window
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/notification-badge">
+                  Notification badge
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-heading">
+                  Page heading
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-not-found">
+                  Page not found
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/problem-with-service">
+                  There is a problem with the service
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
+                  Service unavailable
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/utr">
+                  Unique Taxpayer Reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/vat-registration-number">
+                  VAT registration number
+                </a>
+              </li></ul>
+        </nav>
+      </div>
+
+      <div class="app-pane__content">
+        <main class="app-content" id="main-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Ask the user for their consent</h1></header>
+
+
+<p class="govuk-body">This pattern asks the user for their consent when we collect and store personal data. The pattern meets our responsibilities under the <a class="govuk-link" href="https://www.gov.uk/government/publications/guide-to-the-general-data-protection-regulation">General Data Protection Regulation 2018 (GDPR)</a> and <a class="govuk-link" href="https://www.gov.uk/government/collections/data-protection-act-2018">Data Protection Act 2018 (DPA)</a>.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern to ask the user for their consent when you collect and store personal data.</p>
+
+<p class="govuk-body">Personal data is anything that on its own, or together with other data, can identify a person.</p>
+
+<p class="govuk-body">If the data you are asking for is not needed for government to perform a specific task or function set out in law, you need to ask for consent. For example, data needed to apply or register for something.</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When to not use</h2>
+
+<p class="govuk-body">If the data is required for government to perform a specific task or function set out in law, you do not need to ask for consent. For example, terms and conditions – these are required so you do not need to ask for consent.</p>
+
+<p class="govuk-body">Design content that includes the terms and conditions as part of selecting a button, instead of adding in a checkbox.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+<p class="govuk-body">Do not infer consent when someone uses a service or does nothing. Consent must be:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>freely given</li>
+  <li>a positive action to opt-in</li>
+  <li>clear, concise and specific</li>
+  <li>separate from other terms and conditions</li>
+  <li>as easy to withdraw as it is to give</li>
+</ul>
+
+<p class="govuk-body"><a class="govuk-link" href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/consent/">Read more about consent on the Information Commissioner’s Office website</a>.</p>
+
+<p class="govuk-body">Do not pre-select radio buttons and checkboxes for the user. This means the positive action would opt-out.</p>
+
+<p class="govuk-body">Consent covers all activities done for the same reason. If you use the data for more than one reason, get separate consent for each.</p>
+
+<h3 class="govuk-heading-m" id="ask-a-yes-no-question">Ask a yes-no question</h3>
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-yes-no-question" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/ask-for-consent/yes-no-question/" target="_blank" title="Open Ask a yes-no question example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/ask-for-consent/yes-no-question/" title="Ask a yes-no question example"></iframe>
+    </div>
+
+    <div class="example-example-yes-no-question-lang example-example-yes-no-question-lang--en ">
+      <span id="options-example-yes-no-question"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-yes-no-question-html" role="tab"
+            aria-controls="example-yes-no-question-html"
+            data-track="tab-html" title="Display Ask a yes-no question example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-yes-no-question-nunjucks" role="tab"
+            aria-controls="example-yes-no-question-nunjucks"
+            data-track="tab-nunjucks" title="Display Ask a yes-no question example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-yes-no-question-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>
+        Do you want to get electronic communications instead of letters from HMRC?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios--inline"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"paperless-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"paperless"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"paperless-1"</span>&gt;</span>
+          Yes
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"paperless-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"paperless"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"no"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"paperless-2"</span>&gt;</span>
+          No
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-yes-no-question-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"radios/macro.njk"</span> <span class="hljs-keyword">import</span> govukRadios %}
+
+{{ govukRadios({
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-radios--inline"</span>,
+  <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"paperless"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"paperless"</span>,
+  <span class="hljs-attr">fieldset</span>: {
+    <span class="hljs-attr">legend</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Do you want to get electronic communications instead of letters from HMRC?"</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-fieldset__legend--xl"</span>
+    }
+  },
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"yes"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Yes"</span>
+    },
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"no"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"No"</span>
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
+}) }}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+<h3 class="govuk-heading-m" id="use-a-single-checkbox">Use a single checkbox</h3>
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-single-checkbox" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/ask-for-consent/single-checkbox/" target="_blank" title="Open Use a single checkbox example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/ask-for-consent/single-checkbox/" title="Use a single checkbox example"></iframe>
+    </div>
+
+    <div class="example-example-single-checkbox-lang example-example-single-checkbox-lang--en ">
+      <span id="options-example-single-checkbox"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-single-checkbox-html" role="tab"
+            aria-controls="example-single-checkbox-html"
+            data-track="tab-html" title="Display Use a single checkbox example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-single-checkbox-nunjucks" role="tab"
+            aria-controls="example-single-checkbox-nunjucks"
+            data-track="tab-nunjucks" title="Display Use a single checkbox example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-single-checkbox-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"access-code"</span>&gt;</span>
+    Access code
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"access-code"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"access-code"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"access-code-7-days-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"access-code-7-days"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Keep for 7 days"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"access-code-7-days-1"</span>&gt;</span>
+        Remember this access code for 7 days
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-single-checkbox-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+
+{{ govukInput({
+  <span class="hljs-attr">label</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">"Access code"</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">"access-code"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"access-code"</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>
+}) }}
+
+{{ govukCheckboxes({
+  <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"access-code-7-days"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"access-code-7-days"</span>,
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"Keep for 7 days"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Remember this access code for 7 days"</span>
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
+}) }}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+<h3 class="govuk-heading-m" id="use-more-than-one-checkbox">Use more than one checkbox</h3>
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-multiple-checkboxes" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/ask-for-consent/multiple-checkboxes/" target="_blank" title="Open Use more than one checkbox example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/ask-for-consent/multiple-checkboxes/" title="Use more than one checkbox example"></iframe>
+    </div>
+
+    <div class="example-example-multiple-checkboxes-lang example-example-multiple-checkboxes-lang--en ">
+      <span id="options-example-multiple-checkboxes"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-multiple-checkboxes-html" role="tab"
+            aria-controls="example-multiple-checkboxes-html"
+            data-track="tab-html" title="Display Use more than one checkbox example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-multiple-checkboxes-nunjucks" role="tab"
+            aria-controls="example-multiple-checkboxes-nunjucks"
+            data-track="tab-nunjucks" title="Display Use more than one checkbox example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-multiple-checkboxes-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"mixed-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"paperless"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"mixed-1"</span>&gt;</span>
+        I want to get electronic communications instead of letters from HMRC
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"mixed-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"access-code-7-days"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"mixed-2"</span>&gt;</span>
+        Remember this access code for 7 days
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-multiple-checkboxes-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
+
+{{ govukCheckboxes({
+  <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"mixed"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"mixed"</span>,
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"paperless"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"I want to get electronic communications instead of letters from HMRC"</span>
+    },
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"access-code-7-days"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Remember this access code for 7 days"</span>
+    }
+  ]
+}) }}
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
+}) }}</code></pre>
+      </div>
+    </div>
+  </div>
+
+<p class="govuk-body">For when there is more than one type of consent or consent must be separate from other terms and conditions.</p>
+
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have asked the user for their consent, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/154">Discuss ask the user for their consent on GitHub</a></p>
+
+</div>
+          </div>
+        </main>
+
+        <footer class="govuk-footer app-footer app-footer--full " role="contentinfo">
+  <div class="govuk-width-container app-width-container--full">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+
+  </div>
+<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script src="/assets/javascripts/vendor/govuk/current_location.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible_collection.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
+</body>
+</html>

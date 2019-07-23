@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html class="govuk-template" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add to a list - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
+  <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
+  <!--[if lt IE 8]>
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
+  <[endif]-->
+  <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
+</head>
+
+<body class="govuk-template__body">
+  
+
+  <!-- TODO: tidy up the below -->
+
+  <div class="app-pane app-pane--enabled">
+    <div class="app-pane__header">
+      <header role="banner" class="hmrc-internal-header app-header">
+  <div class="hmrc-logo app-header__title">
+    <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" title="Go to the HMRC Design Library homepage" class="hmrc-logo__link">
+      HM Revenue &amp; Customs
+    </a>
+  </div>
+
+  <div class="hmrc-internal-service-name app-header__link"><a href="/" title="Go to the internal service homepage" class="hmrc-internal-service-name__link">
+        Design resources for HMRC
+      </a></div>
+</header>
+
+    </div>
+
+    <div class="app-pane__body">
+      <div class="app-pane__subnav">
+        <h2 class="govuk-heading-m"><a href="/hmrc-design-patterns/">HMRC Design Patterns</a></h2>
+        <nav class="app-subnav">
+          <ul class="app-subnav__section"><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-menu">
+                  Account menu
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/accounts-office-reference">
+                  Accounts office reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-for-consent">
+                  Ask the user for their consent
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">
+                  Could not confirm identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/confirmed-identity">
+                  Confirmed identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
+                  Employer paye reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/new-tab-link">
+                  Open in a new window
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/notification-badge">
+                  Notification badge
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-heading">
+                  Page heading
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-not-found">
+                  Page not found
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/problem-with-service">
+                  There is a problem with the service
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
+                  Service unavailable
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/utr">
+                  Unique Taxpayer Reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/vat-registration-number">
+                  VAT registration number
+                </a>
+              </li></ul>
+        </nav>
+      </div>
+
+      <div class="app-pane__content">
+        <main class="app-content" id="main-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Add to a list</h1></header>
+
+
+<p class="govuk-body">This pattern lets the user add information with more than one part to a list.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern when the user needs to add information with more than one part to a list. For example, when they need to enter more than one address or more than one person’s details.</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+
+<p class="govuk-body">Do not use this pattern when the user needs to add different kinds of information that do not relate to each other.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">​How it works</h2>
+
+<p class="govuk-body">Allow the user to:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>view a summary of what they have added to the list</li>
+  <li>add things to the list</li>
+  <li><a class="govuk-link" href="https://www.gov.uk/service-manual/design/check-your-answers-pages">check their answers</a></li>
+  <li>change things on the list</li>
+  <li>remove things from the list</li>
+</ul>
+
+<h3 class="govuk-heading-m" id="view-a-summary">View a summary of what they have added to the list</h3>
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-view-a-summary" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/add-to-a-list/view-a-summary/" target="_blank" title="Open View list summary example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/add-to-a-list/view-a-summary/" title="View list summary example"></iframe>
+    </div>
+
+    <div class="example-example-view-a-summary-lang example-example-view-a-summary-lang--en ">
+      <span id="options-example-view-a-summary"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-view-a-summary-html" role="tab"
+            aria-controls="example-view-a-summary-html"
+            data-track="tab-html" title="Display View list summary example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-view-a-summary-nunjucks" role="tab"
+            aria-controls="example-view-a-summary-nunjucks"
+            data-track="tab-nunjucks" title="Display View list summary example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-view-a-summary-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>You have added 3 directors<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list hmrc-add-to-a-list--short"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__contents"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light"</span>&gt;</span>
+        Sydney Russell
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__change"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Change<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Change Sydney Russell<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__remove"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Remove Sydney Russell from the list<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__contents"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light"</span>&gt;</span>
+        Michael Cain
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__change"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Change<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Change Michael Cain<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__remove"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Remove Michael Cain from the list<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__contents"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light"</span>&gt;</span>
+        Jeremy Winter
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__change"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Change<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Change Jeremy Winter<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__remove"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Remove Jeremy Winter from the list<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">""</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"add-another-hint"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m"</span>&gt;</span>
+        Do you need to add another director?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios--inline"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"add-another-1"</span>&gt;</span>
+            Yes
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"no"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"add-another-2"</span>&gt;</span>
+            No
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+    Submit
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-view-a-summary-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-add-to-a-list/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcAddToAList -%}
+
+{{
+  hmrcAddToAList({
+    <span class="hljs-attr">itemList</span>: [
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Sydney Russell'</span>,
+        <span class="hljs-attr">changeUrl</span>: <span class="hljs-string">'#'</span>,
+        <span class="hljs-attr">removeUrl</span>: <span class="hljs-string">'#'</span>
+      },
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Michael Cain'</span>,
+        <span class="hljs-attr">changeUrl</span>: <span class="hljs-string">'#'</span>,
+        <span class="hljs-attr">removeUrl</span>: <span class="hljs-string">'#'</span>
+      },
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Jeremy Winter'</span>,
+        <span class="hljs-attr">changeUrl</span>: <span class="hljs-string">'#'</span>,
+        <span class="hljs-attr">removeUrl</span>: <span class="hljs-string">'#'</span>
+      }
+    ],
+    <span class="hljs-attr">itemType</span>: {
+      <span class="hljs-attr">singular</span>: <span class="hljs-string">'director'</span>,
+      <span class="hljs-attr">plural</span>: <span class="hljs-string">'directors'</span>,
+      <span class="hljs-attr">formAction</span>: <span class="hljs-string">'#'</span>
+    }
+  })
+}}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+<h3 class="govuk-heading-m" id="add-things-to-the-list">Add things to the list</h3>
+
+
+
+<h3 class="govuk-heading-m" id="check-answers">Check their answers</h3>
+
+
+
+<h3 class="govuk-heading-m" id="change-something-on-the-list">Change things on the list</h3>
+
+<p class="govuk-body">Show all the information about the entry and let the user make a change.</p>
+
+
+
+<h3 class="govuk-heading-m" id="remove-something-from-the-list">Remove things from the list</h3>
+
+<p class="govuk-body">Ask the user to confirm they want to remove something from the list.</p>
+
+
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used add to a list, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/31">Discuss add to a list on GitHub</a></p>
+
+</div>
+          </div>
+        </main>
+
+        <footer class="govuk-footer app-footer app-footer--full " role="contentinfo">
+  <div class="govuk-width-container app-width-container--full">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+
+  </div>
+<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script src="/assets/javascripts/vendor/govuk/current_location.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible_collection.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
+</body>
+</html>

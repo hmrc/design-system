@@ -1,0 +1,557 @@
+
+
+<!DOCTYPE html>
+<html class="govuk-template" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unique Taxpayer Reference - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
+  <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
+  <!--[if lt IE 8]>
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
+  <[endif]-->
+  <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
+</head>
+
+<body class="govuk-template__body">
+  
+
+  <!-- TODO: tidy up the below -->
+
+  <div class="app-pane app-pane--enabled">
+    <div class="app-pane__header">
+      <header role="banner" class="hmrc-internal-header app-header">
+  <div class="hmrc-logo app-header__title">
+    <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" title="Go to the HMRC Design Library homepage" class="hmrc-logo__link">
+      HM Revenue &amp; Customs
+    </a>
+  </div>
+
+  <div class="hmrc-internal-service-name app-header__link"><a href="/" title="Go to the internal service homepage" class="hmrc-internal-service-name__link">
+        Design resources for HMRC
+      </a></div>
+</header>
+
+    </div>
+
+    <div class="app-pane__body">
+      <div class="app-pane__subnav">
+        <h2 class="govuk-heading-m"><a href="/hmrc-design-patterns/">HMRC Design Patterns</a></h2>
+        <nav class="app-subnav">
+          <ul class="app-subnav__section"><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-menu">
+                  Account menu
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/accounts-office-reference">
+                  Accounts office reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-for-consent">
+                  Ask the user for their consent
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">
+                  Could not confirm identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/confirmed-identity">
+                  Confirmed identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
+                  Employer paye reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/new-tab-link">
+                  Open in a new window
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/notification-badge">
+                  Notification badge
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-heading">
+                  Page heading
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-not-found">
+                  Page not found
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/problem-with-service">
+                  There is a problem with the service
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
+                  Service unavailable
+                </a>
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/utr">
+                  Unique Taxpayer Reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/vat-registration-number">
+                  VAT registration number
+                </a>
+              </li></ul>
+        </nav>
+      </div>
+
+      <div class="app-pane__content">
+        <main class="app-content" id="main-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Unique Taxpayer Reference</h1></header>
+
+
+<div class="govuk-!-padding-bottom-8 hmrc-experimental">
+  <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">
+    Experimental
+  </strong>
+
+  <p class="govuk-body">
+    This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.
+  </p>
+</div>
+
+<p class="govuk-body">
+  This pattern lets the user enter a Unique Taxpayer Reference (UTR). Do not call it a ‘Unique Taxpayer Reference number’.
+</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+  When to use
+</h2>
+
+<p class="govuk-body">
+  Use this pattern when the user must enter a UTR to use a service.
+</p>
+
+<p class="govuk-body">
+  If there is a good reason for asking for a UTR but the user does not have to enter one, make it optional.
+</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">
+  When not to use
+</h2>
+
+<p class="govuk-body">
+  If there is no good reason for asking for a UTR and the user does not have to enter one to use the service, do not ask for one.
+</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">
+  How it works
+</h2>
+
+<p class="govuk-body">
+  You can ask for the UTR as the main heading or <code>&lt;h1&gt;</code> of the screen. It may be a question or statement.
+</p>
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-self-assessment" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/utr/self-assessment/" target="_blank" title="Open Unique Taxpayer Reference - Self Assessment example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/utr/self-assessment/" title="Unique Taxpayer Reference - Self Assessment example"></iframe>
+    </div>
+
+    <div class="example-example-self-assessment-lang example-example-self-assessment-lang--en ">
+      <span id="options-example-self-assessment"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-self-assessment-html" role="tab"
+            aria-controls="example-self-assessment-html"
+            data-track="tab-html" title="Display Unique Taxpayer Reference - Self Assessment example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-self-assessment-nunjucks" role="tab"
+            aria-controls="example-self-assessment-nunjucks"
+            data-track="tab-nunjucks" title="Display Unique Taxpayer Reference - Self Assessment example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-self-assessment-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label-wrapper"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-label--xl"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"utr"</span>&gt;</span>
+      What is your Self Assessment Unique Taxpayer Reference?
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"utr-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+    This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.gov.uk/find-lost-utr-number"</span>&gt;</span>find a lost UTR number<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"utr"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"utr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"utr-hint"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-self-assessment-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"What is your Self Assessment Unique Taxpayer Reference?"</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-label--xl"</span>
+    },
+    <span class="hljs-attr">hint</span>: {
+      <span class="hljs-attr">html</span>: <span class="hljs-string">'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can &lt;a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number"&gt;find a lost UTR number&lt;/a&gt;.'</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"utr"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"utr"</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>
+  })
+}}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
+}) }}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-corporation-tax" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/utr/corporation-tax/" target="_blank" title="Open Unique Taxpayer Reference - Corporation Tax example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/utr/corporation-tax/" title="Unique Taxpayer Reference - Corporation Tax example"></iframe>
+    </div>
+
+    <div class="example-example-corporation-tax-lang example-example-corporation-tax-lang--en ">
+      <span id="options-example-corporation-tax"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-corporation-tax-html" role="tab"
+            aria-controls="example-corporation-tax-html"
+            data-track="tab-html" title="Display Unique Taxpayer Reference - Corporation Tax example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-corporation-tax-nunjucks" role="tab"
+            aria-controls="example-corporation-tax-nunjucks"
+            data-track="tab-nunjucks" title="Display Unique Taxpayer Reference - Corporation Tax example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-corporation-tax-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label-wrapper"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-label--xl"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"utr"</span>&gt;</span>
+      What is your Corporation Tax Unique Taxpayer Reference?
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"utr-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+    This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.gov.uk/find-lost-utr-number"</span>&gt;</span>find a lost UTR number<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"utr"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"utr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"utr-hint"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-corporation-tax-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"What is your Corporation Tax Unique Taxpayer Reference?"</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-label--xl"</span>
+    },
+    <span class="hljs-attr">hint</span>: {
+      <span class="hljs-attr">html</span>: <span class="hljs-string">'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can &lt;a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number"&gt;find a lost UTR number&lt;/a&gt;.'</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"utr"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"utr"</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>
+  })
+}}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
+}) }}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+<p class="govuk-body">
+  Or you can ask for the UTR as a normal form label, separate from the <code>&lt;h1&gt;</code>.
+</p>
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-label" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/utr/label/" target="_blank" title="Open Employer PAYE reference as form label example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/utr/label/" title="Employer PAYE reference as form label example"></iframe>
+    </div>
+
+    <div class="example-example-label-lang example-example-label-lang--en ">
+      <span id="options-example-label"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-label-html" role="tab"
+            aria-controls="example-label-html"
+            data-track="tab-html" title="Display Employer PAYE reference as form label example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-label-nunjucks" role="tab"
+            aria-controls="example-label-nunjucks"
+            data-track="tab-nunjucks" title="Display Employer PAYE reference as form label example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-label-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"utr"</span>&gt;</span>
+    Self Assessment Unique Taxpayer Reference
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"utr-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+    This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.gov.uk/find-lost-utr-number"</span>&gt;</span>find a lost UTR number<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"utr"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"utr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"utr-hint"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-label-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Self Assessment Unique Taxpayer Reference"</span>
+    },
+    <span class="hljs-attr">hint</span>: {
+      <span class="hljs-attr">html</span>: <span class="hljs-string">'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can &lt;a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number"&gt;find a lost UTR number&lt;/a&gt;.'</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"utr"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"utr"</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>
+  })
+}}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+<p class="govuk-body">
+  Use a single text input and allow the user to enter:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>10 numbers, with or without spaces</li>
+  <li>13 numbers, with or without spaces</li>
+  <li>10 or 13 numbers that start or end with a k, for example k1234567890123 and 1234567890k</li>
+</ul>
+
+<p class="govuk-body">
+  Remove spaces, characters and extra numbers before validating.
+</p>
+
+<h3 class="govuk-heading-m" id="provide-contextual-help">
+  Provide help
+</h3>
+
+<p class="govuk-body">
+  Always provide help in the form of a label, normal content or hint text that is as clear as possible. This may include:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>a short explanation of what a UTR is</li>
+  <li>where they can find it</li>
+  <li>what it looks like</li>
+  <li>an example – if you show an example, always use ‘1234567890’</li>
+</ul>
+
+<p class="govuk-body">
+  You can use an image that shows where it is on documents and letters. You could also provide a link to <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">Find a lost UTR number</a>.
+</p>
+
+<p class="govuk-body">
+  Do not use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/details/">details component</a> to hide any help. Research shows users may:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>not know what a UTR is</li>
+  <li>need help to know what a UTR looks like</li>
+</ul>
+
+<p class="govuk-body">
+  Ask the user about the type of business earlier in the journey and use appropriate content. For example, if the business is a sole trader, tell the user they can find their UTR on letters about Self Assessment. If the business if a limited company, tell the user they can find it on letters about Corporation Tax.
+</p>
+
+<h3 class="govuk-heading-m" id="provide-contextual-help">
+  Error messages
+</h3>
+
+<p class="govuk-body">
+  Error messages should be styled like this:
+</p>
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-label-error" data-module="app-tabs app-language-switch-example">
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/hmrc-design-patterns/utr/label-error/" target="_blank" title="Open Employer PAYE reference with error example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/hmrc-design-patterns/utr/label-error/" title="Employer PAYE reference with error example"></iframe>
+    </div>
+
+    <div class="example-example-label-error-lang example-example-label-error-lang--en ">
+      <span id="options-example-label-error"></span>
+      <ul class="app-tabs" role="tablist">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-label-error-html" role="tab"
+            aria-controls="example-label-error-html"
+            data-track="tab-html" title="Display Employer PAYE reference with error example as HTML">HTML</a>
+        </li>
+        <li class="app-tabs__item js-tabs__item" role="presentation">
+          <a href="#example-label-error-nunjucks" role="tab"
+            aria-controls="example-label-error-nunjucks"
+            data-track="tab-nunjucks" title="Display Employer PAYE reference with error example as Nunjucks">Nunjucks</a>
+        </li>
+      </ul>
+
+      <div class="app-tabs__container js-tabs__container" id="example-label-error-html" role="tabpanel">
+        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group govuk-form-group--error"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"utr"</span>&gt;</span>
+    Corporation Tax Unique Taxpayer Reference
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"utr-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+    This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.gov.uk/find-lost-utr-number"</span>&gt;</span>find a lost UTR number<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"utr-error"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-error-message"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Enter your Corporation Tax Unique Taxpayer Reference
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10 govuk-input--error"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"utr"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"utr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"utr-hint utr-error"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </div>
+
+      <div class="app-tabs__container js-tabs__container" id="example-label-error-nunjucks" role="tabpanel">
+          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'Corporation Tax Unique Taxpayer Reference'</span>
+    },
+    <span class="hljs-attr">hint</span>: {
+      <span class="hljs-attr">html</span>: <span class="hljs-string">'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can &lt;a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number"&gt;find a lost UTR number&lt;/a&gt;.'</span>
+    },
+    <span class="hljs-attr">errorMessage</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'Enter your Corporation Tax Unique Taxpayer Reference'</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">'utr'</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'utr'</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">'govuk-input--width-10'</span>
+  })
+}}</code></pre>
+      </div>
+    </div>
+  </div>
+
+
+<p class="govuk-body">
+  Make sure errors follow the <a class="govuk-link" href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> in the GOV.UK Design System and have specific error messages for specific error states.
+</p>
+
+<h4 class="govuk-heading-s" id="error-messages">
+  If the UTR is empty
+</h4>
+
+<p class="govuk-body">
+  Say ‘Enter [whatever it is]’.<br>
+  For example, ‘Enter your Self Assessment Unique Taxpayer Reference’.
+</p>
+
+<h4 class="govuk-heading-s" id="provide-contextual-help">
+  If the UTR is in the wrong format
+</h4>
+
+<p class="govuk-body">
+  Say ‘Enter [whatever it is] in the correct format’.<br>
+  For example, ‘Enter your partnership’s Self Assessment Unique Taxpayer Reference in the correct format’.
+</p>
+
+<h2 class="govuk-heading-l" id="research">
+  Research
+</h2>
+
+<p class="govuk-body">
+  Research has shown that users often expect this kind of information to be pre-populated, especially when they have signed in. Research has also shown users:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>may not know what a UTR is</li>
+  <li>need help to know what their UTR looks like</li>
+  <li>need a specific error message so they know what went wrong</li>
+  <li>find their UTR more easily when we provide help appropriate to the type of business</li>
+</ul>
+
+<p class="govuk-body">
+  We need more research. If you have used Unique Taxpayer Reference, get in touch to share your research findings.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/126">Discuss Unique Taxpayer Reference on GitHub</a>
+</p>
+
+
+</div>
+          </div>
+        </main>
+
+        <footer class="govuk-footer app-footer app-footer--full " role="contentinfo">
+  <div class="govuk-width-container app-width-container--full">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+
+  </div>
+<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script src="/assets/javascripts/vendor/govuk/current_location.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/vendor/govuk/collapsible_collection.js" type="application/javascript"></script>
+  <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
+</body>
+</html>
