@@ -20,7 +20,9 @@
 }
 
 .hmrc-internal-service-name {
+  margin-right: 70px;
   @include govuk-media-query(desktop) {
+    margin-right: 0;
     display: table-cell;
   }
 }

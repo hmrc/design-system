@@ -1,3 +1,57 @@
+//Navigation toggle
+
+.app-subnav-toggle + input {
+  display: none;
+}
+
+.app-subnav-toggle + input:checked + .app-subnav {
+  display: block;
+  @include govuk-media-query(desktop) {
+    display: none;
+  }
+}
+
+.app-subnav-toggle {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  text-align: right;
+  padding: 15px;
+  float: right;
+  @include govuk-media-query(desktop) {
+    display: none;
+    padding: 20px;
+  }
+}
+
+.app-subnav-toggle__label {
+  @include govuk-font(19);
+  cursor: pointer;
+  border: 0px solid $black;
+  margin-top: 22px;
+  padding: 20px 0px;
+  font-size: 19px;
+  display: inline-block;
+}
+
+.app-subnav-toggle__label::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  border-width: 8.66px 5px 0 5px;
+  content: "";
+  border-color: #0b0c0c;
+  margin-left: 5px;
+}
+
+.app-subnav-toggle.active .app-subnav-toggle__label::after{
+  transform: rotate(180deg);
+}
+
+//Navigation
+
 .app-pane__subnav {
   .govuk-heading-m > a {
     &:hover,
@@ -15,20 +69,18 @@
 }
 
 .app-subnav {
-  @include govuk-font(16);
+  @include govuk-font(19);
 }
 
 .app-subnav__section {
   margin: 0 0 govuk-spacing(4);
   padding: 0;
   list-style-type: none;
-  font-size: 19px;
 }
 
 .app-subnav__link {
   display: block;
-  padding: govuk-spacing(2) govuk-spacing(4) govuk-spacing(2) govuk-spacing(2);
-  border-left: 4px solid transparent;
+  padding: govuk-spacing(3) 0;
   text-decoration: none;
 
   &:focus {
@@ -41,13 +93,21 @@
     color: $govuk-link-colour;
   }
 
-  &:hover {
-    border-left-color: $govuk-link-hover-colour;
+  @include govuk-media-query(desktop) {
+    padding: govuk-spacing(2) govuk-spacing(4) govuk-spacing(2) govuk-spacing(2);
+    border-left: 4px solid transparent;
+
+    &:hover {
+      border-left-color: $govuk-link-hover-colour;
+    }
   }
 }
 
 .app-subnav__section-item--current .app-subnav__link {
-  border-left-color: $govuk-link-colour;
   background: $app-light-grey;
   font-weight: bold;
+
+  @include govuk-media-query(desktop) {
+    border-left-color: $govuk-link-colour;
+  }
 }
