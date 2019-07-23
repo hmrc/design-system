@@ -23,6 +23,7 @@ gulp.task('copy-assets:local', (done) => {
   mergedStream.on('queueDrain', (done))
 })
 
+// TODO: do we need any of these?
 gulp.task('copy-assets:remote', (done) => {
   remoteSrc([
     'collapsible.js',
