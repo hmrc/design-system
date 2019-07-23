@@ -16,9 +16,9 @@
     <div class="app-pane__body">
       <div class="app-pane__subnav">
         <h2 class="govuk-heading-m">
-          {%- set designPatternsIndexPage = 'design-library/index.njk' -%}
+          {%- set designPatternsIndexPage = 'hmrc-design-patterns/index.njk' -%}
 
-          {%- if filepath != designPatternsIndexPage -%}<a href="/design-library/">{%- endif -%}
+          {%- if filepath != designPatternsIndexPage -%}<a href="/hmrc-design-patterns/">{%- endif -%}
             HMRC Design Patterns
           {%- if filepath != designPatternsIndexPage -%}</a>{%- endif -%}
         </h2>
@@ -27,7 +27,7 @@
           {%- for item in navigation -%}
             {%- set isActive = item.filepath === filepath -%}
 
-            {%- if item.section == 'design-library' -%}
+            {%- if item.section == 'hmrc-design-patterns' -%}
               <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
                 <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
                   {{item.text}}

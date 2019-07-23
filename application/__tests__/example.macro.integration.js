@@ -5,10 +5,10 @@ const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path
 
 describe('Example page rendering', () => {
   beforeEach(async () => {
-    await visit('/design-library/ask-for-consent/')
+    await visit('/hmrc-design-patterns/ask-for-consent/')
   })
 
-  test('should be titled "Ask the user for their consent"', async () => {
+  test('should have the correct meta title', async () => {
     const title = await page.title()
     expect(title).toBe('Ask the user for their consent - HMRC Design Patterns - Design resources for HMRC – GOV.UK')
   })
