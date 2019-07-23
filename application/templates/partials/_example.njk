@@ -1,12 +1,12 @@
 {% macro example(params) %}
   {% set exampleRef = params.example | default("default") %}
-  {% set exampleURL = "/design-library/" + params.item + "/" + exampleRef + "/" %}
+  {% set exampleURL = "/hmrc-design-patterns/" + params.item + "/" + exampleRef + "/" %}
   {% set examplePath = "src" + exampleURL + "index.njk" %}
   {% set exampleId = "example-" + exampleRef %}
   {% set description = params.description %}
   {% if params.welsh %}
     {% set welshExampleRef = params.welsh | default("default") %}
-    {% set welshExampleURL = "/design-library/" + params.item + "/" + welshExampleRef + "/" %}
+    {% set welshExampleURL = "/hmrc-design-patterns/" + params.item + "/" + welshExampleRef + "/" %}
     {% set welshExamplePath = "src" + welshExampleURL + "index.njk" %}
   {% endif %}
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="{{ exampleId }}" data-module="app-tabs app-language-switch-example">

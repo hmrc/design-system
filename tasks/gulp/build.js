@@ -6,6 +6,7 @@ const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
 const layouts = require('metalsmith-layouts')
+const ignore = require('metalsmith-ignore');
 
 const rollup = require('metalsmith-rollup')
 const resolve = require('rollup-plugin-node-resolve')
@@ -26,6 +27,7 @@ gulp.task('compile', (done) => {
   util.log('Metalsmith build starting')
 
   Metalsmith(projectRoot)
+    .use(ignore('**/__tests__/*'))
     .source('./src')
     .destination('./dist')
     .clean(true)
