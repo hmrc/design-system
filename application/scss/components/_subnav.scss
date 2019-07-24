@@ -4,7 +4,7 @@
   display: none;
 }
 
-.app-subnav-toggle + input:checked + .app-subnav {
+.app-subnav-toggle + input:checked + .app-pane__subnav {
   display: block;
   @include govuk-media-query(desktop) {
     display: none;
@@ -65,6 +65,10 @@
       outline-offset: 0;
       background-color: $govuk-focus-colour;
     }
+  }
+  display: none;
+  @include govuk-media-query(desktop) {
+    display: block;
   }
 }
 

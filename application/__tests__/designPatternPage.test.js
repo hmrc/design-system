@@ -28,7 +28,7 @@ const documentFactory = (params) => {
   return new JSDOM(html).window.document
 }
 
-describe('Design pattern page layout', () => {
+describe('Design pattern page', () => {
   const document = documentFactory()
   const heading = document.querySelector('h1.govuk-heading-xl')
 
@@ -74,5 +74,3 @@ describe('Design pattern page layout', () => {
     expect(content.textContent).toBe('foo')
   })
 })
-
-

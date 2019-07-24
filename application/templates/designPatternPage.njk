@@ -14,6 +14,12 @@
     </div>
 
     <div class="app-pane__body">
+
+      <div class="app-subnav-toggle" data-module="subnav-toggle">
+        <label for="app-subnav-toggle" class="app-subnav-toggle__label">Menu</label>
+      </div>
+      <input type="checkbox" id="app-subnav-toggle">
+
       <div class="app-pane__subnav">
         <h2 class="govuk-heading-m">
           {%- set designPatternsIndexPage = 'hmrc-design-patterns/index.njk' -%}
@@ -22,10 +28,6 @@
             HMRC Design Patterns
           {%- if filepath != designPatternsIndexPage -%}</a>{%- endif -%}
         </h2>
-        <div class="app-subnav-toggle">
-          <label for="app-subnav-toggle" class="app-subnav-toggle__label">Menu</label>
-        </div>
-        <input type="checkbox" id="app-subnav-toggle">
         <nav class="app-subnav">
           <ul class="app-subnav__section">
           {%- for item in navigation -%}

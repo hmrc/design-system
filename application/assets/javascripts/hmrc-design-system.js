@@ -3,6 +3,8 @@ import hmrcFrontend from 'hmrc-frontend/all'
 import govUkFrontend from 'govuk-frontend/all'
 
 import AppTabs from './components/tabs.js'
+import SubNavToggle from './components/subnav.js'
+
 import LanguageSwitchExample from './components/language-switch-example'
 
 import './components/example.js'
@@ -13,6 +15,12 @@ const nodeListForEach = common.nodeListForEach
 const $tabs = document.querySelectorAll('[data-module~="app-tabs"]')
 nodeListForEach($tabs, $tab => {
   new AppTabs($tab).init()
+})
+
+// Initialise nav toggles
+const $toggles = document.querySelectorAll('[data-module~="subnav-toggle"]')
+nodeListForEach($toggles, $toggle => {
+  new SubNavToggle($toggle).init()
 })
 
 // Initialise language switch
