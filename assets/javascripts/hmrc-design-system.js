@@ -5644,6 +5644,28 @@
 	  }
 	};
 
+	const toggleActiveClass = 'active';
+
+	function SubNavToggle ($module) {
+	  this.$module = $module;
+	}
+
+	SubNavToggle.prototype.init = function() {
+	  if (!this.$module) {
+	    return
+	  }
+	  this.$module.addEventListener('click', this.handleClick.bind(this));
+
+	};
+
+	SubNavToggle.prototype.handleClick = function(event) {
+	  if (event.target.parentNode.classList.contains(toggleActiveClass)) {
+	    this.$module.classList.remove(toggleActiveClass);
+	  } else {
+	    this.$module.classList.add(toggleActiveClass);
+	  }
+	};
+
 	// Taken from https://github.com/alphagov/govuk-design-system/blob/29b9cf8c30ac1514d16fc97adaf15100e5040f7d/src/javascripts/components/tabs.js
 
 	var nodeListForEach$1 = common.nodeListForEach;
@@ -8320,6 +8342,12 @@
 	const $tabs = document.querySelectorAll('[data-module~="app-tabs"]');
 	nodeListForEach$2($tabs, $tab => {
 	  new AppTabs($tab).init();
+	});
+
+	// Initialise nav toggles
+	const $toggles = document.querySelectorAll('[data-module~="subnav-toggle"]');
+	nodeListForEach$2($toggles, $toggle => {
+	  new SubNavToggle($toggle).init();
 	});
 
 	// Initialise language switch
