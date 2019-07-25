@@ -2,12 +2,13 @@ import common from 'govuk-frontend/common'
 import hmrcFrontend from 'hmrc-frontend/all'
 import govUkFrontend from 'govuk-frontend/all'
 
-import AppTabs from './components/tabs.js'
-import SubNavToggle from './components/subnav.js'
+import AppTabs from './components/tabs'
+import SubNavToggle from './components/subnav'
+import CopyToClipboard from './components/copy-to-clipboard'
 
 import LanguageSwitchExample from './components/language-switch-example'
 
-import './components/example.js'
+import './components/example'
 
 const nodeListForEach = common.nodeListForEach
 
@@ -27,6 +28,12 @@ nodeListForEach($toggles, $toggle => {
 const $languageSwitchExamples = document.querySelectorAll('[data-module~="app-language-switch-example"]')
 nodeListForEach($languageSwitchExamples, $example => {
   new LanguageSwitchExample($example).init()
+})
+
+// Initialise copy to clipboard
+const $copyToClipboardButtons = document.querySelectorAll('[data-module~="copy-to-clipboard"]')
+nodeListForEach($copyToClipboardButtons, $button => {
+  new CopyToClipboard($button).init()
 })
 
 hmrcFrontend.initAll()

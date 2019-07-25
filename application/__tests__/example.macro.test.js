@@ -104,6 +104,13 @@ describe('Single page example macro english', () => {
     })
   })
 
+  test('should have a button to copy HTML code examples', () => {
+    const codeContainer = document.querySelector('#example-default-html')
+    const copyButton = codeContainer.querySelector('.app-link--copy')
+    expect(copyButton).not.toBeNull()
+    expect(copyButton.text).toBe('Copy')
+  })
+
   test('should have a button to show Nunjucks code examples', () => {
     const tabLink = document.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
     const tabContentContainer = document.getElementById(nunjucksPanelID)
@@ -114,6 +121,13 @@ describe('Single page example macro english', () => {
       'aria-controls': nunjucksPanelID,
       role: 'tab'
     })
+  })
+
+  test('should have a button to copy Nunjucks code examples', () => {
+    const codeContainer = document.querySelector('#example-default-nunjucks')
+    const copyButton = codeContainer.querySelector('.app-link--copy')
+    expect(copyButton).not.toBeNull()
+    expect(copyButton.text).toBe('Copy')
   })
 
   test('Should include the escaped HTML markup from the examples', () => {
