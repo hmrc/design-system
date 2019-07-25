@@ -54,13 +54,13 @@ describe('HMRC design patterns', () => {
       })
 
       it('should toggle display of the sub navigation and active class on the toggle on click', async () => {
-        await page.click('.app-subnav-toggle__label');
+        await page.click('.app-subnav-toggle__label')
         let navigationStyles = await page.$eval('.app-pane__subnav', el => ({ ...getComputedStyle(el) }))
         let toggleClasses = await page.$eval('.app-subnav-toggle', el => el.className)
         expect(navigationStyles.display).toBe('block')
         expect(toggleClasses).toContain('active')
 
-        await page.click('.app-subnav-toggle__label');
+        await page.click('.app-subnav-toggle__label')
         navigationStyles = await page.$eval('.app-pane__subnav', el => ({ ...getComputedStyle(el) }))
         toggleClasses = await page.$eval('.app-subnav-toggle', el => el.className)
         expect(navigationStyles.display).toBe('none')
