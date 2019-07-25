@@ -1,0 +1,16 @@
+.app-code-snippet {
+  position:relative;
+  max-width: 66.6666%;
+
+  pre {
+    max-width: 100%;
+    padding: govuk-spacing(3)
+  }
+
+  &.app-code-snippet--copy {
+    pre {
+      padding-top: 50px;
+      min-height: 25px;
+    }
+  }
+}

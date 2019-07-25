@@ -1,5 +1,13 @@
 {% macro codeSnippet(params) %}
   {% if params.code %}
-    <pre><code class="govuk-body-s">{{ params.code }}</code></pre>
+    <div class="app-code-snippet{%if params.canCopy%} app-code-snippet--copy{% endif %}">
+      {% if params.canCopy %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+          data-module="copy-to-clipboard">
+          Copy
+        </a>
+      {% endif %}
+      <pre><code class="govuk-body-s">{{ params.code }}</code></pre>
+    </div>
   {% endif %}
 {% endmacro %}

@@ -1,7 +1,7 @@
 ---
 title: Updating HMRC Frontend in your prototype
 menuText: Updating HMRC Frontend in your prototype
-navigationPlacement: secondary
+navigationPlacement: none
 layout: designPatternPage.njk
 ---
 
@@ -41,7 +41,8 @@ layout: designPatternPage.njk
 
 {{
   codeSnippet({
-    code: 'npm update --save hmrc-frontend'
+    code: 'npm update --save hmrc-frontend',
+    canCopy: true
   })
 }}
 

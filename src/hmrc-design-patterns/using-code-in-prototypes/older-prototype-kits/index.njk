@@ -43,7 +43,8 @@ layout: designPatternPage.njk
 
 {{
   codeSnippet({
-    code: 'npm install --save "hmrc/hmrc-frontend#package-latest"'
+    code: 'npm install --save "hmrc/hmrc-frontend#package-latest"',
+    canCopy: true
   })
 }}
 
@@ -73,7 +74,8 @@ layout: designPatternPage.njk
 {{
   codeSnippet({
     code: '// Import HMRC Frontend
-@import "node_modules/hmrc-frontend/all";'
+@import "node_modules/hmrc-frontend/all";',
+    canCopy: true
   })
 }}
 
@@ -108,7 +110,8 @@ path.join(__dirname, \'/node_modules/govuk-frontend/\'),
 path.join(__dirname, \'/node_modules/govuk-frontend/components\'),
 path.join(__dirname, \'/app/views/\'),
 path.join(__dirname, \'/lib/\')
-]'
+]',
+    canCopy: true
   })
 }}
 
@@ -136,7 +139,8 @@ path.join(__dirname, \'/lib/\')
 
 {{
   codeSnippet({
-    code: 'app.use(\'/node_modules/hmrc-frontend\', express.static(path.join(__dirname, \'/node_modules/hmrc-frontend\')))'
+    code: 'app.use(\'/node_modules/hmrc-frontend\', express.static(path.join(__dirname, \'/node_modules/hmrc-frontend\')))',
+    canCopy: true
   })
 }}
 
@@ -164,7 +168,8 @@ path.join(__dirname, \'/lib/\')
 
 {{
   codeSnippet({
-    code: 'app.use(\'/assets\', express.static(path.join(__dirname, \'node_modules\', \'hmrc-frontend\')))'
+    code: 'app.use(\'/assets\', express.static(path.join(__dirname, \'node_modules\', \'hmrc-frontend\')))',
+    canCopy: true
   })
 }}
 
@@ -183,7 +188,8 @@ path.join(__dirname, \'/lib/\')
 
 {{
   codeSnippet({
-    code: '&lt;script src="/node_modules/hmrc-frontend/all.js"&gt;&lt;/script&gt;'
+    code: '&lt;script src="/node_modules/hmrc-frontend/all.js"&gt;&lt;/script&gt;',
+    canCopy: true
   })
 }}
 
