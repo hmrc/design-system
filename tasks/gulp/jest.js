@@ -38,7 +38,7 @@ gulp.task('jest:integration', (done) => {
   })
 })
 
-gulp.task('jest:unit:watch', (done) => {
+gulp.task('jest:unit:watch', gulp.series('jest:unit', (done) => {
   gulp.watch('**/*.test.js', gulp.parallel('jest:unit'))
   done()
-})
+}))
