@@ -1,0 +1,70 @@
+---
+title: Install HMRC Frontend in your prototype
+menuText: Installing HMRC Frontend in your prototype
+navigationPlacement: secondary
+layout: designPatternPage.njk
+---
+
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+{% block content %}
+
+<p class="govuk-body">
+  While most HMRC patterns are created to automatically work with the GOV.UK Prototype Kit, some patterns have been created with specific HMRC styles.
+</p>
+
+<p class="govuk-body">
+  This guide explains how to install HMRC Frontend to support these styles. You will only have to follow these steps once for your prototype. You must use version 8.7.0 or later of the GOV.UK Prototype Kit for these to work.
+</p>
+
+<h2 class="govuk-heading-m" id="step-1">
+  Step 1
+</h2>
+
+<p class="govuk-body">Using GitBash or Terminal, navigate to where your prototype is. For example</p>
+
+{{
+  codeSnippet({
+    code: 'cd ~/Documents/projects/project-prototype'
+  })
+}}
+
+<p class="govuk-body">If your prototype is already running, to stop it use</p>
+
+{{
+  codeSnippet({
+    code: 'Ctrl + C'
+  })
+}}
+
+<h2 class="govuk-heading-m" id="step-2">
+  Step 2
+</h2>
+
+<p class="govuk-body">Enter</p>
+
+{{
+  codeSnippet({
+    code: 'npm install --save hmrc-frontend'
+  })
+}}
+
+<p class="govuk-body">
+  Once you have installed HMRC Frontend, All HMRC patterns should work in your prototype.
+</p>
+
+<p class="govuk-body">You will now have the latest version installed, later you can easily <a class="govuk-link" href="/hmrc-design-patterns/updating-hmrc-frontend-in-prototypes">update to the latest HMRC Frontend</a></p>
+
+<p class="govuk-body">
+  To use the patterns, you should:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>find the pattern in HMRC Design Patterns</li>
+  <li>copy the code from the example</li>
+  <li>paste the code into the page in your prototype</li>
+</ul>
+
+<p class="govuk-body">If you are using an older version of the prototype kit please use the <a class="govuk-link" href="/hmrc-design-patterns/using-code-in-prototypes/older-prototype-kits">manual installation steps for older prototype kits</a>.</p>
+
+{% endblock %}

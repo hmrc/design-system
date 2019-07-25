@@ -1,0 +1,5 @@
+{% macro codeSnippet(params) %}
+  {% if params.code %}
+    <pre><code class="govuk-body-s">{{ params.code }}</code></pre>
+  {% endif %}
+{% endmacro %}

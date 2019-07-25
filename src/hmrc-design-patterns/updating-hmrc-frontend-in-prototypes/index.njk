@@ -1,0 +1,64 @@
+---
+title: Updating HMRC Frontend in your prototype
+menuText: Updating HMRC Frontend in your prototype
+navigationPlacement: secondary
+layout: designPatternPage.njk
+---
+
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+{% block content %}
+
+<p class="govuk-body">
+  This guide explains how to update HMRC Frontend to get the latest features. You must have already <a href="/hmrc-design-patterns/using-code-in-prototypes">installed hmrc-frontend</a> for these to work.
+</p>
+
+<h2 class="govuk-heading-m" id="step-1">
+  Step 1
+</h2>
+
+<p class="govuk-body">Using GitBash or Terminal, navigate to where your prototype is. For example</p>
+
+{{
+  codeSnippet({
+    code: 'cd ~/Documents/projects/project-prototype'
+  })
+}}
+
+<p class="govuk-body">If your prototype is already running, to stop it use</p>
+
+{{
+  codeSnippet({
+    code: 'Ctrl + C'
+  })
+}}
+
+<h2 class="govuk-heading-m" id="step-2">
+  Step 2
+</h2>
+
+<p class="govuk-body">Enter</p>
+
+{{
+  codeSnippet({
+    code: 'npm update --save hmrc-frontend'
+  })
+}}
+
+<p class="govuk-body">
+  Once you have installed HMRC Frontend, All HMRC patterns should work in your prototype.
+</p>
+
+<p class="govuk-body">
+  To use the patterns, you should:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>find the pattern in HMRC Design Patterns</li>
+  <li>copy the code from the example</li>
+  <li>paste the code into the page in your prototype</li>
+</ul>
+
+<p class="govuk-body">If you are using an older version of the prototype kit please use the <a class="govuk-link" href="/hmrc-design-patterns/using-code-in-prototypes/older-prototype-kits">manual installation steps for older prototype kits</a>.</p>
+
+{% endblock %}
