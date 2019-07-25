@@ -1,4 +1,4 @@
-/* globals navigator describe it beforeEach expect page  */
+/* globals describe it beforeEach expect page  */
 
 const { integrationTestPort } = require('../../constants')
 const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path}`)
