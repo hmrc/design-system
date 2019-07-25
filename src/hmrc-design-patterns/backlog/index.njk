@@ -21,42 +21,71 @@ layout: designPatternPage.njk
   <li><span class="govuk-!-font-weight-bold">In progress</span> – someone is actively working on the pattern</li>
 </ul>
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-visually-hidden">Backlog</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col">Name</th>
-      <th class="govuk-table__header" scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/31">Add to a list</a></td>
-      <td class="govuk-table__cell">In progress</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/28">Company details</a></td>
-      <td class="govuk-table__cell">In progress</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/46">Exit survey</a></td>
-      <td class="govuk-table__cell">In progress</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/147">Save</a></td>
-      <td class="govuk-table__cell">In progress</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/163">Status tags</a></td>
-      <td class="govuk-table__cell">In progress</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/65">When a user has signed out</a></td>
-      <td class="govuk-table__cell">To do</td>
-    </tr>
+{% from "table/macro.njk" import govukTable %}
 
-  </tbody>
-</table>
+{{
+  govukTable({
+    caption: 'Backlog',
+    head: [
+      {
+        text: 'Name'
+      },
+      {
+        text: 'Status'
+      }
+    ],
+    rows: [
+      [
+        {
+          html: '<a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/31">Add to a list</a>'
+        },
+        {
+          text: 'In progress'
+        }
+      ],
+      [
+        {
+          html: '<a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/28">Company details</a>'
+        },
+        {
+          text: 'In progress'
+        }
+      ],
+      [
+        {
+          html: '<a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/46">Exit survey</a>'
+        },
+        {
+          text: 'In progress'
+        }
+      ],
+      [
+        {
+          html: '<a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/147">Save</a>'
+        },
+        {
+          text: 'In progress'
+        }
+      ],
+      [
+        {
+          html: '<a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/163">Status tags</a>'
+        },
+        {
+          text: 'In progress'
+        }
+      ],
+      [
+        {
+          html: '<a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/65">When a user has signed out</a>'
+        },
+        {
+          text: 'To do'
+        }
+      ]
+    ]
+  })
+}}
 
 <p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/new">Propose a new pattern on the HMRC Design Patterns backlog</a></p>
 
