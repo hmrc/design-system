@@ -149,7 +149,9 @@
 
 <h3 class="govuk-heading-m" id="ask-a-yes-no-question">Ask a yes-no question</h3>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-yes-no-question" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/ask-for-consent/yes-no-question/" target="_blank" title="Open Ask a yes-no question example in a new window">
@@ -176,7 +178,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-yes-no-question-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>
@@ -200,11 +205,17 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+          </pre>
+
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-yes-no-question-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"radios/macro.njk"</span> <span class="hljs-keyword">import</span> govukRadios %}
 
 {{ govukRadios({
@@ -232,15 +243,22 @@
 
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
-}) }}</code></pre>
+}) }}</code>
+          </pre>
+
+        </div>
       </div>
     </div>
+
   </div>
+
 
 
 <h3 class="govuk-heading-m" id="use-a-single-checkbox">Use a single checkbox</h3>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-single-checkbox" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/ask-for-consent/single-checkbox/" target="_blank" title="Open Use a single checkbox example in a new window">
@@ -267,7 +285,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-single-checkbox-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"access-code"</span>&gt;</span>
     Access code
   <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -286,11 +307,17 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+          </pre>
+
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-single-checkbox-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
 
@@ -316,15 +343,22 @@
 
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
-}) }}</code></pre>
+}) }}</code>
+          </pre>
+
+        </div>
       </div>
     </div>
+
   </div>
+
 
 
 <h3 class="govuk-heading-m" id="use-more-than-one-checkbox">Use more than one checkbox</h3>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-multiple-checkboxes" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/ask-for-consent/multiple-checkboxes/" target="_blank" title="Open Use more than one checkbox example in a new window">
@@ -351,7 +385,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-multiple-checkboxes-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"mixed-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"paperless"</span>&gt;</span>
@@ -368,11 +405,17 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+          </pre>
+
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-multiple-checkboxes-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
 
 {{ govukCheckboxes({
@@ -391,10 +434,15 @@
 }) }}
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
-}) }}</code></pre>
+}) }}</code>
+          </pre>
+
+        </div>
       </div>
     </div>
+
   </div>
+
 
 <p class="govuk-body">For when there is more than one type of consent or consent must be separate from other terms and conditions.</p>
 

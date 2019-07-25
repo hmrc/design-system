@@ -126,7 +126,9 @@
   General page
 </h2>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-general-page" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/service-unavailable/general-page/" target="_blank" title="Open Service unavailable, general page example in a new window">
@@ -163,7 +165,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-general-page-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Sorry, the service is unavailable<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -173,8 +178,11 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Contact the Tax Credits Helpline<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> if you need to make changes to your claim or speak to someone about your tax credits.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -184,11 +192,16 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+            </pre>
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-general-page-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -200,8 +213,11 @@
 
 &lt;p class="govuk-body"&gt;
   &lt;a class="govuk-link" href="#"&gt;Contact the Tax Credits Helpline&lt;/a&gt; if you need to make changes to your claim or speak to someone about your tax credits.
-&lt;/p&gt;</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+&lt;/p&gt;</code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -213,17 +229,23 @@
 
 &lt;p class="govuk-body"&gt;
   &lt;a class="govuk-link" href="#"&gt;Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM&lt;/a&gt; os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-&lt;/p&gt;</code></pre>
+&lt;/p&gt;</code>
+            </pre>
+        </div>
       </div>
     </div>
+
   </div>
+
 
 
 <h2 class="govuk-heading-m" id="when-you-know-when-a-service=will-be-available">
   When you know when a service will be available
 </h2>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-service-temporarily-unavailable" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/service-unavailable/service-temporarily-unavailable/" target="_blank" title="Open Service unavailable, when you know when a service will be available example in a new window">
@@ -260,7 +282,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-temporarily-unavailable-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Sorry, the service is unavailable<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -270,8 +295,11 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Contact the Tax Credits Helpline<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> if you need to make changes to your claim or speak to someone about your tax credits.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -281,11 +309,16 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+            </pre>
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-temporarily-unavailable-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -297,8 +330,11 @@
 
 &lt;p class="govuk-body"&gt;
   &lt;a class="govuk-link" href="#"&gt;Contact the Tax Credits Helpline&lt;/a&gt; if you need to make changes to your claim or speak to someone about your tax credits.
-&lt;/p&gt;</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+&lt;/p&gt;</code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -310,17 +346,23 @@
 
 &lt;p class="govuk-body"&gt;
   &lt;a class="govuk-link" href="#"&gt;Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM&lt;/a&gt; os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-&lt;/p&gt;</code></pre>
+&lt;/p&gt;</code>
+            </pre>
+        </div>
       </div>
     </div>
+
   </div>
+
 
 
 <h2 class="govuk-heading-m" id="a-link-to-another-service">
   A link to another service
 </h2>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-link-to-other-service" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/service-unavailable/link-to-other-service/" target="_blank" title="Open Service unavailable, link to another service example in a new window">
@@ -357,7 +399,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-link-to-other-service-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Sorry, the service is unavailable<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -368,8 +413,11 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-list govuk-list--bullet"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>change other VAT details<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>contact the Tax Credits Helpline<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> if you need to make changes to your claim or speak to someone about your tax credits<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -380,11 +428,16 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-list govuk-list--bullet"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>newid fanylion TAW eraill<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code>
+            </pre>
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-link-to-other-service-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -397,8 +450,11 @@
 &lt;ul class="govuk-list govuk-list--bullet"&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;change other VAT details&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;contact the Tax Credits Helpline&lt;/a&gt; if you need to make changes to your claim or speak to someone about your tax credits&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+&lt;/ul&gt;</code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -411,10 +467,14 @@
 &lt;ul class="govuk-list govuk-list--bullet"&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;newid fanylion TAW eraill&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM&lt;/a&gt; os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;</code>
+            </pre>
+        </div>
       </div>
     </div>
+
   </div>
+
 
 
 <h2 class="govuk-heading-m" id="service-is-closed-for-part-of-the-year">
@@ -425,7 +485,9 @@
   After a service closes
 </h3>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-service-closed" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/service-unavailable/service-closed/" target="_blank" title="Open After a service closes example in a new window">
@@ -462,7 +524,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-closed-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Sorry, the service is unavailable<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -481,8 +546,11 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>see who is on your claim<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>make changes to your claim<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>check the status of your renewal<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -501,11 +569,16 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>gweld pwy sydd ar eich cais<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>gwneud newidiadau i’ch cais<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>gwirio statws eich cais i adnewyddu<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code>
+            </pre>
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-closed-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -526,8 +599,11 @@
   &lt;li&gt;see who is on your claim&lt;/li&gt;
   &lt;li&gt;make changes to your claim&lt;/li&gt;
   &lt;li&gt;check the status of your renewal&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+&lt;/ul&gt;</code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -548,17 +624,23 @@
   &lt;li&gt;gweld pwy sydd ar eich cais&lt;/li&gt;
   &lt;li&gt;gwneud newidiadau i’ch cais&lt;/li&gt;
   &lt;li&gt;gwirio statws eich cais i adnewyddu&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;</code>
+            </pre>
+        </div>
       </div>
     </div>
+
   </div>
+
 
 
 <h3 class="govuk-heading-s" id="before-a-service-opens">
   Before a service opens
 </h3>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-service-not-yet-open" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/service-unavailable/service-not-yet-open/" target="_blank" title="Open Before a service opens example in a new window">
@@ -595,7 +677,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-not-yet-open-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Sorry, the service is unavailable<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -609,8 +694,11 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>find out more about your payments<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>see who is on your claim<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>make changes to your claim<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -624,11 +712,16 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>cael rhagor o wybodaeth am eich taliadau<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>gweld pwy sydd ar eich cais<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>gwneud newidiadau i’ch cais<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code>
+            </pre>
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-not-yet-open-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -644,8 +737,11 @@
   &lt;li&gt;find out more about your payments&lt;/li&gt;
   &lt;li&gt;see who is on your claim&lt;/li&gt;
   &lt;li&gt;make changes to your claim&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+&lt;/ul&gt;</code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -661,17 +757,23 @@
   &lt;li&gt;cael rhagor o wybodaeth am eich taliadau&lt;/li&gt;
   &lt;li&gt;gweld pwy sydd ar eich cais&lt;/li&gt;
   &lt;li&gt;gwneud newidiadau i’ch cais&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;</code>
+            </pre>
+        </div>
       </div>
     </div>
+
   </div>
+
 
 
 <h2 class="govuk-heading-m" id="service-is-closed-forever">
   Service is closed forever
 </h2>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-service-shut-down" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/service-unavailable/service-shut-down/" target="_blank" title="Open Service is closed forever example in a new window">
@@ -708,7 +810,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-shut-down-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Sorry, the service is unavailable<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -726,8 +831,11 @@
   Opening times:
   <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-!-font-weight-bold"</span>&gt;</span>Monday to Friday: 8:30am to 4:30pm<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -745,11 +853,16 @@
   Oriau agor:
   <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-!-font-weight-bold"</span>&gt;</span>Dydd Llun – Dydd Gwener: 08:30 – 16:30<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+            </pre>
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-shut-down-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -769,8 +882,11 @@
   Opening times:
   &lt;br/&gt;
   &lt;strong class="govuk-!-font-weight-bold"&gt;Monday to Friday: 8:30am to 4:30pm&lt;/strong&gt;
-&lt;/p&gt;</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+&lt;/p&gt;</code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -790,17 +906,23 @@
   Oriau agor:
   &lt;br/&gt;
   &lt;strong class="govuk-!-font-weight-bold"&gt;Dydd Llun – Dydd Gwener: 08:30 – 16:30&lt;/strong&gt;
-&lt;/p&gt;</code></pre>
+&lt;/p&gt;</code>
+            </pre>
+        </div>
       </div>
     </div>
+
   </div>
+
 
 
 <h2 class="govuk-heading-s" id="something-has-replaced-the-service">
   Something has replaced the service
 </h2>
 
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-service-replaced" data-module="app-tabs app-language-switch-example">
+
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/hmrc-design-patterns/service-unavailable/service-replaced/" target="_blank" title="Open Something has replaced the service example in a new window">
@@ -837,7 +959,10 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-replaced-html" role="tabpanel">
-        <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Sorry, the service is unavailable<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -855,8 +980,11 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>find out more about Universal Credit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>apply for Universal Credit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>sign in to your Universal Credit account<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -874,11 +1002,16 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>cael gwybod rhagor am Gredyd Cynhwysol<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>gwneud cais am Gredyd Cynhwysol<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>mewngofnodi i’ch cyfrif Credyd Cynhwysol<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code>
+            </pre>
+        </div>
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-replaced-nunjucks" role="tabpanel">
-          <pre data-module="app-copy" class="app-example__language-switch--en-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div data-module="app-copy">
+          <pre class="app-example__language-switch--en-only-content">
+            <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -898,8 +1031,11 @@
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;find out more about Universal Credit&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;apply for Universal Credit&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;sign in to your Universal Credit account&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-          <pre data-module="app-copy" class="app-example__language-switch--cy-only-content"><code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+&lt;/ul&gt;</code>
+          </pre>
+
+            <pre class="app-example__language-switch--cy-only-content">
+              <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -919,10 +1055,14 @@
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;cael gwybod rhagor am Gredyd Cynhwysol&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;gwneud cais am Gredyd Cynhwysol&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;mewngofnodi i’ch cyfrif Credyd Cynhwysol&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;</code>
+            </pre>
+        </div>
       </div>
     </div>
+
   </div>
+
 
 
 </div>
