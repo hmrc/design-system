@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <title>HMRC Design Patterns backlog - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -43,7 +43,7 @@
       <input type="checkbox" id="app-subnav-toggle">
 
       <div class="app-pane__subnav">
-        <h2 class="govuk-heading-m">HMRC Design Patterns</h2>
+        <h2 class="govuk-heading-m"><a href="/hmrc-design-patterns/">HMRC Design Patterns</a></h2>
         <nav class="app-subnav">
           <ul class="app-subnav__section"><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-menu">
@@ -103,7 +103,7 @@
                 </a>
               </li></ul>
 
-          <ul class="app-subnav__section"><li class="app-subnav__section-item">
+          <ul class="app-subnav__section"><li class="app-subnav__section-item app-subnav__section-item--current">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/backlog">
                   HMRC Design Patterns backlog
                 </a>
@@ -120,60 +120,62 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">HMRC Design Patterns</h1></header>
+  <h1 class="govuk-heading-xl">HMRC Design Patterns backlog</h1></header>
 
-<p class="govuk-body">
-  These are patterns designed specifically for the needs of HMRC users and patterns that are not yet in the GOV.UK Design System.
-</p>
 
-<p class="govuk-body">
-  Check the <a class="govuk-link" href="https://design-system.service.gov.uk/">GOV.UK Design System</a> to see if the component or pattern you need is already being used across government.
-</p>
 
-<p class="govuk-body">
-  If you cannot find what you need in the GOV.UK Design System or HMRC Design Patterns you can:
-</p>
+<p class="govuk-body">Anyone can propose, develop or contribute to HMRC Design Patterns. You can propose a new pattern, or suggest an improvement to an existing one.</p>
+
+<p class="govuk-body">These are patterns designed specifically for the needs of HMRC users. If you want to propose a new pattern for use across government, or suggest an improvement to an existing one, use the <a class="govuk-link" href="https://design-system.service.gov.uk/community/backlog/">GOV.UK Design System community backlog</a>.</p>
+
+<p class="govuk-body">Patterns in the backlog may be:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li><a class="govuk-link" href="https://design-system.service.gov.uk/community/backlog/">see if it is being worked on by other teams across government and add your findings</a></li>
-  <li><a class="govuk-link" href="backlog/">see if it is being worked on by HMRC and add your findings</a></li>
-  <li><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/new">propose a new pattern</a></li>
+  <li><span class="govuk-!-font-weight-bold">Proposed</span> – someone has suggested a new pattern</li>
+  <li><span class="govuk-!-font-weight-bold">To do</span> – the proposed pattern has been agreed and is ready to work on</li>
+  <li><span class="govuk-!-font-weight-bold">In progress</span> – someone is actively working on the pattern</li>
 </ul>
 
-<p class="govuk-body">
-  All patterns must be <a class="govuk-link" href="https://design-system.service.gov.uk/community/contribution-criteria/#new-proposals">useful and unique</a>.
-</p>
 
-<h2 class="govuk-heading-l">
-  Using code snippets in prototypes
-</h2>
+<table class="govuk-table">
+  <caption class="govuk-table__caption">Backlog</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Name</th>
+      <th class="govuk-table__header" scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/31">Add to a list</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/28">Company details</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/46">Exit survey</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/147">Save</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/163">Status tags</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/65">When a user has signed out</a></td>
+      <td class="govuk-table__cell">To do</td>
+    </tr>
+  </tbody>
+</table>
 
-<p class="govuk-body">
-  Each pattern includes coded examples. You will need to <a class="govuk-link" href="using-code-in-prototypes">install HMRC Frontend</a> to use patterns with specific HMRC code not yet supported by the GOV.UK Prototype Kit. You must use version 7 or later of the GOV.UK Prototype Kit for these to work.
-</p>
 
-<p class="govuk-body">
-  Find out how to:
-</p>
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/new">Propose a new pattern on the HMRC Design Patterns backlog</a></p>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li><a class="govuk-link" href="https://design-system.service.gov.uk/get-started/prototyping">set up the Prototype Kit</a></li>
-  <li><a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com/docs/updating-the-kit">update the Prototype Kit</a></li>
-  <li><a class="govuk-link" href="https://design-system.service.gov.uk/get-started/updating-your-code/">update your code</a></li>
-</ul>
-
-<h2 class="govuk-heading-l">
-  Get help
-</h2>
-
-<p class="govuk-body">
-HMRC Design Patterns is maintained by the Service Design Tools team. If you have a question, idea or suggestion you can:
-</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li><a class="govuk-link" href="mailto:hmrc-service-design-tools-g@digital.hmrc.gov.uk">email the Service Design Tools team</a></li>
-  <li>get in touch with <a class="govuk-link" href="https://hmrcdigital.slack.com/messages/C39V3PH38">#team-sdt</a> on HMRC Slack <a class="govuk-link" href="slack://channel?team=T04RY81HB&amp;id=C39V3PH38">(open in app)</a></li>
-</ul>
 </div>
           </div>
         </main>

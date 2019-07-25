@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <title>Updating HMRC Frontend in your prototype - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -43,7 +43,7 @@
       <input type="checkbox" id="app-subnav-toggle">
 
       <div class="app-pane__subnav">
-        <h2 class="govuk-heading-m">HMRC Design Patterns</h2>
+        <h2 class="govuk-heading-m"><a href="/hmrc-design-patterns/">HMRC Design Patterns</a></h2>
         <nav class="app-subnav">
           <ul class="app-subnav__section"><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-menu">
@@ -120,60 +120,63 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">HMRC Design Patterns</h1></header>
+  <h1 class="govuk-heading-xl">Updating HMRC Frontend in your prototype</h1></header>
+
+
 
 <p class="govuk-body">
-  These are patterns designed specifically for the needs of HMRC users and patterns that are not yet in the GOV.UK Design System.
+  This guide explains how to update HMRC Frontend to get the latest features. You must have already <a href="/hmrc-design-patterns/using-code-in-prototypes">installed hmrc-frontend</a> for these to work.
 </p>
 
-<p class="govuk-body">
-  Check the <a class="govuk-link" href="https://design-system.service.gov.uk/">GOV.UK Design System</a> to see if the component or pattern you need is already being used across government.
-</p>
-
-<p class="govuk-body">
-  If you cannot find what you need in the GOV.UK Design System or HMRC Design Patterns you can:
-</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li><a class="govuk-link" href="https://design-system.service.gov.uk/community/backlog/">see if it is being worked on by other teams across government and add your findings</a></li>
-  <li><a class="govuk-link" href="backlog/">see if it is being worked on by HMRC and add your findings</a></li>
-  <li><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/new">propose a new pattern</a></li>
-</ul>
-
-<p class="govuk-body">
-  All patterns must be <a class="govuk-link" href="https://design-system.service.gov.uk/community/contribution-criteria/#new-proposals">useful and unique</a>.
-</p>
-
-<h2 class="govuk-heading-l">
-  Using code snippets in prototypes
+<h2 class="govuk-heading-m" id="step-1">
+  Step 1
 </h2>
 
-<p class="govuk-body">
-  Each pattern includes coded examples. You will need to <a class="govuk-link" href="using-code-in-prototypes">install HMRC Frontend</a> to use patterns with specific HMRC code not yet supported by the GOV.UK Prototype Kit. You must use version 7 or later of the GOV.UK Prototype Kit for these to work.
-</p>
+<p class="govuk-body">Using GitBash or Terminal, navigate to where your prototype is. For example</p>
 
-<p class="govuk-body">
-  Find out how to:
-</p>
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">cd ~/Documents/projects/project-prototype</code></pre>
+    </div>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li><a class="govuk-link" href="https://design-system.service.gov.uk/get-started/prototyping">set up the Prototype Kit</a></li>
-  <li><a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com/docs/updating-the-kit">update the Prototype Kit</a></li>
-  <li><a class="govuk-link" href="https://design-system.service.gov.uk/get-started/updating-your-code/">update your code</a></li>
-</ul>
 
-<h2 class="govuk-heading-l">
-  Get help
+<p class="govuk-body">If your prototype is already running, to stop it use</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">Ctrl + C</code></pre>
+    </div>
+
+
+<h2 class="govuk-heading-m" id="step-2">
+  Step 2
 </h2>
 
+<p class="govuk-body">Enter</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+          data-module="copy-to-clipboard">
+          Copy
+        </a>
+      <pre><code class="govuk-body-s">npm update --save hmrc-frontend</code></pre>
+    </div>
+
+
 <p class="govuk-body">
-HMRC Design Patterns is maintained by the Service Design Tools team. If you have a question, idea or suggestion you can:
+  Once you have installed HMRC Frontend, All HMRC patterns should work in your prototype.
+</p>
+
+<p class="govuk-body">
+  To use the patterns, you should:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li><a class="govuk-link" href="mailto:hmrc-service-design-tools-g@digital.hmrc.gov.uk">email the Service Design Tools team</a></li>
-  <li>get in touch with <a class="govuk-link" href="https://hmrcdigital.slack.com/messages/C39V3PH38">#team-sdt</a> on HMRC Slack <a class="govuk-link" href="slack://channel?team=T04RY81HB&amp;id=C39V3PH38">(open in app)</a></li>
+  <li>find the pattern in HMRC Design Patterns</li>
+  <li>copy the code from the example</li>
+  <li>paste the code into the page in your prototype</li>
 </ul>
+
+<p class="govuk-body">If you are using an older version of the prototype kit please use the <a class="govuk-link" href="/hmrc-design-patterns/using-code-in-prototypes/older-prototype-kits">manual installation steps for older prototype kits</a>.</p>
+
 </div>
           </div>
         </main>
