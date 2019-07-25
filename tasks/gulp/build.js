@@ -6,7 +6,7 @@ const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
 const layouts = require('metalsmith-layouts')
-const ignore = require('metalsmith-ignore');
+const ignore = require('metalsmith-ignore')
 
 const rollup = require('metalsmith-rollup')
 const resolve = require('rollup-plugin-node-resolve')

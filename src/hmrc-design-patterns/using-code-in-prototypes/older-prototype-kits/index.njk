@@ -1,0 +1,210 @@
+---
+title: Install HMRC Frontend in an old version of the GOVUK prototype Kit
+layout: designPatternPage.njk
+---
+
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+{% block content %}
+
+<p class="govuk-body">
+  In version 8.7.0 of GOVUK's prototype kit a new feature was introduced which made installing HMRC Frontend much simpler, we recommend that you upgrade to 8.7.0 or later and then <a href="/hmrc-design-patterns/using-code-in-prototypes">follow the simple installation instructions</a>
+</p>
+
+<p class="govuk-body">
+  This guide explains how to install HMRC Frontend to support these styles. You will only have to follow these steps once for your prototype. You must use a version between 7 and 8.7.0 of the GOV.UK Prototype Kit for these to work.
+</p>
+
+<h2 class="govuk-heading-m" id="step-1">
+  Step 1
+</h2>
+
+<p class="govuk-body">Using GitBash or Terminal, navigate to where your prototype is. For example</p>
+
+{{
+  codeSnippet({
+    code: 'cd ~/Documents/projects/project-prototype'
+  })
+}}
+
+<p class="govuk-body">If your protype is already running, to stop it use</p>
+
+{{
+  codeSnippet({
+    code: 'Ctrl + C'
+  })
+}}
+
+<h2 class="govuk-heading-m" id="step-2">
+  Step 2
+</h2>
+
+<p class="govuk-body">Enter</p>
+
+{{
+  codeSnippet({
+    code: 'npm install --save "hmrc/hmrc-frontend#package-latest"',
+    canCopy: true
+  })
+}}
+
+<h2 class="govuk-heading-m" id="step-3">
+  Step 3
+</h2>
+
+<p class="govuk-body">In your HTML editor, open</p>
+
+{{
+  codeSnippet({
+    code: '/app/assets/sass/application.scss'
+  })
+}}
+
+<p class="govuk-body">After</p>
+
+{{
+  codeSnippet({
+    code: '// Import GOV.UK Frontend
+@import "node_modules/govuk-frontend/all";'
+  })
+}}
+
+<p class="govuk-body">paste</p>
+
+{{
+  codeSnippet({
+    code: '// Import HMRC Frontend
+@import "node_modules/hmrc-frontend/all";',
+    canCopy: true
+  })
+}}
+
+<h2 class="govuk-heading-m" id="step-4">
+  Step 4
+</h2>
+
+<p class="govuk-body">In your root folder, open</p>
+
+{{
+  codeSnippet({
+    code: '/server.js'
+  })
+}}
+
+<p class="govuk-body">and find</p>
+
+{{
+  codeSnippet({
+    code: 'appViews'
+  })
+}}
+
+<p class="govuk-body">Add the paths to hmrc-frontend layouts and components to the top of the list.</p>
+
+{{
+  codeSnippet({
+    code: 'var appViews = [
+<mark>path.join(__dirname, \'/node_modules/hmrc-frontend/layouts\'),</mark>
+<mark>path.join(__dirname, \'/node_modules/hmrc-frontend/components\'),</mark>
+path.join(__dirname, \'/node_modules/govuk-frontend/\'),
+path.join(__dirname, \'/node_modules/govuk-frontend/components\'),
+path.join(__dirname, \'/app/views/\'),
+path.join(__dirname, \'/lib/\')
+]',
+    canCopy: true
+  })
+}}
+
+<h2 class="govuk-heading-m" id="step-5">
+  Step 5
+</h2>
+
+<p class="govuk-body">In</p>
+
+{{
+  codeSnippet({
+    code: '/server.js'
+  })
+}}
+
+<p class="govuk-body">find</p>
+
+{{
+  codeSnippet({
+    code: 'app.use(\'/node_modules/govuk-frontend\', express.static(path.join(__dirname, \'/node_modules/govuk-frontend\')))'
+  })
+}}
+
+<p class="govuk-body">and on the next line paste</p>
+
+{{
+  codeSnippet({
+    code: 'app.use(\'/node_modules/hmrc-frontend\', express.static(path.join(__dirname, \'/node_modules/hmrc-frontend\')))',
+    canCopy: true
+  })
+}}
+
+<h2 class="govuk-heading-m" id="step-6">
+  Step 6
+</h2>
+
+<p class="govuk-body">In</p>
+
+{{
+  codeSnippet({
+    code: '/server.js'
+  })
+}}
+
+<p class="govuk-body">find</p>
+
+{{
+  codeSnippet({
+    code: 'app.use(\'/assets\', express.static(path.join(__dirname, \'node_modules\', \'govuk-frontend\', \'assets\')))'
+  })
+}}
+
+<p class="govuk-body">and on the next line paste in</p>
+
+{{
+  codeSnippet({
+    code: 'app.use(\'/assets\', express.static(path.join(__dirname, \'node_modules\', \'hmrc-frontend\')))',
+    canCopy: true
+  })
+}}
+
+<h2 class="govuk-heading-m" id="step-7">
+  Step 7
+</h2>
+<p class="govuk-body">Open</p>
+
+{{
+  codeSnippet({
+    code: 'app/views/includes/scripts.html'
+  })
+}}
+
+<p class="govuk-body">and at the end of the file, paste</p>
+
+{{
+  codeSnippet({
+    code: '&lt;script src="/node_modules/hmrc-frontend/all.js"&gt;&lt;/script&gt;',
+    canCopy: true
+  })
+}}
+
+<p class="govuk-body">
+  Once you have installed HMRC Frontend, All HMRC patterns should work in your prototype.
+</p>
+
+<p class="govuk-body">
+  To use the patterns, you should:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>find the pattern in HMRC Design Patterns</li>
+  <li>copy the code from the example</li>
+  <li>paste the code into the page in your prototype</li>
+</ul>
+
+{% endblock %}
