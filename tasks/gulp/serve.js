@@ -7,7 +7,8 @@ const { integrationTestPort } = require('../../constants')
 gulp.task('serve', (done) => {
   connect.server({
     root: pathFromRoot('dist'),
-    port: process.env.PORT || process.env.port || 3000
+    port: process.env.PORT || process.env.port || 3000,
+    livereload: true
   })
   done()
 })

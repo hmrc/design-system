@@ -1,8 +1,11 @@
 ---
 layout: oneColumnPage.njk
 ---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
 
-<h1 class="govuk-heading-xl">Design resources for HMRC</h1>
+{{ hmrcPageHeading({
+  text: 'Design resources for HMRC'
+}) }}
 
 <h2 class="govuk-heading-m">Styles, components and patterns</h2>
 
@@ -15,7 +18,7 @@ layout: oneColumnPage.njk
   </div>
 
   <div class="govuk-grid-column-one-third">
-    <a href="/design-library" class="app-card">
+    <a href="/hmrc-design-patterns" class="app-card">
       <h3 class="govuk-heading-s app-card__heading">HMRC Design Patterns</h3>
       <p class="govuk-body">Find patterns designed specifically for the needs of HMRC users and patterns that are not yet in the GOV.UK Design System.</p>
     </a>
@@ -35,7 +38,7 @@ layout: oneColumnPage.njk
   </div>
 
   <div class="govuk-grid-column-one-third">
-    <a href="/hmrc-content-guide/hmrc-style-guide" class="app-card">
+    <a href="/hmrc-content-style-guide" class="app-card">
       <h3 class="govuk-heading-s app-card__heading">HMRC content style guide</h3>
       <p class="govuk-body">Use the HMRC style guide for HMRC-specific terms, styles and conventions.</p>
     </a>
@@ -106,11 +109,11 @@ layout: oneColumnPage.njk
 
     <ul class="govuk-list govuk-list--bullet">
       <li>
-        <a href="mailto:hmrc-service-design-tools-g@digital.hmrc.gov.uk">email the Service Design Tools team</a>
+        <a class="govuk-link" href="mailto:hmrc-service-design-tools-g@digital.hmrc.gov.uk">email the Service Design Tools team</a>
       </li>
 
       <li>
-        get in touch with <a href="https://hmrcdigital.slack.com/messages/C39V3PH38">#team-sdt</a> on HMRC Slack <a href="slack://channel?team=T04RY81HB&amp;id=C39V3PH38">(open in app)</a>
+        get in touch with <a class="govuk-link" href="https://hmrcdigital.slack.com/messages/C39V3PH38">#team-sdt</a> on HMRC Slack <a class="govuk-link" href="slack://channel?team=T04RY81HB&amp;id=C39V3PH38">(open in app)</a>
       </li>
     </ul>
   </div>

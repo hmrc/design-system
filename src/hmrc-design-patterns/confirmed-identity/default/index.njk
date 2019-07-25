@@ -1,0 +1,13 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'We have confirmed your identity'
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

@@ -1,0 +1,13 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'Rydym wedi cadarnhau pwy ydych'
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}

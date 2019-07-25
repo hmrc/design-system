@@ -2,9 +2,11 @@ const gulp = require('gulp')
 const merge2 = require('merge2')
 const remoteSrc = require('gulp-remote-src')
 const pathFromRoot = require('../../util/pathFromRoot')
+const readExtensionConfigSync = require('../../util/extensions')
+
+const assetsFromExtensions = readExtensionConfigSync('assets').map(item => pathFromRoot(... `node_modules/${item.module}${item.item}/**/*`.split('/')))
 
 const assetPaths = [
-  pathFromRoot('node_modules', 'govuk-frontend', 'assets', '**', '*'),
   pathFromRoot('application', 'assets', '**', '*'),
   '!' + pathFromRoot('application', 'assets', 'javascripts', 'components', '**', '*'),
   '!' + pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js')
@@ -14,14 +16,14 @@ gulp.task('copy-assets:local', (done) => {
   const assets = gulp.src(assetPaths)
     .pipe(gulp.dest(pathFromRoot('dist', 'assets')))
 
-  // TODO (https://jira.tools.tax.service.gov.uk/browse/PLATUI-118)
-  const componentImages = gulp.src(pathFromRoot('node_modules', 'hmrc-frontend', 'components', 'hmrc-account-menu', 'images', '*'))
-    .pipe(gulp.dest(pathFromRoot('dist', 'assets', 'stylesheets', 'components', 'hmrc-account-menu', 'images')))
+  const extensionAssets = gulp.src(assetsFromExtensions, { base: pathFromRoot('node_modules') })
+    .pipe(gulp.dest(pathFromRoot('dist', 'extension-assets')))
 
-  const mergedStream = merge2(assets, componentImages)
+  const mergedStream = merge2(assets, extensionAssets)
   mergedStream.on('queueDrain', (done))
 })
 
+// TODO: do we need any of these?
 gulp.task('copy-assets:remote', (done) => {
   remoteSrc([
     'collapsible.js',

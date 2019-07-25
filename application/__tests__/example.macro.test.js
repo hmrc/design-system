@@ -1,4 +1,4 @@
-/* globals describe test expect */
+/* globals describe it expect */
 
 const { JSDOM } = require('jsdom')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
@@ -60,7 +60,7 @@ describe('Single page example macro english', () => {
   const parameters = { item: 'new-tab-link', example: 'default' }
   const document = documentFactory(parameters, options)
 
-  const exampleSrc = '/design-library/new-tab-link/default/'
+  const exampleSrc = '/hmrc-design-patterns/new-tab-link/default/'
 
   const htmlPanelID = 'example-default-html'
   const nunjucksPanelID = 'example-default-nunjucks'
@@ -68,31 +68,31 @@ describe('Single page example macro english', () => {
   const exampleFrame = document.querySelector('#example-default iframe')
   const exampleLink = document.querySelector('.app-example__link a')
 
-  test('should render an iFrame for the example with the correct attribute values', () => {
+  it('should render an iFrame for the example with the correct attribute values', () => {
     expect(exampleFrame).not.toBeNull()
     expect(exampleFrame.tagName.toLowerCase()).toBe('iframe')
     expect(exampleFrame.src).toMatch(exampleSrc)
   })
 
-  test('should have a link to open the example html in a new window or tab', () => {
+  it('should have a link to open the example html in a new window or tab', () => {
     expect(exampleLink).not.toBeNull()
     expect(exampleLink.href).toBe(exampleSrc)
     expect(exampleLink.target).toBe('_blank')
   })
 
-  test('Should not have a language toggle for English only examples', () => {
+  it('Should not have a language toggle for English only examples', () => {
     const languageToggleLink = document.querySelector('a.language-toggle')
     expect(languageToggleLink).toBeNull()
   })
 
-  test('Should have a language toggle for dual language examples', () => {
+  it('Should have a language toggle for dual language examples', () => {
     const welshParameters = { ...parameters, welsh: 'default-welsh' }
     const welshDocument = documentFactory(welshParameters, options)
-    const languageToggleLink = welshDocument.querySelector('a[href="/design-library/new-tab-link/default-welsh/"]')
+    const languageToggleLink = welshDocument.querySelector('a[href="/hmrc-design-patterns/new-tab-link/default-welsh/"]')
     expect(languageToggleLink).not.toBeNull()
   })
 
-  test('should have a button to show HTML code examples', () => {
+  it('should have a button to show HTML code examples', () => {
     const tabLink = document.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${htmlPanelID}"]`)
     const tabContentContainer = document.getElementById(htmlPanelID)
     expect(tabContentContainer).not.toBeNull()
@@ -104,7 +104,14 @@ describe('Single page example macro english', () => {
     })
   })
 
-  test('should have a button to show Nunjucks code examples', () => {
+  it('should have a button to copy HTML code examples', () => {
+    const codeContainer = document.querySelector('#example-default-html')
+    const copyButton = codeContainer.querySelector('.app-link--copy')
+    expect(copyButton).not.toBeNull()
+    expect(copyButton.text).toBe('Copy')
+  })
+
+  it('should have a button to show Nunjucks code examples', () => {
     const tabLink = document.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
     const tabContentContainer = document.getElementById(nunjucksPanelID)
     expect(tabContentContainer).not.toBeNull()
@@ -116,7 +123,14 @@ describe('Single page example macro english', () => {
     })
   })
 
-  test('Should include the escaped HTML markup from the examples', () => {
+  it('should have a button to copy Nunjucks code examples', () => {
+    const codeContainer = document.querySelector('#example-default-nunjucks')
+    const copyButton = codeContainer.querySelector('.app-link--copy')
+    expect(copyButton).not.toBeNull()
+    expect(copyButton.text).toBe('Copy')
+  })
+
+  it('Should include the escaped HTML markup from the examples', () => {
     const exampleHTMLCode = document.querySelector(`#${htmlPanelID} pre code`)
     expect(exampleHTMLCode).toMatchSnapshot()
   })

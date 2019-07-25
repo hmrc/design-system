@@ -1,13 +1,18 @@
 //govuk-frontend dependencies
 @import 'node_modules/govuk-frontend/all';
 
+//hrmc-frontend dependencies
+@import 'node_modules/hmrc-frontend/all';
+
 // HMRC Design System Base Styles template
 @import 'settings/colours';
 @import 'settings/images';
 
 @import 'objects/width-container';
 
+@import 'components/accordion';
 @import 'components/content';
+@import 'components/copy-button';
 @import 'components/header';
 @import 'components/logo';
 @import 'components/hmrc-internal-header';

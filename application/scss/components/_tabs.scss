@@ -94,6 +94,7 @@
 .app-tabs__container {
   margin-top: -2px;
   border: 1px solid $govuk-border-colour;
+  position: relative;
 }
 
 .app-tabs__container--hidden {

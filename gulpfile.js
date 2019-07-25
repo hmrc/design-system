@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const livereload = require('gulp-livereload')
 
 require('./tasks/gulp/clean')
 require('./tasks/gulp/build')
@@ -8,7 +9,10 @@ require('./tasks/gulp/jest')
 require('./tasks/gulp/copy-assets')
 require('./tasks/gulp/serve')
 
-gulp.task('watch', gulp.parallel('build:watch', 'scss:watch', 'copy-assets:watch'))
+gulp.task('watch', gulp.parallel('build:watch', 'scss:watch', 'copy-assets:watch', (done) => {
+  livereload.listen()
+  done()
+}))
 
 gulp.task('prepare', gulp.parallel('compile', 'scss:compile', 'copy-assets'))
 

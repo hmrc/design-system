@@ -1,0 +1,57 @@
+---
+title: There is a problem with the service
+menuText: There is a problem with the service
+layout: designPatternPage.njk
+---
+
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">
+  Use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/problem-with-the-service-pages/">There is a problem with the service</a> pattern from the GOV.UK Design System.</p>
+
+<p class="govuk-body">
+  The GOV.UK Design System does not contain Welsh translations yet. These examples include recommended content in Welsh.
+</p>
+
+<h2 class="govuk-heading-m" id="default-page">
+  General page
+</h2>
+
+{{
+  example({
+    item: 'problem-with-service',
+    example: 'problem-with-service',
+    welsh: 'problem-with-service-welsh',
+    description: 'Problem with the service, general page'
+  })
+}}
+
+<h2 class="govuk-heading-m" id="service-has-offline-support-but-no-specific-page-that-includes-numbers-and-opening-times">
+  Service has offline support but no specific page that includes numbers and opening times
+</h2>
+
+{{
+  example({
+    item: 'problem-with-service',
+    example: 'no-contact',
+    welsh: 'no-contact-welsh',
+    description: 'Problem with the service, no contact'
+  })
+}}
+
+<h2 class="govuk-heading-m" id="a-link-to-another-service">
+  A link to another service
+</h2>
+
+{{
+  example({
+    item: 'problem-with-service',
+    example: 'link-to-other-service',
+    welsh: 'link-to-other-service-welsh',
+    description: 'Problem with the service, link to another service'
+  })
+}}
+
+{% endblock %}
