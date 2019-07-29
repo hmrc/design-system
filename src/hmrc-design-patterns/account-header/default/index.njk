@@ -1,0 +1,44 @@
+---
+layout: layout-example.njk
+---
+
+<!-- COOKIE BANNER -->
+<div class="hmrc-cookie-banner">
+  <div class="govuk-width-container">
+    <p class="govuk-body">GOV.UK uses cookies to make the site simpler. <a class="govuk-link" href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+  </div>
+</div>
+<!-- END COOKIE BANNER -->
+
+{% from "header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+{%- from "hmrc-account-menu/macro.njk" import hmrcAccountMenu -%}
+
+{{
+  hmrcAccountMenu ({
+    accountHome: {
+      href: "#account-home",
+      active: true
+    },
+    messages: {
+      href: "#messages",
+      messageCount: 2
+    },
+    checkProgress: {
+      href: "#check-progress"
+    },
+    paperlessSettings: {
+      href: "#paperless-settings"
+    },
+    personalDetails: {
+      href: "#personal-details"
+    },
+    signOut: {
+      href: "#sign-out"
+    }
+  })
+}}

@@ -1,0 +1,62 @@
+---
+title: Account header
+layout: designPatternPage.njk
+---
+
+{% from "_example.njk" import example %}
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+{% block content %}
+
+<p class="govuk-body">The account header is used for services that are part of the <a class="govuk-link" href="https://www.tax.service.gov.uk/personal-account">personal tax account</a>.</p>
+
+<h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">Use this pattern if your service is part of the personal tax account.</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Do not use this pattern if your service is not part of the personal tax account. Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> instead.</p>
+
+<h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
+
+<p class="govuk-body">The account header contains:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the GOV.UK cookie banner, with a <a href="https://www.tax.service.gov.uk/help/cookies">link to HMRC cookie policy</a></li>
+  <li>the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a></li>
+  <li>the account menu</li>
+  <li>the Welsh language toggle, if your service is available in Welsh</li>
+</ul>
+
+<p class="govuk-body">There are 2 ways to use the account header. You can use HTML or, if you are using Nunjucks or <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com">version 7 or later of the GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
+
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern – <a href="/design-library/using-code-in-prototypes/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+</div>
+
+<p class="govuk-body">
+  You can also use a layout designed for the account header. Change the first line of code to
+</p>
+
+  {{
+    codeSnippet({
+      code: '{% extends "layout-hmrc-account-header.html" %}',
+      canCopy: true
+    })
+  }}
+
+{{
+  example({
+    item: 'account-header',
+    description: 'Account header'
+  })
+}}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the account header, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/128">Discuss the account header on GitHub</a></p>
+
+{% endblock %}
