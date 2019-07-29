@@ -212,7 +212,9 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
-        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link "</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"noopener noreferrer"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.gov.uk/working-tax-credit/eligibility"</span>&gt;</span>Find out if you qualify for tax credits (opens in a new window or tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
@@ -225,7 +227,9 @@
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
-        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-new-tab-link/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNewTabLink %}

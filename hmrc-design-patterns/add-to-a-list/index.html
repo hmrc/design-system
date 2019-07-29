@@ -176,7 +176,9 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-view-a-summary-html" role="tabpanel">
-        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>You have added 3 directors<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -272,7 +274,9 @@
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-view-a-summary-nunjucks" role="tabpanel">
-        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-add-to-a-list/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcAddToAList -%}

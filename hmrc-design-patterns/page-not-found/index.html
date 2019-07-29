@@ -171,7 +171,9 @@
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
-        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
@@ -204,7 +206,9 @@
       </div>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
-        <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+        </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs js">{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
