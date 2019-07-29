@@ -11,7 +11,7 @@ CopyToClipboard.prototype.init = function () {
 
   try {
     new ClipboardJS(this.$module, {
-      target: trigger => trigger.nextElementSibling
+      target: trigger => trigger.parentElement.nextElementSibling
     }).on('success', this.handleSuccess)
   } catch (err) {
     if (err) {
