@@ -1,9 +1,8 @@
 ---
 layout: designPatternPage.njk
 title: Page title
-status: development
 ---
-{% from "_example.njk" import example %}
+{% from "_codeSnippet.njk" import codeSnippet %}
 
 {% block content %}
 
@@ -28,31 +27,35 @@ status: development
 
   <p class="govuk-body">Change your page title by updating the default page_title block on each page.</p>
 
-  {% raw %}
-  <pre class="language-example-code">
-    {% block page_title %}<br>
-    &nbsp;&nbsp;Do you live in the UK? – Your details – Manage your tax credits – GOV.UK<br>
-    {% endblock %}
-  </pre>
-  {% endraw %}
+  {{
+    codeSnippet({
+      code: '
+{% block page_title %}
+  Do you live in the UK? – Your details – Manage your tax credits – GOV.UK
+{% endblock %}',
+      canCopy: true
+    })
+  }}
 
   <p class="govuk-body">For pages that use HTML, edit the <code>&lt;title&gt;</code> on each page.</p>
 
-  <pre class="language-example-code">
-    &lt;title&gt;<br>
-    &nbsp;&nbsp;Do you live in the UK? – Your details – Manage your tax credits – GOV.UK<br>
-    &lt;title&gt;
-  </pre>
+  {{
+    codeSnippet({
+      code: '<title>Do you live in the UK? – Your details – Manage your tax credits – GOV.UK<titl>',
+      canCopy: true
+    })
+  }}
 
   <p class="govuk-body">
     If the user makes an error, add ‘Error: ’ to the beginning of the title so screen readers read it out as soon as possible.
   </p>
 
-  <pre class="language-example-code">
-    &lt;title&gt;<br>
-    &nbsp;&nbsp;Error: Do you live in the UK? – Your details – Manage your tax credits – GOV.UK<br>
-    &lt;title&gt;
-  </pre>
+  {{
+    codeSnippet({
+      code: '<title>Error: Do you live in the UK? – Your details – Manage your tax credits – GOV.UK<titl>',
+      canCopy: true
+    })
+  }}
 
   <h3 class="govuk-heading-m" id="personally-identifiable-information">Personally identifiable information</h3>
 
