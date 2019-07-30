@@ -46,8 +46,8 @@
         <h2 class="govuk-heading-m"><a href="/hmrc-design-patterns/">HMRC Design Patterns</a></h2>
         <nav class="app-subnav">
           <ul class="app-subnav__section"><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-menu">
-                  Account menu
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-header">
+                  Account header
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/accounts-office-reference">
@@ -84,6 +84,10 @@
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-not-found">
                   Page not found
+                </a>
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-title">
+                  Page title
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
@@ -144,30 +148,47 @@
 
   <p class="govuk-body">Change your page title by updating the default page_title block on each page.</p>
 
-  <pre class="language-example-code">
-    {% block page_title %}<br>
-    &nbsp;&nbsp;Do you live in the UK? – Your details – Manage your tax credits – GOV.UK<br>
-    {% endblock %}
-  </pre>
-  
+      <div class="app-code-snippet app-code-snippet--copy">
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+            data-module="copy-to-clipboard">
+            Copy
+          </a>
+        </div>
+      <pre><code class="govuk-body-s">
+{% block page_title %}
+  Do you live in the UK? – Your details – Manage your tax credits – GOV.UK
+{% endblock %}</code></pre>
+    </div>
+
 
   <p class="govuk-body">For pages that use HTML, edit the <code>&lt;title&gt;</code> on each page.</p>
 
-  <pre class="language-example-code">
-    &lt;title&gt;<br>
-    &nbsp;&nbsp;Do you live in the UK? – Your details – Manage your tax credits – GOV.UK<br>
-    &lt;title&gt;
-  </pre>
+      <div class="app-code-snippet app-code-snippet--copy">
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+            data-module="copy-to-clipboard">
+            Copy
+          </a>
+        </div>
+      <pre><code class="govuk-body-s">&lt;title&gt;Do you live in the UK? – Your details – Manage your tax credits – GOV.UK&lt;titl&gt;</code></pre>
+    </div>
+
 
   <p class="govuk-body">
     If the user makes an error, add ‘Error: ’ to the beginning of the title so screen readers read it out as soon as possible.
   </p>
 
-  <pre class="language-example-code">
-    &lt;title&gt;<br>
-    &nbsp;&nbsp;Error: Do you live in the UK? – Your details – Manage your tax credits – GOV.UK<br>
-    &lt;title&gt;
-  </pre>
+      <div class="app-code-snippet app-code-snippet--copy">
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+            data-module="copy-to-clipboard">
+            Copy
+          </a>
+        </div>
+      <pre><code class="govuk-body-s">&lt;title&gt;Error: Do you live in the UK? – Your details – Manage your tax credits – GOV.UK&lt;titl&gt;</code></pre>
+    </div>
+
 
   <h3 class="govuk-heading-m" id="personally-identifiable-information">Personally identifiable information</h3>
 
