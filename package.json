@@ -47,7 +47,6 @@
     "gulp-livereload": "^4.0.1",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-remote-src": "^0.4.3",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-standard": "^12.0.0",

@@ -1,25 +1,30 @@
-.app-link--copy {
-  &:link,
-  &:active,
-  &:visited,
-  &:hover {
-    @include govuk-font(16);
-    position: absolute;
-    z-index: 1;
-    top: govuk-spacing(3);
-    right: govuk-spacing(3);
-    min-width: 58px;
-    padding: 4px 10px 0;
-    border: 1px solid $hmrc-green;
-    color: $hmrc-green;
-    background-color: govuk-colour("white");
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+.app-link--copy__container {
+  position: relative;
+  background: red;
 
-    .app-prose-scope & {
-      color: $hmrc-green; // A specific selector to override .app-prose-scope a:link
-      background-color: govuk-colour("white"); // A specific selector to override .app-prose-scope a:focus
+  .app-link--copy {
+    &:link,
+    &:active,
+    &:visited,
+    &:hover {
+      @include govuk-font(16);
+      position: absolute;
+      z-index: 1;
+      top: govuk-spacing(3);
+      right: govuk-spacing(3);
+      min-width: 58px;
+      padding: 4px 10px 0;
+      border: 1px solid $hmrc-green;
+      color: $hmrc-green;
+      background-color: govuk-colour("white");
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      .app-prose-scope & {
+        color: $hmrc-green; // A specific selector to override .app-prose-scope a:link
+        background-color: govuk-colour("white"); // A specific selector to override .app-prose-scope a:focus
+      }
     }
   }
 }
