@@ -5,7 +5,7 @@ const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path
 
 describe('Example page rendering', () => {
   beforeEach(async () => {
-    await visit('/hmrc-design-patterns/ask-for-consent/')
+    await visit('/hmrc-design-patterns/ask-the-user-for-their-consent/')
   })
 
   it('should have the correct meta title', async () => {
