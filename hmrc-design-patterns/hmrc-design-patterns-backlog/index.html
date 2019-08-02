@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page title - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <title>HMRC Design Patterns backlog - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -85,7 +85,7 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-not-found">
                   Page not found
                 </a>
-              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+              </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-title">
                   Page title
                 </a>
@@ -107,7 +107,7 @@
                 </a>
               </li></ul>
 
-          <ul class="app-subnav__section"><li class="app-subnav__section-item">
+          <ul class="app-subnav__section"><li class="app-subnav__section-item app-subnav__section-item--current">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-backlog">
                   HMRC Design Patterns backlog
                 </a>
@@ -124,97 +124,60 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Page title</h1></header>
+  <h1 class="govuk-heading-xl">HMRC Design Patterns backlog</h1></header>
 
 
-<p class="govuk-body">The page title is the text displayed in the browser tab. It is the <code>&lt;title&gt;</code> not the <a class="govuk-link" href="/hmrc-design-patterns/page-heading">page heading</a> or <code>&lt;h1&gt;</code>.</p>
+<p class="govuk-body">Anyone can propose, develop or contribute to HMRC Design Patterns. You can propose a new pattern, or suggest an improvement to an existing one.</p>
 
-<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+<p class="govuk-body">These are patterns designed specifically for the needs of HMRC users. If you want to propose a new pattern for use across government, or suggest an improvement to an existing one, use the <a class="govuk-link" href="https://design-system.service.gov.uk/community/backlog/">GOV.UK Design System community backlog</a>.</p>
 
-<p class="govuk-body">Use a unique page title on every page.</p>
-
-<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
-
-<p class="govuk-body">The page title can have 3 or 4 items separated by dashes. They are:</p>
+<p class="govuk-body">Patterns in the backlog may be:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li>the same &lt;h1&gt; as the page</li>
-  <li>section name, which you should only include if the service has more than one section</li>
-  <li>service name</li>
-  <li>GOV.UK</li>
+  <li><span class="govuk-!-font-weight-bold">Proposed</span> – someone has suggested a new pattern</li>
+  <li><span class="govuk-!-font-weight-bold">To do</span> – the proposed pattern has been agreed and is ready to work on</li>
+  <li><span class="govuk-!-font-weight-bold">In progress</span> – someone is actively working on the pattern</li>
 </ul>
 
-  <h3 class="govuk-heading-m" id="using-the-gov-uk-protype-kit">Using the GOV.UK Prototype kit</h3>
 
-  <p class="govuk-body">Change your page title by updating the default page_title block on each page.</p>
-
-      <div class="app-code-snippet app-code-snippet--copy">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
-            data-module="copy-to-clipboard">
-            Copy
-          </a>
-        </div>
-      <pre><code class="govuk-body-s">
-{% block page_title %}
-  Do you live in the UK? – Your details – Manage your tax credits – GOV.UK
-{% endblock %}</code></pre>
-    </div>
-
-
-  <p class="govuk-body">For pages that use HTML, edit the <code>&lt;title&gt;</code> on each page.</p>
-
-      <div class="app-code-snippet app-code-snippet--copy">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
-            data-module="copy-to-clipboard">
-            Copy
-          </a>
-        </div>
-      <pre><code class="govuk-body-s">&lt;title&gt;Do you live in the UK? – Your details – Manage your tax credits – GOV.UK&lt;titl&gt;</code></pre>
-    </div>
-
-
-  <p class="govuk-body">
-    If the user makes an error, add ‘Error: ’ to the beginning of the title so screen readers read it out as soon as possible.
-  </p>
-
-      <div class="app-code-snippet app-code-snippet--copy">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
-            data-module="copy-to-clipboard">
-            Copy
-          </a>
-        </div>
-      <pre><code class="govuk-body-s">&lt;title&gt;Error: Do you live in the UK? – Your details – Manage your tax credits – GOV.UK&lt;titl&gt;</code></pre>
-    </div>
+<table class="govuk-table">
+  <caption class="govuk-table__caption">Backlog</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Name</th>
+      <th class="govuk-table__header" scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/31">Add to a list</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/28">Company details</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/46">Exit survey</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/147">Save</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/163">Status tags</a></td>
+      <td class="govuk-table__cell">In progress</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/65">When a user has signed out</a></td>
+      <td class="govuk-table__cell">To do</td>
+    </tr>
+  </tbody>
+</table>
 
 
-  <h3 class="govuk-heading-m" id="personally-identifiable-information">Personally identifiable information</h3>
-
-  <p class="govuk-body">If there is personally identifiable information in the &lt;h1&gt;, you must make sure it is not recorded in your analytics package.</p>
-
-  <p class="govuk-body">For example, if the &lt;h1&gt; is ‘What is Gordon's date of birth?’, record ‘What is their date of birth?’.</p>
-
-  <p class="govuk-body">To do this you could change the page title to use ‘their’ but keep ‘Gordon’ in the &lt;h1&gt;. Or you could keep ‘Gordon’ in the page title and send a different page title to your analytics package.</p>
-
-<h2 class="govuk-heading-l" id="research">Research</h2>
-
-<p class="govuk-body">This guidance is based on the format recommended by the Web Content Accessibility Guidelines. See <a class="govuk-link" href="https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G88">Providing descriptive titles for Web pages</a>.</p>
-
-<p class="govuk-body">It is more accessible and is consistent with GOV.UK guidance pages.</p>
-
-<p class="govuk-body">All users will be able to use the title to know:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>what page they are on</li>
-  <li>where that page is inside a service</li>
-  <li>they are still on GOV.UK</li>
-</ul>
-
-<p class="govuk-body">We need more research. If you have used the page title, get in touch to share your research findings.</p>
-
-<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/90">Discuss the page title on GitHub</a></p>
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/new">Propose a new pattern on the HMRC Design Patterns backlog</a></p>
 
 </div>
           </div>

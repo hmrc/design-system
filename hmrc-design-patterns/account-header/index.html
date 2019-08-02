@@ -54,7 +54,7 @@
                   Accounts office reference
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-for-consent">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-the-user-for-their-consent">
                   Ask the user for their consent
                 </a>
               </li><li class="app-subnav__section-item">
@@ -67,15 +67,15 @@
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
-                  Employer paye reference
+                  Employer PAYE reference
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/notification-badge">
                   Notification badge
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/new-tab-link">
-                  Open in a new window
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/open-links-in-a-new-window-or-tab">
+                  Open in a new window or tab
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-heading">
@@ -94,11 +94,11 @@
                   Service unavailable
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/problem-with-service">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
                   There is a problem with the service
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/utr">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/unique-taxpayer-reference">
                   Unique Taxpayer Reference
                 </a>
               </li><li class="app-subnav__section-item">
@@ -108,11 +108,11 @@
               </li></ul>
 
           <ul class="app-subnav__section"><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/backlog">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-backlog">
                   HMRC Design Patterns backlog
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/using-code-in-prototypes">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype">
                   Installing HMRC Frontend in your prototype
                 </a>
               </li></ul>
@@ -152,7 +152,7 @@
 <p class="govuk-body">There are 2 ways to use the account header. You can use HTML or, if you are using Nunjucks or <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com">version 7 or later of the GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
 <div class="govuk-inset-text">
-  You need HMRC Frontend to use this pattern – <a href="/design-library/using-code-in-prototypes/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+  You need HMRC Frontend to use this pattern – <a href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
 </div>
 
 <p class="govuk-body">
@@ -353,7 +353,7 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__content"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__link govuk-header__link--service-name"</span>&gt;</span>
-        Service Name
+        Enw&amp;#39;r gwasanaeth
       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-language-select"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Choose a language"</span>&gt;</span>
@@ -490,7 +490,7 @@
               <code class="hljs js">{%
   <span class="hljs-keyword">set</span> hmrcAccountHeader = {
     language: <span class="hljs-string">"cy"</span>,
-    <span class="hljs-attr">serviceName</span>: <span class="hljs-string">"Service Name"</span>,
+    <span class="hljs-attr">serviceName</span>: <span class="hljs-string">"Enw'r gwasanaeth"</span>,
     <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">"/"</span>,
     <span class="hljs-attr">homepageUrl</span>: <span class="hljs-string">"/"</span>,
     <span class="hljs-attr">containerClasses</span>: <span class="hljs-string">"govuk-width-container"</span>,

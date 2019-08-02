@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Updating HMRC Frontend in your prototype - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <title>Install HMRC Frontend in an old version of the GOVUK prototype Kit - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -54,7 +54,7 @@
                   Accounts office reference
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-for-consent">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-the-user-for-their-consent">
                   Ask the user for their consent
                 </a>
               </li><li class="app-subnav__section-item">
@@ -67,15 +67,15 @@
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
-                  Employer paye reference
+                  Employer PAYE reference
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/notification-badge">
                   Notification badge
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/new-tab-link">
-                  Open in a new window
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/open-links-in-a-new-window-or-tab">
+                  Open in a new window or tab
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-heading">
@@ -94,11 +94,11 @@
                   Service unavailable
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/problem-with-service">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
                   There is a problem with the service
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/utr">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/unique-taxpayer-reference">
                   Unique Taxpayer Reference
                 </a>
               </li><li class="app-subnav__section-item">
@@ -108,11 +108,11 @@
               </li></ul>
 
           <ul class="app-subnav__section"><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/backlog">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-backlog">
                   HMRC Design Patterns backlog
                 </a>
               </li><li class="app-subnav__section-item">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/using-code-in-prototypes">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype">
                   Installing HMRC Frontend in your prototype
                 </a>
               </li></ul>
@@ -124,12 +124,16 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Updating HMRC Frontend in your prototype</h1></header>
+  <h1 class="govuk-heading-xl">Install HMRC Frontend in an old version of the GOVUK prototype Kit</h1></header>
 
 
 
 <p class="govuk-body">
-  This guide explains how to update HMRC Frontend to get the latest features. You must have already <a href="/hmrc-design-patterns/using-code-in-prototypes">installed hmrc-frontend</a> for these to work.
+  In version 8.7.0 of GOVUK's prototype kit a new feature was introduced which made installing HMRC Frontend much simpler, we recommend that you upgrade to 8.7.0 or later and then <a href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">follow the simple installation instructions</a>
+</p>
+
+<p class="govuk-body">
+  This guide explains how to install HMRC Frontend to support these styles. You will only have to follow these steps once for your prototype. You must use a version between 7 and 8.7.0 of the GOV.UK Prototype Kit for these to work.
 </p>
 
 <h2 class="govuk-heading-m" id="step-1">
@@ -143,7 +147,7 @@
     </div>
 
 
-<p class="govuk-body">If your prototype is already running, to stop it use</p>
+<p class="govuk-body">If your protype is already running, to stop it use</p>
 
     <div class="app-code-snippet">
       <pre><code class="govuk-body-s">Ctrl + C</code></pre>
@@ -163,7 +167,163 @@
             Copy
           </a>
         </div>
-      <pre><code class="govuk-body-s">npm update --save hmrc-frontend</code></pre>
+      <pre><code class="govuk-body-s">npm install --save &quot;hmrc/hmrc-frontend#package-latest&quot;</code></pre>
+    </div>
+
+
+<h2 class="govuk-heading-m" id="step-3">
+  Step 3
+</h2>
+
+<p class="govuk-body">In your HTML editor, open</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">/app/assets/sass/application.scss</code></pre>
+    </div>
+
+
+<p class="govuk-body">After</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">// Import GOV.UK Frontend
+@import &quot;node_modules/govuk-frontend/all&quot;;</code></pre>
+    </div>
+
+
+<p class="govuk-body">paste</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+            data-module="copy-to-clipboard">
+            Copy
+          </a>
+        </div>
+      <pre><code class="govuk-body-s">// Import HMRC Frontend
+@import &quot;node_modules/hmrc-frontend/all&quot;;</code></pre>
+    </div>
+
+
+<h2 class="govuk-heading-m" id="step-4">
+  Step 4
+</h2>
+
+<p class="govuk-body">In your root folder, open</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">/server.js</code></pre>
+    </div>
+
+
+<p class="govuk-body">and find</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">appViews</code></pre>
+    </div>
+
+
+<p class="govuk-body">Add the paths to hmrc-frontend layouts and components to the top of the list.</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+            data-module="copy-to-clipboard">
+            Copy
+          </a>
+        </div>
+      <pre><code class="govuk-body-s">var appViews = [
+&lt;mark&gt;path.join(__dirname, &#39;/node_modules/hmrc-frontend/layouts&#39;),&lt;/mark&gt;
+&lt;mark&gt;path.join(__dirname, &#39;/node_modules/hmrc-frontend/components&#39;),&lt;/mark&gt;
+path.join(__dirname, &#39;/node_modules/govuk-frontend/&#39;),
+path.join(__dirname, &#39;/node_modules/govuk-frontend/components&#39;),
+path.join(__dirname, &#39;/app/views/&#39;),
+path.join(__dirname, &#39;/lib/&#39;)
+]</code></pre>
+    </div>
+
+
+<h2 class="govuk-heading-m" id="step-5">
+  Step 5
+</h2>
+
+<p class="govuk-body">In</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">/server.js</code></pre>
+    </div>
+
+
+<p class="govuk-body">find</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">app.use(&#39;/node_modules/govuk-frontend&#39;, express.static(path.join(__dirname, &#39;/node_modules/govuk-frontend&#39;)))</code></pre>
+    </div>
+
+
+<p class="govuk-body">and on the next line paste</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+            data-module="copy-to-clipboard">
+            Copy
+          </a>
+        </div>
+      <pre><code class="govuk-body-s">app.use(&#39;/node_modules/hmrc-frontend&#39;, express.static(path.join(__dirname, &#39;/node_modules/hmrc-frontend&#39;)))</code></pre>
+    </div>
+
+
+<h2 class="govuk-heading-m" id="step-6">
+  Step 6
+</h2>
+
+<p class="govuk-body">In</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">/server.js</code></pre>
+    </div>
+
+
+<p class="govuk-body">find</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">app.use(&#39;/assets&#39;, express.static(path.join(__dirname, &#39;node_modules&#39;, &#39;govuk-frontend&#39;, &#39;assets&#39;)))</code></pre>
+    </div>
+
+
+<p class="govuk-body">and on the next line paste in</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+            data-module="copy-to-clipboard">
+            Copy
+          </a>
+        </div>
+      <pre><code class="govuk-body-s">app.use(&#39;/assets&#39;, express.static(path.join(__dirname, &#39;node_modules&#39;, &#39;hmrc-frontend&#39;)))</code></pre>
+    </div>
+
+
+<h2 class="govuk-heading-m" id="step-7">
+  Step 7
+</h2>
+<p class="govuk-body">Open</p>
+
+    <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">app/views/includes/scripts.html</code></pre>
+    </div>
+
+
+<p class="govuk-body">and at the end of the file, paste</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+        <div class="app-link--copy__container">
+          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
+            data-module="copy-to-clipboard">
+            Copy
+          </a>
+        </div>
+      <pre><code class="govuk-body-s">&amp;lt;script src=&quot;/node_modules/hmrc-frontend/all.js&quot;&amp;gt;&amp;lt;/script&amp;gt;</code></pre>
     </div>
 
 
@@ -180,8 +340,6 @@
   <li>copy the code from the example</li>
   <li>paste the code into the page in your prototype</li>
 </ul>
-
-<p class="govuk-body">If you are using an older version of the prototype kit please use the <a class="govuk-link" href="/hmrc-design-patterns/using-code-in-prototypes/older-prototype-kits">manual installation steps for older prototype kits</a>.</p>
 
 </div>
           </div>
