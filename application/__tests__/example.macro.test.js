@@ -57,10 +57,10 @@ const documentFactory = function (parameters, options) {
 }
 
 describe('Single page example macro english', () => {
-  const parameters = { item: 'new-tab-link', example: 'default' }
+  const parameters = { item: 'open-links-in-a-new-window-or-tab', example: 'default' }
   const document = documentFactory(parameters, options)
 
-  const exampleSrc = '/hmrc-design-patterns/new-tab-link/default/'
+  const exampleSrc = '/hmrc-design-patterns/open-links-in-a-new-window-or-tab/default/'
 
   const htmlPanelID = 'example-default-html'
   const nunjucksPanelID = 'example-default-nunjucks'
@@ -88,7 +88,7 @@ describe('Single page example macro english', () => {
   it('Should have a language toggle for dual language examples', () => {
     const welshParameters = { ...parameters, welsh: 'default-welsh' }
     const welshDocument = documentFactory(welshParameters, options)
-    const languageToggleLink = welshDocument.querySelector('a[href="/hmrc-design-patterns/new-tab-link/default-welsh/"]')
+    const languageToggleLink = welshDocument.querySelector('a[href="/hmrc-design-patterns/open-links-in-a-new-window-or-tab/default-welsh/"]')
     expect(languageToggleLink).not.toBeNull()
   })
 

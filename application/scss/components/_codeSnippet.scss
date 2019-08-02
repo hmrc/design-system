@@ -1,9 +1,20 @@
+code {
+  padding: 0 5px;
+  overflow-x: auto;
+  color: #d14;
+  background: #f8f8f8;
+}
+
 .app-code-snippet {
   max-width: 100%;
 
   pre {
     max-width: 100%;
     padding: govuk-spacing(3)
+
+    code {
+      color: $black;
+    }
   }
 
   &.app-code-snippet--copy {
