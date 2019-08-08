@@ -2,7 +2,7 @@
 title: HMRC content style guide
 layout: oneColumnPage.njk
 ---
-{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -29,7 +29,7 @@ layout: oneColumnPage.njk
   </div>
 </div>
 
-{%- from "accordion/macro.njk" import govukAccordion -%}
+{%- from "govuk/components/accordion/macro.njk" import govukAccordion -%}
 
 {{
   govukAccordion ({

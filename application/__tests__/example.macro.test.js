@@ -111,7 +111,7 @@ describe('Single page example macro english', () => {
     expect(copyButton.text).toBe('Copy')
   })
 
-  it.skip('should have a button to show Nunjucks code examples', () => {
+  it('should have a button to show Nunjucks code examples', () => {
     const tabLink = document.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
     const tabContentContainer = document.getElementById(nunjucksPanelID)
     expect(tabContentContainer).not.toBeNull()
@@ -123,7 +123,7 @@ describe('Single page example macro english', () => {
     })
   })
 
-  it.skip('should have a button to copy Nunjucks code examples', () => {
+  it('should have a button to copy Nunjucks code examples', () => {
     const codeContainer = document.querySelector('#example-default-nunjucks')
     const copyButton = codeContainer.querySelector('.app-link--copy')
     expect(copyButton).not.toBeNull()
