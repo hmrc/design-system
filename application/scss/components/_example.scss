@@ -12,7 +12,7 @@
 .app-example {
   position: relative;
   border: 1px solid $govuk-border-colour;
-  background: govuk-colour("grey-3");
+  background: govuk-colour("light-grey");
 }
 
 .app-example-page {
@@ -33,7 +33,7 @@
   top: 0;
   padding: 5px govuk-spacing(2);
   @include govuk-font(14);
-  background: govuk-colour("grey-3");
+  background: govuk-colour("light-grey");
 
   a {
     color: $govuk-link-colour;

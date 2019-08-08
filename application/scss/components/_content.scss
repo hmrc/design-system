@@ -41,7 +41,9 @@
   }
 
   video {
-    @include govuk-focusable;
+    &:focus {
+      @include govuk-focused-text;
+    }
   }
 
   // IE8 does not support the video element, so we hide the element entirely.
