@@ -1,9 +1,9 @@
 // Taken from https://github.com/alphagov/govuk-design-system/blob/29b9cf8c30ac1514d16fc97adaf15100e5040f7d/src/javascripts/components/tabs.js
 
-import 'govuk-frontend/vendor/polyfills/Function/prototype/bind'
-import 'govuk-frontend/vendor/polyfills/Element/prototype/classList'
-import 'govuk-frontend/vendor/polyfills/Event'
-import common from 'govuk-frontend/common'
+import 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
+import 'govuk-frontend/govuk/vendor/polyfills/Element/prototype/classList'
+import 'govuk-frontend/govuk/vendor/polyfills/Event'
+import common from 'govuk-frontend/govuk/common'
 
 var nodeListForEach = common.nodeListForEach
 

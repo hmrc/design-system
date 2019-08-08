@@ -1,8 +1,8 @@
 //govuk-frontend dependencies
-@import 'node_modules/govuk-frontend/all';
+@import 'node_modules/govuk-frontend/govuk/all';
 
 //hrmc-frontend dependencies
-@import 'node_modules/hmrc-frontend/all';
+@import 'node_modules/hmrc-frontend/hmrc/all';
 
 // HMRC Design System Base Styles template
 @import 'settings/colours';
