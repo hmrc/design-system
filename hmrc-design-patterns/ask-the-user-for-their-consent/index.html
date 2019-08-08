@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ask the user for their consent - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
-  <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
+  <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
     <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
@@ -184,11 +184,11 @@
             aria-controls="example-yes-no-question-html"
             data-track="tab-html" title="Display Ask a yes-no question example as HTML">HTML</a>
         </li>
-        <!-- <li class="app-tabs__item js-tabs__item" role="presentation">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
           <a href="#example-yes-no-question-nunjucks" role="tab"
             aria-controls="example-yes-no-question-nunjucks"
             data-track="tab-nunjucks" title="Display Ask a yes-no question example as Nunjucks">Nunjucks</a>
-        </li> -->
+        </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-yes-no-question-html" role="tabpanel">
@@ -207,20 +207,22 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios--inline"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"paperless-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"paperless"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"paperless-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"paperless"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"paperless"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"paperless"</span>&gt;</span>
           Yes
-        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"paperless-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"paperless"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"no"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"paperless-2"</span>&gt;</span>
           No
-        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
           </pre>
@@ -234,8 +236,8 @@
         </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">"radios/macro.njk"</span> <span class="hljs-keyword">import</span> govukRadios %}
+            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/radios/macro.njk"</span> <span class="hljs-keyword">import</span> govukRadios %}
 
 {{ govukRadios({
   <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-radios--inline"</span>,
@@ -296,11 +298,11 @@
             aria-controls="example-single-checkbox-html"
             data-track="tab-html" title="Display Use a single checkbox example as HTML">HTML</a>
         </li>
-        <!-- <li class="app-tabs__item js-tabs__item" role="presentation">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
           <a href="#example-single-checkbox-nunjucks" role="tab"
             aria-controls="example-single-checkbox-nunjucks"
             data-track="tab-nunjucks" title="Display Use a single checkbox example as Nunjucks">Nunjucks</a>
-        </li> -->
+        </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-single-checkbox-html" role="tabpanel">
@@ -320,14 +322,15 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"access-code-7-days-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"access-code-7-days"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Keep for 7 days"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"access-code-7-days-1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"access-code-7-days"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"access-code-7-days"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Keep for 7 days"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"access-code-7-days"</span>&gt;</span>
         Remember this access code for 7 days
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
           </pre>
@@ -341,9 +344,9 @@
         </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">"checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">"input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
 
 {{ govukInput({
   <span class="hljs-attr">label</span>: {
@@ -401,11 +404,11 @@
             aria-controls="example-multiple-checkboxes-html"
             data-track="tab-html" title="Display Use more than one checkbox example as HTML">HTML</a>
         </li>
-        <!-- <li class="app-tabs__item js-tabs__item" role="presentation">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
           <a href="#example-multiple-checkboxes-nunjucks" role="tab"
             aria-controls="example-multiple-checkboxes-nunjucks"
             data-track="tab-nunjucks" title="Display Use more than one checkbox example as Nunjucks">Nunjucks</a>
-        </li> -->
+        </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-multiple-checkboxes-html" role="tabpanel">
@@ -418,19 +421,21 @@
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"mixed-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"paperless"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"mixed-1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"paperless"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"mixed"</span>&gt;</span>
         I want to get electronic communications instead of letters from HMRC
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"mixed-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"access-code-7-days"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"mixed-2"</span>&gt;</span>
         Remember this access code for 7 days
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
           </pre>
@@ -444,8 +449,8 @@
         </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">"checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
+            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
 
 {{ govukCheckboxes({
   <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"mixed"</span>,

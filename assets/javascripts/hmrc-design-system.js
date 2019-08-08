@@ -54,7 +54,7 @@
 	(function (global, factory) {
 		module.exports = factory();
 	}(commonjsGlobal, (function () {
-		var commonjsGlobal$$1 = typeof window !== 'undefined' ? window : typeof commonjsGlobal !== 'undefined' ? commonjsGlobal : typeof self !== 'undefined' ? self : {};
+		var commonjsGlobal$$1 = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof commonjsGlobal !== 'undefined' ? commonjsGlobal : typeof self !== 'undefined' ? self : {};
 
 		function createCommonjsModule$$1(fn, module) {
 			return module = { exports: {} }, fn(module, module.exports), module.exports;
@@ -1597,8 +1597,15 @@
 		  var options = {};
 		  var settings = {};
 		  var cleanupFunctions = [];
-		  var localisedDefaults = (readCookie('PLAY_LANG') &&
-		    readCookie('PLAY_LANG') === 'cy' && {
+
+		  function init () {
+		    var validate = ValidateInput;
+
+		    function lookupData (key) {
+		      return ($module.attributes.getNamedItem(key) || {}).value
+		    }
+
+		    var localisedDefaults = validate.string(lookupData('data-language')) === 'cy' ? {
 		      title: undefined,
 		      message: 'Er eich diogelwch, byddwn yn eich allgofnodi cyn pen',
 		      keepAliveButtonText: 'Parhau i fod wedi’ch mewngofnodi',
@@ -1609,7 +1616,7 @@
 		        seconds: 'eiliad',
 		        second: 'eiliad'
 		      }
-		    }) || {
+		    } : {
 		      title: undefined,
 		      message: 'For your security, we will sign you out in',
 		      keepAliveButtonText: 'Stay signed in',
@@ -1622,13 +1629,6 @@
 		      }
 		    };
 
-		  function init () {
-		    var validate = ValidateInput;
-
-		    function lookupData (key) {
-		      return ($module.attributes.getNamedItem(key) || {}).value
-		    }
-
 		    options = {
 		      timeout: validate.int(lookupData('data-timeout')),
 		      countdown: validate.int(lookupData('data-countdown')),
@@ -1636,6 +1636,7 @@
 		      signOutUrl: validate.string(lookupData('data-sign-out-url')),
 		      title: validate.string(lookupData('data-title')),
 		      message: validate.string(lookupData('data-message')),
+		      messageSuffix: validate.string(lookupData('data-message-suffix')),
 		      keepAliveButtonText: validate.string(
 		        lookupData('data-keep-alive-button-text')
 		      ),
@@ -1697,9 +1698,6 @@
 		  }
 
 		  function setupDialog () {
-		    var $countdownElement = utils.generateDomElementFromString(
-		      '<span id="hmrc-timeout-countdown" class="hmrc-timeout-dialog__countdown">'
-		    );
 		    var $element = utils.generateDomElementFromString('<div>');
 
 		    if (settings.title) {
@@ -1710,10 +1708,21 @@
 		      $element.appendChild($tmp);
 		    }
 
+		    var $countdownElement = utils.generateDomElementFromString(
+		      '<span id="hmrc-timeout-countdown" class="hmrc-timeout-dialog__countdown">'
+		    );
+
 		    var $timeoutMessage = utils.generateDomElementFromStringAndAppendText(
 		      '<p id="hmrc-timeout-message" class="govuk-body hmrc-timeout-dialog__message" role="text">',
 		      settings.message
 		    );
+		    $timeoutMessage.appendChild(document.createTextNode(' '));
+		    $timeoutMessage.appendChild($countdownElement);
+		    $timeoutMessage.appendChild(document.createTextNode('.'));
+		    if (settings.messageSuffix) {
+		      $timeoutMessage.appendChild(document.createTextNode(' ' + settings.messageSuffix));
+		    }
+
 		    var $staySignedInButton = utils.generateDomElementFromStringAndAppendText(
 		      '<button id="hmrc-timeout-keep-signin-btn" class="govuk-button">',
 		      settings.keepAliveButtonText
@@ -1726,10 +1735,6 @@
 		    $staySignedInButton.addEventListener('click', keepAliveAndClose);
 		    $signOutButton.addEventListener('click', signOut);
 		    $signOutButton.setAttribute('href', settings.signOutUrl);
-
-		    $timeoutMessage.appendChild(document.createTextNode(' '));
-		    $timeoutMessage.appendChild($countdownElement);
-		    $timeoutMessage.appendChild(document.createTextNode('.'));
 
 		    $element.appendChild($timeoutMessage);
 		    $element.appendChild($staySignedInButton);
@@ -1805,13 +1810,6 @@
 		      var fn = cleanupFunctions.shift();
 		      fn();
 		    }
-		  }
-
-		  function readCookie (cookieName) { // From http://www.javascripter.net/faq/readingacookie.htm
-		    var re = new RegExp('[; ]' + cookieName + '=([^\\s;]*)');
-		    var sMatch = (' ' + document.cookie).match(re);
-		    if (cookieName && sMatch) return unescape(sMatch[1])
-		    return ''
 		  }
 
 		  return { init: init, cleanup: cleanup }
@@ -3135,28 +3133,21 @@
 	})
 	.call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof commonjsGlobal && commonjsGlobal || {});
 
-	/**
-	 * JavaScript 'shim' to trigger the click event of element(s) when the space key is pressed.
-	 *
-	 * Created since some Assistive Technologies (for example some Screenreaders)
-	 * will tell a user to press space on a 'button', so this functionality needs to be shimmed
-	 * See https://github.com/alphagov/govuk_elements/pull/272#issuecomment-233028270
-	 *
-	 * Usage instructions:
-	 * the 'shim' will be automatically initialised
-	 */
-
 	var KEY_SPACE = 32;
 	var DEBOUNCE_TIMEOUT_IN_SECONDS = 1;
-	var debounceFormSubmitTimer = null;
 
 	function Button ($module) {
 	  this.$module = $module;
+	  this.debounceFormSubmitTimer = null;
 	}
 
 	/**
-	* if the event target element has a role='button' and the event is key space pressed
-	* then it prevents the default event and triggers a click event
+	* JavaScript 'shim' to trigger the click event of element(s) when the space key is pressed.
+	*
+	* Created since some Assistive Technologies (for example some Screenreaders)
+	* will tell a user to press space on a 'button', so this functionality needs to be shimmed
+	* See https://github.com/alphagov/govuk_elements/pull/272#issuecomment-233028270
+	*
 	* @param {object} event event
 	*/
 	Button.prototype.handleKeyDown = function (event) {
@@ -3183,14 +3174,14 @@
 	  }
 
 	  // If the timer is still running then we want to prevent the click from submitting the form
-	  if (debounceFormSubmitTimer) {
+	  if (this.debounceFormSubmitTimer) {
 	    event.preventDefault();
 	    return false
 	  }
 
-	  debounceFormSubmitTimer = setTimeout(function () {
-	    debounceFormSubmitTimer = null;
-	  }, DEBOUNCE_TIMEOUT_IN_SECONDS * 1000);
+	  this.debounceFormSubmitTimer = setTimeout(function () {
+	    this.debounceFormSubmitTimer = null;
+	  }.bind(this), DEBOUNCE_TIMEOUT_IN_SECONDS * 1000);
 	};
 
 	/**
@@ -3207,9 +3198,6 @@
 	 * and 'shim' to add accessiblity enhancements for all browsers
 	 *
 	 * http://caniuse.com/#feat=details
-	 *
-	 * Usage instructions:
-	 * the 'polyfill' will be automatically initialised
 	 */
 
 	var KEY_ENTER = 13;
@@ -3293,7 +3281,9 @@
 	  $summary.setAttribute('aria-controls', $content.id);
 
 	  // Set tabIndex so the summary is keyboard accessible for non-native elements
-	  // http://www.saliences.com/browserBugs/tabIndex.html
+	  //
+	  // We have to use the camelcase `tabIndex` property as there is a bug in IE6/IE7 when we set the correct attribute lowercase:
+	  // See http://web.archive.org/web/20170120194036/http://www.saliences.com/browserBugs/tabIndex.html for more information.
 	  if (!NATIVE_DETAILS) {
 	    $summary.tabIndex = 0;
 	  }
@@ -3355,7 +3345,7 @@
 
 	function CharacterCount ($module) {
 	  this.$module = $module;
-	  this.$textarea = $module.querySelector('.js-character-count');
+	  this.$textarea = $module.querySelector('.govuk-js-character-count');
 	}
 
 	CharacterCount.prototype.defaults = {
@@ -3495,8 +3485,12 @@
 	  var thresholdValue = maxLength * thresholdPercent / 100;
 	  if (thresholdValue > currentLength) {
 	    countMessage.classList.add('govuk-character-count__message--disabled');
+	    // Ensure threshold is hidden for users of assistive technologies
+	    countMessage.setAttribute('aria-hidden', true);
 	  } else {
 	    countMessage.classList.remove('govuk-character-count__message--disabled');
+	    // Ensure threshold is visible for users of assistive technologies
+	    countMessage.removeAttribute('aria-hidden');
 	  }
 
 	  // Update styles
@@ -3697,16 +3691,6 @@
 	    return false
 	  }
 
-	  // Prefer using the history API where possible, as updating
-	  // window.location.hash causes the viewport to jump to the input briefly
-	  // before then scrolling to the label/legend in IE10, IE11 and Edge (as tested
-	  // in Edge 17).
-	  if (window.history.pushState) {
-	    window.history.pushState(null, null, '#' + inputId);
-	  } else {
-	    window.location.hash = inputId;
-	  }
-
 	  // Scroll the legend or label into view *before* calling focus on the input to
 	  // avoid extra scrolling in browsers that don't support `preventScroll` (which
 	  // at time of writing is most of them...)
@@ -3773,7 +3757,7 @@
 	  }
 
 	  // Check for button
-	  var $toggleButton = $module.querySelector('.js-header-toggle');
+	  var $toggleButton = $module.querySelector('.govuk-js-header-toggle');
 	  if (!$toggleButton) {
 	    return
 	  }
@@ -3816,12 +3800,11 @@
 
 	function Radios ($module) {
 	  this.$module = $module;
-	  this.$inputs = $module.querySelectorAll('input[type="radio"]');
 	}
 
 	Radios.prototype.init = function () {
 	  var $module = this.$module;
-	  var $inputs = this.$inputs;
+	  var $inputs = $module.querySelectorAll('input[type="radio"]');
 
 	  /**
 	  * Loop over all items with [data-controls]
@@ -3848,25 +3831,87 @@
 	};
 
 	Radios.prototype.setAttributes = function ($input) {
-	  var inputIsChecked = $input.checked;
-	  $input.setAttribute('aria-expanded', inputIsChecked);
+	  var $content = document.querySelector('#' + $input.getAttribute('aria-controls'));
 
-	  var $content = this.$module.querySelector('#' + $input.getAttribute('aria-controls'));
-	  if ($content) {
+	  if ($content && $content.classList.contains('govuk-radios__conditional')) {
+	    var inputIsChecked = $input.checked;
+
+	    $input.setAttribute('aria-expanded', inputIsChecked);
+
 	    $content.classList.toggle('govuk-radios__conditional--hidden', !inputIsChecked);
 	  }
 	};
 
 	Radios.prototype.handleClick = function (event) {
-	  nodeListForEach(this.$inputs, function ($input) {
-	    // If a radio with aria-controls, handle click
-	    var isRadio = $input.getAttribute('type') === 'radio';
-	    var hasAriaControls = $input.getAttribute('aria-controls');
-	    if (isRadio && hasAriaControls) {
+	  var $clickedInput = event.target;
+	  // We only want to handle clicks for radio inputs
+	  if ($clickedInput.type !== 'radio') {
+	    return
+	  }
+	  // Because checking one radio can uncheck a radio in another $module,
+	  // we need to call set attributes on all radios in the same form, or document if they're not in a form.
+	  //
+	  // We also only want radios which have aria-controls, as they support conditional reveals.
+	  var $allInputs = document.querySelectorAll('input[type="radio"][aria-controls]');
+	  nodeListForEach($allInputs, function ($input) {
+	    // Only inputs with the same form owner should change.
+	    var hasSameFormOwner = ($input.form === $clickedInput.form);
+
+	    // In radios, only radios with the same name will affect each other.
+	    var hasSameName = ($input.name === $clickedInput.name);
+	    if (hasSameName && hasSameFormOwner) {
 	      this.setAttributes($input);
 	    }
 	  }.bind(this));
 	};
+
+	(function(undefined) {
+
+	    // Detection from https://github.com/Financial-Times/polyfill-service/pull/1062/files#diff-b09a5d2acf3314b46a6c8f8d0c31b85c
+	    var detect = (
+	      'Element' in this && "nextElementSibling" in document.documentElement
+	    );
+
+	    if (detect) return
+
+
+	    (function (global) {
+
+	      // Polyfill from https://github.com/Financial-Times/polyfill-service/pull/1062/files#diff-404b69b4750d18dea4174930a49170fd
+	      Object.defineProperty(Element.prototype, "nextElementSibling", {
+	        get: function(){
+	          var el = this.nextSibling;
+	          while (el && el.nodeType !== 1) { el = el.nextSibling; }
+	          return (el.nodeType === 1) ? el : null;
+	        }
+	      });
+
+	    }(this));
+
+	}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof commonjsGlobal && commonjsGlobal || {});
+
+	(function(undefined) {
+
+	    // Detection from https://github.com/Financial-Times/polyfill-service/pull/1062/files#diff-a162235fbc9c0dd40d4032265f44942e
+	    var detect = (
+	      'Element' in this && 'previousElementSibling' in document.documentElement
+	    );
+
+	    if (detect) return
+
+	    (function (global) {
+	      // Polyfill from https://github.com/Financial-Times/polyfill-service/pull/1062/files#diff-b45a1197b842728cb76b624b6ba7d739
+	      Object.defineProperty(Element.prototype, 'previousElementSibling', {
+	        get: function(){
+	          var el = this.previousSibling;
+	          while (el && el.nodeType !== 1) { el = el.previousSibling; }
+	          return (el.nodeType === 1) ? el : null;
+	        }
+	      });
+
+	    }(this));
+
+	}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof commonjsGlobal && commonjsGlobal || {});
 
 	function Tabs ($module) {
 	  this.$module = $module;
@@ -4009,6 +4054,7 @@
 	  $tab.setAttribute('id', 'tab_' + panelId);
 	  $tab.setAttribute('role', 'tab');
 	  $tab.setAttribute('aria-controls', panelId);
+	  $tab.setAttribute('aria-selected', 'false');
 	  $tab.setAttribute('tabindex', '-1');
 
 	  // set panel attributes
@@ -4023,6 +4069,7 @@
 	  $tab.removeAttribute('id');
 	  $tab.removeAttribute('role');
 	  $tab.removeAttribute('aria-controls');
+	  $tab.removeAttribute('aria-selected');
 	  $tab.removeAttribute('tabindex');
 
 	  // unset panel attributes
@@ -4033,6 +4080,10 @@
 	};
 
 	Tabs.prototype.onTabClick = function (e) {
+	  if (!e.target.classList.contains('govuk-tabs__tab')) {
+	  // Allow events on child DOM elements to bubble up to tab parent
+	    return false
+	  }
 	  e.preventDefault();
 	  var $newTab = e.target;
 	  var $currentTab = this.getCurrentTab();
@@ -4072,7 +4123,7 @@
 	  var currentTab = this.getCurrentTab();
 	  var nextTabListItem = currentTab.parentNode.nextElementSibling;
 	  if (nextTabListItem) {
-	    var nextTab = nextTabListItem.firstElementChild;
+	    var nextTab = nextTabListItem.querySelector('.govuk-tabs__tab');
 	  }
 	  if (nextTab) {
 	    this.hideTab(currentTab);
@@ -4086,7 +4137,7 @@
 	  var currentTab = this.getCurrentTab();
 	  var previousTabListItem = currentTab.parentNode.previousElementSibling;
 	  if (previousTabListItem) {
-	    var previousTab = previousTabListItem.firstElementChild;
+	    var previousTab = previousTabListItem.querySelector('.govuk-tabs__tab');
 	  }
 	  if (previousTab) {
 	    this.hideTab(currentTab);
@@ -4113,18 +4164,18 @@
 
 	Tabs.prototype.unhighlightTab = function ($tab) {
 	  $tab.setAttribute('aria-selected', 'false');
-	  $tab.classList.remove('govuk-tabs__tab--selected');
+	  $tab.parentNode.classList.remove('govuk-tabs__list-item--selected');
 	  $tab.setAttribute('tabindex', '-1');
 	};
 
 	Tabs.prototype.highlightTab = function ($tab) {
 	  $tab.setAttribute('aria-selected', 'true');
-	  $tab.classList.add('govuk-tabs__tab--selected');
+	  $tab.parentNode.classList.add('govuk-tabs__list-item--selected');
 	  $tab.setAttribute('tabindex', '0');
 	};
 
 	Tabs.prototype.getCurrentTab = function () {
-	  return this.$module.querySelector('.govuk-tabs__tab--selected')
+	  return this.$module.querySelector('.govuk-tabs__list-item--selected .govuk-tabs__tab')
 	};
 
 	// this is because IE doesn't always return the actual value but a relative full path
@@ -4144,45 +4195,45 @@
 	  // Defaults to the entire document if nothing is set.
 	  var scope = typeof options.scope !== 'undefined' ? options.scope : document;
 
-	  // Find all buttons with [role=button] on the scope to enhance.
-	  new Button(scope).init();
+	  var $buttons = scope.querySelectorAll('[data-module="govuk-button"]');
+	  nodeListForEach($buttons, function ($button) {
+	    new Button($button).init();
+	  });
 
-	  // Find all global accordion components to enhance.
-	  var $accordions = scope.querySelectorAll('[data-module="accordion"]');
+	  var $accordions = scope.querySelectorAll('[data-module="govuk-accordion"]');
 	  nodeListForEach($accordions, function ($accordion) {
 	    new Accordion($accordion).init();
 	  });
 
-	  // Find all global details elements to enhance.
-	  var $details = scope.querySelectorAll('details');
+	  var $details = scope.querySelectorAll('[data-module="govuk-details"]');
 	  nodeListForEach($details, function ($detail) {
 	    new Details($detail).init();
 	  });
 
-	  var $characterCount = scope.querySelectorAll('[data-module="character-count"]');
-	  nodeListForEach($characterCount, function ($characterCount) {
+	  var $characterCounts = scope.querySelectorAll('[data-module="govuk-character-count"]');
+	  nodeListForEach($characterCounts, function ($characterCount) {
 	    new CharacterCount($characterCount).init();
 	  });
 
-	  var $checkboxes = scope.querySelectorAll('[data-module="checkboxes"]');
+	  var $checkboxes = scope.querySelectorAll('[data-module="govuk-checkboxes"]');
 	  nodeListForEach($checkboxes, function ($checkbox) {
 	    new Checkboxes($checkbox).init();
 	  });
 
 	  // Find first error summary module to enhance.
-	  var $errorSummary = scope.querySelector('[data-module="error-summary"]');
+	  var $errorSummary = scope.querySelector('[data-module="govuk-error-summary"]');
 	  new ErrorSummary($errorSummary).init();
 
 	  // Find first header module to enhance.
-	  var $toggleButton = scope.querySelector('[data-module="header"]');
+	  var $toggleButton = scope.querySelector('[data-module="govuk-header"]');
 	  new Header($toggleButton).init();
 
-	  var $radios = scope.querySelectorAll('[data-module="radios"]');
+	  var $radios = scope.querySelectorAll('[data-module="govuk-radios"]');
 	  nodeListForEach($radios, function ($radio) {
 	    new Radios($radio).init();
 	  });
 
-	  var $tabs = scope.querySelectorAll('[data-module="tabs"]');
+	  var $tabs = scope.querySelectorAll('[data-module="govuk-tabs"]');
 	  nodeListForEach($tabs, function ($tabs) {
 	    new Tabs($tabs).init();
 	  });

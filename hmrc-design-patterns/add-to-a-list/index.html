@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Add to a list - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
-  <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
+  <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
     <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
@@ -172,11 +172,11 @@
             aria-controls="example-view-a-summary-html"
             data-track="tab-html" title="Display View list summary example as HTML">HTML</a>
         </li>
-        <!-- <li class="app-tabs__item js-tabs__item" role="presentation">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
           <a href="#example-view-a-summary-nunjucks" role="tab"
             aria-controls="example-view-a-summary-nunjucks"
             data-track="tab-nunjucks" title="Display View list summary example as Nunjucks">Nunjucks</a>
-        </li> -->
+        </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-view-a-summary-html" role="tabpanel">
@@ -256,21 +256,23 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios--inline"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"add-another-1"</span>&gt;</span>
-            Yes
-          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"add-another"</span>&gt;</span>
+            yes
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"no"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"add-another-2"</span>&gt;</span>
-            No
-          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            no
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
-    Submit
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+    continue
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
           </pre>
@@ -284,7 +286,7 @@
         </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-add-to-a-list/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcAddToAList -%}
+            <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/add-to-a-list/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcAddToAList -%}
 
 {{
   hmrcAddToAList({

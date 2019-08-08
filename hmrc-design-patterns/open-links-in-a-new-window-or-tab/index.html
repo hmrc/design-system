@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Open links in a new window or tab - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
-  <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
+  <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
     <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
@@ -208,11 +208,11 @@
             aria-controls="example-default-html"
             data-track="tab-html" title="Display Open in a new window example as HTML">HTML</a>
         </li>
-        <!-- <li class="app-tabs__item js-tabs__item" role="presentation">
+        <li class="app-tabs__item js-tabs__item" role="presentation">
           <a href="#example-default-nunjucks" role="tab"
             aria-controls="example-default-nunjucks"
             data-track="tab-nunjucks" title="Display Open in a new window example as Nunjucks">Nunjucks</a>
-        </li> -->
+        </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
@@ -237,7 +237,7 @@
         </div>
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-new-tab-link/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNewTabLink %}
+            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/new-tab-link/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNewTabLink %}
 
 {{ hmrcNewTabLink({
   <span class="hljs-attr">language</span>: <span class="hljs-string">"en"</span>,
@@ -248,7 +248,7 @@
           </pre>
 
             <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc-new-tab-link/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNewTabLink %}
+              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/new-tab-link/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNewTabLink %}
 
 {{ hmrcNewTabLink({
   <span class="hljs-attr">language</span>: <span class="hljs-string">"cy"</span>,

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example – HMRC Design Patterns – Design resources for HMRC – GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
@@ -21,23 +21,26 @@
   </legend>
   <div class="govuk-radios govuk-radios--inline">
     <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="paperless-1" name="paperless" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="paperless-1">
+      <input class="govuk-radios__input" id="paperless" name="paperless" type="radio" value="yes">
+      <label class="govuk-label govuk-radios__label" for="paperless">
         Yes
-      </label>    </div>
+      </label>
+    </div>
     <div class="govuk-radios__item">
       <input class="govuk-radios__input" id="paperless-2" name="paperless" type="radio" value="no">
       <label class="govuk-label govuk-radios__label" for="paperless-2">
         No
-      </label>    </div>
+      </label>
+    </div>
   </div>
 </fieldset>
 </div>
 
 
-<button type="submit" class="govuk-button">
+<button type="submit" class="govuk-button" data-module="govuk-button">
   Continue
-</button></body>
+</button>
+</body>
 
   <script>
     // This prevents the account dropdown from closing and triggering
