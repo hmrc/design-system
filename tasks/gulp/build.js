@@ -1,8 +1,6 @@
 const path = require('path')
 const gulp = require('gulp')
 const util = require('gulp-util')
-const concat = require('gulp-concat');
-const replace = require('gulp-replace');
 const Metalsmith = require('metalsmith')
 const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
@@ -24,32 +22,6 @@ const pathFromRoot = require('../../util/pathFromRoot')
 const projectRoot = pathFromRoot()
 
 const pattern = '**/*{.njk,.html}'
-
-gulp.task('scrape-examples', (done) => {
-  let isFirstMatch = true
-  gulp.src([
-    // Entry point
-    './src/all-patterns/index.njk',
-    // All pattern examples
-    './src/hmrc-design-patterns/*/*/index.njk',
-
-    // Ignore non patterns
-    '!./src/hmrc-design-patterns/hmrc-design-patterns-backlog/*/index.njk',
-    '!./src/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/*/index.njk',
-    '!./src/hmrc-design-patterns/updating-hmrc-frontend-in-your-prototype/*/index.njk',
-    // Ignore account header becuase extend layout kills it
-    '!./src/hmrc-design-patterns/account-header/*/index.njk'
-  ])
-    .pipe(concat('index.njk'))
-    // Remove all tags except first
-    .pipe(replace(/---(\s*)((.|\s)+?)(\s*)---/gm, (match) => {
-      const replacement = isFirstMatch ? match : ''
-      isFirstMatch = false
-      return replacement
-    }))
-    .pipe(gulp.dest('./src/examples'))
-    .on('end', done)
-})
 
 gulp.task('compile', (done) => {
   util.log('Metalsmith build starting')
