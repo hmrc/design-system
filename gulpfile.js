@@ -16,7 +16,7 @@ gulp.task('watch', gulp.parallel('build:watch', 'scss:watch', 'copy-assets:watch
 
 gulp.task('prepare', gulp.parallel('compile', 'scss:compile', 'copy-assets'))
 
-gulp.task('build', gulp.series('clean', 'prepare'))
+gulp.task('build', gulp.series('clean', 'scrape-examples', 'prepare'))
 
 gulp.task('integration', gulp.series('build', 'serve:integration', 'jest:integration'))
 

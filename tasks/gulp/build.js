@@ -1,6 +1,8 @@
 const path = require('path')
 const gulp = require('gulp')
 const util = require('gulp-util')
+const concat = require('gulp-concat');
+const replace = require('gulp-replace');
 const Metalsmith = require('metalsmith')
 const inPlace = require('metalsmith-in-place')
 const debug = require('metalsmith-debug')
@@ -23,11 +25,25 @@ const projectRoot = pathFromRoot()
 
 const pattern = '**/*{.njk,.html}'
 
+gulp.task('scrape-examples', async (done) => {
+  let isFirstMatch = true
+  await gulp.src(['./src/all-patterns/index.njk', './src/hmrc-design-patterns/*/*/index.njk'])
+    .pipe(concat('index.njk'))
+    // Remove all tags except first
+    .pipe(replace(/---(\s*)((.|\s)+?)(\s*)---/gm, (match) => {
+      const replacement = isFirstMatch ? match : ''
+      isFirstMatch = false
+      return replacement
+    }))
+    .pipe(gulp.dest('./src/examples'));
+  done()
+})
+
 gulp.task('compile', (done) => {
   util.log('Metalsmith build starting')
 
   Metalsmith(projectRoot)
-    .use(ignore('**/__tests__/*'))
+    .use(ignore(['**/__tests__/*', 'all-patterns/*']))
     .source('./src')
     .destination('./dist')
     .clean(true)
@@ -77,7 +93,10 @@ gulp.task('compile', (done) => {
 
 gulp.task('build:watch', (done) => {
   templatePaths.forEach(pathStr => {
-    gulp.watch(path.join(pathStr, pattern), gulp.parallel('build'))
+    gulp.watch([
+      path.join(pathStr, pattern),
+      `!${pathFromRoot('src', 'examples', '*')}`
+    ], gulp.parallel('build'))
   })
 
   gulp.watch(pathFromRoot('application', 'assets', 'javascripts', '**', '*'), gulp.parallel('build'))
