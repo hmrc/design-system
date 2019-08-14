@@ -25,9 +25,21 @@ const projectRoot = pathFromRoot()
 
 const pattern = '**/*{.njk,.html}'
 
-gulp.task('scrape-examples', async (done) => {
+gulp.task('scrape-examples', (done) => {
   let isFirstMatch = true
-  await gulp.src(['./src/all-patterns/index.njk', './src/hmrc-design-patterns/*/*/index.njk'])
+  gulp.src([
+    // Entry point
+    './src/all-patterns/index.njk',
+    // All pattern examples
+    './src/hmrc-design-patterns/*/*/index.njk',
+
+    // Ignore non patterns
+    '!./src/hmrc-design-patterns/hmrc-design-patterns-backlog/*/index.njk',
+    '!./src/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/*/index.njk',
+    '!./src/hmrc-design-patterns/updating-hmrc-frontend-in-your-prototype/*/index.njk',
+    // Ignore account header becuase extend layout kills it
+    '!./src/hmrc-design-patterns/account-header/*/index.njk'
+  ])
     .pipe(concat('index.njk'))
     // Remove all tags except first
     .pipe(replace(/---(\s*)((.|\s)+?)(\s*)---/gm, (match) => {
@@ -35,8 +47,8 @@ gulp.task('scrape-examples', async (done) => {
       isFirstMatch = false
       return replacement
     }))
-    .pipe(gulp.dest('./src/examples'));
-  done()
+    .pipe(gulp.dest('./src/examples'))
+    .on('end', done)
 })
 
 gulp.task('compile', (done) => {
@@ -93,10 +105,7 @@ gulp.task('compile', (done) => {
 
 gulp.task('build:watch', (done) => {
   templatePaths.forEach(pathStr => {
-    gulp.watch([
-      path.join(pathStr, pattern),
-      `!${pathFromRoot('src', 'examples', '*')}`
-    ], gulp.parallel('build'))
+    gulp.watch(path.join(pathStr, pattern), gulp.parallel('build'))
   })
 
   gulp.watch(pathFromRoot('application', 'assets', 'javascripts', '**', '*'), gulp.parallel('build'))
