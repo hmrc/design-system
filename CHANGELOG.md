@@ -4,6 +4,9 @@
 
 ## [1.0.1] - 2019-08-19
 
+### Updated
+- hmrc-frontend package to accessbile version  [d60284a](d60284afe98abc77c1ebccfb9806bed579af5c6a)
+
 ### Added
 - Integrate axe-core for accessibility testing and accessibility test pages  [ac6d118](ac6d1188062c824ceefb81d86f7b7131cff7cb52)
 
