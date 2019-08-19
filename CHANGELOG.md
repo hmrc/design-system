@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## [1.0.1] - 2019-08-19
+
+### Added
+- Integrate axe-core for accessibility testing and accessibility test pages  [ac6d118](ac6d1188062c824ceefb81d86f7b7131cff7cb52)
+
+- Compile all featured patterns into single page for accessibility testing [2a4390b](2a4390bf9178a26c5c777f53c4ef187d0e16bd0d)
+
+### Changed
+- Switched background color of cookie banner to accessible value [12c8333](12c83334c89753bd1d78a495f1fabd549c54f873)
+
 ## 1.0.0 (Alpha release)
 
 - Updated `govuk-frontend` and `hmrc-frontend` to latest versions [6715837](67158371bb978db43c2af94fb32b389ab358626b)
