@@ -9,7 +9,7 @@
     "test:watch": "gulp jest:unit:watch",
     "test:unit": "gulp jest:unit",
     "test": "npm run test:unit",
-    "build": "npm run test && gulp build",
+    "build": "npm run test && gulp generate-examples && gulp build",
     "serve": "gulp serve"
   },
   "engines": {
