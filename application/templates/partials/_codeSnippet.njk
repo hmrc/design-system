@@ -1,13 +1,10 @@
+{% from "_copyContents.njk" import copyContents %}
+
 {% macro codeSnippet(params) %}
   {% if params.code %}
     <div class="app-code-snippet{%if params.canCopy%} app-code-snippet--copy{% endif %}">
       {% if params.canCopy %}
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive"
-            data-module="copy-to-clipboard">
-            Copy
-          </a>
-        </div>
+        {{ copyContents() }}
       {% endif %}
       <pre><code class="govuk-body-s">{{ params.code }}</code></pre>
     </div>
