@@ -66,6 +66,7 @@
     "js-beautify": "^1.10.2",
     "jstransformer": "^1.0.0",
     "jstransformer-nunjucks": "^0.5.0",
+    "marked": "^0.7.0",
     "merge2": "^1.2.4",
     "metalsmith": "^2.3.0",
     "metalsmith-debug": "^1.2.0",
