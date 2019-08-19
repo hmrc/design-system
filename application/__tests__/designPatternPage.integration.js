@@ -1,12 +1,19 @@
 /* globals describe it beforeEach expect page  */
 
+const { analyzeAccessibility } = require('../../lib/accessibility')
+
 const { integrationTestPort } = require('../../constants')
 const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path}`)
 
-describe('Example page rendering', () => {
+describe('Design pattern page rendering', () => {
   beforeEach(async () => {
     await visit('/hmrc-design-patterns/ask-the-user-for-their-consent/')
   })
+
+  it('should not have accessibility issues', async () => {
+      const accessibilityReport = await analyzeAccessibility(page);
+      expect(accessibilityReport).toHaveNoAccessibilityIssues();
+  });
 
   it('should have the correct meta title', async () => {
     const title = await page.title()

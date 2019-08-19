@@ -1,6 +1,6 @@
 {
   "name": "@hmrc/design-system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Static site generator for the HMRC Design System",
   "scripts": {
@@ -32,15 +32,17 @@
   "homepage": "https://github.com/hmrc/design-system#readme",
   "dependencies": {
     "govuk-frontend": "^3.0.0",
-    "hmrc-frontend": "^1.0.2"
+    "hmrc-frontend": "^1.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
+    "axe-core": "^3.3.1",
     "clipboard": "^2.0.4",
     "cssnano": "^4.1.10",
     "del": "^3.0.0",
     "gray-matter": "^4.0.2",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.6.1",
     "gulp-header": "^2.0.9",
     "gulp-if": "^2.0.2",
@@ -48,6 +50,7 @@
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-standard": "^12.0.0",
     "gulp-util": "^3.0.8",
@@ -57,6 +60,7 @@
     "jest": "^24.8.0",
     "jest-cli": "^24.8.0",
     "jest-environment-node": "^24.8.0",
+    "jest-matcher-utils": "^24.8.0",
     "jest-puppeteer": "^4.3.0",
     "jest-resolve": "^24.8.0",
     "js-beautify": "^1.10.2",

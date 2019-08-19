@@ -1,0 +1,39 @@
+/* globals describe it beforeEach expect page  */
+
+const { analyzeAccessibility } = require('../../../lib/accessibility')
+
+const { integrationTestPort } = require('../../../constants')
+const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path}`)
+
+// We have to ignore certain rules as elements are not in isolation
+const options = {
+  rules: {
+    'page-has-heading-one': { enabled: false },
+    'duplicate-id-aria': { enabled: false },
+    'form-field-multiple-labels': { enabled: false }
+  }
+}
+
+describe('All patterns', () => {
+  beforeEach(async () => {
+    await visit('/examples/patterns.html')
+  })
+
+  it('should not have accessibility issues', async () => {
+      const accessibilityReport = await analyzeAccessibility(page, options);
+      expect(accessibilityReport).toHaveNoAccessibilityIssues();
+  });
+
+})
+
+describe('All Layouts', () => {
+  beforeEach(async () => {
+    await visit('/examples/layouts.html')
+  })
+
+  it('should not have accessibility issues', async () => {
+      const accessibilityReport = await analyzeAccessibility(page, options);
+      expect(accessibilityReport).toHaveNoAccessibilityIssues();
+  });
+
+})

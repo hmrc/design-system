@@ -27,7 +27,7 @@ gulp.task('compile', (done) => {
   util.log('Metalsmith build starting')
 
   Metalsmith(projectRoot)
-    .use(ignore('**/__tests__/*'))
+    .use(ignore(['**/__tests__/*', 'all-patterns/*']))
     .source('./src')
     .destination('./dist')
     .clean(true)
