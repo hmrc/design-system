@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example – HMRC Design Patterns – Design resources for HMRC – GOV.UK</title>
+
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+<!-- ACCOUNT MENU -->
+<nav id="secondary-nav" class="hmrc-account-menu" aria-label="Account" data-module="hmrc-account-menu">
+  <a href="#account-home" class="hmrc-account-menu__link hmrc-account-menu__link--home hmrc-account-menu__link--active">
+    <span class="hmrc-account-icon hmrc-account-icon--home">Account home</span>
+  </a>
+
+  <a href="#" class="hmrc-account-menu__link hmrc-account-menu__link--menu js-hidden js-visible" aria-hidden="true" aria-expanded="false">
+    Account menu
+  </a>
+
+  <ul class="hmrc-account-menu__main js-hidden">
+    <li class="hmrc-account-menu__link--back hidden" aria-hidden="true">
+      <a href="#" class="hmrc-account-menu__link">
+        Back
+      </a>
+    </li>
+
+    <li>
+      <a href="#messages" class="hmrc-account-menu__link">
+        Messages
+<span class="hmrc-notification-badge">2</span>
+</a>
+    </li>
+
+    <li>
+      <a href="#check-progress" class="hmrc-account-menu__link">
+        Check progress
+      </a>
+    </li>
+
+    <li>
+      <a href="#subnav-your-account" id="account-menu__main-2" class="hmrc-account-menu__link hmrc-account-icon hmrc-account-menu__link--more" aria-haspopup="true" aria-owns="subnav-your-account">
+        Your account
+      </a>
+
+      <div class="hmrc-subnav" id="subnav-your-account" role="navigation" aria-labelledby="account-menu__main-2" aria-label="Your account">
+        <div class="govuk-grid-column-one-third hmrc-subnav__section">
+          <p class="hmrc-subnav__section__heading">Paperless settings</p>
+
+          <div>
+            <a href="#paperless-settings">Manage your paperless settings</a>
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third hmrc-subnav__section">
+          <p class="hmrc-subnav__section__heading">Personal details</p>
+
+          <div>
+            <a href="#personal-details">Manage your personal details</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <a href="#sign-out" class="hmrc-account-menu__link">Sign out</a>
+    </li>
+  </ul>
+</nav>
+<!-- END ACCOUNT MENU -->
+
+
+
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="accounts-office-reference">
+      What is your Accounts Office reference?
+    </label>
+    
+  </h1>
+  <span id="accounts-office-reference-hint" class="govuk-hint">
+    This is 13 characters, like 123PX00123456 or 123PX0012345X. It will be on letters from HMRC about PAYE and when you registered as an employer.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="accounts-office-reference" name="accounts-office-reference" type="text" aria-describedby="accounts-office-reference-hint">
+</div>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="accounts-office-reference">
+    What is your Accounts Office reference?
+  </label>
+  <span id="accounts-office-reference-hint" class="govuk-hint">
+    This is 13 characters, like 123PX00123456 or 123PX0012345X. It will be on letters from HMRC about PAYE and when you registered as an employer.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="accounts-office-reference" name="accounts-office-reference" type="text" aria-describedby="accounts-office-reference-hint">
+</div>
+
+
+
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="accounts-office-reference">
+    What is your Accounts Office reference?
+  </label>
+  <span id="accounts-office-reference-hint" class="govuk-hint">
+    This is 13 characters, like 123PX00123456 or 123PX0012345X. It will be on letters from HMRC about PAYE and when you registered as an employer.
+  </span>
+  <span id="accounts-office-reference-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Enter your Accounts Office reference
+  </span>
+  <input class="govuk-input govuk-input--width-10 govuk-input--error" id="accounts-office-reference" name="accounts-office-reference" type="text" aria-describedby="accounts-office-reference-hint accounts-office-reference-error">
+</div>
+<h1 class="govuk-heading-xl">You have added 3 directors</h1>
+<div class="govuk-form-group">
+  <ul class="hmrc-add-to-a-list hmrc-add-to-a-list--short">
+    
+    <li class="hmrc-add-to-a-list__contents">
+      <span class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+        Sydney Russell
+      </span>
+      <span class="hmrc-add-to-a-list__change">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Change</span>
+          <span class="govuk-visually-hidden">Change Sydney Russell</span>
+        </a>
+      </span>
+      <span class="hmrc-add-to-a-list__remove">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Remove</span>
+          <span class="govuk-visually-hidden">Remove Sydney Russell from the list</span>
+        </a>
+      </span>
+    </li>
+    <li class="hmrc-add-to-a-list__contents">
+      <span class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+        Michael Cain
+      </span>
+      <span class="hmrc-add-to-a-list__change">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Change</span>
+          <span class="govuk-visually-hidden">Change Michael Cain</span>
+        </a>
+      </span>
+      <span class="hmrc-add-to-a-list__remove">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Remove</span>
+          <span class="govuk-visually-hidden">Remove Michael Cain from the list</span>
+        </a>
+      </span>
+    </li>
+    <li class="hmrc-add-to-a-list__contents">
+      <span class="hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light">
+        Jeremy Winter
+      </span>
+      <span class="hmrc-add-to-a-list__change">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Change</span>
+          <span class="govuk-visually-hidden">Change Jeremy Winter</span>
+        </a>
+      </span>
+      <span class="hmrc-add-to-a-list__remove">
+        <a class="govuk-link" href="#">
+          <span aria-hidden="true">Remove</span>
+          <span class="govuk-visually-hidden">Remove Jeremy Winter from the list</span>
+        </a>
+      </span>
+    </li>
+    
+  </ul>
+</div>
+<form method="post" action="">
+  
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+    Do you need to add another director?
+  </legend>
+  <span id="add-another-hint" class="govuk-hint">
+    
+  </span>
+  <div class="govuk-radios govuk-radios--inline">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="yes">
+      <label class="govuk-label govuk-radios__label" for="add-another">
+        yes
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="yes">
+      <label class="govuk-label govuk-radios__label" for="add-another-2">
+        no
+      </label>
+    </div>
+  </div>
+</fieldset>
+</div>
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  continue
+</button>
+</form>
+
+
+
+
+
+
+<div class="govuk-form-group">
+  <div class="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="mixed" name="mixed" type="checkbox" value="paperless">
+      <label class="govuk-label govuk-checkboxes__label" for="mixed">
+        I want to get electronic communications instead of letters from HMRC
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="mixed-2" name="mixed" type="checkbox" value="access-code-7-days">
+      <label class="govuk-label govuk-checkboxes__label" for="mixed-2">
+        Remember this access code for 7 days
+      </label>
+    </div>
+  </div>
+</div>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="access-code">
+    Access code
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="access-code" name="access-code" type="text">
+</div>
+
+
+
+<div class="govuk-form-group">
+  <div class="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="access-code-7-days" name="access-code-7-days" type="checkbox" value="Keep for 7 days">
+      <label class="govuk-label govuk-checkboxes__label" for="access-code-7-days">
+        Remember this access code for 7 days
+      </label>
+    </div>
+  </div>
+</div>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <h1 class="govuk-fieldset__heading">
+      Do you want to get electronic communications instead of letters from HMRC?
+    </h1>
+  </legend>
+  <div class="govuk-radios govuk-radios--inline">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="paperless" name="paperless" type="radio" value="yes">
+      <label class="govuk-label govuk-radios__label" for="paperless">
+        Yes
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="paperless-2" name="paperless" type="radio" value="no">
+      <label class="govuk-label govuk-radios__label" for="paperless-2">
+        No
+      </label>
+    </div>
+  </div>
+</fieldset>
+</div>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">We could not confirm your identity</h1></header>
+
+
+<p class="govuk-body">You have entered information that does not match our records too many
+times. For security reasons, you must wait 24 hours and then sign in to try again.</p>
+<p class="govuk-body">You can <a class="govuk-link" href="#">change other VAT details</a>
+without confirming your identity</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Nid oeddem yn gallu cadarnhau pwy ydych</h1></header>
+
+
+<p class="govuk-body">Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
+o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.</p>
+<p class="govuk-body">Gallwch <a class="govuk-link" href="#">newid manylion TAW eraill</a>
+heb gadarnhau pwy ydych</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">We could not confirm your identity</h1></header>
+
+
+<p class="govuk-body">You have not given us enough information.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Try again
+</button>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Nid oeddem yn gallu cadarnhau pwy ydych</h1></header>
+
+
+<p class="govuk-body">Nid ydych wedi rhoi digon o wybodaeth i ni.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Rhowch gynnig arall arni
+</button>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">We could not confirm your identity</h1></header>
+
+
+<p class="govuk-body">The information you have entered does not match our records.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Try again
+</button>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Nid oeddem yn gallu cadarnhau pwy ydych</h1></header>
+
+
+<p class="govuk-body">Nid yw’r wybodaeth yr ydych wedi’i nodi yn cyd-fynd â’n cofnodion.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Rhowch gynnig arall arni
+</button>
+
+
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="employer-paye-reference">
+      What is Anycompany’s employer PAYE reference?
+    </label>
+    
+  </h1>
+  <span id="employer-paye-reference-hint" class="govuk-hint">
+    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on your P60.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
+</div>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="employer-paye-reference">
+    Your employer PAYE reference
+  </label>
+  <span id="employer-paye-reference-hint" class="govuk-hint">
+    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on letters from HMRC about PAYE.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
+</div>
+
+
+
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="employer-paye-reference">
+    Your employer PAYE reference
+  </label>
+  <span id="employer-paye-reference-hint" class="govuk-hint">
+    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on letters from HMRC about PAYE.
+  </span>
+  <span id="employer-paye-reference-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Enter your employer PAYE reference
+  </span>
+  <input class="govuk-input govuk-input--width-10 govuk-input--error" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint employer-paye-reference-error">
+</div>
+
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">We have confirmed your identity</h1></header>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Rydym wedi cadarnhau pwy ydych</h1></header>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Yn eich blaen
+</button><a class="govuk-link" href="#">Messages <span class="hmrc-notification-badge">32</span>
+</a><a class="govuk-link" href="#">Messages </a>
+
+
+
+<a class="govuk-link " target="_blank" rel="noopener noreferrer" href="https://www.gov.uk/working-tax-credit/eligibility">Find out if you qualify for tax credits (opens in a new window or tab)</a>
+
+
+
+
+<a class="govuk-link " target="_blank" rel="noopener noreferrer" href="https://www.gov.uk/working-tax-credit/eligibility">Mae hwn yn ddolen (yn agor ffenestr neu dab newydd)</a>
+
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">What is your name?</h1><p class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is </span>Personal details</p></header>
+
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">What is your name?</h1></header>
+
+
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Page not found</h1></header>
+
+
+<p class="govuk-body">If you typed the web address, check it is correct.</p>
+
+<p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
+
+<p class="govuk-body">
+  If the web address is correct or you selected a link or button, <a href="#" class="govuk-link">contact the Tax Credits Helpline if you need to speak to someone about your tax credits</a>.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Heb ddod o hyd i’r dudalen</h1></header>
+
+
+<p class="govuk-body">Os gwnaethoch deipio’r cyfeiriad gwe, dylech wirio ei fod yn gywir.</p>
+
+<p class="govuk-body">Os gwnaethoch bastio’r cyfeiriad gwe, dylech wirio’ch bod wedi copïo’r cyfeiriad yn llawn.</p>
+
+<p class="govuk-body">
+  Os yw’r cyfeiriad gwe yn gywir neu y gwnaethoch ddewis cysylltiad neu fotwm <a href="#" class="govuk-link">Cysylltwch â’r Ganolfan Cyswllt Cymraeg os oes angen i chi siarad â rhywun am eich credydau treth</a>.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1></header>
+
+
+<p class="govuk-body">You will be able to use the service later.</p>
+
+<p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd</h1></header>
+
+
+<p class="govuk-body">Byddwch yn gallu defnyddio’r gwasanaeth yn nes ymlaen.</p>
+
+<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1></header>
+
+
+<p class="govuk-body">You will be able to use the service from 9am on Monday 19 November 2018.</p>
+
+<p class="govuk-body">You can:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="#">change other VAT details</a></li>
+  <li><a class="govuk-link" href="#">contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits</li>
+</ul>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd</h1></header>
+
+
+<p class="govuk-body">Byddwch yn gallu defnyddio’r gwasanaeth o 09:00 ar Ddydd Llun 19 Tachwedd 2018 ymlaen.</p>
+
+<p class="govuk-body">Gallwych:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="#">newid fanylion TAW eraill</a></li>
+  <li><a class="govuk-link" href="#">cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth</li>
+</ul>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1></header>
+
+
+<p class="govuk-body">You cannot use the online service to renew your tax credits.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+<p class="govuk-body">
+  You can <a class="govuk-link" href="#">use the tax credits service</a> to:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>find out more about your payments</li>
+  <li>see who is on your claim</li>
+  <li>make changes to your claim</li>
+  <li>check the status of your renewal</li>
+</ul>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd</h1></header>
+
+
+<p class="govuk-body">Ni allwch ddefnyddio’r gwasanaeth ar-lein er mwyn adnewyddu’ch credydau treth.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
+
+<p class="govuk-body">
+  Gallwych <a class="govuk-link" href="#">ddefnyddio’r gwasanaeth credydau treth</a> i wneud y canlynol:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>cael rhagor o wybodaeth am eich taliadau</li>
+  <li>gweld pwy sydd ar eich cais</li>
+  <li>gwneud newidiadau i’ch cais</li>
+  <li>gwirio statws eich cais i adnewyddu</li>
+</ul>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1></header>
+
+
+<p class="govuk-body">You will be able to renew your tax credits from Tuesday 24 April 2018.</p>
+
+<p class="govuk-body">
+  You can <a class="govuk-link" href="#">use the tax credits service</a> to:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>find out more about your payments</li>
+  <li>see who is on your claim</li>
+  <li>make changes to your claim</li>
+</ul>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd</h1></header>
+
+
+<p class="govuk-body">Byddwch yn gallu adnewyddu’ch credydau treth o Ddydd Mawrth 24 Ebrill 2018 ymlaen.</p>
+
+<p class="govuk-body">
+  Gallwych <a class="govuk-link" href="#">ddefnyddio’r gwasanaeth credydau treth</a> i wneud y canlynol:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>cael rhagor o wybodaeth am eich taliadau</li>
+  <li>gweld pwy sydd ar eich cais</li>
+  <li>gwneud newidiadau i’ch cais</li>
+</ul>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1></header>
+
+
+<p class="govuk-body">Universal Credit has replaced tax credits.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+<p class="govuk-body">
+  You can:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="#">find out more about Universal Credit</a></li>
+  <li><a class="govuk-link" href="#">apply for Universal Credit</a></li>
+  <li><a class="govuk-link" href="#">sign in to your Universal Credit account</a></li>
+</ul>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd</h1></header>
+
+
+<p class="govuk-body">Mae Credyd Cynhwysol wedi disodli credydau treth.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
+
+<p class="govuk-body">
+  Gallwych:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="#">cael gwybod rhagor am Gredyd Cynhwysol</a></li>
+  <li><a class="govuk-link" href="#">gwneud cais am Gredyd Cynhwysol</a></li>
+  <li><a class="govuk-link" href="#">mewngofnodi i’ch cyfrif Credyd Cynhwysol</a></li>
+</ul>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1></header>
+
+
+<p class="govuk-body">The submit an employment intermediary report service has closed.</p>
+
+<p class="govuk-body">Contact us if you need to speak to someone about the service and your reports.</p>
+
+<p class="govuk-body">
+  Telephone:
+  <br/>
+  <strong class="govuk-!-font-weight-bold">0808 157 3900</strong>
+</p>
+
+<p class="govuk-body">
+  Opening times:
+  <br/>
+  <strong class="govuk-!-font-weight-bold">Monday to Friday: 8:30am to 4:30pm</strong>
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd</h1></header>
+
+
+<p class="govuk-body">Mae’r gwasanaeth ar gyfer cyflwyno adroddiad cyfryngwr cyflogaeth wedi dod i ben.</p>
+
+<p class="govuk-body">Cysylltwch â ni os oes angen i chi siarad â rhywun am y gwasanaeth a’ch adroddiadau.</p>
+
+<p class="govuk-body">
+  Ffôn:
+  <br/>
+  <strong class="govuk-!-font-weight-bold">0808 157 3901</strong>
+</p>
+
+<p class="govuk-body">
+  Oriau agor:
+  <br/>
+  <strong class="govuk-!-font-weight-bold">Dydd Llun – Dydd Gwener: 08:30 – 16:30</strong>
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, the service is unavailable</h1></header>
+
+
+<p class="govuk-body">You will be able to use the service from 9am on Monday 19 November 2018.</p>
+
+<p class="govuk-body">We have not saved your answers. When the service is available, you will have to start again.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd</h1></header>
+
+
+<p class="govuk-body">Byddwch yn gallu defnyddio’r gwasanaeth o 09:00 ar Ddydd Llun 19 Tachwedd 2018 ymlaen.</p>
+
+<p class="govuk-body">Nid ydym wedi cadw’ch atebion. Pan fydd y gwasanaeth ar gael, bydd yn rhaid i chi ddechrau eto.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
+
+
+
+
+<header class="govuk-header hmrc-header  " role="banner" data-module="header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          
+          <svg
+            role="presentation"
+            focusable="false"
+            class="govuk-header__logotype-crown"
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 132 97"
+            height="32"
+            width="36"
+          >
+            <path
+              fill="currentColor" fill-rule="evenodd"
+              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+            ></path>
+            
+            <image src="/assets/images/govuk-logotype-crown.png"
+                   class="govuk-header__logotype-crown-fallback-image"></image>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+      </a>
+    </div>
+
+    <div class="govuk-header__content">
+        <a href="/" class="govuk-header__link govuk-header__link--service-name">
+          Service Name
+        </a>
+
+
+    </div>
+  </div>
+</header>
+<div class="govuk-width-container">
+</div>
+
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1></header>
+
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">
+  You can <a class="govuk-link" href="#">change other VAT details</a>.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Contact the Income Tax Helpline</a> if you need to speak to someone about your tax calculation.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1></header>
+
+
+<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
+
+<p class="govuk-body">
+  Gallwch <a class="govuk-link" href="#">newid fanylion TAW eraill</a>.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi siarad â rhywun am eich cyfrifiad treth.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1></header>
+
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">
+  We have not saved your answers. When the service is available, you will have to start again.
+</p>
+
+<p class="govuk-body">
+  Contact the Tax Credits Helpline if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+<p class="govuk-body">
+  Telephone:<br/>
+  <strong class="govuk-!-font-weight-bold">0345 300 3900</strong>
+</p>
+
+<p class="govuk-body">
+  Textphone:<br/>
+  <strong class="govuk-!-font-weight-bold">0345 300 3909</strong>
+</p>
+
+<p class="govuk-body">
+  Outside UK:<br/>
+  <strong class="govuk-!-font-weight-bold">+44 2890 538 192</strong>
+</p>
+
+<p class="govuk-body">
+  Opening times:<br/>
+  <strong class="govuk-!-font-weight-bold">Monday to Friday: 8am to 8pm
+
+  Saturday: 8am to 4pm<br/>
+  Sunday: 9am to 5pm</strong>
+</p>
+
+<p class="govuk-body">
+  Closed Easter Sunday, Christmas Day, Boxing Day and New Year’s Day.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1></header>
+
+
+<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
+
+<p class="govuk-body">
+  Nid ydym wedi cadw’ch atebion. Pan fydd y gwasanaeth ar gael, bydd yn rhaid i chi ddechrau eto.
+</p>
+
+<p class="govuk-body">
+  Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
+
+<p class="govuk-body">
+  Ffôn:<br/>
+  <strong class="govuk-!-font-weight-bold">0808 157 3901</strong>
+</p>
+
+<p class="govuk-body">
+  Oriau agor:<br/>
+  <strong class="govuk-!-font-weight-bold">Dydd Llun – Dydd Gwener: 08:30 – 17:00
+</p>
+
+<p class="govuk-body">
+  Ar gau ar Ddydd Sul y Pasg, Dydd Nadolig, Gŵyl San Steffan a Dydd Calan.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1></header>
+
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
+
+<p class="govuk-body">
+  <a href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1></header>
+
+
+<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
+
+<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
+
+<p class="govuk-body">
+  <a href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
+
+
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="utr">
+      What is your Corporation Tax Unique Taxpayer Reference?
+    </label>
+    
+  </h1>
+  <span id="utr-hint" class="govuk-hint">
+    This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint">
+</div>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="utr">
+    Self Assessment Unique Taxpayer Reference
+  </label>
+  <span id="utr-hint" class="govuk-hint">
+    This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint">
+</div>
+
+
+
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="utr">
+    Corporation Tax Unique Taxpayer Reference
+  </label>
+  <span id="utr-hint" class="govuk-hint">
+    This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.
+  </span>
+  <span id="utr-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Enter your Corporation Tax Unique Taxpayer Reference
+  </span>
+  <input class="govuk-input govuk-input--width-10 govuk-input--error" id="utr" name="utr" type="text" aria-describedby="utr-hint utr-error">
+</div>
+
+
+
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="utr">
+      What is your Self Assessment Unique Taxpayer Reference?
+    </label>
+    
+  </h1>
+  <span id="utr-hint" class="govuk-hint">
+    This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint">
+</div>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="vat-registration-number">
+      What is Anycompany’s VAT registration number?
+    </label>
+    
+  </h1>
+  <span id="vat-registration-number-hint" class="govuk-hint">
+    This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on Anycompany’s VAT registration certificate.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="vat-registration-number" name="vat-registration-number" type="text" aria-describedby="vat-registration-number-hint">
+</div>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="vat-registration-number">
+    VAT registration number
+  </label>
+  <span id="vat-registration-number-hint" class="govuk-hint">
+    This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on your VAT registration certificate.
+  </span>
+  <input class="govuk-input govuk-input--width-10" id="vat-registration-number" name="vat-registration-number" type="text" aria-describedby="vat-registration-number-hint">
+</div>
+
+
+
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="vat-registration-number">
+    VAT registration number
+  </label>
+  <span id="vat-registration-number-hint" class="govuk-hint">
+    This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on your VAT registration certificate.
+  </span>
+  <span id="vat-registration-number-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Enter your VAT registration number
+  </span>
+  <input class="govuk-input govuk-input--width-10 govuk-input--error" id="vat-registration-number" name="vat-registration-number" type="text" aria-describedby="vat-registration-number-hint vat-registration-number-error">
+</div>
+
+</body>
+
+  <script>
+    // This prevents the account dropdown from closing and triggering
+    // an infinite loop on the auto iframe resize
+    // Can be removed on completion of https://jira.tools.tax.service.gov.uk/browse/PLATUI-117
+    function getWindowHeight () {
+     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    }
+
+    var initialHeight = getWindowHeight()
+
+    window.addEventListener('resize', function (event) {
+      if (getWindowHeight() !== initialHeight) {
+        event.stopImmediatePropagation()
+        initialHeight = getWindowHeight()
+      }
+    });
+  </script>
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>
