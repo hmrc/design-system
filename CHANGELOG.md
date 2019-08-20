@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [1.1.1] - 2019-08-20
+
+### Added
+- Banner to notify of breaking changes in design systems and offer channel for assistance [7a4b72d](7a4b72d6f5a9c2784d21e374ccaf8e9d81dec6de)
+
 ## [1.1.0] - 2019-08-20
 
 ### Changed
