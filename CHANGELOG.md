@@ -10,6 +10,9 @@
 ### Added
 - New htmlOnly developer flag to disable Nunjucks tab in examples [9eaf39d](9eaf39dcdfe16c11ca372322a13b6f3899208c1b)
 
+### Fixed
+- Issue with watcher and 'generate-examples' gulp tasks creating race condition [3fed1b4](3fed1b4a238442454f3d8a3bd6859b2daa4006f0)
+
 ## [1.0.1] - 2019-08-19
 
 ### Updated
