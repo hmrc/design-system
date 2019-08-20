@@ -130,7 +130,7 @@ describe('Single page example macro', () => {
     expect(copyButton.text).toBe('Copy')
   })
 
-  it('should bot have a button to show Nunjucks code examples if the htmlOnly flag is true', () => {
+  it('should not have a button to show Nunjucks code examples if the htmlOnly flag is true', () => {
     const htmlOnlyParameters = { ...parameters, htmlOnly: true }
     const htmlOnlyDocument = documentFactory(htmlOnlyParameters, options)
     const tabLink = htmlOnlyDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
