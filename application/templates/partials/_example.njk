@@ -1,3 +1,5 @@
+{% from "_copyContents.njk" import copyContents %}
+
 {% macro example(params) %}
   {% set exampleRef = params.example | default("default") %}
   {% set exampleURL = "/hmrc-design-patterns/" + params.item + "/" + exampleRef + "/" %}
@@ -42,18 +44,17 @@
             aria-controls="{{ exampleId }}-html"
             data-track="tab-html" title="Display {{description}} example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#{{ exampleId }}-nunjucks" role="tab"
-            aria-controls="{{ exampleId }}-nunjucks"
-            data-track="tab-nunjucks" title="Display {{description}} example as Nunjucks">Nunjucks</a>
-        </li>
+        {% if not params.htmlOnly %}
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#{{ exampleId }}-nunjucks" role="tab"
+              aria-controls="{{ exampleId }}-nunjucks"
+              data-track="tab-nunjucks" title="Display {{description}} example as Nunjucks">Nunjucks</a>
+          </li>
+        {% endif %}
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+        {{ copyContents() }}
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html">
@@ -71,26 +72,26 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">
-            {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
-            </code>
-          </pre>
-
-          {% if welshExamplePath %}
-            <pre class="app-example__language-switch--cy-only-content">
+      {% if not params.htmlOnly %}
+        <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
+          {{ copyContents() }}
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
               <code class="hljs js">
-                {{- getNunjucksCode(welshExamplePath) | highlight('js') | safe -}}
+              {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
               </code>
             </pre>
-          {% endif %}
+
+            {% if welshExamplePath %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">
+                  {{- getNunjucksCode(welshExamplePath) | highlight('js') | safe -}}
+                </code>
+              </pre>
+            {% endif %}
+          </div>
         </div>
-      </div>
+      {% endif %}
     </div>
 
   </div>

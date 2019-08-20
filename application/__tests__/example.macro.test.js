@@ -56,7 +56,7 @@ const documentFactory = function (parameters, options) {
   return document
 }
 
-describe('Single page example macro english', () => {
+describe('Single page example macro', () => {
   const parameters = { item: 'open-links-in-a-new-window-or-tab', example: 'default' }
   const document = documentFactory(parameters, options)
 
@@ -128,6 +128,15 @@ describe('Single page example macro english', () => {
     const copyButton = codeContainer.querySelector('.app-link--copy')
     expect(copyButton).not.toBeNull()
     expect(copyButton.text).toBe('Copy')
+  })
+
+  it('should not have a button to show Nunjucks code examples if the htmlOnly flag is true', () => {
+    const htmlOnlyParameters = { ...parameters, htmlOnly: true }
+    const htmlOnlyDocument = documentFactory(htmlOnlyParameters, options)
+    const tabLink = htmlOnlyDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
+    const tabContentContainer = htmlOnlyDocument.getElementById(nunjucksPanelID)
+    expect(tabContentContainer).toBeNull()
+    expect(tabLink).toBeNull()
   })
 
   it('Should include the escaped HTML markup from the examples', () => {

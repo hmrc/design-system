@@ -1,6 +1,9 @@
 const gulp = require('gulp')
+const del = require('del')
 const concat = require('gulp-concat')
 const replace = require('gulp-replace')
+
+const pathFromRoot = require('../../util/pathFromRoot')
 
 const njkTagRegEx = /---(\s*)((.|\s)+?)(\s*)---/gm
 
@@ -56,4 +59,9 @@ gulp.task('scrape-layouts', (done) => {
     .on('end', done)
 })
 
-gulp.task('generate-examples', gulp.parallel('scrape-patterns', 'scrape-layouts'))
+gulp.task('prepare', async (done) => {
+  await del(pathFromRoot('src', 'examples'))
+  done()
+})
+
+gulp.task('generate-examples', gulp.series('prepare', gulp.parallel('scrape-patterns', 'scrape-layouts')))

@@ -2,13 +2,24 @@
 
 ## Unreleased
 
+## [1.1.0] - 2019-08-20
+
+### Changed
+- Abstracted markup for 'copy' button to Macro [b55ef2f](b55ef2fe4948c4ed50a112a99922d89352e851ac)
+
+### Added
+- New htmlOnly developer flag to disable Nunjucks tab in examples [9eaf39d](9eaf39dcdfe16c11ca372322a13b6f3899208c1b)
+
+### Fixed
+- Issue with watcher and 'generate-examples' gulp tasks creating race condition [3fed1b4](3fed1b4a238442454f3d8a3bd6859b2daa4006f0)
+
 ## [1.0.1] - 2019-08-19
 
 ### Updated
-- hmrc-frontend package to accessbile version  [d60284a](d60284afe98abc77c1ebccfb9806bed579af5c6a)
+- hmrc-frontend package to accessible version [d60284a](d60284afe98abc77c1ebccfb9806bed579af5c6a)
 
 ### Added
-- Integrate axe-core for accessibility testing and accessibility test pages  [ac6d118](ac6d1188062c824ceefb81d86f7b7131cff7cb52)
+- Integrate axe-core for accessibility testing and accessibility test pages [ac6d118](ac6d1188062c824ceefb81d86f7b7131cff7cb52)
 
 - Compile all featured patterns into single page for accessibility testing [2a4390b](2a4390bf9178a26c5c777f53c4ef187d0e16bd0d)
 
