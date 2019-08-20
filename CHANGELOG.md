@@ -4,6 +4,9 @@
 
 ## [1.1.0] - 2019-08-20
 
+### Changed
+- Abstracted markup for 'copy' button to Macro [b55ef2f](b55ef2fe4948c4ed50a112a99922d89352e851ac)
+
 ### Added
 - New htmlOnly developer flag to disable Nunjucks tab in examples [9eaf39d](9eaf39dcdfe16c11ca372322a13b6f3899208c1b)
 
