@@ -13,3 +13,13 @@
     {%- endif -%}
   </div>
 </header>
+
+<div class="notification-banner-wrapper">
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Breaking change"
+    },
+    html: 'There has recently been a breaking change to the GOV.UK and HMRC design systems, please contact <a class="govuk-link" href="slack://channel?team=T04RY81HB&id=CJMUM9AG3">#team-plat-ui on Slack</a> if you require more information or assistance in updating your prototype.'
+  }) }}
+</div>
