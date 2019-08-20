@@ -167,18 +167,18 @@
             aria-controls="example-default-html"
             data-track="tab-html" title="Display Page not found example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-default-nunjucks" role="tab"
-            aria-controls="example-default-nunjucks"
-            data-track="tab-nunjucks" title="Display Page not found example as Nunjucks">Nunjucks</a>
-        </li>
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-default-nunjucks" role="tab"
+              aria-controls="example-default-nunjucks"
+              data-track="tab-nunjucks" title="Display Page not found example as Nunjucks">Nunjucks</a>
+          </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
@@ -210,13 +210,14 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+        <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Page not found'
@@ -229,10 +230,10 @@
 &lt;p class="govuk-body"&gt;
   If the web address is correct or you selected a link or button, &lt;a href="#" class="govuk-link"&gt;contact the Tax Credits Helpline if you need to speak to someone about your tax credits&lt;/a&gt;.
 &lt;/p&gt;</code>
-          </pre>
+            </pre>
 
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Heb ddod o hyd i’r dudalen'
@@ -245,9 +246,9 @@
 &lt;p class="govuk-body"&gt;
   Os yw’r cyfeiriad gwe yn gywir neu y gwnaethoch ddewis cysylltiad neu fotwm &lt;a href="#" class="govuk-link"&gt;Cysylltwch â’r Ganolfan Cyswllt Cymraeg os oes angen i chi siarad â rhywun am eich credydau treth&lt;/a&gt;.
 &lt;/p&gt;</code>
-            </pre>
+              </pre>
+          </div>
         </div>
-      </div>
     </div>
 
   </div>

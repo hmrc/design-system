@@ -208,18 +208,18 @@
             aria-controls="example-default-html"
             data-track="tab-html" title="Display Open in a new window example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-default-nunjucks" role="tab"
-            aria-controls="example-default-nunjucks"
-            data-track="tab-nunjucks" title="Display Open in a new window example as Nunjucks">Nunjucks</a>
-        </li>
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-default-nunjucks" role="tab"
+              aria-controls="example-default-nunjucks"
+              data-track="tab-nunjucks" title="Display Open in a new window example as Nunjucks">Nunjucks</a>
+          </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link "</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"noopener noreferrer"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.gov.uk/working-tax-credit/eligibility"</span>&gt;</span>Find out if you qualify for tax credits (opens in a new window or tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
@@ -231,13 +231,14 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/new-tab-link/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNewTabLink %}
+        <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/new-tab-link/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNewTabLink %}
 
 {{ hmrcNewTabLink({
   <span class="hljs-attr">language</span>: <span class="hljs-string">"en"</span>,
@@ -245,10 +246,10 @@
   <span class="hljs-attr">href</span>: <span class="hljs-string">"https://www.gov.uk/working-tax-credit/eligibility"</span>,
   <span class="hljs-attr">classList</span>: <span class="hljs-string">""</span>
 }) }}</code>
-          </pre>
+            </pre>
 
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/new-tab-link/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNewTabLink %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/new-tab-link/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNewTabLink %}
 
 {{ hmrcNewTabLink({
   <span class="hljs-attr">language</span>: <span class="hljs-string">"cy"</span>,
@@ -256,9 +257,9 @@
   <span class="hljs-attr">href</span>: <span class="hljs-string">"https://www.gov.uk/working-tax-credit/eligibility"</span>,
   <span class="hljs-attr">classList</span>: <span class="hljs-string">""</span>
 }) }}</code>
-            </pre>
+              </pre>
+          </div>
         </div>
-      </div>
     </div>
 
   </div>

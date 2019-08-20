@@ -171,18 +171,18 @@
             aria-controls="example-general-page-html"
             data-track="tab-html" title="Display Service unavailable, general page example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-general-page-nunjucks" role="tab"
-            aria-controls="example-general-page-nunjucks"
-            data-track="tab-nunjucks" title="Display Service unavailable, general page example as Nunjucks">Nunjucks</a>
-        </li>
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-general-page-nunjucks" role="tab"
+              aria-controls="example-general-page-nunjucks"
+              data-track="tab-nunjucks" title="Display Service unavailable, general page example as Nunjucks">Nunjucks</a>
+          </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-general-page-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
@@ -214,13 +214,14 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-general-page-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+        <div class="app-tabs__container js-tabs__container" id="example-general-page-nunjucks" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -233,10 +234,10 @@
 &lt;p class="govuk-body"&gt;
   &lt;a class="govuk-link" href="#"&gt;Contact the Tax Credits Helpline&lt;/a&gt; if you need to make changes to your claim or speak to someone about your tax credits.
 &lt;/p&gt;</code>
-          </pre>
+            </pre>
 
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -249,9 +250,9 @@
 &lt;p class="govuk-body"&gt;
   &lt;a class="govuk-link" href="#"&gt;Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM&lt;/a&gt; os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
 &lt;/p&gt;</code>
-            </pre>
+              </pre>
+          </div>
         </div>
-      </div>
     </div>
 
   </div>
@@ -293,18 +294,18 @@
             aria-controls="example-service-temporarily-unavailable-html"
             data-track="tab-html" title="Display Service unavailable, when you know when a service will be available example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-service-temporarily-unavailable-nunjucks" role="tab"
-            aria-controls="example-service-temporarily-unavailable-nunjucks"
-            data-track="tab-nunjucks" title="Display Service unavailable, when you know when a service will be available example as Nunjucks">Nunjucks</a>
-        </li>
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-service-temporarily-unavailable-nunjucks" role="tab"
+              aria-controls="example-service-temporarily-unavailable-nunjucks"
+              data-track="tab-nunjucks" title="Display Service unavailable, when you know when a service will be available example as Nunjucks">Nunjucks</a>
+          </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-temporarily-unavailable-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
@@ -336,13 +337,14 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-service-temporarily-unavailable-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+        <div class="app-tabs__container js-tabs__container" id="example-service-temporarily-unavailable-nunjucks" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -355,10 +357,10 @@
 &lt;p class="govuk-body"&gt;
   &lt;a class="govuk-link" href="#"&gt;Contact the Tax Credits Helpline&lt;/a&gt; if you need to make changes to your claim or speak to someone about your tax credits.
 &lt;/p&gt;</code>
-          </pre>
+            </pre>
 
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -371,9 +373,9 @@
 &lt;p class="govuk-body"&gt;
   &lt;a class="govuk-link" href="#"&gt;Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM&lt;/a&gt; os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
 &lt;/p&gt;</code>
-            </pre>
+              </pre>
+          </div>
         </div>
-      </div>
     </div>
 
   </div>
@@ -415,18 +417,18 @@
             aria-controls="example-link-to-other-service-html"
             data-track="tab-html" title="Display Service unavailable, link to another service example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-link-to-other-service-nunjucks" role="tab"
-            aria-controls="example-link-to-other-service-nunjucks"
-            data-track="tab-nunjucks" title="Display Service unavailable, link to another service example as Nunjucks">Nunjucks</a>
-        </li>
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-link-to-other-service-nunjucks" role="tab"
+              aria-controls="example-link-to-other-service-nunjucks"
+              data-track="tab-nunjucks" title="Display Service unavailable, link to another service example as Nunjucks">Nunjucks</a>
+          </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-link-to-other-service-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
@@ -460,13 +462,14 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-link-to-other-service-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+        <div class="app-tabs__container js-tabs__container" id="example-link-to-other-service-nunjucks" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -480,10 +483,10 @@
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;change other VAT details&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;contact the Tax Credits Helpline&lt;/a&gt; if you need to make changes to your claim or speak to someone about your tax credits&lt;/li&gt;
 &lt;/ul&gt;</code>
-          </pre>
+            </pre>
 
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -497,9 +500,9 @@
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;newid fanylion TAW eraill&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM&lt;/a&gt; os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth&lt;/li&gt;
 &lt;/ul&gt;</code>
-            </pre>
+              </pre>
+          </div>
         </div>
-      </div>
     </div>
 
   </div>
@@ -545,18 +548,18 @@
             aria-controls="example-service-closed-html"
             data-track="tab-html" title="Display After a service closes example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-service-closed-nunjucks" role="tab"
-            aria-controls="example-service-closed-nunjucks"
-            data-track="tab-nunjucks" title="Display After a service closes example as Nunjucks">Nunjucks</a>
-        </li>
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-service-closed-nunjucks" role="tab"
+              aria-controls="example-service-closed-nunjucks"
+              data-track="tab-nunjucks" title="Display After a service closes example as Nunjucks">Nunjucks</a>
+          </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-closed-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
@@ -606,13 +609,14 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-service-closed-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+        <div class="app-tabs__container js-tabs__container" id="example-service-closed-nunjucks" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -634,10 +638,10 @@
   &lt;li&gt;make changes to your claim&lt;/li&gt;
   &lt;li&gt;check the status of your renewal&lt;/li&gt;
 &lt;/ul&gt;</code>
-          </pre>
+            </pre>
 
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -659,9 +663,9 @@
   &lt;li&gt;gwneud newidiadau i’ch cais&lt;/li&gt;
   &lt;li&gt;gwirio statws eich cais i adnewyddu&lt;/li&gt;
 &lt;/ul&gt;</code>
-            </pre>
+              </pre>
+          </div>
         </div>
-      </div>
     </div>
 
   </div>
@@ -703,18 +707,18 @@
             aria-controls="example-service-not-yet-open-html"
             data-track="tab-html" title="Display Before a service opens example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-service-not-yet-open-nunjucks" role="tab"
-            aria-controls="example-service-not-yet-open-nunjucks"
-            data-track="tab-nunjucks" title="Display Before a service opens example as Nunjucks">Nunjucks</a>
-        </li>
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-service-not-yet-open-nunjucks" role="tab"
+              aria-controls="example-service-not-yet-open-nunjucks"
+              data-track="tab-nunjucks" title="Display Before a service opens example as Nunjucks">Nunjucks</a>
+          </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-not-yet-open-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
@@ -754,13 +758,14 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-service-not-yet-open-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+        <div class="app-tabs__container js-tabs__container" id="example-service-not-yet-open-nunjucks" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -777,10 +782,10 @@
   &lt;li&gt;see who is on your claim&lt;/li&gt;
   &lt;li&gt;make changes to your claim&lt;/li&gt;
 &lt;/ul&gt;</code>
-          </pre>
+            </pre>
 
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -797,9 +802,9 @@
   &lt;li&gt;gweld pwy sydd ar eich cais&lt;/li&gt;
   &lt;li&gt;gwneud newidiadau i’ch cais&lt;/li&gt;
 &lt;/ul&gt;</code>
-            </pre>
+              </pre>
+          </div>
         </div>
-      </div>
     </div>
 
   </div>
@@ -841,18 +846,18 @@
             aria-controls="example-service-shut-down-html"
             data-track="tab-html" title="Display Service is closed forever example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-service-shut-down-nunjucks" role="tab"
-            aria-controls="example-service-shut-down-nunjucks"
-            data-track="tab-nunjucks" title="Display Service is closed forever example as Nunjucks">Nunjucks</a>
-        </li>
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-service-shut-down-nunjucks" role="tab"
+              aria-controls="example-service-shut-down-nunjucks"
+              data-track="tab-nunjucks" title="Display Service is closed forever example as Nunjucks">Nunjucks</a>
+          </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-shut-down-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
@@ -900,13 +905,14 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-service-shut-down-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+        <div class="app-tabs__container js-tabs__container" id="example-service-shut-down-nunjucks" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -927,10 +933,10 @@
   &lt;br/&gt;
   &lt;strong class="govuk-!-font-weight-bold"&gt;Monday to Friday: 8:30am to 4:30pm&lt;/strong&gt;
 &lt;/p&gt;</code>
-          </pre>
+            </pre>
 
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -951,9 +957,9 @@
   &lt;br/&gt;
   &lt;strong class="govuk-!-font-weight-bold"&gt;Dydd Llun – Dydd Gwener: 08:30 – 16:30&lt;/strong&gt;
 &lt;/p&gt;</code>
-            </pre>
+              </pre>
+          </div>
         </div>
-      </div>
     </div>
 
   </div>
@@ -995,18 +1001,18 @@
             aria-controls="example-service-replaced-html"
             data-track="tab-html" title="Display Something has replaced the service example as HTML">HTML</a>
         </li>
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-service-replaced-nunjucks" role="tab"
-            aria-controls="example-service-replaced-nunjucks"
-            data-track="tab-nunjucks" title="Display Something has replaced the service example as Nunjucks">Nunjucks</a>
-        </li>
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-service-replaced-nunjucks" role="tab"
+              aria-controls="example-service-replaced-nunjucks"
+              data-track="tab-nunjucks" title="Display Something has replaced the service example as Nunjucks">Nunjucks</a>
+          </li>
       </ul>
 
       <div class="app-tabs__container js-tabs__container" id="example-service-replaced-html" role="tabpanel">
-        <!-- TODO: Create copy link macro - several instances of this -->
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
         <div data-module="app-copy">
           <pre class="app-example__language-switch--en-only-content">
             <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
@@ -1054,13 +1060,14 @@
         </div>
       </div>
 
-      <div class="app-tabs__container js-tabs__container" id="example-service-replaced-nunjucks" role="tabpanel">
-        <div class="app-link--copy__container">
-          <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-        </div>
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+        <div class="app-tabs__container js-tabs__container" id="example-service-replaced-nunjucks" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
@@ -1081,10 +1088,10 @@
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;apply for Universal Credit&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;sign in to your Universal Credit account&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code>
-          </pre>
+            </pre>
 
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs js">{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
@@ -1105,9 +1112,9 @@
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;gwneud cais am Gredyd Cynhwysol&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="govuk-link" href="#"&gt;mewngofnodi i’ch cyfrif Credyd Cynhwysol&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code>
-            </pre>
+              </pre>
+          </div>
         </div>
-      </div>
     </div>
 
   </div>
