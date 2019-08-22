@@ -7,6 +7,13 @@ layout: layout-example.njk
 {{ govukCheckboxes({
   idPrefix: "mixed",
   name: "mixed",
+  fieldset: {
+    legend: {
+      text: "Select your preferences",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
   items: [
     {
       value: "paperless",
