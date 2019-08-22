@@ -855,6 +855,23 @@
 		  }
 		}
 
+		// TODO
+		// Retrieve breakpoints from Sass vars?
+		var breakpoints = {
+		  xs: 0,
+		  mobile: 320,
+		  tablet: 641,
+		  desktop: 769
+		};
+
+		function getCurrentBreakpoint (windowWidth) {
+		  var reducer = function (acc, curr) {
+		    var windowInsideBreakpoint = (windowWidth || window.innerWidth) >= breakpoints[curr];
+		    return windowInsideBreakpoint ? curr : acc
+		  };
+		  return Object.keys(breakpoints).reduce(reducer)
+		}
+
 		function AccountMenu ($module) {
 		  this.$module = document.querySelector($module);
 		  this.$mainNav = this.$module.querySelector('.hmrc-account-menu__main');
@@ -862,6 +879,7 @@
 		  this.$showSubnavLink = this.$module.querySelector('#account-menu__main-2');
 		  this.$showNavLinkMobile = this.$module.querySelector('.hmrc-account-menu__link--menu');
 		  this.$backLink = this.$module.querySelector('.hmrc-account-menu__link--back a');
+		  this.$currentBreakpoint = getCurrentBreakpoint();
 		}
 
 		AccountMenu.prototype.init = function () {
@@ -875,7 +893,16 @@
 		  this.$subNav.addEventListener('focusin', this.eventHandlers.subNavFocusIn.bind(this));
 		  this.$showNavLinkMobile.addEventListener('click', this.eventHandlers.showNavLinkMobileClick.bind(this));
 
-		  window.addEventListener('resize', debounce(this.setup.bind(this)));
+		  window.addEventListener('resize', debounce(this.reinstantiate.bind(this)));
+		};
+
+		AccountMenu.prototype.reinstantiate = function (resizeEvent) {
+		  var newBreakpoint = getCurrentBreakpoint(resizeEvent.target.innerWidth);
+		  var hasCrossedBreakpoint = this.$currentBreakpoint !== newBreakpoint;
+		  if (hasCrossedBreakpoint) {
+		    this.$currentBreakpoint = newBreakpoint;
+		    this.setup();
+		  }
 		};
 
 		AccountMenu.prototype.eventHandlers = {

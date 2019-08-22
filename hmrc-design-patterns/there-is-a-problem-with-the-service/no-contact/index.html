@@ -53,22 +53,5 @@
 </p>
 </body>
 
-  <script>
-    // This prevents the account dropdown from closing and triggering
-    // an infinite loop on the auto iframe resize
-    // Can be removed on completion of https://jira.tools.tax.service.gov.uk/browse/PLATUI-117
-    function getWindowHeight () {
-     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-    }
-
-    var initialHeight = getWindowHeight()
-
-    window.addEventListener('resize', function (event) {
-      if (getWindowHeight() !== initialHeight) {
-        event.stopImmediatePropagation()
-        initialHeight = getWindowHeight()
-      }
-    });
-  </script>
   <script src="/assets/javascripts/hmrc-design-system.js"></script>
 </html>
