@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## [1.1.2] - 2019-08-22
+
+### Removed
+- A redundant 'TODO' comment [0a51262](0a51262734b95ff5cdf12aafeda93288e7feb4fa)
+
+### Updated
+- `hmrc-frontend` to version 1.0.4 and removed now redundant Javascrit hack to prevent collapse of menu in account header example [746abd0](746abd0aae8073f44e1f67d6eba9c66e245a68eb)
+
 ## [1.1.1] - 2019-08-20
 
 ### Added
