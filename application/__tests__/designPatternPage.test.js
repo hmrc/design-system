@@ -66,6 +66,31 @@ describe('Design pattern page', () => {
     })
   })
 
+  describe('Phase banner', () => {
+    let phaseBanner
+
+    beforeEach(() => {
+      const document = documentFactory({ status: 'experimental' })
+      phaseBanner = document.querySelector('.hmrc-phase-banner')
+    })
+
+    it('should display the phase banner, with the correct text, when the status flag is set', () => {
+      expect(phaseBanner).not.toBeNull()
+      expect(phaseBanner.querySelector('strong').textContent).toBe('experimental')
+    })
+
+    it('should render the default status text if the statusText flag is not set', () => {
+      const expectedString = 'This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.'
+      expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
+    })
+
+    it('should render the passed status text if the statusText flag is set', () => {
+      const document = documentFactory({ status: 'experimental', statusText: 'Some status text' })
+      phaseBanner = document.querySelector('.hmrc-phase-banner')
+      expect(phaseBanner.querySelector('p').textContent).toBe('Some status text')
+    })
+  })
+
   it('should render content from the `contents` arg', () => {
     const document = documentFactory({ contents: '<p id="someContent">foo</p>' })
     const content = document.querySelector('#someContent')
