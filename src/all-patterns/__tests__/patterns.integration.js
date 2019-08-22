@@ -10,7 +10,12 @@ const options = {
   rules: {
     'page-has-heading-one': { enabled: false },
     'duplicate-id-aria': { enabled: false },
-    'form-field-multiple-labels': { enabled: false }
+    'form-field-multiple-labels': { enabled: false },
+    'region': { enabled: false },
+    'landmark-no-duplicate-banner': { enabled: false },
+    'landmark-one-main': { enabled: false },
+    'landmark-unique': { enabled: false },
+    'skip-link': { enabled: false }
   }
 }
 
