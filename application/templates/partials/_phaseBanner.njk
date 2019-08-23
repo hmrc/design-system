@@ -1,0 +1,14 @@
+{% macro phaseBanner(params) %}
+  {% set status = params.status %}
+  {% if params.status %}
+    {% set defaultStatusText %}This is currently {{ status }} because <a class="govuk-link" href="#research">more research</a> is needed.{% endset %}
+    {% set statusText = params.statusText | default(defaultStatusText) %}
+    <div class="govuk-!-padding-bottom-8 hmrc-phase-banner">
+      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">
+        {{- status -}}
+      </strong>
+
+        <p class="govuk-body">{{- statusText | safe -}}</p>
+    </div>
+  {% endif %}
+{% endmacro %}

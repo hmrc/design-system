@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [1.2.0] - 2019-08-23
+
+### Added
+- Phase banner macro driven by developer flag on pattern pages [7e8a9a1](7e8a9a1e5df89cc49680bd74902ef45c08cdc491)
+
 ## [1.1.3] - 2019-08-22
 
 ### Fixed
