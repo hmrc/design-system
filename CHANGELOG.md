@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## [1.1.3] - 2019-08-22
+
+### Fixed
+- Missing closing element causing validation errors [699f7a9](699f7a98c9c6d199e011ef386bbdc13217b303ea)
+
+### Updated
+- Accessibility test tool for more thorough testing, added additional ignore rules for all patterns page and fixed failing landmark issue [bff7313](bff731396c09c23d142f21b79d04f567fd6f254e)
+
 ## [1.1.2] - 2019-08-22
 
 ### Removed
