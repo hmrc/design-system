@@ -1,13 +1,13 @@
 {% from "_copyContents.njk" import copyContents %}
 
 {% macro example(params) %}
-  {% set exampleRef = params.example | default("default") %}
+  {% set exampleRef = params.example %}
   {% set exampleURL = "/hmrc-design-patterns/" + params.item + "/" + exampleRef + "/" %}
   {% set examplePath = "src" + exampleURL + "index.njk" %}
   {% set exampleId = "example-" + exampleRef %}
   {% set description = params.description %}
   {% if params.welsh %}
-    {% set welshExampleRef = params.welsh | default("default") %}
+    {% set welshExampleRef = params.welsh %}
     {% set welshExampleURL = "/hmrc-design-patterns/" + params.item + "/" + welshExampleRef + "/" %}
     {% set welshExamplePath = "src" + welshExampleURL + "index.njk" %}
   {% endif %}

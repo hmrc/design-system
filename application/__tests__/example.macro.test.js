@@ -57,15 +57,15 @@ const documentFactory = function (parameters, options) {
 }
 
 describe('Single page example macro', () => {
-  const parameters = { item: 'open-links-in-a-new-window-or-tab', example: 'default' }
+  const parameters = { item: 'open-links-in-a-new-window-or-tab', example: 'example' }
   const document = documentFactory(parameters, options)
 
-  const exampleSrc = '/hmrc-design-patterns/open-links-in-a-new-window-or-tab/default/'
+  const exampleSrc = '/hmrc-design-patterns/open-links-in-a-new-window-or-tab/example/'
 
-  const htmlPanelID = 'example-default-html'
-  const nunjucksPanelID = 'example-default-nunjucks'
+  const htmlPanelID = 'example-example-html'
+  const nunjucksPanelID = 'example-example-nunjucks'
 
-  const exampleFrame = document.querySelector('#example-default iframe')
+  const exampleFrame = document.querySelector('#example-example iframe')
   const exampleLink = document.querySelector('.app-example__link a')
 
   it('should render an iFrame for the example with the correct attribute values', () => {
@@ -86,9 +86,9 @@ describe('Single page example macro', () => {
   })
 
   it('Should have a language toggle for dual language examples', () => {
-    const welshParameters = { ...parameters, welsh: 'default-welsh' }
+    const welshParameters = { ...parameters, welsh: 'example-welsh' }
     const welshDocument = documentFactory(welshParameters, options)
-    const languageToggleLink = welshDocument.querySelector('a[href="/hmrc-design-patterns/open-links-in-a-new-window-or-tab/default-welsh/"]')
+    const languageToggleLink = welshDocument.querySelector('a[href="/hmrc-design-patterns/open-links-in-a-new-window-or-tab/example-welsh/"]')
     expect(languageToggleLink).not.toBeNull()
   })
 
@@ -105,7 +105,7 @@ describe('Single page example macro', () => {
   })
 
   it('should have a button to copy HTML code examples', () => {
-    const codeContainer = document.querySelector('#example-default-html')
+    const codeContainer = document.querySelector('#example-example-html')
     const copyButton = codeContainer.querySelector('.app-link--copy')
     expect(copyButton).not.toBeNull()
     expect(copyButton.text).toBe('Copy')
@@ -124,7 +124,7 @@ describe('Single page example macro', () => {
   })
 
   it('should have a button to copy Nunjucks code examples', () => {
-    const codeContainer = document.querySelector('#example-default-nunjucks')
+    const codeContainer = document.querySelector('#example-example-nunjucks')
     const copyButton = codeContainer.querySelector('.app-link--copy')
     expect(copyButton).not.toBeNull()
     expect(copyButton.text).toBe('Copy')

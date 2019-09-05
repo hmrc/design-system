@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [1.3.0] - 2019-09-03
+
+### Changed
+- Require explicit naming of pattern example location and remove 'default' functionality [f955182](f9551828a4445ebb0523b70915e82a990af53301)
+
 ## [1.2.0] - 2019-08-23
 
 ### Added
