@@ -8,7 +8,6 @@ const rename = require('gulp-rename')
 const header = require('gulp-header')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
-const livereload = require('gulp-livereload')
 
 const pathFromRoot = require('../../util/pathFromRoot')
 
@@ -27,7 +26,7 @@ const errorHandler = function (error) {
 }
 
 gulp.task('scss:watch', (done) => {
-  gulp.watch(pathFromRoot('**', '*.scss'), gulp.parallel('build'))
+  gulp.watch(pathFromRoot('**', '*.scss'), gulp.parallel('rebuild'))
   done()
 })
 
@@ -49,7 +48,6 @@ gulp.task('scss:hmrc-design-system', (done) => {
       extname: '.min.css'
     }))
     .pipe(gulp.dest('./dist'))
-    .pipe(livereload())
     .on('end', done)
 })
 
