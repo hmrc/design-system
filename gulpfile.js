@@ -24,3 +24,9 @@ gulp.task('integration', gulp.series('build', 'serve:integration', 'jest:integra
 gulp.task('test', gulp.parallel('lint', 'jest:unit', 'integration'))
 
 gulp.task('default', gulp.series('generate-examples', 'build', 'watch', 'serve'))
+
+gulp.task('rebuild', gulp.series('build', (done) => {
+  console.log('Reloading page')
+  gulp.src('dist/*').pipe(livereload({ quiet: true }))
+  done()
+}))

@@ -7,7 +7,6 @@ const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
 const layouts = require('metalsmith-layouts')
 const ignore = require('metalsmith-ignore')
-
 const rollup = require('metalsmith-rollup')
 const resolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
@@ -77,9 +76,9 @@ gulp.task('compile', (done) => {
 
 gulp.task('build:watch', (done) => {
   templatePaths.forEach(pathStr => {
-    gulp.watch(path.join(pathStr, pattern), gulp.parallel('build'))
+    gulp.watch(path.join(pathStr, pattern), gulp.parallel('rebuild'))
   })
 
-  gulp.watch(pathFromRoot('application', 'assets', 'javascripts', '**', '*'), gulp.parallel('build'))
+  gulp.watch(pathFromRoot('application', 'assets', 'javascripts', '**', '*'), gulp.parallel('rebuild'))
   done()
 })
