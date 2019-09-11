@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [1.3.1] - 2019-09-11
+
+### Changed
+- Move livereload to trigger on recompile [0e54b98](0e54b986df4ac13b677d1c383be791b536ccb3d7)
+
 ## [1.3.0] - 2019-09-03
 
 ### Changed
