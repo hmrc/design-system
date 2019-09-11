@@ -1,6 +1,6 @@
 {
   "name": "@hmrc/design-system",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "description": "Static site generator for the HMRC Design System",
   "scripts": {
@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/hmrc/design-system#readme",
   "dependencies": {
-    "govuk-frontend": "^3.0.0",
-    "hmrc-frontend": "^1.0.4"
+    "govuk-frontend": "^3.2.0",
+    "hmrc-frontend": "^1.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",

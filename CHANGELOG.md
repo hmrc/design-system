@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [1.5.0] - 2019-09-11
+
+### Updated
+- `hmrc-frontend` and `govuk-frontend` dependencies [609a969](609a969a3fa0dab0ceabad6b2e16b13d6e5d5e38)
+
 ## [1.4.0] - 2019-09-11
 
 ### Changed
