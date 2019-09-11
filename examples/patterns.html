@@ -14,59 +14,61 @@
 <!-- ACCOUNT MENU -->
 <nav id="secondary-nav" class="hmrc-account-menu" aria-label="Account" data-module="hmrc-account-menu">
   <a href="#account-home" class="hmrc-account-menu__link hmrc-account-menu__link--home hmrc-account-menu__link--active">
-    <span class="hmrc-account-icon hmrc-account-icon--home">Account home</span>
+    <span class="hmrc-account-icon hmrc-account-icon--home">
+Account home    </span>
   </a>
 
-  <a href="#" class="hmrc-account-menu__link hmrc-account-menu__link--menu js-hidden js-visible" aria-hidden="true" aria-expanded="false">
-    Account menu
-  </a>
+  <a href="#" class="hmrc-account-menu__link hmrc-account-menu__link--menu js-hidden js-visible" tabindex="-1" aria-hidden="true" aria-expanded="false">
+Account menu  </a>
 
   <ul class="hmrc-account-menu__main js-hidden">
     <li class="hmrc-account-menu__link--back hidden" aria-hidden="true">
-      <a href="#" class="hmrc-account-menu__link">
+      <a href="#" tabindex="-1" class="hmrc-account-menu__link">
         Back
       </a>
     </li>
 
     <li>
       <a href="#messages" class="hmrc-account-menu__link">
-        Messages
-<span class="hmrc-notification-badge">2</span>
+Messages<span class="hmrc-notification-badge">2</span>
 </a>
     </li>
 
     <li>
       <a href="#check-progress" class="hmrc-account-menu__link">
-        Check progress
-      </a>
+Check progress      </a>
     </li>
 
     <li>
       <a href="#subnav-your-account" id="account-menu__main-2" class="hmrc-account-menu__link hmrc-account-icon hmrc-account-menu__link--more" aria-haspopup="true" aria-owns="subnav-your-account">
-        Your account
-      </a>
+Your account      </a>
 
       <div class="hmrc-subnav" id="subnav-your-account" role="navigation" aria-labelledby="account-menu__main-2" aria-label="Your account">
         <div class="govuk-grid-column-one-third hmrc-subnav__section">
-          <p class="hmrc-subnav__section__heading">Paperless settings</p>
+          <p class="hmrc-subnav__section__heading">
+Paperless settings          </p>
 
           <div>
-            <a href="#paperless-settings">Manage your paperless settings</a>
+            <a href="#paperless-settings">
+Manage your paperless settings            </a>
           </div>
         </div>
 
         <div class="govuk-grid-column-one-third hmrc-subnav__section">
-          <p class="hmrc-subnav__section__heading">Personal details</p>
+          <p class="hmrc-subnav__section__heading">
+Personal details          </p>
 
           <div>
-            <a href="#personal-details">Manage your personal details</a>
+            <a href="#personal-details">
+Manage your personal details            </a>
           </div>
         </div>
       </div>
     </li>
 
     <li>
-      <a href="#sign-out" class="hmrc-account-menu__link">Sign out</a>
+      <a href="#sign-out" class="hmrc-account-menu__link">
+Sign out      </a>
     </li>
   </ul>
 </nav>
@@ -89,7 +91,7 @@
 </div>
 
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Continue
 </button>
 
@@ -122,7 +124,97 @@
   </span>
   <input class="govuk-input govuk-input--width-10 govuk-input--error" id="accounts-office-reference" name="accounts-office-reference" type="text" aria-describedby="accounts-office-reference-hint accounts-office-reference-error">
 </div>
-<h1 class="govuk-heading-xl">You have added 3 directors</h1>
+
+
+
+
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <h1 class="govuk-fieldset__heading">
+      Select your preferences
+    </h1>
+  </legend>
+  <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="mixed" name="mixed" type="checkbox" value="paperless">
+          <label class="govuk-label govuk-checkboxes__label" for="mixed">
+        I want to get electronic communications instead of letters from HMRC
+      </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="mixed-2" name="mixed" type="checkbox" value="access-code-7-days">
+          <label class="govuk-label govuk-checkboxes__label" for="mixed-2">
+        Remember this access code for 7 days
+      </label>
+        </div>
+  </div>
+</fieldset>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="access-code">
+    Access code
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="access-code" name="access-code" type="text">
+</div>
+
+
+
+<div class="govuk-form-group">
+  <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="access-code-7-days" name="access-code-7-days" type="checkbox" value="Keep for 7 days">
+          <label class="govuk-label govuk-checkboxes__label" for="access-code-7-days">
+        Remember this access code for 7 days
+      </label>
+        </div>
+  </div>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <h1 class="govuk-fieldset__heading">
+      Do you want to get electronic communications instead of letters from HMRC?
+    </h1>
+  </legend>
+  <div class="govuk-radios govuk-radios--inline">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="paperless" name="paperless" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="paperless">
+        Yes
+      </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="paperless-2" name="paperless" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="paperless-2">
+        No
+      </label>
+        </div>
+  </div>
+</fieldset>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button><h1 class="govuk-heading-xl">You have added 3 directors</h1>
 <div class="govuk-form-group">
   <ul class="hmrc-add-to-a-list hmrc-add-to-a-list--short">
     
@@ -191,23 +283,23 @@
     
   </span>
   <div class="govuk-radios govuk-radios--inline">
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="add-another">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="add-another">
         yes
       </label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="add-another-2">
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="add-another-2">
         no
       </label>
-    </div>
+        </div>
   </div>
 </fieldset>
 </div>
 
-  <button type="submit" class="govuk-button" data-module="govuk-button">
+  <button class="govuk-button" data-module="govuk-button">
   continue
 </button>
 </form>
@@ -216,101 +308,11 @@
 
 
 
-
-<div class="govuk-form-group">
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-    <h1 class="govuk-fieldset__heading">
-      Select your preferences
-    </h1>
-  </legend>
-  <div class="govuk-checkboxes">
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="mixed" name="mixed" type="checkbox" value="paperless">
-      <label class="govuk-label govuk-checkboxes__label" for="mixed">
-        I want to get electronic communications instead of letters from HMRC
-      </label>
-    </div>
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="mixed-2" name="mixed" type="checkbox" value="access-code-7-days">
-      <label class="govuk-label govuk-checkboxes__label" for="mixed-2">
-        Remember this access code for 7 days
-      </label>
-    </div>
-  </div>
-</fieldset>
-</div>
-
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-
-
-<div class="govuk-form-group">
-  <label class="govuk-label" for="access-code">
-    Access code
-  </label>
-  <input class="govuk-input govuk-input--width-10" id="access-code" name="access-code" type="text">
-</div>
-
-
-
-<div class="govuk-form-group">
-  <div class="govuk-checkboxes">
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="access-code-7-days" name="access-code-7-days" type="checkbox" value="Keep for 7 days">
-      <label class="govuk-label govuk-checkboxes__label" for="access-code-7-days">
-        Remember this access code for 7 days
-      </label>
-    </div>
-  </div>
-</div>
-
-
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-
-
-
-<div class="govuk-form-group">
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-    <h1 class="govuk-fieldset__heading">
-      Do you want to get electronic communications instead of letters from HMRC?
-    </h1>
-  </legend>
-  <div class="govuk-radios govuk-radios--inline">
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="paperless" name="paperless" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="paperless">
-        Yes
-      </label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="paperless-2" name="paperless" type="radio" value="no">
-      <label class="govuk-label govuk-radios__label" for="paperless-2">
-        No
-      </label>
-    </div>
-  </div>
-</fieldset>
-</div>
-
-
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-
-
 <header class="hmrc-page-heading">
   <h1 class="govuk-heading-xl">We have confirmed your identity</h1></header>
 
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Continue
 </button>
 
@@ -320,7 +322,7 @@
   <h1 class="govuk-heading-xl">Rydym wedi cadarnhau pwy ydych</h1></header>
 
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Yn eich blaen
 </button>
 
@@ -354,7 +356,7 @@ heb gadarnhau pwy ydych</p>
 
 <p class="govuk-body">You have not given us enough information.</p>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Try again
 </button>
 
@@ -366,7 +368,7 @@ heb gadarnhau pwy ydych</p>
 
 <p class="govuk-body">Nid ydych wedi rhoi digon o wybodaeth i ni.</p>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Rhowch gynnig arall arni
 </button>
 
@@ -378,7 +380,7 @@ heb gadarnhau pwy ydych</p>
 
 <p class="govuk-body">The information you have entered does not match our records.</p>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Try again
 </button>
 
@@ -390,7 +392,7 @@ heb gadarnhau pwy ydych</p>
 
 <p class="govuk-body">Nid yw’r wybodaeth yr ydych wedi’i nodi yn cyd-fynd â’n cofnodion.</p>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Rhowch gynnig arall arni
 </button>
 
@@ -410,7 +412,7 @@ heb gadarnhau pwy ydych</p>
 </div>
 
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Continue
 </button>
 
@@ -948,7 +950,7 @@ heb gadarnhau pwy ydych</p>
 </div>
 
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Continue
 </button>
 
@@ -999,7 +1001,7 @@ heb gadarnhau pwy ydych</p>
 </div>
 
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Continue
 </button>
 
@@ -1019,7 +1021,7 @@ heb gadarnhau pwy ydych</p>
 </div>
 
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+<button class="govuk-button" data-module="govuk-button">
   Continue
 </button>
 
