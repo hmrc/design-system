@@ -1,27 +1,29 @@
 <header role="banner">
   <div class="hmrc-internal-header app-header">
-    <div class="hmrc-logo app-header__title">
-      <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" title="Go to the HMRC Design Library homepage" class="hmrc-logo__link">
-        HM Revenue &amp; Customs
-      </a>
-    </div>
-
-    <div class="hmrc-internal-service-name app-header__link">
-      {%- if serviceName -%}
-        <a href="/" title="Go to the internal service homepage" class="hmrc-internal-service-name__link">
-          {{ serviceName }}
+    <div class="govuk-width-container">
+      <div class="hmrc-logo app-header__title">
+        <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" title="Go to the HMRC Design Library homepage" class="hmrc-logo__link">
+          HM Revenue &amp; Customs
         </a>
-      {%- endif -%}
-    </div>
-  </div>
+      </div>
 
-  <div class="notification-banner-wrapper">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-    {{ govukPhaseBanner({
-      tag: {
-        text: "Breaking change"
-      },
-      html: 'There has recently been a breaking change to the GOV.UK and HMRC design systems, please contact <a class="govuk-link" href="slack://channel?team=T04RY81HB&id=CJMUM9AG3">#team-plat-ui on Slack</a> if you require more information or assistance in updating your prototype.'
-    }) }}
+      <div class="hmrc-internal-service-name app-header__link">
+        {%- if serviceName -%}
+          <a href="/" title="Go to the internal service homepage" class="hmrc-internal-service-name__link">
+            {{ serviceName }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <!-- <div class="notification-banner-wrapper">
+      {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+      {{ govukPhaseBanner({
+        tag: {
+          text: "Breaking change"
+        },
+        html: 'There has recently been a breaking change to the GOV.UK and HMRC design systems, please contact <a class="govuk-link" href="slack://channel?team=T04RY81HB&id=CJMUM9AG3">#team-plat-ui on Slack</a> if you require more information or assistance in updating your prototype.'
+      }) }}
+    </div> -->
   </div>
 </header>
