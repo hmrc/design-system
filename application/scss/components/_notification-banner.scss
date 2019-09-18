@@ -1,10 +1,9 @@
 .notification-banner-wrapper {
-  .govuk-phase-banner {
-    padding-left: govuk-spacing(3);
-    padding-right: govuk-spacing(3);
+  color: govuk-colour("white");
+  background-color: $govuk-link-colour;
+  padding:15px 0 0 0;
 
-    .govuk-phase-banner__text {
-      vertical-align: top;
-    }
+  p, a {
+    color: govuk-colour("white") !important;
   }
 }
