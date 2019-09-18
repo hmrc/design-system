@@ -5,20 +5,11 @@
   $toc-width-tablet: 210px;
 
   .app-pane.app-pane--enabled {
-    $pane-height: 100vh;
     overflow: hidden;
 
     @include govuk-media-query($from: tablet) {
       display: flex;
       flex-direction: column;
-    }
-
-    @include govuk-media-query($from: tablet, $and: '(orientation: portrait)') {
-      height: $pane-height;
-    }
-
-    @include govuk-media-query($from: desktop) {
-      height: $pane-height;
     }
   }
 
@@ -40,12 +31,6 @@
       position: relative;
       min-height: 0;
       flex: 1 1 100%;
-
-      > * {
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: none;
-      }
     }
   }
 
