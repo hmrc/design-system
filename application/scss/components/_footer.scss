@@ -6,7 +6,7 @@
 // GOV.UK Frontend footer adapted for full width
 
 .app-width-container--full {
-  max-width: 1100px;
+  max-width: $govuk-page-width;
   padding: 0;
   @include govuk-media-query($from: desktop) {
     margin: 0 auto;
