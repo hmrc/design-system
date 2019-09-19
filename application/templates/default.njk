@@ -24,7 +24,9 @@
   {% set serviceName = "Design resources for HMRC" %}
 
   <!-- TODO: tidy up the below -->
-  {%- block page -%}{%- endblock -%}
+  <div class="app-pane app-pane--enabled">
+    {%- block page -%}{%- endblock -%}
+  </div>
 
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
