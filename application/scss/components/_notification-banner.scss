@@ -3,7 +3,7 @@
   background-color: $govuk-link-colour;
   padding:15px 0 0 0;
 
-  p, a {
-    color: govuk-colour("white") !important;
+  p.govuk-body, a.govuk-link {
+    color: govuk-colour("white");
   }
 }
