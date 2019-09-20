@@ -8,81 +8,77 @@
 {% endif %}
 
 {% block page %}
-
-  <div class="app-pane app-pane--enabled">
-    <div class="app-pane__header">
-      {% include './partials/header.njk' %}
-    </div>
-
-    <div class="app-pane__body">
-
-      <div class="app-subnav-toggle" data-module="subnav-toggle">
-        <label for="app-subnav-toggle" class="app-subnav-toggle__label">Menu</label>
-      </div>
-      <input type="checkbox" id="app-subnav-toggle">
-
-      <nav class="app-pane__subnav">
-        <h2 class="govuk-heading-m">
-          {%- set designPatternsIndexPage = 'hmrc-design-patterns/index.njk' -%}
-
-          {%- if filepath != designPatternsIndexPage -%}<a href="/hmrc-design-patterns/">{%- endif -%}
-            HMRC Design Patterns
-          {%- if filepath != designPatternsIndexPage -%}</a>{%- endif -%}
-        </h2>
-        <div class="app-subnav">
-          <ul class="app-subnav__section">
-          {%- for item in navigation -%}
-            {%- set isActive = item.filepath === filepath -%}
-
-            {%- if item.section === 'hmrc-design-patterns' and item.placement === 'primary' -%}
-              <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
-                <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
-                  {{item.text}}
-                </a>
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-          </ul>
-
-          <ul class="app-subnav__section">
-          {%- for item in navigation -%}
-            {%- set isActive = item.filepath === filepath -%}
-
-            {%- if item.section === 'hmrc-design-patterns' and item.placement === 'secondary' -%}
-              <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
-                <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
-                  {{item.text}}
-                </a>
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-          </ul>
-        </div>
-      </nav>
-
-      <div class="app-pane__content">
-        <main class="app-content" id="main-content">
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
-              {{ hmrcPageHeading({
-                text: pageHeading | default(title)
-              }) }}
-
-              {{ phaseBanner({
-                status: status,
-                statusText: statusText
-              }) }}
-
-              {%- block body -%}
-                {{ contents | safe }}
-              {%- endblock -%}
-            </div>
-          </div>
-        </main>
-
-        {% include './partials/footer.njk' %}
-      </div>
-    </div>
-
+  <div class="app-pane__header">
+    {% include './partials/header.njk' %}
   </div>
+
+  <div class="app-pane__body govuk-width-container">
+
+    <div class="app-subnav-toggle" data-module="subnav-toggle">
+      <label for="app-subnav-toggle" class="app-subnav-toggle__label">Menu</label>
+    </div>
+    <input type="checkbox" id="app-subnav-toggle">
+
+    <nav class="app-pane__subnav">
+      <h2 class="govuk-heading-m">
+        {%- set designPatternsIndexPage = 'hmrc-design-patterns/index.njk' -%}
+
+        {%- if filepath != designPatternsIndexPage -%}<a href="/hmrc-design-patterns/">{%- endif -%}
+          HMRC Design Patterns
+        {%- if filepath != designPatternsIndexPage -%}</a>{%- endif -%}
+      </h2>
+      <div class="app-subnav">
+        <ul class="app-subnav__section">
+        {%- for item in navigation -%}
+          {%- set isActive = item.filepath === filepath -%}
+
+          {%- if item.section === 'hmrc-design-patterns' and item.placement === 'primary' -%}
+            <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
+              <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
+                {{item.text}}
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+        </ul>
+
+        <ul class="app-subnav__section">
+        {%- for item in navigation -%}
+          {%- set isActive = item.filepath === filepath -%}
+
+          {%- if item.section === 'hmrc-design-patterns' and item.placement === 'secondary' -%}
+            <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
+              <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
+                {{item.text}}
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+        </ul>
+      </div>
+    </nav>
+
+    <div class="app-pane__content">
+      <main class="app-content" id="main-content">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            {{ hmrcPageHeading({
+              text: pageHeading | default(title)
+            }) }}
+
+            {{ phaseBanner({
+              status: status,
+              statusText: statusText
+            }) }}
+
+            {%- block body -%}
+              {{ contents | safe }}
+            {%- endblock -%}
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  {% include './partials/footer.njk' %}
 {% endblock %}
