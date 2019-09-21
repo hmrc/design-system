@@ -5,6 +5,7 @@ import govUkFrontend from 'govuk-frontend/govuk/all'
 import AppTabs from './components/tabs'
 import SubNavToggle from './components/subnav'
 import CopyToClipboard from './components/copy-to-clipboard'
+import Accordion from './components/accordion'
 
 import LanguageSwitchExample from './components/language-switch-example'
 
@@ -34,6 +35,12 @@ nodeListForEach($languageSwitchExamples, $example => {
 const $copyToClipboardButtons = document.querySelectorAll('[data-module~="copy-to-clipboard"]')
 nodeListForEach($copyToClipboardButtons, $button => {
   new CopyToClipboard($button).init()
+})
+
+// Initialise accordian hack
+const $accordions = document.querySelectorAll('[data-module~="govuk-accordion"]')
+nodeListForEach($accordions, $accordion => {
+  new Accordion($accordion).init()
 })
 
 hmrcFrontend.initAll()
