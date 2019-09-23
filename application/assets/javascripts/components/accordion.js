@@ -25,8 +25,10 @@ Accordion.prototype.attachClick = function (link) {
 
 Accordion.prototype.handleClick = function (evt) {
   var section = evt.target.hash[1].trim().toLowerCase()
-  var buttonId = this.$mappedSectionButtons[section]
-  this.$module.querySelector('#' + buttonId).click()
+  var button = this.$module.querySelector('#' + this.$mappedSectionButtons[section])
+  if (button.getAttribute('aria-expanded') !== 'true') {
+    button.click()
+  }
 }
 
 export default Accordion

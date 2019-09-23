@@ -40,6 +40,15 @@ describe('HMRC content style guide', () => {
       expect(testSectionClasses).toContain('govuk-accordion__section--expanded')
       expect(page.url()).toContain('#capitalisation-of-taxes')
     })
+
+    it('should not close relevant section when an anchor is clicked if it is already open', async () => {
+      // Already open from previous test
+      let testSectionClasses = await page.$$eval('.govuk-accordion__section', el => el[2].className )
+      expect(testSectionClasses).toContain('govuk-accordion__section--expanded')
+      await page.$eval('#accordion-default-content-20', el => el.querySelectorAll('.govuk-link')[0].click())
+      expect(testSectionClasses).toContain('govuk-accordion__section--expanded')
+      expect(page.url()).toContain('#capitalisation-of-taxes')
+    })
   })
 
 })
