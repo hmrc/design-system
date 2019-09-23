@@ -8,7 +8,7 @@
   <title>
     {%- block pageTitle -%}
       {{- title + ' - ' if title -}}
-      {{- sectionTitle + ' - ' if sectionTitle -}}
+      {{- sectionTitle + ' - ' if sectionTitle and sectionTitle != title -}}
       {{- titleSuffix -}}
     {%- endblock -%}
   </title>

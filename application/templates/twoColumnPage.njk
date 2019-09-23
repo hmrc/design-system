@@ -4,10 +4,6 @@
 
 {% extends 'default.njk' %}
 
-{% if not sectionTitle and title != 'HMRC Design Patterns' %}
-  {% set sectionTitle = 'HMRC Design Patterns' %}
-{% endif %}
-
 {% block page %}
   <div class="app-pane__header">
     {% include './partials/header.njk' %}
