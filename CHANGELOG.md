@@ -8,7 +8,7 @@
 - Text on style guide page [4691e6b](4691e6b7bcae7596a861a75f40d6d2775f84de5c)
 
 ### Added
-- Javascript for Accordion to open hidden sections if hidden content is linked to [4691e6b](4691e6b7bcae7596a861a75f40d6d2775f84de5c)
+- Javascript for Accordion to open hidden sections if hidden content is linked to [e5144a6](e5144a68ed904b187b12e10b8cff480beb819288)
 
 ## [1.5.0] - 2019-09-11
 
