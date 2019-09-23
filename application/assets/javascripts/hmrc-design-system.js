@@ -37,7 +37,7 @@ nodeListForEach($copyToClipboardButtons, $button => {
   new CopyToClipboard($button).init()
 })
 
-// Initialise accordian hack
+// Initialise temporary accordian workaround
 const $accordions = document.querySelectorAll('[data-module~="govuk-accordion"]')
 nodeListForEach($accordions, $accordion => {
   new Accordion($accordion).init()
