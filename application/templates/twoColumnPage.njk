@@ -1,0 +1,48 @@
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
+{% from "_phaseBanner.njk" import phaseBanner %}
+{% from "_subNav.njk" import subNav %}
+
+{% extends 'default.njk' %}
+
+{% if not sectionTitle and title != 'HMRC Design Patterns' %}
+  {% set sectionTitle = 'HMRC Design Patterns' %}
+{% endif %}
+
+{% block page %}
+  <div class="app-pane__header">
+    {% include './partials/header.njk' %}
+  </div>
+
+  <div class="app-pane__body govuk-width-container">
+
+    {{ subNav({
+      navigation: navigation,
+      filepath: filepath,
+      section: section,
+      indexPageTitle: sectionTitle | default(title)
+    }) }}
+
+    <div class="app-pane__content">
+      <main class="app-content" id="main-content">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            {{ hmrcPageHeading({
+              text: pageHeading | default(title)
+            }) }}
+
+            {{ phaseBanner({
+              status: status,
+              statusText: statusText
+            }) }}
+
+            {%- block body -%}
+              {{ contents | safe }}
+            {%- endblock -%}
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  {% include './partials/footer.njk' %}
+{% endblock %}
