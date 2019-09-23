@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## [1.6.0] - 2019-09-23
+
+### Updated
+- Text on style guide page [4691e6b](4691e6b7bcae7596a861a75f40d6d2775f84de5c)
+
+### Added
+- Javascript for Accordion to open hidden sections if hidden content is linked to [4691e6b](4691e6b7bcae7596a861a75f40d6d2775f84de5c)
+
 ## [1.5.0] - 2019-09-11
 
 ### Updated
