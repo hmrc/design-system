@@ -57,7 +57,7 @@ const documentFactory = function (parameters, options) {
 }
 
 describe('Single page example macro', () => {
-  const parameters = { item: 'open-links-in-a-new-window-or-tab', example: 'example' }
+  const parameters = { item: 'open-links-in-a-new-window-or-tab', example: 'example', section: 'hmrc-design-patterns' }
   const document = documentFactory(parameters, options)
 
   const exampleSrc = '/hmrc-design-patterns/open-links-in-a-new-window-or-tab/example/'
