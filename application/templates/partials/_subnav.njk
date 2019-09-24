@@ -1,8 +1,14 @@
 {% macro subNav(params) %}
   {% set pageSection = params.section %}
-  {% set navigation = params.navigation[pageSection] %}
   {% set indexPageLink = '/' ~ pageSection ~ '/' %}
   {% set filepath = params.filepath %}
+
+  {% set navigation = [] %}
+  {% for navSection in params.navigation %}
+    {% if navSection.title === pageSection %}
+        {% set navigation = navSection.items %}
+    {% endif %}
+  {% endfor %}
 
   <div class="app-subnav-toggle" data-module="subnav-toggle">
     <label for="app-subnav-toggle" class="app-subnav-toggle__label">Menu</label>
