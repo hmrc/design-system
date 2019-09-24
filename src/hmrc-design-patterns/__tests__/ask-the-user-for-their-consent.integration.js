@@ -1,8 +1,8 @@
 /* globals describe it beforeEach expect page  */
 
-const { analyzeAccessibility } = require('../../lib/accessibility')
+const { analyzeAccessibility } = require('../../../lib/accessibility')
 
-const { integrationTestPort } = require('../../constants')
+const { integrationTestPort } = require('../../../constants')
 const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path}`)
 
 describe('Design pattern page rendering', () => {
@@ -11,9 +11,9 @@ describe('Design pattern page rendering', () => {
   })
 
   it('should not have accessibility issues', async () => {
-      const accessibilityReport = await analyzeAccessibility(page);
-      expect(accessibilityReport).toHaveNoAccessibilityIssues();
-  });
+      const accessibilityReport = await analyzeAccessibility(page)
+      expect(accessibilityReport).toHaveNoAccessibilityIssues()
+  })
 
   it('should have the correct meta title', async () => {
     const title = await page.title()
@@ -36,7 +36,7 @@ describe('Design pattern page rendering', () => {
   })
 
   describe('Copy snippet button', () => {
-    const buttonSelector = '#example-yes-no-question-html .app-link--copy';
+    const buttonSelector = '#example-yes-no-question-html .app-link--copy'
 
     beforeEach(async () => {
       await page.click('.example-example-yes-no-question-lang ul > li:first-child > a')

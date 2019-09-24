@@ -17,10 +17,11 @@ const options = {
   lstripBlocks: true,
   filters,
   globals,
-  title: defaultTitle
+  title: defaultTitle,
+  sectionTitle: defaultSection
 }
 
-const templateFactory = () => `{% include 'designPatternPage.njk' %}`.toString()
+const templateFactory = () => `{% include 'twoColumnPage.njk' %}`.toString()
 
 const documentFactory = (params) => {
   const templateString = templateFactory()
@@ -37,20 +38,14 @@ describe('Design pattern page', () => {
   })
 
   describe('Document title build', () => {
-    it('should use the title arg, section default and suffix by default', () => {
+    it('should use the title arg, sectionTitle default and suffix by default', () => {
       expect(document.title).toBe(`${defaultTitle} - ${defaultSection} - ${titleSuffix}`)
     })
 
-    it('should not use the default `section` arg if it is the same as the title', () => {
+    it('should not use the `sectionTitle` arg if it is the same as the title', () => {
       const title = defaultSection
       const document = documentFactory({ title })
       expect(document.title).toBe(`${defaultSection} - ${titleSuffix}`)
-    })
-
-    it('should use the `section` arg override if present', () => {
-      const section = 'Overriden section'
-      const document = documentFactory({ section })
-      expect(document.title).toBe(`${defaultTitle} - ${section} - ${titleSuffix}`)
     })
   })
 

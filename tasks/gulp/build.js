@@ -16,6 +16,7 @@ const globals = require('../../lib/globals')
 const templatePaths = require('../../lib/templatePaths')
 
 const navigation = require('../../lib/navigation')
+const section = require('../../lib/section')
 
 const pathFromRoot = require('../../util/pathFromRoot')
 const projectRoot = pathFromRoot()
@@ -32,8 +33,10 @@ gulp.task('compile', (done) => {
     .clean(true)
     .use(metalsmithPath({
       property: 'filepath',
-      extensions: ['.njk', '.html']
+      extensions: ['.njk', '.html'],
+      directoryIndex: 'index.njk'
     }))
+    .use(section())
     .use(navigation())
     .use(rollup({
       input: pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js'),
