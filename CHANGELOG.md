@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## [1.7.0] - 2019-09-24
+
+### Added
+- GOVUK content guide pages [5053834](5053834a4c738bc75aa79edd37d7742574a644f0)
+
+### Changed
+- Navigation to create seperate navigation sections [1a5e270](1a5e270adaff9371fd8301491d4d66b89832c950)
+
 ## [1.6.0] - 2019-09-23
 
 ### Updated

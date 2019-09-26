@@ -1,0 +1,24 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-xl">Check your National Insurance record</h1>
+
+<p class="govuk-body">You can check your National Insurance record online to see:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>what you’ve paid, up to the start of the current tax year (6 April 2019)</li>
+  <li>any <a href="#" class="govuk-link">National Insurance credits</a> you’ve received</li>
+  <li>if gaps in contributions or credits mean some years do not count towards your State Pension (they are not ‘qualifying years’)</li>
+  <li>if you can pay <a href="#" class="govuk-link">voluntary contributions</a> to fill any gaps and how much this will cost</li>
+</ul>
+
+<p class="govuk-body">
+  Your online record does not cover how much <a href="#" class="govuk-link">State Pension you’re likely to get</a>.
+</p>
+
+{{ govukButton({
+  text: "Start now",
+  isStartButton: true
+}) }}
