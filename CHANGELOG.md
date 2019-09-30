@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [1.7.1] - 2019-09-30
+
+### Fixed
+- Full width sub-menu and show HTML / Nunjucks tabs in mobile view [2b42104](2b42104f4326dab8d26683e93b59c3eee87c8db6)
+
 ## [1.7.0] - 2019-09-24
 
 ### Added
