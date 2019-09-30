@@ -1,7 +1,11 @@
 .notification-banner-wrapper {
   color: govuk-colour("white");
   background-color: $govuk-link-colour;
-  padding:15px 0 0 0;
+  padding:15px 0 5px 0;
+
+  @include govuk-media-query($from: tablet) {
+    padding-bottom: 0;
+  }
 
   p.govuk-body, a.govuk-link {
     color: govuk-colour("white");
