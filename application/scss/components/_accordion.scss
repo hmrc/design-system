@@ -1,0 +1,6 @@
+.govuk-accordion {
+  .govuk-accordion__section-content {
+    @extend .govuk-grid-column-two-thirds;
+    float: none;
+  }
+}
