@@ -39,7 +39,6 @@
 
     @include govuk-media-query($from: desktop) {
       padding: govuk-spacing(6) 0;
-      border-right: 1px solid $govuk-border-colour;
       flex: 0 0 auto;
       width: $toc-width;
     }
