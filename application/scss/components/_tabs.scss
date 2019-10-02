@@ -8,10 +8,6 @@
   list-style-type: none;
   border: 1px solid $govuk-border-colour;
 
-  @include govuk-media-query($until: desktop) {
-    display: none;
-  }
-
   .app-prose-scope & { // A specific selector to reset .app-prose-scope ul
     margin-bottom: 0;
     padding: 0;

@@ -37,13 +37,9 @@
   .app-pane__subnav {
     padding: govuk-spacing(4) 0;
 
-    @include govuk-media-query($from: tablet) {
-      padding: govuk-spacing(6) 0;
-      width: $toc-width-tablet;
-      flex: 0 0 auto;
-    }
-
     @include govuk-media-query($from: desktop) {
+      padding: govuk-spacing(6) 0;
+      flex: 0 0 auto;
       width: $toc-width;
     }
   }
