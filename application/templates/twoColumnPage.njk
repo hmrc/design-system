@@ -15,7 +15,7 @@
       navigation: navigation,
       filepath: filepath,
       section: section,
-      indexPageTitle: sectionTitle | default(title)
+      indexPageTitle: sectionTitle or title
     }) }}
 
     <div class="app-pane__content">
@@ -23,7 +23,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             {{ hmrcPageHeading({
-              text: pageHeading | default(title)
+              text: pageHeading or title
             }) }}
 
             {{ phaseBanner({
