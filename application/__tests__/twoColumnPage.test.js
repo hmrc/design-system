@@ -29,7 +29,7 @@ const documentFactory = (params) => {
   return new JSDOM(html).window.document
 }
 
-describe('Design pattern page', () => {
+describe.skip('Design pattern page', () => {
   const document = documentFactory()
   const heading = document.querySelector('h1.govuk-heading-xl')
 
