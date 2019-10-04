@@ -1,6 +1,5 @@
 {% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
-{% from "./partials/_phaseBanner.njk" import phaseBanner %}
-{% from "./partials/_subNav.njk" import subNav %}
+{% from "_phaseBanner.njk" import phaseBanner %}
 
 {% extends 'default.njk' %}
 
@@ -11,12 +10,60 @@
 
   <div class="app-pane__body govuk-width-container">
 
-    {{ subNav({
-      navigation: navigation,
-      filepath: filepath,
-      section: section,
-      indexPageTitle: sectionTitle or title
-    }) }}
+    {% set navigationItems = [] %}
+    {% for navSection in navigation %}
+      {% if navSection.title === section %}
+          {% set navigationItems = navSection.items %}
+      {% endif %}
+    {% endfor %}
+
+    {% set indexPageLink = '/' ~ section ~ '/' %}
+
+    <div class="app-subnav-toggle" data-module="subnav-toggle">
+      <label for="app-subnav-toggle" class="app-subnav-toggle__label">Menu</label>
+    </div>
+    <input type="checkbox" id="app-subnav-toggle">
+
+    <nav class="app-pane__subnav">
+
+      <h2 class="govuk-heading-m">
+        {% set isRoot = '/' ~ filepath === indexPageLink %}
+        {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}
+          {{ sectionTitle or title }}
+        {%- if not isRoot -%}</a>{%- endif -%}
+      </h2>
+
+      <div class="app-subnav">
+
+        <ul class="app-subnav__section">
+          {%- for item in navigationItems -%}
+            {%- set isActive = item.filepath ~ '/' === filepath -%}
+
+            {%- if item.placement === 'primary' -%}
+              <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
+                <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
+                  {{item.text}}
+                </a>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+
+        <ul class="app-subnav__section">
+        {%- for item in navigationItems -%}
+          {%- set isActive = item.filepath ~ '/' === filepath -%}
+
+          {%- if item.placement === 'secondary' -%}
+            <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
+              <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
+                {{item.text}}
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+        </ul>
+      </div>
+    </nav>
 
     <div class="app-pane__content">
       <main class="app-content" id="main-content">
