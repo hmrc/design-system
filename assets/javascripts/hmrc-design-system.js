@@ -6869,6 +6869,9 @@
 	      warningTimeout: 5000,
 	      tolerance: 0,
 	      widthCalculationMethod: 'scroll',
+	      onClose: function() {
+	        return true
+	      },
 	      onClosed: function() {},
 	      onInit: function() {},
 	      onMessage: function() {
@@ -7295,13 +7298,15 @@
 
 	      switch (messageData.type) {
 	        case 'close':
-	          if (settings[iframeId].closeRequeston)
-	            chkEvent(iframeId, 'onCloseRequest', settings[iframeId].iframe);
-	          else closeIFrame(messageData.iframe);
+	          closeIFrame(messageData.iframe);
 	          break
 
 	        case 'message':
 	          forwardMsgFromIFrame(getMsgBody(6));
+	          break
+
+	        case 'autoResize':
+	          settings[iframeId].autoResize = JSON.parse(getMsgBody(9));
 	          break
 
 	        case 'scrollTo':
@@ -7428,6 +7433,10 @@
 
 	  function closeIFrame(iframe) {
 	    var iframeId = iframe.id;
+	    if (chkEvent(iframeId, 'onClose', iframeId) === false) {
+	      log(iframeId, 'Close iframe cancelled by onClose event');
+	      return
+	    }
 	    log(iframeId, 'Removing iFrame: ' + iframeId);
 
 	    try {
@@ -8639,15 +8648,15 @@
 	    }
 	  }
 
-	  function stopMsgsToParent() {
-	    log('Disable outgoing messages');
-	    sendPermit = false;
-	  }
+	  //   function stopMsgsToParent() {
+	  //     log('Disable outgoing messages')
+	  //     sendPermit = false
+	  //   }
 
-	  function removeMsgListener() {
-	    log('Remove event listener: Message');
-	    removeEventListener(window, 'message', receiver);
-	  }
+	  //   function removeMsgListener() {
+	  //     log('Remove event listener: Message')
+	  //     removeEventListener(window, 'message', receiver)
+	  //   }
 
 	  function disconnectMutationObserver() {
 	    if (null !== bodyObserver) {
@@ -8662,11 +8671,11 @@
 	    clearInterval(intervalTimer);
 	  }
 
-	  function teardown() {
-	    stopMsgsToParent();
-	    removeMsgListener();
-	    if (true === autoResize) stopEventListeners();
-	  }
+	  //   function teardown() {
+	  //     stopMsgsToParent()
+	  //     removeMsgListener()
+	  //     if (true === autoResize) stopEventListeners()
+	  //   }
 
 	  function injectClearFixIntoBodyElement() {
 	    var clearFix = document.createElement('div');
@@ -8806,13 +8815,13 @@
 	          autoResize = false;
 	          stopEventListeners();
 	        }
-
+	        sendMsg(0, 0, 'autoResize', JSON.stringify(autoResize));
 	        return autoResize
 	      },
 
 	      close: function closeF() {
 	        sendMsg(0, 0, 'close');
-	        teardown();
+	        // teardown()
 	      },
 
 	      getId: function getIdF() {
@@ -9441,17 +9450,19 @@
 	})();
 	});
 
-	var iframeResizer$1 = iframeResizer;
+	var iframeResize_1 = iframeResizer;
+	var iframeResizer$1 = iframeResizer; // Backwards compatability
 	var iframeResizerContentWindow = iframeResizer_contentWindow;
 
 	var js = {
+		iframeResize: iframeResize_1,
 		iframeResizer: iframeResizer$1,
 		iframeResizerContentWindow: iframeResizerContentWindow
 	};
 
 	var iframeResizer$2 = js;
 
-	iframeResizer$2.iframeResizer({ minWidth: '100%' }, 'iframe');
+	iframeResizer$2.iframeResizer({ minWidth: '100%', maxWidth: '100%' }, 'iframe');
 
 	const nodeListForEach$2 = common.nodeListForEach;
 
