@@ -1,6 +1,6 @@
 {% extends 'default.njk' %}
 {% block page %}
-{%- include 'header.njk' -%}
+{%- include './partials/header.njk' -%}
 <div class="govuk-width-container hmrc-width-container hmrc-width-container--wide">
   <main class="govuk-main-wrapper" id="main-content">
     <div class="govuk-grid-row">
@@ -12,5 +12,5 @@
     </div>
   </main>
 </div>
-{% include 'footer.njk' %}
+{% include './partials/footer.njk' %}
 {% endblock %}
