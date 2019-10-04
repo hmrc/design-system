@@ -70,7 +70,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             {{ hmrcPageHeading({
-              text: pageHeading | default(title)
+              text: pageHeading or title
             }) }}
 
             {{ phaseBanner({
