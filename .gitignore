@@ -22,3 +22,6 @@ yarn-debug.log
 yarn-error.log
 .vscode/
 .DS_Store
+
+src/examples/layouts.njk
+src/examples/patterns.njk
