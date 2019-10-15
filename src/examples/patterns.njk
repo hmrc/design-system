@@ -241,6 +241,86 @@ layout: layout-example.njk
 }) }}
 
 
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
+<p class="govuk-body">You have entered information that does not match our records too many
+times. For security reasons, you must wait 24 hours and then sign in to try again.</p>
+<p class="govuk-body">You can <a class="govuk-link" href="#">change other VAT details</a>
+without confirming your identity</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
+<p class="govuk-body">Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
+o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.</p>
+<p class="govuk-body">Gallwch <a class="govuk-link" href="#">newid manylion TAW eraill</a>
+heb gadarnhau pwy ydych</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
+<p class="govuk-body">You have not given us enough information.</p>
+
+{{ govukButton({
+  text: "Try again"
+}) }}
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
+<p class="govuk-body">Nid ydych wedi rhoi digon o wybodaeth i ni.</p>
+
+{{ govukButton({
+  text: "Rhowch gynnig arall arni"
+}) }}
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'We could not confirm your identity'
+}) }}
+
+<p class="govuk-body">The information you have entered does not match our records.</p>
+
+{{ govukButton({
+  text: "Try again"
+}) }}
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
+<p class="govuk-body">Nid yw’r wybodaeth yr ydych wedi’i nodi yn cyd-fynd â’n cofnodion.</p>
+
+{{ govukButton({
+  text: "Rhowch gynnig arall arni"
+}) }}
+
+
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -328,86 +408,6 @@ layout: layout-example.njk
 }) }}
 
 
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: 'We could not confirm your identity'
-}) }}
-
-<p class="govuk-body">You have entered information that does not match our records too many
-times. For security reasons, you must wait 24 hours and then sign in to try again.</p>
-<p class="govuk-body">You can <a class="govuk-link" href="#">change other VAT details</a>
-without confirming your identity</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
-}) }}
-
-<p class="govuk-body">Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
-o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.</p>
-<p class="govuk-body">Gallwch <a class="govuk-link" href="#">newid manylion TAW eraill</a>
-heb gadarnhau pwy ydych</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ hmrcPageHeading({
-  text: 'We could not confirm your identity'
-}) }}
-
-<p class="govuk-body">You have not given us enough information.</p>
-
-{{ govukButton({
-  text: "Try again"
-}) }}
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ hmrcPageHeading({
-  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
-}) }}
-
-<p class="govuk-body">Nid ydych wedi rhoi digon o wybodaeth i ni.</p>
-
-{{ govukButton({
-  text: "Rhowch gynnig arall arni"
-}) }}
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ hmrcPageHeading({
-  text: 'We could not confirm your identity'
-}) }}
-
-<p class="govuk-body">The information you have entered does not match our records.</p>
-
-{{ govukButton({
-  text: "Try again"
-}) }}
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ hmrcPageHeading({
-  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
-}) }}
-
-<p class="govuk-body">Nid yw’r wybodaeth yr ydych wedi’i nodi yn cyd-fynd â’n cofnodion.</p>
-
-{{ govukButton({
-  text: "Rhowch gynnig arall arni"
-}) }}
-
-
 {%- from "hmrc/components/notification-badge/macro.njk" import hmrcNotificationBadge -%}
 
 <a class="govuk-link" href="#">Messages {{ hmrcNotificationBadge({ text: '32' }) }}</a>
@@ -421,8 +421,8 @@ heb gadarnhau pwy ydych</p>
 {% from "hmrc/components/new-tab-link/macro.njk" import hmrcNewTabLink %}
 
 {{ hmrcNewTabLink({
-  language: "cy",
-  text: "Mae hwn yn ddolen",
+  language: "en",
+  text: "Find out if you qualify for tax credits",
   href: "https://www.gov.uk/working-tax-credit/eligibility",
   classList: ""
 }) }}
@@ -431,8 +431,8 @@ heb gadarnhau pwy ydych</p>
 {% from "hmrc/components/new-tab-link/macro.njk" import hmrcNewTabLink %}
 
 {{ hmrcNewTabLink({
-  language: "en",
-  text: "Find out if you qualify for tax credits",
+  language: "cy",
+  text: "Mae hwn yn ddolen",
   href: "https://www.gov.uk/working-tax-credit/eligibility",
   classList: ""
 }) }}
@@ -441,16 +441,17 @@ heb gadarnhau pwy ydych</p>
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
-  text: 'Page not found'
+  text: "What is your name?",
+  section: "Personal details"
 }) }}
 
-<p class="govuk-body">If you typed the web address, check it is correct.</p>
 
-<p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
-<p class="govuk-body">
-  If the web address is correct or you selected a link or button, <a href="#" class="govuk-link">contact the Tax Credits Helpline if you need to speak to someone about your tax credits</a>.
-</p>
+{{ hmrcPageHeading({
+  text: "What is your name?"
+}) }}
+
 
 
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
@@ -471,17 +472,16 @@ heb gadarnhau pwy ydych</p>
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
-  text: "What is your name?",
-  section: "Personal details"
+  text: 'Page not found'
 }) }}
 
+<p class="govuk-body">If you typed the web address, check it is correct.</p>
 
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+<p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
 
-{{ hmrcPageHeading({
-  text: "What is your name?"
-}) }}
-
+<p class="govuk-body">
+  If the web address is correct or you selected a link or button, <a href="#" class="govuk-link">contact the Tax Credits Helpline if you need to speak to someone about your tax credits</a>.
+</p>
 
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -588,14 +588,19 @@ heb gadarnhau pwy ydych</p>
 </p>
 
 
-{% from "hmrc/components/header/macro.njk" import hmrcHeader %}
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
-{{ hmrcHeader({
-    "serviceName": "Service Name",
-    "serviceUrl" : "/",
-    "phaseBanner" : true,
-    "signOut" : true
+{{ hmrcPageHeading({
+  text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
 }) }}
+
+<p class="govuk-body">Byddwch yn gallu defnyddio’r gwasanaeth yn nes ymlaen.</p>
+
+<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
 
 
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
@@ -635,13 +640,14 @@ heb gadarnhau pwy ydych</p>
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
 }) }}
 
-<p class="govuk-body">Byddwch yn gallu defnyddio’r gwasanaeth yn nes ymlaen.</p>
+<p class="govuk-body">Byddwch yn gallu defnyddio’r gwasanaeth o 09:00 ar Ddydd Llun 19 Tachwedd 2018 ymlaen.</p>
 
-<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
+<p class="govuk-body">Gallwych:</p>
 
-<p class="govuk-body">
-  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="#">newid fanylion TAW eraill</a></li>
+  <li><a class="govuk-link" href="#">cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth</li>
+</ul>
 
 
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
@@ -674,22 +680,6 @@ heb gadarnhau pwy ydych</p>
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
 }) }}
 
-<p class="govuk-body">Byddwch yn gallu defnyddio’r gwasanaeth o 09:00 ar Ddydd Llun 19 Tachwedd 2018 ymlaen.</p>
-
-<p class="govuk-body">Gallwych:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li><a class="govuk-link" href="#">newid fanylion TAW eraill</a></li>
-  <li><a class="govuk-link" href="#">cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth</li>
-</ul>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
-}) }}
-
 <p class="govuk-body">Ni allwch ddefnyddio’r gwasanaeth ar-lein er mwyn adnewyddu’ch credydau treth.</p>
 
 <p class="govuk-body">
@@ -711,25 +701,6 @@ heb gadarnhau pwy ydych</p>
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
-  text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
-}) }}
-
-<p class="govuk-body">Byddwch yn gallu adnewyddu’ch credydau treth o Ddydd Mawrth 24 Ebrill 2018 ymlaen.</p>
-
-<p class="govuk-body">
-  Gallwych <a class="govuk-link" href="#">ddefnyddio’r gwasanaeth credydau treth</a> i wneud y canlynol:
-</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>cael rhagor o wybodaeth am eich taliadau</li>
-  <li>gweld pwy sydd ar eich cais</li>
-  <li>gwneud newidiadau i’ch cais</li>
-</ul>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
 }) }}
 
@@ -743,6 +714,25 @@ heb gadarnhau pwy ydych</p>
   <li>find out more about your payments</li>
   <li>see who is on your claim</li>
   <li>make changes to your claim</li>
+</ul>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
+}) }}
+
+<p class="govuk-body">Byddwch yn gallu adnewyddu’ch credydau treth o Ddydd Mawrth 24 Ebrill 2018 ymlaen.</p>
+
+<p class="govuk-body">
+  Gallwych <a class="govuk-link" href="#">ddefnyddio’r gwasanaeth credydau treth</a> i wneud y canlynol:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>cael rhagor o wybodaeth am eich taliadau</li>
+  <li>gweld pwy sydd ar eich cais</li>
+  <li>gwneud newidiadau i’ch cais</li>
 </ul>
 
 
@@ -818,21 +808,6 @@ heb gadarnhau pwy ydych</p>
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
-  text: 'Sorry, the service is unavailable'
-}) }}
-
-<p class="govuk-body">You will be able to use the service from 9am on Monday 19 November 2018.</p>
-
-<p class="govuk-body">We have not saved your answers. When the service is available, you will have to start again.</p>
-
-<p class="govuk-body">
-  <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
-</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
 }) }}
 
@@ -856,6 +831,21 @@ heb gadarnhau pwy ydych</p>
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
+  text: 'Sorry, the service is unavailable'
+}) }}
+
+<p class="govuk-body">You will be able to use the service from 9am on Monday 19 November 2018.</p>
+
+<p class="govuk-body">We have not saved your answers. When the service is available, you will have to start again.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
   text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
 }) }}
 
@@ -868,207 +858,14 @@ heb gadarnhau pwy ydych</p>
 </p>
 
 
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "hmrc/components/header/macro.njk" import hmrcHeader %}
 
-{{ hmrcPageHeading({
-  text: 'Sorry, there is a problem with the service'
+{{ hmrcHeader({
+    "serviceName": "Service Name",
+    "serviceUrl" : "/",
+    "phaseBanner" : true,
+    "signOut" : true
 }) }}
-
-<p class="govuk-body">Try again later.</p>
-
-<p class="govuk-body">
-  You can <a class="govuk-link" href="#">change other VAT details</a>.
-</p>
-
-<p class="govuk-body">
-  <a class="govuk-link" href="#">Contact the Income Tax Helpline</a> if you need to speak to someone about your tax calculation.
-</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: 'Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth'
-}) }}
-
-<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
-
-<p class="govuk-body">
-  Gallwch <a class="govuk-link" href="#">newid fanylion TAW eraill</a>.
-</p>
-
-<p class="govuk-body">
-  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi siarad â rhywun am eich cyfrifiad treth.
-</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: 'Sorry, there is a problem with the service'
-}) }}
-
-<p class="govuk-body">Try again later.</p>
-
-<p class="govuk-body">
-  We have not saved your answers. When the service is available, you will have to start again.
-</p>
-
-<p class="govuk-body">
-  Contact the Tax Credits Helpline if you need to make changes to your claim or speak to someone about your tax credits.
-</p>
-
-<p class="govuk-body">
-  Telephone:<br/>
-  <strong class="govuk-!-font-weight-bold">0345 300 3900</strong>
-</p>
-
-<p class="govuk-body">
-  Textphone:<br/>
-  <strong class="govuk-!-font-weight-bold">0345 300 3909</strong>
-</p>
-
-<p class="govuk-body">
-  Outside UK:<br/>
-  <strong class="govuk-!-font-weight-bold">+44 2890 538 192</strong>
-</p>
-
-<p class="govuk-body">
-  Opening times:<br/>
-  <strong class="govuk-!-font-weight-bold">Monday to Friday: 8am to 8pm
-
-  Saturday: 8am to 4pm<br/>
-  Sunday: 9am to 5pm</strong>
-</p>
-
-<p class="govuk-body">
-  Closed Easter Sunday, Christmas Day, Boxing Day and New Year’s Day.
-</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: 'Sorry, there is a problem with the service'
-}) }}
-
-<p class="govuk-body">Try again later.</p>
-
-<p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
-
-<p class="govuk-body">
-  <a href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
-</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: 'Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth'
-}) }}
-
-<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
-
-<p class="govuk-body">
-  Nid ydym wedi cadw’ch atebion. Pan fydd y gwasanaeth ar gael, bydd yn rhaid i chi ddechrau eto.
-</p>
-
-<p class="govuk-body">
-  Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-</p>
-
-<p class="govuk-body">
-  Ffôn:<br/>
-  <strong class="govuk-!-font-weight-bold">0808 157 3901</strong>
-</p>
-
-<p class="govuk-body">
-  Oriau agor:<br/>
-  <strong class="govuk-!-font-weight-bold">Dydd Llun – Dydd Gwener: 08:30 – 17:00</strong>
-</p>
-
-<p class="govuk-body">
-  Ar gau ar Ddydd Sul y Pasg, Dydd Nadolig, Gŵyl San Steffan a Dydd Calan.
-</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: 'Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth'
-}) }}
-
-<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
-
-<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
-
-<p class="govuk-body">
-  <a href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-</p>
-
-
-
-{% from "govuk/components/input/macro.njk" import govukInput %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{
-  govukInput({
-    label: {
-      text: "What is Anycompany’s VAT registration number?",
-      isPageHeading: true,
-      classes: "govuk-label--xl"
-    },
-    hint: {
-      text: 'This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on Anycompany’s VAT registration certificate.'
-    },
-    id: "vat-registration-number",
-    name: "vat-registration-number",
-    classes: "govuk-input--width-10"
-  })
-}}
-
-{{ govukButton({
-  text: "Continue"
-}) }}
-
-
-
-{% from "govuk/components/input/macro.njk" import govukInput %}
-
-{{
-  govukInput({
-    label: {
-      text: "VAT registration number"
-    },
-    hint: {
-      text: 'This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on your VAT registration certificate.'
-    },
-    id: "vat-registration-number",
-    name: "vat-registration-number",
-    classes: "govuk-input--width-10"
-  })
-}}
-
-
-
-{% from "govuk/components/input/macro.njk" import govukInput %}
-
-{{
-  govukInput({
-    label: {
-      text: 'VAT registration number'
-    },
-    hint: {
-      text: 'This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on your VAT registration certificate.'
-    },
-    errorMessage: {
-      text: 'Enter your VAT registration number'
-    },
-    id: 'vat-registration-number',
-    name: 'vat-registration-number',
-    classes: 'govuk-input--width-10'
-  })
-}}
 
 
 
@@ -1158,3 +955,206 @@ heb gadarnhau pwy ydych</p>
 {{ govukButton({
   text: "Continue"
 }) }}
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Sorry, there is a problem with the service'
+}) }}
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">
+  You can <a class="govuk-link" href="#">change other VAT details</a>.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Contact the Income Tax Helpline</a> if you need to speak to someone about your tax calculation.
+</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth'
+}) }}
+
+<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
+
+<p class="govuk-body">
+  Gallwch <a class="govuk-link" href="#">newid fanylion TAW eraill</a>.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi siarad â rhywun am eich cyfrifiad treth.
+</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Sorry, there is a problem with the service'
+}) }}
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">
+  We have not saved your answers. When the service is available, you will have to start again.
+</p>
+
+<p class="govuk-body">
+  Contact the Tax Credits Helpline if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+<p class="govuk-body">
+  Telephone:<br/>
+  <strong class="govuk-!-font-weight-bold">0345 300 3900</strong>
+</p>
+
+<p class="govuk-body">
+  Textphone:<br/>
+  <strong class="govuk-!-font-weight-bold">0345 300 3909</strong>
+</p>
+
+<p class="govuk-body">
+  Outside UK:<br/>
+  <strong class="govuk-!-font-weight-bold">+44 2890 538 192</strong>
+</p>
+
+<p class="govuk-body">
+  Opening times:<br/>
+  <strong class="govuk-!-font-weight-bold">Monday to Friday: 8am to 8pm
+
+  Saturday: 8am to 4pm<br/>
+  Sunday: 9am to 5pm</strong>
+</p>
+
+<p class="govuk-body">
+  Closed Easter Sunday, Christmas Day, Boxing Day and New Year’s Day.
+</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth'
+}) }}
+
+<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
+
+<p class="govuk-body">
+  Nid ydym wedi cadw’ch atebion. Pan fydd y gwasanaeth ar gael, bydd yn rhaid i chi ddechrau eto.
+</p>
+
+<p class="govuk-body">
+  Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
+
+<p class="govuk-body">
+  Ffôn:<br/>
+  <strong class="govuk-!-font-weight-bold">0808 157 3901</strong>
+</p>
+
+<p class="govuk-body">
+  Oriau agor:<br/>
+  <strong class="govuk-!-font-weight-bold">Dydd Llun – Dydd Gwener: 08:30 – 17:00</strong>
+</p>
+
+<p class="govuk-body">
+  Ar gau ar Ddydd Sul y Pasg, Dydd Nadolig, Gŵyl San Steffan a Dydd Calan.
+</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Sorry, there is a problem with the service'
+}) }}
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
+
+<p class="govuk-body">
+  <a href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth'
+}) }}
+
+<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
+
+<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
+
+<p class="govuk-body">
+  <a href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
+
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{
+  govukInput({
+    label: {
+      text: "What is Anycompany’s VAT registration number?",
+      isPageHeading: true,
+      classes: "govuk-label--xl"
+    },
+    hint: {
+      text: 'This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on Anycompany’s VAT registration certificate.'
+    },
+    id: "vat-registration-number",
+    name: "vat-registration-number",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{
+  govukInput({
+    label: {
+      text: "VAT registration number"
+    },
+    hint: {
+      text: 'This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on your VAT registration certificate.'
+    },
+    id: "vat-registration-number",
+    name: "vat-registration-number",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{
+  govukInput({
+    label: {
+      text: 'VAT registration number'
+    },
+    hint: {
+      text: 'This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on your VAT registration certificate.'
+    },
+    errorMessage: {
+      text: 'Enter your VAT registration number'
+    },
+    id: 'vat-registration-number',
+    name: 'vat-registration-number',
+    classes: 'govuk-input--width-10'
+  })
+}}
