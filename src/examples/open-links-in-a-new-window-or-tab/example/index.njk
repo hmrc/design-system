@@ -1,0 +1,11 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/new-tab-link/macro.njk" import hmrcNewTabLink %}
+
+{{ hmrcNewTabLink({
+  language: "en",
+  text: "Find out if you qualify for tax credits",
+  href: "https://www.gov.uk/working-tax-credit/eligibility",
+  classList: ""
+}) }}
