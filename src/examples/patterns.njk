@@ -96,62 +96,6 @@ layout: layout-example.njk
 }}
 
 
-
-{%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
-
-{{
-  hmrcAddToAList({
-    itemList: [
-      {
-        name: 'Sydney Russell',
-        changeUrl: '#',
-        removeUrl: '#'
-      },
-      {
-        name: 'Michael Cain',
-        changeUrl: '#',
-        removeUrl: '#'
-      },
-      {
-        name: 'Jeremy Winter',
-        changeUrl: '#',
-        removeUrl: '#'
-      }
-    ],
-    itemType: {
-      singular: 'director',
-      plural: 'directors',
-      formAction: '#'
-    }
-  })
-}}
-
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ hmrcPageHeading({
-  text: 'We have confirmed your identity'
-}) }}
-
-{{ govukButton({
-  text: "Continue"
-}) }}
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ hmrcPageHeading({
-  text: 'Rydym wedi cadarnhau pwy ydych'
-}) }}
-
-{{ govukButton({
-  text: "Yn eich blaen"
-}) }}
-
-
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
@@ -241,6 +185,62 @@ layout: layout-example.njk
 }) }}
 
 
+
+{%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
+
+{{
+  hmrcAddToAList({
+    itemList: [
+      {
+        name: 'Sydney Russell',
+        changeUrl: '#',
+        removeUrl: '#'
+      },
+      {
+        name: 'Michael Cain',
+        changeUrl: '#',
+        removeUrl: '#'
+      },
+      {
+        name: 'Jeremy Winter',
+        changeUrl: '#',
+        removeUrl: '#'
+      }
+    ],
+    itemType: {
+      singular: 'director',
+      plural: 'directors',
+      formAction: '#'
+    }
+  })
+}}
+
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'We have confirmed your identity'
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'Rydym wedi cadarnhau pwy ydych'
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}
+
+
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
@@ -251,18 +251,6 @@ layout: layout-example.njk
 times. For security reasons, you must wait 24 hours and then sign in to try again.</p>
 <p class="govuk-body">You can <a class="govuk-link" href="#">change other VAT details</a>
 without confirming your identity</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
-}) }}
-
-<p class="govuk-body">Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
-o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.</p>
-<p class="govuk-body">Gallwch <a class="govuk-link" href="#">newid manylion TAW eraill</a>
-heb gadarnhau pwy ydych</p>
 
 
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
@@ -277,6 +265,18 @@ heb gadarnhau pwy ydych</p>
 {{ govukButton({
   text: "Try again"
 }) }}
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
+<p class="govuk-body">Rydych wedi nodi gwybodaeth nad yw’n cyd-fynd â’n cofnodion gormod
+o weithiau. Am resymau diogelwch, mae’n rhaid i chi aros 24 awr ac yna mewngofnodi i roi cynnig arall arni.</p>
+<p class="govuk-body">Gallwch <a class="govuk-link" href="#">newid manylion TAW eraill</a>
+heb gadarnhau pwy ydych</p>
 
 
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
@@ -408,16 +408,6 @@ heb gadarnhau pwy ydych</p>
 }) }}
 
 
-{%- from "hmrc/components/notification-badge/macro.njk" import hmrcNotificationBadge -%}
-
-<a class="govuk-link" href="#">Messages {{ hmrcNotificationBadge({ text: '32' }) }}</a>
-
-
-{%- from "hmrc/components/notification-badge/macro.njk" import hmrcNotificationBadge -%}
-
-<a class="govuk-link" href="#">Messages {{ hmrcNotificationBadge() }}</a>
-
-
 {% from "hmrc/components/new-tab-link/macro.njk" import hmrcNewTabLink %}
 
 {{ hmrcNewTabLink({
@@ -457,6 +447,21 @@ heb gadarnhau pwy ydych</p>
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
+  text: 'Page not found'
+}) }}
+
+<p class="govuk-body">If you typed the web address, check it is correct.</p>
+
+<p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
+
+<p class="govuk-body">
+  If the web address is correct or you selected a link or button, <a href="#" class="govuk-link">contact the Tax Credits Helpline if you need to speak to someone about your tax credits</a>.
+</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
   text: 'Heb ddod o hyd i’r dudalen'
 }) }}
 
@@ -469,19 +474,14 @@ heb gadarnhau pwy ydych</p>
 </p>
 
 
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{%- from "hmrc/components/notification-badge/macro.njk" import hmrcNotificationBadge -%}
 
-{{ hmrcPageHeading({
-  text: 'Page not found'
-}) }}
+<a class="govuk-link" href="#">Messages {{ hmrcNotificationBadge() }}</a>
 
-<p class="govuk-body">If you typed the web address, check it is correct.</p>
 
-<p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
+{%- from "hmrc/components/notification-badge/macro.njk" import hmrcNotificationBadge -%}
 
-<p class="govuk-body">
-  If the web address is correct or you selected a link or button, <a href="#" class="govuk-link">contact the Tax Credits Helpline if you need to speak to someone about your tax credits</a>.
-</p>
+<a class="govuk-link" href="#">Messages {{ hmrcNotificationBadge({ text: '32' }) }}</a>
 
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -591,21 +591,6 @@ heb gadarnhau pwy ydych</p>
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
-  text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
-}) }}
-
-<p class="govuk-body">Byddwch yn gallu defnyddio’r gwasanaeth yn nes ymlaen.</p>
-
-<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
-
-<p class="govuk-body">
-  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-</p>
-
-
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
   text: 'Sorry, the service is unavailable'
 }) }}
 
@@ -615,6 +600,21 @@ heb gadarnhau pwy ydych</p>
 
 <p class="govuk-body">
   <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'Mae’n ddrwg gennym, ond nid yw’r gwasanaeth hwn ar gael ar hyn o bryd'
+}) }}
+
+<p class="govuk-body">Byddwch yn gallu defnyddio’r gwasanaeth yn nes ymlaen.</p>
+
+<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
 </p>
 
 
@@ -868,95 +868,6 @@ heb gadarnhau pwy ydych</p>
 }) }}
 
 
-
-{% from "govuk/components/input/macro.njk" import govukInput %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{
-  govukInput({
-    label: {
-      text: "What is your Corporation Tax Unique Taxpayer Reference?",
-      isPageHeading: true,
-      classes: "govuk-label--xl"
-    },
-    hint: {
-      html: 'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.'
-    },
-    id: "utr",
-    name: "utr",
-    classes: "govuk-input--width-10"
-  })
-}}
-
-{{ govukButton({
-  text: "Continue"
-}) }}
-
-
-
-{% from "govuk/components/input/macro.njk" import govukInput %}
-
-{{
-  govukInput({
-    label: {
-      text: "Self Assessment Unique Taxpayer Reference"
-    },
-    hint: {
-      html: 'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.'
-    },
-    id: "utr",
-    name: "utr",
-    classes: "govuk-input--width-10"
-  })
-}}
-
-
-
-{% from "govuk/components/input/macro.njk" import govukInput %}
-
-{{
-  govukInput({
-    label: {
-      text: 'Corporation Tax Unique Taxpayer Reference'
-    },
-    hint: {
-      html: 'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.'
-    },
-    errorMessage: {
-      text: 'Enter your Corporation Tax Unique Taxpayer Reference'
-    },
-    id: 'utr',
-    name: 'utr',
-    classes: 'govuk-input--width-10'
-  })
-}}
-
-
-
-{% from "govuk/components/input/macro.njk" import govukInput %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{
-  govukInput({
-    label: {
-      text: "What is your Self Assessment Unique Taxpayer Reference?",
-      isPageHeading: true,
-      classes: "govuk-label--xl"
-    },
-    hint: {
-      html: 'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.'
-    },
-    id: "utr",
-    name: "utr",
-    classes: "govuk-input--width-10"
-  })
-}}
-
-{{ govukButton({
-  text: "Continue"
-}) }}
-
-
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
 {{ hmrcPageHeading({
@@ -1094,6 +1005,95 @@ heb gadarnhau pwy ydych</p>
 <p class="govuk-body">
   <a href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
 </p>
+
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{
+  govukInput({
+    label: {
+      text: "What is your Corporation Tax Unique Taxpayer Reference?",
+      isPageHeading: true,
+      classes: "govuk-label--xl"
+    },
+    hint: {
+      html: 'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.'
+    },
+    id: "utr",
+    name: "utr",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{
+  govukInput({
+    label: {
+      text: "Self Assessment Unique Taxpayer Reference"
+    },
+    hint: {
+      html: 'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.'
+    },
+    id: "utr",
+    name: "utr",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{
+  govukInput({
+    label: {
+      text: 'Corporation Tax Unique Taxpayer Reference'
+    },
+    hint: {
+      html: 'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Corporation Tax. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.'
+    },
+    errorMessage: {
+      text: 'Enter your Corporation Tax Unique Taxpayer Reference'
+    },
+    id: 'utr',
+    name: 'utr',
+    classes: 'govuk-input--width-10'
+  })
+}}
+
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{
+  govukInput({
+    label: {
+      text: "What is your Self Assessment Unique Taxpayer Reference?",
+      isPageHeading: true,
+      classes: "govuk-label--xl"
+    },
+    hint: {
+      html: 'This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’. You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR number</a>.'
+    },
+    id: "utr",
+    name: "utr",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
 
 
 
