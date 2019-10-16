@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example – HMRC Design Patterns – Design resources for HMRC – GOV.UK</title>
+
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="employer-paye-reference">
+    Your employer PAYE reference
+  </label>
+  <span id="employer-paye-reference-hint" class="govuk-hint">
+    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on letters from HMRC about PAYE.
+  </span>
+  <span id="employer-paye-reference-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Enter your employer PAYE reference
+  </span>
+  <input class="govuk-input govuk-input--width-10 govuk-input--error" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint employer-paye-reference-error">
+</div>
+
+</body>
+
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>
