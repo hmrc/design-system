@@ -2,14 +2,15 @@
 
 {% macro example(params) %}
   {% set exampleRef = params.example %}
-  {% set section = params.section or 'hmrc-design-patterns' %}
-  {% set exampleURL = "/" + section + "/" + params.item + "/" + exampleRef + "/" %}
+
+  {% set exampleURL = "/examples/" + params.item + "/" + exampleRef + "/" %}
   {% set examplePath = "src" + exampleURL + "index.njk" %}
+
   {% set exampleId = "example-" + exampleRef %}
   {% set description = params.description %}
   {% if params.welsh %}
     {% set welshExampleRef = params.welsh %}
-    {% set welshExampleURL = "/" + section + "/" + params.item + "/" + welshExampleRef + "/" %}
+    {% set welshExampleURL = "/examples/" + params.item + "/" + welshExampleRef + "/" %}
     {% set welshExamplePath = "src" + welshExampleURL + "index.njk" %}
   {% endif %}
 

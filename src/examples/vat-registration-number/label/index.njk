@@ -1,0 +1,19 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{
+  govukInput({
+    label: {
+      text: "VAT registration number"
+    },
+    hint: {
+      text: 'This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on your VAT registration certificate.'
+    },
+    id: "vat-registration-number",
+    name: "vat-registration-number",
+    classes: "govuk-input--width-10"
+  })
+}}

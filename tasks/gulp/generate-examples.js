@@ -9,26 +9,18 @@ const njkTagRegEx = /---(\s*)((.|\s)+?)(\s*)---/gm
 
 const entryPoint = './src/all-patterns/index.njk'
 
-const ignoreFiles = [
-  '!./src/hmrc-design-patterns/hmrc-design-patterns-backlog/*/index.njk',
-  '!./src/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/*/index.njk',
-  '!./src/hmrc-design-patterns/updating-hmrc-frontend-in-your-prototype/*/index.njk'
-]
+const rootPath = pathFromRoot('src', 'examples')
 
 const layouts = [
-  './src/hmrc-design-patterns/account-header/*/index.njk'
+  `${rootPath}/account-header/*/index.njk`
 ]
-
-const destination = './src/examples'
 
 gulp.task('scrape-patterns', (done) => {
   let isFirstMatch = true
   gulp.src([
     entryPoint,
     // All pattern examples
-    './src/hmrc-design-patterns/*/*/index.njk',
-    // Ignore others
-    ...ignoreFiles,
+    `${rootPath}/*/*/index.njk`,
     ...layouts.map(layout => `!${layout}`)
   ])
     .pipe(concat('patterns.njk'))
@@ -38,7 +30,7 @@ gulp.task('scrape-patterns', (done) => {
       isFirstMatch = false
       return replacement
     }))
-    .pipe(gulp.dest(destination))
+    .pipe(gulp.dest(rootPath))
     .on('end', done)
 })
 
@@ -55,12 +47,12 @@ gulp.task('scrape-layouts', (done) => {
       isFirstMatch = false
       return replacement
     }))
-    .pipe(gulp.dest(destination))
+    .pipe(gulp.dest(rootPath))
     .on('end', done)
 })
 
 gulp.task('prepare', async (done) => {
-  await del(pathFromRoot('src', 'examples'))
+  await del(pathFromRoot(rootPath, '*.njk'))
   done()
 })
 

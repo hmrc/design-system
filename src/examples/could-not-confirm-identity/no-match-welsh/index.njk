@@ -1,0 +1,15 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'Nid oeddem yn gallu cadarnhau pwy ydych'
+}) }}
+
+<p class="govuk-body">Nid yw’r wybodaeth yr ydych wedi’i nodi yn cyd-fynd â’n cofnodion.</p>
+
+{{ govukButton({
+  text: "Rhowch gynnig arall arni"
+}) }}
