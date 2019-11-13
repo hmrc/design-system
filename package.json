@@ -33,6 +33,7 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-connect": "^5.6.1",
+    "gulp-livereload": "^4.0.2",
     "govuk-frontend": "^3.3.0",
     "hmrc-frontend": "^1.3.0"
   },
@@ -46,7 +47,6 @@
     "gulp-concat": "^2.6.1",
     "gulp-header": "^2.0.9",
     "gulp-if": "^2.0.2",
-    "gulp-livereload": "^4.0.2",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
