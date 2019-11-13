@@ -1,1 +1,1 @@
-web: npm run serve
+web: node ./node_modules/gulp/bin/gulp serve
