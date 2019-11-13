@@ -1,0 +1,176 @@
+---
+title: Status tags in Task list pages
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+{% block content %}
+
+<p class="govuk-body">Use these Status tags with the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/task-list-pages/">Task list pages</a> pattern from the GOV.UK Design System.</p>
+
+<p class="govuk-body">This pattern is an iteration of the status tag used in the GOV.UK <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/task-list-pages/">Task list pages</a> pattern. This is because it only includes a status tag for “Completed”. Also, user research found the styling of the tag difficult to read and there were no findings to support the use of coloured boxes.</p>
+
+{{
+  example({
+    item: 'Status-tags-in-task-list-pages',
+    description: 'Status tags in task list pages',
+    example: 'example',
+    welsh: 'example-welsh',
+    hideTabs: true
+  })
+}}
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">This pattern is specifically designed for use with the GOV.UK <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/task-list-pages/">Task list pages</a> pattern. Use the Status tag to show which tasks are done and which tasks are still to do.</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Do not use the Status tags when you are not using the Task list pages pattern. When you need to show that your service is still being worked on, use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">Phase banner</a>.</p>
+
+<h2 id="when-to-use" class="govuk-heading-l">How it works</h2>
+
+<p class="govuk-body">Start with using the GOV.UK <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/task-list-pages/">Task list pages</a> pattern. Make sure you word the tasks using active verbs where possible.</p>
+
+<p class="govuk-body">Use simple text in sentence case, unless there is a strong user need to support the need for coloured boxes. Use:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>“Not started” if the user has not started the task</li>
+  <li>“In progress” if the user has started but not finished the task</li>
+  <li>“Completed” if the user has finished the task</li>
+</ul>
+
+<h3 class="govuk-heading-m" id="when-to-use">How to use Status tags with the GOV.UK Task list pages</h3>
+
+<p class="govuk-body">These instructions tell you how to amend or add to the code of the GOV.UK Task list pages to use Status tags.</p>
+
+<p class="govuk-body">You can find the code for the Task list pages pattern in the /docs/views/templates folder of the <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com/docs">GOV.UK Prototype Kit</a>.
+
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/design-library/using-code-in-prototypes/">find out how to install HMRC Frontend</a>.
+</div>
+
+<h4 class="govuk-heading-s" id="when-to-use">Not started</h4>
+
+<p class="govuk-body">
+Find this code in the Task list pages pattern:
+</p>
+
+<code>
+  &lt;span class="app-task-list__task-name"&gt;&lt;a href="#"&gt;List convictions&lt;/a&gt;&lt;/span&gt;
+</code><br /><br />
+
+<p class="govuk-body">
+  And change it to:
+</p>
+
+{% set convictionsLink %}<span class="app-task-list__task-name">
+  <a href="#" aria-describedby="list-convictions-not-started">List convictions</a>
+</span>{% endset%}
+
+{{
+  codeSnippet({
+    code: convictionsLink,
+    canCopy: true
+  })
+}}
+
+<p class="govuk-body">
+  Then add this code directly below it:
+</p>
+
+{% set convictionsStatus %}<span class="hmrc-status-tag" id="list-convictions-not-started">
+  Not started
+</span>{% endset%}
+
+{{
+  codeSnippet({
+    code: convictionsStatus,
+    canCopy: true
+  })
+}}
+
+<h4 class="govuk-heading-s" id="when-to-use">In progress</h4>
+
+<p class="govuk-body">
+Find this code in the Task list pages pattern:
+</p>
+
+<code>
+  &lt;span class="app-task-list__task-name"&gt;&lt;a href="#" aria-describedby="read-declaration-completed"&gt;Read declaration&lt;/a&gt;&lt;/span&gt;
+</code><br /><br />
+
+<p class="govuk-body">
+  Change it to:
+</p>
+
+{% set declarationLink %}<span class="app-task-list__task-name">
+  <a href="#" aria-describedby="read-declaration-in-progress">Read declaration</a>
+</span>{% endset%}
+
+{{
+  codeSnippet({
+    code: declarationLink,
+    canCopy: true
+  })
+}}
+
+<p class="govuk-body">
+  Then add this code directly below it:
+</p>
+
+{% set declarationStatus %}<span class="hmrc-status-tag" id="read-declaration-in-progress">
+  In progress
+</span>{% endset%}
+
+{{
+  codeSnippet({
+    code: declarationStatus,
+    canCopy: true
+  })
+}}
+
+<h4 class="govuk-heading-s" id="when-to-use">Completed</h4>
+
+<p class="govuk-body">
+  Find this code in the Task list pages pattern:
+</p>
+
+<code>
+  &lt;strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed"&gt;Completed&lt;/strong&gt;
+</code><br /><br />
+
+<p class="govuk-body">Change it to:</p>
+
+{% set eligibilityStatus %}<span class="hmrc-status-tag" id="eligibility-completed">
+  Completed
+</span>{% endset%}
+
+{{
+  codeSnippet({
+    code: eligibilityStatus,
+    canCopy: true
+  })
+}}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">This pattern is based on the status tags used in the Anti-money laundering supervision (AMLS), Register a trust and Manage a registered pension scheme services.</p>
+
+<p class="govuk-body">There is evidence that users found this wording easy to understand and they knew they had to click the task to complete or change their answers.</p>
+
+<p class="govuk-body">Other kinds of tags are used in services to show different states, for example:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Cannot start</li>
+  <li>Paid</li>
+  <li>Overdue</li>
+</ul>
+
+<p class="govuk-body">We need more research to understand how these are used. If you have used other kinds of Status tags on your service, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/163">Discuss the Status tag on GitHub</a></p>
+
+{% endblock %}
