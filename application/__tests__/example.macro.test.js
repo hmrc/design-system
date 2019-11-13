@@ -143,4 +143,22 @@ describe('Single page example macro', () => {
     const exampleHTMLCode = document.querySelector(`#${htmlPanelID} pre code`)
     expect(exampleHTMLCode).toMatchSnapshot()
   })
+
+  it('should not have a button to show HTML code examples if the hideTabs flag is true', () => {
+    const noTabsParameters = { ...parameters, hideTabs: true }
+    const noTabsDocument = documentFactory(noTabsParameters, options)
+    const tabLink = noTabsDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${htmlPanelID}"]`)
+    const tabContentContainer = noTabsDocument.getElementById(htmlPanelID)
+    expect(tabContentContainer).toBeNull()
+    expect(tabLink).toBeNull()
+  })
+
+  it('should not have a button to show Nunjucks code examples if the hideTabs flag is true', () => {
+    const noTabsParameters = { ...parameters, hideTabs: true }
+    const noTabsDocument = documentFactory(noTabsParameters, options)
+    const tabLink = noTabsDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
+    const tabContentContainer = noTabsDocument.getElementById(nunjucksPanelID)
+    expect(tabContentContainer).toBeNull()
+    expect(tabLink).toBeNull()
+  })
 })
