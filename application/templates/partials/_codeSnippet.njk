@@ -6,7 +6,7 @@
       {% if params.canCopy %}
         {{ copyContents() }}
       {% endif %}
-      <pre><code class="govuk-body-s">{{ params.code }}</code></pre>
+      <pre><code class="govuk-body-s">{{ params.code | safe }}</code></pre>
     </div>
   {% endif %}
 {% endmacro %}
