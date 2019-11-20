@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [1.9.0] - 2019-11-20
+
+### Fixed
+- Copy and style issues on 'Install HMRC Frontend in an old version of the GOVUK prototype Kit' page [0f8937e](0f8937e98ca5e8ceb89292c15d63d05356fa37ec)
+
 ## [1.8.0] - 2019-10-15
 
 ### Updated
