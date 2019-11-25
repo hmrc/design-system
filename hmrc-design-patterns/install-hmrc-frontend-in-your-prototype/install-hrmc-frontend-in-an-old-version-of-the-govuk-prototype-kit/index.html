@@ -211,7 +211,7 @@
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-      <pre><code class="govuk-body-s">npm install --save &quot;hmrc/hmrc-frontend#package-latest&quot;</code></pre>
+      <pre><code class="govuk-body-s">npm install --save hmrc-frontend@0.6.x</code></pre>
     </div>
 
 
@@ -230,7 +230,7 @@
 
     <div class="app-code-snippet">
       <pre><code class="govuk-body-s">// Import GOV.UK Frontend
-@import &quot;node_modules/govuk-frontend/all&quot;;</code></pre>
+@import "node_modules/govuk-frontend/all";</code></pre>
     </div>
 
 
@@ -242,7 +242,7 @@
   </div>
 
       <pre><code class="govuk-body-s">// Import HMRC Frontend
-@import &quot;node_modules/hmrc-frontend/all&quot;;</code></pre>
+@import "node_modules/hmrc-frontend/all";</code></pre>
     </div>
 
 
@@ -272,12 +272,12 @@
   </div>
 
       <pre><code class="govuk-body-s">var appViews = [
-&lt;mark&gt;path.join(__dirname, &#39;/node_modules/hmrc-frontend/layouts&#39;),&lt;/mark&gt;
-&lt;mark&gt;path.join(__dirname, &#39;/node_modules/hmrc-frontend/components&#39;),&lt;/mark&gt;
-path.join(__dirname, &#39;/node_modules/govuk-frontend/&#39;),
-path.join(__dirname, &#39;/node_modules/govuk-frontend/components&#39;),
-path.join(__dirname, &#39;/app/views/&#39;),
-path.join(__dirname, &#39;/lib/&#39;)
+  <mark>path.join(__dirname, '/node_modules/hmrc-frontend/layouts'),</mark>
+  <mark>path.join(__dirname, '/node_modules/hmrc-frontend/components'),</mark>
+  path.join(__dirname, '/node_modules/govuk-frontend/'),
+  path.join(__dirname, '/node_modules/govuk-frontend/components'),
+  path.join(__dirname, '/app/views/'),
+  path.join(__dirname, '/lib/')
 ]</code></pre>
     </div>
 
@@ -296,7 +296,7 @@ path.join(__dirname, &#39;/lib/&#39;)
 <p class="govuk-body">find</p>
 
     <div class="app-code-snippet">
-      <pre><code class="govuk-body-s">app.use(&#39;/node_modules/govuk-frontend&#39;, express.static(path.join(__dirname, &#39;/node_modules/govuk-frontend&#39;)))</code></pre>
+      <pre><code class="govuk-body-s">app.use('/node_modules/govuk-frontend', express.static(path.join(__dirname, '/node_modules/govuk-frontend')))</code></pre>
     </div>
 
 
@@ -307,7 +307,7 @@ path.join(__dirname, &#39;/lib/&#39;)
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-      <pre><code class="govuk-body-s">app.use(&#39;/node_modules/hmrc-frontend&#39;, express.static(path.join(__dirname, &#39;/node_modules/hmrc-frontend&#39;)))</code></pre>
+      <pre><code class="govuk-body-s">app.use('/node_modules/hmrc-frontend', express.static(path.join(__dirname, '/node_modules/hmrc-frontend')))</code></pre>
     </div>
 
 
@@ -325,7 +325,7 @@ path.join(__dirname, &#39;/lib/&#39;)
 <p class="govuk-body">find</p>
 
     <div class="app-code-snippet">
-      <pre><code class="govuk-body-s">app.use(&#39;/assets&#39;, express.static(path.join(__dirname, &#39;node_modules&#39;, &#39;govuk-frontend&#39;, &#39;assets&#39;)))</code></pre>
+      <pre><code class="govuk-body-s">app.use('/assets', express.static(path.join(__dirname, 'node_modules', 'govuk-frontend', 'assets')))</code></pre>
     </div>
 
 
@@ -336,7 +336,7 @@ path.join(__dirname, &#39;/lib/&#39;)
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-      <pre><code class="govuk-body-s">app.use(&#39;/assets&#39;, express.static(path.join(__dirname, &#39;node_modules&#39;, &#39;hmrc-frontend&#39;)))</code></pre>
+      <pre><code class="govuk-body-s">app.use('/assets', express.static(path.join(__dirname, 'node_modules', 'hmrc-frontend')))</code></pre>
     </div>
 
 
@@ -357,7 +357,7 @@ path.join(__dirname, &#39;/lib/&#39;)
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-      <pre><code class="govuk-body-s">&amp;lt;script src=&quot;/node_modules/hmrc-frontend/all.js&quot;&amp;gt;&amp;lt;/script&amp;gt;</code></pre>
+      <pre><code class="govuk-body-s">&lt;script src="/node_modules/hmrc-frontend/all.js"&gt;&lt;/script&gt;</code></pre>
     </div>
 
 
