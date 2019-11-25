@@ -42,7 +42,7 @@
           <p class="govuk-body">
             There is an update to the GOV.UK Prototype kit which may affect how your prototype works if you
             are not using the latest version. Contact
-            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3">#team-plat-ui</a> on HMRC Slack <a href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
+            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3" class="govuk-link">#team-plat-ui</a> on HMRC Slack <a class="govuk-link" href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
             if you need more information or support.
           </p>
         </div>
@@ -127,6 +127,14 @@
                   Service unavailable
                 </a>
               </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/sign-out">
+                  Sign out
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/status-tags-in-task-list-pages">
+                  Status tags in task list pages
+                </a>
+              </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
                   There is a problem with the service
                 </a>
@@ -207,50 +215,51 @@
               src="/examples/notification-badge/with-items/" title="Badge with notifications example"></iframe>
     </div>
 
-    <div class="example-example-with-items-lang example-example-with-items-lang--en ">
-      <span id="options-example-with-items"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-with-items-html" role="tab"
-            aria-controls="example-with-items-html"
-            data-track="tab-html" title="Display Badge with notifications example as HTML">HTML</a>
-        </li>
+
+      <div class="example-example-with-items-lang example-example-with-items-lang--en ">
+        <span id="options-example-with-items"></span>
+        <ul class="app-tabs" role="tablist">
           <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-with-items-nunjucks" role="tab"
-              aria-controls="example-with-items-nunjucks"
-              data-track="tab-nunjucks" title="Display Badge with notifications example as Nunjucks">Nunjucks</a>
+            <a href="#example-with-items-html" role="tab"
+              aria-controls="example-with-items-html"
+              data-track="tab-html" title="Display Badge with notifications example as HTML">HTML</a>
           </li>
-      </ul>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-with-items-nunjucks" role="tab"
+                aria-controls="example-with-items-nunjucks"
+                data-track="tab-nunjucks" title="Display Badge with notifications example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-with-items-html" role="tabpanel">
-          <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Messages <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-notification-badge"</span>&gt;</span>32<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
-          </pre>
-
-        </div>
-      </div>
-
-        <div class="app-tabs__container js-tabs__container" id="example-with-items-nunjucks" role="tabpanel">
+        <div class="app-tabs__container js-tabs__container" id="example-with-items-html" role="tabpanel">
             <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
           <div data-module="app-copy">
             <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
-
-&lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Messages {{ hmrcNotificationBadge({ <span class="hljs-attr">text</span>: <span class="hljs-string">'32'</span> }) }}&lt;<span class="hljs-regexp">/a&gt;</span></code>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Messages <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-notification-badge"</span>&gt;</span>32<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
             </pre>
 
           </div>
         </div>
-    </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-with-items-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
+
+&lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Messages {{ hmrcNotificationBadge({ <span class="hljs-attr">text</span>: <span class="hljs-string">'32'</span> }) }}&lt;<span class="hljs-regexp">/a&gt;</span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
 
   </div>
 
@@ -275,49 +284,50 @@
               src="/examples/notification-badge/no-items/" title="Badge without notifications example"></iframe>
     </div>
 
-    <div class="example-example-no-items-lang example-example-no-items-lang--en ">
-      <span id="options-example-no-items"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-no-items-html" role="tab"
-            aria-controls="example-no-items-html"
-            data-track="tab-html" title="Display Badge without notifications example as HTML">HTML</a>
-        </li>
+
+      <div class="example-example-no-items-lang example-example-no-items-lang--en ">
+        <span id="options-example-no-items"></span>
+        <ul class="app-tabs" role="tablist">
           <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-no-items-nunjucks" role="tab"
-              aria-controls="example-no-items-nunjucks"
-              data-track="tab-nunjucks" title="Display Badge without notifications example as Nunjucks">Nunjucks</a>
+            <a href="#example-no-items-html" role="tab"
+              aria-controls="example-no-items-html"
+              data-track="tab-html" title="Display Badge without notifications example as HTML">HTML</a>
           </li>
-      </ul>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-no-items-nunjucks" role="tab"
+                aria-controls="example-no-items-nunjucks"
+                data-track="tab-nunjucks" title="Display Badge without notifications example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-no-items-html" role="tabpanel">
-          <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Messages <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
-          </pre>
-
-        </div>
-      </div>
-
-        <div class="app-tabs__container js-tabs__container" id="example-no-items-nunjucks" role="tabpanel">
+        <div class="app-tabs__container js-tabs__container" id="example-no-items-html" role="tabpanel">
             <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
           <div data-module="app-copy">
             <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
-
-&lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Messages {{ hmrcNotificationBadge() }}&lt;<span class="hljs-regexp">/a&gt;</span></code>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Messages <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
             </pre>
 
           </div>
         </div>
-    </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-no-items-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
+
+&lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Messages {{ hmrcNotificationBadge() }}&lt;<span class="hljs-regexp">/a&gt;</span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
 
   </div>
 

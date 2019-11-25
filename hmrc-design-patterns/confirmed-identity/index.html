@@ -42,7 +42,7 @@
           <p class="govuk-body">
             There is an update to the GOV.UK Prototype kit which may affect how your prototype works if you
             are not using the latest version. Contact
-            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3">#team-plat-ui</a> on HMRC Slack <a href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
+            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3" class="govuk-link">#team-plat-ui</a> on HMRC Slack <a class="govuk-link" href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
             if you need more information or support.
           </p>
         </div>
@@ -125,6 +125,14 @@
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
                   Service unavailable
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/sign-out">
+                  Sign out
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/status-tags-in-task-list-pages">
+                  Status tags in task list pages
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
@@ -216,57 +224,58 @@
               src="/examples/confirmed-identity/example/" title="Confirmed identity example"></iframe>
     </div>
 
-    <div class="example-example-example-lang example-example-example-lang--en ">
-      <span id="options-example-example"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-example-html" role="tab"
-            aria-controls="example-example-html"
-            data-track="tab-html" title="Display Confirmed identity example as HTML">HTML</a>
-        </li>
+
+      <div class="example-example-example-lang example-example-example-lang--en ">
+        <span id="options-example-example"></span>
+        <ul class="app-tabs" role="tablist">
           <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-example-nunjucks" role="tab"
-              aria-controls="example-example-nunjucks"
-              data-track="tab-nunjucks" title="Display Confirmed identity example as Nunjucks">Nunjucks</a>
+            <a href="#example-example-html" role="tab"
+              aria-controls="example-example-html"
+              data-track="tab-html" title="Display Confirmed identity example as HTML">HTML</a>
           </li>
-      </ul>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-example-nunjucks" role="tab"
+                aria-controls="example-example-nunjucks"
+                data-track="tab-nunjucks" title="Display Confirmed identity example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-          <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We have confirmed your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-          </pre>
-
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Rydym wedi cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
-  Yn eich blaen
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-            </pre>
-        </div>
-      </div>
-
-        <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
+        <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
             <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
           <div data-module="app-copy">
             <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We have confirmed your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+            </pre>
+
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Rydym wedi cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Yn eich blaen
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+              </pre>
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 
 {{ hmrcPageHeading({
@@ -276,10 +285,10 @@
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
 }) }}</code>
-            </pre>
+              </pre>
 
-              <pre class="app-example__language-switch--cy-only-content">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 
 {{ hmrcPageHeading({
@@ -289,10 +298,10 @@
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Yn eich blaen"</span>
 }) }}</code>
-              </pre>
+                </pre>
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
   </div>
 

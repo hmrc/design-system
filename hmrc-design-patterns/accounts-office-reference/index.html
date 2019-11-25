@@ -42,7 +42,7 @@
           <p class="govuk-body">
             There is an update to the GOV.UK Prototype kit which may affect how your prototype works if you
             are not using the latest version. Contact
-            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3">#team-plat-ui</a> on HMRC Slack <a href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
+            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3" class="govuk-link">#team-plat-ui</a> on HMRC Slack <a class="govuk-link" href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
             if you need more information or support.
           </p>
         </div>
@@ -125,6 +125,14 @@
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
                   Service unavailable
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/sign-out">
+                  Sign out
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/status-tags-in-task-list-pages">
+                  Status tags in task list pages
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
@@ -221,29 +229,30 @@
               src="/examples/accounts-office-reference/heading/" title="Accounts Office reference as main heading example"></iframe>
     </div>
 
-    <div class="example-example-heading-lang example-example-heading-lang--en ">
-      <span id="options-example-heading"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-heading-html" role="tab"
-            aria-controls="example-heading-html"
-            data-track="tab-html" title="Display Accounts Office reference as main heading example as HTML">HTML</a>
-        </li>
-          <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-heading-nunjucks" role="tab"
-              aria-controls="example-heading-nunjucks"
-              data-track="tab-nunjucks" title="Display Accounts Office reference as main heading example as Nunjucks">Nunjucks</a>
-          </li>
-      </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-heading-html" role="tabpanel">
-          <div class="app-link--copy__container">
+      <div class="example-example-heading-lang example-example-heading-lang--en ">
+        <span id="options-example-heading"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-heading-html" role="tab"
+              aria-controls="example-heading-html"
+              data-track="tab-html" title="Display Accounts Office reference as main heading example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-heading-nunjucks" role="tab"
+                aria-controls="example-heading-nunjucks"
+                data-track="tab-nunjucks" title="Display Accounts Office reference as main heading example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-heading-html" role="tabpanel">
+            <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label-wrapper"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-label--xl"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"accounts-office-reference"</span>&gt;</span>
       What is your Accounts Office reference?
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -258,19 +267,19 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-          </pre>
+            </pre>
 
+          </div>
         </div>
-      </div>
 
-        <div class="app-tabs__container js-tabs__container" id="example-heading-nunjucks" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-heading-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 
 {{
@@ -292,11 +301,11 @@
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
 }) }}</code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
   </div>
 
@@ -321,29 +330,30 @@
               src="/examples/accounts-office-reference/label/" title="Accounts Office reference as form label example"></iframe>
     </div>
 
-    <div class="example-example-label-lang example-example-label-lang--en ">
-      <span id="options-example-label"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-label-html" role="tab"
-            aria-controls="example-label-html"
-            data-track="tab-html" title="Display Accounts Office reference as form label example as HTML">HTML</a>
-        </li>
-          <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-label-nunjucks" role="tab"
-              aria-controls="example-label-nunjucks"
-              data-track="tab-nunjucks" title="Display Accounts Office reference as form label example as Nunjucks">Nunjucks</a>
-          </li>
-      </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-label-html" role="tabpanel">
-          <div class="app-link--copy__container">
+      <div class="example-example-label-lang example-example-label-lang--en ">
+        <span id="options-example-label"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-label-html" role="tab"
+              aria-controls="example-label-html"
+              data-track="tab-html" title="Display Accounts Office reference as form label example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-label-nunjucks" role="tab"
+                aria-controls="example-label-nunjucks"
+                data-track="tab-nunjucks" title="Display Accounts Office reference as form label example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-label-html" role="tabpanel">
+            <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"accounts-office-reference"</span>&gt;</span>
     What is your Accounts Office reference?
   <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -352,19 +362,19 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accounts-office-reference"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"accounts-office-reference"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"accounts-office-reference-hint"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-          </pre>
+            </pre>
 
+          </div>
         </div>
-      </div>
 
-        <div class="app-tabs__container js-tabs__container" id="example-label-nunjucks" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-label-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
 
 {{
   govukInput({
@@ -379,11 +389,11 @@
     <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>
   })
 }}</code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
   </div>
 
@@ -451,29 +461,30 @@
               src="/examples/accounts-office-reference/label-error/" title="Accounts Office reference with error example"></iframe>
     </div>
 
-    <div class="example-example-label-error-lang example-example-label-error-lang--en ">
-      <span id="options-example-label-error"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-label-error-html" role="tab"
-            aria-controls="example-label-error-html"
-            data-track="tab-html" title="Display Accounts Office reference with error example as HTML">HTML</a>
-        </li>
-          <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-label-error-nunjucks" role="tab"
-              aria-controls="example-label-error-nunjucks"
-              data-track="tab-nunjucks" title="Display Accounts Office reference with error example as Nunjucks">Nunjucks</a>
-          </li>
-      </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-label-error-html" role="tabpanel">
-          <div class="app-link--copy__container">
+      <div class="example-example-label-error-lang example-example-label-error-lang--en ">
+        <span id="options-example-label-error"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-label-error-html" role="tab"
+              aria-controls="example-label-error-html"
+              data-track="tab-html" title="Display Accounts Office reference with error example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-label-error-nunjucks" role="tab"
+                aria-controls="example-label-error-nunjucks"
+                data-track="tab-nunjucks" title="Display Accounts Office reference with error example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-label-error-html" role="tabpanel">
+            <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group govuk-form-group--error"</span>&gt;</span>
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group govuk-form-group--error"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"accounts-office-reference"</span>&gt;</span>
     What is your Accounts Office reference?
   <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -485,19 +496,19 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10 govuk-input--error"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accounts-office-reference"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"accounts-office-reference"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"accounts-office-reference-hint accounts-office-reference-error"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-          </pre>
+            </pre>
 
+          </div>
         </div>
-      </div>
 
-        <div class="app-tabs__container js-tabs__container" id="example-label-error-nunjucks" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-label-error-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
 
 {{
   govukInput({
@@ -515,11 +526,11 @@
     <span class="hljs-attr">classes</span>: <span class="hljs-string">'govuk-input--width-10'</span>
   })
 }}</code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
   </div>
 

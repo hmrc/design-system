@@ -42,7 +42,7 @@
           <p class="govuk-body">
             There is an update to the GOV.UK Prototype kit which may affect how your prototype works if you
             are not using the latest version. Contact
-            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3">#team-plat-ui</a> on HMRC Slack <a href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
+            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3" class="govuk-link">#team-plat-ui</a> on HMRC Slack <a class="govuk-link" href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
             if you need more information or support.
           </p>
         </div>
@@ -126,6 +126,14 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
                   Service unavailable
                 </a>
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/sign-out">
+                  Sign out
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/status-tags-in-task-list-pages">
+                  Status tags in task list pages
+                </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
                   There is a problem with the service
@@ -163,14 +171,6 @@
             
   
   
-    
-    
-    <div class="govuk-!-padding-bottom-8 hmrc-phase-banner">
-      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">development</strong>
-
-        <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
-    </div>
-  
 
 
 
@@ -203,29 +203,30 @@
               src="/examples/sign-out/example/" title="Sign out example"></iframe>
     </div>
 
-    <div class="example-example-example-lang example-example-example-lang--en ">
-      <span id="options-example-example"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-example-html" role="tab"
-            aria-controls="example-example-html"
-            data-track="tab-html" title="Display Sign out example as HTML">HTML</a>
-        </li>
-          <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-example-nunjucks" role="tab"
-              aria-controls="example-example-nunjucks"
-              data-track="tab-nunjucks" title="Display Sign out example as Nunjucks">Nunjucks</a>
-          </li>
-      </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-          <div class="app-link--copy__container">
+      <div class="example-example-example-lang example-example-example-lang--en ">
+        <span id="options-example-example"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-example-html" role="tab"
+              aria-controls="example-example-html"
+              data-track="tab-html" title="Display Sign out example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-example-nunjucks" role="tab"
+                aria-controls="example-example-nunjucks"
+                data-track="tab-nunjucks" title="Display Sign out example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
+            <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header hmrc-header  "</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"header"</span>&gt;</span>
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header hmrc-header  "</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"header"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__container govuk-width-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__logo"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__link govuk-header__link--homepage"</span>&gt;</span>
@@ -253,19 +254,19 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-width-container"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-          </pre>
+            </pre>
 
+          </div>
         </div>
-      </div>
 
-        <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/header/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcHeader %}
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/header/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcHeader %}
 
 {{ hmrcHeader({
     <span class="hljs-string">"serviceName"</span>: <span class="hljs-string">"Service Name"</span>,
@@ -273,11 +274,11 @@
     <span class="hljs-string">"phaseBanner"</span> : <span class="hljs-literal">true</span>,
     <span class="hljs-string">"signOut"</span> : <span class="hljs-literal">true</span>
 }) }}</code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
   </div>
 

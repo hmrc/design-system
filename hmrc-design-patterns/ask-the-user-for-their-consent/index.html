@@ -42,7 +42,7 @@
           <p class="govuk-body">
             There is an update to the GOV.UK Prototype kit which may affect how your prototype works if you
             are not using the latest version. Contact
-            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3">#team-plat-ui</a> on HMRC Slack <a href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
+            <a href="https://hmrcdigital.slack.com/messages/CJMUM9AG3" class="govuk-link">#team-plat-ui</a> on HMRC Slack <a class="govuk-link" href="slack://channel?team=T04RY81HB&amp;id=CJMUM9AG3">(open in app)</a>
             if you need more information or support.
           </p>
         </div>
@@ -125,6 +125,14 @@
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
                   Service unavailable
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/sign-out">
+                  Sign out
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/status-tags-in-task-list-pages">
+                  Status tags in task list pages
                 </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
@@ -216,29 +224,30 @@
               src="/examples/ask-the-user-for-their-consent/yes-no-question/" title="Ask a yes-no question example"></iframe>
     </div>
 
-    <div class="example-example-yes-no-question-lang example-example-yes-no-question-lang--en ">
-      <span id="options-example-yes-no-question"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-yes-no-question-html" role="tab"
-            aria-controls="example-yes-no-question-html"
-            data-track="tab-html" title="Display Ask a yes-no question example as HTML">HTML</a>
-        </li>
-          <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-yes-no-question-nunjucks" role="tab"
-              aria-controls="example-yes-no-question-nunjucks"
-              data-track="tab-nunjucks" title="Display Ask a yes-no question example as Nunjucks">Nunjucks</a>
-          </li>
-      </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-yes-no-question-html" role="tabpanel">
-          <div class="app-link--copy__container">
+      <div class="example-example-yes-no-question-lang example-example-yes-no-question-lang--en ">
+        <span id="options-example-yes-no-question"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-yes-no-question-html" role="tab"
+              aria-controls="example-yes-no-question-html"
+              data-track="tab-html" title="Display Ask a yes-no question example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-yes-no-question-nunjucks" role="tab"
+                aria-controls="example-yes-no-question-nunjucks"
+                data-track="tab-nunjucks" title="Display Ask a yes-no question example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-yes-no-question-html" role="tabpanel">
+            <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>
@@ -265,19 +274,19 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-          </pre>
+            </pre>
 
+          </div>
         </div>
-      </div>
 
-        <div class="app-tabs__container js-tabs__container" id="example-yes-no-question-nunjucks" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-yes-no-question-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/radios/macro.njk"</span> <span class="hljs-keyword">import</span> govukRadios %}
 
 {{ govukRadios({
@@ -306,11 +315,11 @@
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
 }) }}</code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
   </div>
 
@@ -333,29 +342,30 @@
               src="/examples/ask-the-user-for-their-consent/single-checkbox/" title="Use a single checkbox example"></iframe>
     </div>
 
-    <div class="example-example-single-checkbox-lang example-example-single-checkbox-lang--en ">
-      <span id="options-example-single-checkbox"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-single-checkbox-html" role="tab"
-            aria-controls="example-single-checkbox-html"
-            data-track="tab-html" title="Display Use a single checkbox example as HTML">HTML</a>
-        </li>
-          <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-single-checkbox-nunjucks" role="tab"
-              aria-controls="example-single-checkbox-nunjucks"
-              data-track="tab-nunjucks" title="Display Use a single checkbox example as Nunjucks">Nunjucks</a>
-          </li>
-      </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-single-checkbox-html" role="tabpanel">
-          <div class="app-link--copy__container">
+      <div class="example-example-single-checkbox-lang example-example-single-checkbox-lang--en ">
+        <span id="options-example-single-checkbox"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-single-checkbox-html" role="tab"
+              aria-controls="example-single-checkbox-html"
+              data-track="tab-html" title="Display Use a single checkbox example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-single-checkbox-nunjucks" role="tab"
+                aria-controls="example-single-checkbox-nunjucks"
+                data-track="tab-nunjucks" title="Display Use a single checkbox example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-single-checkbox-html" role="tabpanel">
+            <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"access-code"</span>&gt;</span>
     Access code
   <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -376,19 +386,19 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-          </pre>
+            </pre>
 
+          </div>
         </div>
-      </div>
 
-        <div class="app-tabs__container js-tabs__container" id="example-single-checkbox-nunjucks" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-single-checkbox-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
 
@@ -415,11 +425,11 @@
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
 }) }}</code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
   </div>
 
@@ -444,29 +454,30 @@
               src="/examples/ask-the-user-for-their-consent/multiple-checkboxes/" title="Use more than one checkbox example"></iframe>
     </div>
 
-    <div class="example-example-multiple-checkboxes-lang example-example-multiple-checkboxes-lang--en ">
-      <span id="options-example-multiple-checkboxes"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#example-multiple-checkboxes-html" role="tab"
-            aria-controls="example-multiple-checkboxes-html"
-            data-track="tab-html" title="Display Use more than one checkbox example as HTML">HTML</a>
-        </li>
-          <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-multiple-checkboxes-nunjucks" role="tab"
-              aria-controls="example-multiple-checkboxes-nunjucks"
-              data-track="tab-nunjucks" title="Display Use more than one checkbox example as Nunjucks">Nunjucks</a>
-          </li>
-      </ul>
 
-      <div class="app-tabs__container js-tabs__container" id="example-multiple-checkboxes-html" role="tabpanel">
-          <div class="app-link--copy__container">
+      <div class="example-example-multiple-checkboxes-lang example-example-multiple-checkboxes-lang--en ">
+        <span id="options-example-multiple-checkboxes"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-multiple-checkboxes-html" role="tab"
+              aria-controls="example-multiple-checkboxes-html"
+              data-track="tab-html" title="Display Use more than one checkbox example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-multiple-checkboxes-nunjucks" role="tab"
+                aria-controls="example-multiple-checkboxes-nunjucks"
+                data-track="tab-nunjucks" title="Display Use more than one checkbox example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-multiple-checkboxes-html" role="tabpanel">
+            <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>
@@ -493,19 +504,19 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-          </pre>
+            </pre>
 
+          </div>
         </div>
-      </div>
 
-        <div class="app-tabs__container js-tabs__container" id="example-multiple-checkboxes-nunjucks" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-multiple-checkboxes-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
 
 {{ govukCheckboxes({
@@ -532,11 +543,11 @@
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
 }) }}</code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
 
   </div>
 
