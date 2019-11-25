@@ -38,63 +38,66 @@
               src="{{ exampleURL }}"{% if description %} title="{{description}} example"{% endif %}></iframe>
     </div>
 
-    <div class="example-{{ exampleId }}-lang example-{{ exampleId }}-lang--en ">
-      <span id="options-{{ exampleId }}"></span>
-      <ul class="app-tabs" role="tablist">
-        <li class="app-tabs__item js-tabs__item" role="presentation">
-          <a href="#{{ exampleId }}-html" role="tab"
-            aria-controls="{{ exampleId }}-html"
-            data-track="tab-html" title="Display {{description}} example as HTML">HTML</a>
-        </li>
-        {% if not params.htmlOnly %}
+
+    {% if not params.hideTabs%}
+      <div class="example-{{ exampleId }}-lang example-{{ exampleId }}-lang--en ">
+        <span id="options-{{ exampleId }}"></span>
+        <ul class="app-tabs" role="tablist">
           <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#{{ exampleId }}-nunjucks" role="tab"
-              aria-controls="{{ exampleId }}-nunjucks"
-              data-track="tab-nunjucks" title="Display {{description}} example as Nunjucks">Nunjucks</a>
+            <a href="#{{ exampleId }}-html" role="tab"
+              aria-controls="{{ exampleId }}-html"
+              data-track="tab-html" title="Display {{description}} example as HTML">HTML</a>
           </li>
-        {% endif %}
-      </ul>
-
-      <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
-        {{ copyContents() }}
-        <div data-module="app-copy">
-          <pre class="app-example__language-switch--en-only-content">
-            <code class="hljs html">
-              {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
-            </code>
-          </pre>
-
-          {% if welshExamplePath %}
-            <pre class="app-example__language-switch--cy-only-content">
-              <code class="hljs html">
-                {{- getHTMLCode(welshExamplePath) | highlight('html') | safe -}}
-              </code>
-            </pre>
+          {% if not params.htmlOnly %}
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#{{ exampleId }}-nunjucks" role="tab"
+                aria-controls="{{ exampleId }}-nunjucks"
+                data-track="tab-nunjucks" title="Display {{description}} example as Nunjucks">Nunjucks</a>
+            </li>
           {% endif %}
-        </div>
-      </div>
+        </ul>
 
-      {% if not params.htmlOnly %}
-        <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
+        <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
           {{ copyContents() }}
           <div data-module="app-copy">
             <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs js">
-              {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
+              <code class="hljs html">
+                {{- getHTMLCode(examplePath) | highlight('html') | safe -}}
               </code>
             </pre>
 
             {% if welshExamplePath %}
               <pre class="app-example__language-switch--cy-only-content">
-                <code class="hljs js">
-                  {{- getNunjucksCode(welshExamplePath) | highlight('js') | safe -}}
+                <code class="hljs html">
+                  {{- getHTMLCode(welshExamplePath) | highlight('html') | safe -}}
                 </code>
               </pre>
             {% endif %}
           </div>
         </div>
-      {% endif %}
-    </div>
+
+        {% if not params.htmlOnly %}
+          <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
+            {{ copyContents() }}
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">
+                {{- getNunjucksCode(examplePath) | highlight('js') | safe -}}
+                </code>
+              </pre>
+
+              {% if welshExamplePath %}
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">
+                    {{- getNunjucksCode(welshExamplePath) | highlight('js') | safe -}}
+                  </code>
+                </pre>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
 
   </div>
 

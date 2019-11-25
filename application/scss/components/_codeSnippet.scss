@@ -10,10 +10,12 @@ code:not(.hljs) {
 
   pre {
     max-width: 100%;
-    padding: govuk-spacing(3)
+    padding: govuk-spacing(3);
 
-    code {
+    > code {
+      white-space: pre-wrap;
       color: $black;
+      padding: 0;
     }
   }
 
