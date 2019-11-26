@@ -111,7 +111,8 @@ layout: twoColumnPage.njk
   path.join(__dirname, \'/app/views/\'),
   path.join(__dirname, \'/lib/\')
 ]',
-    canCopy: true
+    canCopy: true,
+    isSafe: true
   })
 }}
 
@@ -188,7 +189,7 @@ layout: twoColumnPage.njk
 
 {{
   codeSnippet({
-    code: '&lt;script src="/node_modules/hmrc-frontend/all.js"&gt;&lt;/script&gt;',
+    code: '<script src="/node_modules/hmrc-frontend/all.js"></script>',
     canCopy: true
   })
 }}
