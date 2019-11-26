@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [1.10.0] - 2019-11-26
+
+### Fixed
+- Issue where HTML passed into code snippet macro rendered as markup  [51425ea](51425ea783e561b9c1cc934b22cfa5bb58a8fb68)
+
 ## [1.9.0] - 2019-11-25
 
 ### Fixed
