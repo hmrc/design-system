@@ -2,7 +2,15 @@
 
 ## Unreleased
 
-## [1.9.0] - 2019-11-18
+## [1.10.0] - 2019-11-26
+
+### Fixed
+- Issue where HTML passed into code snippet macro rendered as markup  [51425ea](51425ea783e561b9c1cc934b22cfa5bb58a8fb68)
+
+## [1.9.0] - 2019-11-25
+
+### Fixed
+- Copy and style issues on 'Install HMRC Frontend in an old version of the GOVUK prototype Kit' page [0f8937e](0f8937e98ca5e8ceb89292c15d63d05356fa37ec)
 
 ### Added
 - Status tags for task lists pattern [4a92b5c](4a92b5c9715caa71cb818750a9ccea4c661cf7f8)

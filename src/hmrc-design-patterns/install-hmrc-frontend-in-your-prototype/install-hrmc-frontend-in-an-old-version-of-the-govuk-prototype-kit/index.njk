@@ -43,7 +43,7 @@ layout: twoColumnPage.njk
 
 {{
   codeSnippet({
-    code: 'npm install --save "hmrc/hmrc-frontend#package-latest"',
+    code: 'npm install --save hmrc-frontend@0.6.x',
     canCopy: true
   })
 }}
@@ -104,14 +104,15 @@ layout: twoColumnPage.njk
 {{
   codeSnippet({
     code: 'var appViews = [
-<mark>path.join(__dirname, \'/node_modules/hmrc-frontend/layouts\'),</mark>
-<mark>path.join(__dirname, \'/node_modules/hmrc-frontend/components\'),</mark>
-path.join(__dirname, \'/node_modules/govuk-frontend/\'),
-path.join(__dirname, \'/node_modules/govuk-frontend/components\'),
-path.join(__dirname, \'/app/views/\'),
-path.join(__dirname, \'/lib/\')
+  <mark>path.join(__dirname, \'/node_modules/hmrc-frontend/layouts\'),</mark>
+  <mark>path.join(__dirname, \'/node_modules/hmrc-frontend/components\'),</mark>
+  path.join(__dirname, \'/node_modules/govuk-frontend/\'),
+  path.join(__dirname, \'/node_modules/govuk-frontend/components\'),
+  path.join(__dirname, \'/app/views/\'),
+  path.join(__dirname, \'/lib/\')
 ]',
-    canCopy: true
+    canCopy: true,
+    isSafe: true
   })
 }}
 
@@ -188,7 +189,7 @@ path.join(__dirname, \'/lib/\')
 
 {{
   codeSnippet({
-    code: '&lt;script src="/node_modules/hmrc-frontend/all.js"&gt;&lt;/script&gt;',
+    code: '<script src="/node_modules/hmrc-frontend/all.js"></script>',
     canCopy: true
   })
 }}
