@@ -90,6 +90,7 @@
 .app-tabs__container {
   margin-top: -2px;
   border: 1px solid $govuk-border-colour;
+  padding: govuk-spacing(2);
 }
 
 .app-tabs__container--hidden {
@@ -98,7 +99,6 @@
 
 .app-tabs__container pre {
   position: relative;
-  max-width: inherit;
   margin-bottom: 0;
   border: 0;
   font-size: inherit;
