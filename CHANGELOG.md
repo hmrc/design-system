@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [1.11.0] - 2019-12-10
+
+### Fixed
+- Issue where duplicate experimental banner displays on some patterns [b4ec15b](b4ec15b8bac3fe01ab5297042ccb4d35e156b3b1)
+- Issue where code snippets overflow content area in example tabs [1fc5892](1fc58927a1bf362a19717ebfbb6562db292788c8)
+
 ## [1.10.0] - 2019-11-26
 
 ### Fixed
