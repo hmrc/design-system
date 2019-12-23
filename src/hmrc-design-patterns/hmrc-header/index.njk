@@ -1,0 +1,79 @@
+---
+title: HMRC header
+menuText: HMRC header
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">
+  The HMRC header shows external users that they are dealing with HMRC.
+</p>
+
+<h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">
+  Use this pattern if the user needs to know they are dealing with HMRC. For example, if they need to be
+  sure that a payment is going to the right government department.
+</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">
+  Do not use this pattern when the user does not need to know they are dealing with HMRC. Use the
+  <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a>.
+</p>
+
+<p class="govuk-body">
+  Do not use this pattern for:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>personal tax account services – use the
+  <a class="govuk-link" href="/design-library/account-header">account header</a></li>
+  <li>HMRC internal services – use the
+  <a class="govuk-link" href="/design-library/internal-header">internal header</a></li>
+</ul>
+
+<h2 id="when-to-use" class="govuk-heading-l">How it works</h2>
+
+<p class="govuk-body">
+  The HMRC header should sit below the
+  <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> and the
+  <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">phase banner</a>, and above the
+  <a class="govuk-link" href="welsh-language-toggle">Welsh language toggle</a>.
+</p>
+
+<p class="govuk-body">
+  It should have:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the HMRC logo</li>
+  <li>a vertical teal bar on the left side</li>
+  <li>a horizontal grey bar on the bottom</li>
+</ul>
+
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern –
+  <a class="govuk-link" href="/design-library/using-code-in-prototypes/">find out how to install HMRC Frontend</a>. If you use
+  the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+</div>
+
+{{
+  example({
+    item: 'hmrc-header',
+    description: 'HMRC header',
+    example: 'example'
+  })
+}}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the HMRC header, get in touch to share your
+research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/4">Discuss the HMRC header on GitHub</a>
+
+{% endblock %}

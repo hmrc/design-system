@@ -1,0 +1,17 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/header/macro.njk" import hmrcHeader %}
+
+{{ hmrcHeader({
+	serviceName: "Example Service",
+	language: "en",
+	languageToggle: {
+		en: {
+			href: "?lang=en"
+		},
+		cy: {
+			href: "?lang=cy"
+		}
+	}
+}) }}
