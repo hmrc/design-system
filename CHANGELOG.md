@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [1.11.1] - 2019-12-31
+
+### Updated
+- Vulnerable dependencies [3350481](335048178d50bf2782401bb6446f221ba25004b8)
+- hmrc-frontend and govuk-frontend [ea87654](ea876546bf39cf9499918d90f3963a14cf69da86)
+
 ## [1.11.0] - 2019-12-10
 
 ### Fixed
