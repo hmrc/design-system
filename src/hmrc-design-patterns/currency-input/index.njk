@@ -148,7 +148,23 @@ layout: twoColumnPage.njk
   </p>
 </div>
 
-<h2 class="govuk-heading-l">Testing</h2>
+<h2 class="govuk-heading-l">Testing and technical information</h2>
+
+
+  <details class="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Technical information
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <p>This pattern uses a standard text input with input <code>type</code> of <code>text</code>, but with an <code>inputmode</code> attribute to trigger an appropriate keyboard on touchscreen devices.</p>
+      <p>Browsers which do not support inputmode will fallback to a standard text input.</p>
+      <p><a href="https://caniuse.com/#feat=input-inputmode">Inputmode support</a></p>
+      <p><a href="https://github.com/alphagov/govuk-frontend/issues/1449#issuecomment-504006087">Number inputs were not used for several reasons.</a></p>
+    </div>
+  </details>
+
   <details class="govuk-details">
     <summary class="govuk-details__summary">
       <span class="govuk-details__summary-text">
@@ -169,38 +185,39 @@ layout: twoColumnPage.njk
       </span>
     </summary>
     <div class="govuk-details__text">
+      <p>This pattern has been tested for visual consistency across the following browsers and devices</p>
       <ul role="list" class="govuk-list govuk-list--bullet">
-        <li>Win IE8 (usable)</li>
-        <li>Win IE9</li>
-        <li>Win IE10</li>
-        <li>Win IE11</li>
-        <li>Win Edge latest</li>
-        <li>Win FF latest</li>
-        <li>Win Chrome latest</li>
-        <li>Win Opera latest</li>
-        <li>Mac Edge latest</li>
-        <li>Mac Safari latest</li>
-        <li>Mac FF latest</li>
-        <li>Mac Chrome latest</li>
-        <li>Mac Opera latest</li>
-        <li>Pixel 3 Chrome</li>
-        <li>Pixel 3 FF</li>
-        <li>Pixel 3 UC</li>
-        <li>Galaxy S10 Chrome</li>
-        <li>Galaxy S10 FF</li>
-        <li>Galaxy S10 Samsung Internet</li>
-        <li>Galaxy S10 UC</li>
-        <li>Galaxy S5 Chrome</li>
-        <li>Galaxy S5 FF</li>
-        <li>Galaxy S5 Samsung Internet</li>
-        <li>Galaxy S5 UC</li>
-        <li>iPhone 8 (iOS12) Safari</li>
-        <li>iPhone 8 (iOS12) Chrome</li>
-        <li>iPhone 5s (iOS7) Safari</li>
-        <li>iPhone 5s (iOS7) Chrome</li>
-        <li>iPhone 5s (iOS7) UC</li>
-      </ul>
-    </div>
+          <li>Win IE8 (usable)</li>
+          <li>Win IE9</li>
+          <li>Win IE10</li>
+          <li>Win IE11</li>
+          <li>Win Edge latest</li>
+          <li>Win FF latest</li>
+          <li>Win Chrome latest</li>
+          <li>Win Opera latest</li>
+          <li>Mac Edge latest</li>
+          <li>Mac Safari latest</li>
+          <li>Mac FF latest</li>
+          <li>Mac Chrome latest</li>
+          <li>Mac Opera latest</li>
+          <li>Pixel 3 Chrome</li>
+          <li>Pixel 3 FF</li>
+          <li>Pixel 3 UC</li>
+          <li>Galaxy S10 Chrome</li>
+          <li>Galaxy S10 FF</li>
+          <li>Galaxy S10 Samsung Internet</li>
+          <li>Galaxy S10 UC</li>
+          <li>Galaxy S5 Chrome</li>
+          <li>Galaxy S5 FF</li>
+          <li>Galaxy S5 Samsung Internet</li>
+          <li>Galaxy S5 UC</li>
+          <li>iPhone 8 (iOS12) Safari</li>
+          <li>iPhone 8 (iOS12) Chrome</li>
+          <li>iPhone 5s (iOS7) Safari</li>
+          <li>iPhone 5s (iOS7) Chrome</li>
+          <li>iPhone 5s (iOS7) UC</li>
+        </ul>
+      </div>
   </details>
 
 <h2 class="govuk-heading-l" id="research">

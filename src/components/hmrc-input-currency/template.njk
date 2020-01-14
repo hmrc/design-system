@@ -42,18 +42,11 @@ aria-describedby – for example hints or error messages -#}
 {% endif %}
     <div class="hmrc-currency-input__wrapper">
         <span class="hmrc-currency-input__unit" aria-hidden="true">£</span>
-        {% if params.wholepounds == 'true' %}
-        <span class="hmrc-currency-input__pence" aria-hidden="true">.00</span>
-        {% endif %}
         <input
-            {% set defaultInputType = 'text' %}
-            {% if params.wholepounds == 'true' %}
-                {% set defaultInputType = 'tel' %}
-            {% endif %}
             class="govuk-input {%- if params.classes %} {{ params.classes }}{% endif %} {%- if params.errorMessage %} govuk-input--error{% endif %}"
             id="{{ params.id }}"
             name="{{ params.name }}"
-            type="{{ params.type | default(defaultInputType) }}"
+            type="text"
             {%- if params.value %}
                 value="{{ params.value}}"
             {% endif %}
@@ -63,9 +56,7 @@ aria-describedby – for example hints or error messages -#}
             {%- if params.autocomplete %}
                 autocomplete="{{ params.autocomplete}}"
             {% endif %}
-            {%- if params.pattern %}
-                pattern="{{ params.pattern }}"
-            {% endif %}
+            inputmode="decimal"
             {%- for attribute, value in params.attributes %}
                 {{ attribute }}="{{ value }}"
             {% endfor -%}
