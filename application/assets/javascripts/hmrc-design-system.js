@@ -45,3 +45,5 @@ nodeListForEach($accordions, $accordion => {
 
 hmrcFrontend.initAll()
 govUkFrontend.initAll()
+
+window.hmrcDesignSystem = { CopyToClipboard }
