@@ -28,3 +28,21 @@
   height: 0;
   width: 0;
 }
+
+.hmrc-banner {
+  padding: 10px 0 8px;
+  border-bottom: 1px solid #bfc1c3;
+  position: relative;
+  font-family: "nta", Arial, sans-serif;
+}
+
+$hmrc-banner-blue: #005ea5;
+
+.hmrc-full-width-banner {
+  display: block;
+  position: relative;
+  z-index: 999;
+  color: govuk-colour("white");
+  background-color: $hmrc-banner-blue;
+
+}

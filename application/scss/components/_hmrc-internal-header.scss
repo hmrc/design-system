@@ -42,3 +42,11 @@
     font-size: 24px;
   }
 }
+
+.hrmc-lang-select {
+  @include govuk-font(16);
+  float: right;
+  margin: 1rem 0;
+  width: auto;
+  list-style:none;
+}
