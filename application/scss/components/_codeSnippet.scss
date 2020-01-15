@@ -11,6 +11,7 @@ code:not(.hljs) {
   pre {
     max-width: 100%;
     padding: govuk-spacing(3);
+    border: 1px solid $govuk-border-colour;
 
     > code {
       white-space: pre-wrap;
