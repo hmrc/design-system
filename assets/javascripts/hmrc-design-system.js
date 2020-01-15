@@ -9509,4 +9509,6 @@
 	all.initAll();
 	all$1.initAll();
 
+	window.hmrcDesignSystem = { CopyToClipboard };
+
 }());
