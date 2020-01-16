@@ -2,6 +2,8 @@
   layout: layout-example.njk
 ---
 
+{% from "hmrc/components/language-select/macro.njk" import hmrcLanguageSelect %}
+
 <!-- GOV.UK HEADER -->
 <header role="banner" class="govuk-header">
   <div class="govuk-header__container govuk-width-container">
@@ -34,10 +36,13 @@
   </div>
   <!-- END HMRC BANNER -->
   <!-- LANGUAGE TOGGLE -->
-  <p class="hrmc-lang-select">
-    English
-    <span aria-hidden="true">|</span>
-    <a class="govuk-link" id="switchToWelsh" lang="cy" href="#" data-journey-click="link - click:lang-select:Cymraeg">Cymraeg</a>
-  </p>
+  {{
+    hmrcLanguageSelect({
+      language: 'en',
+      cy: {
+        href: '#'
+      }
+    })
+  }}
   <!-- END LANGUAGE TOGGLE -->
 </main>
