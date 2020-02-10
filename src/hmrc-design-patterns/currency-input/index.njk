@@ -11,7 +11,7 @@ layout: twoColumnPage.njk
 
 
 <p class="govuk-body">
-  This pattern lets the user enter a currency amount.
+  This pattern lets the user enter an amount of money in British pounds.
 </p>
 
 <h2 class="govuk-heading-l" id="when-to-use">
@@ -19,7 +19,7 @@ layout: twoColumnPage.njk
 </h2>
 
 <p class="govuk-body">
-  Use this pattern when the user must enter an amount of money.
+  Use this pattern when the user must enter an amount of money in pounds. If the user does not have to enter an amount, make it optional.
 </p>
 
 <h2 class="govuk-heading-l" id="how-it-works">
@@ -28,26 +28,18 @@ layout: twoColumnPage.njk
 
 
 <p class="govuk-body">
-  You can use one of 2 different formats for the amount:
-</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li><a href="#pounds">For pounds where the service requires whole pounds only</a></li>
-  <li><a href="#pounds-and-pence">For pounds and pence</a></li>
+  The user enters the amount of money.</p>
+<p class="govuk-body">Allow the user to enter numbers with or without:</p>
+ <ul class="govuk-list govuk-list--bullet" role="list">
+<li>spaces</li>
+<li>commas</li>
+<li>pound symbols (£)</li>
+<li>full stops - to indicate pence</li>
 </ul>
+<p class="govuk-body">Remove these characters and round up or down any amounts if necessary before validating.</p>
 
 <div>
-  <h3 class="govuk-heading-m" id="pounds">Pounds input</h3>
 
-  <h4 class="govuk-heading-s">When to use</h4>
-  <p class="govuk-body">Use this when the service requires pounds only, without any pence.</p>
-
-  <h4 class="govuk-heading-s">Provide help</h4>
-  <p class="govuk-body">You should inform the user what to do with regards rounding, for example:</p>
-  <ul class="govuk-list govuk-list--bullet">
-    <li>Round up the amount to the next whole pound, for example £12.34 rounds up to £13</li>
-    <li>Round the amount down to the next whole pound, for example £45.67 rounds down to £45</li>
-  </ul>
 
   {{
     example({
@@ -57,172 +49,7 @@ layout: twoColumnPage.njk
     })
   }}
 
-  <h4 class="govuk-heading-s">Error messages</h4>
-  {{
-    example({
-      item: 'currency-input',
-      example: 'pounds-error',
-      description: 'Pounds only'
-    })
-  }}
-
-  <p class="govuk-body">
-    Make sure errors follow the <a class="govuk-link" href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> in the GOV.UK Design System and have specific error messages for specific error states.
-  </p>
-
-  <h4 class="govuk-heading-s">
-    If the amount is empty
-  </h4>
-
-  <p class="govuk-body">
-    Say ‘Enter [whatever it is]’.<br/>
-    For example, ‘Enter the amount you paid for this’.
-  </p>
-
-  <h4 class="govuk-heading-s">
-    If the amount is in the wrong format
-  </h4>
-
-  <p class="govuk-body">
-    Say ‘Enter [whatever it is] without using [the incorrect character]’.<br>
-    For example, ‘Enter the amount without using pence’.
-  </p>
-</div>
-
-<div>
-  <h3 class="govuk-heading-m" id="pounds-and-pence">Pounds and pence</h3>
-
-  <h4 class="govuk-heading-s">When to use</h4>
-  <p class="govuk-body">Use this when you need both pounds and pence.</p>
-
-  {{
-    example({
-      item: 'currency-input',
-      example: 'pounds-and-pence',
-      description: 'Pounds and pence'
-    })
-  }}
-
-  <h4 class="govuk-heading-s">Provide help</h4>
-  <p class="govuk-body">Help the user be confident as to what the service expects them to enter.</p>
-  <p class="govuk-body">Be explicit as to whether you need them to enter a full amount like £30.00 or £50.99 or if they should round up or down.</p>
-
-  <h4 class="govuk-heading-s">Error messages</h4>
-  <p class="govuk-body">Reduce the number of errors the user sees by fixing data entry issues where possible on the server.</p>
-  <p class="govuk-body">For example:</p>
-  <ul class="govuk-list govuk-list--bullet" role="list">
-    <li>allow the user to enter £ symbols and remove them on the server</li>
-    <li>allow users to enter only pounds, transforming £30 to £30.00 on the server</li>
-  </ul>
-
-  <p class="govuk-body">Errors should be formatted like this:</p>
-
-  {{
-    example({
-      item: 'currency-input',
-      example: 'pounds-and-pence-error',
-      description: 'Pounds and pence with error'
-    })
-  }}
-
-  <p class="govuk-body">
-    Make sure errors follow the <a class="govuk-link" href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> in the GOV.UK Design System and have specific error messages for specific error states.
-  </p>
-
-  <h4 class="govuk-heading-s">
-    If the amount is empty
-  </h4>
-
-  <p class="govuk-body">
-    Say ‘Enter [whatever it is]’.<br/>
-    For example, ‘Enter the amount in pounds and pence’.
-  </p>
-
-  <h4 class="govuk-heading-s">
-    If the amount is in the wrong format
-  </h4>
-
-  <p class="govuk-body">
-    Say ‘Enter [whatever it is] using whole pounds only’.<br>
-    For example, ‘Enter the amount using whole pounds only’.
-  </p>
-</div>
-
-<h2 class="govuk-heading-l">Testing and technical information</h2>
-
-
-  <details class="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        Technical information
-      </span>
-    </summary>
-    <div class="govuk-details__text">
-      <p>This pattern uses a standard text input with input <code>type</code> of <code>text</code>, but with an <code>inputmode</code> attribute to trigger an appropriate keyboard on touchscreen devices.</p>
-      <p>Browsers which do not support inputmode will fallback to a standard text input.</p>
-      <p><a href="https://caniuse.com/#feat=input-inputmode">Inputmode support</a></p>
-      <p><a href="https://github.com/alphagov/govuk-frontend/issues/1449#issuecomment-504006087">Number inputs were not used for several reasons.</a></p>
-    </div>
-  </details>
-
-  <details class="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        Assistive technology testing
-      </span>
-    </summary>
-    <div class="govuk-details__text">
-      <ul role="list" class="govuk-list govuk-list--bullet">
-        <li>Mac OS VoiceOver with Safari</li>
-      </ul>
-    </div>
-  </details>
-
-  <details class="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        Browser testing
-      </span>
-    </summary>
-    <div class="govuk-details__text">
-      <p>This pattern has been tested for visual consistency across the following browsers and devices</p>
-      <ul role="list" class="govuk-list govuk-list--bullet">
-          <li>Win IE8 (usable)</li>
-          <li>Win IE9</li>
-          <li>Win IE10</li>
-          <li>Win IE11</li>
-          <li>Win Edge latest</li>
-          <li>Win FF latest</li>
-          <li>Win Chrome latest</li>
-          <li>Win Opera latest</li>
-          <li>Mac Edge latest</li>
-          <li>Mac Safari latest</li>
-          <li>Mac FF latest</li>
-          <li>Mac Chrome latest</li>
-          <li>Mac Opera latest</li>
-          <li>Pixel 3 Chrome</li>
-          <li>Pixel 3 FF</li>
-          <li>Pixel 3 UC</li>
-          <li>Galaxy S10 Chrome</li>
-          <li>Galaxy S10 FF</li>
-          <li>Galaxy S10 Samsung Internet</li>
-          <li>Galaxy S10 UC</li>
-          <li>Galaxy S5 Chrome</li>
-          <li>Galaxy S5 FF</li>
-          <li>Galaxy S5 Samsung Internet</li>
-          <li>Galaxy S5 UC</li>
-          <li>iPhone 8 (iOS12) Safari</li>
-          <li>iPhone 8 (iOS12) Chrome</li>
-          <li>iPhone 5s (iOS7) Safari</li>
-          <li>iPhone 5s (iOS7) Chrome</li>
-          <li>iPhone 5s (iOS7) UC</li>
-        </ul>
-      </div>
-  </details>
-
-<h2 class="govuk-heading-l" id="research">
-  Research
-</h2>
+<h2 id="research" class="govuk-heading-l">Research</h2>
 
 <p class="govuk-body">
   We need more research. If you have used currency inputs, get in touch to share your research findings.
@@ -233,4 +60,3 @@ layout: twoColumnPage.njk
 </p>
 
 {% endblock %}
-
