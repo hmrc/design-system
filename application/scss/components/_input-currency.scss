@@ -9,11 +9,11 @@
     bottom: 2px;
     left: 2px;
     top: 2px;
+    width: 1.5rem;
     text-align: center;
-    background: #f3f2f1;
+    background: #dee0e2;
     border-right: 2px solid;
-    padding: 5.5px 12px;
-    @include govuk-font($size: 19);
+    @include govuk-font($size: 19, $weight: bold);
 }
 .govuk-form-group--error .hmrc-currency-input__unit {
     bottom: 4px;
