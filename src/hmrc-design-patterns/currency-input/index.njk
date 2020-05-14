@@ -1,0 +1,62 @@
+---
+title: Currency input
+menuText: Currency input
+status: experimental
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+
+{% block content %}
+
+
+<p class="govuk-body">
+  This pattern lets the user enter an amount of money in British pounds.
+</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+  When to use
+</h2>
+
+<p class="govuk-body">
+  Use this pattern when the user must enter an amount of money in pounds. If the user does not have to enter an amount, make it optional.
+</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">
+  How it works
+</h2>
+
+
+<p class="govuk-body">
+  The user enters the amount of money.</p>
+<p class="govuk-body">Allow the user to enter numbers with or without:</p>
+ <ul class="govuk-list govuk-list--bullet" role="list">
+<li>spaces</li>
+<li>commas</li>
+<li>pound symbols (£)</li>
+<li>full stops - to indicate pence</li>
+</ul>
+<p class="govuk-body">Remove these characters and round up or down any amounts if necessary before validating.</p>
+
+<div>
+
+
+  {{
+    example({
+      item: 'currency-input',
+      example: 'pounds',
+      description: 'Pounds only'
+    })
+  }}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">
+  We need more research. If you have used the currency input, get in touch to share your research findings.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/138">Discuss currency inputs on GitHub</a>
+</p>
+
+{% endblock %}

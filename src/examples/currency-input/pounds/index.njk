@@ -1,0 +1,24 @@
+---
+layout: layout-example.njk
+---
+
+{% from "hmrc/components/currency-input/macro.njk" import hmrcCurrencyInput with context %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ hmrcCurrencyInput({
+            name: "currency",
+            id: "currency",
+            label: {
+                text: "How much does your employer pay towards this?"
+            },
+            hint: {
+                text: "For example, £1,300 or £193.50"
+            },
+            classes: "govuk-input--width-10",
+            autocomplete: "off"
+            })
+        }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
