@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example – HMRC Design Patterns – Design resources for HMRC – GOV.UK</title>
+
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+
+        <div class="govuk-form-group">
+    <label class="govuk-label" for="currency">
+    How much does your employer pay towards this?
+  </label>
+
+    <span id="currency-hint" class="govuk-hint">
+    For example, £1,300 or £193.50
+  </span>
+    <div class="hmrc-currency-input__wrapper">
+        <span class="hmrc-currency-input__unit" aria-hidden="true">£</span>
+        <input
+            class="govuk-input govuk-input--width-10"
+            id="currency"
+            name="currency"
+            type="text"                aria-describedby="currency-hint"
+                autocomplete="off"
+            inputmode="decimal"/>
+
+    </div>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</body>
+
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>

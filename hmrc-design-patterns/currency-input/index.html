@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Confirmed identity - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <title>Currency input - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -90,7 +90,7 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-the-user-for-their-consent">
                   Ask the user for their consent
                 </a>
-              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+              </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/confirmed-identity">
                   Confirmed identity
                 </a>
@@ -98,7 +98,7 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">
                   Could not confirm identity
                 </a>
-              </li><li class="app-subnav__section-item">
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/currency-input">
                   Currency input
                 </a>
@@ -169,140 +169,143 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Confirmed identity</h1></header>
+  <h1 class="govuk-heading-xl">Currency input</h1></header>
 
 
             
   
   
+    
+    
+    <div class="govuk-!-padding-bottom-8 hmrc-phase-banner">
+      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">experimental</strong>
+
+        <p class="govuk-body">This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.</p>
+    </div>
+  
 
 
-<p class="govuk-body">This pattern lets the user know we have confirmed their identity. This is part of confirming their identity when they sign in with a Government Gateway account for the first time.</p>
 
-<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
-<p class="govuk-body">Use this pattern when we can confirm the user’s identity.</p>
+<p class="govuk-body">
+  This pattern lets the user enter an amount of money in British pounds.
+</p>
 
-<p class="govuk-body">There is also a pattern when we <a class="govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">could not confirm their identity</a>.</p>
+<h2 class="govuk-heading-l" id="when-to-use">
+  When to use
+</h2>
 
-<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+<p class="govuk-body">
+  Use this pattern when the user must enter an amount of money in pounds. If the user does not have to enter an amount, make it optional.
+</p>
 
-<p class="govuk-body">Use the standard page template from your service and have the same:</p>
+<h2 class="govuk-heading-l" id="how-it-works">
+  How it works
+</h2>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li>header</li>
-  <li>phase banner</li>
-  <li>footer</li>
+
+<p class="govuk-body">
+  The user enters the amount of money.</p>
+<p class="govuk-body">Allow the user to enter numbers with or without:</p>
+ <ul class="govuk-list govuk-list--bullet" role="list">
+<li>spaces</li>
+<li>commas</li>
+<li>pound symbols (£)</li>
+<li>full stops - to indicate pence</li>
 </ul>
+<p class="govuk-body">Remove these characters and round up or down any amounts if necessary before validating.</p>
 
-<p class="govuk-body">The page should have:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>‘We have confirmed your identity – service name – GOV.UK’ as the page title</li>
-  <li>‘We have confirmed your identity’ as the <code>&lt;h1&gt;</code> page heading</li>
-  <li>a ‘Continue’ call to action</li>
-</ul>
 
   
 
 
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-example" data-module="app-tabs app-language-switch-example">
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-pounds" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
-        <a href="/examples/confirmed-identity/example/" target="_blank" title="Open Confirmed identity example in a new window">
+        <a href="/examples/currency-input/pounds/" target="_blank" title="Open Pounds only example in a new window">
           Open this example in a new window
         </a>
       </span>
-        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
-          <a href="/examples/confirmed-identity/example/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Confirmed identity example in English">
-            Display in English
-          </a>
-        </span>
-        <span class="app-example__link app-example__language-switch js-enabled">
-          <a href="/examples/confirmed-identity/example-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Confirmed identity example in Welsh">
-            Display in Welsh
-          </a>
-        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
-              src="/examples/confirmed-identity/example/" title="Confirmed identity example"></iframe>
+              src="/examples/currency-input/pounds/" title="Pounds only example"></iframe>
     </div>
 
 
-      <div class="example-example-example-lang example-example-example-lang--en ">
-        <span id="options-example-example"></span>
+      <div class="example-example-pounds-lang example-example-pounds-lang--en ">
+        <span id="options-example-pounds"></span>
         <ul class="app-tabs" role="tablist">
           <li class="app-tabs__item js-tabs__item" role="presentation">
-            <a href="#example-example-html" role="tab"
-              aria-controls="example-example-html"
-              data-track="tab-html" title="Display Confirmed identity example as HTML">HTML</a>
+            <a href="#example-pounds-html" role="tab"
+              aria-controls="example-pounds-html"
+              data-track="tab-html" title="Display Pounds only example as HTML">HTML</a>
           </li>
             <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-example-nunjucks" role="tab"
-                aria-controls="example-example-nunjucks"
-                data-track="tab-nunjucks" title="Display Confirmed identity example as Nunjucks">Nunjucks</a>
+              <a href="#example-pounds-nunjucks" role="tab"
+                aria-controls="example-pounds-nunjucks"
+                data-track="tab-nunjucks" title="Display Pounds only example as Nunjucks">Nunjucks</a>
             </li>
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
+        <div class="app-tabs__container js-tabs__container" id="example-pounds-html" role="tabpanel">
             <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
           <div data-module="app-copy">
             <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>We have confirmed your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"currency"</span>&gt;</span>
+    How much does your employer pay towards this?
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"currency-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+    For example, £1,300 or £193.50
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-currency-input__wrapper"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-currency-input__unit"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>£<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"currency"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"currency"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"currency-hint"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span> <span class="hljs-attr">inputmode</span>=<span class="hljs-string">"decimal"</span> /&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
             </pre>
 
-              <pre class="app-example__language-switch--cy-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Rydym wedi cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
-  Yn eich blaen
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-              </pre>
           </div>
         </div>
 
-          <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-pounds-nunjucks" role="tabpanel">
               <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
             <div data-module="app-copy">
               <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/currency-input/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcCurrencyInput <span class="hljs-keyword">with</span> context %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
 
-{{ hmrcPageHeading({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">'We have confirmed your identity'</span>
-}) }}
+        {{ hmrcCurrencyInput({
+            <span class="hljs-attr">name</span>: <span class="hljs-string">"currency"</span>,
+            <span class="hljs-attr">id</span>: <span class="hljs-string">"currency"</span>,
+            <span class="hljs-attr">label</span>: {
+                <span class="hljs-attr">text</span>: <span class="hljs-string">"How much does your employer pay towards this?"</span>
+            },
+            <span class="hljs-attr">hint</span>: {
+                <span class="hljs-attr">text</span>: <span class="hljs-string">"For example, £1,300 or £193.50"</span>
+            },
+            <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>,
+            <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">"off"</span>
+            })
+        }}
 
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
 }) }}</code>
               </pre>
 
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
-
-{{ hmrcPageHeading({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">'Rydym wedi cadarnhau pwy ydych'</span>
-}) }}
-
-{{ govukButton({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">"Yn eich blaen"</span>
-}) }}</code>
-                </pre>
             </div>
           </div>
       </div>
@@ -311,14 +314,15 @@
 
 
 
-<p class="govuk-body">Do not use the confirmation page pattern because this is not the end of the user’s journey.</p>
-
 <h2 id="research" class="govuk-heading-l">Research</h2>
 
-<p class="govuk-body">We need more research. If you have used confirmed identity, get in touch to share your research findings.</p>
+<p class="govuk-body">
+  We need more research. If you have used the currency input, get in touch to share your research findings.
+</p>
 
-<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/148">Discuss confirmed identity on GitHub</a></p>
-
+<p class="govuk-body">
+  <a class="govuk-link" href="https://github.com/alphagov/govuk-design-system-backlog/issues/68">Discuss currency inputs on GitHub</a>
+</p>
 </div>
         </div>
       </main>
