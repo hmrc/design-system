@@ -86,6 +86,10 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/accounts-office-reference">
                   Accounts office reference
                 </a>
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/add-to-a-list">
+                  Add to a list
+                </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-the-user-for-their-consent">
                   Ask the user for their consent
@@ -175,21 +179,13 @@
             
   
   
-    
-    
-    <div class="govuk-!-padding-bottom-8 hmrc-phase-banner">
-      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">development</strong>
-
-        <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
-    </div>
-  
 
 
-<p class="govuk-body">This pattern lets the user add information with more than one part to a list.</p>
+<p class="govuk-body">This pattern lets the user add information with more than one item to a list.</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
-<p class="govuk-body">Use this pattern when the user needs to add information with more than one part to a list. For example, when they need to enter more than one address or more than one person’s details.</p>
+<p class="govuk-body">Use this pattern when the user needs to add information with more than one item to a list. For example, when they need to enter more than one address or more than one person’s details.</p>
 
 <h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
 
@@ -313,19 +309,19 @@
         Do you need to add another director?
       <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
-
+        You must tell us about all your directors.
       <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios--inline"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Yes"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"add-another"</span>&gt;</span>
-            yes
+            Yes
           <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"No"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"add-another-2"</span>&gt;</span>
-            no
+            No
           <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -373,7 +369,8 @@
       <span class="hljs-attr">singular</span>: <span class="hljs-string">'director'</span>,
       <span class="hljs-attr">plural</span>: <span class="hljs-string">'directors'</span>,
       <span class="hljs-attr">formAction</span>: <span class="hljs-string">'#'</span>
-    }
+    },
+    <span class="hljs-attr">hintText</span>: <span class="hljs-string">'You must tell us about all your directors.'</span>
   })
 }}</code>
               </pre>
@@ -390,7 +387,431 @@
 
 
 
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-add-to-summary" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/add-to-a-list/add-to-summary/" target="_blank" title="Open View list summary after addition example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/examples/add-to-a-list/add-to-summary/" title="View list summary after addition example"></iframe>
+    </div>
+
+
+      <div class="example-example-add-to-summary-lang example-example-add-to-summary-lang--en ">
+        <span id="options-example-add-to-summary"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-add-to-summary-html" role="tab"
+              aria-controls="example-add-to-summary-html"
+              data-track="tab-html" title="Display View list summary after addition example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-add-to-summary-nunjucks" role="tab"
+                aria-controls="example-add-to-summary-nunjucks"
+                data-track="tab-nunjucks" title="Display View list summary after addition example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-add-to-summary-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>You have added 4 directors<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list hmrc-add-to-a-list--short"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__contents"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light"</span>&gt;</span>
+        Sydney Russell
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__change"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Change<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Change Sydney Russell<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__remove"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Remove Sydney Russell from the list<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__contents"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light"</span>&gt;</span>
+        Michael Cain
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__change"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Change<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Change Michael Cain<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__remove"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Remove Michael Cain from the list<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__contents"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light"</span>&gt;</span>
+        Jeremy Winter
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__change"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Change<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Change Jeremy Winter<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__remove"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Remove Jeremy Winter from the list<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__contents"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__identifier hmrc-add-to-a-list__identifier--light"</span>&gt;</span>
+        Elizabeth Kean
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__change"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Change<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Change Elizabeth Kean<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-add-to-a-list__remove"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Remove Elizabeth Kean from the list<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">""</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"add-another-hint"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m"</span>&gt;</span>
+        Do you need to add another director?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+        You must tell us about all your directors.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios--inline"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Yes"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"add-another"</span>&gt;</span>
+            Yes
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"add-another-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"add-another"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"No"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"add-another-2"</span>&gt;</span>
+            No
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+    continue
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-add-to-summary-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/add-to-a-list/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcAddToAList -%}
+
+{{
+  hmrcAddToAList({
+    <span class="hljs-attr">itemList</span>: [
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Sydney Russell'</span>,
+        <span class="hljs-attr">changeUrl</span>: <span class="hljs-string">'#'</span>,
+        <span class="hljs-attr">removeUrl</span>: <span class="hljs-string">'#'</span>
+      },
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Michael Cain'</span>,
+        <span class="hljs-attr">changeUrl</span>: <span class="hljs-string">'#'</span>,
+        <span class="hljs-attr">removeUrl</span>: <span class="hljs-string">'#'</span>
+      },
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Jeremy Winter'</span>,
+        <span class="hljs-attr">changeUrl</span>: <span class="hljs-string">'#'</span>,
+        <span class="hljs-attr">removeUrl</span>: <span class="hljs-string">'#'</span>
+      },
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Elizabeth Kean'</span>,
+        <span class="hljs-attr">changeUrl</span>: <span class="hljs-string">'#'</span>,
+        <span class="hljs-attr">removeUrl</span>: <span class="hljs-string">'#'</span>
+      }
+    ],
+    <span class="hljs-attr">itemType</span>: {
+      <span class="hljs-attr">singular</span>: <span class="hljs-string">'director'</span>,
+      <span class="hljs-attr">plural</span>: <span class="hljs-string">'directors'</span>,
+      <span class="hljs-attr">formAction</span>: <span class="hljs-string">'#'</span>
+    },
+    <span class="hljs-attr">hintText</span>: <span class="hljs-string">'You must tell us about all your directors.'</span>,
+    <span class="hljs-attr">messages</span>: {
+      <span class="hljs-attr">yes</span>: <span class="hljs-string">'Yes'</span>,
+      <span class="hljs-attr">no</span>: <span class="hljs-string">'No'</span>
+    }
+  })
+}}</code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
 <h3 class="govuk-heading-m" id="check-answers">Check their answers</h3>
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-check-answers" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/add-to-a-list/check-answers/" target="_blank" title="Open Check answers example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/examples/add-to-a-list/check-answers/" title="Check answers example"></iframe>
+    </div>
+
+
+      <div class="example-example-check-answers-lang example-example-check-answers-lang--en ">
+        <span id="options-example-check-answers"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-check-answers-html" role="tab"
+              aria-controls="example-check-answers-html"
+              data-track="tab-html" title="Display Check answers example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-check-answers-nunjucks" role="tab"
+                aria-controls="example-check-answers-nunjucks"
+                data-track="tab-nunjucks" title="Display Check answers example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-check-answers-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds-from-desktop"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-l"</span>&gt;</span>Check your answers<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list govuk-!-margin-bottom-9"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__key"</span>&gt;</span>
+          What is the director’s name?
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__value"</span>&gt;</span>
+          Elizabeth Kean
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__actions"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+            Change<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span> name<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__key"</span>&gt;</span>
+          What is Elizabeth Kean’s date of birth?
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__value"</span>&gt;</span>
+          12 October 1984
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__actions"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+            Change<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span> date of birth<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__key"</span>&gt;</span>
+          Does Elizabeth Kean have a National Insurance number?
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__value"</span>&gt;</span>
+          Yes
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__actions"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+            Change<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span> if they have National Insurance number<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__key"</span>&gt;</span>
+          National Insurance number
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__value"</span>&gt;</span>
+          QQ 12 34 56 C
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__actions"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+            Change<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span> National Insurance number<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/form-handler"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"answers-checked"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+        Continue
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-check-answers-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/summary-list/macro.njk"</span> <span class="hljs-keyword">import</span> govukSummaryList %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+
+  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds-from-desktop"</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-l"</span>&gt;</span>Check your answers<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "What is the director’s name?"
+            },
+            value: {
+              text: "Elizabeth Kean"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "What is Elizabeth Kean’s date of birth?"
+            },
+            value: {
+              text: "12 October 1984"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "date of birth"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Does Elizabeth Kean have a National Insurance number?"
+            },
+            value: {
+              html: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "if they have National Insurance number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "National Insurance number"
+            },
+            value: {
+              text: 'QQ 12 34 56 C'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "National Insurance number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/form-handler"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"answers-checked"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span>&gt;</span>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
 
 
 
@@ -400,9 +821,327 @@
 
 
 
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-change-list" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/add-to-a-list/change-list/" target="_blank" title="Open Change list example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/examples/add-to-a-list/change-list/" title="Change list example"></iframe>
+    </div>
+
+
+      <div class="example-example-change-list-lang example-example-change-list-lang--en ">
+        <span id="options-example-change-list"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-change-list-html" role="tab"
+              aria-controls="example-change-list-html"
+              data-track="tab-html" title="Display Change list example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-change-list-nunjucks" role="tab"
+                aria-controls="example-change-list-nunjucks"
+                data-track="tab-nunjucks" title="Display Change list example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-change-list-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds-from-desktop"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Change Elizabeth Keen’s details<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list govuk-!-margin-bottom-9"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__key"</span>&gt;</span>
+          What is the director’s name?
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__value"</span>&gt;</span>
+          Elizabeth Kean
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__actions"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+            Change<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span> name<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__key"</span>&gt;</span>
+          What is Elizabeth Kean’s date of birth?
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__value"</span>&gt;</span>
+          12 October 1984
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__actions"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+            Change<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span> date of birth<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__key"</span>&gt;</span>
+          Does Elizabeth Kean have a National Insurance number?
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__value"</span>&gt;</span>
+          Yes
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__actions"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+            Change<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span> if they have National Insurance number<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__key"</span>&gt;</span>
+          National Insurance number
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__value"</span>&gt;</span>
+          QQ 12 34 56 C
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-summary-list__actions"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+            Change<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span> National Insurance number<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/form-handler"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"answers-checked"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+        Continue
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-change-list-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/summary-list/macro.njk"</span> <span class="hljs-keyword">import</span> govukSummaryList %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+
+  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds-from-desktop"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Change Elizabeth Keen’s details<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "What is the director’s name?"
+            },
+            value: {
+              text: "Elizabeth Kean"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "What is Elizabeth Kean’s date of birth?"
+            },
+            value: {
+              text: "12 October 1984"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "date of birth"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Does Elizabeth Kean have a National Insurance number?"
+            },
+            value: {
+              html: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "if they have National Insurance number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "National Insurance number"
+            },
+            value: {
+              text: 'QQ 12 34 56 C'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "National Insurance number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/form-handler"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"answers-checked"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span>&gt;</span>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
 <h3 class="govuk-heading-m" id="remove-something-from-the-list">Remove things from the list</h3>
 
 <p class="govuk-body">Ask the user to confirm they want to remove something from the list.</p>
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-remove-from-list" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/add-to-a-list/remove-from-list/" target="_blank" title="Open Remove from list example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+              src="/examples/add-to-a-list/remove-from-list/" title="Remove from list example"></iframe>
+    </div>
+
+
+      <div class="example-example-remove-from-list-lang example-example-remove-from-list-lang--en ">
+        <span id="options-example-remove-from-list"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-remove-from-list-html" role="tab"
+              aria-controls="example-remove-from-list-html"
+              data-track="tab-html" title="Display Remove from list example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-remove-from-list-nunjucks" role="tab"
+                aria-controls="example-remove-from-list-nunjucks"
+                data-track="tab-nunjucks" title="Display Remove from list example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-remove-from-list-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>Are you sure you want to remove Elizabeth Kean?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"yes"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"delete"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Yes"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"yes"</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"delete"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"No"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"no"</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>Continue<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-remove-from-list-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">&lt;form&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>Are you sure you want to remove Elizabeth Kean?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"yes"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"delete"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Yes"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"yes"</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"delete"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"No"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"no"</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>Continue<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
 
 
 
