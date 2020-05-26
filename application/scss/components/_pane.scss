@@ -1,7 +1,7 @@
 // Taken from https://github.com/alphagov/govuk-design-system/blob/6ad3d9189230d15b395af297c2fa8becd4ebb4e6/src/stylesheets/components/_pane.scss on 2018-10-18
 
 @include govuk-exports("app-pane") {
-  $toc-width: 300px;
+  $toc-width: 260px;
   $toc-width-tablet: 210px;
 
   .app-pane.app-pane--enabled {
@@ -71,7 +71,7 @@
     }
 
     .app-pane__subnav {
-      width: $toc-width;
+      width: $toc-width-tablet;
       float: left;
       overflow-x: hidden;
       border-right: none;
