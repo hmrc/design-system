@@ -1,0 +1,183 @@
+---
+title: Service timeout
+menuText: Service timeout
+status: experimental
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern warns the user before we time them out of a service and tells them what has happened when we do time them out.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">We time the user out when they do not do anything for 15 minutes. Warn them after 13 minutes, which gives them 2 minutes to decide to keep using the service.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+<p class="govuk-body">Use an accessible dialog box that appears on top of the page. This stops them using the screen with a mouse or keyboard until they select an option or press the escape key.</p>
+
+<p class="govuk-body">The user can:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>select a button to stay in the service and not time out</li>
+  <li>select a link to sign out or have their answers deleted</li>
+  <li>press the escape key to close the warning, stay in the service and not time out</li>
+  <li>do nothing</li>
+</ul>
+
+  <h3 class="govuk-heading-m" id="when-the-user-is-signed-in">When the user is signed in</h3>
+
+  <p class="govuk-body">The warning should:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+	  <li>say ‘For your security, we will sign you out in 2 minutes.’</li>
+	  <li>say what will happen to their answers, if needed</li>
+	  <li>have a ‘Stay signed in’ button</li>
+	  <li>have a ‘Sign out’ link that signs them out as normal</li>
+  </ul>
+
+  {{ example({
+    item: 'service-timeout',
+    example: 'default',
+    description: 'Service timeout default'
+  }) }}
+
+{#  {{ example({
+    html: 'saved.html',
+    nunjucks: 'saved.njk',
+    height: 300
+  }) }}
+
+  {{ example({
+    html: 'not-saved.html',
+    nunjucks: 'not-saved.njk',
+    height: 300
+  }) }} #}
+
+  <p class="govuk-body">If they do nothing, take them to a ‘We signed you out’ page that uses similar content as the warning box.</p>
+
+{#  {{ example({
+    html: 'signed-out-default.html',
+    height: 300
+  }) }}
+
+  {{ example({
+    html: 'signed-out-saved.html',
+    height: 330
+  }) }}
+
+  {{ example({
+    html: 'signed-out-not-saved.html',
+    height: 330
+  }) }} #}
+
+  <h3 class="govuk-heading-m" id="when-the-user-is-not-signed-in">When the user is not signed in</h3>
+
+  <p class="govuk-body">The warning should:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>say ‘For your security, we will delete your answers in 2 minutes.’</li>
+	  <li>have a button to stay in the service</li>
+	  <li>have a ‘Delete your answers’ link that takes them to the ‘You deleted your answers’ page</li>
+  </ul>
+
+{#  {{ example({
+    html: 'not-signed-in.html',
+    nunjucks: 'not-signed-in.njk',
+    height: 300
+  }) }}
+
+  {{ example({
+    html: 'you-deleted-your-answers.html',
+    height: 300
+  }) }}
+
+  <p class="govuk-body">If they do nothing, delete their answers and take them to the ‘For your security, we deleted your answers’ page.</p>
+
+  {{ example({
+    html: 'deleted-your-answers.html',
+    height: 300
+  }) }} #}
+
+  <h3 class="govuk-heading-m" id="technical-details">Technical details</h3>
+
+  <p class="govuk-body">Add the hmrc-timeout-dialog meta tag and initialise the timeout dialog Javascript</p>
+
+  <p class="govuk-body"><pre><code class="html">&lt;meta name="hmrc-timeout-dialog"
+    data-timeout=""
+    data-countdown=""
+    data-keep-alive-url=""
+    data-sign-out-url=""
+    data-title=""
+    data-message=""
+    dat-message-suffix=""
+    data-keep-alive-button-text=""
+    data-sign-out-button-text="" /&gt;
+  </code></pre></p>
+
+  <p class="govuk-body"><pre><code class="javascript">timeoutDialog = HMRC.TimeoutDialog.init()</code></pre></p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>data-timeout is the number of seconds before the user times out and 900 is the platform default</li>
+    <li>data-countdown is the number of seconds before the service displays the warning</li>
+    <li>data-keep-alive-url is a call to the server that keeps them in the service without refreshing the page</li>
+    <li>data-sign-out-url is the same URL as your service’s sign out page</li>
+    <li>data-title is the text to use as a title for the dialog</li>
+    <li>data-message is the message displayed to the user</li>
+    <li>data-message-suffix is any additional text to be displayed after the timer</li>
+    <li>data-keep-alive-button-text is the text on the button that keps the user signed in</li>
+    <li>data-sign-out-button-text is the text for the link which takes the user to a sign out page</li>
+  </ul>
+
+
+
+  <ul class="govuk-list govuk-list--bullet">
+	<li>timeout is the number of seconds before the user times out and 900 is the platform default</li>
+	<li>countdown is the number of seconds before the service displays the warning</li>
+	<li>keep_alive_url is a call to the server that keeps them in the service without refreshing the page</li>
+	<li>logout_url is the same URL as your service’s sign out page</li>
+  </ul>
+
+  <p class="govuk-body">When the warning loads:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+	<li>set focus to the box</li>
+	<li>read the paragraph of content</li>
+	<li>set focus to the button</li>
+	<li>read the button label</li>
+  </ul>
+
+  <p class="govuk-body">This lets the user hear what they need to and stay in the service with a single click.</p>
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">The warning was tested with 5 users for a service they signed in to. One person had dyslexia and the other was 70 years old. All 5 users understood the warning and managed to stay signed in.</p>
+
+<p class="govuk-body">We want to do more usability testing, especially with users who use assistive technology and with services you do not sign in to.</p>
+
+<p class="govuk-body">We want to know if users:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>understand what has happened</li>
+  <li>understand the content and if there is anything missing</li>
+  <li>can do what they need to do – stay signed in, continue with the service, sign out, start again, or get timed out</li>
+</ul>
+
+<p class="govuk-body">The warning has been tested with all recommended browsers. It has been lab tested with most assistive technology including:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>JAWS</li>
+  <li>ZoomText</li>
+  <li>NVDA</li>
+  <li>VoiceOver on MacOS and iOS</li>
+</ul>
+
+<p class="govuk-body">It has not been tested with Dragon NaturallySpeaking.</p>
+
+<p class="govuk-body">We need more research. If you have used service timeout, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/89">Discuss service timeout on GitHub</a></p>
+
+{% endblock %}

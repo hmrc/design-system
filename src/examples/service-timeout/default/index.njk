@@ -1,0 +1,14 @@
+---
+layout: layout-example.njk
+---
+
+{%- from  "hmrc/components/timeout-dialog/macro.njk" import hmrcTimeoutDialog -%}
+
+<div style="min-height:330px;">
+{{ hmrcTimeoutDialog ({
+  timeout: 70,
+  countdown: 68,
+  keepAliveUrl: "?abc=def",
+  signOutUrl: "?ghi=jkl"
+}) }}
+</div>
