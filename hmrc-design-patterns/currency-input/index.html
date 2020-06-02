@@ -102,10 +102,6 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">
                   Could not confirm identity
                 </a>
-              </li><li class="app-subnav__section-item app-subnav__section-item--current">
-                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/currency-input">
-                  Currency input
-                </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
                   Employer PAYE reference
@@ -182,9 +178,9 @@
     
     
     <div class="govuk-!-padding-bottom-8 hmrc-phase-banner">
-      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">experimental</strong>
+      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">development</strong>
 
-        <p class="govuk-body">This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.</p>
+        <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
     </div>
   
 
@@ -217,6 +213,7 @@
 <li>pound symbols (£)</li>
 <li>full stops - to indicate pence</li>
 </ul>
+<p class="govuk-body">You should allow the user to enter numbers up to one or 2 decimal places, for example £10.4 or £10.40.</p>
 <p class="govuk-body">Remove these characters and round up or down any amounts if necessary before validating.</p>
 
 
@@ -264,7 +261,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"currency-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
-    For example, £1,300 or £193.50
+    For example, £600 or £193.54
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-currency-input__wrapper"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-currency-input__unit"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>£<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -298,7 +295,7 @@
                 <span class="hljs-attr">text</span>: <span class="hljs-string">"How much does your employer pay towards this?"</span>
             },
             <span class="hljs-attr">hint</span>: {
-                <span class="hljs-attr">text</span>: <span class="hljs-string">"For example, £1,300 or £193.50"</span>
+                <span class="hljs-attr">text</span>: <span class="hljs-string">"For example, £600 or £193.54"</span>
             },
             <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>,
             <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">"off"</span>
