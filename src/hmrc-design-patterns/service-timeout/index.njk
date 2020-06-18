@@ -32,46 +32,52 @@ layout: twoColumnPage.njk
   <p class="govuk-body">The warning should:</p>
 
   <ul class="govuk-list govuk-list--bullet">
-	  <li>say ‘For your security, we will sign you out in 2 minutes.’</li>
-	  <li>say what will happen to their answers, if needed</li>
-	  <li>have a ‘Stay signed in’ button</li>
-	  <li>have a ‘Sign out’ link that signs them out as normal</li>
+    <li>say ‘For your security, we will sign you out in 2 minutes.’</li>
+    <li>say what will happen to their answers, if needed</li>
+    <li>have a ‘Stay signed in’ button</li>
+    <li>have a ‘Sign out’ link that signs them out as normal</li>
   </ul>
 
   {{ example({
     item: 'service-timeout',
     example: 'default',
-    description: 'Service timeout default'
-  }) }}
-
-{#  {{ example({
-    html: 'saved.html',
-    nunjucks: 'saved.njk',
-    height: 300
+    description: 'Service timeout default',
+    height: 400
   }) }}
 
   {{ example({
-    html: 'not-saved.html',
-    nunjucks: 'not-saved.njk',
-    height: 300
-  }) }} #}
+    item: 'service-timeout',
+    example: 'saved',
+    description: 'Saved service timeout',
+    height: 400
+  }) }}
+
+  {{ example({
+    item: 'service-timeout',
+    example: 'not-saved',
+    description: 'Not saved service timeout',
+    height: 400
+  }) }}
 
   <p class="govuk-body">If they do nothing, take them to a ‘We signed you out’ page that uses similar content as the warning box.</p>
 
-{#  {{ example({
-    html: 'signed-out-default.html',
-    height: 300
+  {{ example({
+    item: 'service-timeout',
+    example: 'signed-out-default',
+    description: 'Signed out timeout default'
   }) }}
 
   {{ example({
-    html: 'signed-out-saved.html',
-    height: 330
+    item: 'service-timeout',
+    example: 'signed-out-saved',
+    description: 'Signed out timeout saved'
   }) }}
 
   {{ example({
-    html: 'signed-out-not-saved.html',
-    height: 330
-  }) }} #}
+    item: 'service-timeout',
+    example: 'signed-out-not-saved',
+    description: 'Signed out timeout not saved'
+  }) }}
 
   <h3 class="govuk-heading-m" id="when-the-user-is-not-signed-in">When the user is not signed in</h3>
 
@@ -79,43 +85,49 @@ layout: twoColumnPage.njk
 
   <ul class="govuk-list govuk-list--bullet">
     <li>say ‘For your security, we will delete your answers in 2 minutes.’</li>
-	  <li>have a button to stay in the service</li>
-	  <li>have a ‘Delete your answers’ link that takes them to the ‘You deleted your answers’ page</li>
+    <li>have a button to stay in the service</li>
+    <li>have a ‘Delete your answers’ link that takes them to the ‘You deleted your answers’ page</li>
   </ul>
 
-{#  {{ example({
-    html: 'not-signed-in.html',
-    nunjucks: 'not-signed-in.njk',
-    height: 300
+  {{ example({
+    item: 'service-timeout',
+    example: 'not-signed-in',
+    description: 'Not signed in page',
+    height: 400
   }) }}
 
   {{ example({
-    html: 'you-deleted-your-answers.html',
-    height: 300
+    item: 'service-timeout',
+    example: 'you-deleted-your-answers',
+    description: 'You deleted your answers page'
   }) }}
 
   <p class="govuk-body">If they do nothing, delete their answers and take them to the ‘For your security, we deleted your answers’ page.</p>
 
   {{ example({
-    html: 'deleted-your-answers.html',
-    height: 300
-  }) }} #}
+    item: 'service-timeout',
+    example: 'we-deleted-your-answers',
+    description: 'We deleted your answers page'
+  }) }}
 
   <h3 class="govuk-heading-m" id="technical-details">Technical details</h3>
 
   <p class="govuk-body">Add the hmrc-timeout-dialog meta tag and initialise the timeout dialog Javascript</p>
 
-  <p class="govuk-body"><pre><code class="html">&lt;meta name="hmrc-timeout-dialog"
-    data-timeout=""
-    data-countdown=""
-    data-keep-alive-url=""
-    data-sign-out-url=""
-    data-title=""
-    data-message=""
-    dat-message-suffix=""
-    data-keep-alive-button-text=""
-    data-sign-out-button-text="" /&gt;
-  </code></pre></p>
+  <p class="govuk-body">
+    <pre><code class="hljs html">
+      &lt;meta name="hmrc-timeout-dialog"
+      data-timeout=""
+      data-countdown=""
+      data-keep-alive-url=""
+      data-sign-out-url=""
+      data-title=""
+      data-message=""
+      dat-message-suffix=""
+      data-keep-alive-button-text=""
+      data-sign-out-button-text="" /&gt;
+    </code></pre>
+  </p>
 
   <p class="govuk-body"><pre><code class="javascript">timeoutDialog = HMRC.TimeoutDialog.init()</code></pre></p>
 
@@ -131,22 +143,20 @@ layout: twoColumnPage.njk
     <li>data-sign-out-button-text is the text for the link which takes the user to a sign out page</li>
   </ul>
 
-
-
   <ul class="govuk-list govuk-list--bullet">
-	<li>timeout is the number of seconds before the user times out and 900 is the platform default</li>
-	<li>countdown is the number of seconds before the service displays the warning</li>
-	<li>keep_alive_url is a call to the server that keeps them in the service without refreshing the page</li>
-	<li>logout_url is the same URL as your service’s sign out page</li>
+  <li>timeout is the number of seconds before the user times out and 900 is the platform default</li>
+  <li>countdown is the number of seconds before the service displays the warning</li>
+  <li>keep_alive_url is a call to the server that keeps them in the service without refreshing the page</li>
+  <li>logout_url is the same URL as your service’s sign out page</li>
   </ul>
 
   <p class="govuk-body">When the warning loads:</p>
 
   <ul class="govuk-list govuk-list--bullet">
-	<li>set focus to the box</li>
-	<li>read the paragraph of content</li>
-	<li>set focus to the button</li>
-	<li>read the button label</li>
+  <li>set focus to the box</li>
+  <li>read the paragraph of content</li>
+  <li>set focus to the button</li>
+  <li>read the button label</li>
   </ul>
 
   <p class="govuk-body">This lets the user hear what they need to and stay in the service with a single click.</p>
