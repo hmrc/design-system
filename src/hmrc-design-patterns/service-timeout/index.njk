@@ -5,6 +5,7 @@ status: experimental
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
+{% from "_codeSnippet.njk" import codeSnippet %}
 
 {% block content %}
 
@@ -114,22 +115,28 @@ layout: twoColumnPage.njk
 
   <p class="govuk-body">Add the hmrc-timeout-dialog meta tag and initialise the timeout dialog Javascript</p>
 
-  <p class="govuk-body">
-    <pre><code class="hljs html">
-      &lt;meta name="hmrc-timeout-dialog"
-      data-timeout=""
-      data-countdown=""
-      data-keep-alive-url=""
-      data-sign-out-url=""
-      data-title=""
-      data-message=""
-      dat-message-suffix=""
-      data-keep-alive-button-text=""
-      data-sign-out-button-text="" /&gt;
-    </code></pre>
-  </p>
+  {{
+    codeSnippet({
+      code: '<meta
+  name="hmrc-timeout-dialog"
+  data-timeout=""
+  data-countdown=""
+  data-keep-alive-url=""
+  data-sign-out-url=""
+  data-title=""
+  data-message=""
+  dat-message-suffix=""
+  data-keep-alive-button-text=""
+  data-sign-out-button-text=""
+/>'
+    })
+  }}
 
-  <p class="govuk-body"><pre><code class="javascript">timeoutDialog = HMRC.TimeoutDialog.init()</code></pre></p>
+  {{
+    codeSnippet({
+code:'timeoutDialog = HMRC.TimeoutDialog.init()'
+    })
+  }}
 
   <ul class="govuk-list govuk-list--bullet">
     <li>data-timeout is the number of seconds before the user times out and 900 is the platform default</li>
