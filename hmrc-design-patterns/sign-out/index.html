@@ -234,7 +234,7 @@
 
           <div data-module="app-copy">
             <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header hmrc-header  "</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"header"</span>&gt;</span>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header hmrc-header  hmrc-header--with-additional-navigation"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"header"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__container govuk-width-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__logo"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__link govuk-header__link--homepage"</span>&gt;</span>
@@ -257,6 +257,10 @@
         Service Name
       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
+      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-sign-out-nav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link hmrc-sign-out-nav__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"?sign-out"</span>&gt;</span>
+          Sign out <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
@@ -280,7 +284,7 @@
     <span class="hljs-string">"serviceName"</span>: <span class="hljs-string">"Service Name"</span>,
     <span class="hljs-string">"serviceUrl"</span> : <span class="hljs-string">"/"</span>,
     <span class="hljs-string">"phaseBanner"</span> : <span class="hljs-literal">true</span>,
-    <span class="hljs-string">"signOut"</span> : <span class="hljs-literal">true</span>
+    <span class="hljs-string">"signOutHref"</span> : <span class="hljs-string">"?sign-out"</span>
 }) }}</code>
               </pre>
 
