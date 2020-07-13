@@ -2,15 +2,13 @@
 layout: layout-example.njk
 ---
 
-<meta
-  name="hmrc-timeout-dialog"
-  data-timeout="70"
-  data-countdown="68"
-  data-keep-alive-url="?abc=def"
-  data-sign-out-url="?ghi=jkl"
-  data-title=""
-  data-message=""
-  data-keep-alive-button-text=""
-  data-sign-out-button-text=""
-  data-language="cy"
-/>
+{%- from  "hmrc/components/timeout-dialog/macro.njk" import hmrcTimeoutDialog -%}
+
+{{ hmrcTimeoutDialog ({
+  timeout: 70,
+  countdown: 68,
+  keepAliveUrl: "?continue=true",
+  signOutUrl: "?lang=Welsh",
+  messageSuffix: "Ni fyddwn yn cadw’ch atebion",
+  language: "cy"
+}) }}

@@ -7,8 +7,9 @@ layout: layout-example.njk
 {{ hmrcTimeoutDialog ({
   timeout: 70,
   countdown: 68,
-  keepAliveUrl: "?abc=def",
-  signOutUrl: "?ghi=jkl",
+  keepAliveUrl: "?continue=true",
+  signOutUrl: "?lang=English",
   keepAliveButtonText: "Continue checking what help you can get with childcare costs",
-  signOutButtonText: "Delete your answers"
+  signOutButtonText: "Delete your answers",
+  language: "en"
 }) }}

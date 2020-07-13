@@ -7,7 +7,8 @@ layout: layout-example.njk
 {{ hmrcTimeoutDialog ({
   timeout: 70,
   countdown: 68,
-  keepAliveUrl: "?abc=def",
-  signOutUrl: "?ghi=jkl",
-  messageSuffix: "We will not save your answers"
+  keepAliveUrl: "?continue=true",
+  signOutUrl: "?lang=English",
+  messageSuffix: "We will not save your answers",
+  language: "en"
 }) }}
