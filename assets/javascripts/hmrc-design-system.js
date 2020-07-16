@@ -9464,7 +9464,7 @@
 
 	var iframeResizer$2 = js;
 
-	iframeResizer$2.iframeResizer({ maxWidth: '100%' }, 'iframe');
+	iframeResizer$2.iframeResizer({ maxWidth: '100%' }, 'iframe.app-example__frame--resizable');
 
 	const nodeListForEach$2 = common.nodeListForEach;
 

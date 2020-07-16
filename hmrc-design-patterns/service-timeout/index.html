@@ -1,0 +1,947 @@
+
+
+<!DOCTYPE html>
+<html class="govuk-template" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service timeout - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+  <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
+  <!--[if lt IE 8]>
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
+  <[endif]-->
+  <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
+</head>
+
+<body class="govuk-template__body">
+  
+
+  <!-- TODO: tidy up the below -->
+  <div class="app-pane app-pane--enabled">
+  <div class="app-pane__header">
+    <header role="banner">
+  <div class="hmrc-internal-header app-header">
+    <div class="govuk-width-container">
+      <div class="hmrc-logo app-header__title">
+        <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" title="Go to the HMRC homepage" class="hmrc-logo__link">
+          HM Revenue &amp; Customs
+        </a>
+      </div>
+
+      <div class="hmrc-internal-service-name app-header__link"><a href="/" title="Go to the HMRC Design Library homepage" class="hmrc-internal-service-name__link">
+            Design resources for HMRC
+          </a></div>
+    </div>
+  </div>
+
+
+</header>
+
+  </div>
+
+  <div class="app-pane__body govuk-width-container">
+
+    
+    
+      
+    
+      
+          
+      
+    
+
+    
+
+    <div class="app-subnav-toggle" data-module="subnav-toggle">
+      <label for="app-subnav-toggle" class="app-subnav-toggle__label">Menu</label>
+    </div>
+    <input type="checkbox" id="app-subnav-toggle">
+
+    <nav class="app-pane__subnav">
+
+      <h2 class="govuk-heading-m">
+        <a href="/hmrc-design-patterns/">HMRC Design Patterns</a></h2>
+
+      <div class="app-subnav">
+
+        <ul class="app-subnav__section"><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-header">
+                  Account header
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/accounts-office-reference">
+                  Accounts office reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/add-to-a-list">
+                  Add to a list
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-the-user-for-their-consent">
+                  Ask the user for their consent
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/confirmed-identity">
+                  Confirmed identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">
+                  Could not confirm identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/currency-input">
+                  Currency input
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
+                  Employer PAYE reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/notification-badge">
+                  Notification badge
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/open-links-in-a-new-window-or-tab">
+                  Open in a new window or tab
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-heading">
+                  Page heading
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-not-found">
+                  Page not found
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-title">
+                  Page title
+                </a>
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-timeout">
+                  Service timeout
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
+                  Service unavailable
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/sign-out">
+                  Sign out
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/status-tags-in-task-list-pages">
+                  Status tags in Task list pages
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
+                  There is a problem with the service
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/unique-taxpayer-reference">
+                  Unique Taxpayer Reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/vat-registration-number">
+                  VAT registration number
+                </a>
+              </li></ul>
+
+        <ul class="app-subnav__section"><li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-backlog">
+                HMRC Design Patterns backlog
+              </a>
+            </li><li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype">
+                Installing HMRC Frontend in your prototype
+              </a>
+            </li></ul>
+      </div>
+    </nav>
+
+    <div class="app-pane__content">
+      <main class="app-content" id="main-content">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Service timeout</h1></header>
+
+
+            
+  
+  
+    
+    
+    <div class="govuk-!-padding-bottom-8 hmrc-phase-banner">
+      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">experimental</strong>
+
+        <p class="govuk-body">This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.</p>
+    </div>
+  
+
+
+<p class="govuk-body">This pattern warns the user before we time them out of a service and tells them what has happened when we do time them out.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">We time the user out when they do not do anything for 15 minutes. Warn them after 13 minutes, which gives them 2 minutes to decide to keep using the service.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+<p class="govuk-body">Use an accessible dialog box that appears on top of the page. This stops them using the screen with a mouse or keyboard until they select an option or press the escape key.</p>
+
+<p class="govuk-body">The user can:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>select a button to stay in the service and not time out</li>
+  <li>select a link to sign out or have their answers deleted</li>
+  <li>press the escape key to close the warning, stay in the service and not time out</li>
+  <li>do nothing</li>
+</ul>
+
+  <h3 class="govuk-heading-m" id="when-the-user-is-signed-in">When the user is signed in</h3>
+
+  <p class="govuk-body">The warning should:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>say ‘For your security, we will sign you out in 2 minutes.’</li>
+    <li>say what will happen to their answers, if needed</li>
+    <li>have a ‘Stay signed in’ button</li>
+    <li>have a ‘Sign out’ link that signs them out as normal</li>
+  </ul>
+
+  
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-default" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/service-timeout/default/" target="_blank" title="Open Service timeout default example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame "
+height="400px" src="/examples/service-timeout/default/" title="Service timeout default example"></iframe>
+    </div>
+
+
+      <div class="example-example-default-lang example-example-default-lang--en ">
+        <span id="options-example-default"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-default-html" role="tab"
+              aria-controls="example-default-html"
+              data-track="tab-html" title="Display Service timeout default example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-default-nunjucks" role="tab"
+                aria-controls="example-default-nunjucks"
+                data-track="tab-nunjucks" title="Display Service timeout default example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">data-timeout</span>=<span class="hljs-string">"70"</span> <span class="hljs-attr">data-countdown</span>=<span class="hljs-string">"68"</span> <span class="hljs-attr">data-keep-alive-url</span>=<span class="hljs-string">"?continue=true"</span> <span class="hljs-attr">data-sign-out-url</span>=<span class="hljs-string">"?lang=English"</span> <span class="hljs-attr">data-title</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-keep-alive-button-text</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-sign-out-button-text</span>=<span class="hljs-string">""</span> /&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
+
+{{ hmrcTimeoutDialog ({
+  <span class="hljs-attr">timeout</span>: <span class="hljs-number">70</span>,
+  <span class="hljs-attr">countdown</span>: <span class="hljs-number">68</span>,
+  <span class="hljs-attr">keepAliveUrl</span>: <span class="hljs-string">"?continue=true"</span>,
+  <span class="hljs-attr">signOutUrl</span>: <span class="hljs-string">"?lang=English"</span>,
+  <span class="hljs-attr">language</span>: <span class="hljs-string">"en"</span>
+}) }}</code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+  
+
+  
+
+  <p class="govuk-body">If they do nothing, take them to a ‘We signed you out’ page that uses similar content as the warning box.</p>
+
+  
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-signed-out-default" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/service-timeout/signed-out-default/" target="_blank" title="Open Signed out timeout default example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/service-timeout/signed-out-default/" title="Signed out timeout default example"></iframe>
+    </div>
+
+
+      <div class="example-example-signed-out-default-lang example-example-signed-out-default-lang--en ">
+        <span id="options-example-signed-out-default"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-signed-out-default-html" role="tab"
+              aria-controls="example-signed-out-default-html"
+              data-track="tab-html" title="Display Signed out timeout default example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-signed-out-default-nunjucks" role="tab"
+                aria-controls="example-signed-out-default-nunjucks"
+                data-track="tab-nunjucks" title="Display Signed out timeout default example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-signed-out-default-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+      For your security, we signed you out
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Sign in
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-signed-out-default-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
+
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+      For your security, we signed you out
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Sign in
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+  
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-signed-out-saved" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/service-timeout/signed-out-saved/" target="_blank" title="Open Signed out timeout saved example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/service-timeout/signed-out-saved/" title="Signed out timeout saved example"></iframe>
+    </div>
+
+
+      <div class="example-example-signed-out-saved-lang example-example-signed-out-saved-lang--en ">
+        <span id="options-example-signed-out-saved"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-signed-out-saved-html" role="tab"
+              aria-controls="example-signed-out-saved-html"
+              data-track="tab-html" title="Display Signed out timeout saved example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-signed-out-saved-nunjucks" role="tab"
+                aria-controls="example-signed-out-saved-nunjucks"
+                data-track="tab-nunjucks" title="Display Signed out timeout saved example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-signed-out-saved-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+      For your security, we signed you out
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>
+      We saved your answers.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Sign in
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-signed-out-saved-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+      For your security, we signed you out
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>
+       We saved your answers.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Sign in
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+  
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-signed-out-not-saved" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/service-timeout/signed-out-not-saved/" target="_blank" title="Open Signed out timeout not saved example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/service-timeout/signed-out-not-saved/" title="Signed out timeout not saved example"></iframe>
+    </div>
+
+
+      <div class="example-example-signed-out-not-saved-lang example-example-signed-out-not-saved-lang--en ">
+        <span id="options-example-signed-out-not-saved"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-signed-out-not-saved-html" role="tab"
+              aria-controls="example-signed-out-not-saved-html"
+              data-track="tab-html" title="Display Signed out timeout not saved example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-signed-out-not-saved-nunjucks" role="tab"
+                aria-controls="example-signed-out-not-saved-nunjucks"
+                data-track="tab-nunjucks" title="Display Signed out timeout not saved example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-signed-out-not-saved-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+      For your security, we signed you out
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>
+      We did not save your answers.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Sign in
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-signed-out-not-saved-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
+
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+      For your security, we signed you out
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>
+      We did not save your answers.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Sign in
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+  <h3 class="govuk-heading-m" id="when-the-user-is-not-signed-in">When the user is not signed in</h3>
+
+  <p class="govuk-body">The warning should:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>say ‘For your security, we will delete your answers in 2 minutes.’</li>
+    <li>have a button to stay in the service</li>
+    <li>have a ‘Delete your answers’ link that takes them to the ‘You deleted your answers’ page</li>
+  </ul>
+
+  
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-not-signed-in" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/service-timeout/not-signed-in/" target="_blank" title="Open Not signed in page example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame "
+height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed in page example"></iframe>
+    </div>
+
+
+      <div class="example-example-not-signed-in-lang example-example-not-signed-in-lang--en ">
+        <span id="options-example-not-signed-in"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-not-signed-in-html" role="tab"
+              aria-controls="example-not-signed-in-html"
+              data-track="tab-html" title="Display Not signed in page example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-not-signed-in-nunjucks" role="tab"
+                aria-controls="example-not-signed-in-nunjucks"
+                data-track="tab-nunjucks" title="Display Not signed in page example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">data-timeout</span>=<span class="hljs-string">"70"</span> <span class="hljs-attr">data-countdown</span>=<span class="hljs-string">"68"</span> <span class="hljs-attr">data-keep-alive-url</span>=<span class="hljs-string">"?continue=true"</span> <span class="hljs-attr">data-sign-out-url</span>=<span class="hljs-string">"?lang=English"</span> <span class="hljs-attr">data-title</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-keep-alive-button-text</span>=<span class="hljs-string">"Continue checking what help you can get with childcare costs"</span> <span class="hljs-attr">data-sign-out-button-text</span>=<span class="hljs-string">"Delete your answers"</span> /&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
+
+{{ hmrcTimeoutDialog ({
+  <span class="hljs-attr">timeout</span>: <span class="hljs-number">70</span>,
+  <span class="hljs-attr">countdown</span>: <span class="hljs-number">68</span>,
+  <span class="hljs-attr">keepAliveUrl</span>: <span class="hljs-string">"?continue=true"</span>,
+  <span class="hljs-attr">signOutUrl</span>: <span class="hljs-string">"?lang=English"</span>,
+  <span class="hljs-attr">keepAliveButtonText</span>: <span class="hljs-string">"Continue checking what help you can get with childcare costs"</span>,
+  <span class="hljs-attr">signOutButtonText</span>: <span class="hljs-string">"Delete your answers"</span>,
+  <span class="hljs-attr">language</span>: <span class="hljs-string">"en"</span>
+}) }}</code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+  
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-you-deleted-your-answers" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/service-timeout/you-deleted-your-answers/" target="_blank" title="Open You deleted your answers page example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/service-timeout/you-deleted-your-answers/" title="You deleted your answers page example"></iframe>
+    </div>
+
+
+      <div class="example-example-you-deleted-your-answers-lang example-example-you-deleted-your-answers-lang--en ">
+        <span id="options-example-you-deleted-your-answers"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-you-deleted-your-answers-html" role="tab"
+              aria-controls="example-you-deleted-your-answers-html"
+              data-track="tab-html" title="Display You deleted your answers page example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-you-deleted-your-answers-nunjucks" role="tab"
+                aria-controls="example-you-deleted-your-answers-nunjucks"
+                data-track="tab-nunjucks" title="Display You deleted your answers page example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-you-deleted-your-answers-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+      You deleted your answers
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Start again
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-you-deleted-your-answers-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+       You deleted your answers
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Start again
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+  <p class="govuk-body">If they do nothing, delete their answers and take them to the ‘For your security, we deleted your answers’ page.</p>
+
+  
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-we-deleted-your-answers" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/service-timeout/we-deleted-your-answers/" target="_blank" title="Open We deleted your answers page example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/service-timeout/we-deleted-your-answers/" title="We deleted your answers page example"></iframe>
+    </div>
+
+
+      <div class="example-example-we-deleted-your-answers-lang example-example-we-deleted-your-answers-lang--en ">
+        <span id="options-example-we-deleted-your-answers"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-we-deleted-your-answers-html" role="tab"
+              aria-controls="example-we-deleted-your-answers-html"
+              data-track="tab-html" title="Display We deleted your answers page example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-we-deleted-your-answers-nunjucks" role="tab"
+                aria-controls="example-we-deleted-your-answers-nunjucks"
+                data-track="tab-nunjucks" title="Display We deleted your answers page example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-we-deleted-your-answers-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+      For your security, we deleted your answers
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Start again
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-we-deleted-your-answers-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+       For your security, we deleted your answers
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"timeout-keep-signin-btn"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button govuk-!-margin-bottom-0"</span>&gt;</span>
+        Start again
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+  <h3 class="govuk-heading-m" id="technical-details">Technical details</h3>
+
+  <p class="govuk-body">Add the hmrc-timeout-dialog meta tag and initialise the timeout dialog Javascript</p>
+
+      <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">&lt;meta
+  name=&quot;hmrc-timeout-dialog&quot;
+  data-timeout=&quot;&quot;
+  data-countdown=&quot;&quot;
+  data-keep-alive-url=&quot;&quot;
+  data-sign-out-url=&quot;&quot;
+  data-title=&quot;&quot;
+  data-message=&quot;&quot;
+  dat-message-suffix=&quot;&quot;
+  data-keep-alive-button-text=&quot;&quot;
+  data-sign-out-button-text=&quot;&quot;
+/&gt;</code></pre>
+    </div>
+
+
+      <div class="app-code-snippet">
+      <pre><code class="govuk-body-s">timeoutDialog = HMRC.TimeoutDialog.init()</code></pre>
+    </div>
+
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>data-timeout is the number of seconds before the user times out and 900 is the platform default</li>
+    <li>data-countdown is the number of seconds before the service displays the warning</li>
+    <li>data-keep-alive-url is a call to the server that keeps them in the service without refreshing the page</li>
+    <li>data-sign-out-url is the same URL as your service’s sign out page</li>
+    <li>data-title is the text to use as a title for the dialog</li>
+    <li>data-message is the message displayed to the user</li>
+    <li>data-message-suffix is any additional text to be displayed after the timer</li>
+    <li>data-keep-alive-button-text is the text on the button that keeps the user signed in</li>
+    <li>data-sign-out-button-text is the text for the link which takes the user to a sign out page</li>
+  </ul>
+
+  <ul class="govuk-list govuk-list--bullet">
+  <li>timeout is the number of seconds before the user times out and 900 is the platform default</li>
+  <li>countdown is the number of seconds before the service displays the warning</li>
+  <li>keep_alive_url is a call to the server that keeps them in the service without refreshing the page</li>
+  <li>logout_url is the same URL as your service’s sign out page</li>
+  </ul>
+
+  <p class="govuk-body">When the warning loads:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+  <li>set focus to the box</li>
+  <li>read the paragraph of content</li>
+  <li>set focus to the button</li>
+  <li>read the button label</li>
+  </ul>
+
+  <p class="govuk-body">This lets the user hear what they need to and stay in the service with a single click.</p>
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">The warning was tested with 5 users for a service they signed in to. One person had dyslexia and the other was 70 years old. All 5 users understood the warning and managed to stay signed in.</p>
+
+<p class="govuk-body">We want to do more usability testing, especially with users who use assistive technology and with services you do not sign in to.</p>
+
+<p class="govuk-body">We want to know if users:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>understand what has happened</li>
+  <li>understand the content and if there is anything missing</li>
+  <li>can do what they need to do – stay signed in, continue with the service, sign out, start again, or get timed out</li>
+</ul>
+
+<p class="govuk-body">The warning has been tested with all recommended browsers. It has been lab tested with most assistive technology including:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>JAWS</li>
+  <li>ZoomText</li>
+  <li>NVDA</li>
+  <li>VoiceOver on MacOS and iOS</li>
+</ul>
+
+<p class="govuk-body">It has not been tested with Dragon NaturallySpeaking.</p>
+
+<p class="govuk-body">We need more research. If you have used service timeout, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/89">Discuss service timeout on GitHub</a></p>
+
+</div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="govuk-footer" role="contentinfo">
+  <div class="govuk-width-container app-width-container--full">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
+</body>
+</html>
