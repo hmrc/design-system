@@ -1,0 +1,20 @@
+---
+layout: layout-example.njk
+---
+
+{%- from  "hmrc/components/timeout-dialog/macro.njk" import hmrcTimeoutDialog -%}
+
+<div class="govuk-grid">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      For your security, we signed you out
+    </h1>
+
+    <div class="govuk-form-group">
+      <button id="timeout-keep-signin-btn" class="govuk-button govuk-!-margin-bottom-0">
+        Sign in
+      </button>
+    </div>
+
+  </div>
+</div>

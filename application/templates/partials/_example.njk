@@ -34,8 +34,8 @@
           </a>
         </span>
       {% endif %}
-      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
-              src="{{ exampleURL }}"{% if description %} title="{{description}} example"{% endif %}></iframe>
+      <iframe data-module="app-example-frame" class="app-example__frame {% if not params.height %}app-example__frame--resizable{% endif %}"
+      {% if params.height %}height="{{ params.height}}px"{% endif %} src="{{ exampleURL }}"{% if description %} title="{{description}} example"{% endif %}></iframe>
     </div>
 
 
