@@ -46,19 +46,19 @@ layout: twoColumnPage.njk
     height: 400
   }) }}
 
-  {#{ example({
+  {{ example({
     item: 'service-timeout',
     example: 'saved',
     description: 'Saved service timeout',
     height: 400
-  }) }#}
+  }) }}
 
-  {#{ example({
+  {{ example({
     item: 'service-timeout',
     example: 'not-saved',
     description: 'Not saved service timeout',
     height: 400
-  }) }#}
+  }) }}
 
   <p class="govuk-body">If they do nothing, take them to a ‘We signed you out’ page that uses similar content as the warning box.</p>
 
@@ -119,6 +119,7 @@ layout: twoColumnPage.njk
     codeSnippet({
       code: '<meta
   name="hmrc-timeout-dialog"
+  content="hmrc-timeout-dialog"
   data-timeout=""
   data-countdown=""
   data-keep-alive-url=""
