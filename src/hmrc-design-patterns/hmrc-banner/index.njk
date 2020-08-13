@@ -1,0 +1,74 @@
+---
+title: HMRC banner
+menuText: HMRC banner
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+
+{% block content %}
+
+
+<p class="govuk-body">
+  The HMRC banner shows external users that they are dealing with HMRC.
+</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+  When to use
+</h2>
+
+<p class="govuk-body">
+Use this pattern if the user needs to know they are dealing with HMRC. For example, if they need to be sure that a payment is going to the right government department.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+When not to use
+</h2>
+<p class="govuk-body">
+Do not use this pattern when the user does not need to know they are dealing with HMRC. Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> instead.
+</p>
+<p class="govuk-body">
+Do not use this pattern for: </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>personal tax account services – use the <a href="https://design.tax.service.gov.uk/hmrc-design-patterns/account-header">account header</a></li>
+  <li>HMRC internal services – use the <a class="govuk-link" href="https://design.tax.service.gov.uk/hmrc-design-patterns/internal-header">Internal header</a></li>
+
+</ul>
+
+
+
+<h2 class="govuk-heading-l" id="how-it-works">
+  How it works
+</h2>
+
+<p class="govuk-body">
+  The HMRC header should sit below the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> and the <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">Phase banner</a>, and above the Welsh language toggle.</p>
+<p class="govuk-body">It should have:</p>
+ <ul class="govuk-list govuk-list--bullet" role="list">
+<li>the HMRC logo</li>
+<li>a vertical teal bar on the left side</li>
+</ul>
+
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+</div>
+
+  {{
+    example({
+      item: 'hmrc-banner',
+      example: 'example',
+      description: 'HMRC banner',
+      welsh: 'example-welsh'
+
+    })
+  }}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">
+  We need more research. If you have used the HMRC banner, get in touch to share your research findings.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/4">Discuss the HMRC banner on GitHub</a>
+</p>
+{% endblock %}
