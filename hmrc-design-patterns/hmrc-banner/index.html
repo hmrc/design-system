@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Status tags in Task list pages - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <title>HMRC banner - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -97,7 +97,7 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
                   Employer PAYE reference
                 </a>
-              </li><li class="app-subnav__section-item">
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-banner">
                   HMRC banner
                 </a>
@@ -133,7 +133,7 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/sign-out">
                   Sign out
                 </a>
-              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+              </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/status-tags-in-task-list-pages">
                   Status tags in Task list pages
                 </a>
@@ -168,7 +168,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Status tags in Task list pages</h1></header>
+  <h1 class="govuk-heading-xl">HMRC banner</h1></header>
 
 
             
@@ -177,192 +177,151 @@
 
 
 
-<p class="govuk-body">Use these Status tags with the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/task-list-pages/">Task list pages</a> pattern from the GOV.UK Design System.</p>
 
-<p class="govuk-body">This pattern is an iteration of the status tag used in the GOV.UK <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/task-list-pages/">Task list pages</a> pattern. This is because it only includes a status tag for “Completed”. Also, user research found the styling of the tag difficult to read and there were no findings to support the use of coloured boxes.</p>
+<p class="govuk-body">
+  The HMRC banner shows external users that they are dealing with HMRC.
+</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+  When to use
+</h2>
+
+<p class="govuk-body">
+Use this pattern if the user needs to know they are dealing with HMRC. For example, if they need to be sure that a payment is going to the right government department.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+When not to use
+</h2>
+<p class="govuk-body"> Do not use this pattern: </p>
+<ul class="govuk-list govuk-list--bullet">
+<li> when the user does not need to know they are dealing with HMRC.</li>
+  <li>for HMRC internal services – use the <a class="govuk-link" href="https://design.tax.service.gov.uk/hmrc-design-patterns/internal-header">Internal header</a></li>
+
+</ul>
 
 
+
+<h2 class="govuk-heading-l" id="how-it-works">
+  How it works
+</h2>
+
+<p class="govuk-body">
+  The HMRC banner should sit below the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> and the <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">Phase banner</a>, and above the Welsh language toggle.</p>
+<p class="govuk-body">It should have:</p>
+ <ul class="govuk-list govuk-list--bullet" role="list">
+<li>the HMRC logo</li>
+<li>a vertical teal bar on the left side</li>
+</ul>
+
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+</div>
+
+  
 
 
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-example" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
-        <a href="/examples/status-tags-in-task-list-pages/example/" target="_blank" title="Open Status tags in task list pages example in a new window">
+        <a href="/examples/hmrc-banner/example/" target="_blank" title="Open HMRC banner example in a new window">
           Open this example in a new window
         </a>
       </span>
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
-          <a href="/examples/status-tags-in-task-list-pages/example/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Status tags in task list pages example in English">
+          <a href="/examples/hmrc-banner/example/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display HMRC banner example in English">
             Display in English
           </a>
         </span>
         <span class="app-example__link app-example__language-switch js-enabled">
-          <a href="/examples/status-tags-in-task-list-pages/example-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Status tags in task list pages example in Welsh">
+          <a href="/examples/hmrc-banner/example-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display HMRC banner example in Welsh">
             Display in Welsh
           </a>
         </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/status-tags-in-task-list-pages/example/" title="Status tags in task list pages example"></iframe>
+ src="/examples/hmrc-banner/example/" title="HMRC banner example"></iframe>
     </div>
 
 
+      <div class="example-example-example-lang example-example-example-lang--en ">
+        <span id="options-example-example"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-example-html" role="tab"
+              aria-controls="example-example-html"
+              data-track="tab-html" title="Display HMRC banner example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-example-nunjucks" role="tab"
+                aria-controls="example-example-nunjucks"
+                data-track="tab-nunjucks" title="Display HMRC banner example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
 
-  </div>
-
-
-
-<h2 id="when-not-to-use" class="govuk-heading-l">When to use</h2>
-
-<p class="govuk-body">This pattern is specifically designed for use with the GOV.UK <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/task-list-pages/">Task list pages</a> pattern. Use the Status tag to show which tasks are done and which tasks are still to do.</p>
-
-<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
-
-<p class="govuk-body">Do not use the Status tags when you are not using the Task list pages pattern. When you need to show that your service is still being worked on, use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">Phase banner</a>.</p>
-
-<h2 id="when-to-use" class="govuk-heading-l">How it works</h2>
-
-<p class="govuk-body">Start with using the GOV.UK <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/task-list-pages/">Task list pages</a> pattern. Make sure you word the tasks using active verbs where possible.</p>
-
-<p class="govuk-body">Use simple text in sentence case, unless there is a strong user need to support the need for coloured boxes. Use:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>“Not started” if the user has not started the task</li>
-  <li>“In progress” if the user has started but not finished the task</li>
-  <li>“Completed” if the user has finished the task</li>
-</ul>
-
-<h3 class="govuk-heading-m" id="when-to-use">How to use Status tags with the GOV.UK Task list pages</h3>
-
-<p class="govuk-body">These instructions tell you how to amend or add to the code of the GOV.UK Task list pages to use Status tags.</p>
-
-<p class="govuk-body">You can find the code for the Task list pages pattern in the /docs/views/templates folder of the <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com/docs">GOV.UK Prototype Kit</a>.
-
-<div class="govuk-inset-text">
-  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>.
-</div>
-
-<h4 class="govuk-heading-s" id="when-to-use">Not started</h4>
-
-<p class="govuk-body">
-Find this code in the Task list pages pattern:
-</p>
-
-<code>
-  &lt;span class="app-task-list__task-name"&gt;&lt;a href="#"&gt;List convictions&lt;/a&gt;&lt;/span&gt;
-</code><br /><br />
-
-<p class="govuk-body">
-  And change it to:
-</p>
-
-    <div class="app-code-snippet app-code-snippet--copy">
-          <div class="app-link--copy__container">
+        <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
+            <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-      <pre><code class="govuk-body-s">&lt;span class=&quot;app-task-list__task-name&quot;&gt;
-  &lt;a href=&quot;#&quot; aria-describedby=&quot;list-convictions-not-started&quot;&gt;List convictions&lt;/a&gt;
-&lt;/span&gt;</code></pre>
-    </div>
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-banner"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-organisation-logo"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body-s"</span>&gt;</span> HM Revenue &amp;amp; Customs
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-banner"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-organisation-logo"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body-s"</span>&gt;</span> Cyllid a Thollau EM
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+              </pre>
+          </div>
+        </div>
 
-<p class="govuk-body">
-  Then add this code directly below it:
-</p>
-
-    <div class="app-code-snippet app-code-snippet--copy">
-          <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-      <pre><code class="govuk-body-s">&lt;span class=&quot;hmrc-status-tag&quot; id=&quot;list-convictions-not-started&quot;&gt;
-  Not started
-&lt;/span&gt;</code></pre>
-    </div>
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/banner/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcBanner %}
 
+{{ hmrcBanner({
+    
+}) }}</code>
+              </pre>
 
-<h4 class="govuk-heading-s" id="when-to-use">In progress</h4>
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/banner/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcBanner %}
 
-<p class="govuk-body">
-Find this code in the Task list pages pattern:
-</p>
+{{ hmrcBanner({
+      <span class="hljs-attr">language</span>: <span class="hljs-string">'cy'</span>
+}) }}</code>
+                </pre>
+            </div>
+          </div>
+      </div>
 
-<code>
-  &lt;span class="app-task-list__task-name"&gt;&lt;a href="#" aria-describedby="read-declaration-completed"&gt;Read declaration&lt;/a&gt;&lt;/span&gt;
-</code><br /><br />
-
-<p class="govuk-body">
-  Change it to:
-</p>
-
-    <div class="app-code-snippet app-code-snippet--copy">
-          <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-      <pre><code class="govuk-body-s">&lt;span class=&quot;app-task-list__task-name&quot;&gt;
-  &lt;a href=&quot;#&quot; aria-describedby=&quot;read-declaration-in-progress&quot;&gt;Read declaration&lt;/a&gt;
-&lt;/span&gt;</code></pre>
-    </div>
-
-
-<p class="govuk-body">
-  Then add this code directly below it:
-</p>
-
-    <div class="app-code-snippet app-code-snippet--copy">
-          <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-      <pre><code class="govuk-body-s">&lt;span class=&quot;hmrc-status-tag&quot; id=&quot;read-declaration-in-progress&quot;&gt;
-  In progress
-&lt;/span&gt;</code></pre>
-    </div>
-
-
-<h4 class="govuk-heading-s" id="when-to-use">Completed</h4>
-
-<p class="govuk-body">
-  Find this code in the Task list pages pattern:
-</p>
-
-<code>
-  &lt;strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed"&gt;Completed&lt;/strong&gt;
-</code><br /><br />
-
-<p class="govuk-body">Change it to:</p>
-
-    <div class="app-code-snippet app-code-snippet--copy">
-          <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-      <pre><code class="govuk-body-s">&lt;span class=&quot;hmrc-status-tag&quot; id=&quot;eligibility-completed&quot;&gt;
-  Completed
-&lt;/span&gt;</code></pre>
-    </div>
 
 
 <h2 id="research" class="govuk-heading-l">Research</h2>
 
-<p class="govuk-body">This pattern is based on the status tags used in the Anti-money laundering supervision (AMLS), Register a trust and Manage a registered pension scheme services.</p>
+<p class="govuk-body">
+  We need more research. If you have used the HMRC banner, get in touch to share your research findings.
+</p>
 
-<p class="govuk-body">There is evidence that users found this wording easy to understand and they knew they had to click the task to complete or change their answers.</p>
-
-<p class="govuk-body">Other kinds of tags are used in services to show different states, for example:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>Cannot start</li>
-  <li>Paid</li>
-  <li>Overdue</li>
-</ul>
-
-<p class="govuk-body">We need more research to understand how these are used. If you have used other kinds of Status tags on your service, get in touch to share your research findings.</p>
-
-<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/163">Discuss the Status tag on GitHub</a></p>
-
+<p class="govuk-body">
+  <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/4">Discuss the HMRC banner on GitHub</a>
+</p>
 </div>
         </div>
       </main>
