@@ -20,191 +20,36 @@ layout: twoColumnPage.njk
 <p class="govuk-body">Do not use the Welsh language toggle:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li>where there is no Welsh translation for a service</li>
-  <li>in personal tax account services – use the <a class="govuk-link" href="/design-library/account-header">account header</a> which already has a Welsh language toggle</li>
+  <li>in personal tax account services – use the <a class="govuk-link" href="/hmrc-design-patterns/account-header/">account header</a> which already has a Welsh language toggle</li>
 </ul>
 
 <h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
 
-<p class="govuk-body">There are 2 ways to use the account header. You can use HTML or, if you are using Nunjucks or <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com">version 7 or later of the GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
+<p class="govuk-body"> Put the Welsh language toggle  on the right hand side below the: </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a></li>
+  <li> <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">phase banner</li>
+  <li> <a class="govuk-link" href="/hmrc-design-patterns/hmrc-banner/">HMRC banner</a> if you are using it</li>
+</ul>
+
+<p class="govuk-body"> The Welsh language toggle must be above the <a class="govuk-link" href="https://design-system.service.gov.uk/components/back-link/">back link</a>.</p>
 <div class="govuk-inset-text">
   You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
 </div>
 
-<p class="govuk-body">Put the Welsh language toggle on the right hand side below the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a>.</p>
+
 
 {{
   example({
     item: 'welsh-language-toggle',
     description: 'Welsh toggle with gov header',
     example: 'toggle-with-gov-header',
-    welsh: 'welsh-toggle-with-gov-header',
-    hideTabs: true
+    welsh: 'welsh-toggle-with-gov-header'
+
   })
 }}
 
-<p class="govuk-body">If you are also using the <a class="govuk-link" href="/design-library/hmrc-header">HMRC header</a>, put the Welsh language toggle below the HMRC header.</p>
-
-{{
-  example({
-    item: 'welsh-language-toggle',
-    description: 'Welsh toggle with hmrc header',
-    example: 'toggle-with-hmrc-header',
-    welsh: 'welsh-toggle-with-hmrc-header',
-    hideTabs: true
-  })
-}}
-
-<h3 class="govuk-heading-m" id="when-to-use">How to use the welsh language toggle</h3>
-
-<h4 class="govuk-heading-s" id="when-to-use">Below the GOV.UK header</h4>
-
-<p class="govuk-body">Find this code:</p>
-
-<p><code>
-  &lt;main class="govuk-width-container"&gt;
-</code></p>
-
-<p class="govuk-body">Then add this code directly below it:</p>
-
-<h5 class="govuk-heading-s">For English version:</h5>
-
-{{
-  codeSnippet({
-    code: '<nav class="hmrc-language-select" aria-label="Language switcher">
-    <ul class="hmrc-language-select__list">
-      <li class="hmrc-language-select__list-item">
-        <span aria-current="true">English</span>
-      </li>
-      <li class="hmrc-language-select__list-item">
-        <a href="#"
-          hreflang="cy"
-          lang="cy"
-          rel="alternate"
-          class="govuk-link"
-          data-journey-click="link - click:lang-select:Welsh">
-          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
-          <span aria-hidden="true">Cymraeg</span>
-        </a>
-      </li>
-    </ul>
-  </nav>',
-    canCopy: true
-  })
-}}
-
-<h5 class="govuk-heading-s">For Welsh version:</h5>
-
-{{
-  codeSnippet({
-    code: '<nav class="hmrc-language-select" aria-label="Switcher iaith">
-      <ul class="hmrc-language-select__list">
-        <li class="hmrc-language-select__list-item">
-          <a href="#"
-            hreflang="en"
-            lang="en"
-            rel="alternate"
-            class="govuk-link"
-            data-journey-click="link - click:lang-select:English">
-            <span class="govuk-visually-hidden">Change the language to English</span>
-            <span aria-hidden="true">English</span>
-          </a>
-        </li>
-        <li class="hmrc-language-select__list-item">
-          <span aria-current="true">Cymraeg</span>
-        </li>
-      </ul>
-    </nav>',
-    canCopy: true
-  })
-}}
-
-<h4 class="govuk-heading-s" id="when-to-use">Below the HMRC header</h4>
-
-<p class="govuk-body">Find this code:</p>
-
-<p><pre><code class="govuk-body">
-  &lt;div class="hmrc-banner" role="banner"&gt;
-    &lt;div class="hmrc-organisation-logo"&gt;
-      &lt;p&gt;HM Revenue &amp; Customs&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</code></pre></p>
-
-<p class="govuk-body">Then add this code directly below it:</p>
-
-<h5 class="govuk-heading-s">For English version:</h5>
-
-{{
-  codeSnippet({
-    code: '<nav class="hmrc-language-select" aria-label="Language switcher">
-    <ul class="hmrc-language-select__list">
-      <li class="hmrc-language-select__list-item">
-        <span aria-current="true">English</span>
-      </li>
-      <li class="hmrc-language-select__list-item">
-        <a href="#"
-          hreflang="cy"
-          lang="cy"
-          rel="alternate"
-          class="govuk-link"
-          data-journey-click="link - click:lang-select:Welsh">
-          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
-          <span aria-hidden="true">Cymraeg</span>
-        </a>
-      </li>
-    </ul>
-  </nav>',
-    canCopy: true
-  })
-}}
-
-<h5 class="govuk-heading-s">For English version:</h5>
-
-{{
-  codeSnippet({
-    code: '<nav class="hmrc-language-select" aria-label="Switcher iaith">
-      <ul class="hmrc-language-select__list">
-        <li class="hmrc-language-select__list-item">
-          <a href="#"
-            hreflang="en"
-            lang="en"
-            rel="alternate"
-            class="govuk-link"
-            data-journey-click="link - click:lang-select:English">
-            <span class="govuk-visually-hidden">Change the language to English</span>
-            <span aria-hidden="true">English</span>
-          </a>
-        </li>
-        <li class="hmrc-language-select__list-item">
-          <span aria-current="true">Cymraeg</span>
-        </li>
-      </ul>
-    </nav>',
-    canCopy: true
-  })
-}}
-
-<h4 class="govuk-heading-s">Nunjucks</h4>
-
-<p class="govuk-body">To use the Nunjucks version in your prototype or service:</p>
-
-  {{
-    codeSnippet({
-      code: '{% from "hmrc/components/language-select/macro.njk"  import hmrcLanguageSelect %}
-
-{{ hmrcLanguageSelect({
-  language: "en",
-  cy: {
-    href: "#"
-  },
-  en: {
-    href: "#"
-  }
-}) }}',
-      canCopy: true
-    })
-  }}
 
 <h2 id="research" class="govuk-heading-l">Research</h2>
 
