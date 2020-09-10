@@ -1,0 +1,10 @@
+{
+  "version": "01-2020",
+  "manifestUrl": "https://raw.githubusercontent.com/hmrc/play-frontend-govuk-examples/master/src/test/resources/manifest.json",
+  "examplesRootUrl": "https://raw.githubusercontent.com/hmrc/play-frontend-govuk-examples/master/src/test/",
+  "vendorComponentPathPrefix": "hmrc/",
+  "govukComponentPathPrefix": "",
+  "features": {
+    "exampleDeprecation": false
+  }
+}

@@ -21,6 +21,11 @@ layout: layout-example.njk
         name: 'Jeremy Winter',
         changeUrl: '#',
         removeUrl: '#'
+      },
+      {
+        name: 'Elizabeth Kean',
+        changeUrl: '#',
+        removeUrl: '#'
       }
     ],
     itemType: {
@@ -28,7 +33,11 @@ layout: layout-example.njk
       plural: 'directors',
       formAction: '#'
     },
-    hintText: 'You must tell us about all your directors.'
+    hintText: 'You must tell us about all your directors.',
+    messages: {
+      yes: 'Yes',
+      no: 'No'
+    }
   })
 }}
 

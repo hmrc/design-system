@@ -1,0 +1,14 @@
+---
+layout: layout-example.njk
+---
+
+{%- from  "hmrc/components/timeout-dialog/macro.njk" import hmrcTimeoutDialog -%}
+
+{{ hmrcTimeoutDialog ({
+  timeout: 70,
+  countdown: 68,
+  keepAliveUrl: "?continue=true",
+  signOutUrl: "?lang=Welsh",
+  messageSuffix: "Ni fyddwn yn cadw’ch atebion",
+  language: "cy"
+}) }}
