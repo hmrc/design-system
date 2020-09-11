@@ -1,0 +1,14 @@
+---
+  layout: layout-example.njk
+---
+
+{%- from "hmrc/components/language-select/macro.njk" import hmrcLanguageSelect -%}
+
+{{
+  hmrcLanguageSelect({
+    language: 'en',
+    cy: {
+      href: '?cy'
+    }
+  })
+}}

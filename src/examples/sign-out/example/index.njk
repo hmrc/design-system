@@ -4,8 +4,8 @@ layout: layout-example.njk
 {% from "hmrc/components/header/macro.njk" import hmrcHeader %}
 
 {{ hmrcHeader({
-    "serviceName": "Service Name",
-    "serviceUrl" : "/",
-    "phaseBanner" : true,
-    "signOut" : true
+  "serviceName": "Service Name",
+  "serviceUrl" : "/",
+  "phaseBanner" : true,
+  "signOutHref" : "?sign-out"
 }) }}
