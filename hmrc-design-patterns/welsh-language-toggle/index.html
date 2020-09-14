@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Account menu - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <title>Welsh language toggle - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -153,7 +153,7 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/vat-registration-number">
                   VAT registration number
                 </a>
-              </li><li class="app-subnav__section-item">
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/welsh-language-toggle">
                   Welsh language toggle
                 </a>
@@ -176,28 +176,45 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Account menu</h1></header>
+  <h1 class="govuk-heading-xl">Welsh language toggle</h1></header>
 
 
             
   
   
-    
-    
-    <div class="govuk-!-padding-bottom-8 hmrc-phase-banner">
-      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">development</strong>
-
-        <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
-    </div>
-  
 
 
 
-<p class="govuk-body">The account menu is used in, and was designed for, the <a class="govuk-link" href="https://www.tax.service.gov.uk/personal-account">personal tax account</a>.</p>
+<p class="govuk-body">This pattern lets the user change the language used in a service from English to Welsh and from Welsh to English.</p>
 
-<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+<h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
 
-<p class="govuk-body">If your service is part of the personal tax account.</p>
+<p class="govuk-body">Use the Welsh language toggle when a service is available in Welsh.</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Do not use the Welsh language toggle:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>where there is no Welsh translation for a service</li>
+  <li>in personal tax account services – use the <a class="govuk-link" href="/hmrc-design-patterns/account-header/">account header</a> which already has a Welsh language toggle</li>
+</ul>
+
+<h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
+
+
+<p class="govuk-body"> Put the Welsh language toggle  on the right hand side below the: </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a></li>
+  <li> <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">phase banner</li>
+  <li> <a class="govuk-link" href="/hmrc-design-patterns/hmrc-banner/">HMRC banner</a> if you are using it</li>
+</ul>
+
+<p class="govuk-body"> The Welsh language toggle must be above the <a class="govuk-link" href="https://design-system.service.gov.uk/components/back-link/">back link</a>.</p>
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+</div>
+
+
 
 
 
@@ -206,12 +223,22 @@
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
-        <a href="/examples/account-menu/example/" target="_blank" title="Open Account menu example in a new window">
+        <a href="/examples/welsh-language-toggle/example/" target="_blank" title="Open Welsh language toggle example in a new window">
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/welsh-language-toggle/example/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Welsh language toggle example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/welsh-language-toggle/example-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Welsh language toggle example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/account-menu/example/" title="Account menu example"></iframe>
+ src="/examples/welsh-language-toggle/example/" title="Welsh language toggle example"></iframe>
     </div>
 
 
@@ -221,12 +248,12 @@
           <li class="app-tabs__item js-tabs__item" role="presentation">
             <a href="#example-example-html" role="tab"
               aria-controls="example-example-html"
-              data-track="tab-html" title="Display Account menu example as HTML">HTML</a>
+              data-track="tab-html" title="Display Welsh language toggle example as HTML">HTML</a>
           </li>
             <li class="app-tabs__item js-tabs__item" role="presentation">
               <a href="#example-example-nunjucks" role="tab"
                 aria-controls="example-example-nunjucks"
-                data-track="tab-nunjucks" title="Display Account menu example as Nunjucks">Nunjucks</a>
+                data-track="tab-nunjucks" title="Display Welsh language toggle example as Nunjucks">Nunjucks</a>
             </li>
         </ul>
 
@@ -237,69 +264,36 @@
 
           <div data-module="app-copy">
             <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-comment">&lt;!-- ACCOUNT MENU --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"secondary-nav"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Account"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"hmrc-account-menu"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#account-home"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu__link hmrc-account-menu__link--home hmrc-account-menu__link--active"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-icon hmrc-account-icon--home"</span>&gt;</span>
-      Account home <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu__link hmrc-account-menu__link--menu js-hidden js-visible"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
-    Account menu <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu__main js-hidden"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu__link--back hidden"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu__link"</span>&gt;</span>
-        Back <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-language-select"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Language switcher"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-language-select__list"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-language-select__list-item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">"true"</span>&gt;</span>English<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#messages"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu__link"</span>&gt;</span>
-        Messages<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-notification-badge"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-language-select__list-item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"?cy"</span> <span class="hljs-attr">hreflang</span>=<span class="hljs-string">"cy"</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"cy"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"alternate"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">data-journey-click</span>=<span class="hljs-string">"link - click:lang-select:Cymraeg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Newid yr iaith ir Gymraeg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>Cymraeg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#check-progress"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu__link"</span>&gt;</span>
-        Check progress <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#subnav-your-account"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"account-menu__main-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu__link hmrc-account-icon hmrc-account-menu__link--more"</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-owns</span>=<span class="hljs-string">"subnav-your-account"</span>&gt;</span>
-        Your account <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-subnav"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"subnav-your-account"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"account-menu__main-2"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Your account"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-one-third hmrc-subnav__section"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-subnav__section__heading"</span>&gt;</span>
-            Paperless settings <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#paperless-settings"</span>&gt;</span>
-              Manage your paperless settings <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-one-third hmrc-subnav__section"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-subnav__section__heading"</span>&gt;</span>
-            Personal details <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#personal-details"</span>&gt;</span>
-              Manage your personal details <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#sign-out"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-account-menu__link"</span>&gt;</span>
-        Sign out <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
-<span class="hljs-comment">&lt;!-- END ACCOUNT MENU --&gt;</span></code>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-language-select"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Switcher iaith"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-language-select__list"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-language-select__list-item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"?en"</span> <span class="hljs-attr">hreflang</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"alternate"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">data-journey-click</span>=<span class="hljs-string">"link - click:lang-select:English"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Change the language to English<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>English<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-language-select__list-item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">"true"</span>&gt;</span>Cymraeg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -310,34 +304,36 @@
 
             <div data-module="app-copy">
               <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/account-menu/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcAccountMenu -%}
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/language-select/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcLanguageSelect -%}
 
 {{
-  hmrcAccountMenu ({
-    <span class="hljs-attr">accountHome</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">"#account-home"</span>,
-      <span class="hljs-attr">active</span>: <span class="hljs-literal">true</span>
+  hmrcLanguageSelect({
+    <span class="hljs-attr">language</span>: <span class="hljs-string">'en'</span>,
+    <span class="hljs-attr">en</span>: {
+      <span class="hljs-attr">href</span>: <span class="hljs-string">'?en'</span>
     },
-    <span class="hljs-attr">messages</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">"#messages"</span>,
-      <span class="hljs-attr">messageCount</span>: <span class="hljs-number">2</span>
-    },
-    <span class="hljs-attr">checkProgress</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">"#check-progress"</span>
-    },
-    <span class="hljs-attr">paperlessSettings</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">"#paperless-settings"</span>
-    },
-    <span class="hljs-attr">personalDetails</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">"#personal-details"</span>
-    },
-    <span class="hljs-attr">signOut</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">"#sign-out"</span>
+    <span class="hljs-attr">cy</span>: {
+      <span class="hljs-attr">href</span>: <span class="hljs-string">'?cy'</span>
     }
   })
 }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/language-select/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcLanguageSelect -%}
+
+{{
+  hmrcLanguageSelect({
+    <span class="hljs-attr">language</span>: <span class="hljs-string">'cy'</span>,
+    <span class="hljs-attr">en</span>: {
+      <span class="hljs-attr">href</span>: <span class="hljs-string">'?en'</span>
+    },
+    <span class="hljs-attr">cy</span>: {
+      <span class="hljs-attr">href</span>: <span class="hljs-string">'?cy'</span>
+    }
+  })
+}}</code>
+                </pre>
             </div>
           </div>
       </div>
@@ -346,28 +342,12 @@
 
 
 
-<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
 
-<p class="govuk-body">If your service is not part of the personal tax account. Do not use the account menu.</p>
+<h2 id="research" class="govuk-heading-l">Research</h2>
 
-<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+<p class="govuk-body">We need more research. If you have used the Welsh language toggle, get in touch to share your research findings.</p>
 
-<p class="govuk-body">The account menu contains:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>an account home link</li>
-  <li>a messages link with a <a class="govuk-link" href="/hmrc-design-patterns/notification-badge">notification badge</a></li>
-  <li>a check progress link</li>
-  <li>a menu to manage account settings</li>
-  <li>a sign-out link</li>
-</ul>
-
-<h2 class="govuk-heading-l" id="research">Research</h2>
-
-<p class="govuk-body">We need more research. If you have used the account menu, get in touch to share your research findings.</p>
-
-<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/128">Discuss account menu on GitHub</a></p>
-
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/158">Discuss the Welsh language toggle on GitHub</a></p>
 </div>
         </div>
       </main>
