@@ -1,0 +1,59 @@
+---
+title: Welsh language toggle
+menuText: Welsh language toggle
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern lets the user change the language used in a service from English to Welsh and from Welsh to English.</p>
+
+<h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">Use the Welsh language toggle when a service is available in Welsh.</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Do not use the Welsh language toggle:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>where there is no Welsh translation for a service</li>
+  <li>in personal tax account services – use the <a class="govuk-link" href="/hmrc-design-patterns/account-header/">account header</a> which already has a Welsh language toggle</li>
+</ul>
+
+<h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
+
+
+<p class="govuk-body"> Put the Welsh language toggle  on the right hand side below the: </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a></li>
+  <li> <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">phase banner</li>
+  <li> <a class="govuk-link" href="/hmrc-design-patterns/hmrc-banner/">HMRC banner</a> if you are using it</li>
+</ul>
+
+<p class="govuk-body"> The Welsh language toggle must be above the <a class="govuk-link" href="https://design-system.service.gov.uk/components/back-link/">back link</a>.</p>
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+</div>
+
+
+
+{{
+  example({
+    item: 'welsh-language-toggle',
+    description: 'Welsh language toggle',
+    example: 'example',
+    welsh: 'example-welsh'
+
+  })
+}}
+
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the Welsh language toggle, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/158">Discuss the Welsh language toggle on GitHub</a></p>
+{% endblock %}
