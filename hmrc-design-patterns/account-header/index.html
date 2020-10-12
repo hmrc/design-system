@@ -206,24 +206,10 @@
   <li>the Welsh language toggle, if your service is available in Welsh</li>
 </ul>
 
-<p class="govuk-body">There are 2 ways to use the account header. You can use HTML or, if you are using Nunjucks or <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com">version 7 or later of the GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
 
 <div class="govuk-inset-text">
   You need HMRC Frontend to use this pattern – <a href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
 </div>
-
-<p class="govuk-body">
-  You can also use a layout designed for the account header. Change the first line of code to
-</p>
-
-      <div class="app-code-snippet app-code-snippet--copy">
-          <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-      <pre><code class="govuk-body-s">{% extends &quot;hmrc/layouts/account-header.html&quot; %}</code></pre>
-    </div>
-
 
 
 
@@ -590,6 +576,20 @@
       </div>
 
   </div>
+
+
+
+<p class="govuk-body">
+  You can also use a layout designed for the account header. Change the first line of code to
+</p>
+
+      <div class="app-code-snippet app-code-snippet--copy">
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+      <pre><code class="govuk-body-s">{% extends &quot;hmrc/layouts/account-header.html&quot; %}</code></pre>
+    </div>
 
 
 
