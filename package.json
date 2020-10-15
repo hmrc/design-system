@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/hmrc/design-system#readme",
   "dependencies": {
-    "govuk-frontend": "^3.6.0",
-    "hmrc-frontend": "^1.15.3"
+    "govuk-frontend": "^3.9.1",
+    "hmrc-frontend": "^1.17.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.5",
