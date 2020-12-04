@@ -1,0 +1,78 @@
+---
+title: Open links in a new window or tab archived
+status: archived
+menuText: Open in a new window or tab
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern lets the user open links in a new window or tab.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">First, design your service so that links open in the same window or tab and test with users.
+  Research shows that some users struggle to get back to a service because the back button does not work in the new
+  window or tab.</p>
+
+<p class="govuk-body">Only use this pattern if opening a link in a new window or tab meets a user need or is necessary
+  to use the service. This could be because:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the link is to a document in a different format, like a PDF</li>
+  <li>the link is to guidance that cannot be inside the service</li>
+  <li>the user would lose their details if they left the service</li>
+  <li>the user needs to go to another site or service to get information</li>
+</ul>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+
+<p class="govuk-body">Do not use if opening a link in a new window or tab:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>does not meet a user need</li>
+  <li>leads to more than one window or tab open within the same service</li>
+  <li>stops the user completing their task</li>
+</ul>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+<p class="govuk-body">Always put ‘(opens in a new window or tab)’ inside the link text content.</p>
+
+<p class="govuk-body">In the code include:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><code>target=&quot;_blank&quot;</code> to open in a new window or tab</li>
+  <li><code>rel=&quot;noopener noreferrer&quot;</code> to reduce security risks for some browsers</li>
+</ul>
+
+<p class="govuk-body">Do not use any icons in place of the words. See ‘<a class="govuk-link"
+                                                                          href="https://designnotes.blog.gov.uk/2016/11/28/removing-the-external-link-icon-from-gov-uk/">Removing
+    the external link icon from GOV.UK</a>’.</p>
+
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to
+    install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your
+  code.
+</div>
+
+{{
+  example({
+    item: "open-links-in-a-new-window-or-tab",
+    description: 'Open in a new window',
+    example: 'example',
+    welsh: 'example-welsh'
+  })
+}}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used open links in a new window or tab, get in touch to share
+  your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/141">Discuss open links
+    in a new window or tab on GitHub</a></p>
+
+{% endblock %}
