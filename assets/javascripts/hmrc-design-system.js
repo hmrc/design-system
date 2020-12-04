@@ -1010,7 +1010,6 @@
 		  }, 500);
 
 		  this.$showSubnavLink.classList.add('hmrc-account-menu__link--more-expanded');
-		  this.$showSubnavLink.setAttribute('aria-hidden', 'false');
 		  this.$showSubnavLink.setAttribute('aria-expanded', 'true');
 		};
 
@@ -1024,7 +1023,6 @@
 		  this.$subNav.setAttribute('aria-expanded', 'false');
 
 		  this.$showSubnavLink.classList.remove('hmrc-account-menu__link--more-expanded');
-		  this.$showSubnavLink.setAttribute('aria-hidden', 'true');
 		  this.$showSubnavLink.setAttribute('aria-expanded', 'false');
 
 		  this.$module.style.marginBottom = this.$moduleBottomMargin;
@@ -1067,7 +1065,6 @@
 		  this.$subNav.setAttribute('aria-expanded', 'true');
 
 		  this.$showSubnavLink.classList.add('hmrc-account-menu__link--more-expanded');
-		  this.$showSubnavLink.setAttribute('aria-hidden', 'false');
 		  this.$showSubnavLink.setAttribute('aria-expanded', 'true');
 
 		  this.$backLink.parentNode.setAttribute('aria-hidden', 'false');
@@ -1098,7 +1095,6 @@
 		  this.$subNav.setAttribute('aria-expanded', 'false');
 
 		  this.$showSubnavLink.classList.remove('hmrc-account-menu__link--more-expanded');
-		  this.$showSubnavLink.setAttribute('aria-hidden', 'true');
 		  this.$showSubnavLink.setAttribute('aria-expanded', 'false');
 
 		  this.$backLink.parentNode.setAttribute('aria-hidden', 'true');
@@ -1115,9 +1111,6 @@
 		      sibling.classList.remove('hidden');
 		    }
 		  }
-
-		  // TODO: change to
-		  // mainNav.children().not(backLink).removeClass('js-hidden')
 		};
 
 		function isSmall (element) {
@@ -3898,6 +3891,58 @@
 	    $input.closest('label')
 	};
 
+	function NotificationBanner ($module) {
+	  this.$module = $module;
+	}
+
+	/**
+	 * Initialise the component
+	 */
+	NotificationBanner.prototype.init = function () {
+	  var $module = this.$module;
+	  // Check for module
+	  if (!$module) {
+	    return
+	  }
+
+	  this.setFocus();
+	};
+
+	/**
+	 * Focus the element
+	 *
+	 * If `role="alert"` is set, focus the element to help some assistive technologies
+	 * prioritise announcing it.
+	 *
+	 * You can turn off the auto-focus functionality by setting `data-disable-auto-focus="true"` in the
+	 * component HTML. You might wish to do this based on user research findings, or to avoid a clash
+	 * with another element which should be focused when the page loads.
+	 */
+	NotificationBanner.prototype.setFocus = function () {
+	  var $module = this.$module;
+
+	  if ($module.getAttribute('data-disable-auto-focus') === 'true') {
+	    return
+	  }
+
+	  if ($module.getAttribute('role') !== 'alert') {
+	    return
+	  }
+
+	  // Set tabindex to -1 to make the element focusable with JavaScript.
+	  // Remove the tabindex on blur as the component doesn't need to be focusable after the page has
+	  // loaded.
+	  if (!$module.getAttribute('tabindex')) {
+	    $module.setAttribute('tabindex', '-1');
+
+	    $module.addEventListener('blur', function () {
+	      $module.removeAttribute('tabindex');
+	    });
+	  }
+
+	  $module.focus();
+	};
+
 	function Header ($module) {
 	  this.$module = $module;
 	  this.$menuButton = $module && $module.querySelector('.govuk-js-header-toggle');
@@ -4414,6 +4459,11 @@
 	  // Find first header module to enhance.
 	  var $toggleButton = scope.querySelector('[data-module="govuk-header"]');
 	  new Header($toggleButton).init();
+
+	  var $notificationBanners = scope.querySelectorAll('[data-module="govuk-notification-banner"]');
+	  nodeListForEach($notificationBanners, function ($notificationBanner) {
+	    new NotificationBanner($notificationBanner).init();
+	  });
 
 	  var $radios = scope.querySelectorAll('[data-module="govuk-radios"]');
 	  nodeListForEach($radios, function ($radio) {

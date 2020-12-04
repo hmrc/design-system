@@ -497,26 +497,6 @@ Sign out      </a>
 
 
 
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">We have confirmed your identity</h1></header>
-
-
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-
-
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Rydym wedi cadarnhau pwy ydych</h1></header>
-
-
-<button class="govuk-button" data-module="govuk-button">
-  Yn eich blaen
-</button>
-
-
-
 
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset">
@@ -609,6 +589,26 @@ Sign out      </a>
 
 
 <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">We have confirmed your identity</h1></header>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Rydym wedi cadarnhau pwy ydych</h1></header>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Yn eich blaen
+</button>
+
+
+
+<header class="hmrc-page-heading">
   <h1 class="govuk-heading-xl">We could not confirm your identity</h1></header>
 
 
@@ -679,35 +679,6 @@ heb gadarnhau pwy ydych</p>
 
 
 
-        <div class="govuk-form-group">
-    <label class="govuk-label" for="currency">
-    How much does your employer pay towards this?
-  </label>
-
-    <div id="currency-hint" class="govuk-hint">
-    For example, £600 or £193.54.
-  </div>
-    <div class="hmrc-currency-input__wrapper">
-        <span class="hmrc-currency-input__unit" aria-hidden="true">£</span>
-        <input
-            class="govuk-input govuk-input--width-10"
-            id="currency"
-            name="currency"
-            type="text"                aria-describedby="currency-hint"
-                autocomplete="off"
-            inputmode="decimal"/>
-
-    </div>
-</div>
-
-
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-
-
-
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="employer-paye-reference">
       What is Anycompany’s employer PAYE reference?
@@ -751,6 +722,35 @@ heb gadarnhau pwy ydych</p>
   </span>
 <input class="govuk-input govuk-input--width-10 govuk-input--error" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint employer-paye-reference-error"></div>
 
+
+
+
+
+        <div class="govuk-form-group">
+    <label class="govuk-label" for="currency">
+    How much does your employer pay towards this?
+  </label>
+
+    <div id="currency-hint" class="govuk-hint">
+    For example, £600 or £193.54.
+  </div>
+    <div class="hmrc-currency-input__wrapper">
+        <span class="hmrc-currency-input__unit" aria-hidden="true">£</span>
+        <input
+            class="govuk-input govuk-input--width-10"
+            id="currency"
+            name="currency"
+            type="text"                aria-describedby="currency-hint"
+                autocomplete="off"
+            inputmode="decimal"/>
+
+    </div>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
 
 
 
@@ -1553,95 +1553,7 @@ Sign out          </a>
     </div>
   </div>
 </header>
-<div class="govuk-width-container">
-</div>
 
-
-
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <ol class="app-task-list">
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">1. </span> Check before you start
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="eligibility-completed">
-                Check eligibility
-              </a>
-            </span>
-            <span class="hmrc-status-tag" id="eligibility-completed">Wedi cwblhau</span>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="read-declaration-in-progress">
-                Darllen a derbyn y datganiad
-              </a>
-            </span>
-            <span class="hmrc-status-tag" id="read-declaration-in-progress">Ar y gweill</span>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">2. </span> Prepare application
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="company-information-in-progress">
-                Enter your company information
-              </a>
-            </span>
-            <span class="hmrc-status-tag" id="company-information-in-progress">Ar y gweill</span>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="list-convictions-not-started">
-                Rhestru euogfarnau
-              </a>
-            </span>
-            <span class="hmrc-status-tag" id="list-convictions-not-started">Heb ddechrau</span>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="provide-financial-evidence-not-started">
-                Rhoi tystiolaeth ariannol
-              </a>
-            </span>
-            <span class="hmrc-status-tag" id="provide-financial-evidence-not-started">Heb ddechrau</span>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="medical-information-in-progress">
-                Rhoi gwybodaeth feddygol
-              </a>
-            </span>
-            <span class="hmrc-status-tag" id="medical-information-in-progress">Ar y gweill</span>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">3. </span> Apply
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="submit-and-pay-not-started">
-                Submit and pay
-              </a>
-            </span>
-            <span class="hmrc-status-tag" id="submit-and-pay-not-started">Heb ddechrau</span>
-          </li>
-        </ul>
-      </li>
-    </ol>
-  </div>
-</div>
 
 
 
@@ -1722,6 +1634,92 @@ Sign out          </a>
               </a>
             </span>
             <span class="hmrc-status-tag" id="submit-and-pay-not-started">Not started</span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">1. </span> Check before you start
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="eligibility-completed">
+                Check eligibility
+              </a>
+            </span>
+            <span class="hmrc-status-tag" id="eligibility-completed">Wedi cwblhau</span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="read-declaration-in-progress">
+                Darllen a derbyn y datganiad
+              </a>
+            </span>
+            <span class="hmrc-status-tag" id="read-declaration-in-progress">Ar y gweill</span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span> Prepare application
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="company-information-in-progress">
+                Enter your company information
+              </a>
+            </span>
+            <span class="hmrc-status-tag" id="company-information-in-progress">Ar y gweill</span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="list-convictions-not-started">
+                Rhestru euogfarnau
+              </a>
+            </span>
+            <span class="hmrc-status-tag" id="list-convictions-not-started">Heb ddechrau</span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="provide-financial-evidence-not-started">
+                Rhoi tystiolaeth ariannol
+              </a>
+            </span>
+            <span class="hmrc-status-tag" id="provide-financial-evidence-not-started">Heb ddechrau</span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="medical-information-in-progress">
+                Rhoi gwybodaeth feddygol
+              </a>
+            </span>
+            <span class="hmrc-status-tag" id="medical-information-in-progress">Ar y gweill</span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">3. </span> Apply
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="#" aria-describedby="submit-and-pay-not-started">
+                Submit and pay
+              </a>
+            </span>
+            <span class="hmrc-status-tag" id="submit-and-pay-not-started">Heb ddechrau</span>
           </li>
         </ul>
       </li>
