@@ -54,7 +54,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-standard": "^12.0.0",
     "gulp-util": "^3.0.8",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.4.1",
     "iframe-resizer": "^4.2.2",
     "install": "^0.13.0",
     "jest": "^24.9.0",
