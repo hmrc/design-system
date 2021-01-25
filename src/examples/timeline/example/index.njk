@@ -1,0 +1,27 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukInput({
+  id: "currency",
+  name: "currency",
+  label: {
+    text: "How much does your employer pay towards this?",
+    isPageHeading: false
+  },
+  hint: {
+    text: "For example, £600 or £193.54."
+  },
+  prefix: {
+    text: "£"
+  },
+  classes: "govuk-input--width-10",
+  spellcheck: false
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
