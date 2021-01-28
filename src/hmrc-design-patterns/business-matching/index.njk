@@ -16,11 +16,6 @@ layout: twoColumnPage.njk
 <p class="govuk-body">Do not use this pattern when the user needs to add different kinds of information that do not relate to each other.</p>
 
 <h2 class="govuk-heading-l" id="how-it-works">​How it works</h2>
-
-<div class="govuk-inset-text">
-  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
-</div>
-
 <h3 class="govuk-heading-s">To match a Limited company</h3>
 
 <p class="govuk-body"> Ask the user for:</p>
@@ -28,11 +23,11 @@ layout: twoColumnPage.njk
 <ul class="govuk-list govuk-list--bullet">
   <li>the business type</li>
 <li> the company registration number </li>
-  <li>unique tax reference for the business</li>
+  <li><a class="govuk-link" href="../unique-taxpayer-reference/">unique taxpayer reference </a>for the business</li>
   <li>postcode for the business</li>
 </ul>
-<p class="govuk-body"> Allow the user to confirm the business name.</p>
-<p class="govuk-body"> A match completes business matching allowing the user continue to the service. However, where the name is not a match, business matching cannot be done. </p>
+<p class="govuk-body"> If the details are correct, allow the user confirm the business name to complete business matching and continue to the service.</p>
+<p class="govuk-body"> If the details do not match,  </p>
 
 
 
