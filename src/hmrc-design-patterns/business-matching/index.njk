@@ -1,0 +1,129 @@
+---
+title: Business matching
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern allows a user to match their business with HMRC so they can continue to use a digital service.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern where a user is required to provide their business details to ensure they can use a digital service.
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+
+<p class="govuk-body">Do not use this pattern when the user needs to add different kinds of information that do not relate to each other.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">​How it works</h2>
+
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+</div>
+
+<h3 class="govuk-heading-s">To match a Limited company</h3>
+
+<p class="govuk-body"> Ask the user for:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the business type</li>
+<li> the company registration number </li>
+  <li>unique tax reference for the business</li>
+  <li>postcode for the business</li>
+</ul>
+<p class="govuk-body"> Allow the user to confirm the business name.</p>
+<p class="govuk-body"> A match completes business matching allowing the user continue to the service. However, where the name is not a match, business matching cannot be done. </p>
+
+
+
+<h3 class="govuk-heading-s">To match a Sole trader</h3>
+
+<p class="govuk-body"> Ask the user for:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the business type</li>
+  <li>the self assessment unique taxpayer reference</li>
+  <li> the postcode for the business</li>
+</ul>
+<p class="govuk-body"> If the details match, then business matching is complete allowing the user continue to the service. However, where the name is not a match, business matching cannot be done. </p>
+
+
+<h3 class="govuk-heading-s">To match a Partnership</h3>
+
+<p class="govuk-body"> Ask the user for:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>the business type</li>
+  <li>unique tax reference for the business</li>
+  <li> the postcode for the business</li>
+  <li> the company registration number (for limited partnerships)</li>
+</ul>
+<p class="govuk-body"> If the details match, then business matching is complete allowing the user continue to the service. However, where the name is not a match, business matching cannot be done. </p>
+
+
+
+<h3 class="govuk-heading-s" id="business-matching">Asking for business type</h3>
+
+{{
+  example({
+    item: 'business-matching',
+    example: 'business-type',
+    description: 'Unique Taxpayer Reference - Self Assessment'
+  })
+}}
+
+<h3 class="govuk-heading-s" id="business-matching">Asking for company registration number</h3>
+
+{{
+  example({
+    item: 'business-matching',
+    example: 'company-reg-number',
+    description: 'Company registration number'
+  })
+}}
+
+
+<h3 class="govuk-heading-s" id="business-matching">Asking for business postcode</h3>
+
+{{
+  example({
+    item: 'business-matching',
+    example: 'post-code',
+    description: 'Postcode'
+  })
+}}
+
+<h3 class="govuk-heading-s" id="business-matching">Confirming the business name for limited companies and limited liability partnerships </h3>
+
+{{
+  example({
+    item: 'business-matching',
+    example: 'is-this-your-business',
+    description: 'Is this your business'
+  })
+}}
+
+
+<h3 class="govuk-heading-s" id="business-matching"> No business match </h3>
+
+{{
+  example({
+    item: 'business-matching',
+    example: 'no-match',
+    description: 'No match'
+  })
+}}
+
+
+
+
+
+
+
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used business matching, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/28">Discuss business matching on GitHub</a></p>
+
+{% endblock %}

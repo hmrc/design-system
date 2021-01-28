@@ -1,0 +1,40 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios",
+  idPrefix: "business-type",
+  name: "business-type",
+  fieldset: {
+    legend: {
+      text: "What type of business are you?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "limited-company",
+      text: "Limited Company"
+    },
+    {
+      value: "sole-trader",
+      text: "Sole trader"
+    },
+      {
+        value: "partnership",
+        text: "Partnership"
+      },
+      {
+        value: "other",
+        text: "Other"
+      }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

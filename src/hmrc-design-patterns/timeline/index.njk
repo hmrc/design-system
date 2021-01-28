@@ -1,0 +1,78 @@
+---
+title: Timeline
+menuText: Timeline
+status: experimental
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+
+{% block content %}
+
+
+<p class="govuk-body">
+  This pattern helps users view a linear record of what’s happened.
+
+
+</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+  When to use
+</h2>
+
+<p class="govuk-body">
+Use the Timeline pattern to show information that is ordered by time to let users know about the history of an item, such as a case or payment.
+
+
+<h2 class="govuk-heading-l" id="when-to-use">
+When not to use
+</h2>
+<p class="govuk-body"> Do not use the timeline pattern if you need to let users know where they are in a journey. In this case, consider another approach. </p>
+
+
+
+<h2 class="govuk-heading-l" id="how-it-works">
+  How it works
+</h2>
+
+
+<p class="govuk-body">Each item in the timeline should have:</p>
+ <ul class="govuk-list govuk-list--bullet" role="list">
+<li> a title</li>
+<li>date or time</li>
+<li>description (optional)</li>
+</ul>
+
+<div class="govuk-inset-text">
+  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
+</div>
+
+  {{
+    example({
+      item: 'hmrc-banner',
+      example: 'example',
+      description: 'HMRC banner',
+      welsh: 'example-welsh'
+
+    })
+  }}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">
+
+The pattern is used in the VAT repaymeents service and was tested with 7 users across 3 rounds. Research has shown that users:</p>
+
+ <ul class="govuk-list govuk-list--bullet" role="list">
+<li> understood that events were connected to one another on a timeline, with one event following another </li>
+<li> easily identified that the top event was the most recent;</li>
+<li>on smaller screens had a similar experience to those on larger devices</li>
+</ul>
+
+<p class="govuk-body">
+We need more research. If you have used the Timeline pattern, get in touch to share your research findings.
+</p>
+<p class="govuk-body">
+  <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/167">Discuss Timeline on GitHub</a>
+</p>
+{% endblock %}
