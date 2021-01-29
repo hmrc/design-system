@@ -8,25 +8,24 @@ layout: twoColumnPage.njk
 
 {% block content %}
 
-<p class="govuk-body">
-  The pattern helps users understand updates to something or actions taken so far. For example, a claim history.
-</p>
+<p class="govuk-body">This pattern helps users understand what has happened and when. For example, the history of a tax repayment claim.</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
-<p class="govuk-body">Use the timeline pattern when you need to show a brief list of entries in chronological order. For example, the stages involved in asking for and getting a tax repayment.</p>
+<p class="govuk-body">Use this pattern to show a list of entries in the order they happened.</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When not to use</h2>
-<p class="govuk-body"> Do not use the timeline pattern if you need to let users know where they are in a journey. In this case, consider another approach </p>
+<p class="govuk-body">Do not use this pattern to let users know where they are in a journey. You could use the <a href="https://design-system.service.gov.uk/patterns/step-by-step-navigation/">step by step navigation pattern</a> or a progress bar instead.</p>
 
 <h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
 
 <p class="govuk-body">Each item in the timeline should have:</p>
 <ul class="govuk-list govuk-list--bullet" role="list">
-<li> a title</li>
-<li>the date and, or time</li>
-<li>a description (optional)</li>
+  <li>a title</li>
+  <li>the date and/or time</li>
 </ul>
+
+<p class="govuk-body">You could also include a brief description, but this is optional.</p>
 
 <div class="govuk-inset-text">
   You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
@@ -42,13 +41,12 @@ layout: twoColumnPage.njk
 
 <h2 id="research" class="govuk-heading-l">Research</h2>
 
-<p class="govuk-body">
-The pattern is used in the VAT repayments service. Usability testing took place with 7 users as part of 3 rounds of research.  </p>
- <p class="govuk-body"> The rearch showed that users understood that the:</p>
+<p class="govuk-body">The pattern is used in the VAT repayments service. Usability testing took place with 7 users as part of 3 rounds of research.</p>
+<p class="govuk-body">The rearch showed that users understood that the:</p>
 <ul class="govuk-list govuk-list--bullet" role="list">
-<li> events were related to each other
-  <li> one event followed another event</li>
-<li> top event was the most recent </li>
+  <li>all the events were related to each other</li>
+  <li>each event followed a previous event</li>
+  <li>the top event was the most recent one</li>
 </ul>
 
 <p class="govuk-body">We need more research. If you have used the Timeline pattern, get in touch to share your research findings.</p>
