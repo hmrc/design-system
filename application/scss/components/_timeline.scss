@@ -1,0 +1,43 @@
+.hmrc-timeline {
+  $border-width: 3px;
+
+  border-left: $border-width solid govuk-colour("blue");
+  margin: 0;
+  padding: 0;
+
+  &__event {
+    @include govuk-responsive-padding(6, "bottom");
+    padding-left: govuk-spacing(4);
+    position: relative;
+    list-style: none;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__event-title {
+    @include govuk-responsive-margin(1, "bottom");
+    @extend %govuk-heading-m;
+
+    &:before {
+      background-color: govuk-colour("blue");
+      content: "";
+      height: $border-width;
+      left: 0;
+      top: .5em;
+      position: absolute;
+      width: govuk-spacing(4) * 0.6;
+    }
+  }
+
+  &__event-meta {
+    display: block;
+  }
+
+  &__event-meta {
+    @include govuk-font($size: 19);
+    @include govuk-text-colour;
+    @include govuk-responsive-margin(3, "bottom");
+  }
+}

@@ -2,26 +2,22 @@
 layout: layout-example.njk
 ---
 
-{% from "govuk/components/input/macro.njk" import govukInput %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "examples/timeline/example/timeline/macro.njk" import timeline %}
 
-{{ govukInput({
-  id: "currency",
-  name: "currency",
-  label: {
-    text: "How much does your employer pay towards this?",
-    isPageHeading: false
-  },
-  hint: {
-    text: "For example, £600 or £193.54."
-  },
-  prefix: {
-    text: "£"
-  },
-  classes: "govuk-input--width-10",
-  spellcheck: false
-}) }}
+{% set exampleContent %}<p class="govuk-body">Example content</p>{% endset %}
 
-{{ govukButton({
-  text: "Continue"
-}) }}
+  {{ timeline({
+    headinglevel: "3",
+    events: [
+      {
+        title: 'Something else happened',
+        time: '22 April 2019',
+        content: exampleContent
+      },
+      {
+        title: 'Something happened',
+        time: '18 April 2019',
+        content: exampleContent
+      }
+    ]
+  }) }}
