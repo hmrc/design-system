@@ -1,60 +1,68 @@
 ---
-title: Business matching
+title: Match an organisation to HMRC records
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
 
 {% block content %}
 
-<p class="govuk-body">This pattern allows a user to match their business details with HMRC's records so they can continue to use a digital service.</p>
+<p class="govuk-body">This pattern is made up of several screens. It helps HMRC get the details it needs to match an organisation to existing HMRC records.</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
-<p class="govuk-body">Use this pattern where a user is required to provide their business details to ensure they can use a digital service.
+<p class="govuk-body">Use this pattern when a digital service needs to match an organisation to HMRC records.</p>
 <h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
 
-<p class="govuk-body">Do not use this pattern for business verification or identity verification.</p>
+<p class="govuk-body">Do not use this pattern to verify the identity of a user.</p>
 
 <h2 class="govuk-heading-l" id="how-it-works">​How it works</h2>
-<h3 class="govuk-heading-s">Limited company</h3>
+<p class="govuk-body">The user is shown a set of screens and asked to enter details about their business or organisation. They need to select their organisation type. We then ask for different details depending on their organisation type.</p>
+<p class="govuk-body">HMRC then tries to match the details entered to data it holds about the organisation. We may also use Companies House data when trying to match an organisation to existing records.</p>
+<h3 class="govuk-heading-s">Limited companies</h3>
 
-<p class="govuk-body"> To match a limited company, ask the user for:</p>
+<p class="govuk-body"> Ask the user to enter the:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li>the business type</li>
-<li> the company registration number </li>
-  <li><a class="govuk-link" href="../unique-taxpayer-reference/">Unique taxpayer reference </a>for the business</li>
+  <li>company registration number </li>
+  <li><a class=“govuk-link” href=“../unique-taxpayer-reference/“>Corporation Tax Unique Taxpayer Reference </a>for the business</li>
   <li>postcode for the business</li>
 </ul>
-<p class="govuk-body"> If the details are correct, allow the user confirm the business name to complete business matching and continue to the service.</p>
-<p class="govuk-body"> If the details do not match, provide guidance on  </p>
 
+<h3 class="govuk-heading-s">Sole traders</h3>
 
-
-<h3 class="govuk-heading-s">To match a sole trader</h3>
-
-<p class="govuk-body"> Ask the user for:</p>
+<p class="govuk-body">Ask the user to enter the:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li>the business type</li>
-  <li>the self assessment unique taxpayer reference</li>
-  <li> the postcode for the business</li>
+  <li><a class=“govuk-link” href=“../unique-taxpayer-reference/“> Self Assessment Unique Taxpayer Reference </a></li>
+  <li>postcode for the business</li>
 </ul>
-<p class="govuk-body"> If the details match, then business matching is complete allowing the user continue to the service. However, where the name is not a match, business matching cannot be done. </p>
 
+<h3 class="govuk-heading-s">Partnerships</h3>
 
-<h3 class="govuk-heading-s">To match a partnership</h3>
-
-<p class="govuk-body"> Ask the user for:</p>
+<p class="govuk-body"> Ask the user to enter the:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li>the business type</li>
   <li>unique tax reference for the business</li>
   <li> the postcode for the business</li>
   <li> the company registration number (for limited partnerships)</li>
 </ul>
-<p class="govuk-body"> If the details match, then business matching is complete allowing the user continue to the service. However, where the name is not a match, business matching cannot be done. </p>
+<p class="govuk-body"> If HMRC matches the details to a business partner record, the user will be: </p>
 
+<ul class="govuk-list govuk-list--bullet">
+  <li>shown the name of the business that was matched</li>
+  <li>asked to confirm if that is their business</li>
+</ul>
 
+<p class="govuk-body"> If the name shown is the correct one for the organisation, the user can continue to use the digital service. </p>
+
+<h3 class="govuk-heading-s">If the details do not match existing records </h3>
+<p class="govuk-body">Take the user to a page that tells them:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>that we could not match their details</li>
+  <li>which details we used to try to match the organisation</li>
+  <li>how to update the details that HMRC and Companies House (if relevant) hold about their business</li>
+  <li>how to try again using different details</li>
+</ul>
 
 <h3 class="govuk-heading-s" id="business-matching">Asking for business type</h3>
 
