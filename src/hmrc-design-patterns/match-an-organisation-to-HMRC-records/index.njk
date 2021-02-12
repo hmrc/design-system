@@ -1,0 +1,159 @@
+---
+title: Match an organisation to HMRC records
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern is made up of several screens. It helps HMRC get the details it needs to match an organisation to existing HMRC records.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern when a digital service needs to match an organisation to HMRC records.</p>
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+
+<p class="govuk-body">Do not use this pattern to verify the identity of a user.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">​How it works</h2>
+<p class="govuk-body">The user is shown a set of screens and asked to enter details about their business or organisation. They need to select their organisation type. We then ask for different details depending on their organisation type.</p>
+<p class="govuk-body">HMRC then tries to match the details entered to data it holds about the organisation. We may also use Companies House data when trying to match an organisation to existing records.</p>
+<h3 class="govuk-heading-s">Limited companies</h3>
+
+<p class="govuk-body"> Ask the user to enter the:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>company registration number </li>
+  <li><a class="govuk-link" href="../unique-taxpayer-reference">Corporation Tax Unique Taxpayer Reference </a>for the business</li>
+  <li>postcode for the business</li>
+</ul>
+
+<h3 class="govuk-heading-s">Sole traders</h3>
+
+<p class="govuk-body">Ask the user to enter the:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="../unique-taxpayer-reference"> Self Assessment Unique Taxpayer Reference </a></li>
+  <li>postcode for the business</li>
+</ul>
+
+<h3 class="govuk-heading-s">Partnerships</h3>
+<p class="govuk-body"> Check if the user has a company registration number, if they do, ask the user to enter the:</p>
+<ul class="govuk-list govuk-list--bullet">
+
+  <li>company registration number </li>
+  <li><a class="govuk-link" href="../unique-taxpayer-reference">Corporation Tax Unique Taxpayer Reference </a>for the business</li>
+  <li>postcode for the business</li>
+</ul>
+
+
+<p class="govuk-body"> If they do not have a company registration number, ask the user to enter the:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="../unique-taxpayer-reference"> Self Assessment Unique Taxpayer Reference </a></li>
+  <li>postcode for the business</li>
+</ul>
+
+<h3 class="govuk-heading-s">Trust</h3>
+
+<p class="govuk-body">Ask the user to enter the:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="../unique-taxpayer-reference">Self Assessment Unique Taxpayer Reference </a></li>
+  <li>postcode for the business</li>
+</ul>
+
+<h3 class="govuk-heading-s">If the details match HMRC records </h3>
+<p class="govuk-body"> Where HMRC matches the details to a record, the user will be: </p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>shown the name of the business that was matched</li>
+  <li>asked to confirm if that is their business</li>
+</ul>
+<p class="govuk-body"> If the name shown is the correct one for the organisation, the user can continue to use the digital service. Otherwise, provide ways for the user to update the details. </p>
+
+<h3 class="govuk-heading-s">If the details do not match existing records </h3>
+<p class="govuk-body">Take the user to a page that tells them:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>that we could not match their details</li>
+  <li>how to update the details that HMRC and Companies House (if relevant) hold about their business</li>
+  <li>how to try again using different details</li>
+</ul>
+
+<h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Asking for business type</h3>
+
+{{
+  example({
+    item: 'match-an-organisation-to-HMRC-records',
+    example: 'business-type',
+    description: 'Unique Taxpayer Reference - Self Assessment'
+  })
+}}
+
+<h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Asking for company registration number</h3>
+
+{{
+  example({
+    item: 'match-an-organisation-to-HMRC-records',
+    example: 'company-reg-number',
+    description: 'Company registration number'
+  })
+}}
+
+
+<h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Asking for business postcode</h3>
+
+{{
+  example({
+    item: 'match-an-organisation-to-HMRC-records',
+    example: 'post-code',
+    description: 'Postcode'
+  })
+}}
+
+<h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Confirming the business name for limited companies and limited liability partnerships </h3>
+
+{{
+  example({
+    item: 'match-an-organisation-to-HMRC-records',
+    example: 'is-this-your-business',
+    description: 'Is this your business'
+  })
+}}
+
+<h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Checking if the user has a company registration number </h3>
+
+{{
+  example({
+    item: 'match-an-organisation-to-HMRC-records',
+    example: 'do-you-have-a-company-reg-number',
+    description: 'Do you have a company registration number'
+  })
+}}
+
+
+
+
+<h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records"> No business match </h3>
+
+{{
+  example({
+    item: 'match-an-organisation-to-HMRC-records',
+    example: 'no-match',
+    description: 'No match'
+  })
+}}
+
+
+
+
+
+
+
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the Match an organisation to HMRC records pattern, get in touch to share your research findings.  In particular, we want more research on other organisation types so we can expand the pattern to include those in future.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/28">Discuss Match an organisation to HMRC records on GitHub</a></p>
+
+{% endblock %}

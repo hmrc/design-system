@@ -1,0 +1,12 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  text: 'The details you entered did not match our records'
+}) }}
+
+<p class="govuk-body">We could not match the details you entered with records held by HMRC.</p>
+
+<p class="govuk-body">If you used the wrong details, you can <a class="govuk-link" href="#">try again using different details</a>.</p>
