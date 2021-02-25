@@ -25,7 +25,7 @@ layout: twoColumnPage.njk
 <ul class="govuk-list govuk-list--bullet">
   <li>company registration number </li>
   <li><a class="govuk-link" href="../unique-taxpayer-reference">Corporation Tax Unique Taxpayer Reference </a>for the business</li>
-  <li>postcode for the business</li>
+
 </ul>
 
 <h3 class="govuk-heading-s">Sole traders</h3>
@@ -34,7 +34,7 @@ layout: twoColumnPage.njk
 
 <ul class="govuk-list govuk-list--bullet">
   <li><a class="govuk-link" href="../unique-taxpayer-reference"> Self Assessment Unique Taxpayer Reference </a></li>
-  <li>postcode for the business</li>
+
 </ul>
 
 <h3 class="govuk-heading-s">Partnerships</h3>
@@ -43,14 +43,14 @@ layout: twoColumnPage.njk
 
   <li>company registration number </li>
   <li><a class="govuk-link" href="../unique-taxpayer-reference">Corporation Tax Unique Taxpayer Reference </a>for the business</li>
-  <li>postcode for the business</li>
+
 </ul>
 
 
 <p class="govuk-body"> If they do not have a company registration number, ask the user to enter the:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li><a class="govuk-link" href="../unique-taxpayer-reference"> Self Assessment Unique Taxpayer Reference </a></li>
-  <li>postcode for the business</li>
+
 </ul>
 
 <h3 class="govuk-heading-s">Trust</h3>
@@ -59,7 +59,7 @@ layout: twoColumnPage.njk
 
 <ul class="govuk-list govuk-list--bullet">
   <li><a class="govuk-link" href="../unique-taxpayer-reference">Self Assessment Unique Taxpayer Reference </a></li>
-  <li>postcode for the business</li>
+
 </ul>
 
 <h3 class="govuk-heading-s">If the details match HMRC records </h3>
@@ -67,7 +67,7 @@ layout: twoColumnPage.njk
 
 <ul class="govuk-list govuk-list--bullet">
   <li>shown the name of the business that was matched</li>
-  <li>asked to confirm if that is their business</li>
+  <li>ask to confirm if that is their business</li>
 </ul>
 <p class="govuk-body"> If the name shown is the correct one for the organisation, the user can continue to use the digital service. Otherwise, provide ways for the user to update the details. </p>
 
@@ -89,6 +89,16 @@ layout: twoColumnPage.njk
   })
 }}
 
+<h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Checking if the user has a company registration number  </h3>
+
+{{
+  example({
+    item: 'match-an-organisation-to-HMRC-records',
+    example: 'do-you-have-a-company-reg-number',
+    description: 'Do you have a company registration number'
+  })
+}}
+
 <h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Asking for company registration number</h3>
 
 {{
@@ -100,15 +110,6 @@ layout: twoColumnPage.njk
 }}
 
 
-<h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Asking for business postcode</h3>
-
-{{
-  example({
-    item: 'match-an-organisation-to-HMRC-records',
-    example: 'post-code',
-    description: 'Postcode'
-  })
-}}
 
 <h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Confirming the business name for limited companies and limited liability partnerships </h3>
 
@@ -120,15 +121,7 @@ layout: twoColumnPage.njk
   })
 }}
 
-<h3 class="govuk-heading-s" id="match-an-organisation-to-HMRC-records">Checking if the user has a company registration number </h3>
 
-{{
-  example({
-    item: 'match-an-organisation-to-HMRC-records',
-    example: 'do-you-have-a-company-reg-number',
-    description: 'Do you have a company registration number'
-  })
-}}
 
 
 
