@@ -1,0 +1,35 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-xl">Is this your business?</h1>
+<p class="govuk-body">ABC limited</p>
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "is-business",
+  name: "is-business",
+  fieldset: {
+    legend: {
+      text: "Is this your business?",
+      isPageHeading: false,
+      classes: "govuk-visually-hidden"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}

@@ -1,0 +1,35 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "has-registration-number",
+  name: "has-registration-number",
+  fieldset: {
+    legend: {
+      text: "Do you have a company registration number?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  hint: {
+    text: "Companies House may have sent this to you if you registered as a limited partnership."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
