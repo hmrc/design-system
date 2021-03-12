@@ -1,0 +1,838 @@
+
+
+<!DOCTYPE html>
+<html class="govuk-template" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Match an organisation to HMRC records - HMRC Design Patterns - Design resources for HMRC – GOV.UK</title>
+  <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+  <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
+  <!--[if lt IE 8]>
+    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
+  <[endif]-->
+  <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
+</head>
+
+<body class="govuk-template__body">
+  
+
+  <!-- TODO: tidy up the below -->
+  <div class="app-pane app-pane--enabled">
+  <div class="app-pane__header">
+    <header role="banner">
+  <div class="hmrc-internal-header app-header">
+    <div class="govuk-width-container">
+      <div class="hmrc-logo app-header__title">
+        <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" title="Go to the HMRC homepage" class="hmrc-logo__link">
+          HM Revenue &amp; Customs
+        </a>
+      </div>
+
+      <div class="hmrc-internal-service-name app-header__link"><a href="/" title="Go to the HMRC Design Library homepage" class="hmrc-internal-service-name__link">
+            Design resources for HMRC
+          </a></div>
+    </div>
+  </div>
+
+
+</header>
+
+  </div>
+
+  <div class="app-pane__body govuk-width-container">
+
+    
+    
+      
+    
+      
+          
+      
+    
+
+    
+
+    <div class="app-subnav-toggle" data-module="subnav-toggle">
+      <label for="app-subnav-toggle" class="app-subnav-toggle__label">Menu</label>
+    </div>
+    <input type="checkbox" id="app-subnav-toggle">
+
+    <nav class="app-pane__subnav">
+
+      <h2 class="govuk-heading-m">
+        <a href="/hmrc-design-patterns/">HMRC Design Patterns</a></h2>
+
+      <div class="app-subnav">
+
+        <ul class="app-subnav__section"><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-header">
+                  Account header
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/accounts-office-reference">
+                  Accounts office reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/add-to-a-list">
+                  Add to a list
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-the-user-for-their-consent">
+                  Ask the user for their consent
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/confirmed-identity">
+                  Confirmed identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">
+                  Could not confirm identity
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/currency-input">
+                  Currency input
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
+                  Employer PAYE reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-banner">
+                  HMRC banner
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/internal-header">
+                  Internal header
+                </a>
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/match-an-organisation-to-HMRC-records">
+                  Match an organisation to HMRC records
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/notification-badge">
+                  Notification badge
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-heading">
+                  Page heading
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-not-found">
+                  Page not found
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-title">
+                  Page title
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-timeout">
+                  Service timeout
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
+                  Service unavailable
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/sign-out">
+                  Sign out
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/status-tags-in-task-list-pages">
+                  Status tags in Task list pages
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
+                  There is a problem with the service
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/timeline">
+                  Timeline
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/unique-taxpayer-reference">
+                  Unique Taxpayer Reference
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/vat-registration-number">
+                  VAT registration number
+                </a>
+              </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/welsh-language-toggle">
+                  Welsh language toggle
+                </a>
+              </li></ul>
+
+        <ul class="app-subnav__section"><li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-archive">
+                HMRC Design Patterns archive
+              </a>
+            </li><li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-backlog">
+                HMRC Design Patterns backlog
+              </a>
+            </li><li class="app-subnav__section-item">
+              <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype">
+                Installing HMRC Frontend in your prototype
+              </a>
+            </li></ul>
+      </div>
+    </nav>
+
+    <div class="app-pane__content">
+      <main class="app-content" id="main-content">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Match an organisation to HMRC records</h1></header>
+
+
+            
+  
+  
+
+<p class="govuk-body">This pattern is made up of several screens. It helps HMRC get the details it needs to match an organisation to existing HMRC records.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+<p class="govuk-body">Use this pattern when a digital service needs to match an organisation to HMRC records.</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+<p class="govuk-body">Do not use this pattern to verify the identity of a user.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+<p class="govuk-body">The user is shown a set of screens and asked to enter details about their business or organisation. They need to select their organisation type. We then ask for different details depending on their organisation type.</p>
+<p class="govuk-body">HMRC then tries to match the details entered to data it holds about the organisation. We may also use Companies House data when trying to match an organisation to existing records.</p>
+
+<h3 class="govuk-heading-m">Limited companies</h3>
+<p class="govuk-body">Ask the user to enter the:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>company registration number</li>
+  <li><a class="govuk-link" href="../unique-taxpayer-reference">Corporation Tax Unique Taxpayer Reference</a> for the business</li>
+</ul>
+
+<h3 class="govuk-heading-m">Sole traders</h3>
+<p class="govuk-body">Ask the user to enter the:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="../unique-taxpayer-reference">Self Assessment Unique Taxpayer Reference</a></li>
+</ul>
+
+<h3 class="govuk-heading-m">Partnerships</h3>
+<p class="govuk-body">Check if the user has a company registration number, if they do, ask the user to enter the:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>company registration number</li>
+  <li><a class="govuk-link" href="../unique-taxpayer-reference">Corporation Tax Unique Taxpayer Reference</a> for the business</li>
+</ul>
+
+<p class="govuk-body">If they do not have a company registration number, ask the user to enter the:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="../unique-taxpayer-reference">Self Assessment Unique Taxpayer Reference</a></li>
+</ul>
+
+<h3 class="govuk-heading-m">Trust</h3>
+<p class="govuk-body">Ask the user to enter the:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a class="govuk-link" href="../unique-taxpayer-reference">Self Assessment Unique Taxpayer Reference</a></li>
+</ul>
+
+<h3 class="govuk-heading-m">If the details match HMRC records</h3>
+<p class="govuk-body">Where HMRC matches the details to a record, the user will be:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>shown the name of the business that was matched</li>
+  <li>ask to confirm if that is their business</li>
+</ul>
+
+<p class="govuk-body">If the name shown is the correct one for the organisation, the user can continue to use the digital service. Otherwise, provide ways for the user to update the details.</p>
+
+<h3 class="govuk-heading-m">If the details do not match existing records</h3>
+<p class="govuk-body">Take the user to a page that tells them:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>that we could not match their details</li>
+  <li>how to update the details that HMRC and Companies House (if relevant) hold about their business</li>
+  <li>how to try again using different details</li>
+</ul>
+
+<h3 class="govuk-heading-m" id="match-an-organisation-to-HMRC-records">Asking for business type</h3>
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-business-type" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/match-an-organisation-to-HMRC-records/business-type/" target="_blank" title="Open Unique Taxpayer Reference - Self Assessment example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/match-an-organisation-to-HMRC-records/business-type/" title="Unique Taxpayer Reference - Self Assessment example"></iframe>
+    </div>
+
+
+      <div class="example-example-business-type-lang example-example-business-type-lang--en ">
+        <span id="options-example-business-type"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-business-type-html" role="tab"
+              aria-controls="example-business-type-html"
+              data-track="tab-html" title="Display Unique Taxpayer Reference - Self Assessment example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-business-type-nunjucks" role="tab"
+                aria-controls="example-business-type-nunjucks"
+                data-track="tab-nunjucks" title="Display Unique Taxpayer Reference - Self Assessment example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-business-type-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>
+        What type of business are you?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"business-type"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"business-type"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"limited-company"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"business-type"</span>&gt;</span>
+          Limited Company
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"business-type-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"business-type"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"sole-trader"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"business-type-2"</span>&gt;</span>
+          Sole trader
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"business-type-3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"business-type"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"partnership"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"business-type-3"</span>&gt;</span>
+          Partnership
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"business-type-4"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"business-type"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"trust"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"business-type-4"</span>&gt;</span>
+          Trust
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-business-type-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/radios/macro.njk"</span> <span class="hljs-keyword">import</span> govukRadios %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+
+{{ govukRadios({
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-radios"</span>,
+  <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"business-type"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"business-type"</span>,
+  <span class="hljs-attr">fieldset</span>: {
+    <span class="hljs-attr">legend</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"What type of business are you?"</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-fieldset__legend--xl"</span>
+    }
+  },
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"limited-company"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Limited Company"</span>
+    },
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"sole-trader"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Sole trader"</span>
+    },
+      {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">"partnership"</span>,
+        <span class="hljs-attr">text</span>: <span class="hljs-string">"Partnership"</span>
+      },
+      {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">"trust"</span>,
+        <span class="hljs-attr">text</span>: <span class="hljs-string">"Trust"</span>
+      }
+  ]
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
+}) }}</code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+<h3 class="govuk-heading-m" id="match-an-organisation-to-HMRC-records">Checking if the user has a company registration number</h3>
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-do-you-have-a-company-reg-number" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/match-an-organisation-to-HMRC-records/do-you-have-a-company-reg-number/" target="_blank" title="Open Do you have a company registration number example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/match-an-organisation-to-HMRC-records/do-you-have-a-company-reg-number/" title="Do you have a company registration number example"></iframe>
+    </div>
+
+
+      <div class="example-example-do-you-have-a-company-reg-number-lang example-example-do-you-have-a-company-reg-number-lang--en ">
+        <span id="options-example-do-you-have-a-company-reg-number"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-do-you-have-a-company-reg-number-html" role="tab"
+              aria-controls="example-do-you-have-a-company-reg-number-html"
+              data-track="tab-html" title="Display Do you have a company registration number example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-do-you-have-a-company-reg-number-nunjucks" role="tab"
+                aria-controls="example-do-you-have-a-company-reg-number-nunjucks"
+                data-track="tab-nunjucks" title="Display Do you have a company registration number example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-do-you-have-a-company-reg-number-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"has-registration-number-hint"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>
+        Do you have a company registration number?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"has-registration-number-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+      Companies House may have sent this to you if you registered as a limited partnership.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios--inline"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"has-registration-number"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"has-registration-number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"has-registration-number"</span>&gt;</span>
+          Yes
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"has-registration-number-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"has-registration-number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"no"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"has-registration-number-2"</span>&gt;</span>
+          No
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-do-you-have-a-company-reg-number-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/radios/macro.njk"</span> <span class="hljs-keyword">import</span> govukRadios %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+
+{{ govukRadios({
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-radios--inline"</span>,
+  <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"has-registration-number"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"has-registration-number"</span>,
+  <span class="hljs-attr">fieldset</span>: {
+    <span class="hljs-attr">legend</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Do you have a company registration number?"</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-fieldset__legend--xl"</span>
+    }
+  },
+  <span class="hljs-attr">hint</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">"Companies House may have sent this to you if you registered as a limited partnership."</span>
+  },
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"yes"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Yes"</span>
+    },
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"no"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"No"</span>
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
+}) }}</code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+<h3 class="govuk-heading-m" id="match-an-organisation-to-HMRC-records">Asking for company registration number</h3>
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-company-reg-number" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/match-an-organisation-to-HMRC-records/company-reg-number/" target="_blank" title="Open Company registration number example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/match-an-organisation-to-HMRC-records/company-reg-number/" title="Company registration number example"></iframe>
+    </div>
+
+
+      <div class="example-example-company-reg-number-lang example-example-company-reg-number-lang--en ">
+        <span id="options-example-company-reg-number"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-company-reg-number-html" role="tab"
+              aria-controls="example-company-reg-number-html"
+              data-track="tab-html" title="Display Company registration number example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-company-reg-number-nunjucks" role="tab"
+                aria-controls="example-company-reg-number-nunjucks"
+                data-track="tab-nunjucks" title="Display Company registration number example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-company-reg-number-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>What is your company registration number?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://find-and-update.company-information.service.gov.uk/"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"noreferrer noopener"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>search Companies House for your company registration number (opens in a new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"company-registration-number"</span>&gt;</span>
+    What is your company registration number?
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"company-registration-number-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+    It is 8 characters. For example, 01234567 or AC012345.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"company-registration-number"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"company-registration-number-hint"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-company-reg-number-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;What is your company registration number?<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://find-and-update.company-information.service.gov.uk/"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"noreferrer noopener"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>search Companies House for your company registration number (opens in a new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+{{ govukInput({
+  <span class="hljs-attr">label</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">"What is your company registration number?"</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-visually-hidden"</span>
+  },
+  <span class="hljs-attr">hint</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">"It is 8 characters. For example, 01234567 or AC012345."</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">"company-registration-number"</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
+}) }}</code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+<h3 class="govuk-heading-m" id="match-an-organisation-to-HMRC-records">Confirming the business name for limited companies and limited liability partnerships</h3>
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-is-this-your-business" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/match-an-organisation-to-HMRC-records/is-this-your-business/" target="_blank" title="Open Is this your business example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/match-an-organisation-to-HMRC-records/is-this-your-business/" title="Is this your business example"></iframe>
+    </div>
+
+
+      <div class="example-example-is-this-your-business-lang example-example-is-this-your-business-lang--en ">
+        <span id="options-example-is-this-your-business"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-is-this-your-business-html" role="tab"
+              aria-controls="example-is-this-your-business-html"
+              data-track="tab-html" title="Display Is this your business example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-is-this-your-business-nunjucks" role="tab"
+                aria-controls="example-is-this-your-business-nunjucks"
+                data-track="tab-nunjucks" title="Display Is this your business example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-is-this-your-business-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Is this your business?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>ABC limited<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-visually-hidden"</span>&gt;</span>
+      Is this your business?
+    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios--inline"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"is-business"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"is-business"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"is-business"</span>&gt;</span>
+          Yes
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"is-business-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"is-business"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"no"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"is-business-2"</span>&gt;</span>
+          No
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-is-this-your-business-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/radios/macro.njk"</span> <span class="hljs-keyword">import</span> govukRadios %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;Is <span class="hljs-keyword">this</span> your business?<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>ABC limited<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+{{ govukRadios({
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-radios--inline"</span>,
+  <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"is-business"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"is-business"</span>,
+  <span class="hljs-attr">fieldset</span>: {
+    <span class="hljs-attr">legend</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Is this your business?"</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-visually-hidden"</span>
+    }
+  },
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"yes"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Yes"</span>
+    },
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"no"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"No"</span>
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Continue"</span>
+}) }}</code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+<h3 class="govuk-heading-m" id="match-an-organisation-to-HMRC-records">No business match</h3>
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-no-match" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/match-an-organisation-to-HMRC-records/no-match/" target="_blank" title="Open No match example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/match-an-organisation-to-HMRC-records/no-match/" title="No match example"></iframe>
+    </div>
+
+
+      <div class="example-example-no-match-lang example-example-no-match-lang--en ">
+        <span id="options-example-no-match"></span>
+        <ul class="app-tabs" role="tablist">
+          <li class="app-tabs__item js-tabs__item" role="presentation">
+            <a href="#example-no-match-html" role="tab"
+              aria-controls="example-no-match-html"
+              data-track="tab-html" title="Display No match example as HTML">HTML</a>
+          </li>
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-no-match-nunjucks" role="tab"
+                aria-controls="example-no-match-nunjucks"
+                data-track="tab-nunjucks" title="Display No match example as Nunjucks">Nunjucks</a>
+            </li>
+        </ul>
+
+        <div class="app-tabs__container js-tabs__container" id="example-no-match-html" role="tabpanel">
+            <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+          <div data-module="app-copy">
+            <pre class="app-example__language-switch--en-only-content">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>The details you entered did not match our records<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>We could not match the details you entered with records held by HMRC.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>If you used the wrong details, you can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>try again using different details<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+            </pre>
+
+          </div>
+        </div>
+
+          <div class="app-tabs__container js-tabs__container" id="example-no-match-nunjucks" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs js">&lt;h1 class="govuk-heading-xl"&gt;The details you entered did not match our records&lt;/h1&gt;
+&lt;p class="govuk-body"&gt;We could not match the details you entered with records held by HMRC.&lt;/p&gt;
+&lt;p class="govuk-body"&gt;If you used the wrong details, you can &lt;a class="govuk-link" href="#"&gt;try again using different details&lt;/a&gt;.&lt;/p&gt;</code>
+              </pre>
+
+            </div>
+          </div>
+      </div>
+
+  </div>
+
+
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+<p class="govuk-body">We need more research. If you have used the Match an organisation to HMRC records pattern, get in touch to share your research findings. In particular, we want more research on other organisation types so we can expand the pattern to include those in future.</p>
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/28">Discuss Match an organisation to HMRC records on GitHub</a></p>
+</div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="govuk-footer" role="contentinfo">
+  <div class="govuk-width-container app-width-container--full">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
+</body>
+</html>
