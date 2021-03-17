@@ -7,7 +7,7 @@
 
   &__event {
     @include govuk-responsive-padding(6, "bottom");
-    padding-left: govuk-spacing(4);
+    padding-left: govuk-spacing(4) - $border-width;
     position: relative;
     list-style: none;
 
