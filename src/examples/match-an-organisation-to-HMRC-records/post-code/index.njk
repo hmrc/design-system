@@ -1,0 +1,22 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ hmrcPageHeading({
+  text: 'What is the postcode of your business?'
+}) }}
+
+<p class="govuk-body">This is the postcode attached to your registered address, it is where you receive correspondence from HMRC.</p>
+
+{{ govukInput({
+hint: {
+    text: "For example, AB1 1DH"
+  },
+    classes: "govuk-input--width-10"
+  }) }}
+{{ govukButton({
+  text: "Continue"
+}) }}
