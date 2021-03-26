@@ -2,12 +2,12 @@
 layout: layout-example.njk
 ---
 
-{% from "examples/timeline/example/timeline/macro.njk" import timeline %}
+{%- from "hmrc/components/timeline/macro.njk" import hmrcTimeline -%}
 
 {% set exampleContent1 %}<p class="govuk-body">We received your return. You claimed you were due a repayment of £50. We are checking your claim.</p>{% endset %}
 {% set exampleContent2 %}<p class="govuk-body">We repaid you £50. It will take 3 days for the money to reach your account.</p>{% endset %}
 
-  {{ timeline({
+  {{ hmrcTimeline({
     headinglevel: "2",
     events: [
       {
