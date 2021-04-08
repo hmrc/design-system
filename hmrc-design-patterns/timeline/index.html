@@ -145,6 +145,10 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
                   There is a problem with the service
                 </a>
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/timeline">
+                  Timeline
+                </a>
               </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/unique-taxpayer-reference">
                   Unique Taxpayer Reference
@@ -192,75 +196,48 @@
 
     
     <div class="govuk-!-padding-bottom-8 hmrc-phase-banner">
-      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">development</strong>
+      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">experimental</strong>
 
-        <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
+        <p class="govuk-body">This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.</p>
     </div>
   
 
+<p class="govuk-body">This pattern helps users understand what has happened and when. For example, the history of a tax repayment claim.</p>
 
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
+<p class="govuk-body">Use this pattern to show a list of entries in the order they happened.</p>
 
-<p class="govuk-body">
-  This pattern helps users view a linear record of what’s happened.
+<h2 class="govuk-heading-l" id="when-to-use">When not to use</h2>
+<p class="govuk-body">Do not use this pattern to let users know where they are in a journey. You could use the <a href="https://design-system.service.gov.uk/patterns/step-by-step-navigation/">step by step navigation pattern</a> or a progress bar instead.</p>
 
-
-</p>
-
-<h2 class="govuk-heading-l" id="when-to-use">
-  When to use
-</h2>
-
-<p class="govuk-body">
-Use the Timeline pattern to show information that is ordered by time to let users know about the history of an item, such as a case or payment.
-
-
-<h2 class="govuk-heading-l" id="when-to-use">
-When not to use
-</h2>
-<p class="govuk-body"> Do not use the timeline pattern if you need to let users know where they are in a journey. In this case, consider another approach. </p>
-
-
-
-<h2 class="govuk-heading-l" id="how-it-works">
-  How it works
-</h2>
-
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
 
 <p class="govuk-body">Each item in the timeline should have:</p>
- <ul class="govuk-list govuk-list--bullet" role="list">
-<li> a title</li>
-<li>date or time</li>
-<li>description (optional)</li>
+<ul class="govuk-list govuk-list--bullet" role="list">
+  <li>a title</li>
+  <li>the date and/or time</li>
 </ul>
+
+<p class="govuk-body">You could also include a brief description, but this is optional.</p>
 
 <div class="govuk-inset-text">
   You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
 </div>
 
-  
+
 
 
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-example" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
-        <a href="/examples/hmrc-banner/example/" target="_blank" title="Open HMRC banner example in a new window">
+        <a href="/examples/timeline/example/" target="_blank" title="Open Timeline example in a new window">
           Open this example in a new window
         </a>
       </span>
-        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
-          <a href="/examples/hmrc-banner/example/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display HMRC banner example in English">
-            Display in English
-          </a>
-        </span>
-        <span class="app-example__link app-example__language-switch js-enabled">
-          <a href="/examples/hmrc-banner/example-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display HMRC banner example in Welsh">
-            Display in Welsh
-          </a>
-        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/hmrc-banner/example/" title="HMRC banner example"></iframe>
+ src="/examples/timeline/example/" title="Timeline example"></iframe>
     </div>
 
 
@@ -270,12 +247,12 @@ When not to use
           <li class="app-tabs__item js-tabs__item" role="presentation">
             <a href="#example-example-html" role="tab"
               aria-controls="example-example-html"
-              data-track="tab-html" title="Display HMRC banner example as HTML">HTML</a>
+              data-track="tab-html" title="Display Timeline example as HTML">HTML</a>
           </li>
             <li class="app-tabs__item js-tabs__item" role="presentation">
               <a href="#example-example-nunjucks" role="tab"
                 aria-controls="example-example-nunjucks"
-                data-track="tab-nunjucks" title="Display HMRC banner example as Nunjucks">Nunjucks</a>
+                data-track="tab-nunjucks" title="Display Timeline example as Nunjucks">Nunjucks</a>
             </li>
         </ul>
 
@@ -286,22 +263,24 @@ When not to use
 
           <div data-module="app-copy">
             <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-banner"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-organisation-logo"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body-s"</span>&gt;</span> HM Revenue &amp;amp; Customs
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-timeline"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-timeline__event"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-timeline__event-title"</span>&gt;</span>Repayment complete<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-timeline__event-meta"</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"2020-07-15"</span>&gt;</span>15 July 2020<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-timeline__event-content"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>We repaid you £50. It will take 3 days for the money to reach your account.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-timeline__event"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-timeline__event-title"</span>&gt;</span>Checking your claim<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-timeline__event-meta"</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"2020-07-14"</span>&gt;</span>14 July 2020<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-timeline__event-content"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body"</span>&gt;</span>We received your return. You claimed you were due a repayment of £50. We are checking your claim.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></code>
             </pre>
 
-              <pre class="app-example__language-switch--cy-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-banner"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-organisation-logo"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body-s"</span>&gt;</span> Cyllid a Thollau EM
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-              </pre>
           </div>
         </div>
 
@@ -312,20 +291,30 @@ When not to use
 
             <div data-module="app-copy">
               <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/banner/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcBanner %}
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/timeline/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeline -%}
 
-{{ hmrcBanner({
-    
-}) }}</code>
+{% <span class="hljs-keyword">set</span> exampleContent1 %}&lt;p class="govuk-body"&gt;We received your return. You claimed you were due a repayment of £50. We are checking your claim.&lt;/p&gt;{% endset %}
+{% <span class="hljs-keyword">set</span> exampleContent2 %}&lt;p class="govuk-body"&gt;We repaid you £50. It will take 3 days for the money to reach your account.&lt;/p&gt;{% endset %}
+
+  {{ hmrcTimeline({
+    <span class="hljs-attr">headinglevel</span>: <span class="hljs-string">"2"</span>,
+    <span class="hljs-attr">events</span>: [
+      {
+        <span class="hljs-attr">title</span>: <span class="hljs-string">'Repayment complete'</span>,
+        <span class="hljs-attr">datetime</span>: <span class="hljs-string">'2020-07-15'</span>,
+        <span class="hljs-attr">time</span>: <span class="hljs-string">'15 July 2020'</span>,
+        <span class="hljs-attr">content</span>: exampleContent2
+      },
+      {
+        <span class="hljs-attr">title</span>: <span class="hljs-string">'Checking your claim'</span>,
+        <span class="hljs-attr">datetime</span>: <span class="hljs-string">'2020-07-14'</span>,
+        <span class="hljs-attr">time</span>: <span class="hljs-string">'14 July 2020'</span>,
+        <span class="hljs-attr">content</span>: exampleContent1
+      }
+    ]
+  }) }}</code>
               </pre>
 
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/banner/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcBanner %}
-
-{{ hmrcBanner({
-      <span class="hljs-attr">language</span>: <span class="hljs-string">'cy'</span>
-}) }}</code>
-                </pre>
             </div>
           </div>
       </div>
@@ -336,22 +325,16 @@ When not to use
 
 <h2 id="research" class="govuk-heading-l">Research</h2>
 
-<p class="govuk-body">
-
-The pattern is used in the VAT repaymeents service and was tested with 7 users across 3 rounds. Research has shown that users:</p>
-
- <ul class="govuk-list govuk-list--bullet" role="list">
-<li> understood that events were connected to one another on a timeline, with one event following another </li>
-<li> easily identified that the top event was the most recent;</li>
-<li>on smaller screens had a similar experience to those on larger devices</li>
+<p class="govuk-body">The pattern is used in the VAT repayments service. Usability testing took place with 7 users as part of 3 rounds of research.</p>
+<p class="govuk-body">The rearch showed that users understood that the:</p>
+<ul class="govuk-list govuk-list--bullet" role="list">
+  <li>all the events were related to each other</li>
+  <li>each event followed a previous event</li>
+  <li>the top event was the most recent one</li>
 </ul>
 
-<p class="govuk-body">
-We need more research. If you have used the Timeline pattern, get in touch to share your research findings.
-</p>
-<p class="govuk-body">
-  <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/167">Discuss Timeline on GitHub</a>
-</p>
+<p class="govuk-body">We need more research. If you have used the Timeline pattern, get in touch to share your research findings.</p>
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/167">Discuss Timeline on GitHub</a></p>
 </div>
         </div>
       </main>
