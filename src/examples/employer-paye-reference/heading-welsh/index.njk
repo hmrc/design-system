@@ -1,0 +1,26 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{
+  govukInput({
+    label: {
+      text: "Beth yw cyfeirnod TWE y cyflogwr ar gyfer Anycompany?",
+      isPageHeading: true,
+      classes: "govuk-label--xl"
+    },
+    hint: {
+      text: 'Rhif swyddfa dreth 3 digid yw hwn, wedi’i ddilyn gan flaenslaes a chyfeirnod cyflogwr gan y swyddfa dreth, megis 123/AB456. Mae’n bosibl y cyfeirir ato fel ‘Cyfeirnod TWE y Cyflogwr’ neu fel ‘Cyfeirnod TWE’. Bydd hwn ar eich P60.'
+    },
+    id: "employer-paye-reference",
+    name: "employer-paye-reference",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}
