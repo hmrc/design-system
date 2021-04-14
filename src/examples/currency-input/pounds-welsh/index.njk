@@ -1,0 +1,27 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukInput({
+  id: "currency",
+  name: "currency",
+  label: {
+    text: "Faint mae’ch cyflogwr yn ei dalu tuag at hyn?",
+    isPageHeading: false
+  },
+  hint: {
+    text: "Er enghraifft, £600 neu £193.54."
+  },
+  prefix: {
+    text: "£"
+  },
+  classes: "govuk-input--width-10",
+  spellcheck: false
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}
