@@ -1,0 +1,35 @@
+---
+layout: layout-example.njk
+---
+
+{%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
+
+{{
+  hmrcAddToAList({
+    language: 'cy',
+    itemList: [
+      {
+        name: 'Sydney Russell',
+        changeUrl: '#',
+        removeUrl: '#'
+      },
+      {
+        name: 'Michael Cain',
+        changeUrl: '#',
+        removeUrl: '#'
+      },
+      {
+        name: 'Jeremy Winter',
+        changeUrl: '#',
+        removeUrl: '#'
+      }
+    ],
+    itemType: {
+      singular: 'director',
+      plural: 'directors',
+      formAction: '#'
+    },
+    hintText: 'You must tell us about all your directors.'
+  })
+}}
+
