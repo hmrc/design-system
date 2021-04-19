@@ -4,6 +4,13 @@ layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
 
+{% from "_codeSnippet.njk" import codeSnippet %}
+<p class="govuk-body">Pattern overview</p>
+{{ example({
+    item: 'green-button',
+    example: 'example',
+    description: 'Green button'
+}) }}
 <h2 class="govuk-heading-l">When to use</h2>
 
 <p class="govuk-body">You should only use this pattern:</p>
@@ -16,16 +23,17 @@ layout: twoColumnPage.njk
   <li>where all users could complete their task using the green button</li>
 </ul>
 
-<p class="govuk-body">
+
+<div class="govuk-inset-text">
   You must send a request to Editorial Board if you want to use a green button in your content. Include a
   draft of the content to demonstrate:
-</p>
-
 <ul class="govuk-list govuk-list--bullet">
   <li>where the button will appear</li>
   <li>the button text</li>
   <li>where the button will link to</li>
 </ul>
+
+</div>
 
 <h2 class="govuk-heading-l">When not to use</h2>
 
@@ -38,7 +46,6 @@ layout: twoColumnPage.njk
 
 <h2 class="govuk-heading-l">How it works</h2>
 
-<h3 class="govuk-heading-m">Where to place the button</h3>
 
 <p class="govuk-body">To decide where to place the button on the page you should consider:</p>
 
@@ -62,14 +69,13 @@ layout: twoColumnPage.njk
   <li>Apply now</li>
 </ul>
 
+  {{
+    codeSnippet({
+      code: '{button start}[Start now](){/button}',
+      canCopy: true
+    })
+  }}
 
-<h2 class="govuk-heading-l">Markdown</h2>
-
-{{ example({
-    item: 'green-button',
-    example: 'example',
-    description: 'Green button'
-}) }}
 
 <h3 class="govuk-heading-m">Adding analytics</h3>
 
@@ -78,11 +84,15 @@ layout: twoColumnPage.njk
   code from the digital service team and use this markdown:
 </p>
 
-<p class="govuk-body">
-  <code>
-    {button start cross-domain-tracking:UA-XXXXXX-Y}[Start now](){/button}
-  </code>
-</p>
+
+
+  {{
+    codeSnippet({
+      code: '  {button start cross-domain-tracking:UA-XXXXXX-Y}[Start now](){/button}',
+      canCopy: true
+    })
+  }}
+
 
 <h2 class="govuk-heading-l">If you need to change this pattern</h2>
 
