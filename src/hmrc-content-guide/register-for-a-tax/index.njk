@@ -5,7 +5,7 @@ layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
 
-<h2 class="govuk-heading-l">When to use</h2>
+
 
 <p class="govuk-body">
   Use this pattern when a user needs to register for a tax, duty or levy only once or not very often.
@@ -44,7 +44,16 @@ layout: twoColumnPage.njk
 
 <h2 class="govuk-heading-l">Markdown</h2>
 
-
+{{
+    codeSnippet({
+      code: '## Who should register
+            ## When to register
+            ## What you'll need
+            ## How to register',
+      canCopy: true,
+      isSafe: true
+    })
+  }}
 
 {{ example({
     item: 'register-for-a-tax',
