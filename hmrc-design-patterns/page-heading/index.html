@@ -221,6 +221,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/page-heading/without-subheading/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Page heading without subheading example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/page-heading/without-subheading-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Page heading without subheading example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/page-heading/without-subheading/" title="Page heading without subheading example"></iframe>
     </div>
@@ -253,6 +263,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -270,6 +285,13 @@
 }) }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Beth yw’ch enw?"</span>
+}) }}</code>
+                </pre>
             </div>
           </div>
       </div>
@@ -291,6 +313,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/page-heading/with-subheading/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Page heading with subheading example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/page-heading/with-subheading-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Page heading with subheading example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/page-heading/with-subheading/" title="Page heading with subheading example"></iframe>
     </div>
@@ -324,6 +356,12 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-caption-xl hmrc-caption-xl"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Manylion personol<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -342,6 +380,14 @@
 }) }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Beth yw’ch enw?"</span>,
+  <span class="hljs-attr">section</span>: <span class="hljs-string">"Manylion personol"</span>
+}) }}</code>
+                </pre>
             </div>
           </div>
       </div>
