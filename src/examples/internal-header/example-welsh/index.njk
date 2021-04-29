@@ -1,0 +1,11 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/internal-header/macro.njk"  import hmrcInternalHeader %}
+
+
+{{ hmrcInternalHeader({
+  homepageUrl: 'https://www.gov.uk/government/organisations/hm-revenue-customs',
+  serviceName: 'Enw’r gwasanaeth',
+  serviceUrl: '#'
+}) }}

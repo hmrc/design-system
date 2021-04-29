@@ -1,0 +1,97 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "Beth yw enw’r cyfarwyddwr?"
+            },
+            value: {
+              text: "Elizabeth Kean"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Newid",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Beth yw dyddiad geni Elizabeth Kean?"
+            },
+            value: {
+              text: "12 October 1984"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Newid",
+                  visuallyHiddenText: "date of birth"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "A oes gan Elizabeth Kean rif Yswiriant Gwladol?"
+            },
+            value: {
+              html: "Iawn"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Newid",
+                  visuallyHiddenText: "if they have National Insurance number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Rhif Yswiriant Gwladol"
+            },
+            value: {
+              text: 'QQ 12 34 56 C'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Newid",
+                  visuallyHiddenText: "National Insurance number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <form action="/form-handler" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Yn eich blaen"
+        }) }}
+
+      </form>
+    </div>
+  </div>

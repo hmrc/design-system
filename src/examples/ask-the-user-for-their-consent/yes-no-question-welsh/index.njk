@@ -1,0 +1,32 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "paperless",
+  name: "paperless",
+  fieldset: {
+    legend: {
+      text: "A hoffech gyfathrebu â CThEM drwy ddull electronig, yn hytrach nag ar bapur?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Iawn"
+    },
+    {
+      value: "no",
+      text: "Na"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}
