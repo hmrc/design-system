@@ -239,6 +239,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/ask-the-user-for-their-consent/yes-no-question/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Ask a yes-no question example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/ask-the-user-for-their-consent/yes-no-question-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Ask a yes-no question example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/ask-the-user-for-their-consent/yes-no-question/" title="Ask a yes-no question example"></iframe>
     </div>
@@ -296,6 +306,36 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>
+        A hoffech gyfathrebu â CThEM drwy ddull electronig, yn hytrach nag ar bapur?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios govuk-radios--inline"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"paperless"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"paperless"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"yes"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"paperless"</span>&gt;</span>
+          Iawn
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-radios__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"paperless-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"paperless"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"no"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-radios__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"paperless-2"</span>&gt;</span>
+          Na
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Yn eich blaen
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -337,6 +377,37 @@
 }) }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/radios/macro.njk"</span> <span class="hljs-keyword">import</span> govukRadios %}
+
+{{ govukRadios({
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-radios--inline"</span>,
+  <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"paperless"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"paperless"</span>,
+  <span class="hljs-attr">fieldset</span>: {
+    <span class="hljs-attr">legend</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"A hoffech gyfathrebu â CThEM drwy ddull electronig, yn hytrach nag ar bapur?"</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-fieldset__legend--xl"</span>
+    }
+  },
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"yes"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Iawn"</span>
+    },
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"no"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Na"</span>
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Yn eich blaen"</span>
+}) }}</code>
+                </pre>
             </div>
           </div>
       </div>
@@ -358,6 +429,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/ask-the-user-for-their-consent/single-checkbox/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Use a single checkbox example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/ask-the-user-for-their-consent/single-checkbox-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Use a single checkbox example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/ask-the-user-for-their-consent/single-checkbox/" title="Use a single checkbox example"></iframe>
     </div>
@@ -407,6 +488,28 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"access-code"</span>&gt;</span>
+    Cod cyrchu
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"access-code"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"access-code"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"access-code-7-days"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"access-code-7-days"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Keep for 7 days"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"access-code-7-days"</span>&gt;</span>
+        Cofiwch y cod cyrchu hwn am 7 diwrnod
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Yn eich blaen
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -446,6 +549,35 @@
 }) }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+
+{{ govukInput({
+  <span class="hljs-attr">label</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">"Cod cyrchu"</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">"access-code"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"access-code"</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>
+}) }}
+
+{{ govukCheckboxes({
+  <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"access-code-7-days"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"access-code-7-days"</span>,
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"Keep for 7 days"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Cofiwch y cod cyrchu hwn am 7 diwrnod"</span>
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Yn eich blaen"</span>
+}) }}</code>
+                </pre>
             </div>
           </div>
       </div>
@@ -469,6 +601,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/ask-the-user-for-their-consent/multiple-checkboxes/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Use more than one checkbox example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/ask-the-user-for-their-consent/multiple-checkboxes-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Use more than one checkbox example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/ask-the-user-for-their-consent/multiple-checkboxes/" title="Use more than one checkbox example"></iframe>
     </div>
@@ -526,6 +668,36 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__legend govuk-fieldset__legend--xl"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-fieldset__heading"</span>&gt;</span>
+        Nodwch eich dewisiadau
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"paperless"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"mixed"</span>&gt;</span>
+          Hoffwn gyfathrebu â CThEM drwy ddull electronig, yn hytrach nag ar bapur
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-checkboxes__input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"mixed-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mixed"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"access-code-7-days"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-checkboxes__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"mixed-2"</span>&gt;</span>
+          Cofiwch y cod cyrchu hwn am 7 diwrnod
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Yn eich blaen
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -565,6 +737,35 @@
 }) }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/checkboxes/macro.njk"</span> <span class="hljs-keyword">import</span> govukCheckboxes %}
+
+{{ govukCheckboxes({
+  <span class="hljs-attr">idPrefix</span>: <span class="hljs-string">"mixed"</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"mixed"</span>,
+  <span class="hljs-attr">fieldset</span>: {
+    <span class="hljs-attr">legend</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Nodwch eich dewisiadau"</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-fieldset__legend--xl"</span>
+    }
+  },
+  <span class="hljs-attr">items</span>: [
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"paperless"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Hoffwn gyfathrebu â CThEM drwy ddull electronig, yn hytrach nag ar bapur"</span>
+    },
+    {
+      <span class="hljs-attr">value</span>: <span class="hljs-string">"access-code-7-days"</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Cofiwch y cod cyrchu hwn am 7 diwrnod"</span>
+    }
+  ]
+}) }}
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Yn eich blaen"</span>
+}) }}</code>
+                </pre>
             </div>
           </div>
       </div>

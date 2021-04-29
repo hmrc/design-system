@@ -246,6 +246,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/vat-registration-number/heading/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display VAT registration number as main heading example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/vat-registration-number/heading-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display VAT registration number as main heading example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/vat-registration-number/heading/" title="VAT registration number as main heading example"></iframe>
     </div>
@@ -289,6 +299,22 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label-wrapper"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label govuk-label--xl"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"vat-registration-number"</span>&gt;</span>
+      Beth yw rhif cofrestru TAW Anycompany?
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"vat-registration-number-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+    9 rhif yw hwn, weithiau â ‘GB’ ar y dechrau. Er enghraifft 123456789 neu GB123456789. Mae hwn i’w weld ar dystysgrif cofrestru TAW Anycompany.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"vat-registration-number"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vat-registration-number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"vat-registration-number-hint"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>
+  Yn eich blaen
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -323,6 +349,30 @@
 }) }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/button/macro.njk"</span> <span class="hljs-keyword">import</span> govukButton %}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Beth yw rhif cofrestru TAW Anycompany?"</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-label--xl"</span>
+    },
+    <span class="hljs-attr">hint</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'9 rhif yw hwn, weithiau â ‘GB’ ar y dechrau. Er enghraifft 123456789 neu GB123456789. Mae hwn i’w weld ar dystysgrif cofrestru TAW Anycompany.'</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"vat-registration-number"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"vat-registration-number"</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>
+  })
+}}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Yn eich blaen"</span>
+}) }}</code>
+                </pre>
             </div>
           </div>
       </div>
@@ -346,6 +396,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/vat-registration-number/label/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display VAT registration number as form label example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/vat-registration-number/label-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display VAT registration number as form label example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/vat-registration-number/label/" title="VAT registration number as form label example"></iframe>
     </div>
@@ -384,6 +444,17 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"vat-registration-number"</span>&gt;</span>
+    Rhif cofrestru TAW
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"vat-registration-number-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+    9 rhif yw hwn, weithiau â ‘GB’ ar y dechrau. Er enghraifft 123456789 neu GB123456789. Mae hwn i’w weld ar eich tystysgrif cofrestru TAW.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"vat-registration-number"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vat-registration-number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"vat-registration-number-hint"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -411,6 +482,23 @@
 }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">"Rhif cofrestru TAW"</span>
+    },
+    <span class="hljs-attr">hint</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'9 rhif yw hwn, weithiau â ‘GB’ ar y dechrau. Er enghraifft 123456789 neu GB123456789. Mae hwn i’w weld ar eich tystysgrif cofrestru TAW.'</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"vat-registration-number"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"vat-registration-number"</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">"govuk-input--width-10"</span>
+  })
+}}</code>
+                </pre>
             </div>
           </div>
       </div>
@@ -474,6 +562,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/vat-registration-number/label-error/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display VAT registration number with error example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/vat-registration-number/label-error-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display VAT registration number with error example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/vat-registration-number/label-error/" title="VAT registration number with error example"></iframe>
     </div>
@@ -515,6 +613,20 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group govuk-form-group--error"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"vat-registration-number"</span>&gt;</span>
+    Rhif cofrestru TAW
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"vat-registration-number-hint"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-hint"</span>&gt;</span>
+    9 rhif yw hwn, weithiau â ‘GB’ ar y dechrau. Er enghraifft 123456789 neu GB123456789. Mae hwn i’w weld ar eich tystysgrif cofrestru TAW.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"vat-registration-number-error"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-error-message"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Gwall:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Nodwch eich rhif cofrestru TAW
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-input--width-10 govuk-input--error"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"vat-registration-number"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vat-registration-number"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"vat-registration-number-hint vat-registration-number-error"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -545,6 +657,27 @@
 }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"govuk/components/input/macro.njk"</span> <span class="hljs-keyword">import</span> govukInput %}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'Rhif cofrestru TAW'</span>
+    },
+    <span class="hljs-attr">hint</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'9 rhif yw hwn, weithiau â ‘GB’ ar y dechrau. Er enghraifft 123456789 neu GB123456789. Mae hwn i’w weld ar eich tystysgrif cofrestru TAW.'</span>
+    },
+    <span class="hljs-attr">errorMessage</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'Nodwch eich rhif cofrestru TAW'</span>,
+      <span class="hljs-attr">visuallyHiddenText</span>: <span class="hljs-string">'Gwall'</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">'vat-registration-number'</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'vat-registration-number'</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">'govuk-input--width-10'</span>
+  })
+}}</code>
+                </pre>
             </div>
           </div>
       </div>

@@ -229,6 +229,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/notification-badge/with-items/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Badge with notifications example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/notification-badge/with-items-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Badge with notifications example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/notification-badge/with-items/" title="Badge with notifications example"></iframe>
     </div>
@@ -260,6 +270,10 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Negeseuon <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-notification-badge"</span>&gt;</span>32<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -275,6 +289,11 @@
 &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Messages {{ hmrcNotificationBadge({ <span class="hljs-attr">text</span>: <span class="hljs-string">'32'</span> }) }}&lt;<span class="hljs-regexp">/a&gt;</span></code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
+
+&lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Negeseuon {{ hmrcNotificationBadge({ <span class="hljs-attr">text</span>: <span class="hljs-string">'32'</span> }) }}&lt;<span class="hljs-regexp">/a&gt;</span></code>
+                </pre>
             </div>
           </div>
       </div>
@@ -298,6 +317,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/notification-badge/no-items/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Badge without notifications example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/notification-badge/no-items-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Badge without notifications example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/notification-badge/no-items/" title="Badge without notifications example"></iframe>
     </div>
@@ -328,6 +357,9 @@
               <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Messages <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Negeseuon <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -343,6 +375,11 @@
 &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Messages {{ hmrcNotificationBadge() }}&lt;<span class="hljs-regexp">/a&gt;</span></code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/notification-badge/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcNotificationBadge -%}
+
+&lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-link"</span> href=<span class="hljs-string">"#"</span>&gt;Negeseuon {{ hmrcNotificationBadge() }}&lt;<span class="hljs-regexp">/a&gt;</span></code>
+                </pre>
             </div>
           </div>
       </div>

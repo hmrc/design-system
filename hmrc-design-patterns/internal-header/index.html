@@ -231,6 +231,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/internal-header/example/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Internal header example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/internal-header/example-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Internal header example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/internal-header/example/" title="Internal header example"></iframe>
     </div>
@@ -272,6 +282,20 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
             </pre>
 
+              <pre class="app-example__language-switch--cy-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-internal-header"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-internal-header__logo"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.gov.uk/government/organisations/hm-revenue-customs"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-internal-header__logo-link"</span>&gt;</span>
+      HM Revenue &amp;amp; Customs
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-internal-header__service-name"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-internal-header__link"</span>&gt;</span>
+      Enw’r gwasanaeth
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+              </pre>
           </div>
         </div>
 
@@ -292,6 +316,16 @@
 }) }}</code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/internal-header/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcInternalHeader %}
+
+
+{{ hmrcInternalHeader({
+  <span class="hljs-attr">homepageUrl</span>: <span class="hljs-string">'https://www.gov.uk/government/organisations/hm-revenue-customs'</span>,
+  <span class="hljs-attr">serviceName</span>: <span class="hljs-string">'Enw’r gwasanaeth'</span>,
+  <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">'#'</span>
+}) }}</code>
+                </pre>
             </div>
           </div>
       </div>
