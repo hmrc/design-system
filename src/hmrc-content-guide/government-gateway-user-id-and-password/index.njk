@@ -1,0 +1,75 @@
+---
+title: Government Gateway user ID and password
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+{% from "_codeSnippet.njk" import codeSnippet %}
+<p class="govuk-body">Use this component when you're linking to a service that requires the user to sign in using Government Gateway.</p>
+
+
+<h3 class="govuk-heading-m">Where to place this component</h3>
+
+<p class="govuk-body">
+You should place this component before the link to the service, unless there's a design pattern that says different.
+</p>
+
+<p class="govuk-body">
+Force of law text should be put at the point the user needs to know it to complete their task.
+</p>
+
+
+<h3 class="govuk-heading-m">Create it in Whitehall</h3>
+
+<h4 class="govuk-heading-s">Option 1</h4>
+<p class="govuk-body">
+Use this option for most services.
+</p>
+<pre class="language-example-code">
+To XXX, you need a Government Gateway user ID and password. If you do not have a user ID, you can create one when you XXX.
+</pre>
+
+{{ example({
+    item: 'government-gateway-user-id-and-password',
+    example: 'example-1',
+    description: 'Government gateway user id and password',
+    hideTabs: true
+}) }}
+
+
+<h4 class="govuk-heading-s">Option 2</h4>
+<p class="govuk-body">
+Use this option if the user needs to use specific credentials. For example, if they must use the user ID and password they created when they registered for a tax, or enrolled for online service.
+</p>
+<pre class="language-example-code">
+You’ll need the Government Gateway user ID and password you used when you XXX.
+</pre>
+
+{{ example({
+  item: 'government-gateway-user-id-and-password',
+  example: 'example-2',
+  description: 'Government gateway user id and password',
+    hideTabs: true
+}) }}
+
+<h4 class="govuk-heading-s">Option 3</h4>
+<p class="govuk-body">
+Use this option in links to services from publication pages which use an external link attachment.
+</p>
+<pre class="language-example-code">
+ XXX online (sign in using Government Gateway)
+</pre>
+
+
+{{ example({
+    item: 'government-gateway-user-id-and-password',
+    example: 'example-3',
+    description: 'Government gateway user id and password',
+    hideTabs: true
+}) }}
+
+
+
+<h2 class="govuk-heading-l">If you need to change this pattern</h2>
+
+<p class="govuk-body">You should send a request to the Editorial Board if you need to change this pattern.</p>
