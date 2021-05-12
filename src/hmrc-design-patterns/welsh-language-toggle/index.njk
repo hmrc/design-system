@@ -6,6 +6,7 @@ layout: twoColumnPage.njk
 
 {% from "_example.njk" import example %}
 {% from "_codeSnippet.njk" import codeSnippet %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
 {% block content %}
 
@@ -25,6 +26,7 @@ layout: twoColumnPage.njk
 
 <h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
 
+{{ hmrcFrontendInfo() }}
 
 <p class="govuk-body"> Put the Welsh language toggle  on the right hand side below the: </p>
 <ul class="govuk-list govuk-list--bullet">
@@ -34,11 +36,6 @@ layout: twoColumnPage.njk
 </ul>
 
 <p class="govuk-body"> The Welsh language toggle must be above the <a class="govuk-link" href="https://design-system.service.gov.uk/components/back-link/">back link</a>.</p>
-<div class="govuk-inset-text">
-  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
-</div>
-
-
 
 {{
   example({

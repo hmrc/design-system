@@ -3,6 +3,7 @@ title: Add to a list
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
 {% block content %}
 
@@ -16,7 +17,9 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">Do not use this pattern when the user needs to add different kinds of information that do not relate to each other.</p>
 
-<h2 class="govuk-heading-l" id="how-it-works">​How it works</h2>
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+{{ hmrcFrontendInfo() }}
 
 <p class="govuk-body">Allow the user to:</p>
 
@@ -27,10 +30,6 @@ layout: twoColumnPage.njk
   <li>change things on the list</li>
   <li>remove things from the list</li>
 </ul>
-
-<div class="govuk-inset-text">
-  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
-</div>
 
 <h3 class="govuk-heading-m" id="view-a-summary">View a summary of what they have added to the list</h3>
 

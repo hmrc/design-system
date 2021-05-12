@@ -6,6 +6,7 @@ layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
 {% from "_codeSnippet.njk" import codeSnippet %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
 {% block content %}
 
@@ -16,6 +17,8 @@ layout: twoColumnPage.njk
 <p class="govuk-body">We time the user out when they do not do anything for 15 minutes. Warn them after 13 minutes, which gives them 2 minutes to decide to keep using the service.</p>
 
 <h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+{{ hmrcFrontendInfo() }}
 
 <p class="govuk-body">Use an accessible dialog box that appears on top of the page. This stops them using the screen with a mouse or keyboard until they select an option or press the escape key.</p>
 

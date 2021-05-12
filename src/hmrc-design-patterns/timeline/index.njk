@@ -5,6 +5,7 @@ status: experimental
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
 {% block content %}
 <p class="govuk-body">This pattern helps users understand what has happened and when. For example, the history of a tax repayment claim.</p>
@@ -18,6 +19,8 @@ layout: twoColumnPage.njk
 
 <h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
 
+{{ hmrcFrontendInfo() }}
+
 <p class="govuk-body">Each item in the timeline should have:</p>
 <ul class="govuk-list govuk-list--bullet" role="list">
   <li>a title</li>
@@ -25,10 +28,6 @@ layout: twoColumnPage.njk
 </ul>
 
 <p class="govuk-body">You could also include a brief description, but this is optional.</p>
-
-<div class="govuk-inset-text">
-  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
-</div>
 
 {{
   example({

@@ -4,11 +4,9 @@ menuText: HMRC banner
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
-
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
 {% block content %}
-
-
 <p class="govuk-body">
   The HMRC banner shows external users that they are dealing with HMRC.
 </p>
@@ -30,11 +28,9 @@ When not to use
 
 </ul>
 
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
 
-
-<h2 class="govuk-heading-l" id="how-it-works">
-  How it works
-</h2>
+{{ hmrcFrontendInfo() }}
 
 <p class="govuk-body">
   The HMRC banner should sit below the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> and the <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">Phase banner</a>, and above the <a class="govuk-link" href="../welsh-language-toggle">Welsh language toggle</a>.</p>
@@ -43,10 +39,6 @@ When not to use
 <li>the HMRC logo</li>
 <li>a vertical teal bar on the left side</li>
 </ul>
-
-<div class="govuk-inset-text">
-  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro in to your code.
-</div>
 
   {{
     example({
