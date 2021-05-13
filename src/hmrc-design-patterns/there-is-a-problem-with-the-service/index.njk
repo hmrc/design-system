@@ -5,6 +5,7 @@ layout: twoColumnPage.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
 {% block content %}
 
@@ -14,6 +15,8 @@ layout: twoColumnPage.njk
 <p class="govuk-body">
   The GOV.UK Design System does not contain Welsh translations yet. These examples include recommended content in Welsh.
 </p>
+
+{{ hmrcFrontendInfo() }}
 
 <h2 class="govuk-heading-m" id="default-page">
   General page

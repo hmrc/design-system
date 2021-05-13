@@ -6,6 +6,7 @@ layout: twoColumnPage.njk
 
 {% from "_example.njk" import example %}
 {% from "_codeSnippet.njk" import codeSnippet %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
 {% block content %}
 
@@ -33,6 +34,8 @@ layout: twoColumnPage.njk
 
 <h2 id="when-to-use" class="govuk-heading-l">How it works</h2>
 
+{{ hmrcFrontendInfo() }}
+
 <p class="govuk-body">Start with using the GOV.UK <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/task-list-pages/">Task list pages</a> pattern. Make sure you word the tasks using active verbs where possible.</p>
 
 <p class="govuk-body">Use simple text in sentence case, unless there is a strong user need to support the need for coloured boxes. Use:</p>
@@ -48,10 +51,6 @@ layout: twoColumnPage.njk
 <p class="govuk-body">These instructions tell you how to amend or add to the code of the GOV.UK Task list pages to use Status tags.</p>
 
 <p class="govuk-body">You can find the code for the Task list pages pattern in the /docs/views/templates folder of the <a class="govuk-link" href="https://govuk-prototype-kit.herokuapp.com/docs">GOV.UK Prototype Kit</a>.
-
-<div class="govuk-inset-text">
-  You need HMRC Frontend to use this pattern – <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>.
-</div>
 
 <h4 class="govuk-heading-s" id="when-to-use">Not started</h4>
 
