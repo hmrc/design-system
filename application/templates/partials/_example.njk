@@ -124,14 +124,6 @@
                   {{- getHTMLCode(markdownExamplePath) | highlight('md') | safe -}}
                 </code>
               </pre>
-
-              {% if welshExamplePath %}
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs md">
-                    {{- getHTMLCode(welshExamplePath) | highlight('md') | safe -}}
-                  </code>
-                </pre>
-              {% endif %}
             </div>
           </div>
         {% endif %}
