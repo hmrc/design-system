@@ -1578,6 +1578,11 @@
 	    displayDialog: displayDialog
 	  };
 
+	  // Polyfill from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
+	  Number.isNaN = Number.isNaN || function isNaN(input) {
+	    return typeof input === 'number' && input !== input;
+	  };
+
 	  function ValidateInput() {}
 
 	  ValidateInput["int"] = function (stringToValidate) {
@@ -3164,11 +3169,10 @@
 	      new UserResearchBanner($UserResearchBanner).init();
 	    }
 
-	    var $CharacterCount = document.querySelector('[data-module="hmrc-character-count"]');
-
-	    if ($CharacterCount) {
+	    var $CharacterCounts = document.querySelectorAll('[data-module="hmrc-character-count"]');
+	    nodeListForEach($CharacterCounts, function ($CharacterCount) {
 	      new CharacterCount($CharacterCount).init();
-	    }
+	    });
 	  }
 
 	  var all = {
