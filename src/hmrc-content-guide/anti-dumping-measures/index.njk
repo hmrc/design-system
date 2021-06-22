@@ -2,6 +2,7 @@
 title: Anti-dumping duty measures
 layout: twoColumnPage.njk
 ---
+{% from "_codeSnippet.njk" import codeSnippet %}
 
 <h2 class="govuk-heading-l">Document type</h2>
 
@@ -45,9 +46,12 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">Enter this text:</p>
 
-<pre class="language-example-code">
-  Anti-dumping duty is an import duty charged in addition to normal Customs Duty and is applied in the UK and across the whole EU. It’s designed to allow the UK and EU to take action against goods that are sold at less than their normal value – that being defined as the price for ‘like goods’ sold in the exporter’s home market.
-</pre>
+  {{
+    codeSnippet({
+      code: 'Anti-dumping duty is an import duty charged in addition to normal Customs Duty and is applied in the UK and across the whole EU. It’s designed to allow the UK and EU to take action against goods that are sold at less than their normal value – that being defined as the price for ‘like goods’ sold in the exporter’s home market.',
+      canCopy: true
+    })
+  }}
 
 <h3 class="govuk-heading-m">HTML attachment</h3>
 
