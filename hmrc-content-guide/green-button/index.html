@@ -112,7 +112,7 @@
 </ul>
 
 <p class="govuk-body">
-  You must send a request to Editorial Board if you want to use a green button in your content. Include a
+  You must send a request to Editorial Board if you want to use a green button that isn't part of an agreed design pattern. Include a
   draft of the content to demonstrate:
 </p>
 
@@ -158,9 +158,6 @@
 </ul>
 
 
-<h2 class="govuk-heading-l">Markdown</h2>
-
-
 
 
 
@@ -180,17 +177,12 @@
       <div class="example-example-example-lang example-example-example-lang--en ">
         <span id="options-example-example"></span>
         <ul class="app-tabs" role="tablist">
-            <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-example-html" role="tab"
-                aria-controls="example-example-html"
-                data-track="tab-html" title="Display Green button example as HTML">HTML</a>
-            </li>
-              <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-example-nunjucks" role="tab"
-                  aria-controls="example-example-nunjucks"
-                  data-track="tab-nunjucks" title="Display Green button example as Nunjucks">Nunjucks</a>
-              </li>
 
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-example-markdown" role="tab"
+                  aria-controls="example-example-markdown"
+                  data-track="tab-markdown" title="Display Green button example as Markdown">Markdown</a>
+              </li>
         </ul>
 
         <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
@@ -258,6 +250,17 @@
             </div>
           </div>
 
+          <div class="app-tabs__container js-tabs__container" id="example-example-markdown" role="tabpanel">
+              <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs md">{button start}</code>
+              </pre>
+            </div>
+          </div>
       </div>
 
   </div>
@@ -271,11 +274,14 @@
   code from the digital service team and use this markdown:
 </p>
 
-<p class="govuk-body">
-  <code>
-    {button start cross-domain-tracking:UA-XXXXXX-Y}[Start now](){/button}
-  </code>
-</p>
+      <div class="app-code-snippet app-code-snippet--copy">
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+      <pre><code class="govuk-body-s">{button start cross-domain-tracking:UA-XXXXXX-Y}[Start now](){/button}</code></pre>
+    </div>
+
 
 <h2 class="govuk-heading-l">If you need to change this pattern</h2>
 
