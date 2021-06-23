@@ -2,6 +2,7 @@
 title: 'Exchange rates: yearly averages and spot rates'
 layout: twoColumnPage.njk
 ---
+{% from "_codeSnippet.njk" import codeSnippet %}
 
 <h2 class="govuk-heading-l">Document type</h2>
 
@@ -12,8 +13,7 @@ layout: twoColumnPage.njk
 <p class="govuk-body">
   Add the page to the
   <a href="https://www.gov.uk/government/collections/rates-and-allowances-hm-revenue-and-customs" class="govuk-link">
-    Rates and Allowances: HM Revenue and Customs collection
-  </a> page.
+    Rates and Allowances: HM Revenue and Customs collection</a> page.
 </p>
 
 <h2 class="govuk-heading-l">How it works</h2>
@@ -24,25 +24,34 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">Enter this text:</p>
 
-<pre class="language-example-code">
-  HMRC foreign exchange rates: yearly averages and spot rates
-</pre>
+  {{
+    codeSnippet({
+      code: 'HMRC foreign exchange rates: yearly averages and spot rates',
+      canCopy: true
+    })
+  }}
 
 <h4 class="govuk-heading-s">Summary</h4>
 
 <p class="govuk-body">Enter this text:</p>
 
-<pre class="language-example-code">
-  Find current and historical foreign rates of exchange
-</pre>
+  {{
+    codeSnippet({
+      code: 'Find current and historical foreign rates of exchange',
+      canCopy: true
+    })
+  }}
 
 <h4 class="govuk-heading-s">Details</h4>
 
 <p class="govuk-body">Enter this text:</p>
 
-<pre class="language-example-code">
-  The average yearly exchange rates data is based on figures published in the Financial Times
-</pre>
+  {{
+    codeSnippet({
+      code: 'The average yearly exchange rates data is based on figures published in the Financial Times',
+      canCopy: true
+    })
+  }}
 
 <h3 class="govuk-heading-m">CSV attachment</h3>
 
@@ -52,19 +61,25 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">For the yearly averages:</p>
 
-<pre class="language-example-code">
-  Average for the year to [date]
-</pre>
+  {{
+    codeSnippet({
+      code: 'Average for the year to [date]',
+      canCopy: true
+    })
+  }}
 
-<p class="govuk-body">For example, ‘Average for the year to 31 March 2017’.</p>
+<p class="govuk-body">For example, ‘Average for the year to 31 March 2020’.</p>
 
 <p class="govuk-body">For spot rates:</p>
 
-<pre class="language-example-code">
-  Spot rates on [date] and [date]
-</pre>
+  {{
+    codeSnippet({
+      code: 'Spot rates on [date] and [date]',
+      canCopy: true
+    })
+  }}
 
-<p class="govuk-body">For example, ‘Spot rates on 31 December 2016 and 31 March 2017’.</p>
+<p class="govuk-body">For example, ‘Spot rates on 31 December 2020 and 31 March 2021’.</p>
 
 <h4 class="govuk-heading-s">Column headings</h4>
 

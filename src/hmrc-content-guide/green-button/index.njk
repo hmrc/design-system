@@ -3,6 +3,7 @@ title: Green button
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
+{% from "_codeSnippet.njk" import codeSnippet %}
 
 <h2 class="govuk-heading-l">When to use</h2>
 
@@ -17,7 +18,7 @@ layout: twoColumnPage.njk
 </ul>
 
 <p class="govuk-body">
-  You must send a request to Editorial Board if you want to use a green button in your content. Include a
+  You must send a request to Editorial Board if you want to use a green button that isn't part of an agreed design pattern. Include a
   draft of the content to demonstrate:
 </p>
 
@@ -62,13 +63,12 @@ layout: twoColumnPage.njk
   <li>Apply now</li>
 </ul>
 
-
-<h2 class="govuk-heading-l">Markdown</h2>
-
 {{ example({
     item: 'green-button',
     example: 'example',
-    description: 'Green button'
+    description: 'Green button',
+    markdown: 'example-markdown',
+    markdownOnly: true
 }) }}
 
 <h3 class="govuk-heading-m">Adding analytics</h3>
@@ -78,11 +78,12 @@ layout: twoColumnPage.njk
   code from the digital service team and use this markdown:
 </p>
 
-<p class="govuk-body">
-  <code>
-    {button start cross-domain-tracking:UA-XXXXXX-Y}[Start now](){/button}
-  </code>
-</p>
+  {{
+    codeSnippet({
+      code: '{button start cross-domain-tracking:UA-XXXXXX-Y}[Start now](){/button}',
+      canCopy: true
+    })
+  }}
 
 <h2 class="govuk-heading-l">If you need to change this pattern</h2>
 
