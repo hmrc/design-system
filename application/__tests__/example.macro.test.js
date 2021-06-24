@@ -59,11 +59,13 @@ const documentFactory = function (parameters, options) {
 describe('Single page example macro', () => {
   const parameters = { item: 'open-links-in-a-new-window-or-tab', example: 'example' }
   const document = documentFactory(parameters, options)
+  const markdownParameters = { item: 'green-button', example: 'example', markdown: 'example-markdown' }
 
   const exampleSrc = '/examples/open-links-in-a-new-window-or-tab/example/'
 
   const htmlPanelID = 'example-example-html'
   const nunjucksPanelID = 'example-example-nunjucks'
+  const markdownPanelID = 'example-example-markdown'
 
   const exampleFrame = document.querySelector('#example-example iframe')
   const exampleLink = document.querySelector('.app-example__link a')
@@ -80,12 +82,12 @@ describe('Single page example macro', () => {
     expect(exampleLink.target).toBe('_blank')
   })
 
-  it('Should not have a language toggle for English only examples', () => {
+  it('should not have a language toggle for English only examples', () => {
     const languageToggleLink = document.querySelector('a.language-toggle')
     expect(languageToggleLink).toBeNull()
   })
 
-  it('Should have a language toggle for dual language examples', () => {
+  it('should have a language toggle for dual language examples', () => {
     const welshParameters = { ...parameters, welsh: 'example-welsh' }
     const welshDocument = documentFactory(welshParameters, options)
     const languageToggleLink = welshDocument.querySelector('a[href="/examples/open-links-in-a-new-window-or-tab/example-welsh/"]')
@@ -130,7 +132,30 @@ describe('Single page example macro', () => {
     expect(copyButton.text).toBe('Copy')
   })
 
-  it('should not have a button to show Nunjucks code examples if the htmlOnly flag is true', () => {
+  it('should have a button to show Markdown code examples', () => {
+    const markdownDocument = documentFactory(markdownParameters, options)
+    const tabLink = markdownDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${markdownPanelID}"]`)
+    const tabContentContainer = markdownDocument.getElementById(markdownPanelID)
+
+    expect(tabContentContainer).not.toBeNull()
+    expect(tabLink).not.toBeNull()
+    expect(tabLink.text).toBe('Markdown')
+    expect(tabLink).toHaveAttributes({
+      'aria-controls': markdownPanelID,
+      role: 'tab'
+    })
+  })
+
+  it('should have a button to copy Markdown code examples', () => {
+    const markdownDocument = documentFactory(markdownParameters, options)
+
+    const codeContainer = markdownDocument.querySelector('#example-example-markdown')
+    const copyButton = codeContainer.querySelector('.app-link--copy')
+    expect(copyButton).not.toBeNull()
+    expect(copyButton.text).toBe('Copy')
+  })
+
+  it('should not have a button or panel to show Nunjucks code examples if the htmlOnly flag is true', () => {
     const htmlOnlyParameters = { ...parameters, htmlOnly: true }
     const htmlOnlyDocument = documentFactory(htmlOnlyParameters, options)
     const tabLink = htmlOnlyDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
@@ -139,7 +164,34 @@ describe('Single page example macro', () => {
     expect(tabLink).toBeNull()
   })
 
-  it('Should include the escaped HTML markup from the examples', () => {
+  it('should not have a button or panel to show Markdown code examples if the htmlOnly flag is true', () => {
+    const htmlOnlyParameters = { ...markdownParameters, htmlOnly: true }
+    const htmlOnlyDocument = documentFactory(htmlOnlyParameters, options)
+    const tabLink = htmlOnlyDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${markdownPanelID}"]`)
+    const tabContentContainer = htmlOnlyDocument.getElementById(markdownPanelID)
+    expect(tabContentContainer).toBeNull()
+    expect(tabLink).toBeNull()
+  })
+
+  it('should not have a button or panel to show HTML code examples if the markdownOnly flag is true', () => {
+    const markdownOnlyParameters = { ...markdownParameters, markdownOnly: true }
+    const markdownOnlyDocument = documentFactory(markdownOnlyParameters, options)
+    const tabLink = markdownOnlyDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${htmlPanelID}"]`)
+    const tabContentContainer = markdownOnlyDocument.getElementById(htmlPanelID)
+    expect(tabContentContainer).toBeNull()
+    expect(tabLink).toBeNull()
+  })
+
+  it('should not have a button or panel to show Nunjucks code examples if the markdownOnly flag is true', () => {
+    const markdownOnlyParameters = { ...markdownParameters, markdownOnly: true }
+    const markdownOnlyDocument = documentFactory(markdownOnlyParameters, options)
+    const tabLink = markdownOnlyDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
+    const tabContentContainer = markdownOnlyDocument.getElementById(nunjucksPanelID)
+    expect(tabContentContainer).toBeNull()
+    expect(tabLink).toBeNull()
+  })
+
+  it('should include the escaped HTML markup from the examples', () => {
     const exampleHTMLCode = document.querySelector(`#${htmlPanelID} pre code`)
     expect(exampleHTMLCode).toMatchSnapshot()
   })
@@ -158,6 +210,15 @@ describe('Single page example macro', () => {
     const noTabsDocument = documentFactory(noTabsParameters, options)
     const tabLink = noTabsDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
     const tabContentContainer = noTabsDocument.getElementById(nunjucksPanelID)
+    expect(tabContentContainer).toBeNull()
+    expect(tabLink).toBeNull()
+  })
+
+  it('should not have a button to show Markdown code examples if the hideTabs flag is true', () => {
+    const noTabsParameters = { ...markdownParameters, hideTabs: true }
+    const noTabsDocument = documentFactory(noTabsParameters, options)
+    const tabLink = noTabsDocument.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${markdownPanelID}"]`)
+    const tabContentContainer = noTabsDocument.getElementById(markdownPanelID)
     expect(tabContentContainer).toBeNull()
     expect(tabLink).toBeNull()
   })
