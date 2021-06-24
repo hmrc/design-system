@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Patterns for the HMRC GOV.UK team - Design resources for HMRC – GOV.UK</title>
+  <title>Use a digital service (returning users) - Patterns for the HMRC GOV.UK team - Design resources for HMRC – GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -61,7 +61,7 @@
     <nav class="app-pane__subnav">
 
       <h2 class="govuk-heading-m">
-        Patterns for the HMRC GOV.UK team</h2>
+        <a href="/hmrc-content-guide/">Patterns for the HMRC GOV.UK team</a></h2>
 
       <div class="app-subnav">
 
@@ -81,7 +81,7 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-content-guide/register-for-a-tax">
                   Register once for a tax, duty or levy
                 </a>
-              </li><li class="app-subnav__section-item">
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
                 <a class="app-subnav__link govuk-link" href="/hmrc-content-guide/use-a-digital-service">
                   Use a digital service (returning users)
                 </a>
@@ -96,23 +96,115 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Patterns for the HMRC GOV.UK team</h1></header>
+  <h1 class="govuk-heading-xl">Use a digital service (returning users)</h1></header>
 
 
             
   
   
 
+<h2 class="govuk-heading-l">When to use</h2>
+
 <p class="govuk-body">
-  These are patterns for designing HMRC content on GOV.UK. Use these to make your content consistent
-  with the rest of HMRC.
+Only use this pattern when all the following apply:
 </p>
 
-<h2 class="govuk-heading-l">If you cannot find what you need</h2>
+<ul class="govuk-list govuk-list--bullet">
+    <li>users need to use digital service regularly to complete a task</li>
+    <li>most users won't need to read the 'Before you start' information every time they use the digital service</li>
+</ul>
+
+<h2 class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Do not use this pattern for tasks that:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>the user only does once</li>
+    <li>already have a task-focused pattern</li>
+</ul>
+
+<h2 class="govuk-heading-l">How it works</h2>
+
+<h3 class="govuk-heading-m">Whitehall document type</h3>
+
+<p class="govuk-body">Detailed guide.</p>
+
+<h3 class="govuk-heading-m">Title</h3>
 
 <p class="govuk-body">
-  Send a request to the Editorial Board if you cannot find a pattern you need, or you need to change the
-  order, structure or markdown of an existing one.
+  Make sure that the title is focused on the task users are looking to complete.
+</p>
+
+<h3 class="govuk-heading-m">Content structure</h3>
+
+<p class="govuk-body">
+Make sure the introduction text is as short as possible, so the green button is as close to the top of the guide as possible.
+</p>
+
+<p class="govuk-body">
+You should always use the <a href="/hmrc-content-guide/green-button">green button</a> component in this pattern.
+</p>
+
+<p class="govuk-body">
+If the service requires users to sign in, you should also use the Government Gateway user ID and password component under the 'Before you start' heading.
+</p>
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-example" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-window">
+        <a href="/examples/use-a-digital-service/example/" target="_blank" title="Open Use a digital service (returning users) example in a new window">
+          Open this example in a new window
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/use-a-digital-service/example/" title="Use a digital service (returning users) example"></iframe>
+    </div>
+
+      <div class="example-example-example-lang example-example-example-lang--en ">
+        <span id="options-example-example"></span>
+        <ul class="app-tabs" role="tablist">
+
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-example-markdown" role="tab"
+                  aria-controls="example-example-markdown"
+                  data-track="tab-markdown" title="Display Use a digital service (returning users) example as Markdown">Markdown</a>
+              </li>
+        </ul>
+
+
+
+            <div class="app-tabs__container js-tabs__container" id="example-example-markdown" role="tabpanel">
+                <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs md">Use this service to ...
+
+^Online services may be slow during busy times. Check if there are any [<span class="hljs-string">problems with this service</span>](<span class="hljs-link"></span>).^
+
+{button start}[<span class="hljs-string">Start now</span>](<span class="hljs-link"></span>){/button}
+
+<span class="hljs-section">## Before you start</span>
+
+<span class="hljs-section">## When you cannot use this service (optional)</span></code>
+                </pre>
+              </div>
+            </div>
+      </div>
+  </div>
+
+
+<h2 class="govuk-heading-l">If you need to change this pattern</h2>
+
+<p class="govuk-body">
+  You should send a request to the Editorial Board if you need to change this pattern.
 </p>
 </div>
         </div>
