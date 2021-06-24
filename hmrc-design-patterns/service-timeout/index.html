@@ -254,7 +254,6 @@
 height="400px" src="/examples/service-timeout/default/" title="Service timeout default example"></iframe>
     </div>
 
-
       <div class="example-example-default-lang example-example-default-lang--en ">
         <span id="options-example-default"></span>
         <ul class="app-tabs" role="tablist">
@@ -271,27 +270,27 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
-            <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">data-language</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">data-timeout</span>=<span class="hljs-string">"70"</span> <span class="hljs-attr">data-countdown</span>=<span class="hljs-string">"68"</span> <span class="hljs-attr">data-keep-alive-url</span>=<span class="hljs-string">"?continue=true"</span> <span class="hljs-attr">data-sign-out-url</span>=<span class="hljs-string">"?lang=English"</span> <span class="hljs-attr">data-timeout-url</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-title</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message-suffix</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-keep-alive-button-text</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-sign-out-button-text</span>=<span class="hljs-string">""</span> /&gt;</span></code>
-            </pre>
-
-          </div>
-        </div>
-
-          <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
               <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
             <div data-module="app-copy">
               <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">data-language</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">data-timeout</span>=<span class="hljs-string">"70"</span> <span class="hljs-attr">data-countdown</span>=<span class="hljs-string">"68"</span> <span class="hljs-attr">data-keep-alive-url</span>=<span class="hljs-string">"?continue=true"</span> <span class="hljs-attr">data-sign-out-url</span>=<span class="hljs-string">"?lang=English"</span> <span class="hljs-attr">data-timeout-url</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-title</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message-suffix</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-keep-alive-button-text</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-sign-out-button-text</span>=<span class="hljs-string">""</span> /&gt;</span></code>
+              </pre>
+
+            </div>
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
 
 {{ hmrcTimeoutDialog ({
   <span class="hljs-attr">timeout</span>: <span class="hljs-number">70</span>,
@@ -300,15 +299,13 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
   <span class="hljs-attr">signOutUrl</span>: <span class="hljs-string">"?lang=English"</span>,
   <span class="hljs-attr">language</span>: <span class="hljs-string">"en"</span>
 }) }}</code>
-              </pre>
+                </pre>
 
+              </div>
             </div>
-          </div>
 
       </div>
-
   </div>
-
 
 
   
@@ -333,7 +330,6 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
  src="/examples/service-timeout/signed-out-default/" title="Signed out timeout default example"></iframe>
     </div>
 
-
       <div class="example-example-signed-out-default-lang example-example-signed-out-default-lang--en ">
         <span id="options-example-signed-out-default"></span>
         <ul class="app-tabs" role="tablist">
@@ -350,14 +346,14 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-signed-out-default-html" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-signed-out-default-html" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
       For your security, we signed you out
@@ -371,19 +367,19 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
 
-          <div class="app-tabs__container js-tabs__container" id="example-signed-out-default-nunjucks" role="tabpanel">
-              <div class="app-link--copy__container">
+            <div class="app-tabs__container js-tabs__container" id="example-signed-out-default-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
 
 &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
@@ -399,15 +395,13 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
-              </pre>
+                </pre>
 
+              </div>
             </div>
-          </div>
 
       </div>
-
   </div>
-
 
 
   
@@ -426,7 +420,6 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
  src="/examples/service-timeout/signed-out-saved/" title="Signed out timeout saved example"></iframe>
     </div>
 
-
       <div class="example-example-signed-out-saved-lang example-example-signed-out-saved-lang--en ">
         <span id="options-example-signed-out-saved"></span>
         <ul class="app-tabs" role="tablist">
@@ -443,14 +436,14 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-signed-out-saved-html" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-signed-out-saved-html" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
       For your security, we signed you out
@@ -468,19 +461,19 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
 
-          <div class="app-tabs__container js-tabs__container" id="example-signed-out-saved-nunjucks" role="tabpanel">
-              <div class="app-link--copy__container">
+            <div class="app-tabs__container js-tabs__container" id="example-signed-out-saved-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
       For your security, we signed you out
@@ -498,15 +491,13 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
-              </pre>
+                </pre>
 
+              </div>
             </div>
-          </div>
 
       </div>
-
   </div>
-
 
 
   
@@ -525,7 +516,6 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
  src="/examples/service-timeout/signed-out-not-saved/" title="Signed out timeout not saved example"></iframe>
     </div>
 
-
       <div class="example-example-signed-out-not-saved-lang example-example-signed-out-not-saved-lang--en ">
         <span id="options-example-signed-out-not-saved"></span>
         <ul class="app-tabs" role="tablist">
@@ -542,14 +532,14 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-signed-out-not-saved-html" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-signed-out-not-saved-html" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
       For your security, we signed you out
@@ -567,19 +557,19 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
 
-          <div class="app-tabs__container js-tabs__container" id="example-signed-out-not-saved-nunjucks" role="tabpanel">
-              <div class="app-link--copy__container">
+            <div class="app-tabs__container js-tabs__container" id="example-signed-out-not-saved-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
 
 &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
@@ -599,15 +589,13 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
-              </pre>
+                </pre>
 
+              </div>
             </div>
-          </div>
 
       </div>
-
   </div>
-
 
 
   <h3 class="govuk-heading-m" id="when-the-user-is-not-signed-in">When the user is not signed in</h3>
@@ -636,7 +624,6 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed in page example"></iframe>
     </div>
 
-
       <div class="example-example-not-signed-in-lang example-example-not-signed-in-lang--en ">
         <span id="options-example-not-signed-in"></span>
         <ul class="app-tabs" role="tablist">
@@ -653,27 +640,27 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-html" role="tabpanel">
-            <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">data-language</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">data-timeout</span>=<span class="hljs-string">"70"</span> <span class="hljs-attr">data-countdown</span>=<span class="hljs-string">"68"</span> <span class="hljs-attr">data-keep-alive-url</span>=<span class="hljs-string">"?continue=true"</span> <span class="hljs-attr">data-sign-out-url</span>=<span class="hljs-string">"?lang=English"</span> <span class="hljs-attr">data-timeout-url</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-title</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message-suffix</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-keep-alive-button-text</span>=<span class="hljs-string">"Continue checking what help you can get with childcare costs"</span> <span class="hljs-attr">data-sign-out-button-text</span>=<span class="hljs-string">"Delete your answers"</span> /&gt;</span></code>
-            </pre>
-
-          </div>
-        </div>
-
-          <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-nunjucks" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-html" role="tabpanel">
               <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
             <div data-module="app-copy">
               <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"hmrc-timeout-dialog"</span> <span class="hljs-attr">data-language</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">data-timeout</span>=<span class="hljs-string">"70"</span> <span class="hljs-attr">data-countdown</span>=<span class="hljs-string">"68"</span> <span class="hljs-attr">data-keep-alive-url</span>=<span class="hljs-string">"?continue=true"</span> <span class="hljs-attr">data-sign-out-url</span>=<span class="hljs-string">"?lang=English"</span> <span class="hljs-attr">data-timeout-url</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-title</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-message-suffix</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-keep-alive-button-text</span>=<span class="hljs-string">"Continue checking what help you can get with childcare costs"</span> <span class="hljs-attr">data-sign-out-button-text</span>=<span class="hljs-string">"Delete your answers"</span> /&gt;</span></code>
+              </pre>
+
+            </div>
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">"hmrc/components/timeout-dialog/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
 
 {{ hmrcTimeoutDialog ({
   <span class="hljs-attr">timeout</span>: <span class="hljs-number">70</span>,
@@ -684,15 +671,13 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
   <span class="hljs-attr">signOutButtonText</span>: <span class="hljs-string">"Delete your answers"</span>,
   <span class="hljs-attr">language</span>: <span class="hljs-string">"en"</span>
 }) }}</code>
-              </pre>
+                </pre>
 
+              </div>
             </div>
-          </div>
 
       </div>
-
   </div>
-
 
 
   
@@ -711,7 +696,6 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
  src="/examples/service-timeout/you-deleted-your-answers/" title="You deleted your answers page example"></iframe>
     </div>
 
-
       <div class="example-example-you-deleted-your-answers-lang example-example-you-deleted-your-answers-lang--en ">
         <span id="options-example-you-deleted-your-answers"></span>
         <ul class="app-tabs" role="tablist">
@@ -728,14 +712,14 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-you-deleted-your-answers-html" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-you-deleted-your-answers-html" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
       You deleted your answers
@@ -749,19 +733,19 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
 
-          <div class="app-tabs__container js-tabs__container" id="example-you-deleted-your-answers-nunjucks" role="tabpanel">
-              <div class="app-link--copy__container">
+            <div class="app-tabs__container js-tabs__container" id="example-you-deleted-your-answers-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
        You deleted your answers
@@ -775,15 +759,13 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
-              </pre>
+                </pre>
 
+              </div>
             </div>
-          </div>
 
       </div>
-
   </div>
-
 
 
   <p class="govuk-body">If they do nothing, delete their answers and take them to the ‘For your security, we deleted your answers’ page.</p>
@@ -804,7 +786,6 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
  src="/examples/service-timeout/we-deleted-your-answers/" title="We deleted your answers page example"></iframe>
     </div>
 
-
       <div class="example-example-we-deleted-your-answers-lang example-example-we-deleted-your-answers-lang--en ">
         <span id="options-example-we-deleted-your-answers"></span>
         <ul class="app-tabs" role="tablist">
@@ -821,14 +802,14 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-we-deleted-your-answers-html" role="tabpanel">
-            <div class="app-link--copy__container">
+          <div class="app-tabs__container js-tabs__container" id="example-we-deleted-your-answers-html" role="tabpanel">
+              <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
+            <div data-module="app-copy">
+              <pre class="app-example__language-switch--en-only-content">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
       For your security, we deleted your answers
@@ -842,19 +823,19 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-            </pre>
+              </pre>
 
+            </div>
           </div>
-        </div>
 
-          <div class="app-tabs__container js-tabs__container" id="example-we-deleted-your-answers-nunjucks" role="tabpanel">
-              <div class="app-link--copy__container">
+            <div class="app-tabs__container js-tabs__container" id="example-we-deleted-your-answers-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"govuk-grid"</span>&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
        For your security, we deleted your answers
@@ -868,15 +849,13 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
-              </pre>
+                </pre>
 
+              </div>
             </div>
-          </div>
 
       </div>
-
   </div>
-
 
 
   <h3 class="govuk-heading-m" id="technical-details">Technical details</h3>

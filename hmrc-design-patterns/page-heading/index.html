@@ -236,7 +236,6 @@
  src="/examples/page-heading/without-subheading/" title="Page heading without subheading example"></iframe>
     </div>
 
-
       <div class="example-example-without-subheading-lang example-example-without-subheading-lang--en ">
         <span id="options-example-without-subheading"></span>
         <ul class="app-tabs" role="tablist">
@@ -253,54 +252,52 @@
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-without-subheading-html" role="tabpanel">
-            <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
-            </pre>
-
-              <pre class="app-example__language-switch--cy-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
-              </pre>
-          </div>
-        </div>
-
-          <div class="app-tabs__container js-tabs__container" id="example-without-subheading-nunjucks" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-without-subheading-html" role="tabpanel">
               <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
             <div data-module="app-copy">
               <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">"What is your name?"</span>
-}) }}</code>
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
               </pre>
 
                 <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">"Beth yw’ch enw?"</span>
-}) }}</code>
+                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
                 </pre>
             </div>
           </div>
 
-      </div>
-
+            <div class="app-tabs__container js-tabs__container" id="example-without-subheading-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"What is your name?"</span>
+}) }}</code>
+                </pre>
+
+                  <pre class="app-example__language-switch--cy-only-content">
+                    <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">"Beth yw’ch enw?"</span>
+}) }}</code>
+                  </pre>
+              </div>
+            </div>
+
+      </div>
+  </div>
 
 
 <p class="govuk-body">For accessibility reasons, if you use a section heading, it should be coded as a paragraph <code>&lt;p&gt;</code> inside a <code>&lt;header&gt;</code>.</p>
@@ -331,7 +328,6 @@
  src="/examples/page-heading/with-subheading/" title="Page heading with subheading example"></iframe>
     </div>
 
-
       <div class="example-example-with-subheading-lang example-example-with-subheading-lang--en ">
         <span id="options-example-with-subheading"></span>
         <ul class="app-tabs" role="tablist">
@@ -348,58 +344,56 @@
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-with-subheading-html" role="tabpanel">
-            <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-caption-xl hmrc-caption-xl"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Personal details<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
-            </pre>
-
-              <pre class="app-example__language-switch--cy-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-caption-xl hmrc-caption-xl"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Manylion personol<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
-              </pre>
-          </div>
-        </div>
-
-          <div class="app-tabs__container js-tabs__container" id="example-with-subheading-nunjucks" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-with-subheading-html" role="tabpanel">
               <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
             <div data-module="app-copy">
               <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-caption-xl hmrc-caption-xl"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Personal details<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+              </pre>
+
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-page-heading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-caption-xl hmrc-caption-xl"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Manylion personol<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+                </pre>
+            </div>
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-with-subheading-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"What is your name?"</span>,
   <span class="hljs-attr">section</span>: <span class="hljs-string">"Personal details"</span>
 }) }}</code>
-              </pre>
+                </pre>
 
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+                  <pre class="app-example__language-switch--cy-only-content">
+                    <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/page-heading/macro.njk"</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   <span class="hljs-attr">text</span>: <span class="hljs-string">"Beth yw’ch enw?"</span>,
   <span class="hljs-attr">section</span>: <span class="hljs-string">"Manylion personol"</span>
 }) }}</code>
-                </pre>
+                  </pre>
+              </div>
             </div>
-          </div>
 
       </div>
-
   </div>
-
 
 
 <p class="govuk-body">This makes sure that when using screen readers and other assistive technologies, the page heading and the section heading are:</p>
