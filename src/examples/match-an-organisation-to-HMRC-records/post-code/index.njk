@@ -12,10 +12,16 @@ layout: layout-example.njk
 <p class="govuk-body">This is the postcode attached to your registered address, it is where you receive correspondence from HMRC.</p>
 
 {{ govukInput({
-hint: {
+  label: {
+    text: "What is the postcode of your business?",
+    classes: "govuk-visually-hidden"
+  },
+  hint: {
     text: "For example, AB1 1DH"
   },
-    classes: "govuk-input--width-10"
+    classes: "govuk-input--width-10",
+    id: "postcode",
+    name: "postcode"
   }) }}
 {{ govukButton({
   text: "Continue"
