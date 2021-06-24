@@ -1,0 +1,53 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<span class="govuk-caption-l">Guidance</span>
+
+<h1 class="govuk-heading-xl">Submit your Soft Drinks Industry Levy return</h1>
+
+<p class="govuk-body-l">
+Use this online service to submit a return.
+</p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<div class="govuk-body-s">
+ From: <a href="#" class="govuk-link">HM Revenue &amp; Customs</a>
+  Published 26 June 2018<br/>
+  Last updated 26 June 2018 — <a href="#history" class="govuk-link">see all updates</a><br/>
+</div>
+
+<div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+<button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
+</div>
+
+<p class="govuk-body">
+  Use this service to submit your Soft Drinks Industry Levy return if you’re <a href="#">registered for the levy</a>. After you’ve submitted the return, you’ll need to <a href="#">pay any levy due</a>.
+</p>
+
+<div class="govuk-inset-text">
+  Online services may be slow during busy times. Check if there are any <a href="#" class="govuk-link">problems with this service</a>.
+</div>
+
+{{ govukButton({
+  text: "Start now",
+  isStartButton: true
+}) }}
+
+<h2 class="govuk-heading-l" id="after">
+  Before you start
+</h2>
+
+<p class="govuk-body">
+  Check <a href="#">what to include on your return.</a>
+</p>
+
+<p class="govuk-body">
+  You’ll need the Government Gateway user ID and password you used when you registered for the levy.
+</p>
+
+<p class="govuk-body">
+  If you’re registered for the levy and have nothing to report for a period, you should submit a nil return, unless you’re only registered as a <a href="#">small producer</a>. If you do not submit your return when you should, HMRC can charge you an estimate of what you owe.
+</p>
