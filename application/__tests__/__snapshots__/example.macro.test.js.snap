@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Single page example macro Should include the escaped HTML markup from the examples 1`] = `
+exports[`Single page example macro should include the escaped HTML markup from the examples 1`] = `
 <code
   class="hljs html"
 >
