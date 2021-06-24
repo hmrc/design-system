@@ -253,7 +253,6 @@ When not to use
  src="/examples/hmrc-banner/example/" title="HMRC banner example"></iframe>
     </div>
 
-
       <div class="example-example-example-lang example-example-example-lang--en ">
         <span id="options-example-example"></span>
         <ul class="app-tabs" role="tablist">
@@ -270,60 +269,58 @@ When not to use
 
         </ul>
 
-        <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-            <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-          <div data-module="app-copy">
-            <pre class="app-example__language-switch--en-only-content">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-banner"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-organisation-logo"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body-s"</span>&gt;</span> HM Revenue &amp;amp; Customs
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-            </pre>
-
-              <pre class="app-example__language-switch--cy-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-banner"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-organisation-logo"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body-s"</span>&gt;</span> Cyllid a Thollau EM
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-              </pre>
-          </div>
-        </div>
-
-          <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
               <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
             <div data-module="app-copy">
               <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/banner/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcBanner %}
-
-{{ hmrcBanner({
-    
-}) }}</code>
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-banner"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-organisation-logo"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body-s"</span>&gt;</span> HM Revenue &amp;amp; Customs
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
               </pre>
 
                 <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/banner/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcBanner %}
-
-{{ hmrcBanner({
-      <span class="hljs-attr">language</span>: <span class="hljs-string">'cy'</span>
-}) }}</code>
+                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-banner"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hmrc-organisation-logo"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-body-s"</span>&gt;</span> Cyllid a Thollau EM
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
                 </pre>
             </div>
           </div>
 
-      </div>
-
+            <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
+                <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
+              <div data-module="app-copy">
+                <pre class="app-example__language-switch--en-only-content">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/banner/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcBanner %}
+
+{{ hmrcBanner({
+    
+}) }}</code>
+                </pre>
+
+                  <pre class="app-example__language-switch--cy-only-content">
+                    <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">"hmrc/components/banner/macro.njk"</span> <span class="hljs-keyword">import</span> hmrcBanner %}
+
+{{ hmrcBanner({
+      <span class="hljs-attr">language</span>: <span class="hljs-string">'cy'</span>
+}) }}</code>
+                  </pre>
+              </div>
+            </div>
+
+      </div>
+  </div>
 
 
 <h2 id="research" class="govuk-heading-l">Research</h2>
