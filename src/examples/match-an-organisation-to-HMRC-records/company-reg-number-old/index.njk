@@ -12,10 +12,16 @@ layout: layout-example.njk
 <p class="govuk-body">This is the 8 character reference issued by Companies House when the company was set up. You can <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/">find your registration number (opens in new tab)</a>.</p>
 
 {{ govukInput({
-hint: {
+  label: {
+    text: "What is your company registration number?",
+    classes: "govuk-visually-hidden"
+  },
+  hint: {
     text: "For example, 01234567"
   },
-    classes: "govuk-input--width-10"
+    classes: "govuk-input--width-10",
+    id: "crn",
+    name: "crn"
   }) }}
 {{ govukButton({
   text: "Continue"
