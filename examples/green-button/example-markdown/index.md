@@ -1,1 +1,1 @@
-{button start}
+{button start}[Start now](){/button}
