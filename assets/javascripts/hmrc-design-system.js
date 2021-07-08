@@ -8304,6 +8304,20 @@
 	  }
 	};
 
+	function PrintLink ($module) {
+	  this.$module = $module;
+	}
+
+	PrintLink.prototype.init = function() {
+	  if (!this.$module) {
+	    return
+	  }
+	  this.$module.addEventListener('click', function () {
+	    window.print();
+	  });
+
+	};
+
 	// Taken from https://github.com/alphagov/govuk-design-system/blob/29b9cf8c30ac1514d16fc97adaf15100e5040f7d/src/javascripts/components/tabs.js
 
 	var nodeListForEach$1 = common.nodeListForEach;
@@ -11017,6 +11031,12 @@
 	const $accordions = document.querySelectorAll('[data-module~="govuk-accordion"]');
 	nodeListForEach$2($accordions, $accordion => {
 	  new Accordion($accordion).init();
+	});
+
+	// Initialise print links
+	const $printLinks = document.querySelectorAll('[data-module="print-link"');
+	nodeListForEach$2($printLinks, $printLink => {
+	  new PrintLink($printLink).init();
 	});
 
 	all.initAll();
