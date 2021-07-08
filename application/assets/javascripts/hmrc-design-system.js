@@ -6,6 +6,7 @@ import AppTabs from './components/tabs'
 import SubNavToggle from './components/subnav'
 import CopyToClipboard from './components/copy-to-clipboard'
 import Accordion from './components/accordion'
+import PrintLink from './components/print-link'
 
 import LanguageSwitchExample from './components/language-switch-example'
 
@@ -41,6 +42,12 @@ nodeListForEach($copyToClipboardButtons, $button => {
 const $accordions = document.querySelectorAll('[data-module~="govuk-accordion"]')
 nodeListForEach($accordions, $accordion => {
   new Accordion($accordion).init()
+})
+
+// Initialise print links
+const $printLinks = document.querySelectorAll('[data-module="print-link"')
+nodeListForEach($printLinks, $printLink => {
+  new PrintLink($printLink).init()
 })
 
 hmrcFrontend.initAll()
