@@ -1620,7 +1620,7 @@
 	      }
 
 	      var localisedDefaults = validate.string(lookupData('data-language')) === 'cy' ? {
-	        title: undefined,
+	        title: 'Rydych ar fin cael eich allgofnodi',
 	        message: 'Er eich diogelwch, byddwn yn eich allgofnodi cyn pen',
 	        keepAliveButtonText: 'Parhau i fod wedi’ch mewngofnodi',
 	        signOutButtonText: 'Allgofnodi',
@@ -1631,7 +1631,7 @@
 	          second: 'eiliad'
 	        }
 	      } : {
-	        title: undefined,
+	        title: 'You’re about to be signed out',
 	        message: 'For your security, we will sign you out in',
 	        keepAliveButtonText: 'Stay signed in',
 	        signOutButtonText: 'Sign out',
@@ -1711,7 +1711,7 @@
 	      var $element = utils.generateDomElementFromString('<div>');
 
 	      if (settings.title) {
-	        var $tmp = utils.generateDomElementFromStringAndAppendText('<h1 class="govuk-heading-m push--top">', settings.title);
+	        var $tmp = utils.generateDomElementFromStringAndAppendText('<h1 id="hmrc-timeout-heading" class="govuk-heading-m push--top">', settings.title);
 	        $element.appendChild($tmp);
 	      }
 
@@ -1741,7 +1741,7 @@
 	        dialogControl.closeDialog();
 	      });
 	      dialogControl.addCloseHandler(keepAliveAndClose);
-	      dialogControl.setAriaLabelledBy('hmrc-timeout-message');
+	      dialogControl.setAriaLabelledBy('hmrc-timeout-heading hmrc-timeout-message');
 	      startCountdown($countdownElement, $audibleMessage);
 	    };
 
