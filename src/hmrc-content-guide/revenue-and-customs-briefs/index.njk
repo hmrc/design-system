@@ -1,0 +1,115 @@
+---
+title: Revenue and Customs Briefs
+menuText: Revenue and Customs Briefs
+layout: twoColumnPage.njk
+---
+
+<h2 class="govuk-heading-l">Document type</h2>
+
+<p class="govuk-body">Policy paper (with a HTML attachment)</p>
+
+<h2 class="govuk-heading-l">How it works</h2>
+
+<p class="govuk-body">Triage control the allocation of brief numbers and they're allocated by the team on receipt of business requests.</p>
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{
+  govukTable({
+    caption: 'Publication stub page',
+    head: [
+      {
+        text: 'Field'
+      },
+      {
+        text: 'What to enter'
+      },
+      {
+        text: 'Example'
+      }
+    ],
+    rows: [
+      [
+        {
+          text: 'Title'
+        },
+        {
+          text: 'Revenue and Customs Briefs nn (yyyy): description'
+        },
+        {
+          text: 'Revenue and Customs Brief 5 (2018): VAT liability on goods supplied on approval'
+        }
+      ],
+      [
+        {
+          text: 'Summary'
+        },
+        {
+          html: 'Begin with ‘This brief …’<br /><br />
+Read the document and summarise the paper’s content.'
+        },
+        {
+          text: 'This brief explains HMRC’s policy on goods supplied on approval, and the VAT liability of the delivery charges for these goods.'
+        }
+      ],
+      [
+        {
+          text: 'Body text'
+        },
+        {
+          html: 'Begin with ‘This brief explains…’<br /><br />
+Read the document and summarise the paper’s content to create the body text.'
+        },
+        {
+          html: 'See live examples on <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs">Revenue and Customs Briefs</a> pages.'
+        }
+      ]
+    ]
+  })
+}}
+
+{{
+  govukTable({
+    caption: 'HTML attachment',
+    head: [
+      {
+        text: 'Field'
+      },
+      {
+        text: 'What to enter'
+      },
+      {
+        text: 'Example'
+      }
+    ],
+    rows: [
+      [
+        {
+          text: 'Title'
+        },
+        {
+          text: 'Body text'
+        },
+        {
+          text: 'Revenue and Customs Brief 5 (2018): VAT liability on goods supplied on approval'
+        }
+      ],
+      [
+        {
+          text: 'Body text'
+        },
+        {
+          text: 'In the Body field enter the content of the brief'
+        },
+        {
+          text: ''
+        }
+      ]
+    ]
+  })
+}}
+
+<h3 class="govuk-heading-m">Collection page</h3>
+
+<p class="govuk-body">Add your new document to the <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs">Revenue and Customs Briefs</a> document collection. Do not create a public change note.
+</p>

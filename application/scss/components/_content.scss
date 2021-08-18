@@ -81,3 +81,13 @@
     @include govuk-responsive-margin(4, "bottom");
   }
 }
+
+.call-to-action {
+  margin: 2em 0;
+  background-color: #f3f2f1;
+  padding: 2em;
+}
+
+.call-to-action p {
+  font-size: 24px;
+}

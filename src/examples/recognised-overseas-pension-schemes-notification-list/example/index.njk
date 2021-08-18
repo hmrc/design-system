@@ -1,0 +1,87 @@
+---
+  layout: layout-example.njk
+---
+
+<h3 class="govuk-heading-l">Austria</h3>
+
+<div class="call-to-action">
+<p class="govuk-body">The requirements to be a ROPS changed from 6 April 2017. You’ll need to check that the scheme you’re transferring to on or after that date meets the new requirements.<br><br></p>
+
+<p class="govuk-body">HMRC cannot guarantee these are ROPS or that any transfers to them will be free of UK tax. It’s your responsibility to find out if you have to pay tax on any transfer of pension savings. Find out more about <a href="https://www.gov.uk/government/collections/overseas-pension-schemes" class="govuk-link">Overseas pension schemes</a>.</p>
+</div>
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{
+  govukTable({
+    head: [
+      {
+        text: 'ROPS'
+      },
+      {
+        text: 'Country'
+      }
+    ],
+    rows: [
+      [
+        {
+          text: 'APK Pensionskasse AG'
+        },
+        {
+          text: 'Austria'
+        }
+      ],
+      [
+        {
+          text: 'Bonus Pensionskassen Aktiengesellschaft'
+        },
+        {
+          text: 'Austria'
+        }
+      ],
+      [
+        {
+          text: 'Sozialversicherungspensionskasse AG'
+        },
+        {
+          text: 'Austria'
+        }
+      ],
+      [
+        {
+          text: 'VBV-Pensionskasse Aktiengesellschaft'
+        },
+        {
+          text: 'Austria'
+        }
+      ]
+
+    ]
+  })
+}}
+
+<br /><h3 class="govuk-heading-l">Changes for Austria at 1 July 2018</h3>
+
+{{
+  govukTable({
+    head: [
+      {
+        text: 'ROPS name'
+      },
+      {
+        text: 'Change'
+      }
+    ],
+    rows: [
+      [
+        {
+          text: 'VBV-Pensionskasse Aktiengesellschaft'
+        },
+        {
+          text: 'Added'
+        }
+      ]
+
+    ]
+  })
+}}
