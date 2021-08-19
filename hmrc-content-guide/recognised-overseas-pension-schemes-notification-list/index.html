@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Register once for a tax, duty or levy - Patterns for the HMRC GOV.UK team - Design resources for HMRC – GOV.UK</title>
+  <title>Recognised overseas pension schemes notification list - Patterns for the HMRC GOV.UK team - Design resources for HMRC – GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -89,11 +89,11 @@
                 <a class="app-subnav__link govuk-link" href="/hmrc-content-guide/green-button">
                   Green button
                 </a>
-              </li><li class="app-subnav__section-item">
+              </li><li class="app-subnav__section-item app-subnav__section-item--current">
                 <a class="app-subnav__link govuk-link" href="/hmrc-content-guide/recognised-overseas-pension-schemes-notification-list">
                   Recognised overseas pension schemes notification list
                 </a>
-              </li><li class="app-subnav__section-item app-subnav__section-item--current">
+              </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-content-guide/register-for-a-tax">
                   Register once for a tax, duty or levy
                 </a>
@@ -120,7 +120,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Register once for a tax, duty or levy</h1></header>
+  <h1 class="govuk-heading-xl">Recognised overseas pension schemes notification list</h1></header>
 
 
             
@@ -134,35 +134,17 @@
 <h2 class="govuk-heading-l">When to use</h2>
 
 <p class="govuk-body">
-  Use this pattern when a user needs to register for a tax, duty or levy only once or not very often.
+Use this pattern when updating <a href="https://www.gov.uk/guidance/check-the-recognised-overseas-pension-schemes-notification-list">Check the recognised overseas pension schemes notification list</a>.
 </p>
-
-<h2 class="govuk-heading-l">When not to use</h2>
-
-<p class="govuk-body">Do not use this pattern when the user needs to:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-    <li>register a product, item or license</li>
-    <li>only enrol or register for an online service</li>
-    <li>register often for a tax, for example, if the user is acting on behalf of someone else</li>
-</ul>
 
 <h2 class="govuk-heading-l">How it works</h2>
 
-<h3 class="govuk-heading-m">Title examples</h3>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>Register for...</li>
-  <li>Register your...</li>
-  <li>Register as a...</li>
-</ul>
-
-<h3 class="govuk-heading-m">Optional elements</h3>
-
-<p class="govuk-body">
-  You do not need to include a “When to register” sub-heading if you can include this information in
-  “Who should register”.
-</p>
+<ol class="govuk-list govuk-list--number">
+    <li>Delete all the 'Changes' tables in the list</li>
+    <li>Add, amend or delete the relevant entries on the ROPS list</li>
+    <li>Add a 'Changes' table at the end of each country you update, and for the change use 'Added', 'Amended' or 'Deleted' - if the name of a scheme has changed, put the old name in brackets, for example: 'Booster SuperScheme (previously Fidelity Super-Super Plan)'</li>
+    <li>Do not include any company names in the change note, for example 'The recognised overseas pension schemes notification list has been updated, with (number) schemes added and (number) removed'</li>
+</ol>
 
 
 
@@ -172,12 +154,12 @@
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
-        <a href="/examples/register-for-a-tax/example/" target="_blank" title="Open Register once for a tax, duty or levy example in a new window">
+        <a href="/examples/recognised-overseas-pension-schemes-notification-list/example/" target="_blank" title="Open Recognised overseas pension schemes notification list example in a new window">
           Open this example in a new window
         </a>
       </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/register-for-a-tax/example/" title="Register once for a tax, duty or levy example"></iframe>
+ src="/examples/recognised-overseas-pension-schemes-notification-list/example/" title="Recognised overseas pension schemes notification list example"></iframe>
     </div>
 
       <div class="example-example-example-lang example-example-example-lang--en ">
@@ -187,7 +169,7 @@
               <li class="app-tabs__item js-tabs__item" role="presentation">
                 <a href="#example-example-markdown" role="tab"
                   aria-controls="example-example-markdown"
-                  data-track="tab-markdown" title="Display Register once for a tax, duty or levy example as Markdown">Markdown</a>
+                  data-track="tab-markdown" title="Display Recognised overseas pension schemes notification list example as Markdown">Markdown</a>
               </li>
         </ul>
 
@@ -200,26 +182,30 @@
 
               <div data-module="app-copy">
                 <pre class="app-example__language-switch--en-only-content">
-                  <code class="hljs md"><span class="hljs-section">## Who should register</span>
+                  <code class="hljs md"><span class="hljs-section">## About this list</span>
 
-<span class="hljs-section">## When to register</span>
+<span class="hljs-section">## Countries - A to Z</span>
 
-<span class="hljs-section">## What you'll need</span>
+<span class="hljs-section">### Country name</span>
 
-<span class="hljs-section">## How to register</span>
+$CTA
+The requirements to be a ROPS changed from 6 April 2017. You’ll need to check that the scheme you’re transferring to on or after that date meets the new requirements.
 
-^Online services may be slow during busy times. Check if there are any [<span class="hljs-string">problems with this service</span>](<span class="hljs-link"></span>).^
+HMRC cannot guarantee these are ROPS or that any transfers to them will be free of UK tax. It’s your responsibility to find out if you have to pay tax on any transfer of pension savings. Find out more about [<span class="hljs-string">Overseas pension schemes</span>](<span class="hljs-link">https://www.gov.uk/government/collections/overseas-pension-schemes</span>).
+$CTA
 
-<span class="hljs-section">### Other ways to register</span>
+| ROPS | Country |
+|-|-|
 
-<span class="hljs-section">## After you've registered</span></code>
+<span class="hljs-section">###Changes for country name at date of publish</span>
+
+| ROPS name | Change |
+|-|-|</code>
                 </pre>
               </div>
             </div>
       </div>
   </div>
-
-
 </div>
         </div>
       </main>
