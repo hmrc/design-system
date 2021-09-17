@@ -1,0 +1,12 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/header/macro.njk" import hmrcHeader %}
+
+{{ hmrcHeader({
+  "serviceName": "Enw'r gwasanaeth",
+  "serviceUrl" : "/",
+  "phaseBanner" : true,
+  language : 'cy',
+  "signOutHref" : "?sign-out"
+}) }}

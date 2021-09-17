@@ -1,0 +1,35 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "has-registration-number",
+  name: "has-registration-number",
+  fieldset: {
+    legend: {
+      text: "A oes gennych rif cofrestru’r cwmni?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  hint: {
+    text: "Efallai y bydd Tŷ’r Cwmnïau wedi anfon hwn atoch os gwnaethoch gofrestru fel partneriaeth gyfyngedig."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Oes"
+    },
+    {
+      value: "no",
+      text: "Nac oes"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}
