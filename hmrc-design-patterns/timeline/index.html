@@ -238,6 +238,16 @@
           Open this example in a new window
         </a>
       </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/timeline/example/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Timeline example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/timeline/example-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Timeline example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
  src="/examples/timeline/example/" title="Timeline example"></iframe>
     </div>
@@ -283,6 +293,24 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></code>
               </pre>
 
+                <pre class="app-example__language-switch--cy-only-content">
+                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-title&quot;</span>&gt;</span>Ad-daliad wedi’i wneud<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-meta&quot;</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">&quot;2020-07-15&quot;</span>&gt;</span>15 Gorffennaf 2020<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-content&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Gwnaethom ad-dalu £50 i chi. Bydd yn cymryd hyd at 3 diwrnod i&#x27;r arian gyrraedd eich cyfrif.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-title&quot;</span>&gt;</span>Gwirio’ch hawliad<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-meta&quot;</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">&quot;2020-07-14&quot;</span>&gt;</span>14 Gorffennaf 2020<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-content&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Daeth eich Ffurflen Dreth i law. Gwnaethoch honni bod ad-daliad o £50 yn ddyledus i chi. Rydym yn gwirio’ch hawliad.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></code>
+                </pre>
             </div>
           </div>
 
@@ -317,6 +345,30 @@
   }) }}</code>
                 </pre>
 
+                  <pre class="app-example__language-switch--cy-only-content">
+                    <code class="hljs js">{%- from &quot;hmrc/components/timeline/macro.njk&quot; import hmrcTimeline -%}
+
+{% set exampleContent1 %}&lt;p class=&quot;govuk-body&quot;&gt;Daeth eich Ffurflen Dreth i law. Gwnaethoch honni bod ad-daliad o £50 yn ddyledus i chi. Rydym yn gwirio’ch hawliad.&lt;/p&gt;{% endset %}
+{% set exampleContent2 %}&lt;p class=&quot;govuk-body&quot;&gt;Gwnaethom ad-dalu £50 i chi. Bydd yn cymryd hyd at 3 diwrnod i&#x27;r arian gyrraedd eich cyfrif.&lt;/p&gt;{% endset %}
+
+  {{ hmrcTimeline({
+    headinglevel: &quot;2&quot;,
+    events: [
+      {
+        title: &#x27;Ad-daliad wedi’i wneud&#x27;,
+        datetime: &#x27;2020-07-15&#x27;,
+        time: &#x27;15 Gorffennaf 2020&#x27;,
+        content: exampleContent2
+      },
+      {
+        title: &#x27;Gwirio’ch hawliad&#x27;,
+        datetime: &#x27;2020-07-14&#x27;,
+        time: &#x27;14 Gorffennaf 2020&#x27;,
+        content: exampleContent1
+      }
+    ]
+  }) }}</code>
+                  </pre>
               </div>
             </div>
 
