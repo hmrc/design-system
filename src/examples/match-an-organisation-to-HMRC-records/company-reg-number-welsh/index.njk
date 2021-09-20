@@ -1,0 +1,25 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-xl">Beth yw rhif cofrestru’r cwmni?</h1>
+
+<p class="govuk-body"><a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/" rel="noreferrer noopener" target="_blank">Gallwch chwilio am rif cofrestru’ch cwmni ar wefan Tŷ’r Cwmnïau (yn agor tab newydd).</a>.</p>
+
+{{ govukInput({
+  label: {
+    text: "Beth yw rhif cofrestru’r cwmni?",
+    classes: "govuk-visually-hidden"
+  },
+  hint: {
+    text: "Mae hwn yn 8 o gymeriadau. Er enghraifft, 01234567 neu AC012345."
+  },
+  id: "company-registration-number",
+  classes: "govuk-input--width-10"
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}

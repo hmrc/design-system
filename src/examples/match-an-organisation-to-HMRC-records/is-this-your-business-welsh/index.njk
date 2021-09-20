@@ -1,0 +1,35 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-xl">Ai dyma’ch busnes?</h1>
+<p class="govuk-body">ABC cyfyngedig</p>
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "is-business",
+  name: "is-business",
+  fieldset: {
+    legend: {
+      text: "Ai dyma’ch busnes?",
+      isPageHeading: false,
+      classes: "govuk-visually-hidden"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Iawn"
+    },
+    {
+      value: "no",
+      text: "Na"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}

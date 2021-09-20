@@ -1,0 +1,40 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukRadios({
+  classes: "govuk-radios",
+  idPrefix: "business-type",
+  name: "business-type",
+  fieldset: {
+    legend: {
+      text: "Pa fath o fusnes ydych chi?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  items: [
+    {
+      value: "limited-company",
+      text: "Cwmni Cyfyngedig"
+    },
+    {
+      value: "sole-trader",
+      text: "Unig fasnachwr"
+    },
+      {
+        value: "partnership",
+        text: "Partneriaeth"
+      },
+      {
+        value: "trust",
+        text: "Ymddiriedolaeth"
+      }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}
