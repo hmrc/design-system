@@ -8,8 +8,6 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">Publication: guidance (with an HTML attachment)</p>
 
-<h2 class="govuk-heading-l">Placeholder</h2>
-
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {{
@@ -137,69 +135,11 @@ layout: twoColumnPage.njk
   })
 }}
 
-<h2 class="govuk-heading-l">When to use</h2>
+<h3 class="govuk-heading-m">Scheduled publication time</h3>
 
-<p class="govuk-body">Use this pattern to tell users about a change in import or export procedures.</p>
+<p class="govuk-body">You only need to put in a scheduled publication time for the removal of a message, not for the addition.
 
-<h2 class="govuk-heading-l">How it works</h2>
-
-<p class="govuk-body">You do not need to mention 'import' or 'export' unless really necessary, as anti-dumping duty only apply to imports into the UK and EU.</p>
-
-<h3 class="govuk-heading-m">Publication</h3>
-
-<h4 class="govuk-heading-s">Title</h4>
-
-<p class="govuk-body">Description (only include the object or item and where it’s imported from or describe what the measure is about and the measure number in brackets at the end).</p>
-
-<p class="govuk-body">Check the anti-dumping duty measures collection to make sure your title has not already been used in a recent measure.</p>
-
-<p class="govuk-body">Examples of good titles:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-<li>Hand pallet trucks imported from China (anti-dumping duty xxxx)</li>
-<li>Name change of a company that exports ceramic tableware and kitchenware from China (anti-dumping duty xxxx)</li>
-</ul>
-
-<h4 class="govuk-heading-s">Summary</h4>
-
-<p class="govuk-body">Provide a short description of what the attached document is about.</p>
-
-<p class="govuk-body">Do not start your summary with 'Find out'.</p>
-
-<p class="govuk-body">
-  For example, ‘Changes to the duty codes for trucks with a weight indicative system, originating in the
-  People’s Republic of China’.
 </p>
-
-<h4 class="govuk-heading-s">Details</h4>
-
-<p class="govuk-body">Enter this text:</p>
-
-  {{
-    codeSnippet({
-      code: 'Anti-dumping duty is an import duty charged in addition to normal Customs Duty and is applied in the UK and across the whole EU. It’s designed to allow the UK and EU to take action against goods that are sold at less than their normal value – that being defined as the price for ‘like goods’ sold in the exporter’s home market.',
-      canCopy: true
-    })
-  }}
-
-<h3 class="govuk-heading-m">HTML attachment</h3>
-
-<p class="govuk-body">Although measures contain technical information you should be able to get a general understanding about what they are for - go back to the subject matter expert if you think a measure does not make sense or is unclear.</p>
-
-<p class="govuk-body">Check any hyperlinks in the business draft. Contact the subject matter expert to get correct details if any links:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-<li>point to the <a href="https://eur-lex.europa.eu/homepage.html" class="govuk-link">home page of the EurLex website</a>, rather than the page containing the relevant legislation</li>
-<li>go directly to a PDF (or other file), rather than the webpage that houses it</li>
-</ul>
-
-<h4 class="govuk-heading-s">Title</h4>
-
-<p class="govuk-body">Use the same title as the publication.</p>
-
-<h4 class="govuk-heading-s">Body text</h4>
-
-<p class="govuk-body">Enter the contents of the anti-dumping duty measure.</p>
 
 <h3 class="govuk-heading-m">Collection page</h3>
 
