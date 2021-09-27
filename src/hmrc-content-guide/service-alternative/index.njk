@@ -72,6 +72,9 @@ layout: twoColumnPage.njk
       },
       {
         text: 'What to enter'
+      },
+      {
+        text: 'Example'
       }
     ],
     rows: [
@@ -80,9 +83,10 @@ layout: twoColumnPage.njk
           text: 'Title'
         },
         {
-          html: '[Service]: service availability and issues
-          <p><strong>Example:</strong></p>
-          <p>Corporation Tax: service availability and issues</p>'
+          text: '[Service]: service availability and issues'
+        },
+        {
+          text: 'Corporation Tax: service availability and issues'
         }
       ],
       [
@@ -90,7 +94,7 @@ layout: twoColumnPage.njk
           text: 'Body text'
         },
         {
-          html: '## Service availability
+          html: 'C## Service availability
           <p>Full service available.</p>
           <p>Sign in to [insert service name] (add the url)</p>
           <p>## Planned downtime</p>
@@ -107,6 +111,9 @@ layout: twoColumnPage.njk
           <p>We apologise for any inconvenience this may cause.</p>
           <p>Add &#39None.&#39 when there is no planned downtime or service issues.</p>
           <p>Note: Don&#39t use &#39midnight&#39, use 11:59pm</p>'
+        },
+        {
+          text: ''
         }
       ],
       [
@@ -114,19 +121,38 @@ layout: twoColumnPage.njk
           text: 'Public change note'
         },
         {
-          html: '<strong>Service availability</strong>
-<p><strong>Examples:</strong></p>
-<p><ol class="govuk-list govuk-list--number">
+          text: 'Service availability'
+        },
+        {
+          html: '<ol class="govuk-list govuk-list--number">
 <li> The agent services account is currently unavailable. Check the service availability page for updates. </li>
 <li> This service will be unavailable from 10pm on Thursday 14 October to 2am on Friday 15 October 2021. </li>
-</ol></p>
-<p>Note: no public change note is required when removing a service availability message.</p>
-<p><strong>Planned downtime</strong></p>
-<p>Planned downtime from 5pm on Friday 17 December 2021 to 9am Monday 20 December 2021 has been added.</p>
-<p>Note: no public change note is required when removing a planned downtime message.</p>
-<p><strong>Service issues</strong></p>
-<p><strong>Example:</p></strong>
-<p>A service issue about accessing the Making Tax Digital service has been added.</p>
+</ol>
+<p>Note: no public change note is required when removing a service availability message.</p>'
+        }
+      ],
+      [
+        {
+          text: ''
+        },
+        {
+          text: 'Planned downtime'
+        },
+        {
+          html: 'Planned downtime from 5pm on Friday 17 December 2021 to 9am Monday 20 December 2021 has been added.
+<p>Note: no public change note is required when removing a planned downtime message.</p>'
+        }
+      ],
+
+      [
+        {
+          text: ''
+        },
+        {
+          text: 'Service issues'
+        },
+        {
+          html: 'A service issue about accessing the Making Tax Digital service has been added.
 <p>Note: no public change note is required when removing a service issues message.</p>'
         }
       ]
@@ -134,6 +160,7 @@ layout: twoColumnPage.njk
     ]
   })
 }}
+
 
 <h3 class="govuk-heading-m">Scheduled publication time</h3>
 
