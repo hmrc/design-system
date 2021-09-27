@@ -4,13 +4,13 @@ layout: twoColumnPage.njk
 ---
 {% from "_codeSnippet.njk" import codeSnippet %}
 
-<h2 class="govuk-heading-l">Publication stub page</h2>
+<h2 class="govuk-heading-l">Placeholder</h2>
 
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {{
   govukTable({
-    caption: 'Formal consultations',
+    caption: 'Publication stub page',
     head: [
       {
         text: 'Field'
@@ -66,46 +66,8 @@ layout: twoColumnPage.njk
 The government is keen to obtain views from a wide range of stakeholders to establish clear evidence-based rationale for its decisions.'
         }
       ],
-      [
-        {
-          text: 'Opening and closing date'
-        },
-        {
-          html: 'The SME should provide a publication date.
-
-<p>Set the time for 9:30am as default (unless SME asks for another start time)</p>
-
-<p>The SME should provide a closing date.</p>
-
-<p>The closing time should be set as 23:45, <strong>not</strong> 00:00 (which will close the consultation a day early)</p>'
-        },
-        {
-          text: '9:30am on 16 February 2017 to 11:45pm on 26 April 2017'
-        }
-      ],
-      [
-        {
-          text: 'Response methods'
-        },
-        {
-          text: 'Formal consultations will usually have both an email and postal address.'
-        },
-        {
-          text: ''
-        }
-      ],
-      [
-        {
-          text: 'Documents to publish'
-        },
-        {
-          html: 'Publish as HTML or ODT.
-<p><strong>Note:</strong> They can’t be changed.</p>'
-        },
-        {
-          text: ''
-        }
-      ]
+      
+      
 
     ]
   })
