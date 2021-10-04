@@ -1,45 +1,28 @@
 ---
-title: Register once for a tax, duty or levy
-menuText: Register once for a tax, duty or levy
+title: Government Gateway user ID and password
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
 
-<h2 class="govuk-heading-l">Document type</h2>
-
-<p class="govuk-body">Detailed guide</p>
-
 <h2 class="govuk-heading-l">When to use</h2>
 
 <p class="govuk-body">
-  Use this pattern when a user needs to register for a tax, duty or levy only once or not very often.
+  Use this pattern when you're linking to a service that requires the user to sign in using Government Gateway.
 </p>
 
-<h2 class="govuk-heading-l">When not to use</h2>
+<h2 class="govuk-heading-l">Where to place</h2>
 
-<p class="govuk-body">Do not use this pattern when the user needs to:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-    <li>register a product, item or license</li>
-    <li>only enrol or register for an online service</li>
-    <li>register often for a tax, for example, if the user is acting on behalf of someone else</li>
-</ul>
+<p class="govuk-body">You should place this pattern before the link to the service, unless there's a <a href="https://design.tax.service.gov.uk/hmrc-content-guide/">design pattern</a> that says different.</p>
 
 <h2 class="govuk-heading-l">How it works</h2>
 
-<h3 class="govuk-heading-m">Title examples</h3>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>Register for...</li>
-  <li>Register your...</li>
-  <li>Register as a...</li>
-</ul>
-
-<h3 class="govuk-heading-m">Optional elements</h3>
+<h3 class="govuk-heading-m">Option 1</h3>
 
 <p class="govuk-body">
-  You do not need to include a “When to register” sub-heading if you can include this information in
-  “Who should register”.
+  Use this option for most services.
+</p>
+<p class="govuk-body">
+To XXX, you need a Government Gateway user ID and password. If you do not have a user ID, you can create one when you XXX.
 </p>
 
 {{ example({
@@ -50,3 +33,21 @@ layout: twoColumnPage.njk
     markdownOnly: true
 }) }}
 
+<h3 class="govuk-heading-m">Option 2</h3>
+
+<p class="govuk-body">
+  Use this option if the user needs to use specific credentials. For example, if they must use the user ID and password they created when they registered for a tax, or enrolled for online service.
+</p>
+<p class="govuk-body">
+You’ll need the Government Gateway user ID and password you used when you XXX.
+</p>
+
+<h3 class="govuk-heading-m">Option 3</h3>
+
+<p class="govuk-body">
+  Use this option in links to services from publication pages which use an external link attachment.
+</p>
+<p class="govuk-body">
+ XXX online (sign in using Government Gateway)
+
+</p>
