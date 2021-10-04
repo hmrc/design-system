@@ -1,0 +1,52 @@
+---
+title: Register once for a tax, duty or levy
+menuText: Register once for a tax, duty or levy
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+<h2 class="govuk-heading-l">Document type</h2>
+
+<p class="govuk-body">Detailed guide</p>
+
+<h2 class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">
+  Use this pattern when a user needs to register for a tax, duty or levy only once or not very often.
+</p>
+
+<h2 class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Do not use this pattern when the user needs to:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>register a product, item or license</li>
+    <li>only enrol or register for an online service</li>
+    <li>register often for a tax, for example, if the user is acting on behalf of someone else</li>
+</ul>
+
+<h2 class="govuk-heading-l">How it works</h2>
+
+<h3 class="govuk-heading-m">Title examples</h3>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Register for...</li>
+  <li>Register your...</li>
+  <li>Register as a...</li>
+</ul>
+
+<h3 class="govuk-heading-m">Optional elements</h3>
+
+<p class="govuk-body">
+  You do not need to include a “When to register” sub-heading if you can include this information in
+  “Who should register”.
+</p>
+
+{{ example({
+    item: 'register-for-a-tax',
+    example: 'example',
+    description: 'Register once for a tax, duty or levy',
+    markdown: 'example-markdown',
+    markdownOnly: true
+}) }}
+
