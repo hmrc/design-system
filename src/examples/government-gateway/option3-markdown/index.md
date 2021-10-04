@@ -1,3 +1,1 @@
-## Documents
-
 XXX online (sign in using Government Gateway)
