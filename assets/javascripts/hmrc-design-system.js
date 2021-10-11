@@ -8324,7 +8324,7 @@
 
 	function LanguageSwitchExample ($module) {
 	  this.$module = $module;
-	  this.$switches = this.$module.querySelectorAll('.app-example__language-switch');
+	  this.$switches = this.$module.querySelectorAll('.app-example__language-switch a');
 	  this.$iframe = this.$module.querySelector('[data-module~="app-example-frame"]');
 	  this.currentClassName = 'app-example__language-switch--current';
 	  this.getLanguageClass = function (lang) {
