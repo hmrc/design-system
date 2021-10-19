@@ -44,6 +44,10 @@
         p {
           margin: govuk-spacing(2) 0;
         }
+
+        a:link {
+          color: rgb(29, 112, 184);
+        }
   
         .metadata {
           @include govuk-font($size: 14);
