@@ -1,5 +1,11 @@
 .govspeak {
     $thumbnail-width: 99px;
+
+    .documents {
+      @include govuk-font(27, $weight: bold);
+      margin: 0;
+      padding-bottom: govuk-spacing(2);
+    }
   
     .attachment {
       position: relative;
