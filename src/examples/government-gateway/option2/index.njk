@@ -4,17 +4,19 @@ layout: layout-example.njk
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<div class="govuk-inset-text">
-  Online services may be slow during busy times. Check if there are any <a href="#" class="govuk-link">problems with this service</a>.
+<div class="govspeak">
+  <div class="govuk-inset-text">
+    Online services may be slow during busy times. Check if there are any <a href="#" class="govuk-link">problems with this service</a>.
+  </div>
+
+  {{ govukButton({
+    text: "Start now"
+  }) }}
+
+  <div class="attachment-details">
+  <h2 class="govuk-heading-m documents">Before you start</h2>
+  </div>
+
+  <p class="govuk-body">Check <a href="#">what to include on your return</a>.</p>
+  <p class="govuk-body">You'll need the Government Gateway user ID and password you used when you registered for the levy.</p>
 </div>
-
-{{ govukButton({
-  text: "Start now"
-}) }}
-
-{{ hmrcPageHeading({
-  text: 'Before you start'
-}) }}
-
-<p class="govuk-body">Check <a href="#">what to include on your return</a>.</p>
-<p class="govuk-body">You'll need the Government Gateway user ID and password you used when you registered for the levy.</p>

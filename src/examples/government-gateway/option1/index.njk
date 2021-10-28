@@ -4,12 +4,12 @@ layout: layout-example.njk
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ hmrcPageHeading({
-  text: 'How to register'
-}) }}
+<div class="govspeak">
+  <div class="attachment-details">
+    <h2 class="govuk-heading-m documents">How to register</h2>
+  <p class="govuk-body">To register for the Soft Drinks Industry Levy, you need to have a Government Gateway user ID and password. If you do not have a user ID, you can create one the first time you register.</p>
 
-<p class="govuk-body">To register for the Soft Drinks Industry Levy, you need to have a Government Gateway user ID and password. If you do not have a user ID, you can create one the first time you register.</p>
-
-{{ govukButton({
-  text: "Register now"
-}) }}
+  {{ govukButton({
+    text: "Register now"
+  }) }}
+</div>
