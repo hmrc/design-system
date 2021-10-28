@@ -9,9 +9,13 @@ layout: layout-example.njk
     Online services may be slow during busy times. Check if there are any <a href="#" class="govuk-link">problems with this service</a>.
   </div>
 
-  {{ govukButton({
-    text: "Start now"
-  }) }}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Start now",
+  href: "#",
+  isStartButton: true
+}) }}
 
   <div class="attachment-details">
   <h2 class="govuk-heading-m documents">Before you start</h2>
