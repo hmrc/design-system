@@ -13,6 +13,7 @@ layout: twoColumnPage.njk
 {{
   govukTable({
     caption: 'Publication stub page',
+    firstCellIsHeader: true,
     head: [
       {
         text: 'Field'
@@ -27,7 +28,7 @@ layout: twoColumnPage.njk
     rows: [
       [
         {
-          html: '<strong>Title</strong>'
+          text: 'Title'
         },
         {
           text: '[Service]: service availability and issues'
@@ -38,7 +39,7 @@ layout: twoColumnPage.njk
       ],
       [
         {
-          html: '<strong>Summary</strong>'
+          text: 'Summary'
         },
         {
           text: 'Check the availability and any issues affecting the [service] service.'
@@ -49,7 +50,7 @@ layout: twoColumnPage.njk
       ],
       [
         {
-          html: '<strong>Body text</strong>'
+          text: 'Body text'
         },
         {
           text: 'Latest updates on the availability and any issues affecting the [service] service.'
@@ -66,6 +67,7 @@ layout: twoColumnPage.njk
 {{
   govukTable({
     caption: 'HTML attachment',
+    firstCellIsHeader: true,
     head: [
       {
         text: 'Field'
@@ -77,7 +79,7 @@ layout: twoColumnPage.njk
     rows: [
       [
         {
-          html: '<strong>Title</strong>'
+          text: 'Title'
         },
         {
           html: '[Service]: service availability and issues
@@ -87,7 +89,7 @@ layout: twoColumnPage.njk
       ],
       [
         {
-          html: '<strong>Body text</strong>'
+          text: 'Body text'
         },
         {
           html: '## Service availability
@@ -98,7 +100,7 @@ layout: twoColumnPage.njk
           <p>## Service issues</p>
           <p>None.</p>
           <p>## Other services</p>
-          <p>Check [availability and issues] (<a href="https://www.gov.uk/government/collections/hmrc-service-availability-and-issues">https://www.gov.uk/government/collections/hmrc-service-availability-and-issues</a>) for other services.</p>
+          <p>Check [availability and issues] (<a href="https://www.gov.uk/government/collections/hmrc-service-availability-and-issues" class="govuk-link">https://www.gov.uk/government/collections/hmrc-service-availability-and-issues</a>) for other services.</p>
           <p>Use a call to action box when adding &#39Planned downtime&#39.</p>
           <p>$CTA</p>
           <p>Sunday 26 September 2021 11:59pm to 3am Monday 27 September 2021</p>
@@ -111,7 +113,7 @@ layout: twoColumnPage.njk
       ],
       [
         {
-          html: '<strong>Public change note</strong>'
+          text: 'Public change note'
         },
         {
           html: '<strong>Service availability</strong>

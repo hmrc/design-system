@@ -13,6 +13,7 @@ layout: twoColumnPage.njk
 {{
   govukTable({
     caption: 'Publication stub page',
+    firstCellIsHeader: true,
     head: [
       {
         text: 'Field'
@@ -27,18 +28,18 @@ layout: twoColumnPage.njk
     rows: [
       [
         {
-          html: '<strong>Title</strong>'
+          text: 'Title'
         },
         {
           text: 'Extra-Statutory Concession (number): title of document'
         },
         {
-          html: 'See live examples on <a href="https://www.gov.uk/government/collections/extra-statutory-concessions">Extra-Statutory Concessions guidance and notices</a>'
+          html: 'See live examples on <a href="https://www.gov.uk/government/collections/extra-statutory-concessions" class="govuk-link">Extra-Statutory Concessions guidance and notices</a>'
         }
       ],
       [
         {
-          html: '<strong>Summary</strong>'
+          text: 'Summary'
         },
         {
           text: 'Read the document and summarise what it is about'
@@ -49,7 +50,7 @@ layout: twoColumnPage.njk
       ],
       [
         {
-          html: '<strong>Body text</strong>'
+          text: 'Body text'
         },
         {
           text: 'To create the body text, read the document and summarise what it is about'
@@ -65,6 +66,7 @@ layout: twoColumnPage.njk
 {{
   govukTable({
     caption: 'HTML attachment',
+    firstCellIsHeader: true,
     head: [
       {
         text: 'Field'
@@ -79,18 +81,18 @@ layout: twoColumnPage.njk
     rows: [
       [
         {
-          html: '<strong>Title</strong>'
+          text: 'Title'
         },
         {
           text: 'Extra-Statutory Concession (number) title of document'
         },
         {
-          html: 'See live examples on <a href="https://www.gov.uk/government/collections/extra-statutory-concessions">Extra-Statutory Concessions guidance and notices</a>'
+          html: 'See live examples on <a href="https://www.gov.uk/government/collections/extra-statutory-concessions" class="govuk-link">Extra-Statutory Concessions guidance and notices</a>'
         }
       ],
       [
         {
-          html: '<strong>Body text</strong>'
+          text: 'Body text'
         },
         {
           text: 'Enter and style the contents of the 
@@ -106,5 +108,5 @@ Extra-Statutory Concessions'
 
 <h3 class="govuk-heading-m">Collection page</h3>
 
-<p class="govuk-body">Add your new document to the <a href="https://www.gov.uk/government/collections/extra-statutory-concessions">Extra Statutory Concessions</a> document collection. Do not create a public change note.
+<p class="govuk-body">Add your new document to the <a href="https://www.gov.uk/government/collections/extra-statutory-concessions" class="govuk-link">Extra Statutory Concessions</a> document collection. Do not create a public change note.
 </p>

@@ -17,6 +17,7 @@ layout: twoColumnPage.njk
 {{
   govukTable({
     caption: 'Publication stub page',
+    firstCellIsHeader: true,
     head: [
       {
         text: 'Field'
@@ -31,7 +32,7 @@ layout: twoColumnPage.njk
     rows: [
       [
         {
-          html: '<strong>Title</strong>'
+          text: 'Title'
         },
         {
           text: 'Revenue and Customs Briefs nn (yyyy): description'
@@ -42,7 +43,7 @@ layout: twoColumnPage.njk
       ],
       [
         {
-          html: '<strong>Summary</strong>'
+          text: 'Summary'
         },
         {
           html: 'Begin with ‘This brief …’<br /><br />
@@ -54,14 +55,14 @@ Read the document and summarise the paper’s content.'
       ],
       [
         {
-          html: '<strong>Body text</strong>'
+          text: 'Body text'
         },
         {
           html: 'Begin with ‘This brief explains…’<br /><br />
 Read the document and summarise the paper’s content to create the body text.'
         },
         {
-          html: 'See live examples on <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs">Revenue and Customs Briefs</a> pages.'
+          html: 'See live examples on <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs" class="govuk-link">Revenue and Customs Briefs</a> pages.'
         }
       ]
     ]
@@ -71,6 +72,7 @@ Read the document and summarise the paper’s content to create the body text.'
 {{
   govukTable({
     caption: 'HTML attachment',
+    firstCellIsHeader: true,
     head: [
       {
         text: 'Field'
@@ -85,7 +87,7 @@ Read the document and summarise the paper’s content to create the body text.'
     rows: [
       [
         {
-          html: '<strong>Title</strong>'
+          text: 'Title'
         },
         {
           text: 'Body text'
@@ -96,7 +98,7 @@ Read the document and summarise the paper’s content to create the body text.'
       ],
       [
         {
-          html: '<strong>Body text</strong>'
+          text: 'Body text'
         },
         {
           text: 'In the Body field enter the content of the brief'
@@ -111,5 +113,5 @@ Read the document and summarise the paper’s content to create the body text.'
 
 <h3 class="govuk-heading-m">Collection page</h3>
 
-<p class="govuk-body">Add your new document to the <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs">Revenue and Customs Briefs</a> document collection. Do not create a public change note.
+<p class="govuk-body">Add your new document to the <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs" class="govuk-link">Revenue and Customs Briefs</a> document collection. Do not create a public change note.
 </p>
