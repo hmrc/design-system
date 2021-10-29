@@ -1,0 +1,68 @@
+.govspeak {
+    $thumbnail-width: 99px;
+
+    .documents {
+      @include govuk-font(27, $weight: bold);
+      margin: 0;
+      padding-bottom: govuk-spacing(2);
+    }
+  
+    .attachment {
+      position: relative;
+      margin: govuk-spacing(6) 0;
+      padding: govuk-spacing(3) 0 0 ($thumbnail-width + govuk-spacing(6));
+      @include govuk-clearfix;
+  
+      &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+      }
+  
+      .attachment-thumb {
+        position: relative;
+        float: left;
+        margin-top: $govuk-border-width;
+        margin-left: -($thumbnail-width + govuk-spacing(6) - $govuk-border-width);
+        padding-bottom: govuk-spacing(3);
+  
+        img {
+          display: block;
+          width: $thumbnail-width;
+          height: 140px;
+          background: govuk-colour("white");
+          outline: $govuk-border-width solid transparentize(govuk-colour("black"), .9);
+  
+          @include govuk-if-ie8 {
+            max-width: none;
+            border: $govuk-border-width solid govuk-colour("mid-grey", $legacy: "grey-3");
+          }
+  
+          box-shadow: 0 2px 2px rgba(govuk-colour("black"), .4);
+        }
+      }
+  
+      .attachment-details {
+        h2 {
+          @include govuk-font($size: 27);
+          margin: 0;
+        }
+  
+        p {
+          margin: govuk-spacing(2) 0;
+        }
+
+        a:link {
+          color: rgb(29, 112, 184);
+        }
+  
+        .metadata {
+          @include govuk-font($size: 14);
+        }
+  
+        .url {
+          word-break: break-word;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
