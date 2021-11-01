@@ -1,0 +1,133 @@
+---
+title: Forms > Using a publication
+menuText: Forms > Using a publication
+layout: twoColumnPage.njk
+---
+{% from "_codeSnippet.njk" import codeSnippet %}
+{% from "_example.njk" import example %}
+
+<h2 class="govuk-heading-l">Title</h2>
+
+<p class="govuk-body">
+Decide if the title should focus on the action a user needs to take or the name of the form. This will depend on how users will find and navigate to the form. 
+</p>
+
+<p class="govuk-body">
+Do not include the form number.
+</p>
+
+<h2 class="govuk-heading-l">Summary</h2>
+
+<p class="govuk-body">
+If there’s a form number you should include it. For example:
+</p>
+
+<p class="govuk-body">
+'Register your business for VAT if you’re distance selling into Northern Ireland using form VAT1A'
+</p>
+
+<h3 class="govuk-heading-m">Documents</h3>
+
+<p class="govuk-body">
+If there’s a form number, include it in brackets at the end of the document title. For example:
+</p>
+
+<p class="govuk-body">
+‘Application for registration – distance selling (VAT1A)’
+</p>
+
+<p class="govuk-body">
+Unless the form is a gForm (<a href="https://tax.service.gov.uk" class="govuk-link">https://tax.service.gov.uk</a>) or in Open Document Format, you must include an external link attachment directly below the form in the document list:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>External attachment title: Read the Accessibility statement for HMRC forms</li>
+<li>Link: <a href="https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms" class="govuk-link">https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms</a></li>
+</ul>
+
+<p class="govuk-body">
+If you have more than one form, the attachment only needs to be included after the first form in the list.
+</p>
+
+<h3 class="govuk-heading-m">Details</h3>
+
+<p class="govuk-body">
+You should include a short summary of when to use the form including any links to any detailed guidance a user must read.
+</p>
+
+<h4 class="govuk-heading-s">Welsh</h4>
+
+<p class="govuk-body">
+If the form is not translated into Welsh, include:
+</p>
+
+  {{
+    codeSnippet({
+      code: 'Email HMRC to [ask for form name in Welsh (Cymraeg)](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/welsh-language-helplines#email).',
+      canCopy: true
+    })
+  }}
+
+<h4 class="govuk-heading-s">Print and post forms</h4>
+
+<p class="govuk-body">
+If the form is a print and post form, include:
+</p>
+
+  {{
+    codeSnippet({
+      code: '## Before you start
+
+Make sure [your browser is up to date](https://www.gov.uk/help/browsers).
+
+You’ll need to fill in the form fully before you can print it. You cannot save a partly completed form so we suggest you gather all your information together before you begin to fill it in.',
+      canCopy: true
+    })
+  }}
+
+<h4 class="govuk-heading-s">PDF forms that can be completed on-screen</h4>
+
+<p class="govuk-body">
+If the form is in PDF format, include: 
+</p>
+
+  {{
+    codeSnippet({
+      code: '## Before you start 
+
+This form is interactive (one that you complete on screen) and you must use [Adobe Reader](https://get.adobe.com/reader/?loc=uk ) to complete it.
+
+[Contact the Online Services helpdesk](https://www.tax.service.gov.uk/information/helpdesk) if you have problems opening or saving the form.',
+      canCopy: true
+    })
+  }}
+
+<h4 class="govuk-heading-s">Forms in Open Document Format (ODF)</h4>
+
+<p class="govuk-body">
+If the form is in ODF format, include:
+</p>
+
+  {{
+    codeSnippet({
+      code: '## Before you start 
+      
+You’ll need software that can open an Open Document Format (ODF) file, such as a recent version of Microsoft Office or [the free LibreOffice](https://www.libreoffice.org/).',
+      canCopy: true
+    })
+  }}
+
+<h4 class="govuk-heading-s">Address</h4>
+
+<p class="govuk-body">
+If the address to send the form is not included on the form itself, include:
+</p>
+
+  {{
+    codeSnippet({
+      code: '## Where to send the form
+$A
+$A',
+      canCopy: true
+    })
+  }}
