@@ -1,0 +1,52 @@
+---
+title: Tariff stop press notices
+layout: twoColumnPage.njk
+---
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+<h2 class="govuk-heading-l">Document type</h2>
+
+<p class="govuk-body">Detailed guide</p>
+
+<h2 class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">
+Use this pattern to tell users about changes to the UK Trade Tariff, Customs Handling of Import and Export Freight (CHIEF), Customs Declaration Service (CDS) and monthly trade euro rate.
+</p>
+
+<h2 class="govuk-heading-l">How it works</h2>
+
+<h3 class="govuk-heading-m">Title format</h3>
+
+<p class="govuk-body">
+Description (Tariff stop press notice xx)
+</p>
+
+<h3 class="govuk-heading-m">Body format</h3>
+
+<p class="govuk-body">
+Begin with the contents of the Tariff stop press notice then add the standard paragraphs beneath this text.
+</p>
+
+<h3 class="govuk-heading-m">Markdown</h3>
+
+  {{
+    codeSnippet({
+      code: '## More information
+
+To stop getting the Tariff stop press notices, or to add recipients to the distribution list, email: <tariff.management@hmrc.gov.uk>.
+
+See the [UK Trade Tariff](https://www.gov.uk/trade-tariff) for the full duty rate, unit of quantity, preferences, quotas, footnotes and VAT rate.',
+      canCopy: true
+    })
+  }}
+
+<div class="govuk-inset-text">
+   Don’t include other links that might appear at the end of source document, for example to UK trade tariffs volumes 1 & 3 or Tariff/CHIEF stop press notices.
+</div>
+
+<h3 class="govuk-heading-m">Collection page</h3>
+
+<p class="govuk-body">
+Add the document to the <a href="https://www.gov.uk/government/collections/tariff-stop-press-notices" class="govuk-link">Tariff stop press notices</a> document collection. Do not create a public change note.
+</p>
