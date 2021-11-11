@@ -6,7 +6,12 @@ layout: layout-example.njk
 {{ hmrcHeader({
   "serviceName": "Enw'r gwasanaeth",
   "serviceUrl" : "/",
-  "phaseBanner" : true,
+  "phaseBanner" : {
+    tag: {
+      text: "alpha"
+  },
+  html: "Mae hwn yn wasanaeth newydd ‐ bydd eich <a class='govuk-link' href='#'>adborth</a> yn ein helpu i'w wella."
+  },
   language : 'cy',
   "signOutHref" : "?sign-out"
 }) }}
