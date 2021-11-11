@@ -293,10 +293,10 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner__content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-phase-banner__content__tag&quot;</span>&gt;</span>
-
+      alpha
     <span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-phase-banner__text&quot;</span>&gt;</span>
-
+          This is a new service – your <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>feedback<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> will help us to improve it.
         <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -364,7 +364,12 @@
 {{ hmrcHeader({
   <span class="hljs-string">&quot;serviceName&quot;</span>: <span class="hljs-string">&quot;Service Name&quot;</span>,
   <span class="hljs-string">&quot;serviceUrl&quot;</span> : <span class="hljs-string">&quot;/&quot;</span>,
-  <span class="hljs-string">&quot;phaseBanner&quot;</span> : <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;phaseBanner&quot;</span> : {
+    <span class="hljs-attr">tag</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;alpha&quot;</span>
+  },
+  <span class="hljs-attr">html</span>: <span class="hljs-string">&#x27;This is a new service – your &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;feedback&lt;/a&gt; will help us to improve it.&#x27;</span>
+  },
   <span class="hljs-string">&quot;signOutHref&quot;</span> : <span class="hljs-string">&quot;?sign-out&quot;</span>
 }) }}</code>
                 </pre>
