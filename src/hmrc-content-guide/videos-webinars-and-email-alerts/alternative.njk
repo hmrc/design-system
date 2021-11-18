@@ -1,0 +1,285 @@
+---
+title: Videos, webinars and email alerts
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+<h2 class="govuk-heading-l">Document type</h2>
+
+<p class="govuk-body">Detailed guide</p>
+
+<h2 class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">
+Use this pattern to: 
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>design content that includes videos, webinars, email alerts and e-learning</li>
+    <li>amend existing content that includes videos, webinars, email alerts and e-learning</li>
+</ul>
+
+<p class="govuk-body">
+Review the whole page each time you make a change to this content, making sure that webinars that have happened are moved to the appropriate part of the page.
+</p>
+
+<h2 class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Don't use this design pattern if you’re just adding a video to a piece of guidance.</p>
+
+<h2 class="govuk-heading-l">How it works</h2>
+
+<h3 class="govuk-heading-m">Title format</h3>
+
+  {{
+    codeSnippet({
+      code: 'Help and support for [topic]',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">
+For example: 'Help and support for VAT'
+</p>
+
+<h3 class="govuk-heading-m">Summary</h3>
+
+  {{
+    codeSnippet({
+      code: 'Watch videos, sign up for email alerts and register for free webinars and e-learning to learn more about [topic].',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">
+For example: ‘Watch videos, sign up for email alerts and register for free webinars and e-learning to learn more about VAT.’
+</p>
+
+<p class="govuk-body">
+Remove references to any product that isn’t included in the page. 
+</p>
+
+<p class="govuk-body">
+For example, if a page doesn’t include e-learning: ‘Watch videos, sign up for email alerts and register for free webinars to learn more about [topic].’
+</p>
+
+<h2 class="govuk-heading-l">Body text</h2>
+
+<h3 class="govuk-heading-m">Introductory text</h3>
+
+  {{
+    codeSnippet({
+      code: 'You can [sign up for email alerts about [topic](link).
+
+If you register for a webinar, you:
+
+* must register and sign in 5 minutes before it starts
+* can ask questions using the on-screen text box',
+      canCopy: true
+    })
+  }}
+
+<h3 class="govuk-heading-m">Links to learning products</h3>
+
+<p class="govuk-body">
+List products in this order:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>YouTube videos</li>
+    <li>recorded webinars</li>
+    <li>upcoming webinars</li>
+    <li>e-learning</li>
+</ul>
+
+<p class="govuk-body">
+Use descriptive level 2 headings to tell the user what they will learn.
+</p>
+
+<p class="govuk-body">
+Below the heading, describe the action users will take and what they will learn. 
+</p>
+
+<p class="govuk-body">
+Then link to the product.
+</p>
+
+<p class="govuk-body">
+After that, link to relevant guidance (if appropriate).
+</p>
+
+<h3 class="govuk-heading-m">Linking to YouTube videos </h3>
+
+  {{
+    codeSnippet({
+      code: '## [sub topic]
+
+Watch a video about/to find out [sub topic]. 
+
+[Video](link).
+
+Text to describe where the user is going [action - topic](link).',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">
+For example:
+</p>
+
+<p class="govuk-body">
+## When to register for VAT
+</p>
+
+<p class="govuk-body">
+Watch a video to find out when to register your business for VAT. 
+</p>
+
+<p class="govuk-body">
+[Video](link).
+</p>
+
+<p class="govuk-body">
+You can [register for VAT online](link). 
+</p>
+
+<h3 class="govuk-heading-m">Linking to recorded webinars</h3>
+
+  {{
+    codeSnippet({
+      code: '## [sub topic]
+
+Watch a recorded webinar about [sub topic](link) to learn about:
+
+* detail
+
+* detail',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">
+For example:
+</p>
+
+<p class="govuk-body">
+## How to do your VAT Return
+</p>
+
+<p class="govuk-body">
+Watch a recorded webinar about [VAT Returns](link) to learn about: 
+</p>
+
+<p class="govuk-body">
+* how and when to send your VAT Return
+</p>
+
+<p class="govuk-body">
+* useful tips on how to complete a VAT Return 
+</p>
+
+<h3 class="govuk-heading-m">Linking to upcoming webinars</h3>
+
+  {{
+    codeSnippet({
+      code: 'Register for the next live webinar about [sub topic](link) to learn about:
+
+* this
+
+* that ',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">
+For example:
+</p>
+
+<p class="govuk-body">
+## New VAT reverse charge for construction services 
+</p>
+
+<p class="govuk-body">
+Register for the next live webinar on the [new VAT reverse charge for construction services](link). If you’re in the Construction Industry Scheme you’ll find out: 
+</p>
+
+<p class="govuk-body">
+* if the changes affect you
+</p>
+
+<p class="govuk-body">
+* how the changes could impact your cashflow 
+</p>
+
+<p class="govuk-body">
+* how to prepare for the change 
+</p>
+
+<h3 class="govuk-heading-m">Linking to e-learning</h3>
+
+  {{
+    codeSnippet({
+      code: 'Complete an e-learning course about [sub topic](link) to learn about:
+
+* this
+
+* that',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">
+For example:
+</p>
+
+<p class="govuk-body">
+## Accounting schemes 
+</p>
+
+<p class="govuk-body">
+[Complete e-learning about accounting services](link). You will learn about: 
+</p>
+
+<p class="govuk-body">
+* Cash Accounting Scheme
+</p>
+
+<p class="govuk-body">
+* Flat Rate Scheme (FRS) 
+</p>
+
+<p class="govuk-body">
+* Annual Accounting Scheme
+</p>
+
+<h3 class="govuk-heading-m">Linking to related videos, webinars and email alerts, and the HMRC online customer forum</h3>
+
+  {{
+    codeSnippet({
+      code: '## More information
+
+Watch more videos and webinars about [related topic](link).
+
+[Visit the HMRC Online Customer Form](https://community.hmrc.gov.uk/) to find answers to your questions about tax and benefits.',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">
+For example:
+</p>
+
+<p class="govuk-body">
+Watch more videos and webinars about the [Construction Industry Scheme](link).
+</p>
+
+<p class="govuk-body">
+<a href="https://community.hmrc.gov.uk/" class="govuk-link">Visit the HMRC Online Customer Form</a> to find answers to your questions about tax and benefits.
+</p>
+
+<h3 class="govuk-heading-m">Collection page</h3>
+
+<p class="govuk-body">
+If you're creating a new page, add it to the <a href="https://www.gov.uk/government/collections/hmrc-webinars-email-alerts-and-videos" class="govuk-link">HMRC videos, webinars and email alerts</a> document collection page. Do not create a public change note.
+</p>
