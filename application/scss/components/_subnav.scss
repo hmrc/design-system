@@ -6,9 +6,6 @@
 
 .app-subnav-toggle + input:checked + .app-pane__subnav {
   display: block;
-  @include govuk-media-query(desktop) {
-    display: none;
-  }
 }
 
 .app-subnav-toggle {
