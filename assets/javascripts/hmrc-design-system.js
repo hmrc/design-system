@@ -911,21 +911,12 @@
 	    this.$module = document.querySelector($module);
 	    this.$moduleBottomMargin = this.$module.style.marginBottom;
 	    this.$mainNav = this.$module.querySelector('.hmrc-account-menu__main');
-	    this.$subNav = this.$module.querySelector('.hmrc-subnav');
-	    this.$showSubnavLink = this.$module.querySelector('#account-menu__main-2');
 	    this.$showNavLinkMobile = this.$module.querySelector('.hmrc-account-menu__link--menu');
-	    this.$backLink = this.$module.querySelector('.hmrc-account-menu__link--back a');
 	    this.$currentBreakpoint = getCurrentBreakpoint();
 	  }
 
 	  AccountMenu.prototype.init = function init() {
 	    this.setup();
-	    this.$showSubnavLink.addEventListener('click', this.eventHandlers.showSubnavLinkClick.bind(this));
-	    this.$showSubnavLink.addEventListener('focusout', this.eventHandlers.showSubnavLinkFocusOut.bind(this));
-	    this.$showSubnavLink.addEventListener('focusin', this.eventHandlers.showSubnavLinkFocusIn.bind(this));
-	    this.$backLink.addEventListener('click', this.eventHandlers.backLinkClick.bind(this));
-	    this.$subNav.addEventListener('focusout', this.eventHandlers.subNavFocusOut.bind(this));
-	    this.$subNav.addEventListener('focusin', this.eventHandlers.subNavFocusIn.bind(this));
 	    this.$showNavLinkMobile.addEventListener('click', this.eventHandlers.showNavLinkMobileClick.bind(this));
 	    window.addEventListener('resize', debounce(this.reinstantiate.bind(this)));
 	  };
@@ -941,55 +932,11 @@
 	  };
 
 	  AccountMenu.prototype.eventHandlers = {
-	    showSubnavLinkClick: function showSubnavLinkClick(event) {
-	      event.preventDefault();
-	      event.stopPropagation();
-
-	      if (isSmall(window)) {
-	        // TODO: remove redundant check - showSubnavLink appears only when subnav is not expanded
-	        if (!event.currentTarget.classList.contains('hmrc-account-menu__link--more-expanded')) {
-	          this.hideMainNavMobile(event.currentTarget);
-	          this.showSubnavMobile(event.currentTarget);
-	        }
-	      } else if (event.currentTarget.classList.contains('hmrc-account-menu__link--more-expanded')) {
-	        this.hideSubnavDesktop();
-	      } else {
-	        this.showSubnavDesktop();
-	      }
-	    },
-	    showSubnavLinkFocusOut: function showSubnavLinkFocusOut(event) {
-	      if (!isSmall(window)) {
-	        this.$module.querySelector(event.target.hash).dataset.subMenuTimer = setTimeout(function () {}, 0);
-	      }
-	    },
-	    showSubnavLinkFocusIn: function showSubnavLinkFocusIn(event) {
-	      if (!isSmall(window)) {
-	        clearTimeout(this.$module.querySelector(event.target.hash).dataset.subMenuTimer);
-	      }
-	    },
-	    backLinkClick: function backLinkClick(event) {
-	      event.preventDefault(); // TODO: remove redundant check - backlink appears only when subnav is open
-
-	      if (this.$mainNav.classList.contains('hmrc-subnav-is-open')) {
-	        this.hideSubnavMobile();
-	        this.showMainNavMobile();
-	      }
-	    },
-	    subNavFocusOut: function subNavFocusOut(event) {
-	      if (!isSmall(window)) {
-	        // eslint-disable-next-line no-param-reassign
-	        event.currentTarget.dataset.subMenuTimer = setTimeout(this.hideSubnavDesktop.bind(this), 0);
-	      }
-	    },
-	    subNavFocusIn: function subNavFocusIn(event) {
-	      clearTimeout(event.currentTarget.dataset.subMenuTimer);
-	    },
 	    showNavLinkMobileClick: function showNavLinkMobileClick(event) {
 	      event.preventDefault();
 
 	      if (isSmall(window)) {
-	        if (this.$mainNav.classList.contains('hmrc-subnav-is-open') || this.$mainNav.classList.contains('main-nav-is-open')) {
-	          this.hideSubnavMobile();
+	        if (this.$mainNav.classList.contains('main-nav-is-open')) {
 	          this.hideMainNavMobile(event.currentTarget);
 	        } else {
 	          this.showMainNavMobile();
@@ -999,53 +946,19 @@
 	  };
 
 	  AccountMenu.prototype.setup = function setup() {
-	    this.$subNav.setAttribute('aria-hidden', 'true');
-	    this.$subNav.setAttribute('tabindex', '-1');
-	    this.$showSubnavLink.setAttribute('aria-controls', this.$showSubnavLink.hash.substr(1));
-	    this.$showSubnavLink.setAttribute('aria-expanded', 'false');
-
 	    if (isSmall(window)) {
 	      this.$module.classList.add('is-smaller');
 	      this.$showNavLinkMobile.setAttribute('aria-hidden', 'false');
 	      this.$showNavLinkMobile.removeAttribute('tabindex');
 	      this.$showNavLinkMobile.classList.remove('js-hidden');
-	      this.hideSubnavMobile();
 	      this.hideMainNavMobile(this.$showNavLinkMobile);
 	    } else {
 	      this.$module.classList.remove('is-smaller');
 	      this.$mainNav.classList.remove('main-nav-is-open', 'js-hidden');
-	      this.$subNav.classList.remove('js-hidden');
 	      this.$showNavLinkMobile.setAttribute('aria-hidden', 'true');
 	      this.$showNavLinkMobile.setAttribute('tabindex', '-1');
 	      this.$showNavLinkMobile.classList.add('js-hidden');
 	    }
-	  };
-
-	  AccountMenu.prototype.showSubnavDesktop = function showSubnavDesktop() {
-	    var self = this;
-	    this.$module.classList.add('hmrc-subnav-is-open');
-	    this.$mainNav.classList.add('hmrc-subnav-is-open');
-	    this.$subNav.classList.add('hmrc-subnav-reveal');
-	    this.$subNav.setAttribute('aria-hidden', 'false');
-	    this.$subNav.setAttribute('aria-expanded', 'true');
-	    var subNavHeight = this.$subNav.offsetHeight;
-	    this.$module.style.marginBottom = "".concat(subNavHeight, "px");
-	    setTimeout(function () {
-	      self.$subNav.focus();
-	    }, 500);
-	    this.$showSubnavLink.classList.add('hmrc-account-menu__link--more-expanded');
-	    this.$showSubnavLink.setAttribute('aria-expanded', 'true');
-	  };
-
-	  AccountMenu.prototype.hideSubnavDesktop = function hideSubnavDesktop() {
-	    this.$module.classList.remove('main-nav-is-open', 'hmrc-subnav-is-open');
-	    this.$mainNav.classList.remove('hmrc-subnav-is-open');
-	    this.$subNav.classList.remove('hmrc-subnav-reveal');
-	    this.$subNav.setAttribute('aria-hidden', 'true');
-	    this.$subNav.setAttribute('aria-expanded', 'false');
-	    this.$showSubnavLink.classList.remove('hmrc-account-menu__link--more-expanded');
-	    this.$showSubnavLink.setAttribute('aria-expanded', 'false');
-	    this.$module.style.marginBottom = this.$moduleBottomMargin;
 	  };
 
 	  AccountMenu.prototype.showMainNavMobile = function showMainNavMobile() {
@@ -1062,64 +975,9 @@
 	    this.$mainNav.setAttribute('aria-expanded', 'false');
 
 	    if (element.classList.contains('hmrc-account-menu__link--menu')) {
-	      this.$mainNav.classList.remove('hmrc-subnav-is-open');
 	      this.$mainNav.classList.add('js-hidden');
 	      this.$showNavLinkMobile.setAttribute('aria-expanded', 'false');
 	      this.$showNavLinkMobile.classList.remove('hmrc-account-home--account--is-open');
-	    } else if (element.classList.contains('hmrc-account-menu__link--more')) {
-	      this.$mainNav.classList.add('hmrc-subnav-is-open');
-	    }
-	  };
-
-	  AccountMenu.prototype.showSubnavMobile = function showSubnavMobile(element) {
-	    this.$module.classList.add('hmrc-subnav-is-open');
-	    this.$mainNav.classList.remove('main-nav-is-open');
-	    this.$mainNav.classList.add('hmrc-subnav-is-open');
-	    this.$subNav.classList.remove('js-hidden');
-	    this.$subNav.classList.add('hmrc-subnav-reveal');
-	    this.$subNav.setAttribute('aria-hidden', 'false');
-	    this.$subNav.setAttribute('aria-expanded', 'true');
-	    this.$showSubnavLink.classList.add('hmrc-account-menu__link--more-expanded');
-	    this.$showSubnavLink.setAttribute('aria-expanded', 'true');
-	    this.$backLink.parentNode.setAttribute('aria-hidden', 'false');
-	    this.$backLink.removeAttribute('tabindex');
-	    this.$backLink.parentNode.classList.remove('hidden');
-	    element.parentNode.classList.add('active-subnav-parent'); // TODO: modernise the following and polyfill it for IE8
-
-	    var $elementSiblings = element.parentNode.parentNode.children;
-
-	    for (var i = 0; i < $elementSiblings.length; i += 1) {
-	      var sibling = $elementSiblings[i];
-
-	      if (sibling !== this.$backLink.parentNode && sibling !== element.parentNode) {
-	        sibling.classList.add('hidden');
-	      }
-	    }
-	  };
-
-	  AccountMenu.prototype.hideSubnavMobile = function hideSubnavMobile() {
-	    this.$module.classList.remove('hmrc-subnav-is-open');
-	    this.$mainNav.classList.remove('hmrc-subnav-is-open');
-	    this.$mainNav.classList.add('main-nav-is-open');
-	    this.$subNav.classList.add('js-hidden');
-	    this.$subNav.classList.remove('hmrc-subnav-reveal');
-	    this.$subNav.setAttribute('aria-hidden', 'true');
-	    this.$subNav.setAttribute('aria-expanded', 'false');
-	    this.$showSubnavLink.classList.remove('hmrc-account-menu__link--more-expanded');
-	    this.$showSubnavLink.setAttribute('aria-expanded', 'false');
-	    this.$backLink.parentNode.setAttribute('aria-hidden', 'true');
-	    this.$backLink.setAttribute('tabindex', '-1');
-	    this.$backLink.parentNode.classList.add('hidden');
-	    this.$showSubnavLink.parentNode.classList.remove('active-subnav-parent'); // TODO: modernise the following and polyfill it for IE8
-
-	    var $backLinkSiblings = this.$backLink.parentNode.parentNode.children;
-
-	    for (var i = 0; i < $backLinkSiblings.length; i += 1) {
-	      var sibling = $backLinkSiblings[i];
-
-	      if (sibling !== this.$backLink.parentNode) {
-	        sibling.classList.remove('hidden');
-	      }
 	    }
 	  };
 
@@ -1454,7 +1312,7 @@
 	  };
 
 	  function displayDialog($elementToDisplay) {
-	    var $dialog = utils.generateDomElementFromString('<div id="hmrc-timeout-dialog" tabindex="-1" role="dialog" class="hmrc-timeout-dialog">');
+	    var $dialog = utils.generateDomElementFromString('<div id="hmrc-timeout-dialog" tabindex="-1" role="dialog" aria-modal="true" class="hmrc-timeout-dialog">');
 	    var $overlay = utils.generateDomElementFromString('<div id="hmrc-timeout-overlay" class="hmrc-timeout-overlay">');
 	    var $preparedElementToDisplay = typeof $elementToDisplay === 'string' ? utils.generateDomElementFromString($elementToDisplay) : $elementToDisplay;
 	    var resetElementsFunctionList = [];
@@ -1497,7 +1355,7 @@
 	    }; // disable the non-dialog page to prevent confusion for VoiceOver users
 
 
-	    var selectors = ['#skiplink-container', 'body > header', '#global-cookie-message', 'main[role=main]', 'body > footer'];
+	    var selectors = ['#skiplink-container', 'body > header', '#global-cookie-message', 'main[role=main]', 'body > footer', 'body > .govuk-skip-link', '.cbanner-govuk-cookie-banner', 'body > .govuk-width-container'];
 	    var elements = document.querySelectorAll(selectors.join(', '));
 
 	    var close = function close() {
@@ -2952,7 +2810,7 @@
 	  });
 	  });
 
-	  // https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/components/character-count/character-count.js
+	  // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/character-count/character-count.js
 	  // with the change to support Welsh language messages. At the moment, there is no ability to pass
 	  // in custom messages to the component for the dynamic count. If GDS release a version supporting
 	  // custom dynamic count messages, this version should be removed.
