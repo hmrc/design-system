@@ -1,0 +1,94 @@
+---
+title: Notices
+layout: twoColumnPage.njk
+---
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+<h2 class="govuk-heading-l">Document type</h2>
+
+<p class="govuk-body">Detailed guide</p>
+
+<h2 class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">Use this pattern to design an excise, Soft Drinks Industry Levy or VAT notice that includes force of law - for examples see:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://www.gov.uk/guidance/receive-goods-into-and-remove-goods-from-an-excise-warehouse-excise-notice-197">Receive goods into and remove goods from an excise warehouse</a> (Excise Notice 197)</li>
+<li><a href="https://www.gov.uk/guidance/submit-a-return-and-pay-the-soft-drinks-industry-levy-notice-2">Soft Drinks Industry Levy returns and records</a> (notice 2)</li>
+<li><a href="https://www.gov.uk/guidance/refunds-of-uk-vat-for-non-uk-businesses-or-eu-vat-for-uk-businesses">Refunds of UK VAT for non-UK businesses or EU VAT for UK businesses</a> (VAT Notice 723A)</li>
+</ul>
+
+<p class="govuk-body">Do not:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>use call to action markdown to indicate force of law text</li>
+<li>amend or style any force of law text</li>
+</ul>
+
+<p class="govuk-body">Formatting can be carried out to 'force of law' text to meet accessibility as long as it doesn't change any of the wording or meaning.</p>
+
+<h2 class="govuk-heading-l">How it works</h2>
+
+<h3 class="govuk-heading-m">Soft Drinks Industry Levy</h3>
+
+<h4 class="govuk-heading-s">Title format</h4>
+
+<p class="govuk-body">Description (notice xx)</p>
+
+<h3 class="govuk-heading-m">Excise and VAT only</h3>
+
+<h4 class="govuk-heading-s">Title format</h4>
+
+<p class="govuk-body">Description (Excise Notice xxx)</p>
+
+<p class="govuk-body">Description (VAT Notice xxx)</p>
+
+<p class="govuk-body">Add the following text to the end of the guide.</p>
+
+{{
+    codeSnippet({
+      code: '## Your rights and obligations
+
+Read [Your Charter](https://www.gov.uk/government/publications/hmrc-charter) to find out what you can expect from HMRC and what we expect from you.
+
+## Help us improve this notice
+
+If you have any feedback about this notice please email: <contact for business area>.
+
+You’ll need to include the full title of this notice. Do not include any personal or financial information like your VAT number.
+
+If you need general help with this notice or have another question contact the [add link to relevant contact page].
+
+## Putting things right
+
+If you’re unhappy with HMRC’s service, contact the person or office you’ve been dealing with and they’ll try to put things right.
+
+If you’re still unhappy, find out [how to complain to HMRC](https://www.gov.uk/complain-about-hmrc).
+
+## How HMRC uses your information
+
+Find out [how HMRC uses the information](https://www.gov.uk/government/organisations/hm-revenue-customs/about/personal-information-charter) we hold about you.',
+      canCopy: true
+    })
+  }}
+
+<h4 class="govuk-heading-s">Collection pages</h4>
+
+<p class="govuk-body">For Excise add the guide to the relevant collection page:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://www.gov.uk/government/collections/alcohols-notices">Excise notices: alcohols</a></li>
+<li><a href="https://www.gov.uk/government/collections/tobacco-notices">Excise notices: tobacco products</a></li>
+<li><a href="https://www.gov.uk/government/collections/oils-notices">Excise notices: oils</a></li>
+<li><a href="https://www.gov.uk/government/collections/holdings-and-movement-notices">Excise notices: storing and moving goods</a></li>
+<li><a href="https://www.gov.uk/government/collections/gambling-duty-notices">Excise notices: gambling duties</a></li>
+</ul>
+
+<p class="govuk-body">For VAT add the guide to both the alphabetical and numerical collection page:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://www.gov.uk/government/collections/vat-notices-alphabetical-order">VAT notices in alphabetical order</a></li>
+<li><a href="https://www.gov.uk/government/collections/vat-notices-numerical-order">VAT notices in numerical order</a></li>
+</ul>
+
+<p class="govuk-body">Do not create a public change note.</p>
