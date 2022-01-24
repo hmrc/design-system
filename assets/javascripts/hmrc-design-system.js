@@ -54,20 +54,40 @@
 	(function (global, factory) {
 	  module.exports = factory();
 	}(commonjsGlobal, (function () {
+	  function ownKeys(object, enumerableOnly) {
+	    var keys = Object.keys(object);
+
+	    if (Object.getOwnPropertySymbols) {
+	      var symbols = Object.getOwnPropertySymbols(object);
+	      enumerableOnly && (symbols = symbols.filter(function (sym) {
+	        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+	      })), keys.push.apply(keys, symbols);
+	    }
+
+	    return keys;
+	  }
+
+	  function _objectSpread2(target) {
+	    for (var i = 1; i < arguments.length; i++) {
+	      var source = null != arguments[i] ? arguments[i] : {};
+	      i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
+	        _defineProperty(target, key, source[key]);
+	      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
+	        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+	      });
+	    }
+
+	    return target;
+	  }
+
 	  function _typeof(obj) {
 	    "@babel/helpers - typeof";
 
-	    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-	      _typeof = function (obj) {
-	        return typeof obj;
-	      };
-	    } else {
-	      _typeof = function (obj) {
-	        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-	      };
-	    }
-
-	    return _typeof(obj);
+	    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+	      return typeof obj;
+	    } : function (obj) {
+	      return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+	    }, _typeof(obj);
 	  }
 
 	  function _defineProperty(obj, key, value) {
@@ -83,40 +103,6 @@
 	    }
 
 	    return obj;
-	  }
-
-	  function ownKeys(object, enumerableOnly) {
-	    var keys = Object.keys(object);
-
-	    if (Object.getOwnPropertySymbols) {
-	      var symbols = Object.getOwnPropertySymbols(object);
-	      if (enumerableOnly) symbols = symbols.filter(function (sym) {
-	        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-	      });
-	      keys.push.apply(keys, symbols);
-	    }
-
-	    return keys;
-	  }
-
-	  function _objectSpread2(target) {
-	    for (var i = 1; i < arguments.length; i++) {
-	      var source = arguments[i] != null ? arguments[i] : {};
-
-	      if (i % 2) {
-	        ownKeys(Object(source), true).forEach(function (key) {
-	          _defineProperty(target, key, source[key]);
-	        });
-	      } else if (Object.getOwnPropertyDescriptors) {
-	        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-	      } else {
-	        ownKeys(Object(source)).forEach(function (key) {
-	          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-	        });
-	      }
-	    }
-
-	    return target;
 	  }
 
 	  var commonjsGlobal$$1 = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof commonjsGlobal !== 'undefined' ? commonjsGlobal : typeof self !== 'undefined' ? self : {};
@@ -3823,19 +3809,28 @@
 	  this.$module = $module;
 	  this.moduleId = $module.getAttribute('id');
 	  this.$sections = $module.querySelectorAll('.govuk-accordion__section');
-	  this.$openAllButton = '';
+	  this.$showAllButton = '';
 	  this.browserSupportsSessionStorage = helper.checkForSessionStorage();
 
 	  this.controlsClass = 'govuk-accordion__controls';
-	  this.openAllClass = 'govuk-accordion__open-all';
-	  this.iconClass = 'govuk-accordion__icon';
+	  this.showAllClass = 'govuk-accordion__show-all';
+	  this.showAllTextClass = 'govuk-accordion__show-all-text';
 
-	  this.sectionHeaderClass = 'govuk-accordion__section-header';
-	  this.sectionHeaderFocusedClass = 'govuk-accordion__section-header--focused';
-	  this.sectionHeadingClass = 'govuk-accordion__section-heading';
-	  this.sectionSummaryClass = 'govuk-accordion__section-summary';
-	  this.sectionButtonClass = 'govuk-accordion__section-button';
 	  this.sectionExpandedClass = 'govuk-accordion__section--expanded';
+	  this.sectionButtonClass = 'govuk-accordion__section-button';
+	  this.sectionHeaderClass = 'govuk-accordion__section-header';
+	  this.sectionHeadingClass = 'govuk-accordion__section-heading';
+	  this.sectionHeadingTextClass = 'govuk-accordion__section-heading-text';
+	  this.sectionHeadingTextFocusClass = 'govuk-accordion__section-heading-text-focus';
+
+	  this.sectionShowHideToggleClass = 'govuk-accordion__section-toggle';
+	  this.sectionShowHideToggleFocusClass = 'govuk-accordion__section-toggle-focus';
+	  this.sectionShowHideTextClass = 'govuk-accordion__section-toggle-text';
+	  this.upChevronIconClass = 'govuk-accordion-nav__chevron';
+	  this.downChevronIconClass = 'govuk-accordion-nav__chevron--down';
+
+	  this.sectionSummaryClass = 'govuk-accordion__section-summary';
+	  this.sectionSummaryFocusClass = 'govuk-accordion__section-summary-focus';
 	}
 
 	// Initialize component
@@ -3846,32 +3841,39 @@
 	  }
 
 	  this.initControls();
-
 	  this.initSectionHeaders();
 
-	  // See if "Open all" button text should be updated
+	  // See if "Show all sections" button text should be updated
 	  var areAllSectionsOpen = this.checkIfAllSectionsOpen();
-	  this.updateOpenAllButton(areAllSectionsOpen);
+	  this.updateShowAllButton(areAllSectionsOpen);
 	};
 
 	// Initialise controls and set attributes
 	Accordion.prototype.initControls = function () {
-	  // Create "Open all" button and set attributes
-	  this.$openAllButton = document.createElement('button');
-	  this.$openAllButton.setAttribute('type', 'button');
-	  this.$openAllButton.innerHTML = 'Open all <span class="govuk-visually-hidden">sections</span>';
-	  this.$openAllButton.setAttribute('class', this.openAllClass);
-	  this.$openAllButton.setAttribute('aria-expanded', 'false');
-	  this.$openAllButton.setAttribute('type', 'button');
+	  // Create "Show all" button and set attributes
+	  this.$showAllButton = document.createElement('button');
+	  this.$showAllButton.setAttribute('type', 'button');
+	  this.$showAllButton.setAttribute('class', this.showAllClass);
+	  this.$showAllButton.setAttribute('aria-expanded', 'false');
+
+	  // Create icon, add to element
+	  var $icon = document.createElement('span');
+	  $icon.classList.add(this.upChevronIconClass);
+	  this.$showAllButton.appendChild($icon);
 
 	  // Create control wrapper and add controls to it
-	  var accordionControls = document.createElement('div');
-	  accordionControls.setAttribute('class', this.controlsClass);
-	  accordionControls.appendChild(this.$openAllButton);
-	  this.$module.insertBefore(accordionControls, this.$module.firstChild);
+	  var $accordionControls = document.createElement('div');
+	  $accordionControls.setAttribute('class', this.controlsClass);
+	  $accordionControls.appendChild(this.$showAllButton);
+	  this.$module.insertBefore($accordionControls, this.$module.firstChild);
 
-	  // Handle events for the controls
-	  this.$openAllButton.addEventListener('click', this.onOpenOrCloseAllToggle.bind(this));
+	  // Build additional wrapper for Show all toggle text and place after icon
+	  var $wrappershowAllText = document.createElement('span');
+	  $wrappershowAllText.classList.add(this.showAllTextClass);
+	  this.$showAllButton.appendChild($wrappershowAllText);
+
+	  // Handle click events on the show/hide all button
+	  this.$showAllButton.addEventListener('click', this.onShowOrHideAllToggle.bind(this));
 	};
 
 	// Initialise section headers
@@ -3879,13 +3881,12 @@
 	  // Loop through section headers
 	  nodeListForEach(this.$sections, function ($section, i) {
 	    // Set header attributes
-	    var header = $section.querySelector('.' + this.sectionHeaderClass);
-	    this.initHeaderAttributes(header, i);
-
+	    var $header = $section.querySelector('.' + this.sectionHeaderClass);
+	    this.constructHeaderMarkup($header, i);
 	    this.setExpanded(this.isExpanded($section), $section);
 
 	    // Handle events
-	    header.addEventListener('click', this.onSectionToggle.bind(this, $section));
+	    $header.addEventListener('click', this.onSectionToggle.bind(this, $section));
 
 	    // See if there is any state stored in sessionStorage and set the sections to
 	    // open or closed.
@@ -3893,51 +3894,100 @@
 	  }.bind(this));
 	};
 
-	// Set individual header attributes
-	Accordion.prototype.initHeaderAttributes = function ($headerWrapper, index) {
-	  var $module = this;
+	Accordion.prototype.constructHeaderMarkup = function ($headerWrapper, index) {
 	  var $span = $headerWrapper.querySelector('.' + this.sectionButtonClass);
 	  var $heading = $headerWrapper.querySelector('.' + this.sectionHeadingClass);
 	  var $summary = $headerWrapper.querySelector('.' + this.sectionSummaryClass);
 
-	  // Copy existing span element to an actual button element, for improved accessibility.
+	  // Create a button element that will replace the '.govuk-accordion__section-button' span
 	  var $button = document.createElement('button');
 	  $button.setAttribute('type', 'button');
-	  $button.setAttribute('id', this.moduleId + '-heading-' + (index + 1));
 	  $button.setAttribute('aria-controls', this.moduleId + '-content-' + (index + 1));
 
 	  // Copy all attributes (https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) from $span to $button
 	  for (var i = 0; i < $span.attributes.length; i++) {
 	    var attr = $span.attributes.item(i);
-	    $button.setAttribute(attr.nodeName, attr.nodeValue);
-	  }
-
-	  $button.addEventListener('focusin', function (e) {
-	    if (!$headerWrapper.classList.contains($module.sectionHeaderFocusedClass)) {
-	      $headerWrapper.className += ' ' + $module.sectionHeaderFocusedClass;
+	    // Add all attributes but not ID as this is being added to
+	    // the section heading ($headingText)
+	    if (attr.nodeName !== 'id') {
+	      $button.setAttribute(attr.nodeName, attr.nodeValue);
 	    }
-	  });
-
-	  $button.addEventListener('blur', function (e) {
-	    $headerWrapper.classList.remove($module.sectionHeaderFocusedClass);
-	  });
-
-	  if (typeof ($summary) !== 'undefined' && $summary !== null) {
-	    $button.setAttribute('aria-describedby', this.moduleId + '-summary-' + (index + 1));
 	  }
 
-	  // $span could contain HTML elements (see https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content)
-	  $button.innerHTML = $span.innerHTML;
+	  // Create container for heading text so it can be styled
+	  var $headingText = document.createElement('span');
+	  $headingText.classList.add(this.sectionHeadingTextClass);
+	  // Copy the span ID to the heading text to allow it to be referenced by `aria-labelledby` on the
+	  // hidden content area without "Show this section"
+	  $headingText.id = $span.id;
+
+	  // Create an inner heading text container to limit the width of the focus state
+	  var $headingTextFocus = document.createElement('span');
+	  $headingTextFocus.classList.add(this.sectionHeadingTextFocusClass);
+	  $headingText.appendChild($headingTextFocus);
+	  // span could contain HTML elements (see https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#phrasing-content)
+	  $headingTextFocus.innerHTML = $span.innerHTML;
+
+	  // Create container for show / hide icons and text.
+	  var $showToggle = document.createElement('span');
+	  $showToggle.classList.add(this.sectionShowHideToggleClass);
+	  // Tell Google not to index the 'show' text as part of the heading
+	  // For the snippet to work with JavaScript, it must be added before adding the page element to the
+	  // page's DOM. See https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#data-nosnippet-attr
+	  $showToggle.setAttribute('data-nosnippet', '');
+	  // Create an inner container to limit the width of the focus state
+	  var $showToggleFocus = document.createElement('span');
+	  $showToggleFocus.classList.add(this.sectionShowHideToggleFocusClass);
+	  $showToggle.appendChild($showToggleFocus);
+	  // Create wrapper for the show / hide text. Append text after the show/hide icon
+	  var $showToggleText = document.createElement('span');
+	  var $icon = document.createElement('span');
+	  $icon.classList.add(this.upChevronIconClass);
+	  $showToggleFocus.appendChild($icon);
+	  $showToggleText.classList.add(this.sectionShowHideTextClass);
+	  $showToggleFocus.appendChild($showToggleText);
+
+	  // Append elements to the button:
+	  // 1. Heading text
+	  // 2. Punctuation
+	  // 3. (Optional: Summary line followed by punctuation)
+	  // 4. Show / hide toggle
+	  $button.appendChild($headingText);
+	  $button.appendChild(this.getButtonPunctuationEl());
+
+	  // If summary content exists add to DOM in correct order
+	  if (typeof ($summary) !== 'undefined' && $summary !== null) {
+	    // Create a new `span` element and copy the summary line content from the original `div` to the
+	    // new `span`
+	    // This is because the summary line text is now inside a button element, which can only contain
+	    // phrasing content
+	    var $summarySpan = document.createElement('span');
+	    // Create an inner summary container to limit the width of the summary focus state
+	    var $summarySpanFocus = document.createElement('span');
+	    $summarySpanFocus.classList.add(this.sectionSummaryFocusClass);
+	    $summarySpan.appendChild($summarySpanFocus);
+
+	    // Get original attributes, and pass them to the replacement
+	    for (var j = 0, l = $summary.attributes.length; j < l; ++j) {
+	      var nodeName = $summary.attributes.item(j).nodeName;
+	      var nodeValue = $summary.attributes.item(j).nodeValue;
+	      $summarySpan.setAttribute(nodeName, nodeValue);
+	    }
+
+	    // Copy original contents of summary to the new summary span
+	    $summarySpanFocus.innerHTML = $summary.innerHTML;
+
+	    // Replace the original summary `div` with the new summary `span`
+	    $summary.parentNode.replaceChild($summarySpan, $summary);
+
+	    $button.appendChild($summarySpan);
+	    $button.appendChild(this.getButtonPunctuationEl());
+	  }
+
+	  $button.appendChild($showToggle);
 
 	  $heading.removeChild($span);
 	  $heading.appendChild($button);
-
-	  // Add "+/-" icon
-	  var icon = document.createElement('span');
-	  icon.className = this.iconClass;
-	  icon.setAttribute('aria-hidden', 'true');
-
-	  $button.appendChild(icon);
 	};
 
 	// When section toggled, set and store state
@@ -3950,10 +4000,9 @@
 	};
 
 	// When Open/Close All toggled, set and store state
-	Accordion.prototype.onOpenOrCloseAllToggle = function () {
+	Accordion.prototype.onShowOrHideAllToggle = function () {
 	  var $module = this;
 	  var $sections = this.$sections;
-
 	  var nowExpanded = !this.checkIfAllSectionsOpen();
 
 	  nodeListForEach($sections, function ($section) {
@@ -3962,23 +4011,37 @@
 	    $module.storeState($section);
 	  });
 
-	  $module.updateOpenAllButton(nowExpanded);
+	  $module.updateShowAllButton(nowExpanded);
 	};
 
 	// Set section attributes when opened/closed
 	Accordion.prototype.setExpanded = function (expanded, $section) {
+	  var $icon = $section.querySelector('.' + this.upChevronIconClass);
+	  var $showHideText = $section.querySelector('.' + this.sectionShowHideTextClass);
 	  var $button = $section.querySelector('.' + this.sectionButtonClass);
+	  var $newButtonText = expanded ? 'Hide' : 'Show';
+
+	  // Build additional copy of "this section" for assistive technology and place inside toggle link
+	  var $visuallyHiddenText = document.createElement('span');
+	  $visuallyHiddenText.classList.add('govuk-visually-hidden');
+	  $visuallyHiddenText.innerHTML = ' this section';
+
+	  $showHideText.innerHTML = $newButtonText;
+	  $showHideText.appendChild($visuallyHiddenText);
 	  $button.setAttribute('aria-expanded', expanded);
 
+	  // Swap icon, change class
 	  if (expanded) {
 	    $section.classList.add(this.sectionExpandedClass);
+	    $icon.classList.remove(this.downChevronIconClass);
 	  } else {
 	    $section.classList.remove(this.sectionExpandedClass);
+	    $icon.classList.add(this.downChevronIconClass);
 	  }
 
-	  // See if "Open all" button text should be updated
+	  // See if "Show all sections" button text should be updated
 	  var areAllSectionsOpen = this.checkIfAllSectionsOpen();
-	  this.updateOpenAllButton(areAllSectionsOpen);
+	  this.updateShowAllButton(areAllSectionsOpen);
 	};
 
 	// Get state of section
@@ -3997,12 +4060,20 @@
 	  return areAllSectionsOpen
 	};
 
-	// Update "Open all" button
-	Accordion.prototype.updateOpenAllButton = function (expanded) {
-	  var newButtonText = expanded ? 'Close all' : 'Open all';
-	  newButtonText += '<span class="govuk-visually-hidden"> sections</span>';
-	  this.$openAllButton.setAttribute('aria-expanded', expanded);
-	  this.$openAllButton.innerHTML = newButtonText;
+	// Update "Show all sections" button
+	Accordion.prototype.updateShowAllButton = function (expanded) {
+	  var $showAllIcon = this.$showAllButton.querySelector('.' + this.upChevronIconClass);
+	  var $showAllText = this.$showAllButton.querySelector('.' + this.showAllTextClass);
+	  var newButtonText = expanded ? 'Hide all sections' : 'Show all sections';
+	  this.$showAllButton.setAttribute('aria-expanded', expanded);
+	  $showAllText.innerHTML = newButtonText;
+
+	  // Swap icon, toggle class
+	  if (expanded) {
+	    $showAllIcon.classList.remove(this.downChevronIconClass);
+	  } else {
+	    $showAllIcon.classList.add(this.downChevronIconClass);
+	  }
 	};
 
 	// Check for `window.sessionStorage`, and that it actually works.
@@ -4026,7 +4097,7 @@
 	// Set the state of the accordions in sessionStorage
 	Accordion.prototype.storeState = function ($section) {
 	  if (this.browserSupportsSessionStorage) {
-	    // We need a unique way of identifying each content in the accordion. Since
+	    // We need a unique way of identifying each content in the Accordion. Since
 	    // an `#id` should be unique and an `id` is required for `aria-` attributes
 	    // `id` can be safely used.
 	    var $button = $section.querySelector('.' + this.sectionButtonClass);
@@ -4065,6 +4136,25 @@
 	      }
 	    }
 	  }
+	};
+
+	/**
+	* Create an element to improve semantics of the section button with punctuation
+	* @return {object} DOM element
+	*
+	* Used to add pause (with a comma) for assistive technology.
+	* Example: [heading]Section A ,[pause] Show this section.
+	* https://accessibility.blog.gov.uk/2017/12/18/what-working-on-gov-uk-navigation-taught-us-about-accessibility/
+	*
+	* Adding punctuation to the button can also improve its general semantics by dividing its contents
+	* into thematic chunks.
+	* See https://github.com/alphagov/govuk-frontend/issues/2327#issuecomment-922957442
+	*/
+	Accordion.prototype.getButtonPunctuationEl = function () {
+	  var $punctuationEl = document.createElement('span');
+	  $punctuationEl.classList.add('govuk-visually-hidden', 'govuk-accordion__section-heading-divider');
+	  $punctuationEl.innerHTML = ', ';
+	  return $punctuationEl
 	};
 
 	(function(undefined) {
@@ -4544,7 +4634,7 @@
 	  this.$module = $module;
 	  this.$textarea = $module.querySelector('.govuk-js-character-count');
 	  if (this.$textarea) {
-	    this.$countMessage = $module.querySelector('[id="' + this.$textarea.id + '-info"]');
+	    this.$countMessage = document.getElementById(this.$textarea.id + '-info');
 	  }
 	}
 
@@ -4743,7 +4833,7 @@
 
 	    // Skip checkboxes without data-aria-controls attributes, or where the
 	    // target element does not exist.
-	    if (!target || !$module.querySelector('#' + target)) {
+	    if (!target || !document.getElementById(target)) {
 	      return
 	    }
 
@@ -4787,7 +4877,7 @@
 	 * @param {HTMLInputElement} $input Checkbox input
 	 */
 	Checkboxes.prototype.syncConditionalRevealWithInputState = function ($input) {
-	  var $target = this.$module.querySelector('#' + $input.getAttribute('aria-controls'));
+	  var $target = document.getElementById($input.getAttribute('aria-controls'));
 
 	  if ($target && $target.classList.contains('govuk-checkboxes__conditional')) {
 	    var inputIsChecked = $input.checked;
@@ -4810,10 +4900,9 @@
 	    var hasSameFormOwner = ($input.form === $inputWithSameName.form);
 	    if (hasSameFormOwner && $inputWithSameName !== $input) {
 	      $inputWithSameName.checked = false;
+	      this.syncConditionalRevealWithInputState($inputWithSameName);
 	    }
-	  });
-
-	  this.syncAllConditionalReveals();
+	  }.bind(this));
 	};
 
 	/**
@@ -4832,10 +4921,9 @@
 	    var hasSameFormOwner = ($input.form === $exclusiveInput.form);
 	    if (hasSameFormOwner) {
 	      $exclusiveInput.checked = false;
+	      this.syncConditionalRevealWithInputState($exclusiveInput);
 	    }
-	  });
-
-	  this.syncAllConditionalReveals();
+	  }.bind(this));
 	};
 
 	/**
@@ -5134,7 +5222,7 @@
 	    return
 	  }
 
-	  this.syncState(this.$menu.classList.contains('govuk-header__navigation--open'));
+	  this.syncState(this.$menu.classList.contains('govuk-header__navigation-list--open'));
 	  this.$menuButton.addEventListener('click', this.handleMenuButtonClick.bind(this));
 	};
 
@@ -5158,7 +5246,7 @@
 	 * sync the accessibility state and menu button state
 	 */
 	Header.prototype.handleMenuButtonClick = function () {
-	  var isVisible = this.$menu.classList.toggle('govuk-header__navigation--open');
+	  var isVisible = this.$menu.classList.toggle('govuk-header__navigation-list--open');
 	  this.syncState(isVisible);
 	};
 
@@ -5190,7 +5278,7 @@
 
 	    // Skip radios without data-aria-controls attributes, or where the
 	    // target element does not exist.
-	    if (!target || !$module.querySelector('#' + target)) {
+	    if (!target || !document.getElementById(target)) {
 	      return
 	    }
 
@@ -5235,7 +5323,7 @@
 	 * @param {HTMLInputElement} $input Radio input
 	 */
 	Radios.prototype.syncConditionalRevealWithInputState = function ($input) {
-	  var $target = document.querySelector('#' + $input.getAttribute('aria-controls'));
+	  var $target = document.getElementById($input.getAttribute('aria-controls'));
 
 	  if ($target && $target.classList.contains('govuk-radios__conditional')) {
 	    var inputIsChecked = $input.checked;
@@ -5275,6 +5363,95 @@
 	      this.syncConditionalRevealWithInputState($input);
 	    }
 	  }.bind(this));
+	};
+
+	function SkipLink ($module) {
+	  this.$module = $module;
+	  this.$linkedElement = null;
+	  this.linkedElementListener = false;
+	}
+
+	/**
+	 * Initialise the component
+	 */
+	SkipLink.prototype.init = function () {
+	  // Check for module
+	  if (!this.$module) {
+	    return
+	  }
+
+	  // Check for linked element
+	  this.$linkedElement = this.getLinkedElement();
+	  if (!this.$linkedElement) {
+	    return
+	  }
+
+	  this.$module.addEventListener('click', this.focusLinkedElement.bind(this));
+	};
+
+	/**
+	* Get linked element
+	*
+	* @returns {HTMLElement} $linkedElement - DOM element linked to from the skip link
+	*/
+	SkipLink.prototype.getLinkedElement = function () {
+	  var linkedElementId = this.getFragmentFromUrl();
+
+	  if (!linkedElementId) {
+	    return false
+	  }
+
+	  return document.getElementById(linkedElementId)
+	};
+
+	/**
+	 * Focus the linked element
+	 *
+	 * Set tabindex and helper CSS class. Set listener to remove them on blur.
+	 */
+	SkipLink.prototype.focusLinkedElement = function () {
+	  var $linkedElement = this.$linkedElement;
+
+	  if (!$linkedElement.getAttribute('tabindex')) {
+	    // Set the element tabindex to -1 so it can be focused with JavaScript.
+	    $linkedElement.setAttribute('tabindex', '-1');
+	    $linkedElement.classList.add('govuk-skip-link-focused-element');
+
+	    // Add listener for blur on the focused element (unless the listener has previously been added)
+	    if (!this.linkedElementListener) {
+	      this.$linkedElement.addEventListener('blur', this.removeFocusProperties.bind(this));
+	      this.linkedElementListener = true;
+	    }
+	  }
+	  $linkedElement.focus();
+	};
+
+	/**
+	 * Remove the tabindex that makes the linked element focusable because the element only needs to be
+	 * focusable until it has received programmatic focus and a screen reader has announced it.
+	 *
+	 * Remove the CSS class that removes the native focus styles.
+	 */
+	SkipLink.prototype.removeFocusProperties = function () {
+	  this.$linkedElement.removeAttribute('tabindex');
+	  this.$linkedElement.classList.remove('govuk-skip-link-focused-element');
+	};
+
+	/**
+	 * Get fragment from URL
+	 *
+	 * Extract the fragment (everything after the hash symbol) from a URL, but not including
+	 * the symbol.
+	 *
+	 * @returns {string} Fragment from URL, without the hash symbol
+	 */
+	SkipLink.prototype.getFragmentFromUrl = function () {
+	  // Bail if the anchor link doesn't have a hash
+	  if (!this.$module.hash) {
+	    return false
+	  }
+
+	  return this.$module.hash.split('#').pop()
 	};
 
 	(function(undefined) {
@@ -5642,6 +5819,10 @@
 	    new Radios($radio).init();
 	  });
 
+	  // Find first skip link module to enhance.
+	  var $skipLink = scope.querySelector('[data-module="govuk-skip-link"]');
+	  new SkipLink($skipLink).init();
+
 	  var $tabs = scope.querySelectorAll('[data-module="govuk-tabs"]');
 	  nodeListForEach($tabs, function ($tabs) {
 	    new Tabs($tabs).init();
@@ -5656,7 +5837,9 @@
 	exports.Checkboxes = Checkboxes;
 	exports.ErrorSummary = ErrorSummary;
 	exports.Header = Header;
+	exports.NotificationBanner = NotificationBanner;
 	exports.Radios = Radios;
+	exports.SkipLink = SkipLink;
 	exports.Tabs = Tabs;
 
 	})));
