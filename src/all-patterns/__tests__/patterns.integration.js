@@ -9,7 +9,6 @@ const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path
 const options = {
   rules: {
     'page-has-heading-one': { enabled: false },
-    'heading-order': { enabled: false },
     'duplicate-id-aria': { enabled: false },
     'form-field-multiple-labels': { enabled: false },
     'region': { enabled: false },
