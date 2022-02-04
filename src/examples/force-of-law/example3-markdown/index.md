@@ -1,0 +1,1 @@
+The next x sentences have force of law under [specific part of legislation/regulation].

@@ -3,6 +3,7 @@ title: Force of law
 layout: twoColumnPage.njk
 ---
 {% from "_codeSnippet.njk" import codeSnippet %}
+{% from "_example.njk" import example %}
 
 <h2 class="govuk-heading-l">When to use</h2>
 
@@ -33,38 +34,56 @@ Force of law text should be put at the point the user needs to know it to comple
 Use this option where all of the text that sits under a heading has force of law.
 </p>
 
-{{
-    codeSnippet({
-      code: 'This section has force of law under [specific part of legislation/regulation].',
-      canCopy: true
-    })
-  }}
+{{ example({
+    item: 'force-of-law',
+    example: 'example1',
+    description: 'Force of law',
+    markdown: 'example1-markdown',
+    markdownOnly: true
+}) }}
 
-<ul class="govuk-list govuk-list--bullet">
-<li></li>
-<li></li>
-<li></li>
-</ul>
+<h3 class="govuk-heading-m">Option 2</h3>
 
-{{
-    codeSnippet({
-      code: '## Your rights and obligations
+<p class="govuk-body">
+Use these options if there’s not enough content with force of law for it to have its own section.
+</p>
 
-Read [Your Charter](https://www.gov.uk/government/publications/hmrc-charter) to find out what you can expect from HMRC and what we expect from you.
+{{ example({
+    item: 'force-of-law',
+    example: 'example2',
+    description: 'Force of law',
+    markdown: 'example2-markdown',
+    markdownOnly: true
+}) }}
 
-## Help us improve this notice
+{{ example({
+    item: 'force-of-law',
+    example: 'example3',
+    description: 'Force of law',
+    markdown: 'example3-markdown',
+    markdownOnly: true
+}) }}
 
-If you need general help with this notice or have another question contact the [add link to relevant contact page].
+{{ example({
+    item: 'force-of-law',
+    example: 'example4',
+    description: 'Force of law',
+    markdown: 'example4-markdown',
+    markdownOnly: true
+}) }}
 
-## Putting things right
+{{ example({
+    item: 'force-of-law',
+    example: 'example5',
+    description: 'Force of law',
+    markdown: 'example5-markdown',
+    markdownOnly: true
+}) }}
 
-If you’re unhappy with HMRC’s service, contact the person or office you’ve been dealing with and they’ll try to put things right.
-
-If you’re still unhappy, find out [how to complain to HMRC](https://www.gov.uk/complain-about-hmrc).
-
-## How HMRC uses your information
-
-Find out [how HMRC uses the information](https://www.gov.uk/government/organisations/hm-revenue-customs/about/personal-information-charter) we hold about you.',
-      canCopy: true
-    })
-  }}
+{{ example({
+    item: 'force-of-law',
+    example: 'example6',
+    description: 'Force of law',
+    markdown: 'example6-markdown',
+    markdownOnly: true
+}) }}
