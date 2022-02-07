@@ -78,6 +78,10 @@
                   Extra-Statutory Concessions
                 </a>
               </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-content-guide/force-of-law">
+                  Force of law
+                </a>
+              </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-content-guide/forms-check">
                   Forms &gt; Check which document type to use
                 </a>
@@ -134,6 +138,10 @@
                   Tax information and impact notes
                 </a>
               </li><li class="app-subnav__section-item">
+                <a class="app-subnav__link govuk-link" href="/hmrc-content-guide/tax-treaties">
+                  Tax treaties
+                </a>
+              </li><li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link" href="/hmrc-content-guide/technical-guidance">
                   Technical guidance
                 </a>
@@ -163,19 +171,72 @@
   
   
 
-<h2 class="govuk-heading-l">All forms</h2>
+<h2 class="govuk-heading-l">Document type</h2>
 
 <p class="govuk-body">
-The following forms will be accessible:
+Detailed guide
 </p>
 
-<ul class="govuk-list govuk-list--bullet">
-<li>a gForm (<a href="https://tax.service.gov.uk" class="govuk-link">https://tax.service.gov.uk</a>)</li>
-<li>in Open Document Format</li>
-</ul>
+<h2 class="govuk-heading-l">When to use</h2>
 
 <p class="govuk-body">
-For all other forms, you should include the following accessibility statement after the form:
+Before you use this pattern, you should <a href="https://design.tax.service.gov.uk/hmrc-content-guide/forms-check/" class="govuk-link">check which document type to use</a>, to decide
+if you should use a publication instead.
+</p>
+
+<h2 class="govuk-heading-l">How it works</h2>
+
+<h3 class="govuk-heading-m">G-Forms</h3>
+
+<p class="govuk-body">
+G-Forms are hosted on <a href="https://tax.service.gov.uk" class="govuk-link">https://tax.service.gov.uk</a>. Depending on the design of the
+detailed guide, use either an inline link or a <a href="https://design.tax.service.gov.uk/hmrc-content-guide/green-button/" class="govuk-link">green button</a>.
+</p>
+
+<p class="govuk-body">
+These forms will not require an accessibility statement.
+</p>
+
+<h3 class="govuk-heading-m">Open Document Formats</h3>
+
+<p class="govuk-body">
+If the form is in Open Document Format it will not require an accessibility statement.
+</p>
+
+<p class="govuk-body">
+You must <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-
+uk/markdown#publication-box" class="govuk-link">use the publication box !@n markdown in
+Whitehall</a>.
+</p>
+
+<h3 class="govuk-heading-m">Print and post forms</h3>
+
+<p class="govuk-body">
+These will be hosted on <a href="https://public-online.hmrc.gov.uk/lc/content/" class="govuk-link">https://public-online.hmrc.gov.uk/lc/content/</a>.
+</p>
+
+<p class="govuk-body">
+If the form is print and post, include the following markdown:
+</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+          <div class="app-link--copy__container">
+    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
+  </div>
+
+      <pre><code class="govuk-body-s">s1. You need to open and complete this form online. As you cannot save your progress, you may want to get all your information together before you start.
+
+s2. Fill in [name of form](LINK).
+
+s3. Print and post it to HMRC, using the postal address shown on the form.
+
+^This file may not be suitable if you use assistive technology – such as a screen reader. If you need a more accessible format email &lt;different.format@hmrc.gov.uk&gt; and tell us what format you need. It will help if you tell us what assistive technology you use. Read the [accessibility statement for HMRC forms](https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms).</code></pre>
+    </div>
+
+
+  <p class="govuk-body">
+You should check with the DFOM (Digital Forms and Outbound Mail) team if you
+need to include the following:
 </p>
 
       <div class="app-code-snippet app-code-snippet--copy">
@@ -183,40 +244,28 @@ For all other forms, you should include the following accessibility statement af
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-      <pre><code class="govuk-body-s">Read the [accessibility statement for HMRC forms](https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms).</code></pre>
+      <pre><code class="govuk-body-s">If the form does not open, then [contact the Online services helpdesks for more help](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/online-services-helpdesk).</code></pre>
     </div>
 
 
-<p class="govuk-body">
-If the form is not translated into Welsh, always include:
-</p>
+  <h3 class="govuk-heading-m">PDF forms that can be completed on-screen</h3>
 
-      <div class="app-code-snippet app-code-snippet--copy">
-          <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-      <pre><code class="govuk-body-s">Email HMRC to [ask for the form in Welsh (Cymraeg)](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/welsh-language-helplines#email).</code></pre>
-    </div>
-
-
-<h3 class="govuk-heading-m">Forms that are attachments</h3>
-
-<p class="govuk-body">
-If you’re going to attach a file, you must use the publication box !@n markdown.
+  <p class="govuk-body">
+  You must <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-
+uk/markdown#publication-box" class="govuk-link">use the publication box !@n markdown in
+Whitehall</a> to attach the PDF form.
 </p>
 
 <p class="govuk-body">
-Do not tick ‘Attachment is accessible’ – as the attachment must always have the ‘not suitable for assistive technology’ callout.
+Do not tick ‘Attachment is accessible’ – as the attachment must always have the ‘not
+suitable for assistive technology’ callout.
 </p>
-
-<h4 class="govuk-heading-s">Interactive PDFs</h4>
 
 <p class="govuk-body">
-Markdown:
+If the form is in PDF format, include the following markdown:
 </p>
 
-      <div class="app-code-snippet app-code-snippet--copy">
+    <div class="app-code-snippet app-code-snippet--copy">
           <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
@@ -235,54 +284,30 @@ s3. Complete it on-screen.
 
 Read the [accessibility statement for HMRC forms](https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms).
 
-^It may not work it you try to open it in your internet browser. If the form does not open, then contact the Online services helpdesks for more help.</code></pre>
+^It may not work it you try to open it in your internet browser. If the form does not open, then contact the [Online services helpdesks] (https://www.gov.uk/government/organisations/hm-revenue-
+customs/contact/online-services-helpdesk) for more help.</code></pre>
     </div>
 
 
-<h3 class="govuk-heading-m">Forms that are links</h3>
+  <h3 class="govuk-heading-m">Welsh translation</h3>
 
-<h4 class="govuk-heading-s">gForms</h4>
-
-<p class="govuk-body">
-gForms are hosted on <a href="https://tax.service.gov.uk" class="govuk-link">https://tax.service.gov.uk</a>. Depending on design of the detailed guide, use either an inline link or a <a href="https://design.tax.service.gov.uk/hmrc-content-guide/green-button/" class="govuk-link">green button</a>.
+  <p class="govuk-body">
+If the form is not translated into Welsh and is applicable in Wales, include:
 </p>
 
-<h4 class="govuk-heading-s">Print and post forms</h4>
-
-<p class="govuk-body">
-These will be hosted on <a href="https://public-online.hmrc.gov.uk/lc/content/" class="govuk-link">https://public-online.hmrc.gov.uk/lc/content/</a>.
-</p>
-
-<p class="govuk-body">
-Markdown:
-</p>
-
-      <div class="app-code-snippet app-code-snippet--copy">
+    <div class="app-code-snippet app-code-snippet--copy">
           <div class="app-link--copy__container">
     <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
   </div>
 
-      <pre><code class="govuk-body-s">s1. You need to open and complete this form online. As you cannot save your progress, you may want to get all your information together before you start.
-
-s2. Fill in [name of form](LINK).
-
-s3. Print and post it to HMRC, using the postal address shown on the form.
-
-^This file may not be suitable if you use assistive technology – such as a screen reader. If you need a more accessible format email &lt;different.format@hmrc.gov.uk&gt; and tell us what format you need. It will help if you tell us what assistive technology you use. Read the [accessibility statement for HMRC forms](https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms).</code></pre>
+      <pre><code class="govuk-body-s">Email HMRC to [ask for the form in Welsh (Cymraeg)](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/welsh-language-helplines#email).</code></pre>
     </div>
 
 
-<p class="govuk-body">
-You may need to include the following:
+  <p class="govuk-body">
+  If the form is translated into Welsh, you do not need to include this in either the
+English or Welsh version.
 </p>
-
-      <div class="app-code-snippet app-code-snippet--copy">
-          <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-      <pre><code class="govuk-body-s">If the form does not open, then [contact the Online services helpdesks for more help](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/online-services-helpdesk).</code></pre>
-    </div>
 </div>
         </div>
       </main>
