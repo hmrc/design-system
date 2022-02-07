@@ -6,47 +6,49 @@ layout: twoColumnPage.njk
 {% from "_codeSnippet.njk" import codeSnippet %}
 {% from "_example.njk" import example %}
 
-<h2 class="govuk-heading-l">Title</h2>
+<h2 class="govuk-heading-l">Document type</h2>
 
 <p class="govuk-body">
-Decide if the title should focus on the action a user needs to take or the name of the form. This will depend on how users will find and navigate to the form. 
+Publication: form (with a PDF, Open Document Format or external link attachment)
+</p>
+
+<h2 class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">
+Before you use this pattern, you should <a href="https://design.tax.service.gov.uk/hmrc-content-guide/forms-check/" class="govuk-link">check which document type to use</a>, to decide
+if you should use a detailed guide instead.
+</p>
+
+<p class="govuk-body">
+For an example see <a href="https://www.gov.uk/government/publications/vat-application-for-registration-
+distance-selling-vat1a" class="govuk-link">Register for VAT if you&#39;re distance selling into Northern
+Ireland</a>.
+</p>
+
+<h2 class="govuk-heading-l">How it works</h2>
+
+<h3 class="govuk-heading-m">Publication</h3>
+
+<h4 class="govuk-heading-s">Title</h4>
+
+<p class="govuk-body">
+Decide if the title should focus on the action a user needs to take or the name of the
+form. This will depend on how users will find and navigate to the form. 
 </p>
 
 <p class="govuk-body">
 Do not include the form number.
 </p>
 
-<h2 class="govuk-heading-l">Summary</h2>
+<h4 class="govuk-heading-s">Summary</h4>
 
 <p class="govuk-body">
 If there’s a form number you should include it. For example:
 </p>
 
 <p class="govuk-body">
-'Register your business for VAT if you’re distance selling into Northern Ireland using form VAT1A'
-</p>
-
-<h3 class="govuk-heading-m">Documents</h3>
-
-<p class="govuk-body">
-If there’s a form number, include it in brackets at the end of the document title. For example:
-</p>
-
-<p class="govuk-body">
-‘Application for registration – distance selling (VAT1A)’
-</p>
-
-<p class="govuk-body">
-Unless the form is a gForm (<a href="https://tax.service.gov.uk" class="govuk-link">https://tax.service.gov.uk</a>) or in Open Document Format, you must include an external link attachment directly below the form in the document list:
-</p>
-
-<ul class="govuk-list govuk-list--bullet">
-<li>External attachment title: Read the Accessibility statement for HMRC forms</li>
-<li>Link: <a href="https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms" class="govuk-link">https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms</a></li>
-</ul>
-
-<p class="govuk-body">
-If you have more than one form, the attachment only needs to be included after the first form in the list.
+'Register your business for VAT if you’re distance selling into Northern Ireland using
+form VAT1A.'
 </p>
 
 <h3 class="govuk-heading-m">Details</h3>
@@ -55,20 +57,11 @@ If you have more than one form, the attachment only needs to be included after t
 You should include a short summary of when to use the form including any links to any detailed guidance a user must read.
 </p>
 
-<h4 class="govuk-heading-s">Welsh</h4>
+<h4 class="govuk-heading-s">Print and post forms</h4>
 
 <p class="govuk-body">
-If the form is not translated into Welsh, include:
+These will be hosted on <a href="https://public-online.hmrc.gov.uk/lc/content/" class="govuk-link">https://public-online.hmrc.gov.uk/lc/content/</a>.
 </p>
-
-  {{
-    codeSnippet({
-      code: 'Email HMRC to [ask for the form in Welsh (Cymraeg)](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/welsh-language-helplines#email).',
-      canCopy: true
-    })
-  }}
-
-<h4 class="govuk-heading-s">Print and post forms</h4>
 
 <p class="govuk-body">
 If the form is a print and post form, include:
@@ -80,7 +73,14 @@ If the form is a print and post form, include:
 
 Make sure [your browser is up to date](https://www.gov.uk/help/browsers).
 
-You’ll need to fill in the form fully before you can print it. You cannot save a partly completed form so we suggest you gather all your information together before you begin to fill it in.',
+You’ll need to fill in the form fully before you can print it. You cannot save a partly completed form so we suggest you gather all your information together before you begin to fill it in.
+
+You should check with the DFOM (Digital Forms and Outbound Mail)
+team if you need to include the following:
+
+If the form does not open, then [contact the Online services helpdesks
+for more help](https://www.gov.uk/government/organisations/hm-
+revenue-customs/contact/online-services-helpdesk).',
       canCopy: true
     })
   }}
@@ -102,21 +102,6 @@ This form is interactive (one that you complete on screen) and you must use [Ado
     })
   }}
 
-<h4 class="govuk-heading-s">Forms in Open Document Format (ODF)</h4>
-
-<p class="govuk-body">
-If the form is in ODF format, include:
-</p>
-
-  {{
-    codeSnippet({
-      code: '## Before you start 
-      
-You’ll need software that can open an Open Document Format (ODF) file, such as a recent version of Microsoft Office or [the free LibreOffice](https://www.libreoffice.org/).',
-      canCopy: true
-    })
-  }}
-
 <h4 class="govuk-heading-s">Address</h4>
 
 <p class="govuk-body">
@@ -131,3 +116,55 @@ $A',
       canCopy: true
     })
   }}
+
+<h4 class="govuk-heading-s">Welsh translation</h4>
+
+<p class="govuk-body">
+If the form is not translated into Welsh and is applicable in Wales, include:
+</p>
+
+  {{
+    codeSnippet({
+      code: 'Email HMRC to [ask for the form in Welsh (Cymraeg)](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/welsh-language-helplines#email).',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">
+If the form is translated into Welsh, you do not need to include this in either the
+English or Welsh version.
+</p>
+
+<h3 class="govuk-heading-m">Attachments</h3>
+
+<h4 class="govuk-heading-s">Title</h4>
+
+<p class="govuk-body">
+If there’s a form number, include it in brackets at the end of the document title. For example:
+</p>
+
+<p class="govuk-body">
+‘Application for registration – distance selling (VAT1A)’
+</p>
+
+<h4 class="govuk-heading-s">Accessibility statement</h4>
+
+<p class="govuk-body">
+If the form is a G-forms and Open Document Format it will be accessible and will not
+require an accessibility statement.
+</p>
+
+<p class="govuk-body">
+But for any other formats, you must:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>not tick ‘Attachment is accessible’ for the form</li>
+<li>add an external link attachment directly below the first form</li>
+<li>make the title of the external link attachment ‘Read the Accessibility statement
+for HMRC forms’</li>
+<li>make the link of the external link attachment
+<a href="https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-
+forms" class="govuk-link">https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-
+forms</a></li>
+</ul>

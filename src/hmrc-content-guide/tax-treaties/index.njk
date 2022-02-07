@@ -1,0 +1,144 @@
+---
+title: Tax treaties
+layout: twoColumnPage.njk
+---
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+<h2 class="govuk-heading-l">Document type</h2>
+
+<p class="govuk-body">Publication: International treaty (with an HTML attachment)</p>
+
+<h2 class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">
+Use this pattern to tell users about tax treaties between the UK and other countries. Tax
+treaties can include various documents, for example a:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>double taxation agreement</li>
+    <li>double taxation convention and amendments to the convention</li>
+    <li>joint declaration</li>
+    <li>multilateral instrument</li>
+    <li>mutual agreement procedure</li>
+    <li>protocol to the double taxation convention</li>
+    <li>tax information exchange agreement</li>
+</ul>
+
+<h2 class="govuk-heading-l">How it works</h2>
+
+<p class="govuk-body">
+For an example of a tax treaty, see <a href="https://www.gov.uk/government/publications/mauritius-tax-treaties" class="govuk-link">Mauritius: tax treaties</a>.
+</p>
+
+<h3 class="govuk-heading-m">Publication</h3>
+
+<h4 class="govuk-heading-s">Title<h4>
+
+<p class="govuk-body">
+[Country]: tax treaties
+</p>
+
+<h4 class="govuk-heading-s">Summary<h4>
+
+<p class="govuk-body">
+Tax treaties and related documents between the UK and [country].
+</p>
+
+<h4 class="govuk-heading-s">Details<h4>
+
+<p class="govuk-body">
+For each HTML attachment you will need to add a new heading at level 3. The order should
+match the order of the attachments.
+</p>
+
+{{
+  govukTable({
+    caption: none,
+    firstCellIsHeader: true,
+    head: [
+      {
+        text: 'Type'
+      },
+      {
+        text: 'What to enter'
+      }
+    ],
+    rows: [
+      [
+        {
+          text: 'Simple treaties in force'
+        },
+        {
+          html: '<p>### [Name of HTML attachment]</p>
+          <p>The [&#39;thing&#39;] entered into force on [date].</p>
+          <p>It is effective in [country or both countries]
+          from [date].</p>
+          <p>Note: if the effective date is different for each
+          country, include on separate lines but ensure
+          that the UK is shown first.</p>'
+        }
+      ],
+      [
+        {
+          text: 'Complex treaties in force that involve
+          different countries and individual taxes'
+        },
+        {
+          html: '<p>### [Name of HTML attachment]</p>
+          <p>The [&#39;thing&#39;] entered into force on [date].</p>
+          <p>It is effective in [country] from:</p>
+          <ul>
+          <li>[date] for [tax]</li>
+          <li>[date] for [tax]</li>
+          </ul>
+          <p>Note: if the effective date is different for each
+          country, include on separate lines but ensure
+          that the UK is shown first.</p>'
+        }
+      ],
+      [
+        {
+          text: 'Treaties not in force'
+        },
+        {
+          html: '<p>### [Name of HTML attachment]</p>
+          <p>The [&#39;thing&#39;] was signed on [date] and has
+          not yet entered into force.</p>'
+        }
+      ]
+
+    ]
+  })
+}}
+
+<h3 class="govuk-heading-m">HTML attachment</h3>
+
+<p class="govuk-body">
+The HTML attachments should be in the following order:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>in force in date order (most recent first)</li>
+    <li>not in force in date order (most recent first)</li>
+</ul>
+
+<p class="govuk-body">
+Use the following title formats:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>[yyyy] UK-[country] Double Taxation Agreement — in force</li>
+    <li>[yyyy] UK-[country] Tax Information Exchange Agreement: exchange of information —
+in force</li>
+    <li>[yyyy] UK-[country] Double Taxation Convention and Protocol, as amended in [yyyy] —
+in force</li>
+    <li>[yyyy] UK-[country] Protocol to the [yyyy] Double Taxation Convention — not in force</li>
+</ul>
+
+<h3 class="govuk-heading-m">Collection</h3>
+
+<p class="govuk-body">
+Add your new document to the <a href="https://www.gov.uk/government/collections/tax-treaties" class="govuk-link">Tax treaties document collection</a>. Do not create a public
+change note.
+</p>
