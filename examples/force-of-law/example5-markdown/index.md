@@ -1,0 +1,1 @@
+The next x paragraphs have force of law under [specific part of legislation/regulation].
