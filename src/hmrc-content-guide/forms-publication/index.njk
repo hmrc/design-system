@@ -64,7 +64,7 @@ These will be hosted on <a href="https://public-online.hmrc.gov.uk/lc/content/" 
 </p>
 
 <p class="govuk-body">
-If the form is a print and post form, include:
+If the form is a print and post form, include the following:
 </p>
 
   {{
@@ -73,12 +73,19 @@ If the form is a print and post form, include:
 
 Make sure [your browser is up to date](https://www.gov.uk/help/browsers).
 
-You’ll need to fill in the form fully before you can print it. You cannot save a partly completed form so we suggest you gather all your information together before you begin to fill it in.
+You’ll need to fill in the form fully before you can print it. You cannot save a partly completed form so we suggest you gather all your information together before you begin to fill it in.',
+      canCopy: true
+    })
+  }}
 
+<p class="govuk-body">
 You should check with the DFOM (Digital Forms and Outbound Mail)
 team if you need to include the following:
+</p>
 
-If the form does not open, then [contact the Online services helpdesks
+{{
+    codeSnippet({
+      code: 'If the form does not open, then [contact the Online services helpdesks
 for more help](https://www.gov.uk/government/organisations/hm-
 revenue-customs/contact/online-services-helpdesk).',
       canCopy: true
@@ -150,12 +157,11 @@ If there’s a form number, include it in brackets at the end of the document ti
 <h4 class="govuk-heading-s">Accessibility statement</h4>
 
 <p class="govuk-body">
-If the form is a G-forms and Open Document Format it will be accessible and will not
-require an accessibility statement.
+G-Forms and forms in the Open Document Format are accessible. They do not need an accessibility statement.
 </p>
 
 <p class="govuk-body">
-But for any other formats, you must:
+For any other formats, you must:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
