@@ -20,19 +20,12 @@
           {% if item.placement === 'primary' %}
             {% set primaryNavItems = navSection.items %}
           {% endif %}
-          {% endfor %}
-        {% endif %}
-    {% endfor %}
 
-    {% for navSection in navigation %}
-      {% if navSection.title === section %}
-        {% set items = navSection.items %}
-        {%- for item in items -%}
           {% if item.placement === 'secondary' %}
             {% set secondaryNavItems = navSection.items %}
           {% endif %}
-          {% endfor %}
-        {% endif %}
+        {% endfor %}
+      {% endif %}
     {% endfor %}
 
 
@@ -54,19 +47,21 @@
 
       <div class="app-subnav">
 
-        <ul class="app-subnav__section">
-          {%- for item in primaryNavItems -%}
-            {%- set isActive = item.filepath ~ '/' === filepath -%}
+        {% if primaryNavItems | length > 0 %}
+          <ul class="app-subnav__section">
+            {%- for item in primaryNavItems -%}
+              {%- set isActive = item.filepath ~ '/' === filepath -%}
 
-            {%- if item.placement === 'primary' -%}
-              <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
-                <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
-                  {{item.text}}
-                </a>
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
+              {%- if item.placement === 'primary' -%}
+                <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
+                  <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
+                    {{item.text}}
+                  </a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        {% endif %}
 
         {% if secondaryNavItems | length > 0 %}
           <ul class="app-subnav__section">
