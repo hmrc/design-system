@@ -13,20 +13,20 @@
     {% set primaryNavItems = [] %}
     {% set secondaryNavItems = [] %}
 
-    {% for navSection in navigation %}
-      {% if navSection.title === section %}
+    {%- for navSection in navigation -%}
+      {%- if navSection.title === section -%}
         {% set items = navSection.items %}
         {%- for item in items -%}
-          {% if item.placement === 'primary' %}
+          {%- if item.placement === 'primary' -%}
             {% set primaryNavItems = navSection.items %}
-          {% endif %}
+          {%- endif -%}
 
-          {% if item.placement === 'secondary' %}
+          {%- if item.placement === 'secondary' -%}
             {% set secondaryNavItems = navSection.items %}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
 
 
     {% set indexPageLink = '/' ~ section ~ '/' %}
@@ -47,7 +47,7 @@
 
       <div class="app-subnav">
 
-        {% if primaryNavItems | length > 0 %}
+        {%- if primaryNavItems | length > 0 -%}
           <ul class="app-subnav__section">
             {%- for item in primaryNavItems -%}
               {%- set isActive = item.filepath ~ '/' === filepath -%}
@@ -61,9 +61,9 @@
               {%- endif -%}
             {%- endfor -%}
           </ul>
-        {% endif %}
+        {%- endif -%}
 
-        {% if secondaryNavItems | length > 0 %}
+        {%- if secondaryNavItems | length > 0 -%}
           <ul class="app-subnav__section">
           {%- for item in secondaryNavItems -%}
             {%- set isActive = item.filepath ~ '/' === filepath -%}
@@ -77,7 +77,7 @@
             {%- endif -%}
           {%- endfor -%}
           </ul>
-        {% endif %}
+        {%- endif -%}
       </div>
     </nav>
 
