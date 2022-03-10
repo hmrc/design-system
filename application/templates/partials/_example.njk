@@ -24,18 +24,18 @@
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
-        <a href="{{ exampleURL }}" target="_blank" title="Open {{description}} example in a new window">
+        <a href="{{ exampleURL }}" class="govuk-link" target="_blank" title="Open {{description}} example in a new window">
           Open this example in a new window
         </a>
       </span>
       {% if welshExampleURL %}
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
-          <a href="{{ exampleURL }}" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display {{description}} example in English">
+          <a href="{{ exampleURL }}" class="govuk-link" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display {{description}} example in English">
             Display in English
           </a>
         </span>
         <span class="app-example__link app-example__language-switch js-enabled">
-          <a href="{{ welshExampleURL }}" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display {{description}} example in Welsh">
+          <a href="{{ welshExampleURL }}" class="govuk-link" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display {{description}} example in Welsh">
             Display in Welsh
           </a>
         </span>
@@ -50,13 +50,13 @@
         <ul class="app-tabs" role="tablist">
           {% if not params.markdownOnly %}
             <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#{{ exampleId }}-html" role="tab"
+              <a href="#{{ exampleId }}-html" class="govuk-link" role="tab"
                 aria-controls="{{ exampleId }}-html"
                 data-track="tab-html" title="Display {{description}} example as HTML">HTML</a>
             </li>
             {% if not params.htmlOnly %}
               <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#{{ exampleId }}-nunjucks" role="tab"
+                <a href="#{{ exampleId }}-nunjucks" class="govuk-link" role="tab"
                   aria-controls="{{ exampleId }}-nunjucks"
                   data-track="tab-nunjucks" title="Display {{description}} example as Nunjucks">Nunjucks</a>
               </li>
@@ -66,7 +66,7 @@
           {% if not params.htmlOnly %}
             {% if params.markdown %}
               <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#{{ exampleId }}-markdown" role="tab"
+                <a href="#{{ exampleId }}-markdown" class="govuk-link" role="tab"
                   aria-controls="{{ exampleId }}-markdown"
                   data-track="tab-markdown" title="Display {{description}} example as Markdown">Markdown</a>
               </li>
