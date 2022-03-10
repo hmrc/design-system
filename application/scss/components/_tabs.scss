@@ -21,6 +21,8 @@
   margin: 0;
 
   a {
+    @extend %govuk-link;
+
     display: block;
     margin-top: -1px;
     padding: govuk-spacing(3);
