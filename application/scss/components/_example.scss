@@ -43,6 +43,12 @@
 
 .app-example__new-window {
   left: 0;
+  padding: 0;
+
+  a {
+    display: inline-block;
+    padding: 5px govuk-spacing(2);
+  }
 }
 
 .app-example__language-switch {
