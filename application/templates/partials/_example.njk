@@ -41,7 +41,7 @@
         </span>
       {% endif %}
       <iframe data-module="app-example-frame" class="app-example__frame {% if not params.height %}app-example__frame--resizable{% endif %}"
-      {% if params.height %}height="{{ params.height}}px"{% endif %} src="{{ exampleURL }}"{% if description %} title="{{description}} example"{% endif %}></iframe>
+      {% if params.height %}height="{{ params.height}}px"{% else %}height="400px"{% endif %} src="{{ exampleURL }}"{% if description %} title="{{description}} example"{% endif %}></iframe>
     </div>
 
     {% if not params.hideTabs%}
