@@ -33,7 +33,7 @@ nodeListForEach($languageSwitchExamples, $example => {
 })
 
 // Initialise copy to clipboard
-const $copyToClipboardButtons = document.querySelectorAll('[data-module~="copy-to-clipboard"]')
+const $copyToClipboardButtons = document.querySelectorAll('[data-module="app-copy"]')
 nodeListForEach($copyToClipboardButtons, $button => {
   new CopyToClipboard($button).init()
 })

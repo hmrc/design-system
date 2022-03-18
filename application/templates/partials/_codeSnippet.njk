@@ -1,12 +1,7 @@
-{% from "_copyContents.njk" import copyContents %}
-
 {% macro codeSnippet(params) %}
   {% if params.code %}
     <div class="app-code-snippet{%if params.canCopy%} app-code-snippet--copy{% endif %}">
-      {% if params.canCopy %}
-        {{ copyContents() }}
-      {% endif %}
-      <pre><code class="govuk-body-s">
+      <pre {% if params.canCopy %}data-module="app-copy"{% endif %}><code class="govuk-body-s">
         {%- if params.isSafe -%}
           {{- params.code | safe -}}
         {%- else -%}
