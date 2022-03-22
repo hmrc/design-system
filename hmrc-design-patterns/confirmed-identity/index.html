@@ -268,41 +268,30 @@
         </ul>
 
           <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-              <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>We have confirmed your identity<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-              </pre>
+            </pre>
 
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
+              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Rydym wedi cadarnhau pwy ydych<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
   Yn eich blaen
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-                </pre>
-            </div>
+              </pre>
           </div>
 
             <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
-                <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-              <div data-module="app-copy">
-                <pre class="app-example__language-switch--en-only-content">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
 
 {{ hmrcPageHeading({
@@ -312,10 +301,10 @@
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
 }) }}</code>
-                </pre>
+              </pre>
 
-                  <pre class="app-example__language-switch--cy-only-content">
-                    <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
 
 {{ hmrcPageHeading({
@@ -325,8 +314,7 @@
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Yn eich blaen&quot;</span>
 }) }}</code>
-                  </pre>
-              </div>
+                </pre>
             </div>
 
       </div>

@@ -262,13 +262,8 @@
         </ul>
 
           <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-              <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;banner&quot;</span>&gt;</span>
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;banner&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header hmrc-header  hmrc-header--with-additional-navigation&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header__container govuk-width-container&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header__logo&quot;</span>&gt;</span>
@@ -311,10 +306,10 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
-              </pre>
+            </pre>
 
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;banner&quot;</span>&gt;</span>
+              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;banner&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header hmrc-header  hmrc-header--with-additional-navigation&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header__container govuk-width-container&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header__logo&quot;</span>&gt;</span>
@@ -357,18 +352,12 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
-                </pre>
-            </div>
+              </pre>
           </div>
 
             <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
-                <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-              <div data-module="app-copy">
-                <pre class="app-example__language-switch--en-only-content">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/header/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcHeader %}
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/header/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcHeader %}
 
 {{ hmrcHeader({
   <span class="hljs-string">&quot;serviceName&quot;</span>: <span class="hljs-string">&quot;Service Name&quot;</span>,
@@ -381,10 +370,10 @@
   },
   <span class="hljs-string">&quot;signOutHref&quot;</span> : <span class="hljs-string">&quot;?sign-out&quot;</span>
 }) }}</code>
-                </pre>
+              </pre>
 
-                  <pre class="app-example__language-switch--cy-only-content">
-                    <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/header/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcHeader %}
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/header/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcHeader %}
 
 {{ hmrcHeader({
   <span class="hljs-string">&quot;serviceName&quot;</span>: <span class="hljs-string">&quot;Enw&#x27;r gwasanaeth&quot;</span>,
@@ -398,8 +387,7 @@
   <span class="hljs-attr">language</span> : <span class="hljs-string">&#x27;cy&#x27;</span>,
   <span class="hljs-string">&quot;signOutHref&quot;</span> : <span class="hljs-string">&quot;?sign-out&quot;</span>
 }) }}</code>
-                  </pre>
-              </div>
+                </pre>
             </div>
 
       </div>

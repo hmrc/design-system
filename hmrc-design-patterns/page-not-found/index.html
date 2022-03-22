@@ -251,13 +251,8 @@
         </ul>
 
           <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-              <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Page not found<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -268,10 +263,10 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
   If the web address is correct or you selected a link or button, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>contact the Tax Credits Helpline if you need to speak to someone about your tax credits<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
-              </pre>
+            </pre>
 
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
+              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Heb ddod o hyd i’r dudalen<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
@@ -282,18 +277,12 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
   Os yw’r cyfeiriad gwe yn gywir neu os gwnaethoch ddewis cysylltiad neu fotwm, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM os oes angen i chi siarad â rhywun am eich credydau treth<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
-                </pre>
-            </div>
+              </pre>
           </div>
 
             <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
-                <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-              <div data-module="app-copy">
-                <pre class="app-example__language-switch--en-only-content">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   <span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Page not found&#x27;</span>
@@ -306,10 +295,10 @@
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
   If the web address is correct or you selected a link or button, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>contact the Tax Credits Helpline if you need to speak to someone about your tax credits<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code>
-                </pre>
+              </pre>
 
-                  <pre class="app-example__language-switch--cy-only-content">
-                    <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 
 {{ hmrcPageHeading({
   <span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Heb ddod o hyd i’r dudalen&#x27;</span>
@@ -322,8 +311,7 @@
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
   Os yw’r cyfeiriad gwe yn gywir neu os gwnaethoch ddewis cysylltiad neu fotwm, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM os oes angen i chi siarad â rhywun am eich credydau treth<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code>
-                  </pre>
-              </div>
+                </pre>
             </div>
 
       </div>
