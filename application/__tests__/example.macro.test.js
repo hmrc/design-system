@@ -106,13 +106,6 @@ describe('Single page example macro', () => {
     })
   })
 
-  it('should have a button to copy HTML code examples', () => {
-    const codeContainer = document.querySelector('#example-example-html')
-    const copyButton = codeContainer.querySelector('.app-link--copy')
-    expect(copyButton).not.toBeNull()
-    expect(copyButton.text).toBe('Copy')
-  })
-
   it('should have a button to show Nunjucks code examples', () => {
     const tabLink = document.querySelector(`ul.app-tabs li.js-tabs__item a[href="#${nunjucksPanelID}"]`)
     const tabContentContainer = document.getElementById(nunjucksPanelID)
@@ -123,13 +116,6 @@ describe('Single page example macro', () => {
       'aria-controls': nunjucksPanelID,
       role: 'tab'
     })
-  })
-
-  it('should have a button to copy Nunjucks code examples', () => {
-    const codeContainer = document.querySelector('#example-example-nunjucks')
-    const copyButton = codeContainer.querySelector('.app-link--copy')
-    expect(copyButton).not.toBeNull()
-    expect(copyButton.text).toBe('Copy')
   })
 
   it('should have a button to show Markdown code examples', () => {
@@ -144,15 +130,6 @@ describe('Single page example macro', () => {
       'aria-controls': markdownPanelID,
       role: 'tab'
     })
-  })
-
-  it('should have a button to copy Markdown code examples', () => {
-    const markdownDocument = documentFactory(markdownParameters, options)
-
-    const codeContainer = markdownDocument.querySelector('#example-example-markdown')
-    const copyButton = codeContainer.querySelector('.app-link--copy')
-    expect(copyButton).not.toBeNull()
-    expect(copyButton.text).toBe('Copy')
   })
 
   it('should not have a button or panel to show Nunjucks code examples if the htmlOnly flag is true', () => {
