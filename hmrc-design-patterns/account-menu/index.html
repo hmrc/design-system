@@ -250,13 +250,8 @@
         </ul>
 
           <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-              <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs html"><span class="hljs-comment">&lt;!-- ACCOUNT MENU --&gt;</span>
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-comment">&lt;!-- ACCOUNT MENU --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;secondary-nav&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-account-menu&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Account&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;hmrc-account-menu&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#account-home&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-account-menu__link hmrc-account-menu__link--home hmrc-account-menu__link--active&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-account-icon hmrc-account-icon--home&quot;</span>&gt;</span>
@@ -295,19 +290,13 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- END ACCOUNT MENU --&gt;</span></code>
-              </pre>
+            </pre>
 
-            </div>
           </div>
 
             <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
-                <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-              <div data-module="app-copy">
-                <pre class="app-example__language-switch--en-only-content">
-                  <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/account-menu/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcAccountMenu -%}
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/account-menu/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcAccountMenu -%}
 
 {{
   hmrcAccountMenu ({
@@ -333,9 +322,8 @@
     }
   })
 }}</code>
-                </pre>
+              </pre>
 
-              </div>
             </div>
 
       </div>

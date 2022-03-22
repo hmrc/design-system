@@ -276,13 +276,8 @@
         </ul>
 
           <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-              <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline&quot;</span>&gt;</span>
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-title&quot;</span>&gt;</span>Repayment complete<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-meta&quot;</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">&quot;2020-07-15&quot;</span>&gt;</span>15 July 2020<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
@@ -298,10 +293,10 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></code>
-              </pre>
+            </pre>
 
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline&quot;</span>&gt;</span>
+              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-title&quot;</span>&gt;</span>Ad-daliad wedi’i wneud<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-timeline__event-meta&quot;</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">&quot;2020-07-15&quot;</span>&gt;</span>15 Gorffennaf 2020<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
@@ -317,18 +312,12 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></code>
-                </pre>
-            </div>
+              </pre>
           </div>
 
             <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
-                <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-              <div data-module="app-copy">
-                <pre class="app-example__language-switch--en-only-content">
-                  <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/timeline/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcTimeline -%}
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/timeline/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcTimeline -%}
 
 {% set exampleContent1 %}&lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;We received your <span class="hljs-keyword">return</span>. You claimed you were due a repayment <span class="hljs-keyword">of</span> £<span class="hljs-number">50.</span> We are checking your claim.&lt;/p&gt;{% endset %}
 {% set exampleContent2 %}&lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;We repaid you £<span class="hljs-number">50.</span> It will take <span class="hljs-number">3</span> days <span class="hljs-keyword">for</span> the money to reach your account.&lt;/p&gt;{% endset %}
@@ -350,10 +339,10 @@
       }
     ]
   }) }}</code>
-                </pre>
+              </pre>
 
-                  <pre class="app-example__language-switch--cy-only-content">
-                    <code class="hljs js">{%- from &quot;hmrc/components/timeline/macro.njk&quot; import hmrcTimeline -%}
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                  <code class="hljs js">{%- from &quot;hmrc/components/timeline/macro.njk&quot; import hmrcTimeline -%}
 
 {% set exampleContent1 %}&lt;p class=&quot;govuk-body&quot;&gt;Daeth eich Ffurflen Dreth i law. Gwnaethoch honni bod ad-daliad o £50 yn ddyledus i chi. Rydym yn gwirio’ch hawliad.&lt;/p&gt;{% endset %}
 {% set exampleContent2 %}&lt;p class=&quot;govuk-body&quot;&gt;Gwnaethom ad-dalu £50 i chi. Bydd yn cymryd hyd at 3 diwrnod i&#x27;r arian gyrraedd eich cyfrif.&lt;/p&gt;{% endset %}
@@ -375,8 +364,7 @@
       }
     ]
   }) }}</code>
-                  </pre>
-              </div>
+                </pre>
             </div>
 
       </div>

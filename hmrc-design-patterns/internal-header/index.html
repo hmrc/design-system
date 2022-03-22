@@ -269,13 +269,8 @@
         </ul>
 
           <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-              <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;banner&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header&quot;</span>&gt;</span>
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;banner&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-width-container&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header__logo&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.gov.uk/government/organisations/hm-revenue-customs&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header__logo-link&quot;</span>&gt;</span>
@@ -307,10 +302,10 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
-              </pre>
+            </pre>
 
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;banner&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header&quot;</span>&gt;</span>
+              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;banner&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-width-container&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header__logo&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.gov.uk/government/organisations/hm-revenue-customs&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header__logo-link&quot;</span>&gt;</span>
@@ -342,18 +337,12 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
-                </pre>
-            </div>
+              </pre>
           </div>
 
             <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
-                <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-              <div data-module="app-copy">
-                <pre class="app-example__language-switch--en-only-content">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/internal-header/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcInternalHeader %}
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/internal-header/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcInternalHeader %}
 
 
 {{ hmrcInternalHeader({
@@ -361,10 +350,10 @@
   <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&#x27;Service name&#x27;</span>,
   <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">&#x27;#&#x27;</span>
 }) }}</code>
-                </pre>
+              </pre>
 
-                  <pre class="app-example__language-switch--cy-only-content">
-                    <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/internal-header/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcInternalHeader %}
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/internal-header/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcInternalHeader %}
 
 {{ hmrcInternalHeader({
   <span class="hljs-attr">homepageUrl</span>: <span class="hljs-string">&#x27;https://www.gov.uk/government/organisations/hm-revenue-customs&#x27;</span>,
@@ -372,8 +361,7 @@
   <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">&#x27;#&#x27;</span>,
   <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;cy&#x27;</span>
 }) }}</code>
-                  </pre>
-              </div>
+                </pre>
             </div>
 
       </div>

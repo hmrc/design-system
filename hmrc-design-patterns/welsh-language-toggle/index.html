@@ -273,13 +273,8 @@
         </ul>
 
           <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
-              <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-            <div data-module="app-copy">
-              <pre class="app-example__language-switch--en-only-content">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Language switcher&quot;</span>&gt;</span>
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Language switcher&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list-item&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>English<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -292,10 +287,10 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code>
-              </pre>
+            </pre>
 
-                <pre class="app-example__language-switch--cy-only-content">
-                  <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Switcher iaith&quot;</span>&gt;</span>
+              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Switcher iaith&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list-item&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;?en&quot;</span> <span class="hljs-attr">hreflang</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;alternate&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">data-journey-click</span>=<span class="hljs-string">&quot;link - click:lang-select:English&quot;</span>&gt;</span>
@@ -308,18 +303,12 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code>
-                </pre>
-            </div>
+              </pre>
           </div>
 
             <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
-                <div class="app-link--copy__container">
-    <a class="govuk-link app-link--copy" href="#copy" aria-live="assertive" data-module="copy-to-clipboard">Copy</a>
-  </div>
-
-              <div data-module="app-copy">
-                <pre class="app-example__language-switch--en-only-content">
-                  <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcLanguageSelect -%}
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcLanguageSelect -%}
 
 {{
   hmrcLanguageSelect({
@@ -332,10 +321,10 @@
     }
   })
 }}</code>
-                </pre>
+              </pre>
 
-                  <pre class="app-example__language-switch--cy-only-content">
-                    <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcLanguageSelect -%}
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                  <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcLanguageSelect -%}
 
 {{
   hmrcLanguageSelect({
@@ -348,8 +337,7 @@
     }
   })
 }}</code>
-                  </pre>
-              </div>
+                </pre>
             </div>
 
       </div>
