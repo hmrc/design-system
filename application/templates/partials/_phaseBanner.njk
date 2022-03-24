@@ -8,10 +8,9 @@
     {% set statusText = params.statusText or defaultStatusText %}
     <div class="govuk-!-padding-bottom-8 govuk-!-padding-top-2 hmrc-phase-banner">
       <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2">
-        {{- status -}}
+        <span class="govuk-visually-hidden">This pattern is &nbsp;</span> {{ status }}
       </strong>
-
-        <p class="govuk-body">{{- statusText | safe -}}</p>
+          <p class="govuk-body">{{- statusText | safe -}}</p>
     </div>
   {% endif %}
 {% endmacro %}
