@@ -17,6 +17,7 @@
 .app-tabs__item {
   display: inline-block;
   position: relative;
+  padding: govuk-spacing(3);
   z-index: 2;
   margin: 0;
 
@@ -25,7 +26,6 @@
 
     display: block;
     margin-top: -1px;
-    padding: govuk-spacing(3);
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
     color: $govuk-link-colour;
