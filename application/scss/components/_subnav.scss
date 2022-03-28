@@ -76,7 +76,7 @@
 .app-subnav__section {
   padding: 0 0 govuk-spacing(4);
   list-style-type: none;
-  border-bottom: 1px solid #b1b4b6;
+  border-bottom: 1px solid $govuk-border-colour;
 
   &:last-child {
     border-bottom: none;
