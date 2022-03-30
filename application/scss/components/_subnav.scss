@@ -21,7 +21,7 @@
   }
 }
 
-.app-subnav-toggle__label {
+.app-subnav-toggle__button {
   @include govuk-font(19);
   cursor: pointer;
   border: 0px solid $black;
@@ -29,9 +29,10 @@
   padding: 20px 0px;
   font-size: 19px;
   display: inline-block;
+  background: transparent;
 }
 
-.app-subnav-toggle__label::after {
+.app-subnav-toggle__button::after {
   display: inline-block;
   width: 0;
   height: 0;
@@ -43,7 +44,7 @@
   margin-left: 5px;
 }
 
-.app-subnav-toggle.active .app-subnav-toggle__label::after{
+.app-subnav-toggle.active .app-subnav-toggle__button::after{
   transform: rotate(180deg);
 }
 
@@ -63,9 +64,13 @@
       background-color: $govuk-focus-colour;
     }
   }
-  display: none;
-  @include govuk-media-query(desktop) {
+  @include govuk-media-query($until: desktop) {
     display: block;
+  }
+
+  .js-enabled [hidden],
+  .js-enabled &[hidden] {
+    display: none;
   }
 }
 
