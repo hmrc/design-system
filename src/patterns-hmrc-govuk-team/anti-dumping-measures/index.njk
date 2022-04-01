@@ -4,6 +4,7 @@ menuText: Anti-dumping duty measures
 layout: twoColumnPage.njk
 ---
 {% from "_codeSnippet.njk" import codeSnippet %}
+{% from "_example.njk" import example %}
 
 <h2 class="govuk-heading-l">Document type</h2>
 
@@ -47,16 +48,16 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">Enter this text:</p>
 
-  {{
-    codeSnippet({
-      code: 'Anti-dumping duty is an import duty charged in addition to normal Customs Duty and is applied in the UK and across the whole EU. It’s designed to allow the UK and EU to take action against goods that are sold at less than their normal value – that being defined as the price for ‘like goods’ sold in the exporter’s home market.',
-      canCopy: true
-    })
-  }}
+{{ example({
+    item: 'anti-dumping',
+    example: 'example1',
+    description: 'All text',
+    hideTabs: true
+}) }}
 
 <h3 class="govuk-heading-m">HTML attachment</h3>
 
-<p class="govuk-body">Although measures contain technical information, you should be able to get a general understanding about what they are for - go back to the subject matter expert if you think a measure does not make sense or is unclear.</p>
+<p class="govuk-body">Although measures contain technical information, you should be able to get a general understanding about what they are for &mdash; go back to the subject matter expert if you think a measure does not make sense or is unclear.</p>
 
 <p class="govuk-body">Check any hyperlinks in the business draft. Contact the subject matter expert to get correct details if any links:</p>
 
@@ -67,7 +68,9 @@ layout: twoColumnPage.njk
 
 <h4 class="govuk-heading-s">Title</h4>
 
-<p class="govuk-body">Use the same title as the publication.</p>
+<p class="govuk-body">Use the anti-dumping duty number that you've used in the title of the stub page.</p>
+
+<p class="govuk-body">Example: Anti-dumping duty xxxx</p>
 
 <h4 class="govuk-heading-s">Body text</h4>
 
