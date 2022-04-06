@@ -71,7 +71,7 @@ describe('Design pattern page', () => {
 
     it('should display the phase banner, with the correct text, when the status flag is set', () => {
       expect(phaseBanner).not.toBeNull()
-      expect(phaseBanner.querySelector('strong').textContent).toBe('experimental')
+      expect(phaseBanner.querySelector('strong').innerHTML).toBe('<span class=\"govuk-visually-hidden\">This pattern is&nbsp;</span>experimental')
     })
 
     it('should render the default status text if the statusText flag is not set', () => {
