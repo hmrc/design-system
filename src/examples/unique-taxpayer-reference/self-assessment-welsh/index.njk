@@ -5,15 +5,14 @@ layout: layout-example.njk
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
+<h1 class="govuk-heading-l">Beth yw'ch Cyfeirnod Unigryw y Trethdalwr ar gyfer Hunanasesiad (UTR)?</h1>
+
+<p class="govuk-body"><a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">Mae modd dod o hyd i UTR sydd ar goll</a>.</p>
+
 {{
   govukInput({
-    label: {
-      text: "Beth yw'ch Cyfeirnod Unigryw y Trethdalwr ar gyfer Hunanasesiad?",
-      isPageHeading: true,
-      classes: "govuk-label--l"
-    },
     hint: {
-      html: 'Mae hwn yn cynnwys 10 rhif, er enghraifft 1234567890. Bydd i’w weld ar Ffurflenni Treth a llythyrau eraill ynghylch Hunanasesiad. Efallai y cyfeirir ato gan ddefnyddio’r geiriau ‘cyfeirnod’, ‘UTR’ neu ‘defnydd swyddogol’. <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">Mae modd dod o hyd i UTR sydd ar goll</a>.'
+      html: 'Mae hwn yn cynnwys 10 rhif, er enghraifft 1234567890. Bydd i’w weld ar Ffurflenni Treth a llythyrau eraill ynghylch Hunanasesiad. Efallai y cyfeirir ato gan ddefnyddio’r geiriau ‘cyfeirnod’, ‘UTR’ neu ‘defnydd swyddogol’.'
     },
     id: "utr",
     name: "utr",
