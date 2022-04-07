@@ -32,7 +32,7 @@
   "homepage": "https://github.com/hmrc/design-system#readme",
   "dependencies": {
     "govuk-frontend": "4.0.0",
-    "hmrc-frontend": "^4.1.1"
+    "hmrc-frontend": "^5.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.5",
