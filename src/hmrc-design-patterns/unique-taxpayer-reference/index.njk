@@ -1,7 +1,6 @@
 ---
 title: Unique Taxpayer Reference
 menuText: Unique Taxpayer Reference
-status: experimental
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
@@ -59,19 +58,6 @@ layout: twoColumnPage.njk
 }}
 
 <p class="govuk-body">
-  Or you can ask for the UTR as a normal form label, separate from the <code>&lt;h1&gt;</code>.
-</p>
-
-{{
-  example({
-    item: 'unique-taxpayer-reference',
-    example: 'label',
-    welsh: 'label-welsh',
-    description: 'Employer PAYE reference as form label'
-  })
-}}
-
-<p class="govuk-body">
   Use a single text input and allow the user to enter:
 </p>
 
@@ -120,19 +106,6 @@ layout: twoColumnPage.njk
 <h3 class="govuk-heading-m" id="error-messages">
   Error messages
 </h3>
-
-<p class="govuk-body">
-  Error messages should be styled like this:
-</p>
-
-{{
-  example({
-    item: 'unique-taxpayer-reference',
-    example: 'label-error',
-    welsh: 'label-error-welsh',
-    description: 'Employer PAYE reference with error'
-  })
-}}
 
 <p class="govuk-body">
   Make sure errors follow the <a class="govuk-link" href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> in the GOV.UK Design System and have specific error messages for specific error states.
