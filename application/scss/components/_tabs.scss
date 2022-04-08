@@ -49,10 +49,30 @@
 }
 
 .app-tabs__item--current {
+  border-right: 1px solid $govuk-border-colour;
+  border-left: 1px solid $govuk-border-colour;
+  background: govuk-colour("white");
+
+  // Offset the added borders
+  .app-prose-scope & {
+    margin: 0 -1px;
+  }
+
+  // No left hand border is required for the first tab, as it would just double
+  // up the border of its parent
+  &:first-child {
+    border-left: 0;
+
+    .app-prose-scope & {
+      margin-left: 0;
+    }
+  }
+
   a {
-    border-top-color: govuk-colour("blue");
-    border-bottom-color: govuk-colour("blue");
-    background-color: darken(govuk-colour("light-grey"), 3%);
+    .app-prose-scope & {
+      color: $govuk-text-colour;
+      @include govuk-link-style-no-underline;
+    }
   }
 }
 
@@ -90,7 +110,6 @@
 
 // Tab containers
 .app-tabs__container {
-  margin-top: -2px;
   border: 1px solid $govuk-border-colour;
   padding: govuk-spacing(2);
 }
