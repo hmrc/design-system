@@ -15,6 +15,7 @@
   text-align: right;
   padding: 15px;
   float: right;
+
   @include govuk-media-query(desktop) {
     display: none;
     padding: 20px;
@@ -25,11 +26,14 @@
   @include govuk-font(19);
   cursor: pointer;
   border: 0px solid $black;
-  margin-top: 22px;
-  padding: 20px 0px;
+  margin-top: 40px;
   font-size: 19px;
   display: inline-block;
   background: transparent;
+
+  &:focus {
+    @include govuk-focused-text;
+  }
 }
 
 .app-subnav-toggle__button::after {
