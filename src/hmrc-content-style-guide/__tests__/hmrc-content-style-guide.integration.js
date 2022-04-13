@@ -34,7 +34,7 @@ describe('HMRC content style guide', () => {
     it('should open relevant section when an anchor is clicked', async () => {
       let testSectionClasses = await page.$$eval('.govuk-accordion__section', el => el[2].className )
       expect(testSectionClasses).not.toContain('govuk-accordion__section--expanded')
-      await page.click('button#accordion-default-heading-20')
+      await page.click('button[aria-controls="accordion-default-content-20"]')
       await page.$eval('#accordion-default-content-20', el => el.querySelectorAll('.govuk-link')[0].click())
       testSectionClasses = await page.$$eval('.govuk-accordion__section', el => el[2].className )
       expect(testSectionClasses).toContain('govuk-accordion__section--expanded')
