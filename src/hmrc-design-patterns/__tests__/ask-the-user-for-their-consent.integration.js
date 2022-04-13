@@ -36,7 +36,7 @@ describe('Design pattern page rendering', () => {
   })
 
   describe('Copy snippet button', () => {
-    const buttonSelector = '#example-yes-no-question-html .app-link--copy'
+    const buttonSelector = 'button.app-copy-button'
 
     beforeEach(async () => {
       await page.click('.example-example-yes-no-question-lang ul > li:first-child > a')
