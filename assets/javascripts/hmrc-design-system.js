@@ -7294,23 +7294,69 @@
 	const toggleActiveClass = 'active';
 
 	function SubNavToggle ($module) {
-	  this.$module = $module;
+	  this.$module = $module || document;
+
+	  this.$nav = this.$module.querySelector('.app-pane__subnav');
+	  this.$navToggler = this.$module.querySelector('.app-subnav-toggle__button');
+
+	  this.mobileNavOpen = false;
+
+	  this.mql = null;
 	}
+
+	SubNavToggle.prototype.setHiddenStates = function () {
+	  if (this.mql === null || !this.mql.matches) {
+	    if (!this.mobileNavOpen) {
+	      this.$nav.setAttribute('hidden', '');
+	    }
+
+	    this.$navToggler.removeAttribute('hidden');
+	  } else if (this.mql === null || this.mql.matches) {
+	    this.$nav.removeAttribute('hidden');
+	    this.$navToggler.setAttribute('hidden', '');
+	  }
+	};
+
+	SubNavToggle.prototype.setInitialAriaStates = function () {
+	  this.$navToggler.setAttribute('aria-expanded', 'false');
+	};
+
+	SubNavToggle.prototype.bindUIEvents = function () {
+	  var $nav = this.$nav;
+	  var $navToggler = this.$navToggler;
+
+	  $navToggler.addEventListener('click', function (event) {
+	    if (this.mobileNavOpen) {
+	      $navToggler.parentNode.classList.remove(toggleActiveClass);
+	      $nav.setAttribute('hidden', '');
+
+	      $navToggler.setAttribute('aria-expanded', 'false');
+
+	      this.mobileNavOpen = false;
+	    } else {
+	      $navToggler.parentNode.classList.add(toggleActiveClass);
+	      $nav.removeAttribute('hidden');
+
+	      $navToggler.setAttribute('aria-expanded', 'true');
+
+	      this.mobileNavOpen = true;
+	    }
+	  }.bind(this));
+	};
 
 	SubNavToggle.prototype.init = function() {
 	  if (!this.$module) {
 	    return
 	  }
-	  this.$module.addEventListener('click', this.handleClick.bind(this));
 
-	};
-
-	SubNavToggle.prototype.handleClick = function(event) {
-	  if (event.target.parentNode.classList.contains(toggleActiveClass)) {
-	    this.$module.classList.remove(toggleActiveClass);
-	  } else {
-	    this.$module.classList.add(toggleActiveClass);
+	  if (typeof window.matchMedia === 'function') {
+	    this.mql = window.matchMedia('(min-width: 48.0625em)');
+	    this.mql.addEventListener('change', this.setHiddenStates.bind(this));
 	  }
+
+	  this.setHiddenStates();
+	  this.setInitialAriaStates();
+	  this.bindUIEvents();
 	};
 
 	var clipboard = createCommonjsModule(function (module, exports) {
@@ -8346,7 +8392,7 @@
 
 	Accordion.prototype.handleClick = function (evt) {
 	  var section = evt.target.hash[1].trim().toLowerCase();
-	  var button = this.$module.querySelector('#' + this.$mappedSectionButtons[section]).parentNode;
+	  var button = this.$module.querySelector('#' + this.$mappedSectionButtons[section]);
 	  if (button.getAttribute('aria-expanded') !== 'true') {
 	    button.click();
 	  }
