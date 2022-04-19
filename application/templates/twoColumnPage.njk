@@ -30,57 +30,56 @@
 
 
     {% set indexPageLink = '/' ~ section ~ '/' %}
-
-    <div class="app-subnav-toggle" data-module="subnav-toggle">
-      <label for="app-subnav-toggle" class="app-subnav-toggle__label">Menu</label>
-    </div>
-    <input type="checkbox" id="app-subnav-toggle">
-
-    <nav class="app-pane__subnav">
-
-      <h2 class="govuk-heading-m">
-        {% set isRoot = '/' ~ filepath === indexPageLink %}
-        {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}
-          {{ sectionTitle or title }}
-        {%- if not isRoot -%}</a>{%- endif -%}
-      </h2>
-
-      <div class="app-subnav">
-
-        {%- if primaryNavItems | length > 0 -%}
-          <ul class="app-subnav__section">
-            {%- for item in primaryNavItems -%}
-              {%- set isActive = item.filepath ~ '/' === filepath -%}
-
-              {%- if item.placement === 'primary' -%}
-                <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
-                  <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
-                    {{item.text}}
-                  </a>
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          </ul>
-        {%- endif -%}
-
-        {%- if secondaryNavItems | length > 0 -%}
-          <ul class="app-subnav__section">
-          {%- for item in secondaryNavItems -%}
-            {%- set isActive = item.filepath ~ '/' === filepath -%}
-
-            {%- if item.placement === 'secondary' -%}
-              <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
-                <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
-                  {{item.text}}
-                </a>
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-          </ul>
-        {%- endif -%}
+    <div data-module="subnav-toggle">
+      <div class="app-subnav-toggle">
+        <button hidden aria-controls="app-navigation" class="app-subnav-toggle__button">Menu</button>
       </div>
-    </nav>
 
+        <nav role="navigation" class="app-pane__subnav" id="app-navigation">
+
+          <h2 class="govuk-heading-m">
+            {% set isRoot = '/' ~ filepath === indexPageLink %}
+            {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}
+              {{ sectionTitle or title }}
+            {%- if not isRoot -%}</a>{%- endif -%}
+          </h2>
+
+          <div class="app-subnav">
+
+            {%- if primaryNavItems | length > 0 -%}
+              <ul class="app-subnav__section">
+                {%- for item in primaryNavItems -%}
+                  {%- set isActive = item.filepath ~ '/' === filepath -%}
+
+                  {%- if item.placement === 'primary' -%}
+                    <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
+                      <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
+                        {{item.text}}
+                      </a>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+            {%- if secondaryNavItems | length > 0 -%}
+              <ul class="app-subnav__section">
+              {%- for item in secondaryNavItems -%}
+                {%- set isActive = item.filepath ~ '/' === filepath -%}
+
+                {%- if item.placement === 'secondary' -%}
+                  <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
+                    <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
+                      {{item.text}}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
+        </nav>
+    </div>
     <div class="app-pane__content">
       <main class="app-content" id="main-content">
         <div class="govuk-grid-row">
