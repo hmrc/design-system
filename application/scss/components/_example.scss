@@ -43,25 +43,23 @@
 
 .app-example__new-window {
   left: 0;
-  padding: 0;
+  padding: 5px govuk-spacing(2);
 
   a {
     @extend %govuk-link;
     
     display: inline-block;
-    padding: 5px govuk-spacing(2);
   }
 }
 
 .app-example__language-switch {
   right: 0;
-  padding: 0;
+  padding: 5px govuk-spacing(2);
 
   a {
     @extend %govuk-link;
 
     display: inline-block;
-    padding: 5px govuk-spacing(2);
   }
 }
 
