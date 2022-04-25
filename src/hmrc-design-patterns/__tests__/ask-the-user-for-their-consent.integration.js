@@ -17,7 +17,7 @@ describe('Design pattern page rendering', () => {
 
   it('should have the correct meta title', async () => {
     const title = await page.title()
-    expect(title).toBe('Ask the user for their consent - HMRC Design Patterns - Design resources for HMRC – GOV.UK')
+    expect(title).toBe('Ask the user for their consent - HMRC design patterns - Design resources for HMRC – GOV.UK')
   })
 
   describe('iFrame resizer', () => {
@@ -36,7 +36,7 @@ describe('Design pattern page rendering', () => {
   })
 
   describe('Copy snippet button', () => {
-    const buttonSelector = '#example-yes-no-question-html .app-link--copy'
+    const buttonSelector = '#example-yes-no-question .app-copy-button'
 
     beforeEach(async () => {
       await page.click('.example-example-yes-no-question-lang ul > li:first-child > a')
