@@ -1,0 +1,72 @@
+---
+title: Hiding information
+layout: twoColumnPage.njk
+status: experimental
+---
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern hides part of a user’s information, allowing them to securely recognise the data without showing it in full.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern when you need to securely reveal part of a user’s data back to them.</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+
+<p class="govuk-body">Do not use this pattern if it is more important for the user to easily recognise the information rather than for it to be secure.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+<p class="govuk-body">Use this pattern in different ways depending on the type of data you're hiding.</p>
+
+<h3 class="govuk-heading-m" id="hiding-a-number">Hiding a number</h3>
+
+<p class="govuk-body">To hide a number, you should say ‘ending with…’ and give the last 4 digits of the number, unless there is a reason to show another part of the number.</p>
+
+  {{
+    example({
+      item: 'hiding-information',
+      example: 'example1',
+      description: 'Number ending with',
+      welsh: 'example1-welsh'
+
+    })
+  }}
+
+<p class="govuk-body">However, if you have a lot of hidden numbers on a page, using ‘ending with…’ many times can make the page harder to read. In that case, consider whether using asterisks would be clearer. If so, add an aria-hidden attribute to the asterisks and a visually hidden span saying ‘ending with…’ for screen readers.</p>
+
+  {{
+    example({
+      item: 'hiding-information',
+      example: 'example2',
+      description: 'Hide a number with asterisks',
+      welsh: 'example2-welsh'
+
+    })
+  }}
+
+<h3 class="govuk-heading-m" id="hiding-an-email-address">Hiding an email address</h3>
+
+<p class="govuk-body">It is hard to conceal an email address securely. You should consider why you need to hide it, and if it would be easier for the user to show them the full email. If your user needs to easily understand that an email is theirs, do not hide it.</p>
+
+<p class="govuk-body">However, if you do need to hide an email, use asterisks after the first letter up to the ‘@’ sign. You must also include an aria-hidden attribute to the asterisks and a visually hidden span saying ‘'Email address beginning with [the first letter] and ending with [@ and the domain name]'.</p>
+
+  {{
+    example({
+      item: 'hiding-information',
+      example: 'example3',
+      description: 'Hide an email address',
+      welsh: 'example3-welsh'
+
+    })
+  }}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used confirmed identity, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/HMRC-content-style-guide/issues/99">Discuss hiding information on GitHub</a></p>
+
+{% endblock %}
