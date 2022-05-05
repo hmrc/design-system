@@ -1,0 +1,14 @@
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+{% macro howItWorks(params) %}
+  {% set frontendInfo = params.showFrontendInfo %}
+  {% set content = params.content %}
+
+  <h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
+
+  {% if frontendInfo %}
+    {{ hmrcFrontendInfo() }}
+  {% endif %}
+
+  {{ content | safe }}
+{% endmacro %}

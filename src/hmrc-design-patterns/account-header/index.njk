@@ -5,32 +5,34 @@ layout: twoColumnPage.njk
 
 {% from "_example.njk" import example %}
 {% from "_codeSnippet.njk" import codeSnippet %}
-{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+
+{% from "_whenToUse.njk" import whenToUse %}
+{% from "_whenNotToUse.njk" import whenNotToUse %}
+{% from "_howItWorks.njk" import howItWorks %}
+{% from "_research.njk" import research %}
 
 {% block content %}
 
 <p class="govuk-body">The account header is used for services that are part of the <a class="govuk-link" href="https://www.tax.service.gov.uk/personal-account">personal tax account</a>.</p>
 
-<h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
+{{ whenToUse("your service is part of the personal tax account") }}
 
-<p class="govuk-body">Use this pattern if your service is part of the personal tax account.</p>
+{{ whenNotToUse("your service is not part of the personal tax account. Use the <a class='govuk-link' href='https://design-system.service.gov.uk/components/header/'>GOV.UK header</a> instead.") }}
 
-<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+{{
+  howItWorks({
+    showFrontendInfo: true,
+    content: '<p class="govuk-body">The account header contains:</p>
 
-<p class="govuk-body">Do not use this pattern if your service is not part of the personal tax account. Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> instead.</p>
-
-<h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
-
-{{ hmrcFrontendInfo() }}
-
-<p class="govuk-body">The account header contains:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>the GOV.UK cookie banner, with a <a class="govuk-link" href="https://www.tax.service.gov.uk/help/cookies">link to HMRC cookie policy</a></li>
-  <li>the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a></li>
-  <li>the account menu</li>
-  <li>the Welsh language toggle, if your service is available in Welsh</li>
-</ul>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>the GOV.UK cookie banner, with a <a class="govuk-link" href="https://www.tax.service.gov.uk/help/cookies">link to HMRC cookie policy</a></li>
+                <li>the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a></li>
+                <li>the account menu</li>
+                <li>the Welsh language toggle, if your service is available in Welsh</li>
+              </ul>'
+  })
+}}
 
 {{
   example({
@@ -52,11 +54,6 @@ layout: twoColumnPage.njk
     })
   }}
 
-
-<h2 id="research" class="govuk-heading-l">Research</h2>
-
-<p class="govuk-body">We need more research. If you have used the account header, get in touch to share your research findings.</p>
-
-<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/128">Discuss the account header on GitHub</a></p>
+{{ research(128) }}
 
 {% endblock %}
