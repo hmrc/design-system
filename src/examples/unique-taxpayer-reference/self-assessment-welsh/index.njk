@@ -11,6 +11,11 @@ layout: layout-example.njk
 
 {{
   govukInput({
+    label: {
+      text: "Beth yw'ch Cyfeirnod Unigryw y Trethdalwr ar gyfer Hunanasesiad?",
+      isPageHeading: false,
+      classes: "govuk-visually-hidden"
+    },
     hint: {
       html: 'Mae hwn yn cynnwys 10 rhif, er enghraifft 1234567890. Bydd i’w weld ar Ffurflenni Treth a llythyrau eraill ynghylch Hunanasesiad. Efallai y cyfeirir ato gan ddefnyddio’r geiriau ‘cyfeirnod’, ‘UTR’ neu ‘defnydd swyddogol’.'
     },

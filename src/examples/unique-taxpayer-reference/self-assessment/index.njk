@@ -10,6 +10,11 @@ layout: layout-example.njk
 <p class="govuk-body">You can <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR</a>.</p>
 
 {{ govukInput({
+  label: {
+    text: "What is your Self Assessment Unique Taxpayer Reference?",
+    isPageHeading: false,
+    classes: "govuk-visually-hidden"
+  },
   hint: {
     text: "This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’."
   },
