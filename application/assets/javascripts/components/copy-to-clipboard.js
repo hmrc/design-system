@@ -23,9 +23,11 @@ CopyToClipboard.prototype.copyAction = function () {
       target: trigger => trigger.nextElementSibling
     }).on('success', function (e) {
       e.trigger.textContent = 'Copied'
+      e.trigger.removeAttribute('aria-live')
       e.clearSelection()
       setTimeout(() => {
         e.trigger.textContent = 'Copy'
+        e.trigger.setAttribute('aria-live', 'assertive')
       }, 5000)
     })
   } catch (err) {
