@@ -7,7 +7,7 @@ const filters = require('../../lib/filters')
 const globals = require('../../lib/globals')
 const templatePaths = require('../../lib/templatePaths')
 
-const titleSuffix = 'Design resources for HMRC – GOV.UK'
+const titleSuffix = 'Design resources for HMRC — GOV.UK'
 const defaultTitle = 'Default heading'
 const defaultSection = 'HMRC Design Patterns'
 
