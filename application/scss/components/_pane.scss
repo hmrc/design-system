@@ -13,6 +13,16 @@
     }
   }
 
+  .govuk-back-link {
+    display: none;
+  }
+
+  .js-enabled {
+    .govuk-back-link {
+      display: block;
+    }
+  }
+
   .app-pane__header {
     @include govuk-media-query($from: tablet) {
       display: flex;
@@ -35,10 +45,7 @@
   }
 
   .app-pane__subnav {
-    padding: govuk-spacing(4) 0;
-
     @include govuk-media-query($from: desktop) {
-      padding: govuk-spacing(6) 0;
       flex: 0 0 auto;
       width: $toc-width;
     }
@@ -50,6 +57,7 @@
       margin-left: auto;
       flex: 1 1 auto;
       flex-direction: column;
+      align-items: flex-start;
 
       // Stick footer to bottom of screen if content is shorter than viewport
       main {
