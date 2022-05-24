@@ -39,10 +39,8 @@
         <nav role="navigation" aria-labelledby="nav-header" class="app-pane__subnav" id="app-navigation">
 
           <h2 class="govuk-heading-m govuk-visually-hidden" id="nav-header">
-            {% set isRoot = '/' ~ filepath === indexPageLink %}
-            {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}
-            Pages in this section
-            {%- if not isRoot -%}</a>{%- endif -%}
+            {%- set isRoot = '/' ~ filepath === indexPageLink %}
+            {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}Pages in this section{%- if not isRoot -%}</a>{%- endif -%}
           </h2>
 
           <div class="app-subnav">
