@@ -68,7 +68,7 @@ describe('Single page example macro', () => {
   const markdownPanelID = 'example-example-markdown'
 
   const exampleFrame = document.querySelector('#example-example iframe')
-  const exampleLink = document.querySelector('.app-example__link a')
+  const exampleButton = document.querySelector('.app-example__link button')
 
   it('should render an iFrame for the example with the correct attribute values', () => {
     expect(exampleFrame).not.toBeNull()
@@ -77,9 +77,9 @@ describe('Single page example macro', () => {
   })
 
   it('should have a link to open the example html in a new window or tab', () => {
-    expect(exampleLink).not.toBeNull()
-    expect(exampleLink.href).toBe(exampleSrc)
-    expect(exampleLink.target).toBe('_blank')
+    expect(exampleButton).not.toBeNull()
+    expect(exampleButton.href).toBe(exampleSrc)
+    expect(exampleButton.target).toBe('_blank')
   })
 
   it('should not have a language toggle for English only examples', () => {

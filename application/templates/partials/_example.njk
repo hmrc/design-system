@@ -28,14 +28,14 @@
       </span>
       {% if welshExampleURL %}
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
-          <a href="{{ exampleURL }}" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display {{description}} example in English">
-            Display in English
-          </a>
+          <button data-link="{{ exampleURL }}" data-lang="en" target="_blank" data-track="lang-switch-en">
+            Display <span class="govuk-visually-hidden">{{description}} example&nbsp;</span>in English
+          </button>
         </span>
         <span class="app-example__link app-example__language-switch js-enabled">
-          <a href="{{ welshExampleURL }}" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display {{description}} example in Welsh">
-            Display in Welsh
-          </a>
+          <button data-link="{{ welshExampleURL }}" data-lang="cy" target="_blank" data-track="lang-switch-cy">
+            Display <span class="govuk-visually-hidden">{{ description }} example&nbsp;</span>in Welsh
+          </button>
         </span>
       {% endif %}
       <iframe data-module="app-example-frame" class="app-example__frame {% if not params.height %}app-example__frame--resizable{% endif %}"
