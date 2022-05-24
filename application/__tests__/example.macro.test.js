@@ -68,7 +68,7 @@ describe('Single page example macro', () => {
   const markdownPanelID = 'example-example-markdown'
 
   const exampleFrame = document.querySelector('#example-example iframe')
-  const exampleButton = document.querySelector('.app-example__link button')
+  const exampleLink = document.querySelector('.app-example__link a')
 
   it('should render an iFrame for the example with the correct attribute values', () => {
     expect(exampleFrame).not.toBeNull()
@@ -77,21 +77,21 @@ describe('Single page example macro', () => {
   })
 
   it('should have a link to open the example html in a new window or tab', () => {
-    expect(exampleButton).not.toBeNull()
-    expect(exampleButton.href).toBe(exampleSrc)
-    expect(exampleButton.target).toBe('_blank')
+    expect(exampleLink).not.toBeNull()
+    expect(exampleLink.href).toBe(exampleSrc)
+    expect(exampleLink.target).toBe('_blank')
   })
 
   it('should not have a language toggle for English only examples', () => {
-    const languageToggleLink = document.querySelector('a.language-toggle')
-    expect(languageToggleLink).toBeNull()
+    const languageToggleButton = document.querySelector('button.language-toggle')
+    expect(languageToggleButton).toBeNull()
   })
 
   it('should have a language toggle for dual language examples', () => {
     const welshParameters = { ...parameters, welsh: 'example-welsh' }
     const welshDocument = documentFactory(welshParameters, options)
-    const languageToggleLink = welshDocument.querySelector('a[href="/examples/open-links-in-a-new-window-or-tab/example-welsh/"]')
-    expect(languageToggleLink).not.toBeNull()
+    const languageToggleButton = welshDocument.querySelector('button[data-link="/examples/open-links-in-a-new-window-or-tab/example-welsh/"]')
+    expect(languageToggleButton).not.toBeNull()
   })
 
   it('should have a button to show HTML code examples', () => {
