@@ -41,7 +41,7 @@
           <h2 class="govuk-heading-m govuk-visually-hidden" id="nav-header">
             {% set isRoot = '/' ~ filepath === indexPageLink %}
             {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}
-              Pages in this section
+            Pages in this section
             {%- if not isRoot -%}</a>{%- endif -%}
           </h2>
 
@@ -82,7 +82,7 @@
         </nav>
     </div>
     <div class="app-pane__content">
-      {% if pageHeading !== "HMRC design patterns" %}
+      {% if (not pageHeading) %}
         {{ govukBackLink({
           text: "Back",
           href: "javascript:history.back()"

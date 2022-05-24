@@ -15,11 +15,12 @@
 
   .govuk-back-link {
     display: none;
+    @include govuk-responsive-margin(6, "left");
   }
 
   .js-enabled {
     .govuk-back-link {
-      display: block;
+      display: inline-block;
     }
   }
 
