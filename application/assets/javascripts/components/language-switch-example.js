@@ -38,10 +38,10 @@ LanguageSwitchExample.prototype.handleClick = function (event) {
     $option.classList.remove(self.currentClassName)
     $option.querySelector('button').focus()
   })
-  this.$iframe.setAttribute('src', $target.getAttribute('data-link'))
+  this.$iframe.setAttribute('src', $target.dataset.link)
   $target.parentNode.classList.add(this.currentClassName)
   this.$module.classList.remove(this.getLanguageClass('en'), this.getLanguageClass('cy'))
-  this.$module.classList.add(this.getLanguageClass($target.getAttribute('data-lang')))
+  this.$module.classList.add(this.getLanguageClass($target.dataset.lang))
 }
 
 export default LanguageSwitchExample
