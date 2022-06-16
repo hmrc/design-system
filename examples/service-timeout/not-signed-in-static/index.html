@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
+
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+<div id="hmrc-timeout-dialog" tabindex="-1" role="dialog" aria-modal="true" class="hmrc-timeout-dialog" aria-labelledby="hmrc-timeout-heading hmrc-timeout-message">
+  <div>
+    <h1 id="hmrc-timeout-heading" class="govuk-heading-m push--top">You’re about to be signed out</h1>
+    <p class="govuk-body hmrc-timeout-dialog__message" aria-hidden="true">For your security, we will sign you out in <span id="hmrc-timeout-countdown" class="hmrc-timeout-dialog__countdown">2 minutes</span>.</p>
+    <p id="hmrc-timeout-message" class="govuk-visually-hidden screenreader-content" aria-live="assertive">For your security, we will sign you out in 2 minutes.</p>
+    <button id="hmrc-timeout-keep-signin-btn" class="govuk-button">Continue checking what help you can get with childcare costs</button>
+    <div class="hmrc-timeout-dialog__link-wrapper">
+      <a id="hmrc-timeout-sign-out-link" class="govuk-link hmrc-timeout-dialog__link" href="?lang=English">Delete your answers</a>
+    </div>
+  </div>
+</div>
+<div id="hmrc-timeout-overlay" class="hmrc-timeout-overlay"></div>
+</body>
+
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>
