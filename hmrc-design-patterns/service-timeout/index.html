@@ -251,45 +251,49 @@
 
 
 
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-default" data-module="app-tabs app-language-switch-example">
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-default-static" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/examples/service-timeout/default/" target="_blank" title="Open Service timeout default example in a new window">
-          Open this example in a new window<span class="govuk-visually-hidden">: Service timeout default</span> 
+          Open this example in a new window<span class="govuk-visually-hidden">: Service timeout default</span>
         </a>
       </span>
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
-          <a href="/examples/service-timeout/default/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Service timeout default example in English">
+          <a href="/examples/service-timeout/default-static/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Service timeout default example in English">
             Display in English
           </a>
         </span>
         <span class="app-example__link app-example__language-switch js-enabled">
-          <a href="/examples/service-timeout/default-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Service timeout default example in Welsh">
+          <a href="/examples/service-timeout/default-welsh-static/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Service timeout default example in Welsh">
             Display in Welsh
           </a>
         </span>
       <iframe data-module="app-example-frame" class="app-example__frame "
-height="400px" src="/examples/service-timeout/default/" title="Service timeout default example"></iframe>
+height="400px" src="/examples/service-timeout/default-static/" title="Service timeout default example"></iframe>
     </div>
 
-      <div class="example-example-default-lang example-example-default-lang--en ">
-        <span id="options-example-default"></span>
+      <div class="example-example-default-static-lang example-example-default-static-lang--en ">
+        <span id="options-example-default-static"></span>
         <ul class="app-tabs" role="tablist">
             <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-default-html" role="tab"
-                aria-controls="example-default-html"
+              <a href="#example-default-static-html" role="tab"
+                aria-controls="example-default-static-html"
                 data-track="tab-html" title="Display Service timeout default example as HTML">HTML</a>
             </li>
               <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-default-nunjucks" role="tab"
-                  aria-controls="example-default-nunjucks"
+                <a href="#example-default-static-nunjucks" role="tab"
+                  aria-controls="example-default-static-nunjucks"
                   data-track="tab-nunjucks" title="Display Service timeout default example as Nunjucks">Nunjucks</a>
               </li>
 
         </ul>
 
-          <div class="app-tabs__container js-tabs__container" id="example-default-html" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-default-static-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
               <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;hmrc-timeout-dialog&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;hmrc-timeout-dialog&quot;</span> <span class="hljs-attr">data-language</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">data-timeout</span>=<span class="hljs-string">&quot;70&quot;</span> <span class="hljs-attr">data-countdown</span>=<span class="hljs-string">&quot;68&quot;</span> <span class="hljs-attr">data-keep-alive-url</span>=<span class="hljs-string">&quot;?continue=true&quot;</span> <span class="hljs-attr">data-sign-out-url</span>=<span class="hljs-string">&quot;?lang=English&quot;</span> <span class="hljs-attr">data-timeout-url</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-title</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-message</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-message-suffix</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-keep-alive-button-text</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-sign-out-button-text</span>=<span class="hljs-string">&quot;&quot;</span> /&gt;</span></code>
             </pre>
@@ -299,7 +303,7 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
               </pre>
           </div>
 
-            <div class="app-tabs__container js-tabs__container" id="example-default-nunjucks" role="tabpanel">
+            <div class="app-tabs__container js-tabs__container" id="example-default-static-nunjucks" role="tabpanel">
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
                 <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">&quot;hmrc/components/timeout-dialog/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
 
@@ -339,12 +343,16 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
 
 
+
+
+
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-signed-out-default" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/examples/service-timeout/signed-out-default/" target="_blank" title="Open Signed out timeout default example in a new window">
-          Open this example in a new window<span class="govuk-visually-hidden">: Signed out timeout default</span> 
+          Open this example in a new window<span class="govuk-visually-hidden">: Signed out timeout default</span>
         </a>
       </span>
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
@@ -459,12 +467,16 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
 
 
+
+
+
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-signed-out-saved" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/examples/service-timeout/signed-out-saved/" target="_blank" title="Open Signed out timeout saved example in a new window">
-          Open this example in a new window<span class="govuk-visually-hidden">: Signed out timeout saved</span> 
+          Open this example in a new window<span class="govuk-visually-hidden">: Signed out timeout saved</span>
         </a>
       </span>
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
@@ -593,12 +605,16 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
 
 
+
+
+
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-signed-out-not-saved" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/examples/service-timeout/signed-out-not-saved/" target="_blank" title="Open Signed out timeout not saved example in a new window">
-          Open this example in a new window<span class="govuk-visually-hidden">: Signed out timeout not saved</span> 
+          Open this example in a new window<span class="govuk-visually-hidden">: Signed out timeout not saved</span>
         </a>
       </span>
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
@@ -739,45 +755,49 @@ height="400px" src="/examples/service-timeout/default/" title="Service timeout d
 
 
 
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-not-signed-in" data-module="app-tabs app-language-switch-example">
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-not-signed-in-static" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/examples/service-timeout/not-signed-in/" target="_blank" title="Open Not signed in page example in a new window">
-          Open this example in a new window<span class="govuk-visually-hidden">: Not signed in page</span> 
+          Open this example in a new window<span class="govuk-visually-hidden">: Not signed in page</span>
         </a>
       </span>
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
-          <a href="/examples/service-timeout/not-signed-in/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Not signed in page example in English">
+          <a href="/examples/service-timeout/not-signed-in-static/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Not signed in page example in English">
             Display in English
           </a>
         </span>
         <span class="app-example__link app-example__language-switch js-enabled">
-          <a href="/examples/service-timeout/not-signed-in-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Not signed in page example in Welsh">
+          <a href="/examples/service-timeout/not-signed-in-welsh-static/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Not signed in page example in Welsh">
             Display in Welsh
           </a>
         </span>
       <iframe data-module="app-example-frame" class="app-example__frame "
-height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed in page example"></iframe>
+height="400px" src="/examples/service-timeout/not-signed-in-static/" title="Not signed in page example"></iframe>
     </div>
 
-      <div class="example-example-not-signed-in-lang example-example-not-signed-in-lang--en ">
-        <span id="options-example-not-signed-in"></span>
+      <div class="example-example-not-signed-in-static-lang example-example-not-signed-in-static-lang--en ">
+        <span id="options-example-not-signed-in-static"></span>
         <ul class="app-tabs" role="tablist">
             <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-not-signed-in-html" role="tab"
-                aria-controls="example-not-signed-in-html"
+              <a href="#example-not-signed-in-static-html" role="tab"
+                aria-controls="example-not-signed-in-static-html"
                 data-track="tab-html" title="Display Not signed in page example as HTML">HTML</a>
             </li>
               <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-not-signed-in-nunjucks" role="tab"
-                  aria-controls="example-not-signed-in-nunjucks"
+                <a href="#example-not-signed-in-static-nunjucks" role="tab"
+                  aria-controls="example-not-signed-in-static-nunjucks"
                   data-track="tab-nunjucks" title="Display Not signed in page example as Nunjucks">Nunjucks</a>
               </li>
 
         </ul>
 
-          <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-html" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-static-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
               <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;hmrc-timeout-dialog&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;hmrc-timeout-dialog&quot;</span> <span class="hljs-attr">data-language</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">data-timeout</span>=<span class="hljs-string">&quot;70&quot;</span> <span class="hljs-attr">data-countdown</span>=<span class="hljs-string">&quot;68&quot;</span> <span class="hljs-attr">data-keep-alive-url</span>=<span class="hljs-string">&quot;?continue=true&quot;</span> <span class="hljs-attr">data-sign-out-url</span>=<span class="hljs-string">&quot;?lang=English&quot;</span> <span class="hljs-attr">data-timeout-url</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-title</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-message</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-message-suffix</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-keep-alive-button-text</span>=<span class="hljs-string">&quot;Continue checking what help you can get with childcare costs&quot;</span> <span class="hljs-attr">data-sign-out-button-text</span>=<span class="hljs-string">&quot;Delete your answers&quot;</span> /&gt;</span></code>
             </pre>
@@ -787,7 +807,7 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
               </pre>
           </div>
 
-            <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-nunjucks" role="tabpanel">
+            <div class="app-tabs__container js-tabs__container" id="example-not-signed-in-static-nunjucks" role="tabpanel">
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
                 <code class="hljs js">{%- <span class="hljs-keyword">from</span>  <span class="hljs-string">&quot;hmrc/components/timeout-dialog/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcTimeoutDialog -%}
 
@@ -826,12 +846,16 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
 
 
 
+
+
+
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-you-deleted-your-answers" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/examples/service-timeout/you-deleted-your-answers/" target="_blank" title="Open You deleted your answers page example in a new window">
-          Open this example in a new window<span class="govuk-visually-hidden">: You deleted your answers page</span> 
+          Open this example in a new window<span class="govuk-visually-hidden">: You deleted your answers page</span>
         </a>
       </span>
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
@@ -946,12 +970,16 @@ height="400px" src="/examples/service-timeout/not-signed-in/" title="Not signed 
 
 
 
+
+
+
+
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-we-deleted-your-answers" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-window">
         <a href="/examples/service-timeout/we-deleted-your-answers/" target="_blank" title="Open We deleted your answers page example in a new window">
-          Open this example in a new window<span class="govuk-visually-hidden">: We deleted your answers page</span> 
+          Open this example in a new window<span class="govuk-visually-hidden">: We deleted your answers page</span>
         </a>
       </span>
         <span class="app-example__link app-example__language-switch app-example__language-switch--current">
