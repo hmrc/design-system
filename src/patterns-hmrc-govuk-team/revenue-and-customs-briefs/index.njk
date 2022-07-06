@@ -4,114 +4,48 @@ menuText: Revenue and Customs Briefs
 layout: twoColumnPage.njk
 ---
 
-<h2 class="govuk-heading-l">Document type</h2>
-
-<p class="govuk-body">Publication: policy paper (with an HTML attachment)</p>
 
 <h2 class="govuk-heading-l">How it works</h2>
 
+<h3 class="govuk-heading-m">Document type</h3>
+
+<p class="govuk-body">Publication: policy paper (with an HTML attachment)</p>
+
+<h3 class="govuk-heading-m">Publication</h3>
+
+<h4 class="govuk-heading-s">Title</h4>
+
+<p class="govuk-body">Enter 'Revenue and Customs Brief [number] ([year]): [description]'.</p>
+
+<p class="govuk-body">For example, 'Revenue and Customs Brief 5 (2018): VAT liability on goods supplied on approval'.</p>
+
 <p class="govuk-body">Triage control the allocation of brief numbers and they're allocated by the team on receipt of business requests.</p>
 
-{% from "govuk/components/table/macro.njk" import govukTable %}
+<h4 class="govuk-heading-s">Summary</h4>
 
-{{
-  govukTable({
-    caption: 'Publication stub page',
-    firstCellIsHeader: true,
-    head: [
-      {
-        text: 'Field'
-      },
-      {
-        text: 'What to enter'
-      },
-      {
-        text: 'Example'
-      }
-    ],
-    rows: [
-      [
-        {
-          text: 'Title'
-        },
-        {
-          text: 'Revenue and Customs Brief nn (yyyy): description'
-        },
-        {
-          text: 'Revenue and Customs Brief 5 (2018): VAT liability on goods supplied on approval'
-        }
-      ],
-      [
-        {
-          text: 'Summary'
-        },
-        {
-          html: 'Begin with ‘This brief …’<br /><br />
-Read the document and summarise the paper’s content.'
-        },
-        {
-          text: 'This brief explains HMRC’s policy on goods supplied on approval, and the VAT liability of the delivery charges for these goods.'
-        }
-      ],
-      [
-        {
-          text: 'Body text'
-        },
-        {
-          html: 'Begin with ‘This brief explains…’<br /><br />
-Read the document and summarise the paper’s content to create the body text.'
-        },
-        {
-          html: 'See live examples on <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs" class="govuk-link">Revenue and Customs Briefs</a> pages.'
-        }
-      ]
-    ]
-  })
-}}
+<p class="govuk-body">Begin with ‘This brief...’. Then read the document and summarise the paper’s content.</p>
 
-{{
-  govukTable({
-    caption: 'HTML attachment',
-    firstCellIsHeader: true,
-    head: [
-      {
-        text: 'Field'
-      },
-      {
-        text: 'What to enter'
-      },
-      {
-        text: 'Example'
-      }
-    ],
-    rows: [
-      [
-        {
-          text: 'Title'
-        },
-        {
-          text: 'Use the description that you’ve used in the title of the stub page.'
-        },
-        {
-          text: 'VAT liability on goods supplied on approval'
-        }
-      ],
-      [
-        {
-          text: 'Body text'
-        },
-        {
-          text: 'In the Body field enter the content of the brief'
-        },
-        {
-          text: ''
-        }
-      ]
-    ]
-  })
-}}
+<p class="govuk-body">For example, 'This brief explains HMRC’s policy on goods supplied on approval, and the VAT liability of the delivery charges for these goods.'</p>
+
+<h4 class="govuk-heading-s">Body text</h4>
+
+<p class="govuk-body">Begin with ‘This brief explains...’. Then read the document and summarise the paper’s content to create the body text.</p>
+
+<p class="govuk-body">Check live examples on the <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs" class="govuk-link">Revenue and Customs Briefs collection</a>.</p>
+
+<h3 class="govuk-heading-m">HMTL attachment</h3>
+
+<h4 class="govuk-heading-s">Title</h4>
+
+<p class="govuk-body">Use the description that you’ve used in the title of the stub page.</p>
+
+<p class="govuk-body">For example, 'VAT liability on goods supplied on approval.'</p>
+
+<h4 class="govuk-heading-s">Body text</h4>
+
+<p class="govuk-body">In the Body field, enter the content of the brief.</p>
 
 <h3 class="govuk-heading-m">Collection page</h3>
 
-<p class="govuk-body">Add your new document to the <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs" class="govuk-link">Revenue and Customs Briefs</a> document collection. Do not create a public change note.
+<p class="govuk-body">Add your new document to the <a href="https://www.gov.uk/government/collections/revenue-and-customs-briefs" class="govuk-link">Revenue and Customs Briefs collection</a>. Do not create a public change note.
 </p>
