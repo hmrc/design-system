@@ -4,146 +4,113 @@ layout: twoColumnPage.njk
 ---
 {% from "_codeSnippet.njk" import codeSnippet %}
 
-<h2 class="govuk-heading-l">Document type</h2>
+<h2 class="govuk-heading-l">How to design this pattern</h2>
+
+<h3 class="govuk-heading-m">Document type</h3>
 
 <p class="govuk-body">Publication: guidance (with an HTML attachment)</p>
 
-{% from "govuk/components/table/macro.njk" import govukTable %}
+<h3 class="govuk-heading-m">Publication</h3>
+
+<h4 class="govuk-heading-s">Title</h4>
+
+<p class="govuk-body">Enter '[Service name]: service availability and issues'.</p>
+
+<p class="govuk-body">For example, 'Corporation Tax: service availability and issues'.</p>
+
+<h4 class="govuk-heading-s">Summary</h4>
+
+<p class="govuk-body">Enter 'Check the availability and any issues affecting the [service name] service.'</p>
+
+<p class="govuk-body">For example, 'Check the availability and any issues affecting the Corporation Tax online service.'</p>
+
+<h4 class="govuk-heading-s">Body</h4>
+
+<p class="govuk-body">Enter 'Latest updates on the availability and any issues affecting the [service name] service.'</p>
+
+<p class="govuk-body">For example, 'Latest updates on the availability and any issues affecting the Corporation Tax online service.'</p>
+
+<h3 class="govuk-heading-m">HTML attachment</h3>
+
+<h4 class="govuk-heading-s">Title</h4>
+
+<p class="govuk-body">Enter '[Service name]: service availability and issues'.</p>
+
+<p class="govuk-body">For example, 'Corporation Tax: service availability and issues'.</p>
+
+<h4 class="govuk-heading-s">Body</h4>
 
 {{
-  govukTable({
-    caption: 'Publication stub page',
-    firstCellIsHeader: true,
-    head: [
-      {
-        text: 'Field'
-      },
-      {
-        text: 'What to enter'
-      },
-      {
-        text: 'Example'
-      }
-    ],
-    rows: [
-      [
-        {
-          text: 'Title'
-        },
-        {
-          text: '[Service]: service availability and issues'
-        },
-        {
-          text: 'Corporation Tax: service availability and issues'
-        }
-      ],
-      [
-        {
-          text: 'Summary'
-        },
-        {
-          text: 'Check the availability and any issues affecting the [service] service.'
-        },
-        {
-          text: 'Check the availability and any issues affecting the Corporation Tax online service.'
-        }
-      ],
-      [
-        {
-          text: 'Body text'
-        },
-        {
-          text: 'Latest updates on the availability and any issues affecting the [service] service.'
-        },
-        {
-          text: 'Latest updates on the availability and any issues affecting the Corporation Tax online service.'
-        }
-      ]
+    codeSnippet({
+      code: '## Service availability
 
-    ]
-  })
-}}
+Full service available.
+
+Sign in to [insert service name] (add the url)
+
+## Planned downtime
+
+None.
+
+## Service issues
+
+None.
+
+## Other services
+
+Check [availability and issues](https://www.gov.uk/government/collections/hmrc-service-availability-and-issues) for other services.',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">Use a call to action box if there is planned downtime or service issues.</p>
+
+<p class="govuk-body">Do not use 'midnight', use '11:59pm',</p>
 
 {{
-  govukTable({
-    caption: 'HTML attachment',
-    firstCellIsHeader: true,
-    head: [
-      {
-        text: 'Field'
-      },
-      {
-        text: 'What to enter'
-      }
-    ],
-    rows: [
-      [
-        {
-          text: 'Title'
-        },
-        {
-          html: '<p class="govuk-body">[Service]: service availability and issues</p>
-          <p class="govuk-body govuk-!-font-weight-bold">Example:</p>
-          <p>Corporation Tax: service availability and issues</p>'
-        }
-      ],
-      [
-        {
-          text: 'Body text'
-        },
-        {
-          html: '## Service availability
-          <p>Full service available.</p>
-          <p>Sign in to [insert service name] (add the url)</p>
-          <p>## Planned downtime</p>
-          <p>None.</p>
-          <p>## Service issues</p>
-          <p>None.</p>
-          <p>## Other services</p>
-          <p>Check [availability and issues] (<a href="https://www.gov.uk/government/collections/hmrc-service-availability-and-issues" class="govuk-link">https://www<wbr>.gov<wbr>.uk<wbr>/government<wbr>/collections<wbr>/hmrc-service-availability-and-issues</a>) for other services.</p>
-          <p>Use a call to action box when adding &#39Planned downtime&#39.</p>
-          <p>$CTA</p>
-          <p>Sunday 26 September 2021 11:59pm to 3am Monday 27 September 2021</p>
-          <p>$CTA</p>
-          <p>Due to scheduled maintenance you will be unable to access our online service from 11:59pm on Sunday 26 September 2021 to 3am on Monday 27 April 2021.</p>
-          <p>We apologise for any inconvenience this may cause.</p>
-          <p>Add &#39None.&#39 when there is no planned downtime or service issues.</p>
-          <p>Note: Do not use &#39midnight&#39, use 11:59pm</p>'
-        }
-      ],
-      [
-        {
-          text: 'Public change note'
-        },
-        {
-          html: '<p class="govuk-body govuk-!-font-weight-bold">Service availability</p>
-<p class="govuk-body govuk-!-font-weight-bold">Examples:</p>
+    codeSnippet({
+      code: '$CTA
+
+Sunday 26 September 2021 11:59pm to 3am Monday 27 September 2021
+
+$CTA
+
+Due to scheduled maintenance you will be unable to access our online service from 11:59pm on Sunday 26 September 2021 to 3am on Monday 27 April 2021.
+
+We apologise for any inconvenience this may cause.',
+      canCopy: true
+    })
+  }}
+
+<h3 class="govuk-heading-m">Public change note</h3>
+
+<h4 class="govuk-heading-s">Service availability</h4>
+
+<p class="govuk-body">Examples:</p>
 <p><ol class="govuk-list govuk-list--number">
 <li> The agent services account is currently unavailable. Check the service availability page for updates. </li>
 <li> This service will be unavailable from 10pm on Thursday 14 October to 2am on Friday 15 October 2021. </li>
 </ol></p>
-<p>Note: no public change note is required when removing a service availability message.</p>
-<p class="govuk-body govuk-!-font-weight-bold">Planned downtime</p>
-<p>Planned downtime from 5pm on Friday 17 December 2021 to 9am Monday 20 December 2021 has been added.</p>
-<p>Note: no public change note is required when removing a planned downtime message.</p>
-<p class="govuk-body govuk-!-font-weight-bold">Service issues</p>
-<p class="govuk-body govuk-!-font-weight-bold">Example:</p>
-<p>A service issue about accessing the Making Tax Digital service has been added.</p>
-<p>Note: no public change note is required when removing a service issues message.</p>'
-        }
-      ]
 
-    ]
-  })
-}}
+<p class="govuk-body">No public change note is needed when removing a service availability message.</p>
+
+<h4 class="govuk-heading-s">Planned downtime</h4>
+
+<p class="govuk-body">Example: Planned downtime from 5pm on Friday 17 December 2021 to 9am Monday 20 December 2021 has been added.</p>
+
+<p class="govuk-body">No public change note is needed when removing a planned downtime message.</p>
+
+<h4 class="govuk-heading-s">Service issues</h4>
+
+<p class="govuk-body">Example: A service issue about accessing the Making Tax Digital service has been added.</p>
+
+<p class="govuk-body">No public change note is needed when removing a service issues message.</p>
 
 <h3 class="govuk-heading-m">Scheduled publication time</h3>
 
-<p class="govuk-body">You only need to put in a scheduled publication time for the removal of a message, not for the addition.
-
-</p>
+<p class="govuk-body">You only need to put in a scheduled publication time for the removal of a message, not for the addition.</p>
 
 <h3 class="govuk-heading-m">Collection page</h3>
 
-<p class="govuk-body">Make sure you add the new document to the <a href="https://signon.publishing.service.gov.uk/users/sign_in" class="govuk-link">HMRC service availability and issues</a> document collection. Do not create a public change note.
+<p class="govuk-body">Make sure you add the new document to the <a href="https://www.gov.uk/government/collections/hm-revenue-and-customs-service-availability-and-issues" class="govuk-link">HMRC service availability and issues collection</a>. Do not create a public change note.
 </p>
