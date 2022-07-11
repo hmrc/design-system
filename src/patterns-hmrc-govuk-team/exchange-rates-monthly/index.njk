@@ -11,10 +11,10 @@ layout: twoColumnPage.njk
 You should only use this pattern if you’re publishing monthly exchange rates in both CSV and XML. You will need to have access to Documentum.
 </p>
 
-<h2 class="govuk-heading-l">XML rates on HMRC.GOV.UK</h2>
+<h2 class="govuk-heading-l">How to design XML rates on HMRC.GOV.UK</h2>
 
 <p class="govuk-body">
-You need to add the XML file to the <a href="http://www.hmrc.gov.uk/softwaredevelopers/2022-exrates.html" class="govuk-link">Software developer’s page</a> under the relevant sub heading.
+You need to add the XML file to the <a href="http://www.hmrc.gov.uk/softwaredevelopers/2022-exrates.html" class="govuk-link">software developer’s page</a> under the relevant sub heading.
 </p>
 
 <p class="govuk-body">
@@ -34,10 +34,12 @@ You must name the XML file using the format 'exrates-monthly-mmyy.xml'.
 </p>
 
 <p class="govuk-body">
-You cannot schedule publishing in Documentum so you need to publish the XML file before you publish the CSV file on GOV.UK.
+You must publish the XML file before you publish the CSV file on GOV.UK because you cannot schedule publishing in Documentum.
 </p>
 
-<h2 class="govuk-heading-l">CVS rates on GOV.UK</h2>
+<h2 class="govuk-heading-l">How to design CVS rates on GOV.UK</h2>
+
+<h2 class="govuk-heading-l">How it works</h2>
 
 <h3 class="govuk-heading-m">Document type</h3>
 
@@ -45,20 +47,18 @@ You cannot schedule publishing in Documentum so you need to publish the XML file
 Publication: guidance
 </p>
 
-<h2 class="govuk-heading-l">How it works</h2>
-
 <h3 class="govuk-heading-m">Publication</h3>
 
 <h4 class="govuk-heading-s">Title</h4>
 
 <p class="govuk-body">
-HMRC exchange rates for [year]: monthly
+Enter 'HMRC exchange rates for [year]: monthly'.
 </p>
 
 <h4 class="govuk-heading-s">Summary</h4>
 
 <p class="govuk-body">
-Find foreign exchange rates issued by HMRC in CSV and XML format.
+Enter 'Find foreign exchange rates issued by HMRC in CSV and XML format.'
 </p>
 
 <h4 class="govuk-heading-s">Details</h4>
@@ -101,10 +101,10 @@ You should only use the EU rate for conversion of invoices drawn in the euro. Do
 
 <h3 class="govuk-heading-m">CSV attachment</h3>
 
-<h4 class="govuk-heading-s">Title format</h4>
+<h4 class="govuk-heading-s">Title</h4>
 
 <p class="govuk-body">
-[Month] [year]: monthly exchange rates
+Enter '[Month] [year]: monthly exchange rates'.
 </p>
 
 <h4 class="govuk-heading-s">Name of attachment</h4>
