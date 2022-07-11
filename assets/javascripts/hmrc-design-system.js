@@ -2807,10 +2807,9 @@
 	  function CharacterCount($module) {
 	    this.$module = $module;
 	    this.$textarea = $module.querySelector('.hmrc-js-character-count');
-
-	    if (this.$textarea) {
-	      this.$countMessage = $module.querySelector("[id=\"".concat(this.$textarea.id, "-info\"]"));
-	    }
+	    this.$visibleCountMessage = null;
+	    this.$screenReaderCountMessage = null;
+	    this.lastInputTimestamp = null;
 	  }
 
 	  CharacterCount.prototype.defaults = {
@@ -2819,18 +2818,35 @@
 	  }; // Initialize component
 
 	  CharacterCount.prototype.init = function () {
-	    // Check for module
+	    // Check that required elements are present
+	    if (!this.$textarea) {
+	      return;
+	    } // Check for module
+
+
 	    var $module = this.$module;
 	    var $textarea = this.$textarea;
-	    var $countMessage = this.$countMessage;
-
-	    if (!$textarea || !$countMessage) {
-	      return;
-	    } // We move count message right after the field
+	    var $fallbackLimitMessage = document.getElementById($textarea.id + '-info'); // Move the fallback count message to be immediately after the textarea
 	    // Kept for backwards compatibility
 
+	    $textarea.insertAdjacentElement('afterend', $fallbackLimitMessage); // Create the *screen reader* specific live-updating counter
+	    // This doesn't need any styling classes, as it is never visible
 
-	    $textarea.insertAdjacentElement('afterend', $countMessage); // Read options set using dataset ('data-' values)
+	    var $screenReaderCountMessage = document.createElement('div');
+	    $screenReaderCountMessage.className = 'hmrc-character-count__sr-status govuk-visually-hidden';
+	    $screenReaderCountMessage.setAttribute('aria-live', 'polite');
+	    this.$screenReaderCountMessage = $screenReaderCountMessage;
+	    $fallbackLimitMessage.insertAdjacentElement('afterend', $screenReaderCountMessage); // Create our live-updating counter element, copying the classes from the
+	    // fallback element for backwards compatibility as these may have been configured
+
+	    var $visibleCountMessage = document.createElement('div');
+	    $visibleCountMessage.className = $fallbackLimitMessage.className;
+	    $visibleCountMessage.classList.add('hmrc-character-count__status');
+	    $visibleCountMessage.setAttribute('aria-hidden', 'true');
+	    this.$visibleCountMessage = $visibleCountMessage;
+	    $fallbackLimitMessage.insertAdjacentElement('afterend', $visibleCountMessage); // Hide the fallback limit message
+
+	    $fallbackLimitMessage.classList.add('govuk-visually-hidden'); // Read options set using dataset ('data-' values)
 
 	    this.options = this.getDataset($module); // Determine the limit attribute (characters or words)
 
@@ -2848,22 +2864,18 @@
 	    } // Remove hard limit if set
 
 
-	    $module.removeAttribute('maxlength'); // When the page is restored after navigating 'back' in some browsers the
+	    $textarea.removeAttribute('maxlength');
+	    this.bindChangeEvents(); // When the page is restored after navigating 'back' in some browsers the
 	    // state of the character count is not restored until *after* the DOMContentLoaded
-	    // event is fired, so we need to sync after the pageshow event in browsers
-	    // that support it.
+	    // event is fired, so we need to manually update it after the pageshow event
+	    // in browsers that support it.
 
 	    if ('onpageshow' in window) {
-	      window.addEventListener('pageshow', this.sync.bind(this));
+	      window.addEventListener('pageshow', this.updateCountMessage.bind(this));
 	    } else {
-	      window.addEventListener('DOMContentLoaded', this.sync.bind(this));
+	      window.addEventListener('DOMContentLoaded', this.updateCountMessage.bind(this));
 	    }
 
-	    this.sync();
-	  };
-
-	  CharacterCount.prototype.sync = function () {
-	    this.bindChangeEvents();
 	    this.updateCountMessage();
 	  }; // Read data attributes
 
@@ -2904,7 +2916,7 @@
 
 	  CharacterCount.prototype.bindChangeEvents = function () {
 	    var $textarea = this.$textarea;
-	    $textarea.addEventListener('keyup', this.checkIfValueChanged.bind(this)); // Bind focus/blur events to start/stop polling
+	    $textarea.addEventListener('keyup', this.handleKeyUp.bind(this)); // Bind focus/blur events to start/stop polling
 
 	    $textarea.addEventListener('focus', this.handleFocus.bind(this));
 	    $textarea.addEventListener('blur', this.handleBlur.bind(this));
@@ -2920,43 +2932,63 @@
 	      this.$textarea.oldValue = this.$textarea.value;
 	      this.updateCountMessage();
 	    }
-	  }; // Update message box
+	  }; // Helper function to update both the visible and screen reader-specific
+	  // counters simultaneously (e.g. on init)
 
 
 	  CharacterCount.prototype.updateCountMessage = function () {
-	    var countElement = this.$textarea;
-	    var options = this.options;
-	    var countMessage = this.$countMessage; // Determine the remaining number of characters/words
+	    this.updateVisibleCountMessage();
+	    this.updateScreenReaderCountMessage();
+	  }; // Update visible counter
 
-	    var currentLength = this.count(countElement.value);
-	    var maxLength = this.maxLength;
-	    var remainingNumber = maxLength - currentLength; // Set threshold if presented in options
 
-	    var thresholdPercent = options.threshold ? options.threshold : 0;
-	    var thresholdValue = maxLength * thresholdPercent / 100;
+	  CharacterCount.prototype.updateVisibleCountMessage = function () {
+	    var $textarea = this.$textarea;
+	    var $visibleCountMessage = this.$visibleCountMessage;
+	    var remainingNumber = this.maxLength - this.count($textarea.value); // If input is over the threshold, remove the disabled class which renders the
+	    // counter invisible.
 
-	    if (thresholdValue > currentLength) {
-	      countMessage.classList.add('hmrc-character-count__message--disabled'); // Ensure threshold is hidden for users of assistive technologies
-
-	      countMessage.setAttribute('aria-hidden', true);
+	    if (this.isOverThreshold()) {
+	      $visibleCountMessage.classList.remove('hmrc-character-count__message--disabled');
 	    } else {
-	      countMessage.classList.remove('hmrc-character-count__message--disabled'); // Ensure threshold is visible for users of assistive technologies
-
-	      countMessage.removeAttribute('aria-hidden');
+	      $visibleCountMessage.classList.add('hmrc-character-count__message--disabled');
 	    } // Update styles
 
 
 	    if (remainingNumber < 0) {
-	      countElement.classList.add('govuk-textarea--error');
-	      countMessage.classList.remove('govuk-hint');
-	      countMessage.classList.add('govuk-error-message');
+	      $textarea.classList.add('govuk-textarea--error');
+	      $visibleCountMessage.classList.remove('govuk-hint');
+	      $visibleCountMessage.classList.add('govuk-error-message');
 	    } else {
-	      countElement.classList.remove('govuk-textarea--error');
-	      countMessage.classList.remove('govuk-error-message');
-	      countMessage.classList.add('govuk-hint');
+	      $textarea.classList.remove('govuk-textarea--error');
+	      $visibleCountMessage.classList.remove('govuk-error-message');
+	      $visibleCountMessage.classList.add('govuk-hint');
 	    } // Update message
 
 
+	    $visibleCountMessage.innerHTML = this.formattedUpdateMessage();
+	  }; // Update screen reader-specific counter
+
+
+	  CharacterCount.prototype.updateScreenReaderCountMessage = function () {
+	    var $screenReaderCountMessage = this.$screenReaderCountMessage; // If over the threshold, remove the aria-hidden attribute, allowing screen
+	    // readers to announce the content of the element.
+
+	    if (this.isOverThreshold()) {
+	      $screenReaderCountMessage.removeAttribute('aria-hidden');
+	    } else {
+	      $screenReaderCountMessage.setAttribute('aria-hidden', true);
+	    } // Update message
+
+
+	    $screenReaderCountMessage.innerHTML = this.formattedUpdateMessage();
+	  }; // Format update message
+
+
+	  CharacterCount.prototype.formattedUpdateMessage = function () {
+	    var $textarea = this.$textarea;
+	    var options = this.options;
+	    var remainingNumber = this.maxLength - this.count($textarea.value);
 	    var isWelsh = this.options.language === 'cy';
 	    var charVerb;
 	    var charNoun;
@@ -2981,12 +3013,41 @@
 	    }
 
 	    var displayNumber = Math.abs(remainingNumber);
-	    countMessage.innerHTML = charStartMessage + displayNumber + ' ' + charNoun + ' ' + charVerb;
+	    return charStartMessage + displayNumber + ' ' + charNoun + ' ' + charVerb;
+	  }; // Checks whether the value is over the configured threshold for the input.
+	  // If there is no configured threshold, it is set to 0 and this function will
+	  // always return true.
+
+
+	  CharacterCount.prototype.isOverThreshold = function () {
+	    var $textarea = this.$textarea;
+	    var options = this.options; // Determine the remaining number of characters/words
+
+	    var currentLength = this.count($textarea.value);
+	    var maxLength = this.maxLength; // Set threshold if presented in options
+
+	    var thresholdPercent = options.threshold ? options.threshold : 0;
+	    var thresholdValue = maxLength * thresholdPercent / 100;
+	    return thresholdValue <= currentLength;
+	  }; // Update the visible character counter and keep track of when the last update
+	  // happened for each keypress
+
+
+	  CharacterCount.prototype.handleKeyUp = function () {
+	    this.updateVisibleCountMessage();
+	    this.lastInputTimestamp = Date.now();
 	  };
 
 	  CharacterCount.prototype.handleFocus = function () {
-	    // Check if value changed on focus
-	    this.valueChecker = setInterval(this.checkIfValueChanged.bind(this), 1000);
+	    // If the field is focused, and a keyup event hasn't been detected for at
+	    // least 1000 ms (1 second), then run the manual change check.
+	    // This is so that the update triggered by the manual comparison doesn't
+	    // conflict with debounced KeyboardEvent updates.
+	    this.valueChecker = setInterval(function () {
+	      if (!this.lastInputTimestamp || Date.now() - 500 >= this.lastInputTimestamp) {
+	        this.checkIfValueChanged();
+	      }
+	    }.bind(this), 1000);
 	  };
 
 	  CharacterCount.prototype.handleBlur = function () {
@@ -4633,9 +4694,9 @@
 	function CharacterCount ($module) {
 	  this.$module = $module;
 	  this.$textarea = $module.querySelector('.govuk-js-character-count');
-	  if (this.$textarea) {
-	    this.$countMessage = document.getElementById(this.$textarea.id + '-info');
-	  }
+	  this.$visibleCountMessage = null;
+	  this.$screenReaderCountMessage = null;
+	  this.lastInputTimestamp = null;
 	}
 
 	CharacterCount.prototype.defaults = {
@@ -4645,18 +4706,39 @@
 
 	// Initialize component
 	CharacterCount.prototype.init = function () {
-	  // Check for module
-	  var $module = this.$module;
-	  var $textarea = this.$textarea;
-	  var $countMessage = this.$countMessage;
-
-	  if (!$textarea || !$countMessage) {
+	  // Check that required elements are present
+	  if (!this.$textarea) {
 	    return
 	  }
 
-	  // We move count message right after the field
+	  // Check for module
+	  var $module = this.$module;
+	  var $textarea = this.$textarea;
+	  var $fallbackLimitMessage = document.getElementById($textarea.id + '-info');
+
+	  // Move the fallback count message to be immediately after the textarea
 	  // Kept for backwards compatibility
-	  $textarea.insertAdjacentElement('afterend', $countMessage);
+	  $textarea.insertAdjacentElement('afterend', $fallbackLimitMessage);
+
+	  // Create the *screen reader* specific live-updating counter
+	  // This doesn't need any styling classes, as it is never visible
+	  var $screenReaderCountMessage = document.createElement('div');
+	  $screenReaderCountMessage.className = 'govuk-character-count__sr-status govuk-visually-hidden';
+	  $screenReaderCountMessage.setAttribute('aria-live', 'polite');
+	  this.$screenReaderCountMessage = $screenReaderCountMessage;
+	  $fallbackLimitMessage.insertAdjacentElement('afterend', $screenReaderCountMessage);
+
+	  // Create our live-updating counter element, copying the classes from the
+	  // fallback element for backwards compatibility as these may have been configured
+	  var $visibleCountMessage = document.createElement('div');
+	  $visibleCountMessage.className = $fallbackLimitMessage.className;
+	  $visibleCountMessage.classList.add('govuk-character-count__status');
+	  $visibleCountMessage.setAttribute('aria-hidden', 'true');
+	  this.$visibleCountMessage = $visibleCountMessage;
+	  $fallbackLimitMessage.insertAdjacentElement('afterend', $visibleCountMessage);
+
+	  // Hide the fallback limit message
+	  $fallbackLimitMessage.classList.add('govuk-visually-hidden');
 
 	  // Read options set using dataset ('data-' values)
 	  this.options = this.getDataset($module);
@@ -4676,23 +4758,19 @@
 	  }
 
 	  // Remove hard limit if set
-	  $module.removeAttribute('maxlength');
+	  $textarea.removeAttribute('maxlength');
+
+	  this.bindChangeEvents();
 
 	  // When the page is restored after navigating 'back' in some browsers the
 	  // state of the character count is not restored until *after* the DOMContentLoaded
-	  // event is fired, so we need to sync after the pageshow event in browsers
-	  // that support it.
+	  // event is fired, so we need to manually update it after the pageshow event
+	  // in browsers that support it.
 	  if ('onpageshow' in window) {
-	    window.addEventListener('pageshow', this.sync.bind(this));
+	    window.addEventListener('pageshow', this.updateCountMessage.bind(this));
 	  } else {
-	    window.addEventListener('DOMContentLoaded', this.sync.bind(this));
+	    window.addEventListener('DOMContentLoaded', this.updateCountMessage.bind(this));
 	  }
-
-	  this.sync();
-	};
-
-	CharacterCount.prototype.sync = function () {
-	  this.bindChangeEvents();
 	  this.updateCountMessage();
 	};
 
@@ -4727,7 +4805,7 @@
 	// Bind input propertychange to the elements and update based on the change
 	CharacterCount.prototype.bindChangeEvents = function () {
 	  var $textarea = this.$textarea;
-	  $textarea.addEventListener('keyup', this.checkIfValueChanged.bind(this));
+	  $textarea.addEventListener('keyup', this.handleKeyUp.bind(this));
 
 	  // Bind focus/blur events to start/stop polling
 	  $textarea.addEventListener('focus', this.handleFocus.bind(this));
@@ -4745,42 +4823,64 @@
 	  }
 	};
 
-	// Update message box
+	// Helper function to update both the visible and screen reader-specific
+	// counters simultaneously (e.g. on init)
 	CharacterCount.prototype.updateCountMessage = function () {
-	  var countElement = this.$textarea;
-	  var options = this.options;
-	  var countMessage = this.$countMessage;
+	  this.updateVisibleCountMessage();
+	  this.updateScreenReaderCountMessage();
+	};
 
-	  // Determine the remaining number of characters/words
-	  var currentLength = this.count(countElement.value);
-	  var maxLength = this.maxLength;
-	  var remainingNumber = maxLength - currentLength;
+	// Update visible counter
+	CharacterCount.prototype.updateVisibleCountMessage = function () {
+	  var $textarea = this.$textarea;
+	  var $visibleCountMessage = this.$visibleCountMessage;
+	  var remainingNumber = this.maxLength - this.count($textarea.value);
 
-	  // Set threshold if presented in options
-	  var thresholdPercent = options.threshold ? options.threshold : 0;
-	  var thresholdValue = maxLength * thresholdPercent / 100;
-	  if (thresholdValue > currentLength) {
-	    countMessage.classList.add('govuk-character-count__message--disabled');
-	    // Ensure threshold is hidden for users of assistive technologies
-	    countMessage.setAttribute('aria-hidden', true);
+	  // If input is over the threshold, remove the disabled class which renders the
+	  // counter invisible.
+	  if (this.isOverThreshold()) {
+	    $visibleCountMessage.classList.remove('govuk-character-count__message--disabled');
 	  } else {
-	    countMessage.classList.remove('govuk-character-count__message--disabled');
-	    // Ensure threshold is visible for users of assistive technologies
-	    countMessage.removeAttribute('aria-hidden');
+	    $visibleCountMessage.classList.add('govuk-character-count__message--disabled');
 	  }
 
 	  // Update styles
 	  if (remainingNumber < 0) {
-	    countElement.classList.add('govuk-textarea--error');
-	    countMessage.classList.remove('govuk-hint');
-	    countMessage.classList.add('govuk-error-message');
+	    $textarea.classList.add('govuk-textarea--error');
+	    $visibleCountMessage.classList.remove('govuk-hint');
+	    $visibleCountMessage.classList.add('govuk-error-message');
 	  } else {
-	    countElement.classList.remove('govuk-textarea--error');
-	    countMessage.classList.remove('govuk-error-message');
-	    countMessage.classList.add('govuk-hint');
+	    $textarea.classList.remove('govuk-textarea--error');
+	    $visibleCountMessage.classList.remove('govuk-error-message');
+	    $visibleCountMessage.classList.add('govuk-hint');
 	  }
 
 	  // Update message
+	  $visibleCountMessage.innerHTML = this.formattedUpdateMessage();
+	};
+
+	// Update screen reader-specific counter
+	CharacterCount.prototype.updateScreenReaderCountMessage = function () {
+	  var $screenReaderCountMessage = this.$screenReaderCountMessage;
+
+	  // If over the threshold, remove the aria-hidden attribute, allowing screen
+	  // readers to announce the content of the element.
+	  if (this.isOverThreshold()) {
+	    $screenReaderCountMessage.removeAttribute('aria-hidden');
+	  } else {
+	    $screenReaderCountMessage.setAttribute('aria-hidden', true);
+	  }
+
+	  // Update message
+	  $screenReaderCountMessage.innerHTML = this.formattedUpdateMessage();
+	};
+
+	// Format update message
+	CharacterCount.prototype.formattedUpdateMessage = function () {
+	  var $textarea = this.$textarea;
+	  var options = this.options;
+	  var remainingNumber = this.maxLength - this.count($textarea.value);
+
 	  var charVerb = 'remaining';
 	  var charNoun = 'character';
 	  var displayNumber = remainingNumber;
@@ -4792,12 +4892,44 @@
 	  charVerb = (remainingNumber < 0) ? 'too many' : 'remaining';
 	  displayNumber = Math.abs(remainingNumber);
 
-	  countMessage.innerHTML = 'You have ' + displayNumber + ' ' + charNoun + ' ' + charVerb;
+	  return 'You have ' + displayNumber + ' ' + charNoun + ' ' + charVerb
+	};
+
+	// Checks whether the value is over the configured threshold for the input.
+	// If there is no configured threshold, it is set to 0 and this function will
+	// always return true.
+	CharacterCount.prototype.isOverThreshold = function () {
+	  var $textarea = this.$textarea;
+	  var options = this.options;
+
+	  // Determine the remaining number of characters/words
+	  var currentLength = this.count($textarea.value);
+	  var maxLength = this.maxLength;
+
+	  // Set threshold if presented in options
+	  var thresholdPercent = options.threshold ? options.threshold : 0;
+	  var thresholdValue = maxLength * thresholdPercent / 100;
+
+	  return (thresholdValue <= currentLength)
+	};
+
+	// Update the visible character counter and keep track of when the last update
+	// happened for each keypress
+	CharacterCount.prototype.handleKeyUp = function () {
+	  this.updateVisibleCountMessage();
+	  this.lastInputTimestamp = Date.now();
 	};
 
 	CharacterCount.prototype.handleFocus = function () {
-	  // Check if value changed on focus
-	  this.valueChecker = setInterval(this.checkIfValueChanged.bind(this), 1000);
+	  // If the field is focused, and a keyup event hasn't been detected for at
+	  // least 1000 ms (1 second), then run the manual change check.
+	  // This is so that the update triggered by the manual comparison doesn't
+	  // conflict with debounced KeyboardEvent updates.
+	  this.valueChecker = setInterval(function () {
+	    if (!this.lastInputTimestamp || (Date.now() - 500) >= this.lastInputTimestamp) {
+	      this.checkIfValueChanged();
+	    }
+	  }.bind(this), 1000);
 	};
 
 	CharacterCount.prototype.handleBlur = function () {
@@ -5018,9 +5150,30 @@
 	  if (!$module) {
 	    return
 	  }
-	  $module.focus();
 
+	  this.setFocus();
 	  $module.addEventListener('click', this.handleClick.bind(this));
+	};
+
+	/**
+	 * Focus the error summary
+	 */
+	ErrorSummary.prototype.setFocus = function () {
+	  var $module = this.$module;
+
+	  if ($module.getAttribute('data-disable-auto-focus') === 'true') {
+	    return
+	  }
+
+	  // Set tabindex to -1 to make the element programmatically focusable, but
+	  // remove it on blur as the error summary doesn't need to be focused again.
+	  $module.setAttribute('tabindex', '-1');
+
+	  $module.addEventListener('blur', function () {
+	    $module.removeAttribute('tabindex');
+	  });
+
+	  $module.focus();
 	};
 
 	/**
