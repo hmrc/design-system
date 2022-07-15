@@ -1,0 +1,32 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Enter your EORI number",
+      href: "#eori-number"
+    }
+  ]
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "What is your EORI number?",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  hint: {
+    text: "The first 2 letters are the country code, like GB or XI. This is followed by 12 or 15 digits, like GB123456123456."
+  },
+  id: "eori-number",
+  name: "eori-number",
+  errorMessage: {
+    text: "Enter your EORI number"
+  }
+}) }}

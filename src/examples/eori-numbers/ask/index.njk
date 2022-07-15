@@ -1,0 +1,24 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukInput({
+  classes: "govuk-input--width-20",
+  label: {
+    text: "What is your EORI number?",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  hint: {
+    text: "The first 2 letters are the country code, like GB or XI. This is followed by 12 or 15 digits, like GB123456123456."
+  },
+  id: "eori-number",
+  name: "eori-number"
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
