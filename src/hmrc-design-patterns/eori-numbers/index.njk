@@ -1,0 +1,118 @@
+---
+title: EORI numbers
+menuText: EORI numbers
+# status: experimental
+status: development
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern is used to check or ask for a user’s EORI number.</p>
+
+<p class="govuk-body">Check the content style guide for <a href="/hmrc-content-style-guide/">how to write about EORI numbers</a>.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern when the user must enter an EORI number to use a service.</p>
+
+<p class="govuk-body">If there is a good reason to ask for an EORI number, but the user does not have to enter one, make it optional.</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+
+<p class="govuk-body">If there is no good reason to ask for an EORI number and the user does not have to enter one to use the service, do not ask for one.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+<h3 class="govuk-heading-m" id="check-eori-number">Checking EORI number</h3>
+
+<p class="govuk-body">Include the EORI number in the question so the information is available upfront to all users.</p>
+
+{{
+  example({
+    item: 'eori-numbers',
+    example: 'check',
+    description: 'Is this the EORI number you want to register?'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="asking-for-eori-number">Asking for EORI number</h3>
+
+<p class="govuk-body">You can ask for the EORI number as the main heading or <code>&lt;h1&gt;</code> of the screen. It may be a question or statement.</p>
+
+{{
+  example({
+    item: 'eori-numbers',
+    example: 'ask',
+    description: 'What is your EORI number?'
+  })
+}}
+
+<p class="govuk-body">Use a single text input and allow the user to enter ‘GB’ or ‘XI’ and 12 to 15 numbers. This can be with or without spaces, and using uppercase or lowercase letters, for example, GB123456123456 or XI123456123456.</p>
+
+<h3 class="govuk-heading-m" id="provide-help">Provide help</h3>
+
+<p class="govuk-body">Always provide help in the form label, normal content or hint text that is as clear as possible. This may include:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>a short explanation of what an EORI number is</li>
+  <li>where the user can find it</li>
+  <li>what it looks like</li>
+  <li>an example — if you show an example, always use ‘GB123456123456’</li>
+</ul>
+
+<p class="govuk-body">You can use an image that shows where it is on documents and letters.</p>
+
+<p class="govuk-body">Do not use the <a href="https://design-system.service.gov.uk/components/details/">details component</a> to hide any help. Users may:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>not know what an EORI number is</li>
+  <li>need help to know what an EORI number looks like</li>
+</ul>
+
+<h3 class="govuk-heading-m" id="error-messages">Error messages</h3>
+
+<p class="govuk-body">Make sure errors follow the <a href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> in the GOV.UK Design System and have specific error messages for specific error states.</p>
+
+<h4 class="govuk-heading-s">If the field is empty</h4>
+
+<p class="govuk-body">Say ‘Enter your EORI number’.</p>
+
+{{
+  example({
+    item: 'eori-numbers',
+    example: 'error',
+    description: 'What is your EORI number error'
+  })
+}}
+
+<h4 class="govuk-heading-s">If the EORI number is in the wrong format and there is an example</h4>
+
+<p class="govuk-body">Say ‘Enter your EORI number in the correct format’.</p>
+
+<h4 class="govuk-heading-s">If the EORI number is in the wrong format and there is no example</h4>
+
+<p class="govuk-body">Say ‘Enter your EORI number in the correct format, for example, GB123456123456’.</p>
+
+<h4 class="govuk-heading-s">If the country code is wrong</h4>
+
+<p class="govuk-body">Say ‘Country code can only be XI or an EU country code’.</p>
+
+<h4 class="govuk-heading-s">If there are too many characters</h4>
+
+<p class="govuk-body">For EU EORI numbers, Say ‘EU EORI numbers must be 17 characters or fewer’</p>
+
+<p class="govuk-body">For XI number, say ‘XI EORI numbers must be 14 characters’.</p>
+
+<h4 class="govuk-heading-s">If an invalid character is entered</h4>
+
+<p class="govuk-body">Say, ‘EORI numbers can only have letters and numbers’.</p>
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the EORI number pattern, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a href="https://github.com/hmrc/design-patterns/issues/173">Discuss the EORI number pattern on GitHub</a></p>
+
+{% endblock %}
