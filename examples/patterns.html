@@ -1289,6 +1289,93 @@ heb gadarnhau pwy ydych</p>
 
 
 
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="eori-number">
+      What is your EORI number?
+    </label>
+    </h1>
+  <div id="eori-number-hint" class="govuk-hint">
+    The first 2 letters are the country code, like GB or XI. This is followed by 12 or 15 digits, like GB123456123456.
+  </div>
+<input class="govuk-input govuk-input--width-20" id="eori-number" name="eori-number" type="text" aria-describedby="eori-number-hint">
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="want-to-register-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Is GB123456123456 the EORI number you want to register?
+    </h1>
+  </legend>
+  <div id="want-to-register-hint" class="govuk-hint">
+    This is the EORI number that is registered to your Government Gateway ID.
+  </div>
+  <div class="govuk-radios govuk-radios--inline"    data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="want-to-register" name="want-to-register" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="want-to-register">
+        Yes
+      </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="want-to-register-2" name="want-to-register" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="want-to-register-2">
+        No
+      </label>
+        </div>
+  </div>
+
+</fieldset>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#eori-number">Enter your EORI number</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="eori-number">
+      What is your EORI number?
+    </label>
+    </h1>
+  <div id="eori-number-hint" class="govuk-hint">
+    The first 2 letters are the country code, like GB or XI. This is followed by 12 or 15 digits, like GB123456123456.
+  </div>
+  <p id="eori-number-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Enter your EORI number
+  </p>
+<input class="govuk-input govuk-input--error" id="eori-number" name="eori-number" type="text" aria-describedby="eori-number-hint eori-number-error">
+</div>
+
+
+
+
 <p class="govuk-body">
 Extra-Statutory Concessions for matters formerly administered by the Inland Revenue.
 </p>
@@ -1461,6 +1548,24 @@ product or application in order to submit the Example Return data to HMRC via th
   <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
     <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
   </svg></button>
+
+
+<p class="govuk-body">Telephone: ending with 7564</p>
+
+
+<p class="govuk-body">Telephone: ending with 7564</p>
+
+
+<p class="govuk-body">Telephone: <span class="govuk-visually-hidden">ending with</span><span aria-hidden="true">*******</span>7564</p>
+
+
+<p class="govuk-body">Telephone: *******7564</p>
+
+
+<p class="govuk-body">Email address: <span class="govuk-visually-hidden">beginning with</span>a<span aria-hidden="true">*******</span><span class="govuk-visually-hidden">and ending with</span>@gmail.com</p>
+
+
+<p class="govuk-body">Email: a*******@gmail.com</p>
 
 
 

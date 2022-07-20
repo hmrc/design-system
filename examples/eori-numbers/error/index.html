@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
+
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#eori-number">Enter your EORI number</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="eori-number">
+      What is your EORI number?
+    </label>
+    </h1>
+  <div id="eori-number-hint" class="govuk-hint">
+    The first 2 letters are the country code, like GB or XI. This is followed by 12 or 15 digits, like GB123456123456.
+  </div>
+  <p id="eori-number-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Enter your EORI number
+  </p>
+<input class="govuk-input govuk-input--error" id="eori-number" name="eori-number" type="text" aria-describedby="eori-number-hint eori-number-error">
+</div>
+
+</body>
+
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>
