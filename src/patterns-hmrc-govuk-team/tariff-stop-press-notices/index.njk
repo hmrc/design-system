@@ -4,9 +4,7 @@ layout: twoColumnPage.njk
 ---
 {% from "_codeSnippet.njk" import codeSnippet %}
 
-<h2 class="govuk-heading-l">Document type</h2>
 
-<p class="govuk-body">Detailed guide</p>
 
 <h2 class="govuk-heading-l">When to use</h2>
 
@@ -17,24 +15,24 @@ Use this pattern to tell users about changes to the UK Trade Tariff, Customs Han
 <h2 class="govuk-heading-l">When not to use</h2>
 
 <p class="govuk-body">
-  Do not update a tariff stop press notice after it's been published, unless it's to correct a typo. A new one must be issued.
+  Do not update a tariff stop press notice after it’s been published, unless it’s to correct a typo. A new one must be issued.
 </p>
 
-<h2 class="govuk-heading-l">How it works</h2>
+<h2 class="govuk-heading-l">How to design using this pattern</h2>
 
-<h3 class="govuk-heading-m">Title format</h3>
+<h3 class="govuk-heading-m">Document type</h3>
+
+<p class="govuk-body">Detailed guide</p>
+
+<h3 class="govuk-heading-m">Title</h3>
+
+<p class="govuk-body">The title should be ‘[Description] (Tariff stop press notice [number])’.
+</p>
+
+<h3 class="govuk-heading-m">Body</h3>
 
 <p class="govuk-body">
-Description (Tariff stop press notice xx)
-</p>
-
-<h3 class="govuk-heading-m">Body format</h3>
-
-<p class="govuk-body">
-Begin with the contents of the Tariff stop press notice then add the standard paragraphs beneath this text.
-</p>
-
-<h3 class="govuk-heading-m">Markdown</h3>
+Copy the contents of the tariff stop press notice, then add the following paragraphs.</p>
 
   {{
     codeSnippet({
@@ -48,11 +46,11 @@ See the [UK Trade Tariff](https://www.gov.uk/trade-tariff) for the full duty rat
   }}
 
 <div class="govuk-inset-text">
-   Do not include other links that might appear at the end of source document, for example to UK trade tariffs volumes 1 and 3, or Tariff and CHIEF stop press notices.
+   Do not include other links that might appear at the end of source document, like links to UK trade tariffs volumes 1 and 3, or Tariff and CHIEF stop press notices.
 </div>
 
 <h3 class="govuk-heading-m">Collection page</h3>
 
 <p class="govuk-body">
-Add the document to the <a href="https://www.gov.uk/government/collections/tariff-stop-press-notices" class="govuk-link">Tariff stop press notices</a> document collection. Do not create a public change note.
+Add the document to the <a href="https://www.gov.uk/government/collections/tariff-stop-press-notices" class="govuk-link">Tariff stop press notices collection</a>. Do not create a public change note.
 </p>

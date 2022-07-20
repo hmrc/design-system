@@ -6,26 +6,24 @@ layout: twoColumnPage.njk
 {% from "_codeSnippet.njk" import codeSnippet %}
 {% from "_example.njk" import example %}
 
-<h2 class="govuk-heading-l">Document type</h2>
-
 <p class="govuk-body">
-Publication: form (with a PDF, Open Document Format or external link attachment)
-</p>
-
-<h2 class="govuk-heading-l">When to use</h2>
-
-<p class="govuk-body">
-Before you use this pattern, you should <a href="/patterns-hmrc-govuk-team/forms-check/" class="govuk-link">check which document type to use</a>, to decide
+Before you use this pattern, <a href="/patterns-hmrc-govuk-team/forms-check/" class="govuk-link">check which document type to use</a> to decide
 if you should use a detailed guide instead.
 </p>
 
 <p class="govuk-body">
-For an example, see <a href="https://www.gov.uk/government/publications/vat-application-for-registration-
-distance-selling-vat1a" class="govuk-link">Register for VAT if you&#39;re distance selling into Northern
+For an example, check <a href="https://www.gov.uk/government/publications/vat-application-for-registration-
+distance-selling-vat1a" class="govuk-link">Register for VAT if you’re distance selling into Northern
 Ireland</a>.
 </p>
 
-<h2 class="govuk-heading-l">How it works</h2>
+<h2 class="govuk-heading-l">How to design using this pattern</h2>
+
+<h3 class="govuk-heading-m">Document type</h3>
+
+<p class="govuk-body">
+Publication: form (with a PDF, Open Document Format or external link attachment)
+</p>
 
 <h3 class="govuk-heading-m">Publication</h3>
 
@@ -33,7 +31,7 @@ Ireland</a>.
 
 <p class="govuk-body">
 Decide if the title should focus on the action a user needs to take or the name of the
-form. This will depend on how users will find and navigate to the form. 
+form. This will depend on how users will find and navigate to the form.
 </p>
 
 <p class="govuk-body">
@@ -43,12 +41,8 @@ Do not include the form number.
 <h4 class="govuk-heading-s">Summary</h4>
 
 <p class="govuk-body">
-If there’s a form number you should include it. For example:
-</p>
-
-<p class="govuk-body">
-'Register your business for VAT if you’re distance selling into Northern Ireland using
-form VAT1A.'
+If there’s a form number you should include it. For example, ‘Register your business for VAT if you’re distance selling into Northern Ireland using
+form VAT1A.’
 </p>
 
 <h3 class="govuk-heading-m">Details</h3>
@@ -60,7 +54,7 @@ You should include a short summary of when to use the form including any links t
 <h4 class="govuk-heading-s">Print and post forms</h4>
 
 <p class="govuk-body">
-These will be hosted on <a href="https://public-online.hmrc.gov.uk/lc/content/" class="govuk-link">https://public-online.hmrc.gov.uk/lc/content/</a>.
+These will be hosted on https://public-online.hmrc.gov.uk/lc/content/.
 </p>
 
 <p class="govuk-body">
@@ -85,7 +79,7 @@ team if you need to include the following:
 
 {{
     codeSnippet({
-      code: 'If the form does not open, then [contact the Online services helpdesks
+      code: 'If the form does not open, then [contact the online services helpdesks
 for more help](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/online-services-helpdesk).',
       canCopy: true
     })
@@ -94,12 +88,12 @@ for more help](https://www.gov.uk/government/organisations/hm-revenue-customs/co
 <h4 class="govuk-heading-s">PDF forms that can be completed on-screen</h4>
 
 <p class="govuk-body">
-If the form is in PDF format, include: 
+If the form is in PDF format, include:
 </p>
 
   {{
     codeSnippet({
-      code: '## Before you start 
+      code: '## Before you start
 
 This form is interactive (one that you complete on screen) and you must use [Adobe Reader](https://get.adobe.com/reader/?loc=uk ) to complete it.
 
@@ -146,11 +140,7 @@ English or Welsh version.
 <h4 class="govuk-heading-s">Title</h4>
 
 <p class="govuk-body">
-If there’s a form number, include it in brackets at the end of the document title. For example:
-</p>
-
-<p class="govuk-body">
-‘Application for registration — distance selling (VAT1A)’
+If there’s a form number, include it in brackets at the end of the document title. For example, ‘Application for registration — distance selling (VAT1A)’.
 </p>
 
 <h4 class="govuk-heading-s">Accessibility statement</h4>
@@ -169,6 +159,5 @@ For any other formats, you must:
 <li>make the title of the external link attachment ‘Read the accessibility statement for HMRC forms’ if the form is in English, and ‘Darllenwch y datganiad hygyrchedd ar gyfer ffurflenni CThEM’ if the form is in Welsh</li>
 <li>make the link of the external link attachment
 <a href="https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-
-forms" class="govuk-link">https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-
-forms</a></li>
+forms" class="govuk-link">https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms</a></li>
 </ul>
