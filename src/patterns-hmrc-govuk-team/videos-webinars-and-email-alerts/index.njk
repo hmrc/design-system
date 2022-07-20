@@ -5,10 +5,14 @@ layout: twoColumnPage.njk
 {% from "_example.njk" import example %}
 {% from "_codeSnippet.njk" import codeSnippet %}
 
+<h2 class="govuk-heading-l">Document type</h2>
+
+<p class="govuk-body">Detailed guide</p>
+
 <h2 class="govuk-heading-l">When to use</h2>
 
 <p class="govuk-body">
-Use this pattern to:
+Use this pattern to: 
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
@@ -24,13 +28,9 @@ Review the whole page each time you make a change to this content, making sure t
 
 <p class="govuk-body">Do not use this design pattern if you’re just adding a video to a piece of guidance.</p>
 
-<h2 class="govuk-heading-l">How to design using this pattern</h2>
+<h2 class="govuk-heading-l">How it works</h2>
 
-<h3 class="govuk-heading-m">Document type</h3>
-
-<p class="govuk-body">Detailed guide</p>
-
-<h3 class="govuk-heading-m">Title</h3>
+<h3 class="govuk-heading-m">Title format</h3>
 
   {{
     codeSnippet({
@@ -40,7 +40,7 @@ Review the whole page each time you make a change to this content, making sure t
   }}
 
 <p class="govuk-body">
-For example: ‘Help and support for VAT’.
+For example: 'Help and support for VAT'
 </p>
 
 <h3 class="govuk-heading-m">Summary</h3>
@@ -56,12 +56,17 @@ For example: ‘Help and support for VAT’.
 For example: ‘Watch videos, sign up for email alerts and register for free webinars and e-learning to learn more about VAT.’
 </p>
 
-<p class="govuk-body">Remove references to any product that is not included in the page, for example, if a page does not include e-learning: ‘Watch videos, sign up for email alerts and register for free webinars to learn more about [topic].’
+<p class="govuk-body">
+Remove references to any product that isn’t included in the page. 
 </p>
 
-<h3 class="govuk-heading-m">Body</h3>
+<p class="govuk-body">
+For example, if a page doesn’t include e-learning: ‘Watch videos, sign up for email alerts and register for free webinars to learn more about [topic].’
+</p>
 
-<h4 class="govuk-heading-s">Introductory text</h4>
+<h2 class="govuk-heading-l">Body text</h2>
+
+<h3 class="govuk-heading-m">Introductory text</h3>
 
   {{
     codeSnippet({
@@ -75,25 +80,25 @@ If you register for a webinar, you:
     })
   }}
 
-<h4 class="govuk-heading-s">Links to learning products</h4>
+<h3 class="govuk-heading-m">Links to learning products</h3>
 
 <p class="govuk-body">
 List products in this order:
 </p>
 
-<ol class="govuk-list govuk-list--number">
+<ul class="govuk-list govuk-list--bullet">
     <li>YouTube videos</li>
     <li>recorded webinars</li>
     <li>upcoming webinars</li>
     <li>e-learning</li>
-</ol>
+</ul>
 
 <p class="govuk-body">
 Use descriptive level 2 headings to tell the user what they will learn.
 </p>
 
 <p class="govuk-body">
-Below the heading, describe the action users will take and what they will learn.
+Below the heading, describe the action users will take and what they will learn. 
 </p>
 
 <p class="govuk-body">
@@ -104,13 +109,13 @@ Then link to the product.
 After that, link to relevant guidance (if appropriate).
 </p>
 
-<h4 class="govuk-heading-s">Linking to YouTube videos </h4>
+<h3 class="govuk-heading-m">Linking to YouTube videos </h3>
 
   {{
     codeSnippet({
       code: '## [sub topic]
 
-Watch a video about/to find out [sub topic].
+Watch a video about/to find out [sub topic]. 
 
 [Video](link).
 
@@ -128,7 +133,7 @@ For example:
 </p>
 
 <p class="govuk-body">
-Watch a video to find out when to register your business for VAT.
+Watch a video to find out when to register your business for VAT. 
 </p>
 
 <p class="govuk-body">
@@ -136,7 +141,7 @@ Watch a video to find out when to register your business for VAT.
 </p>
 
 <p class="govuk-body">
-You can [register for VAT online](link).
+You can [register for VAT online](link). 
 </p>
 
 <h3 class="govuk-heading-m">Linking to recorded webinars</h3>
@@ -163,7 +168,7 @@ For example:
 </p>
 
 <p class="govuk-body">
-Watch a recorded webinar about [VAT Returns](link) to learn about:
+Watch a recorded webinar about [VAT Returns](link) to learn about: 
 </p>
 
 <p class="govuk-body">
@@ -171,10 +176,10 @@ Watch a recorded webinar about [VAT Returns](link) to learn about:
 </p>
 
 <p class="govuk-body">
-* useful tips on how to complete a VAT Return
+* useful tips on how to complete a VAT Return 
 </p>
 
-<h4 class="govuk-heading-s">Linking to upcoming webinars</h4>
+<h3 class="govuk-heading-m">Linking to upcoming webinars</h3>
 
   {{
     codeSnippet({
@@ -192,11 +197,11 @@ For example:
 </p>
 
 <p class="govuk-body">
-## New VAT reverse charge for construction services
+## New VAT reverse charge for construction services 
 </p>
 
 <p class="govuk-body">
-Register for the next live webinar on the [new VAT reverse charge for construction services](link). If you’re in the Construction Industry Scheme you’ll find out:
+Register for the next live webinar on the [new VAT reverse charge for construction services](link). If you’re in the Construction Industry Scheme you’ll find out: 
 </p>
 
 <p class="govuk-body">
@@ -204,14 +209,14 @@ Register for the next live webinar on the [new VAT reverse charge for constructi
 </p>
 
 <p class="govuk-body">
-* how the changes could impact your cashflow
+* how the changes could impact your cashflow 
 </p>
 
 <p class="govuk-body">
-* how to prepare for the change
+* how to prepare for the change 
 </p>
 
-<h4 class="govuk-heading-s">Linking to e-learning</h4>
+<h3 class="govuk-heading-m">Linking to e-learning</h3>
 
   {{
     codeSnippet({
@@ -229,11 +234,11 @@ For example:
 </p>
 
 <p class="govuk-body">
-## Accounting schemes
+## Accounting schemes 
 </p>
 
 <p class="govuk-body">
-[Complete e-learning about accounting services](link). You will learn about:
+[Complete e-learning about accounting services](link). You will learn about: 
 </p>
 
 <p class="govuk-body">
@@ -241,14 +246,14 @@ For example:
 </p>
 
 <p class="govuk-body">
-* Flat Rate Scheme (FRS)
+* Flat Rate Scheme (FRS) 
 </p>
 
 <p class="govuk-body">
 * Annual Accounting Scheme
 </p>
 
-<h4 class="govuk-heading-s">Linking to related videos, webinars and email alerts, and the HMRC online customer forum</h4>
+<h3 class="govuk-heading-m">Linking to related videos, webinars and email alerts, and the HMRC online customer forum</h3>
 
   {{
     codeSnippet({
@@ -276,5 +281,5 @@ Watch more videos and webinars about the [Construction Industry Scheme](link).
 <h3 class="govuk-heading-m">Collection page</h3>
 
 <p class="govuk-body">
-If you’re creating a new page, add it to the <a href="https://www.gov.uk/government/collections/hmrc-webinars-email-alerts-and-videos" class="govuk-link">HMRC videos, webinars and email alerts collection</a>. Do not create a public change note.
+If you're creating a new page, add it to the <a href="https://www.gov.uk/government/collections/hmrc-webinars-email-alerts-and-videos" class="govuk-link">HMRC videos, webinars and email alerts</a> document collection page. Do not create a public change note.
 </p>

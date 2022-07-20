@@ -11,14 +11,14 @@ layout: twoColumnPage.njk
 You should only use this pattern if you’re publishing monthly exchange rates in both CSV and XML. You will need to have access to Documentum.
 </p>
 
-<h2 class="govuk-heading-l">How to design XML rates on HMRC.GOV.UK</h2>
+<h2 class="govuk-heading-l">XML rates on HMRC.GOV.UK</h2>
 
 <p class="govuk-body">
-You need to add the XML file to the <a href="http://www.hmrc.gov.uk/softwaredevelopers/2022-exrates.html" class="govuk-link">software developer’s page</a> under the relevant sub heading.
+You need to add the XML file to the <a href="http://www.hmrc.gov.uk/softwaredevelopers/2022-exrates.html" class="govuk-link">Software developer’s page</a> under the relevant sub heading.
 </p>
 
 <p class="govuk-body">
-The XML monthly rates page is located in Documentum at ‘/softwaredevelopers/[yyyy]-exrates.html’.
+The XML monthly rates page is located in Documentum at ‘/softwaredevelopers/[year]-exrates.html’.
 </p>
 
 <p class="govuk-body">
@@ -30,14 +30,14 @@ The XML file must be uploaded to the Documentum folder at ‘/softwaredevelopers
 </p>
 
 <p class="govuk-body">
-You must name the XML file using the format ‘exrates-monthly-mmyy.xml’.
+You must name the XML file using the format 'exrates-monthly-mmyy.xml'.
 </p>
 
 <p class="govuk-body">
-You must publish the XML file before you publish the CSV file on GOV.UK because you cannot schedule publishing in Documentum.
+You cannot schedule publishing in Documentum so you need to publish the XML file before you publish the CSV file on GOV.UK.
 </p>
 
-<h2 class="govuk-heading-l">How to design CVS rates on GOV.UK</h2>
+<h2 class="govuk-heading-l">CVS rates on GOV.UK</h2>
 
 <h3 class="govuk-heading-m">Document type</h3>
 
@@ -45,22 +45,20 @@ You must publish the XML file before you publish the CSV file on GOV.UK because 
 Publication: guidance
 </p>
 
+<h2 class="govuk-heading-l">How it works</h2>
+
 <h3 class="govuk-heading-m">Publication</h3>
 
 <h4 class="govuk-heading-s">Title</h4>
 
 <p class="govuk-body">
-The title should be ‘HMRC exchange rates for [yyyy]: monthly’.
-</p>
-
-<p class="govuk-body">
-For example, ‘HMRC exchange rates for 2022: monthly’.
+HMRC exchange rates for yyyy: monthly
 </p>
 
 <h4 class="govuk-heading-s">Summary</h4>
 
 <p class="govuk-body">
-The summary should be ‘Find foreign exchange rates issued by HMRC in CSV and XML format.’
+Find foreign exchange rates issued by HMRC in CSV and XML format.
 </p>
 
 <h4 class="govuk-heading-s">Details</h4>
@@ -103,20 +101,16 @@ You should only use the EU rate for conversion of invoices drawn in the euro. Do
 
 <h3 class="govuk-heading-m">CSV attachment</h3>
 
-<h4 class="govuk-heading-s">Title</h4>
+<h4 class="govuk-heading-s">Title format</h4>
 
 <p class="govuk-body">
-The title should be ‘[Month] [yyyy]: monthly exchange rates’.
-</p>
-
-<p class="govuk-body">
-For example, 'July 2022: monthly exchange rates’.
+[Month] [year]: monthly exchange rates
 </p>
 
 <h4 class="govuk-heading-s">Name of attachment</h4>
 
 <p class="govuk-body">
-You must make sure the name of the CSV file is ‘exrates-monthly-mmyy.csv’ before you upload it.
+You must make sure the name of the CSV file is 'exrates-monthly-mmyy.csv' before you upload it.
 </p>
 
 <h3 class="govuk-heading-m">Associations and specialist sector tags</h3>
@@ -129,5 +123,5 @@ You must make sure the name of the CSV file is ‘exrates-monthly-mmyy.csv’ be
 <h3 class="govuk-heading-m">Collection page</h3>
 
 <p class="govuk-body">
-Add the document to the <a href="https://www.gov.uk/government/collections/exchange-rates-for-customs-and-vat" class="govuk-link">HMRC exchange rates collection</a>. Do not create a public change note.
+Add the document to the <a href="https://www.gov.uk/government/collections/exchange-rates-for-customs-and-vat" class="govuk-link">HMRC exchange rates</a> document collection. Do not create a public change note.
 </p>

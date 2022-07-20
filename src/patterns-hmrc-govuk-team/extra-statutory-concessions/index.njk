@@ -3,37 +3,110 @@ title: Extra-Statutory Concessions
 menuText: Extra-Statutory Concessions
 layout: twoColumnPage.njk
 ---
-<h2 class="govuk-heading-l">How to design using this pattern</h2>
 
-<h3 class="govuk-heading-m">Document type</h3>
+<h2 class="govuk-heading-l">Document type</h2>
 
 <p class="govuk-body">Publication: guidance (with an HTML attachment)</p>
 
-<h3 class="govuk-heading-m">Publication</h3>
+{% from "govuk/components/table/macro.njk" import govukTable %}
 
-<h4 class="govuk-heading-s">Title</h4>
-<p class="govuk-body">The title should be ‘Extra-Statutory Concession [number]: [title of document]’.</p>
-<p class="govuk-body">Check examples in the <a href="https://www.gov.uk/government/collections/extra-statutory-concessions" class="govuk-link">Extra-Statutory Concessions guidance and notices collection</a>.</p>
+{{
+  govukTable({
+    caption: 'Publication stub page',
+    firstCellIsHeader: true,
+    head: [
+      {
+        text: 'Field'
+      },
+      {
+        text: 'What to enter'
+      },
+      {
+        text: 'Example'
+      }
+    ],
+    rows: [
+      [
+        {
+          text: 'Title'
+        },
+        {
+          text: 'Extra-Statutory Concession (number): title of document'
+        },
+        {
+          html: 'See live examples on <a href="https://www.gov.uk/government/collections/extra-statutory-concessions" class="govuk-link">Extra-Statutory Concessions guidance and notices</a>'
+        }
+      ],
+      [
+        {
+          text: 'Summary'
+        },
+        {
+          text: 'Read the document and summarise what it is about'
+        },
+        {
+          text: 'Extra-Statutory Concessions for matters formerly administered by the Inland Revenue.'
+        }
+      ],
+      [
+        {
+          text: 'Body text'
+        },
+        {
+          text: 'To create the body text, read the document and summarise what it is about'
+        },
+        {
+          text: 'This guide details the Extra-Statutory Concessions previously operated by the Inland Revenue.'
+        }
+      ]
+    ]
+  })
+}}
 
-<h4 class="govuk-heading-s">Summary</h4>
-<p class="govuk-body">Read the document and summarise what it is about.</p>
-<p class="govuk-body">For example, ‘Extra-Statutory Concessions for matters formerly administered by the Inland Revenue.’</p>
-
-<h4 class="govuk-heading-s">Body</h4>
-<p class="govuk-body">Read the document and summarise what it is about.</p>
-<p class="govuk-body">For example, ‘This guide details the Extra-Statutory Concessions previously operated by the Inland Revenue.’</p>
-
-<h3 class="govuk-heading-m">HTML attachment</h3>
-
-<h4 class="govuk-heading-s">Title</h4>
-<p class="govuk-body">The title should be ‘Extra-Statutory Concession [number]: [title of document]’.</p>
-<p class="govuk-body">Check examples in the <a href="https://www.gov.uk/government/collections/extra-statutory-concessions" class="govuk-link">Extra-Statutory Concessions guidance and notices collection</a>.</p>
-
-<h4 class="govuk-heading-s">Body</h4>
-<p class="govuk-body">Enter and style the contents of the Extra-Statutory Concessions.</p>
-
+{{
+  govukTable({
+    caption: 'HTML attachment',
+    firstCellIsHeader: true,
+    head: [
+      {
+        text: 'Field'
+      },
+      {
+        text: 'What to enter'
+      },
+      {
+        text: 'Example'
+      }
+    ],
+    rows: [
+      [
+        {
+          text: 'Title'
+        },
+        {
+          text: 'Extra-Statutory Concession (number) title of document'
+        },
+        {
+          html: 'See live examples on <a href="https://www.gov.uk/government/collections/extra-statutory-concessions" class="govuk-link">Extra-Statutory Concessions guidance and notices</a>'
+        }
+      ],
+      [
+        {
+          text: 'Body text'
+        },
+        {
+          text: 'Enter and style the contents of the 
+Extra-Statutory Concessions'
+        },
+        {
+          text: ''
+        }
+      ]
+    ]
+  })
+}}
 
 <h3 class="govuk-heading-m">Collection page</h3>
 
-<p class="govuk-body">Add your new document to the <a href="https://www.gov.uk/government/collections/extra-statutory-concessions" class="govuk-link">Extra-Statutory Concessions guidance and notices collection</a>. Do not create a public change note.
+<p class="govuk-body">Add your new document to the <a href="https://www.gov.uk/government/collections/extra-statutory-concessions" class="govuk-link">Extra-Statutory Concessions guidance and notices</a> document collection. Do not create a public change note.
 </p>

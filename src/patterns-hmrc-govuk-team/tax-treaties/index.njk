@@ -5,6 +5,10 @@ layout: twoColumnPage.njk
 {% from "govuk/components/table/macro.njk" import govukTable %}
 {% from "_codeSnippet.njk" import codeSnippet %}
 
+<h2 class="govuk-heading-l">Document type</h2>
+
+<p class="govuk-body">Publication: International treaty (with an HTML attachment)</p>
+
 <h2 class="govuk-heading-l">When to use</h2>
 
 <p class="govuk-body">
@@ -22,28 +26,32 @@ treaties can include various documents, for example a:
     <li>tax information exchange agreement</li>
 </ul>
 
-<h2 class="govuk-heading-l">How to design using this pattern</h2>
+<h2 class="govuk-heading-l">How it works</h2>
 
-<p class="govuk-body">For an example of a tax treaty, see <a href="https://www.gov.uk/government/publications/mauritius-tax-treaties" class="govuk-link">Mauritius: tax treaties</a>.</p>
-
-<h3 class="govuk-heading-m">Document type</h3>
-
-<p class="govuk-body">Publication: International treaty (with an HTML attachment)</p>
-
+<p class="govuk-body">
+For an example of a tax treaty, see <a href="https://www.gov.uk/government/publications/mauritius-tax-treaties" class="govuk-link">Mauritius: tax treaties</a>.
+</p>
 
 <h3 class="govuk-heading-m">Publication</h3>
 
 <h4 class="govuk-heading-s">Title<h4>
 
-<p class="govuk-body">The title should be ‘[Country]: tax treaties’.</p>
+<p class="govuk-body">
+[Country]: tax treaties
+</p>
 
 <h4 class="govuk-heading-s">Summary<h4>
 
-<p class="govuk-body">The summary should be ‘Tax treaties and related documents between the UK and [country].’</p>
+<p class="govuk-body">
+Tax treaties and related documents between the UK and [country].
+</p>
 
 <h3 class="govuk-heading-m">Details<h3>
 
-<p class="govuk-body">For each HTML attachment, you will need to add a new heading at level 3. The order should match the order of the attachments.</p>
+<p class="govuk-body">
+For each HTML attachment you will need to add a new heading at level 3. The order should
+match the order of the attachments.
+</p>
 
 <h4 class="govuk-heading-s">Simple treaties in force</h4>
 
@@ -51,7 +59,7 @@ treaties can include various documents, for example a:
     codeSnippet({
       code: '### [Name of HTML attachment]
 
-The [thing] entered into force on [date].
+The [‘thing‘] entered into force on [date].
 
 It is effective in [country or both countries] from [date].',
       canCopy: true
@@ -68,10 +76,10 @@ It is effective in [country or both countries] from [date].',
     codeSnippet({
       code: '### [Name of HTML attachment]
 
-The [thing] entered into force on [date].
-
+The [‘thing‘] entered into force on [date].
+      
 It is effective in [country] from:
-
+      
   * [date] for [tax]
   * [date] for [tax]',
       canCopy: true
@@ -88,14 +96,15 @@ It is effective in [country] from:
     codeSnippet({
       code: '### [Name of HTML attachment]
 
-The [thing] was signed on [date] and has not yet entered into force.',
+The [‘thing‘] was signed on [date] and has not yet entered into force.',
       canCopy: true
     })
   }}
 
 <h3 class="govuk-heading-m">HTML attachment</h3>
 
-<p class="govuk-body">Order the HTML attachments by first listing the ‘in force’ documents by date, then the ‘not in force’ documents by date.
+<p class="govuk-body">
+Order the HTML attachments by first listing the 'in force' documents by date, then the 'not in force' documents by date.
 </p>
 
 <p class="govuk-body">
@@ -114,6 +123,6 @@ in force</li>
 <h3 class="govuk-heading-m">Collection</h3>
 
 <p class="govuk-body">
-Add your new document to the <a href="https://www.gov.uk/government/collections/tax-treaties" class="govuk-link">tax treaties collection</a>. Do not create a public
+Add your new document to the <a href="https://www.gov.uk/government/collections/tax-treaties" class="govuk-link">Tax treaties document collection</a>. Do not create a public
 change note.
 </p>
