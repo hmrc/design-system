@@ -105,6 +105,10 @@
                       <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
                         Employer PAYE reference
                       </a>
+                    </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hiding-information">
+                        Hiding information
+                      </a>
                     </li><li class="app-subnav__section-item">
                       <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-banner">
                         HMRC banner
@@ -206,8 +210,8 @@
 
     
     <div class="govuk-!-padding-bottom-8 govuk-!-padding-top-2 hmrc-phase-banner">
-      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2"><span class="govuk-visually-hidden">This pattern is&nbsp;</span>development</strong>
-      <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
+      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2"><span class="govuk-visually-hidden">This pattern is&nbsp;</span>experimental</strong>
+      <p class="govuk-body">This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.</p>
     </div>
   
 
@@ -271,7 +275,7 @@
   </div>
 
 
-<p class="govuk-body">However, if you have a lot of hidden numbers on a page, using ‘ending with…’ many times can make the page harder to read. In that case, consider whether using asterisks would be clearer. If so, add an aria-hidden attribute to the asterisks and a visually hidden span saying ‘ending with…’ for screen readers.</p>
+<p class="govuk-body">However, if you have a lot of hidden numbers on a page, using ‘ending with…’ many times can make the page harder to read. In that case, consider whether using asterisks would be clearer. If so, hide the asterisks from screen-readers using an aria-hidden attribute (see code example) and a visually hidden span saying ‘ending with…’ for screen readers.</p>
 
   
 
@@ -304,7 +308,10 @@
 
           <div class="app-tabs__container js-tabs__container" id="example-example2-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Telephone: <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>ending with<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>*******<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>7564<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Telephone: *******7564<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Telephone: ending with “7564”<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
             </pre>
 
           </div>
@@ -318,7 +325,7 @@
 
 <p class="govuk-body">It is hard to conceal an email address securely. You should consider why you need to hide it, and if it would be easier for the user to show them the full email. If you need your user to easily understand that an email is theirs, do not hide it.</p>
 
-<p class="govuk-body">However, if you do need to hide an email, use asterisks after the first letter up to the ‘@’ sign. You must also include an aria-hidden attribute to the asterisks and a visually hidden span saying ‘Email address beginning with [the first letter] and ending with [@ and the domain name]’.</p>
+<p class="govuk-body">However, if you do need to hide an email, use asterisks after the first letter up to the ‘@’ sign. You must also hide the asterisks from screen-readers using an aria-hidden attribute (see code example) and a visually hidden span saying ‘Email address beginning with [the first letter] and ending with [@ and the domain name]’.</p>
 
   
 
@@ -351,7 +358,10 @@
 
           <div class="app-tabs__container js-tabs__container" id="example-example3-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Email address: <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>beginning with<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">a</span></span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>*******<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>and ending with<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>@gmail.com<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Email address: a*******@gmail.com<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Email address: beginning with “a” and ending with “@gmail.com”<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
             </pre>
 
           </div>
