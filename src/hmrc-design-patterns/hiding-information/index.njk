@@ -1,7 +1,7 @@
 ---
 title: Hiding information
 layout: twoColumnPage.njk
-status: development
+status: experimental
 ---
 {% from "_example.njk" import example %}
 
@@ -35,7 +35,7 @@ status: development
     })
   }}
 
-<p class="govuk-body">However, if you have a lot of hidden numbers on a page, using ‘ending with…’ many times can make the page harder to read. In that case, consider whether using asterisks would be clearer. If so, add an aria-hidden attribute to the asterisks and a visually hidden span saying ‘ending with…’ for screen readers.</p>
+<p class="govuk-body">However, if you have a lot of hidden numbers on a page, using ‘ending with…’ many times can make the page harder to read. In that case, consider whether using asterisks would be clearer. If so, hide the asterisks from screen-readers using an aria-hidden attribute (see code example) and a visually hidden span saying ‘ending with…’ for screen readers.</p>
 
   {{
     example({
@@ -50,7 +50,7 @@ status: development
 
 <p class="govuk-body">It is hard to conceal an email address securely. You should consider why you need to hide it, and if it would be easier for the user to show them the full email. If you need your user to easily understand that an email is theirs, do not hide it.</p>
 
-<p class="govuk-body">However, if you do need to hide an email, use asterisks after the first letter up to the ‘@’ sign. You must also include an aria-hidden attribute to the asterisks and a visually hidden span saying ‘Email address beginning with [the first letter] and ending with [@ and the domain name]’.</p>
+<p class="govuk-body">However, if you do need to hide an email, use asterisks after the first letter up to the ‘@’ sign. You must also hide the asterisks from screen-readers using an aria-hidden attribute (see code example) and a visually hidden span saying ‘Email address beginning with [the first letter] and ending with [@ and the domain name]’.</p>
 
   {{
     example({
