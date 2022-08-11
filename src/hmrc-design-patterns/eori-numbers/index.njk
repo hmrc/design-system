@@ -49,7 +49,14 @@ layout: twoColumnPage.njk
   })
 }}
 
-<p class="govuk-body">Use a single text input and allow the user to enter ‘GB’ or ‘XI’ and 12 to 15 numbers. This can be with or without spaces, and using uppercase or lowercase letters, for example, GB123456123456 or XI123456123456.</p>
+<p class="govuk-body">Use a single text input and allow the user to enter the EORI type (for example, ‘GB’ or ‘XI’) and numbers. This can be with or without spaces, and using uppercase or lowercase letters.</p>
+
+<p class="govuk-body">EORI numbers starting with:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>GB or XI are 14 characters long, for example GB123456123456</li>
+  <li>an EU country code are 3-17 characters long, for example FR12345671234567</li>
+</ul>
 
 <h3 class="govuk-heading-m" id="provide-help">Provide help</h3>
 
@@ -88,24 +95,13 @@ layout: twoColumnPage.njk
   })
 }}
 
-<h4 class="govuk-heading-s">If the EORI number is in the wrong format</h4>
-
-<p class="govuk-body">Say ‘Enter your EORI number in the correct format’.</p>
-
 <h4 class="govuk-heading-s">If the country code is wrong</h4>
 
 <p class="govuk-body">Say what the country code should be. For example: 'Country code can only be XI or an EU country code'.</p>
 
 <h4 class="govuk-heading-s">If there are too many or too few characters</h4>
 
-<p class="govuk-body">Examples:</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>EORI number is too long</li>
-  <li>EORI number is not long enough</li>
-  <li>EORI numbers starting with an EU country code must be 3 characters or more</li>
-</ul>
-
+<p class="govuk-body">Say ‘EORI number is too long’ or ‘EORI number is not long enough’.</p>
 
 <h4 class="govuk-heading-s">If an invalid character is entered</h4>
 
