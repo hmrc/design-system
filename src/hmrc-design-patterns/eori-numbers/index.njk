@@ -25,7 +25,7 @@ layout: twoColumnPage.njk
 
 <h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
 
-<h3 class="govuk-heading-m" id="check-eori-number">Checking EORI number</h3>
+<h3 class="govuk-heading-m" id="check-eori-number">Checking an EORI number</h3>
 
 <p class="govuk-body">Include the EORI number in the question so the information is available upfront to all users.</p>
 
@@ -37,7 +37,7 @@ layout: twoColumnPage.njk
   })
 }}
 
-<h3 class="govuk-heading-m" id="asking-for-eori-number">Asking for EORI number</h3>
+<h3 class="govuk-heading-m" id="asking-for-eori-number">Asking for an EORI number</h3>
 
 <p class="govuk-body">You can ask for the EORI number as the main heading or <code>&lt;h1&gt;</code> of the screen. It may be a question or statement.</p>
 
@@ -57,6 +57,32 @@ layout: twoColumnPage.njk
   <li>GB or XI are 14 characters long, for example GB123456123456</li>
   <li>an EU country code are 3-17 characters long, for example FR12345671234567</li>
 </ul>
+
+<h3 class="govuk-heading-m" id="asking-for-eori-number">Validating an EORI number</h3>
+
+<p class="govuk-body">When showing validation of an EORI number, use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/confirmation-pages/">confirmation pages pattern</a>.</p>
+
+<p class="govuk-body">For example:</p>
+
+{{
+  example({
+    item: 'eori-numbers',
+    example: 'valid',
+    description: 'Valid EORI number'
+  })
+}}
+
+<p class="govuk-body">If an EORI number is not valid, do not use the confirmation page pattern.</p>
+
+<p class="govuk-body">For example:</p>
+
+{{
+  example({
+    item: 'eori-numbers',
+    example: 'not-valid',
+    description: 'Not valid EORI number'
+  })
+}}
 
 <h3 class="govuk-heading-m" id="provide-help">Provide help</h3>
 
@@ -105,7 +131,7 @@ layout: twoColumnPage.njk
 
 <h4 class="govuk-heading-s">If an invalid character is entered</h4>
 
-<p class="govuk-body">Say, ‘EORI numbers can only have letters and numbers’.</p>
+<p class="govuk-body">Say ‘EORI numbers can only have letters and numbers’.</p>
 
 <h2 class="govuk-heading-l" id="research">Research</h2>
 

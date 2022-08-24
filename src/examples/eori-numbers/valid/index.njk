@@ -1,0 +1,44 @@
+---
+layout: layout-example.njk
+---
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+        titleText: "Valid",
+        html: "EORI number<br><strong>GB123456123456</strong>"
+      }) }}
+
+      <h2 class="govuk-heading-m">EORI registration details</h2>
+
+      <h3 class="govuk-heading-s">Registered business name</h3>
+
+      <p class="govuk-body">ABC Ltd</p>
+
+      <h3 class="govuk-heading-s">Registered business address</h3>
+
+      <p class="govuk-body">
+      ABC House<br>
+      ABC Street<br>
+      London<br>
+      SE1 1AB<br>
+      United Kingdom<br>
+      </p>
+
+      <p class="govuk-body">Search completed on 10 January 2022 at 5:30pm (GMT).</p>
+
+      <p class="govuk-body"><a href="#" class="govuk-link">Check another EORI number</a></p>
+
+      <p class="govuk-body"><a href="#" class="govuk-link">Download this page (PDF)</a></p>
+
+      <p class="govuk-body"><a href="#" class="govuk-link">Print this page</a></p>
+
+      <p class="govuk-body"><a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)</p>
+    </div>
+  </div>
+{% endblock %}
