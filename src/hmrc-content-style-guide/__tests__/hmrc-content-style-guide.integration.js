@@ -3,7 +3,7 @@
 const { analyzeAccessibility } = require('../../../lib/accessibility')
 
 const { integrationTestPort } = require('../../../constants')
-const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path}`)
+const visit = (path) => page.goto(`http://localhost:${integrationTestPort}${path}`, { waitUntil: 'networkidle2' })
 
 describe('HMRC content style guide', () => {
   beforeEach(async () => {
@@ -17,7 +17,7 @@ describe('HMRC content style guide', () => {
 
   it('should have the correct meta title', async () => {
     const title = await page.title()
-    expect(title).toBe('HMRC content style guide - Design resources for HMRC – GOV.UK')
+    expect(title).toBe('HMRC content style guide - Design resources for HMRC — GOV.UK')
   })
 
   it('should have the correct page heading', async () => {
@@ -34,8 +34,8 @@ describe('HMRC content style guide', () => {
     it('should open relevant section when an anchor is clicked', async () => {
       let testSectionClasses = await page.$$eval('.govuk-accordion__section', el => el[2].className )
       expect(testSectionClasses).not.toContain('govuk-accordion__section--expanded')
-      await page.click('button[aria-controls="accordion-default-content-20"]')
-      await page.$eval('#accordion-default-content-20', el => el.querySelectorAll('.govuk-link')[0].click())
+      await page.click('button[aria-controls="accordion-default-content-3"]')
+      await page.$eval('#accordion-default-content-3', el => el.querySelectorAll('.govuk-link')[1].click())
       testSectionClasses = await page.$$eval('.govuk-accordion__section', el => el[2].className )
       expect(testSectionClasses).toContain('govuk-accordion__section--expanded')
       expect(page.url()).toContain('#capitalisation-of-taxes')
@@ -45,7 +45,7 @@ describe('HMRC content style guide', () => {
       // Already open from previous test
       let testSectionClasses = await page.$$eval('.govuk-accordion__section', el => el[2].className )
       expect(testSectionClasses).toContain('govuk-accordion__section--expanded')
-      await page.$eval('#accordion-default-content-20', el => el.querySelectorAll('.govuk-link')[0].click())
+      await page.$eval('#accordion-default-content-3', el => el.querySelectorAll('.govuk-link')[1].click())
       expect(testSectionClasses).toContain('govuk-accordion__section--expanded')
       expect(page.url()).toContain('#capitalisation-of-taxes')
     })

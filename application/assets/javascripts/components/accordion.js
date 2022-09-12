@@ -17,6 +17,7 @@ Accordion.prototype.init = function () {
   this.$allSectionButtons.forEach(function (button) {
     self.$mappedSectionButtons[button.textContent.trim().toLowerCase()] = button.id
   })
+  console.log(this.$allSectionButtons)
 }
 
 Accordion.prototype.attachClick = function (link) {
@@ -25,7 +26,10 @@ Accordion.prototype.attachClick = function (link) {
 
 Accordion.prototype.handleClick = function (evt) {
   var section = evt.target.hash[1].trim().toLowerCase()
-  var button = this.$module.querySelector('#' + this.$mappedSectionButtons[section])
+  // when we don't use parentNode then clicking an anchor link inside the accordion closes the accordion
+  // https://github.com/hmrc/design-system/commit/8688f03be5773c275e393574f5da9d1705b9842e not sure why
+  // this was removed, might be an unfinished partial refactoring
+  var button = this.$module.querySelector('#' + this.$mappedSectionButtons[section]).parentNode
   if (button.getAttribute('aria-expanded') !== 'true') {
     button.click()
   }
