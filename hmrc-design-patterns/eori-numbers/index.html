@@ -105,6 +105,10 @@
                       <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
                         Employer PAYE reference
                       </a>
+                    </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/eori-numbers">
+                        EORI numbers
+                      </a>
                     </li><li class="app-subnav__section-item">
                       <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hiding-information">
                         Hiding information
@@ -210,8 +214,8 @@
 
     
     <div class="govuk-!-padding-bottom-8 govuk-!-padding-top-2 hmrc-phase-banner">
-      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2"><span class="govuk-visually-hidden">This pattern is&nbsp;</span>development</strong>
-      <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
+      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2"><span class="govuk-visually-hidden">This pattern is&nbsp;</span>experimental</strong>
+      <p class="govuk-body">This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.</p>
     </div>
   
 
@@ -448,7 +452,7 @@
 
 <h3 class="govuk-heading-m" id="asking-for-eori-number">Validating an EORI number</h3>
 
-<p class="govuk-body">When showing validation of an EORI number, use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/confirmation-pages/">confirmation pages pattern</a>.</p>
+<p class="govuk-body">If you're validating an EORI number at the end of a service, use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/confirmation-pages/">confirmation pages pattern</a>. Otherwise, take the user to the next question.</p>
 
 
 
@@ -517,10 +521,6 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Check another EORI number<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Download this page (PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Print this page<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>What did you think of this service?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> (takes 30 seconds)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
@@ -561,10 +561,6 @@
       &lt;p class=&quot;govuk-body&quot;&gt;Search completed on 10 January 2022 at 5:30pm (GMT).&lt;/p&gt;
 
       &lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;Check another EORI number&lt;/a&gt;&lt;/p&gt;
-
-      &lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;Download this page (PDF)&lt;/a&gt;&lt;/p&gt;
-
-      &lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;Print this page&lt;/a&gt;&lt;/p&gt;
 
       &lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;What did you think of this service?&lt;/a&gt; (takes 30 seconds)&lt;/p&gt;
     &lt;/div&gt;
@@ -624,10 +620,6 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Check another EORI number<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Download this page (PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Print this page<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>What did you think of this service?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> (takes 30 seconds)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
             </pre>
 
@@ -642,10 +634,6 @@
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Search completed on 10 January 2022 at 5:30pm (GMT).<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Check another EORI number<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Download this page (PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Print this page<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>What did you think of this service?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> (takes 30 seconds)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code>
               </pre>
@@ -670,7 +658,7 @@
 
 <p class="govuk-body">You can use an image that shows where it is on documents and letters.</p>
 
-<p class="govuk-body">Do not use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/details/">details component</a> to hide any help. Users may:</p>
+<p class="govuk-body">Only use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/details/">details component</a> to show a list of EU country codes. Do not use it to hide any other help, as users may:</p>
 
 <ul class="govuk-list govuk-list--bullet">
   <li>not know what an EORI number is</li>
