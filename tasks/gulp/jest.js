@@ -1,9 +1,10 @@
 const gulp = require('gulp')
 const connect = require('gulp-connect')
 
-const jest = require('jest-cli')
+const jest = require('@jest/core')
 
 const jestConfig = {
+  projects: [__dirname],
   preprocessorIgnorePatterns: [
     '<rootDir>/dist/', '<rootDir>/node_modules/'
   ],
@@ -23,19 +24,19 @@ gulp.task('jest:unit', (done) => {
   jest.runCLI({
     ...jestConfig,
     updateSnapshot: requestedToUpdateSnapshots && isSafeToUpdateSnapshots,
-    testMatch: '**/__tests__/**/*.test.js'
-  }, '.').then(({ results }) => done(throwErrorOnFail(results)))
+    testMatch: ['**/__tests__/**/*.test.js']
+  }, jestConfig.projects).then(({ results }) => done(throwErrorOnFail(results))).catch(error => done(error))
 })
 
 gulp.task('jest:integration', (done) => {
   jest.runCLI({
     ...jestConfig,
-    testMatch: '**/__tests__/**/*.integration.js',
+    testMatch: ['**/__tests__/**/*.integration.js'],
     preset: 'jest-puppeteer'
-  }, '.').then(({ results }) => {
+  }, jestConfig.projects).then(({ results }) => {
     connect.serverClose()
     done(throwErrorOnFail(results))
-  })
+  }).catch(error => done(error))
 })
 
 gulp.task('jest:unit:watch', gulp.series('jest:unit', (done) => {

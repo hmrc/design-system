@@ -1,0 +1,9 @@
+{
+  "1081884": "glob-parent - devDependency, no risk given our usage",
+  "1081914": "ini - devDependency, no risk given our usage",
+  "1067342": "minimist - devDependency, no risk given our usage",
+  "1070254": "minimist - devDependency, no risk given our usage",
+  "1070255": "minimist - devDependency, no risk given our usage",
+  "1070012": "postcss - devDependency, no risk given our usage",
+  "1083176": "scss-tokenizer - devDependency, no risk given our usage"
+}
