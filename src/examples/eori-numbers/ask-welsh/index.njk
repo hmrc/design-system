@@ -1,0 +1,24 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukInput({
+  classes: "govuk-input--width-20",
+  label: {
+    text: "Beth yw’ch rhif EORI?",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  hint: {
+    text: "Cod y wlad yw’r 2 lythyren gyntaf, megis GB neu XI. Dilynir hyn gan 12 neu 15 digid, megis GB123456123456."
+  },
+  id: "eori-number",
+  name: "eori-number"
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}
