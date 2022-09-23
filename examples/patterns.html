@@ -1212,6 +1212,25 @@ heb gadarnhau pwy ydych</p>
 
 
 <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="eori-number">
+      Beth yw’ch rhif EORI?
+    </label>
+    </h1>
+  <div id="eori-number-hint" class="govuk-hint">
+    Cod y wlad yw’r 2 lythyren gyntaf, megis GB neu XI. Dilynir hyn gan 12 neu 15 digid, megis GB123456123456.
+  </div>
+<input class="govuk-input govuk-input--width-20" id="eori-number" name="eori-number" type="text" aria-describedby="eori-number-hint">
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Yn eich blaen
+</button>
+
+
+
+
+<div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="want-to-register-hint">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
     <h1 class="govuk-fieldset__heading">
@@ -1242,6 +1261,42 @@ heb gadarnhau pwy ydych</p>
 
 <button class="govuk-button" data-module="govuk-button">
   Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="want-to-register-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Ai dyma’r rhif EORI rydych chi am ei gofrestru: GB123456123456?
+    </h1>
+  </legend>
+  <div id="want-to-register-hint" class="govuk-hint">
+    Dyma’r rhif EORI sydd wedi’i gofrestru i’ch cyfrif ID Porth y Llywodraeth.
+  </div>
+  <div class="govuk-radios govuk-radios--inline"    data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="want-to-register" name="want-to-register" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="want-to-register">
+        Iawn
+      </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="want-to-register-2" name="want-to-register" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="want-to-register-2">
+        Na
+      </label>
+        </div>
+  </div>
+
+</fieldset>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Yn eich blaen
 </button>
 
 
@@ -1278,6 +1333,38 @@ heb gadarnhau pwy ydych</p>
 
 
 
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    Mae problem wedi codi
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#eori-number">Nodwch eich rhif EORI</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="eori-number">
+      Beth yw’ch rhif EORI?
+    </label>
+    </h1>
+  <div id="eori-number-hint" class="govuk-hint">
+    Cod y wlad yw’r 2 lythyren gyntaf, megis GB neu XI. Dilynir hyn gan 12 neu 15 digid, megis GB123456123456.
+  </div>
+  <p id="eori-number-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Nodwch eich rhif EORI
+  </p>
+<input class="govuk-input govuk-input--error" id="eori-number" name="eori-number" type="text" aria-describedby="eori-number-hint eori-number-error">
+</div>
+
+
+
+
 <h1 class="govuk-heading-xl">Your EORI number did not match any registered business</h1>
 
 <p class="govuk-body">You searched for ‘<strong>GB123456123456</strong>’.</p>
@@ -1288,6 +1375,17 @@ heb gadarnhau pwy ydych</p>
 
 <p class="govuk-body"><a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)</p>
 
+
+
+<h1 class="govuk-heading-xl">Nid oedd eich rhif EORI yn cyfateb i unrhyw fusnes cofrestredig</h1>
+
+<p class="govuk-body">Gwnaethoch chwilio am '<strong>GB123456123456</strong>'.</p>
+
+<p class="govuk-body">Cwblhawyd y chwiliad ar 10 Ionawr 2022 am 17:30 (GMT).</p>
+
+<p class="govuk-body"><a href="#" class="govuk-link">Gwirio rhif EORI arall</a></p>
+
+<p class="govuk-body"><a href="#" class="govuk-link">Beth oedd eich barn am y gwasanaeth hwn?</a> (mae’n cymryd 30 eiliad)</p>
 
 
 
@@ -1328,6 +1426,45 @@ heb gadarnhau pwy ydych</p>
     </div>
   </div>
 
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Dilys
+  </h1>
+  <div class="govuk-panel__body">
+    Rhif EORI<br><strong>GB123456123456</strong>
+  </div>
+</div>
+
+
+      <h2 class="govuk-heading-m">Manylion cofrestru EORI</h2>
+
+      <h3 class="govuk-heading-s">Enw’r busnes cofrestredig</h3>
+
+      <p class="govuk-body">ABC Ltd</p>
+
+      <h3 class="govuk-heading-s">Cyfeiriad y busnes cofrestredig</h3>
+
+      <p class="govuk-body">
+      ABC House<br>
+      ABC Street<br>
+      London<br>
+      SE1 1AB<br>
+      United Kingdom<br>
+      </p>
+
+      <p class="govuk-body">Cwblhawyd y chwiliad ar 10 Ionawr 2022 am 17:30 (GMT).</p>
+
+      <p class="govuk-body"><a href="#" class="govuk-link">Gwirio rhif EORI arall</a></p>
+
+      <p class="govuk-body"><a href="#" class="govuk-link">Beth oedd eich barn am y gwasanaeth hwn?</a> (mae’n cymryd 30 eiliad)</p>
+    </div>
+  </div>
 
 
 <p class="govuk-body">
