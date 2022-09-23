@@ -1,0 +1,32 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+{{ govukErrorSummary({
+  titleText: "Mae problem wedi codi",
+  errorList: [
+    {
+      text: "Nodwch eich rhif EORI",
+      href: "#eori-number"
+    }
+  ]
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Beth yw’ch rhif EORI?",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  hint: {
+    text: "Cod y wlad yw’r 2 lythyren gyntaf, megis GB neu XI. Dilynir hyn gan 12 neu 15 digid, megis GB123456123456."
+  },
+  id: "eori-number",
+  name: "eori-number",
+  errorMessage: {
+    text: "Nodwch eich rhif EORI"
+  }
+}) }}
