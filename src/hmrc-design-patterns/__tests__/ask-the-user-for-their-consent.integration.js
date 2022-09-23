@@ -17,7 +17,7 @@ describe('Design pattern page rendering', () => {
 
   it('should have the correct meta title', async () => {
     const title = await page.title()
-    expect(title).toBe('Ask the user for their consent - HMRC design patterns - Design resources for HMRC – GOV.UK')
+    expect(title).toBe('Ask the user for their consent - HMRC design patterns - Design resources for HMRC — GOV.UK')
   })
 
   describe('iFrame resizer', () => {
