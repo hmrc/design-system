@@ -1,0 +1,59 @@
+---
+title: Research banner
+status: development
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+{% block content %}
+
+<p class="govuk-body">The research banner invites users to sign up to take part in user research.</p>
+
+<h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">Use this pattern at the end of a user journey if your service needs user research.</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Do not use this pattern in the middle of a user journey as it may interrupt the user.</p>
+
+<h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
+
+{{ hmrcFrontendInfo() }}
+
+<p class="govuk-body">Place the research banner directly below the <a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a> and <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">phase banner</a>, and above the <a class="govuk-link" href="https://design.tax.service.gov.uk/hmrc-design-patterns/welsh-language-toggle/">Welsh language toggle</a>.</p>
+
+<p class="govuk-body">The <code>&lt;h2&gt;</code> should say ‘Help make GOV.UK better’.</p>
+
+<p class="govuk-body">The link text should say:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>‘Sign up to take part in research (opens in new tab)’</li>
+  <li>‘No, I do not want to take part in research’</li>
+</ul>
+
+<p class="govuk-body">To identify where new users are coming from, you must email <a class="govuk-link" href="mailto:user.experience@hmrc.gov.uk">user.experience@hmrc.gov.uk</a> to get a unique sign up link. In your email, include:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the tax.service.gov.uk pages the banner will be displayed on</li>
+  <li>how long the banner will be displayed</li>
+</ul>
+
+{{
+  example({
+    item: 'research-banner',
+    description: 'Research-banner',
+    htmlOnly: true,
+    example: 'example'
+  })
+}}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the research banner, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/175">Discuss the research banner on GitHub</a></p>
+
+{% endblock %}
