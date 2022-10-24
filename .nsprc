@@ -6,5 +6,6 @@
   "1070255": "minimist - devDependency, no risk given our usage",
   "1070012": "postcss - devDependency, no risk given our usage",
   "1083176": "scss-tokenizer - devDependency, no risk given our usage",
-  "1084596": "@hapi/hoek - devDependency, no risk given our usage"
+  "1084596": "@hapi/hoek - devDependency, no risk given our usage",
+  "1084765": "minimatch - devDependency, no risk given our usage"
 }
