@@ -23,8 +23,7 @@ status: development
 
 {{ hmrcFrontendInfo() }}
 
-<p class="govuk-body">How users upload files depends on whether they need to a single file or multiple files.</p>
-
+<p class="govuk-body">How it works depends on whether the user needs the option to upload more than one file</p>
 
 <h3 class="govuk-heading-m" id="Let users select a single file">Let users select a single file</h3>
 
@@ -38,12 +37,14 @@ status: development
   })
 }}
 
-<h3 class="govuk-heading-m" id="let users select multiple files">Let users select multiple files</h3>
+<h3 class="govuk-heading-m" id="let users select additional files">Let users select additional files</h3>
+
+<p class="govuk-body">If users need the option to upload more than one file, include an additional screen asking if they want to upload another.</p>
 
 {{
   example({
     item: 'file-upload',
-    example: 'select-multiple-files',
+    example: 'select-additional-files',
     description: 'upload additional files'
   })
 }}
@@ -68,7 +69,7 @@ status: development
   })
 }}
 
-<p class="govuk-body"><strong>Multiple files </strong></p>
+<p class="govuk-body"><strong>Multiple files</strong></p>
 
 {{
   example({
