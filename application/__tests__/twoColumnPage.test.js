@@ -75,7 +75,7 @@ describe('Design pattern page', () => {
     })
 
     it('should render the default status text if the statusText flag is not set', () => {
-      const expectedString = 'This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.'
+      const expectedString = 'This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed. You should continue using it until we collect more research.'
       expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
     })
 
