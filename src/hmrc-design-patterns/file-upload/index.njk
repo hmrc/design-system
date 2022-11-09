@@ -1,0 +1,115 @@
+---
+title: File upload
+menuText: File upload
+layout: twoColumnPage.njk
+status: development
+---
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+{% block content %}
+
+<p class="govuk-body">The file upload pattern lets users upload files to an HMRC service.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern when users must upload a file to complete their journey.</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When to not use</h2>
+
+<p class="govuk-body">Do not use this pattern if there is no need for users to upload a file, or no good reason to ask for one. The interaction of uploading a file can be challenging for some users.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+{{ hmrcFrontendInfo() }}
+
+<p class="govuk-body">How it works depends on whether the user needs the option to upload more than one file</p>
+
+<h3 class="govuk-heading-m" id="Let users select a single file">Let users select a single file</h3>
+
+<p class="govuk-body">Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/file-upload/">file upload pattern</a> to let users select a single file.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'select-a-single-file',
+    description: 'Help users upload a single file'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="let users select additional files">Let users select additional files</h3>
+
+<p class="govuk-body">If users need the option to upload more than one file, include an additional screen asking if they want to upload another.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'select-additional-files',
+    description: 'upload additional files'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="Accept multiple file types">Accept multiple file types</h3>
+
+<p class="govuk-body">Let users upload as many different file types as possible. Convert them automatically, if you need to.</p>
+
+<p class="govuk-body">If you must limit file types, let users know by using hint text.</p>
+
+<h3 class="govuk-heading-m" id="Upload in progress">Upload in progress</h3>
+
+<p class="govuk-body">Show the user that their files are being uploaded.</p>
+
+<p class="govuk-body"><strong>A single file</strong></p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'upload-single-file',
+    description: 'shows single file upload progress'
+  })
+}}
+
+<p class="govuk-body"><strong>Multiple files</strong></p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'upload-multiple-files',
+    description: 'shows multiple files upload progress'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="successful file upload">Successful file upload</h3>
+
+<p class="govuk-body">Once files have been successfully uploaded display a success message.</p>
+
+<p class="govuk-body"><strong>A single file</strong></p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'success-single-file',
+    description: 'displays single file upload success page'
+  })
+}}
+
+<p class="govuk-body"><strong>Multiple files</strong></p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'success-multiple-files',
+    description: 'displays multiple files upload success page'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="Error messages">Error messages</h3>
+
+<p class="govuk-body">Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/file-upload/#error-messages">file upload error messages from the GOV.UK Design System </a>.</p>
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the file upload pattern get in touch to share your research findings.</p>
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/171">Discuss file upload on GitHub</a></p>
+
+{% endblock %}
