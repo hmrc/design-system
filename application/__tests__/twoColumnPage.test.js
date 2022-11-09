@@ -71,11 +71,24 @@ describe('Design pattern page', () => {
 
     it('should display the phase banner, with the correct text, when the status flag is set', () => {
       expect(phaseBanner).not.toBeNull()
-      expect(phaseBanner.querySelector('strong').innerHTML).toBe('<span class=\"govuk-visually-hidden\">This pattern is&nbsp;</span>experimental')
+      expect(phaseBanner.querySelector('strong').innerHTML).toBe('<span class="govuk-visually-hidden">This pattern is&nbsp;</span>experimental')
     })
 
     it('should render the default status text if the statusText flag is not set', () => {
       const expectedString = 'This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed. You should continue using it until we collect more research.'
+      expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
+    })
+
+    it('should render the extra experimental status text if the status flag is set to experimental', () => {
+      const expectedString = 'This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed. You should continue using it until we collect more research.'
+      expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
+    })
+
+    it('should not render the extra experimental status text if the status flag is not set to experimental', () => {
+      const document = documentFactory({ status: 'development' })
+      phaseBanner = document.querySelector('.hmrc-phase-banner')
+
+      const expectedString = 'This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.'
       expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
     })
 
