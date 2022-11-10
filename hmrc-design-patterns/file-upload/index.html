@@ -237,89 +237,81 @@
   </div>
 
 
-<p class="govuk-body">How it works depends on whether the user needs the option to upload more than one file</p>
+<p class="govuk-body">How it works depends on whether the user needs the option to upload more than one file.</p>
 
-<h3 class="govuk-heading-m" id="Let users select a single file">Let users select a single file</h3>
+<h3 class="govuk-heading-m" id="Let users select a single file">Let users upload a single file</h3>
 
-<p class="govuk-body">Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/file-upload/">file upload pattern</a> to let users select a single file.</p>
-
-
+<p class="govuk-body">Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/file-upload/">file upload component</a> to let users upload a single file.</p>
 
 
 
 
 
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-select-a-single-file" data-module="app-tabs app-language-switch-example">
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-upload-a-single-file" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-tab">
-        <a href="/examples/file-upload/select-a-single-file/" target="_blank" title="Open Help users upload a single file example in a new tab">
-          Open this example in a new tab<span class="govuk-visually-hidden">: Help users upload a single file</span>
+        <a href="/examples/file-upload/upload-a-single-file/" target="_blank" title="Open Let users upload a single file example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Let users upload a single file</span>
         </a>
       </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/file-upload/select-a-single-file/" title="Help users upload a single file example"></iframe>
+ src="/examples/file-upload/upload-a-single-file/" title="Let users upload a single file example"></iframe>
     </div>
 
-      <div class="example-example-select-a-single-file-lang example-example-select-a-single-file-lang--en ">
-        <span id="options-example-select-a-single-file"></span>
+      <div class="example-example-upload-a-single-file-lang example-example-upload-a-single-file-lang--en ">
+        <span id="options-example-upload-a-single-file"></span>
         <ul class="app-tabs" role="tablist">
             <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-select-a-single-file-html" role="tab"
-                aria-controls="example-select-a-single-file-html"
-                data-track="tab-html" title="Display Help users upload a single file example as HTML">HTML</a>
+              <a href="#example-upload-a-single-file-html" role="tab"
+                aria-controls="example-upload-a-single-file-html"
+                data-track="tab-html" title="Display Let users upload a single file example as HTML">HTML</a>
             </li>
               <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-select-a-single-file-nunjucks" role="tab"
-                  aria-controls="example-select-a-single-file-nunjucks"
-                  data-track="tab-nunjucks" title="Display Help users upload a single file example as Nunjucks">Nunjucks</a>
+                <a href="#example-upload-a-single-file-nunjucks" role="tab"
+                  aria-controls="example-upload-a-single-file-nunjucks"
+                  data-track="tab-nunjucks" title="Display Let users upload a single file example as Nunjucks">Nunjucks</a>
               </li>
 
         </ul>
 
-          <div class="app-tabs__container js-tabs__container" id="example-select-a-single-file-html" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-upload-a-single-file-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-comment">&lt;!-- draft code, to be looked at by Tim --&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipt<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
-    You can upload your receipt as a scanned copy or photo of the original.
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>Continue<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
             </pre>
 
           </div>
 
-            <div class="app-tabs__container js-tabs__container" id="example-select-a-single-file-nunjucks" role="tabpanel">
+            <div class="app-tabs__container js-tabs__container" id="example-upload-a-single-file-nunjucks" role="tabpanel">
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
                 <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
 
-&lt;!-- draft code, to be looked at by Tim --&gt;
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipt<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipt<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
-    You can upload your receipt as a scanned copy or photo of the original.
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+  
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>Continue<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code>
               </pre>
 
             </div>
@@ -328,7 +320,7 @@
   </div>
 
 
-<h3 class="govuk-heading-m" id="let users select additional files">Let users select additional files</h3>
+<h3 class="govuk-heading-m" id="let users select additional files">Let users upload additional files</h3>
 
 <p class="govuk-body">If users need the option to upload more than one file, include an additional screen asking if they want to upload another.</p>
 
@@ -338,74 +330,52 @@
 
 
 
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-select-additional-files" data-module="app-tabs app-language-switch-example">
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-upload-additional-files" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-tab">
-        <a href="/examples/file-upload/select-additional-files/" target="_blank" title="Open upload additional files example in a new tab">
-          Open this example in a new tab<span class="govuk-visually-hidden">: upload additional files</span>
+        <a href="/examples/file-upload/upload-additional-files/" target="_blank" title="Open Let users upload additional files example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Let users upload additional files</span>
         </a>
       </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/file-upload/select-additional-files/" title="upload additional files example"></iframe>
+ src="/examples/file-upload/upload-additional-files/" title="Let users upload additional files example"></iframe>
     </div>
 
-      <div class="example-example-select-additional-files-lang example-example-select-additional-files-lang--en ">
-        <span id="options-example-select-additional-files"></span>
+      <div class="example-example-upload-additional-files-lang example-example-upload-additional-files-lang--en ">
+        <span id="options-example-upload-additional-files"></span>
         <ul class="app-tabs" role="tablist">
             <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-select-additional-files-html" role="tab"
-                aria-controls="example-select-additional-files-html"
-                data-track="tab-html" title="Display upload additional files example as HTML">HTML</a>
+              <a href="#example-upload-additional-files-html" role="tab"
+                aria-controls="example-upload-additional-files-html"
+                data-track="tab-html" title="Display Let users upload additional files example as HTML">HTML</a>
             </li>
               <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-select-additional-files-nunjucks" role="tab"
-                  aria-controls="example-select-additional-files-nunjucks"
-                  data-track="tab-nunjucks" title="Display upload additional files example as Nunjucks">Nunjucks</a>
+                <a href="#example-upload-additional-files-nunjucks" role="tab"
+                  aria-controls="example-upload-additional-files-nunjucks"
+                  data-track="tab-nunjucks" title="Display Let users upload additional files example as Nunjucks">Nunjucks</a>
               </li>
 
         </ul>
 
-          <div class="app-tabs__container js-tabs__container" id="example-select-additional-files-html" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-upload-additional-files-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-comment">&lt;!-- draft code, to be looked at by Tim --&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Select receipts to upload<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipts<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-m&quot;</span>&gt;</span>Files selected<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-m&quot;</span>&gt;</span>Files added<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list&quot;</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
-          receipt1.jpg
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
-            Remove
-          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
-          receipt2.jpg
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
-            Remove
-          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>receipt2.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
@@ -417,86 +387,51 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--m&quot;</span>&gt;</span>
-
-      Do you want to select another receipt?
-
-    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--m&quot;</span>&gt;</span>Do you want to upload another receipt?<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;another&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;another&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;yes&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;another&quot;</span>&gt;</span>
-          Yes
-        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;another&quot;</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;another-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;another&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;no&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;another-2&quot;</span>&gt;</span>
-          No
-        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;another-2&quot;</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>Continue<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
             </pre>
 
           </div>
 
-            <div class="app-tabs__container js-tabs__container" id="example-select-additional-files-nunjucks" role="tabpanel">
+            <div class="app-tabs__container js-tabs__container" id="example-upload-additional-files-nunjucks" role="tabpanel">
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
                 <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
 
-&lt;!-- draft code, to be looked at by Tim --&gt;
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Select receipts to upload<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Upload receipts&lt;/h1&gt;
 
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-m&quot;</span>&gt;</span>Files selected<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-m&quot;</span>&gt;</span>Files added<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list&quot;</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
-    receipt1.jpg
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
-            Remove
-          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
-        receipt2.jpg
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
-            Remove
-          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>receipt2.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
@@ -508,39 +443,26 @@
 
   &lt;fieldset class=&quot;govuk-fieldset&quot;&gt;
 
-    &lt;legend class=&quot;govuk-fieldset__legend govuk-fieldset__legend--m&quot;&gt;
-
-      Do you want to select another receipt?
-
-    &lt;/legend&gt;
+    &lt;legend class=&quot;govuk-fieldset__legend govuk-fieldset__legend--m&quot;&gt;Do you want to upload another receipt?&lt;/legend&gt;
 
     &lt;div class=&quot;govuk-radios&quot;&gt;
 
       &lt;div class=&quot;govuk-radios__item&quot;&gt;
         &lt;input class=&quot;govuk-radios__input&quot; id=&quot;another&quot; name=&quot;another&quot; type=&quot;radio&quot; value=&quot;yes&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;another&quot;&gt;
-          Yes
-        &lt;/label&gt;
-
-      &lt;/div&gt;
+        &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;another&quot;&gt;Yes&lt;/label&gt;
+    &lt;/div&gt;
 
       &lt;div class=&quot;govuk-radios__item&quot;&gt;
         &lt;input class=&quot;govuk-radios__input&quot; id=&quot;another-2&quot; name=&quot;another&quot; type=&quot;radio&quot; value=&quot;no&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;another-2&quot;&gt;
-          No
-        &lt;/label&gt;
-
+        &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;another-2&quot;&gt;No&lt;/label&gt;
       &lt;/div&gt;
-
     &lt;/div&gt;
 
   &lt;/fieldset&gt;
 
 &lt;/div&gt;
 
-&lt;button class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt;
-  Continue
-&lt;/button&gt;</code>
+&lt;button class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt;Continue&lt;/button&gt;</code>
               </pre>
 
             </div>
@@ -557,9 +479,7 @@
 
 <h3 class="govuk-heading-m" id="Upload in progress">Upload in progress</h3>
 
-<p class="govuk-body">Show the user that their files are being uploaded.</p>
-
-<p class="govuk-body"><strong>A single file</strong></p>
+<p class="govuk-body">Show the user that their file is being uploaded.</p>
 
 
 
@@ -567,272 +487,51 @@
 
 
 
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-upload-single-file" data-module="app-tabs app-language-switch-example">
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-upload-in-progress" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-tab">
-        <a href="/examples/file-upload/upload-single-file/" target="_blank" title="Open shows single file upload progress example in a new tab">
-          Open this example in a new tab<span class="govuk-visually-hidden">: shows single file upload progress</span>
+        <a href="/examples/file-upload/upload-in-progress/" target="_blank" title="Open Upload in progress example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Upload in progress</span>
         </a>
       </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/file-upload/upload-single-file/" title="shows single file upload progress example"></iframe>
+ src="/examples/file-upload/upload-in-progress/" title="Upload in progress example"></iframe>
     </div>
 
-      <div class="example-example-upload-single-file-lang example-example-upload-single-file-lang--en ">
-        <span id="options-example-upload-single-file"></span>
+      <div class="example-example-upload-in-progress-lang example-example-upload-in-progress-lang--en ">
+        <span id="options-example-upload-in-progress"></span>
         <ul class="app-tabs" role="tablist">
             <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-upload-single-file-html" role="tab"
-                aria-controls="example-upload-single-file-html"
-                data-track="tab-html" title="Display shows single file upload progress example as HTML">HTML</a>
+              <a href="#example-upload-in-progress-html" role="tab"
+                aria-controls="example-upload-in-progress-html"
+                data-track="tab-html" title="Display Upload in progress example as HTML">HTML</a>
             </li>
               <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-upload-single-file-nunjucks" role="tab"
-                  aria-controls="example-upload-single-file-nunjucks"
-                  data-track="tab-nunjucks" title="Display shows single file upload progress example as Nunjucks">Nunjucks</a>
+                <a href="#example-upload-in-progress-nunjucks" role="tab"
+                  aria-controls="example-upload-in-progress-nunjucks"
+                  data-track="tab-nunjucks" title="Display Upload in progress example as Nunjucks">Nunjucks</a>
               </li>
 
         </ul>
 
-          <div class="app-tabs__container js-tabs__container" id="example-upload-single-file-html" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-upload-in-progress-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-comment">&lt;!-- draft code, to be looked at by Tim --&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload in progress<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload in progress<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>12% of [filename] uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
             </pre>
 
           </div>
 
-            <div class="app-tabs__container js-tabs__container" id="example-upload-single-file-nunjucks" role="tabpanel">
+            <div class="app-tabs__container js-tabs__container" id="example-upload-in-progress-nunjucks" role="tabpanel">
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
                 <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
 
-&lt;!-- draft code, to be looked at by Tim --&gt;
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload in progress<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
-
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Upload <span class="hljs-keyword">in</span> progress&lt;/h1&gt;
 
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>12% of [filename] uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code>
-              </pre>
-
-            </div>
-
-      </div>
-  </div>
-
-
-<p class="govuk-body"><strong>Multiple files</strong></p>
-
-
-
-
-
-
-
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-upload-multiple-files" data-module="app-tabs app-language-switch-example">
-
-    <div class="app-example app-example--tabs">
-      <span class="app-example__link app-example__new-tab">
-        <a href="/examples/file-upload/upload-multiple-files/" target="_blank" title="Open shows multiple files upload progress example in a new tab">
-          Open this example in a new tab<span class="govuk-visually-hidden">: shows multiple files upload progress</span>
-        </a>
-      </span>
-      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/file-upload/upload-multiple-files/" title="shows multiple files upload progress example"></iframe>
-    </div>
-
-      <div class="example-example-upload-multiple-files-lang example-example-upload-multiple-files-lang--en ">
-        <span id="options-example-upload-multiple-files"></span>
-        <ul class="app-tabs" role="tablist">
-            <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-upload-multiple-files-html" role="tab"
-                aria-controls="example-upload-multiple-files-html"
-                data-track="tab-html" title="Display shows multiple files upload progress example as HTML">HTML</a>
-            </li>
-              <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-upload-multiple-files-nunjucks" role="tab"
-                  aria-controls="example-upload-multiple-files-nunjucks"
-                  data-track="tab-nunjucks" title="Display shows multiple files upload progress example as Nunjucks">Nunjucks</a>
-              </li>
-
-        </ul>
-
-          <div class="app-tabs__container js-tabs__container" id="example-upload-multiple-files-html" role="tabpanel">
-            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-comment">&lt;!-- draft code, to be looked at by Tim --&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload in progress<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>12% of 5 files uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
-            </pre>
-
-          </div>
-
-            <div class="app-tabs__container js-tabs__container" id="example-upload-multiple-files-nunjucks" role="tabpanel">
-              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
-
-&lt;!-- draft code, to be looked at by Tim --&gt;
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload in progress<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
-
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>12% of 5 files uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code>
-              </pre>
-
-            </div>
-
-      </div>
-  </div>
-
-
-<h3 class="govuk-heading-m" id="successful file upload">Successful file upload</h3>
-
-<p class="govuk-body">Once files have been successfully uploaded display a success message.</p>
-
-<p class="govuk-body"><strong>A single file</strong></p>
-
-
-
-
-
-
-
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-success-single-file" data-module="app-tabs app-language-switch-example">
-
-    <div class="app-example app-example--tabs">
-      <span class="app-example__link app-example__new-tab">
-        <a href="/examples/file-upload/success-single-file/" target="_blank" title="Open displays single file upload success page example in a new tab">
-          Open this example in a new tab<span class="govuk-visually-hidden">: displays single file upload success page</span>
-        </a>
-      </span>
-      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/file-upload/success-single-file/" title="displays single file upload success page example"></iframe>
-    </div>
-
-      <div class="example-example-success-single-file-lang example-example-success-single-file-lang--en ">
-        <span id="options-example-success-single-file"></span>
-        <ul class="app-tabs" role="tablist">
-            <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-success-single-file-html" role="tab"
-                aria-controls="example-success-single-file-html"
-                data-track="tab-html" title="Display displays single file upload success page example as HTML">HTML</a>
-            </li>
-              <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-success-single-file-nunjucks" role="tab"
-                  aria-controls="example-success-single-file-nunjucks"
-                  data-track="tab-nunjucks" title="Display displays single file upload success page example as Nunjucks">Nunjucks</a>
-              </li>
-
-        </ul>
-
-          <div class="app-tabs__container js-tabs__container" id="example-success-single-file-html" role="tabpanel">
-            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-comment">&lt;!-- draft code, to be looked at by Tim --&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload successful<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>[filename] uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-            </pre>
-
-          </div>
-
-            <div class="app-tabs__container js-tabs__container" id="example-success-single-file-nunjucks" role="tabpanel">
-              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
-
-&lt;!-- draft code, to be looked at by Tim --&gt;
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload successful<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>[filename] uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code>
-              </pre>
-
-            </div>
-
-      </div>
-  </div>
-
-
-<p class="govuk-body"><strong>Multiple files</strong></p>
-
-
-
-
-
-
-
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-success-multiple-files" data-module="app-tabs app-language-switch-example">
-
-    <div class="app-example app-example--tabs">
-      <span class="app-example__link app-example__new-tab">
-        <a href="/examples/file-upload/success-multiple-files/" target="_blank" title="Open displays multiple files upload success page example in a new tab">
-          Open this example in a new tab<span class="govuk-visually-hidden">: displays multiple files upload success page</span>
-        </a>
-      </span>
-      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/file-upload/success-multiple-files/" title="displays multiple files upload success page example"></iframe>
-    </div>
-
-      <div class="example-example-success-multiple-files-lang example-example-success-multiple-files-lang--en ">
-        <span id="options-example-success-multiple-files"></span>
-        <ul class="app-tabs" role="tablist">
-            <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-success-multiple-files-html" role="tab"
-                aria-controls="example-success-multiple-files-html"
-                data-track="tab-html" title="Display displays multiple files upload success page example as HTML">HTML</a>
-            </li>
-              <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-success-multiple-files-nunjucks" role="tab"
-                  aria-controls="example-success-multiple-files-nunjucks"
-                  data-track="tab-nunjucks" title="Display displays multiple files upload success page example as Nunjucks">Nunjucks</a>
-              </li>
-
-        </ul>
-
-          <div class="app-tabs__container js-tabs__container" id="example-success-multiple-files-html" role="tabpanel">
-            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-comment">&lt;!-- draft code, to be looked at by Tim --&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload successful<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>5 files uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
-            </pre>
-
-          </div>
-
-            <div class="app-tabs__container js-tabs__container" id="example-success-multiple-files-nunjucks" role="tabpanel">
-              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
-
-&lt;!-- draft code, to be looked at by Tim --&gt;
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload successful<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>5 files uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code>
               </pre>
 
             </div>
