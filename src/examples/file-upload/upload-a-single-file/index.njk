@@ -4,19 +4,15 @@ layout: layout-example.njk
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<!-- draft code, to be looked at by Tim -->
-
 <div class="govuk-form-group">
   <h1 class="govuk-heading-xl">Upload receipt</h1>
 
 <div id="file-upload-1-hint" class="govuk-hint">
-    You can upload your receipt as a scanned copy or photo of the original.
-  </div>
-
-  </label>
-  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
 </div>
 
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+  
+</div>
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
