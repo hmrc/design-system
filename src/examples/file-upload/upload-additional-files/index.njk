@@ -1,53 +1,34 @@
 ---
 layout: layout-example.njk
 ---
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-<h1 class="govuk-heading-xl">Upload receipts</h1>
+{%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-m">Files added</h2>
-
-    <dl class="govuk-summary-list">
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">receipt1.jpg</dt>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">receipt2.jpg</dt>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
-
-    </dl>
-
+    {{
+      hmrcAddToAList({
+        itemList: [
+          {
+            name: 'receipt1.jpg',
+            changeUrl: '#',
+            removeUrl: '#'
+          },
+          {
+            name: 'receipt2.jpg',
+            changeUrl: '#',
+            removeUrl: '#'
+          }
+        ],
+        itemType: {
+          singular: 'receipt',
+          plural: 'receipts',
+          formAction: '#'
+        },
+        messages: {
+          yes: 'Yes',
+          no: 'No'
+        }
+      })
+    }}
   </div>
 </div>
-
-<div class="govuk-form-group">
-
-  <fieldset class="govuk-fieldset">
-
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Do you want to upload another receipt?</legend>
-
-    <div class="govuk-radios">
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="another" name="another" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="another">Yes</label>
-    </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="another-2" name="another" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="another-2">No</label>
-      </div>
-    </div>
-
-  </fieldset>
-
-</div>
-
-<button class="govuk-button" data-module="govuk-button">Continue</button>

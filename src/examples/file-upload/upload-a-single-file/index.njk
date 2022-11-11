@@ -1,18 +1,24 @@
 ---
 layout: layout-example.njk
 ---
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
 <div class="govuk-form-group">
-  <h1 class="govuk-heading-xl">Upload receipt</h1>
-
-<div id="file-upload-1-hint" class="govuk-hint">
-    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+  {{ govukFileUpload({
+    id: "file-upload-1",
+    name: "file-upload-1",
+    hint: {
+      text: "You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB."
+    },
+    label: {
+      text: "Upload receipt",
+      classes: "govuk-label--xl",
+      isPageHeading: true
+    }
+  }) }}
 </div>
 
-  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-  
-</div>
-
-<button class="govuk-button" data-module="govuk-button">Continue</button>
+{{ govukButton({
+  text: "Continue"
+}) }}
