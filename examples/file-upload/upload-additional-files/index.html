@@ -11,54 +11,68 @@
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-<h1 class="govuk-heading-xl">Upload receipts</h1>
-
-<div class="govuk-grid-row">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-m">Files added</h2>
-
-    <dl class="govuk-summary-list">
-
+    
+<h1 class="govuk-heading-xl">You have added 2 receipts</h1>
+<div class="govuk-form-group">
+  
+  <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--short">
       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">receipt1.jpg</dt>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
+        <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+          receipt1.jpg
+        </dt>
+          <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+              <ul class="govuk-summary-list__actions-list"><li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change receipt1.jpg</span></a></li><li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove receipt1.jpg from the list</span></a></li></ul>
+          </dd>
       </div>
-
       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">receipt2.jpg</dt>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
+        <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+          receipt2.jpg
+        </dt>
+          <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+              <ul class="govuk-summary-list__actions-list"><li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change receipt2.jpg</span></a></li><li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove receipt2.jpg from the list</span></a></li></ul>
+          </dd>
       </div>
+  </dl>
 
-    </dl>
+
+</div>
+<form method="post" novalidate action="">
+  <div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+    Do you need to add another receipt?
+  </legend>
+  <div id="add-another-hint" class="govuk-hint">
+    
+  </div>
+  <div class="govuk-radios govuk-radios--inline"    data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+          <label class="govuk-label govuk-radios__label" for="add-another">
+        Yes
+      </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="add-another-2">
+        No
+      </label>
+        </div>
+  </div>
+
+</fieldset>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</form>
 
   </div>
 </div>
-
-<div class="govuk-form-group">
-
-  <fieldset class="govuk-fieldset">
-
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Do you want to upload another receipt?</legend>
-
-    <div class="govuk-radios">
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="another" name="another" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="another">Yes</label>
-    </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="another-2" name="another" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="another-2">No</label>
-      </div>
-    </div>
-
-  </fieldset>
-
-</div>
-
-<button class="govuk-button" data-module="govuk-button">Continue</button></body>
+</body>
 
   <script src="/assets/javascripts/hmrc-design-system.js"></script>
 </html>

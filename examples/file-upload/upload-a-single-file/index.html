@@ -13,17 +13,23 @@
   <body class="app-example-page">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 <div class="govuk-form-group">
-  <h1 class="govuk-heading-xl">Upload receipt</h1>
-
-<div id="file-upload-1-hint" class="govuk-hint">
+  <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="file-upload-1">
+      Upload receipt
+    </label>
+    </h1>
+  <div id="file-upload-1-hint" class="govuk-hint">
     You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+  </div>
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
 </div>
 
-  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-  
 </div>
 
-<button class="govuk-button" data-module="govuk-button">Continue</button></body>
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</body>
 
   <script src="/assets/javascripts/hmrc-design-system.js"></script>
 </html>
