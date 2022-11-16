@@ -5,6 +5,79 @@ layout: layout-example.njk
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">You have added 2 receipts</h1>
+    <h2 class="govuk-heading-m">Upload receipts</h2>
+    <div class="govuk-form-group">
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-font-weight-regular">
+            receipt1.jpg
+          </dt>
+          <dd class="govuk-summary-list__value">
+            file uploaded
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove receipt1.jpg file uploaded from the list</span></a></li>
+            </ul>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-font-weight-regular">
+            receipt2.jpg
+          </dt>
+          <dd class="govuk-summary-list__value">
+            33% uploaded
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove receipt2.jpg 33% uploaded from the list</span></a></li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+
+    </div>
+    <form method="post" novalidate action="">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+            Do you need to add another receipt?
+          </legend>
+          <div id="add-another-hint" class="govuk-hint">
+
+          </div>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="add-another">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="add-another-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{#
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     {{
       hmrcAddToAList({
         itemList: [
@@ -27,8 +100,10 @@ layout: layout-example.njk
         messages: {
           yes: 'Yes',
           no: 'No'
-        }
+        },
+        itemSize: 'long'
       })
     }}
   </div>
 </div>
+#}
