@@ -13,7 +13,7 @@ layout: twoColumnPage.njk
 
 <h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
 
-<p class="govuk-body">Use this pattern at the end of a user journey if your service needs user research.</p>
+<p class="govuk-body">Use this pattern to encourage users to join our research panel.</p>
 
 <h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
 
@@ -30,9 +30,6 @@ layout: twoColumnPage.njk
 <p class="govuk-body">The link text should say ‘Sign up to take part in research (opens in new tab)’.
 </p>
 
-<p class="govuk-body">The close button text should say ‘Close banner’.
-</p>
-
 <p class="govuk-body">To identify where new users are coming from, you must email <a class="govuk-link" href="mailto:user.experience@hmrc.gov.uk">user.experience@hmrc.gov.uk</a> to get a unique sign up link. In your email, include:</p>
 
 <ul class="govuk-list govuk-list--bullet">
@@ -40,12 +37,30 @@ layout: twoColumnPage.njk
   <li>how long the banner will be displayed</li>
 </ul>
 
+<h3 class="govuk-heading-m">Linear journeys, for example forms</h3>
+
+<p class="govuk-body">Do not include a close button.</p>
+
 {{
   example({
     item: 'research-banner',
     description: 'Research-banner',
     htmlOnly: true,
-    example: 'example'
+    example: 'example-linear'
+  })
+}}
+
+<h3 class="govuk-heading-m">Non-linear journeys, for example dashboards</h3>
+
+<p class="govuk-body">Include a close button that says ‘Hide message’.
+</p>
+
+{{
+  example({
+    item: 'research-banner',
+    description: 'Research-banner',
+    htmlOnly: true,
+    example: 'example-non-linear'
   })
 }}
 
