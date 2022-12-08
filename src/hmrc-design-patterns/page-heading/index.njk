@@ -18,7 +18,7 @@ layout: twoColumnPage.njk
 
 <h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
 
-{{ hmrcFrontendInfo() }}
+<h3 class="govuk-heading-m">Main heading</h3>
 
 <p class="govuk-body">Every page must have a main heading coded as an <code>&lt;h1&gt;</code>.</p>
 
@@ -27,9 +27,14 @@ layout: twoColumnPage.njk
     item: 'page-heading',
     example: 'without-subheading',
     welsh: 'without-subheading-welsh',
+    htmlOnly: 'true',
     description: 'Page heading without subheading'
   })
 }}
+
+<h3 class="govuk-heading-m">Section heading</h3>
+
+<p class="govuk-body">If you use a section heading, you should add an <code>&lt;h2&gt;</code> above the <code>&lt;h1&gt;</code> with a visually hidden span. You should change or remove the visually hidden content to meet your users’ needs.</p>
 
 <p class="govuk-body">For accessibility reasons, if you use a section heading, it should be coded as a paragraph <code>&lt;p&gt;</code> inside a <code>&lt;header&gt;</code>.</p>
 
@@ -38,20 +43,53 @@ layout: twoColumnPage.njk
     item: 'page-heading',
     example: 'with-subheading',
     welsh: 'with-subheading-welsh',
+    htmlOnly: 'true',
     description: 'Page heading with subheading'
   })
 }}
 
-<p class="govuk-body">This makes sure that when using screen readers and other assistive technologies, the page heading and the section heading are:</p>
+<h3 class="govuk-heading-m">Making labels and legends headings</h3>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li>separate</li>
-  <li>in the correct source order</li>
-  <li>displayed the correct way</li>
-  <li>read out the correct way</li>
-</ul>
+<h4 class="govuk-heading-s">Labels as page headings with subheadings</h4>
 
-<p class="govuk-body">Change or remove any visually hidden content to meet your users’ needs.</p>
+<p class="govuk-body">If your headings are also the label of a form input, add the H2 above the form component.</p>
+
+{{
+  example({
+    item: 'page-heading',
+    example: 'heading-as-label-with-subheading',
+    htmlOnly: 'true',
+    description: 'Page heading as label with subheading'
+  })
+}}
+
+<h4 class="govuk-heading-s">Legends as page headings with subheadings</h4>
+
+<p class="govuk-body">If your headings are within a form legend, add the H2 above the forms fieldset.</p>
+
+{{
+  example({
+    item: 'page-heading',
+    example: 'legends-as-page-headings-with-subheading',
+    htmlOnly: 'true',
+    description: 'Legend as page heading with subheading'
+  })
+}}
+
+<h2 class="govuk-heading-l">Error messages</h2>
+
+<p class="govuk-body">Error messages should be styled like this:</p>
+
+{{
+  example({
+    item: 'page-heading',
+    example: 'legends-as-page-headings-with-subheading-with-error',
+    htmlOnly: 'true',
+    description: 'Legend as page heading with subheading and error'
+  })
+}}
+
+<p class="govuk-body">Make sure errors follow the <a class="govuk-link" href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> in the GOV.UK Design System and have specific error messages for specific error states.</p>
 
 <h2 class="govuk-heading-l" id="research">Research</h2>
 
@@ -67,5 +105,9 @@ layout: twoColumnPage.njk
 <p class="govuk-body">We need more research. If you have used the page heading and section heading, get in touch to share your research findings.</p>
 
 <p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/149">Discuss the page heading on GitHub</a></p>
+
+<h2 class="govuk-heading-l">Changes to this pattern</h2>
+
+<p class="govuk-body">On [date], this pattern replaced <a class="govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-archive/page-heading/"> an older version</a>. This was because the pattern did not work in all cases, like headings as labels and legends.</p>
 
 {% endblock %}
