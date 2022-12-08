@@ -225,7 +225,7 @@
 
 <h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
 
-<p class="govuk-body">Use this pattern at the end of a user journey if your service needs user research.</p>
+<p class="govuk-body">Use this pattern to encourage users to join our research panel.</p>
 
 <h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
 
@@ -245,9 +245,6 @@
 <p class="govuk-body">The link text should say ‘Sign up to take part in research (opens in new tab)’.
 </p>
 
-<p class="govuk-body">The close button text should say ‘Close banner’.
-</p>
-
 <p class="govuk-body">To identify where new users are coming from, you must email <a class="govuk-link" href="mailto:user.experience@hmrc.gov.uk">user.experience@hmrc.gov.uk</a> to get a unique sign up link. In your email, include:</p>
 
 <ul class="govuk-list govuk-list--bullet">
@@ -255,36 +252,40 @@
   <li>how long the banner will be displayed</li>
 </ul>
 
+<h3 class="govuk-heading-m">Linear journeys, for example forms</h3>
+
+<p class="govuk-body">Only show the banner at the end of the journey. Do not include a close button.</p>
 
 
 
 
 
 
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-example" data-module="app-tabs app-language-switch-example">
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-example-linear" data-module="app-tabs app-language-switch-example">
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-tab">
-        <a href="/examples/research-banner/example/" target="_blank" title="Open Research-banner example in a new tab">
+        <a href="/examples/research-banner/example-linear/" target="_blank" title="Open Research-banner example in a new tab">
           Open this example in a new tab<span class="govuk-visually-hidden">: Research-banner</span>
         </a>
       </span>
       <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/research-banner/example/" title="Research-banner example"></iframe>
+ src="/examples/research-banner/example-linear/" title="Research-banner example"></iframe>
     </div>
 
-      <div class="example-example-example-lang example-example-example-lang--en ">
-        <span id="options-example-example"></span>
+      <div class="example-example-example-linear-lang example-example-example-linear-lang--en ">
+        <span id="options-example-example-linear"></span>
         <ul class="app-tabs" role="tablist">
             <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-example-html" role="tab"
-                aria-controls="example-example-html"
+              <a href="#example-example-linear-html" role="tab"
+                aria-controls="example-example-linear-html"
                 data-track="tab-html" title="Display Research-banner example as HTML">HTML</a>
             </li>
 
         </ul>
 
-          <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
+          <div class="app-tabs__container js-tabs__container" id="example-example-linear-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
               <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-user-research-banner&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;hmrc-user-research-banner&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-user-research-banner__container govuk-width-container&quot;</span>&gt;</span>
@@ -292,7 +293,63 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-s hmrc-user-research-banner__title&quot;</span>&gt;</span>Help make GOV.UK better<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link hmrc-user-research-banner__link&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noopener noreferrer&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.gov.uk/government/organisations/hm-revenue-customs&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>Sign up to take part in research (opens in new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button govuk-button--secondary hmrc-user-research-banner__button&quot;</span>&gt;</span>Close banner<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+
+      </div>
+  </div>
+
+
+<h3 class="govuk-heading-m">Non-linear journeys, for example dashboards</h3>
+
+<p class="govuk-body">Include a close button that says ‘Hide message’.
+</p>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-example-non-linear" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/research-banner/example-non-linear/" target="_blank" title="Open Research-banner example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Research-banner</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/research-banner/example-non-linear/" title="Research-banner example"></iframe>
+    </div>
+
+      <div class="example-example-example-non-linear-lang example-example-example-non-linear-lang--en ">
+        <span id="options-example-example-non-linear"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-example-non-linear-html" role="tab"
+                aria-controls="example-example-non-linear-html"
+                data-track="tab-html" title="Display Research-banner example as HTML">HTML</a>
+            </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-example-non-linear-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-user-research-banner&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;hmrc-user-research-banner&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-user-research-banner__container govuk-width-container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-user-research-banner__text&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-s hmrc-user-research-banner__title&quot;</span>&gt;</span>Help make GOV.UK better<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link hmrc-user-research-banner__link&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noopener noreferrer&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.gov.uk/government/organisations/hm-revenue-customs&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>Sign up to take part in research (opens in new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button govuk-button--secondary hmrc-user-research-banner__button&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Hide banner<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Hide research banner<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
             </pre>
