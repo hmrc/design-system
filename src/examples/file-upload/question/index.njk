@@ -1,0 +1,41 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-form-group">
+  <h1 class="govuk-heading-xl">Upload invoice</h1>
+
+<div id="file-upload-1-hint" class="govuk-hint">
+    You can upload your invoice as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+</div>
+
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+  
+</div>
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Add a different type of supporting evidence to your claim?</legend>
+
+    <div class="govuk-radios">
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="another" name="another" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="another">Yes</label>
+    </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="another-2" name="another" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="another-2">No</label>
+      </div>
+    </div>
+
+  </fieldset>
+
+</div>
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
