@@ -37,27 +37,27 @@ status: development
   })
 }}
 
-<h3 class="govuk-heading-m" id="Let users select a single file">Let users navigate back to file type selection</h3>
-
-<p class="govuk-body">Use a Yes/No question to route the user back to file type selection or another relevant page.</p>
-
-{{
-  example({
-    item: 'file-upload',
-    example: 'question',
-    description: 'Optional yes/no question'
-  })
-}}
-
 <h3 class="govuk-heading-m" id="let users select additional files">Let users upload additional files</h3>
 
-<p class="govuk-body">If users need the option to upload more than one file, include an additional screen asking if they want to upload another.</p>
+<p class="govuk-body">If users need the option to upload more than one file, include a button asking if they want to upload another.</p>
 
 {{
   example({
     item: 'file-upload',
     example: 'upload-additional-files',
     description: 'Let users upload additional files'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="Let users select a single file">Let users navigate back to file type selection</h3>
+
+<p class="govuk-body">If users need the option to upload multiple file types, use a Yes/No question to route the user back to file type selection.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'question',
+    description: 'Optional yes/no question'
   })
 }}
 
