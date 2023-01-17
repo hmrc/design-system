@@ -1,0 +1,32 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-xl">Upload receipts</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Files added</h2>
+
+    <dl class="govuk-summary-list">
+
+       <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt1.jpg</a></dt>
+        <dd class="govuk-summary-list__actions"><strong class="govuk-tag--green">uploaded</strong></dd>
+        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt2.jpg</a></dt>
+        <dd class="govuk-summary-list__actions"><strong class="govuk-tag--yellow">uploading</strong></dd>
+        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
+      </div>
+
+    </dl>
+
+  </div>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
