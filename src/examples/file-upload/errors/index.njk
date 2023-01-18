@@ -9,8 +9,8 @@ layout: layout-example.njk
   titleText: "There is a problem",
   errorList: [
     {
-      text: "Select a receipt",
-      href: "#empty"
+      text: "Select a file",
+      href: "#select"
     },
     {
       text: "The selected file is empty",
@@ -48,21 +48,22 @@ layout: layout-example.njk
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <dl class="govuk-summary-list">
-
-       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt1.jpg</a></dt>
-        <dd class="govuk-summary-list__actions"><strong class="govuk-tag--green">uploaded</strong></dd>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">receipt2.jpg</dt>
-        <dd class="govuk-summary-list__actions"><strong class="govuk-tag--yellow">uploading</strong></dd>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
-
-    </dl>
+<table class="govuk-table">
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="#"><strong>receipt1.jpg</strong></a></td>
+      <td class="govuk-table__cell"><strong class="govuk-tag--green">uploaded</strong></td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <span class="govuk-form-group govuk-form-group--error">The selected file is empty</span>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file"> need to edit upload, add anchor and float remove to bottom
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <button class="govuk-button govuk-button--secondary">Upload another receipt</button>
 
