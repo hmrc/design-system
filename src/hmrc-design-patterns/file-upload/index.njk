@@ -37,13 +37,25 @@ status: development
   })
 }}
 
-<p class="govuk-body">Use a <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file is being uploaded.</p>
+<h3 class="govuk-heading-m" id="Let users select a single file">Let users see the status of their upload</h3>
+
+<p class="govuk-body">Use a yellow 'UPLOADING' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file is being uploaded or scanned.</p>
 
 {{
   example({
     item: 'file-upload',
-    example: 'upload-status',
-    description: 'Upload status'
+    example: 'uploading',
+    description: 'Uploading'
+  })
+}}
+
+<p class="govuk-body">Use a green 'UPLOADED' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file has been uploaded and scanned successfully. Link to the file from the filename.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'uploaded',
+    description: 'Uploaded'
   })
 }}
 
