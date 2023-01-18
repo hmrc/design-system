@@ -9,7 +9,7 @@ status: development
 
 {% block content %}
 
-<p class="govuk-body">The file upload pattern lets users upload files to an HMRC service.</p>
+<p class="govuk-body">The file upload pattern lets users upload files to an HMRC service. It is optimised for integration with Upscan (the HMRC file upload service).</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
@@ -101,7 +101,15 @@ status: development
 
 <h3 class="govuk-heading-m" id="Error messages">Error messages</h3>
 
-<p class="govuk-body">Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/file-upload/#error-messages">file upload error messages from the GOV.UK Design System </a>.</p>
+<p class="govuk-body">Use the file upload error messages below. Error 'The selected file could not be uploaded' should only be used if Upscan reports unknown problems with the file.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'errors',
+    description: 'Errors'
+  })
+}}
 
 <h2 class="govuk-heading-l" id="research">Research</h2>
 
