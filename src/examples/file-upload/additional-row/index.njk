@@ -8,7 +8,10 @@ layout: layout-example.njk
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-m">Files added</h2>
+
+<div id="file-upload-1-hint" class="govuk-hint">
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+</div>
 
     <dl class="govuk-summary-list">
 
@@ -19,7 +22,7 @@ layout: layout-example.njk
       </div>
 
       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt2.jpg</a></dt>
+        <dt class="govuk-summary-list__key">receipt2.jpg</dt>
         <dd class="govuk-summary-list__actions"><strong class="govuk-tag--yellow">uploading</strong></dd>
         <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
       </div>
@@ -27,10 +30,6 @@ layout: layout-example.njk
     </dl>
 
 <div class="govuk-form-group">
-
-<div id="file-upload-1-hint" class="govuk-hint">
-    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
-</div>
 
   <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
   </div>
