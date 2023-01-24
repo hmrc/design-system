@@ -68,15 +68,14 @@ layout: layout-example.njk
 {{ govukFileUpload({
   id: "file-upload-1",
   name: "file-upload-1",
-  errorMessage: "test",
-  label: {
+  errorMessage: {
     text: "The selected file is empty"
   }
 }) }}
 
         </div>
         </td>
-      <td class="govuk-table__cell" style="text-align: right; vertical-align: bottom;"><a class="govuk-link" href="#">Remove</a></td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
     </tr>
   </tbody>
 </table>
