@@ -31,7 +31,7 @@ layout: layout-example.njk
     },
     {
       text: "The selected file contains a virus — upload a different one",
-      href: "#type-error"
+      href: "#virus-error"
     },
     {
       text: "The selected file could not be uploaded",
@@ -55,28 +55,118 @@ layout: layout-example.njk
 
 <table class="govuk-table">
   <tbody class="govuk-table__body">
+    
     <tr class="govuk-table__row">
       <td class="govuk-table__cell"><a class="govuk-link" href="#"><strong>receipt1.jpg</strong></a></td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">uploaded</strong></td>
       <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
     </tr>
+
     <tr class="govuk-table__row">
       <td class="govuk-table__cell" colspan="2">
         <div class="govuk-form-group--error">
-
-
-{{ govukFileUpload({
-  id: "file-upload-1",
-  name: "file-upload-1",
-  errorMessage: {
-    text: "The selected file is empty"
-  }
-}) }}
-
+          {{ govukFileUpload({
+            id: "select-error",
+            name: "select-error",
+            errorMessage: {
+              text: "Select a file"
+            }
+          }) }}
         </div>
         </td>
       <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
     </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "empty-error",
+            name: "empty-error",
+            errorMessage: {
+              text: "The selected file is empty"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "smaller-error",
+            name: "smaller-error",
+            errorMessage: {
+              text: "The selected file must be smaller than 100MB"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "already-error",
+            name: "already-error",
+            errorMessage: {
+              text: "The selected file has already been uploaded"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "type-error",
+            name: "type-error",
+            errorMessage: {
+              text: "The selected file must be a JPG, PNG or PDF"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "virus-error",
+            name: "virus-error",
+            errorMessage: {
+              text: "The selected file contains a virus — upload a different one"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "could-not-error",
+            name: "could-not-error",
+            errorMessage: {
+              text: "The selected file could not be uploaded"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+
   </tbody>
 </table>
 
@@ -108,10 +198,9 @@ layout: layout-example.njk
         <input class="govuk-radios__input" id="another-2" name="another" type="radio" value="no">
         <label class="govuk-label govuk-radios__label" for="another-2">No</label>
       </div>
+
     </div>
-
   </fieldset>
-
 </div>
 
 <button class="govuk-button" data-module="govuk-button">Continue</button>
