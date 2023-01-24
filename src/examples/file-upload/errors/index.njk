@@ -11,31 +11,35 @@ layout: layout-example.njk
   errorList: [
     {
       text: "Select a file",
-      href: "#select"
+      href: "#select-error"
     },
     {
       text: "The selected file is empty",
-      href: "#empty"
+      href: "#empty-error"
     },
     {
       text: "The selected file must be smaller than 100MB",
-      href: "#smaller"
+      href: "#smaller-error"
     },
     {
       text: "The selected file has already been uploaded",
-      href: "#already"
+      href: "#already-error"
     },
     {
       text: "The selected file must be a JPG, PNG or PDF",
-      href: "#type"
+      href: "#type-error"
     },
     {
       text: "The selected file contains a virus — upload a different one",
-      href: "#type"
+      href: "#type-error"
     },
     {
       text: "The selected file could not be uploaded",
-      href: "#could-not"
+      href: "#could-not-error"
+    },
+    {
+      text: "Select yes if you want to add a different type of supporting evidence",
+      href: "#supporting-evidence-error"
     }
   ]
 }) }}
@@ -70,7 +74,6 @@ layout: layout-example.njk
   }
 }) }}
 
- receiptX instead of 'no file selected'
         </div>
         </td>
       <td class="govuk-table__cell" style="text-align: right; vertical-align: bottom;"><a class="govuk-link" href="#">Remove</a></td>
@@ -81,6 +84,35 @@ layout: layout-example.njk
 <button class="govuk-button govuk-button--secondary">Upload another receipt</button>
 
   </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-form-group govuk-form-group--error">
+
+  <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Add a different type of supporting evidence to your claim?</legend>
+
+ <p id="supporting-evidence-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Select yes if you want to add a different type of supporting evidence
+    </p>
+
+    <div class="govuk-radios">
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="another" name="another" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="another">Yes</label>
+    </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="another-2" name="another" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="another-2">No</label>
+      </div>
+    </div>
+
+  </fieldset>
+
 </div>
 
 <button class="govuk-button" data-module="govuk-button">Continue</button>
