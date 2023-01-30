@@ -81,18 +81,6 @@ status: development
   })
 }}
 
-<h3 class="govuk-heading-m" id="Let users select a single file">Let users upload optional file types</h3>
-
-<p class="govuk-body">Use a Yes/No question to route the user back to file type selection.</p>
-
-{{
-  example({
-    item: 'file-upload',
-    example: 'question',
-    description: 'Optional yes/no question'
-  })
-}}
-
 <h3 class="govuk-heading-m" id="labelled files">Let users upload multiple specifically required files</h3>
 
 <p class="govuk-body">If multiple specific file uploads are required show labelled input rows.</p>
@@ -102,6 +90,28 @@ status: development
     item: 'file-upload',
     example: 'labels',
     description: 'Let users upload multiple specifically required files'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="Let users select a single file">Let users select file types</h3>
+
+<p class="govuk-body">If file type selection is required use a question page.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'types',
+    description: 'Optional yes/no question'
+  })
+}}
+
+<p class="govuk-body">Use a Yes/No question to route the user back to file type selection.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'question',
+    description: 'Optional yes/no question'
   })
 }}
 
