@@ -2,7 +2,7 @@
   {% set status = params.status %}
   {% if params.status %}
     {% if params.status != 'archived' %}
-      {% set defaultStatusText %}This is currently {{ status }} because <a class="govuk-link" href="#research">more research</a> is needed.{% endset %}
+      {% set defaultStatusText %}This is currently {{ status }} because <a class="govuk-link" href="#research">more research</a> is needed.{% if params.status === 'experimental' %} You should continue using it until we collect more research.{% endif %}{% endset %}
     {% endif %}
 
     {% set statusText = params.statusText or defaultStatusText %}

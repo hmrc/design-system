@@ -1,10 +1,7 @@
 ---
 layout: layout-example.njk
 ---
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-<h1 class="govuk-heading-xl">Upload receipts</h1>
+{%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
 
 <div id="file-upload-1-hint" class="govuk-hint">
     You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
