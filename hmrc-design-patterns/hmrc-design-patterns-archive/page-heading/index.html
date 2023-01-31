@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open links in a new window or tab - HMRC design patterns - Design resources for HMRC — GOV.UK</title>
+  <title>Page heading - HMRC design patterns - Design resources for HMRC — GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -202,7 +202,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Open links in a new window or tab</h1></header>
+  <h1 class="govuk-heading-xl">Page heading</h1></header>
 
 
             
@@ -216,15 +216,228 @@
     
     <div class="govuk-!-padding-bottom-8 govuk-!-padding-top-2 hmrc-phase-banner">
       <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2"><span class="govuk-visually-hidden">This pattern is&nbsp;</span>archived</strong>
-      <p class="govuk-body">This pattern has been replaced by <a class="govuk-link" href=""></a>.</p>
+      <p class="govuk-body">This pattern has been replaced by <a class="govuk-link" href="/hmrc-design-patterns/page-heading/">a new page heading pattern</a>.</p>
     </div>
   
 
 
 
-<p class="govuk-body">This pattern was archived on 5 October 2020.</p>
-<p class="govuk-body">HMRC removed this guidance because GDS updated its guidance on this style in the GOV.UK Design System.</p>
-<p class="govuk-body">Read about <a class="govuk-link" href="https://design-system.service.gov.uk/styles/typography/#opening-links-in-a-new-tab">how to style links that open in a new tab in the GOV.UK Design System</a>.</p>
+<p class="govuk-body">This pattern is the main heading of the current page, which lets the user know what information is being asked for or provided.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use a page heading on every page.</p>
+
+<p class="govuk-body">You can also include a section heading if it helps the user know where they are in a service. For example, in long services and those with more than one section.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+  <div class="govuk-inset-text">
+    You need HMRC Frontend to use this pattern — <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro into your code.
+  </div>
+
+
+<p class="govuk-body">Every page must have a main heading coded as an <code>&lt;h1&gt;</code>.</p>
+
+
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-without-subheading" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/archived/page-heading/without-subheading/" target="_blank" title="Open Archived page heading without subheading example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Archived page heading without subheading</span>
+        </a>
+      </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/archived/page-heading/without-subheading/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Archived page heading without subheading example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/archived/page-heading/without-subheading-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Archived page heading without subheading example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/archived/page-heading/without-subheading/" title="Archived page heading without subheading example"></iframe>
+    </div>
+
+      <div class="example-example-without-subheading-lang example-example-without-subheading-lang--en ">
+        <span id="options-example-without-subheading"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-without-subheading-html" role="tab"
+                aria-controls="example-without-subheading-html"
+                data-track="tab-html" title="Display Archived page heading without subheading example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-without-subheading-nunjucks" role="tab"
+                  aria-controls="example-without-subheading-nunjucks"
+                  data-track="tab-nunjucks" title="Display Archived page heading without subheading example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-without-subheading-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+            </pre>
+
+              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+              </pre>
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-without-subheading-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;What is your name?&quot;</span>,
+  <span class="hljs-attr">headingClasses</span>: <span class="hljs-string">&quot;govuk-heading-l&quot;</span>
+}) }}</code>
+              </pre>
+
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Beth yw’ch enw?&quot;</span>,
+  <span class="hljs-attr">headingClasses</span>: <span class="hljs-string">&quot;govuk-heading-l&quot;</span>
+}) }}</code>
+                </pre>
+            </div>
+
+      </div>
+  </div>
+
+
+<p class="govuk-body">For accessibility reasons, if you use a section heading, it should be coded as a paragraph <code>&lt;p&gt;</code> inside a <code>&lt;header&gt;</code>.</p>
+
+
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-with-subheading" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/archived/page-heading/with-subheading/" target="_blank" title="Open Archived page heading with subheading example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Archived page heading with subheading</span>
+        </a>
+      </span>
+        <span class="app-example__link app-example__language-switch app-example__language-switch--current">
+          <a href="/examples/archived/page-heading/with-subheading/" data-lang="en" target="_blank" data-track="lang-switch-en" title="Display Archived page heading with subheading example in English">
+            Display in English
+          </a>
+        </span>
+        <span class="app-example__link app-example__language-switch js-enabled">
+          <a href="/examples/archived/page-heading/with-subheading-welsh/" data-lang="cy" target="_blank" data-track="lang-switch-cy" title="Display Archived page heading with subheading example in Welsh">
+            Display in Welsh
+          </a>
+        </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/archived/page-heading/with-subheading/" title="Archived page heading with subheading example"></iframe>
+    </div>
+
+      <div class="example-example-with-subheading-lang example-example-with-subheading-lang--en ">
+        <span id="options-example-with-subheading"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-with-subheading-html" role="tab"
+                aria-controls="example-with-subheading-html"
+                data-track="tab-html" title="Display Archived page heading with subheading example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-with-subheading-nunjucks" role="tab"
+                  aria-controls="example-with-subheading-nunjucks"
+                  data-track="tab-nunjucks" title="Display Archived page heading with subheading example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-with-subheading-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-caption govuk-caption-xl&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">Personal</span></span> details<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+            </pre>
+
+              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-caption govuk-caption-xl&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">Manylion</span></span> personol<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+              </pre>
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-with-subheading-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;What is your name?&quot;</span>,
+  <span class="hljs-attr">section</span>: <span class="hljs-string">&quot;Personal details&quot;</span>,
+  <span class="hljs-attr">headingClasses</span>: <span class="hljs-string">&quot;govuk-heading-l&quot;</span>
+}) }}</code>
+              </pre>
+
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
+
+{{ hmrcPageHeading({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Beth yw’ch enw?&quot;</span>,
+  <span class="hljs-attr">section</span>: <span class="hljs-string">&quot;Manylion personol&quot;</span>,
+  <span class="hljs-attr">headingClasses</span>: <span class="hljs-string">&quot;govuk-heading-l&quot;</span>
+}) }}</code>
+                </pre>
+            </div>
+
+      </div>
+  </div>
+
+
+<p class="govuk-body">This makes sure that when using screen readers and other assistive technologies, the page heading and the section heading are:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>separate</li>
+  <li>in the correct source order</li>
+  <li>displayed the correct way</li>
+  <li>read out the correct way</li>
+</ul>
+
+<p class="govuk-body">Change or remove any visually hidden content to meet your users’ needs.</p>
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">The recommended code has been tested with screen reader users and all browsers, devices and assistive technologies. Research showed it:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>displayed as expected</li>
+  <li>worked consistently across different assistive technologies</li>
+  <li>helped users know where they were in the service</li>
+  <li>did not distract users from their task</li>
+</ul>
+
+<p class="govuk-body">We need more research. If you have used the page heading and section heading, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/149">Discuss the page heading on GitHub</a></p>
 
 </div>
         </div>

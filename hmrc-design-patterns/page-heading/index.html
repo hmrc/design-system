@@ -221,10 +221,7 @@
 
 <h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
 
-  <div class="govuk-inset-text">
-    You need HMRC Frontend to use this pattern — <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro into your code.
-  </div>
-
+<h3 class="govuk-heading-m">Main heading</h3>
 
 <p class="govuk-body">Every page must have a main heading coded as an <code>&lt;h1&gt;</code>.</p>
 
@@ -266,53 +263,27 @@
                 aria-controls="example-without-subheading-html"
                 data-track="tab-html" title="Display Page heading without subheading example as HTML">HTML</a>
             </li>
-              <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-without-subheading-nunjucks" role="tab"
-                  aria-controls="example-without-subheading-nunjucks"
-                  data-track="tab-nunjucks" title="Display Page heading without subheading example as Nunjucks">Nunjucks</a>
-              </li>
 
         </ul>
 
           <div class="app-tabs__container js-tabs__container" id="example-without-subheading-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code>
             </pre>
 
               <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code>
               </pre>
           </div>
 
-            <div class="app-tabs__container js-tabs__container" id="example-without-subheading-nunjucks" role="tabpanel">
-              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;What is your name?&quot;</span>,
-  <span class="hljs-attr">headingClasses</span>: <span class="hljs-string">&quot;govuk-heading-l&quot;</span>
-}) }}</code>
-              </pre>
-
-                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Beth yw’ch enw?&quot;</span>,
-  <span class="hljs-attr">headingClasses</span>: <span class="hljs-string">&quot;govuk-heading-l&quot;</span>
-}) }}</code>
-                </pre>
-            </div>
 
       </div>
   </div>
 
 
-<p class="govuk-body">For accessibility reasons, if you use a section heading, it should be coded as a paragraph <code>&lt;p&gt;</code> inside a <code>&lt;header&gt;</code>.</p>
+<h3 class="govuk-heading-m">Section heading</h3>
+
+<p class="govuk-body">If you use a section heading, you should add an <code>&lt;h2&gt;</code> above the <code>&lt;h1&gt;</code> with a visually hidden span. You should change or remove the visually hidden content to meet your users’ needs.</p>
 
 
 
@@ -352,70 +323,235 @@
                 aria-controls="example-with-subheading-html"
                 data-track="tab-html" title="Display Page heading with subheading example as HTML">HTML</a>
             </li>
-              <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-with-subheading-nunjucks" role="tab"
-                  aria-controls="example-with-subheading-nunjucks"
-                  data-track="tab-nunjucks" title="Display Page heading with subheading example as Nunjucks">Nunjucks</a>
-              </li>
 
         </ul>
 
           <div class="app-tabs__container js-tabs__container" id="example-with-subheading-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-caption govuk-caption-xl&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">Personal</span></span> details<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-l hmrc-caption-l&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">Your</span></span> details<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code>
             </pre>
 
               <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-page-heading&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-caption govuk-caption-xl&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>This section is <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">Manylion</span></span> personol<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-l hmrc-caption-l&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Teitl yr adran hon yw <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">Manylion</span></span> personol<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Beth yw’ch enw?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code>
               </pre>
           </div>
 
-            <div class="app-tabs__container js-tabs__container" id="example-with-subheading-nunjucks" role="tabpanel">
-              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;What is your name?&quot;</span>,
-  <span class="hljs-attr">section</span>: <span class="hljs-string">&quot;Personal details&quot;</span>,
-  <span class="hljs-attr">headingClasses</span>: <span class="hljs-string">&quot;govuk-heading-l&quot;</span>
-}) }}</code>
-              </pre>
-
-                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
-                  <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/page-heading/macro.njk&quot;</span>  <span class="hljs-keyword">import</span> hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Beth yw’ch enw?&quot;</span>,
-  <span class="hljs-attr">section</span>: <span class="hljs-string">&quot;Manylion personol&quot;</span>,
-  <span class="hljs-attr">headingClasses</span>: <span class="hljs-string">&quot;govuk-heading-l&quot;</span>
-}) }}</code>
-                </pre>
-            </div>
 
       </div>
   </div>
 
 
-<p class="govuk-body">This makes sure that when using screen readers and other assistive technologies, the page heading and the section heading are:</p>
+<h3 class="govuk-heading-m">Making labels and legends headings</h3>
+
+<h4 class="govuk-heading-s">Labels as page headings with subheadings</h4>
+
+<p class="govuk-body">If your headings are also the label of a form input, add the <code>&lt;h2&gt;</code> above the form component.</p>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-heading-as-label-with-subheading" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/page-heading/heading-as-label-with-subheading/" target="_blank" title="Open Page heading as label with subheading example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Page heading as label with subheading</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/page-heading/heading-as-label-with-subheading/" title="Page heading as label with subheading example"></iframe>
+    </div>
+
+      <div class="example-example-heading-as-label-with-subheading-lang example-example-heading-as-label-with-subheading-lang--en ">
+        <span id="options-example-heading-as-label-with-subheading"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-heading-as-label-with-subheading-html" role="tab"
+                aria-controls="example-heading-as-label-with-subheading-html"
+                data-track="tab-html" title="Display Page heading as label with subheading example as HTML">HTML</a>
+            </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-heading-as-label-with-subheading-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-l hmrc-caption-l&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>This section is: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">Your</span></span> details<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;get&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label-wrapper&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--l&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;example&quot;</span>&gt;</span>What is your name?<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;example-hint&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+
+      </div>
+  </div>
+
+
+<h4 class="govuk-heading-s">Legends as page headings with subheadings</h4>
+
+<p class="govuk-body">If your headings are within a form legend, add the <code>&lt;h2&gt;</code> above the forms fieldset.</p>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-legends-as-page-headings-with-subheading" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/page-heading/legends-as-page-headings-with-subheading/" target="_blank" title="Open Legend as page heading with subheading example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Legend as page heading with subheading</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/page-heading/legends-as-page-headings-with-subheading/" title="Legend as page heading with subheading example"></iframe>
+    </div>
+
+      <div class="example-example-legends-as-page-headings-with-subheading-lang example-example-legends-as-page-headings-with-subheading-lang--en ">
+        <span id="options-example-legends-as-page-headings-with-subheading"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-legends-as-page-headings-with-subheading-html" role="tab"
+                aria-controls="example-legends-as-page-headings-with-subheading-html"
+                data-track="tab-html" title="Display Legend as page heading with subheading example as HTML">HTML</a>
+            </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-legends-as-page-headings-with-subheading-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-xl hmrc-caption-xl&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>This section is: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">Your</span></span> details<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;get&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--l&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__heading&quot;</span>&gt;</span>Have you changed your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;changed-0&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;changed-0&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;yes&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;changed-0&quot;</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;changed-0-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;changed-0&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;no&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;changed-0-2&quot;</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+
+      </div>
+  </div>
+
+
+<p class="govuk-body">We use this method rather than the <a href="https://design-system.service.gov.uk/styles/typography/#headings-with-captions">gov.uk ‘caption’ component</a> as we believe it performs better for users of screen readers. This is because many screen reader users navigate the page using heading tags. This means:
 
 <ul class="govuk-list govuk-list--bullet">
-  <li>separate</li>
-  <li>in the correct source order</li>
-  <li>displayed the correct way</li>
-  <li>read out the correct way</li>
+  <li>captions before the <code>&lt;h1&gt;</code> are often skipped</li>
+  <li>captions nested within the <code>&lt;h1&gt;</code> can be repetitive</li>
 </ul>
 
-<p class="govuk-body">Change or remove any visually hidden content to meet your users’ needs.</p>
+<p class="govuk-body">Beginning the page with an <code>&lt;h2&gt;</code> tag, although unusual, avoids these issues.</p>
+
+
+<h2 class="govuk-heading-l">Error messages</h2>
+
+<p class="govuk-body">Error messages should be styled like this:</p>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-legends-as-page-headings-with-subheading-with-error" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/page-heading/legends-as-page-headings-with-subheading-with-error/" target="_blank" title="Open Legend as page heading with subheading and error example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Legend as page heading with subheading and error</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/page-heading/legends-as-page-headings-with-subheading-with-error/" title="Legend as page heading with subheading and error example"></iframe>
+    </div>
+
+      <div class="example-example-legends-as-page-headings-with-subheading-with-error-lang example-example-legends-as-page-headings-with-subheading-with-error-lang--en ">
+        <span id="options-example-legends-as-page-headings-with-subheading-with-error"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-legends-as-page-headings-with-subheading-with-error-html" role="tab"
+                aria-controls="example-legends-as-page-headings-with-subheading-with-error-html"
+                data-track="tab-html" title="Display Legend as page heading with subheading and error example as HTML">HTML</a>
+            </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-legends-as-page-headings-with-subheading-with-error-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-caption-xl hmrc-caption-xl&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>This section is: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;<span class="hljs-name">Your</span></span> details<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;get&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--l&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__heading&quot;</span>&gt;</span>Have you changed your name?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Select whether you have changed your name
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;changed-0&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;changed-0&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;yes&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;changed-0&quot;</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;changed-0-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;changed-0&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;no&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;changed-0-2&quot;</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+    Continue
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+
+      </div>
+  </div>
+
+
+<p class="govuk-body">Make sure errors follow the <a class="govuk-link" href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> in the GOV.UK Design System and have specific error messages for specific error states.</p>
 
 <h2 class="govuk-heading-l" id="research">Research</h2>
 
-<p class="govuk-body">The recommended code has been tested with screen reader users and all browsers, devices and assistive technologies. Research showed it:</p>
+<p class="govuk-body">The recommended code has been tested with screen reader users, assistive technologies, supported browsers and multiple device types. Research showed it:</p>
 
 <ul class="govuk-list govuk-list--bullet">
   <li>displayed as expected</li>
@@ -427,6 +563,10 @@
 <p class="govuk-body">We need more research. If you have used the page heading and section heading, get in touch to share your research findings.</p>
 
 <p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/149">Discuss the page heading on GitHub</a></p>
+
+<h2 class="govuk-heading-l">Changes to this pattern</h2>
+
+<p class="govuk-body">On 31 January 2023, this pattern replaced <a class="govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-archive/page-heading/"> an older version</a>. This was because the pattern did not work in all cases, like headings as labels and legends.</p>
 
 </div>
         </div>
