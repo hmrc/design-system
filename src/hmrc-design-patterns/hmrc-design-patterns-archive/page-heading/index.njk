@@ -1,0 +1,74 @@
+---
+title: Page heading
+status: archived
+statusLink: /hmrc-design-patterns/page-heading/
+statusLinkText: a new page heading pattern
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern is the main heading of the current page, which lets the user know what information is being asked for or provided.</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use a page heading on every page.</p>
+
+<p class="govuk-body">You can also include a section heading if it helps the user know where they are in a service. For example, in long services and those with more than one section.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+{{ hmrcFrontendInfo() }}
+
+<p class="govuk-body">Every page must have a main heading coded as an <code>&lt;h1&gt;</code>.</p>
+
+{{
+  example({
+    item: 'archived/page-heading',
+    example: 'without-subheading',
+    welsh: 'without-subheading-welsh',
+    description: 'Archived page heading without subheading'
+  })
+}}
+
+<p class="govuk-body">For accessibility reasons, if you use a section heading, it should be coded as a paragraph <code>&lt;p&gt;</code> inside a <code>&lt;header&gt;</code>.</p>
+
+{{
+  example({
+    item: 'archived/page-heading',
+    example: 'with-subheading',
+    welsh: 'with-subheading-welsh',
+    description: 'Archived page heading with subheading'
+  })
+}}
+
+<p class="govuk-body">This makes sure that when using screen readers and other assistive technologies, the page heading and the section heading are:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>separate</li>
+  <li>in the correct source order</li>
+  <li>displayed the correct way</li>
+  <li>read out the correct way</li>
+</ul>
+
+<p class="govuk-body">Change or remove any visually hidden content to meet your users’ needs.</p>
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">The recommended code has been tested with screen reader users and all browsers, devices and assistive technologies. Research showed it:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>displayed as expected</li>
+  <li>worked consistently across different assistive technologies</li>
+  <li>helped users know where they were in the service</li>
+  <li>did not distract users from their task</li>
+</ul>
+
+<p class="govuk-body">We need more research. If you have used the page heading and section heading, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/149">Discuss the page heading on GitHub</a></p>
+
+{% endblock %}
