@@ -9,7 +9,7 @@ status: development
 
 {% block content %}
 
-<p class="govuk-body">The file upload pattern lets users upload files to an HMRC service.</p>
+<p class="govuk-body">The file upload pattern lets users upload files to an HMRC service. It is optimised for integration with Upscan (the HMRC file upload service).</p>
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
@@ -23,7 +23,7 @@ status: development
 
 {{ hmrcFrontendInfo() }}
 
-<p class="govuk-body">How it works depends on whether the user needs the option to upload more than one file.</p>
+<p class="govuk-body">How it works depends on whether the user needs the option to upload a single file, more than one file, or select the file type.</p>
 
 <h3 class="govuk-heading-m" id="Let users select a single file">Let users upload a single file</h3>
 
@@ -37,9 +37,31 @@ status: development
   })
 }}
 
+<h3 class="govuk-heading-m" id="Let users select a single file">Let users see the status of their upload</h3>
+
+<p class="govuk-body">Use a yellow 'UPLOADING' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file is being uploaded or scanned.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'uploading',
+    description: 'Uploading'
+  })
+}}
+
+<p class="govuk-body">Use a green 'UPLOADED' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file has been uploaded and scanned successfully. Link to a copy of the file from the filename.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'uploaded',
+    description: 'Uploaded'
+  })
+}}
+
 <h3 class="govuk-heading-m" id="let users select additional files">Let users upload additional files</h3>
 
-<p class="govuk-body">If users need the option to upload more than one file, include an additional screen asking if they want to upload another.</p>
+<p class="govuk-body">If users need the option to upload more than one file include an 'Upload another...' button.</p>
 
 {{
   example({
@@ -49,27 +71,67 @@ status: development
   })
 }}
 
+<p class="govuk-body">The button adds a new upload row.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'additional-row',
+    description: 'Let users upload additional files'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="labelled files">Let users upload multiple specifically required files</h3>
+
+<p class="govuk-body">If multiple specific file uploads are required show labelled input rows.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'labels',
+    description: 'Let users upload multiple specifically required files'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="Let users select a single file">Let users select file types</h3>
+
+<p class="govuk-body">If file type selection is required use a question page.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'types',
+    description: 'Optional yes/no question'
+  })
+}}
+
+<p class="govuk-body">Use a Yes/No question to route the user back to file type selection.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'question',
+    description: 'Optional yes/no question'
+  })
+}}
+
 <h3 class="govuk-heading-m" id="Accept multiple file types">Accept multiple file types</h3>
 
 <p class="govuk-body">Let users upload as many different file types as possible. Convert them automatically, if you need to.</p>
 
 <p class="govuk-body">If you must limit file types, let users know by using hint text.</p>
 
-<h3 class="govuk-heading-m" id="Upload in progress">Upload in progress</h3>
+<h3 class="govuk-heading-m" id="Error messages">Error messages</h3>
 
-<p class="govuk-body">Show the user that their file is being uploaded.</p>
+<p class="govuk-body">Use the file upload error messages below. Error 'The selected file could not be uploaded' should only be used if Upscan reports unknown problems with the file.</p>
 
 {{
   example({
     item: 'file-upload',
-    example: 'upload-in-progress',
-    description: 'Upload in progress'
+    example: 'errors',
+    description: 'Errors'
   })
 }}
-
-<h3 class="govuk-heading-m" id="Error messages">Error messages</h3>
-
-<p class="govuk-body">Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/file-upload/#error-messages">file upload error messages from the GOV.UK Design System </a>.</p>
 
 <h2 class="govuk-heading-l" id="research">Research</h2>
 
