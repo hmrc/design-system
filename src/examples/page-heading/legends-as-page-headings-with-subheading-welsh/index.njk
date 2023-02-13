@@ -2,19 +2,24 @@
 layout: layout-example.njk
 ---
 
-<h2 class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">This section is: </span>Your details</h2>
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-    <h1 class="govuk-fieldset__heading">Have you changed your name?</h1>
-  </legend>
-  <div class="govuk-radios">
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-0" name="changed-0" type="radio" value="yes">
-      <label class="govuk-label govuk-radios__label" for="changed-0">Yes</label>
-    </div>
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="changed-0-2" name="changed-0" type="radio" value="no">
-      <label class="govuk-label govuk-radios__label" for="changed-0-2">No</label>
-    </div>
+<h2 class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">Yr adran hon yw: </span>Eich manylion</h2>
+
+<form action="#" method="get" novalidate>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">A ydych wedi newid eich enw?</h1>
+      </legend>
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-0" name="changed-0" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="changed-0">Iawn</label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changed-0-2" name="changed-0" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="changed-0-2">Na</label>
+        </div>
+      </div>
+    </fieldset>
   </div>
-</fieldset>
+</form>
