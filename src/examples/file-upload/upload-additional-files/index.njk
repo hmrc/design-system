@@ -3,14 +3,16 @@ layout: layout-example.njk
 ---
 {%- from "hmrc/components/add-to-a-list/macro.njk" import hmrcAddToAList -%}
 
+<h1 class="govuk-heading-xl">Upload receipts</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
 <div id="file-upload-1-hint" class="govuk-hint">
     You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
 </div>
 
 <button class="govuk-button govuk-button--secondary">Upload another receipt</button>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
 
     <dl class="govuk-summary-list">
 
