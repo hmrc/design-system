@@ -11,20 +11,18 @@
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div id="file-upload-1-hint" class="govuk-hint">
-    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
-</div>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><h1 class="govuk-heading-xl">Upload receipts</h1>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <dl class="govuk-summary-list">
+<div id="file-upload-1-hint" class="govuk-hint">
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+</div>
 
-       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt1.jpg</a></dt>
-        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--green">uploaded</strong></dd>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
+<button class="govuk-button govuk-button--secondary">Upload another receipt</button>
+
+    <dl class="govuk-summary-list">
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">receipt2.jpg</dt>
@@ -32,9 +30,13 @@
         <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
       </div>
 
-    </dl>
+       <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt1.jpg</a></dt>
+        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--green">uploaded</strong></dd>
+        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
+      </div>
 
-<button class="govuk-button govuk-button--secondary">Upload another receipt</button>
+    </dl>
 
   </div>
 </div>
