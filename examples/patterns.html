@@ -778,6 +778,13 @@ Sign out      </a>
 
 
 
+<p class="govuk-body">
+Anti-dumping duty is an import duty charged in addition to normal Customs Duty and is applied in the UK and across the whole EU.</p>
+
+<p class="govuk-body">
+It’s designed to allow the UK and EU to take action against goods that are sold at less than their normal value &mdash; that being defined as the price for ‘like goods’ sold in the exporter’s home market.</p>
+
+
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -954,13 +961,6 @@ Sign out      </a>
   Yn eich blaen
 </button>
 
-
-
-<p class="govuk-body">
-Anti-dumping duty is an import duty charged in addition to normal Customs Duty and is applied in the UK and across the whole EU.</p>
-
-<p class="govuk-body">
-It’s designed to allow the UK and EU to take action against goods that are sold at less than their normal value &mdash; that being defined as the price for ‘like goods’ sold in the exporter’s home market.</p>
 
 
 <header class="hmrc-page-heading">
@@ -1494,13 +1494,11 @@ This guide details the Extra-Statutory Concessions previously operated by the In
     You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
 </div>
 
-    <dl class="govuk-summary-list">
+<div class="govuk-form-group">
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+</div>
 
-  <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt1.jpg</a></dt>
-        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--green">uploaded</strong></dd>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
+    <dl class="govuk-summary-list">
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">receipt2.jpg</dt>
@@ -1508,12 +1506,13 @@ This guide details the Extra-Statutory Concessions previously operated by the In
         <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
       </div>
 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt1.jpg</a></dt>
+        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--green">uploaded</strong></dd>
+        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
+      </div>
+
     </dl>
-
-<div class="govuk-form-group">
-
-  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-  </div>
 
   </div>
 </div>
@@ -1874,20 +1873,18 @@ Calculation worksheet
 
 <button class="govuk-button" data-module="govuk-button">
   Continue
-</button><div id="file-upload-1-hint" class="govuk-hint">
-    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
-</div>
+</button><h1 class="govuk-heading-xl">Upload receipts</h1>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <dl class="govuk-summary-list">
+<div id="file-upload-1-hint" class="govuk-hint">
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+</div>
 
-       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt1.jpg</a></dt>
-        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--green">uploaded</strong></dd>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
+<button class="govuk-button govuk-button--secondary">Upload another receipt</button>
+
+    <dl class="govuk-summary-list">
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">receipt2.jpg</dt>
@@ -1895,9 +1892,13 @@ Calculation worksheet
         <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
       </div>
 
-    </dl>
+       <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt1.jpg</a></dt>
+        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--green">uploaded</strong></dd>
+        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
+      </div>
 
-<button class="govuk-button govuk-button--secondary">Upload another receipt</button>
+    </dl>
 
   </div>
 </div>
