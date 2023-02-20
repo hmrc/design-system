@@ -1,0 +1,206 @@
+---
+layout: layout-example.njk
+---
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Select a file",
+      href: "#select-error"
+    },
+    {
+      text: "The selected file is empty",
+      href: "#empty-error"
+    },
+    {
+      text: "The selected file must be smaller than 100MB",
+      href: "#smaller-error"
+    },
+    {
+      text: "The selected file has already been uploaded",
+      href: "#already-error"
+    },
+    {
+      text: "The selected file must be a JPG, PNG or PDF",
+      href: "#type-error"
+    },
+    {
+      text: "The selected file contains a virus — upload a different one",
+      href: "#virus-error"
+    },
+    {
+      text: "The selected file could not be uploaded",
+      href: "#could-not-error"
+    },
+    {
+      text: "Select yes if you want to add a different type of supporting evidence",
+      href: "#supporting-evidence-error"
+    }
+  ]
+}) }}
+
+<h1 class="govuk-heading-xl">Upload receipts</h1>
+
+<div id="file-upload-1-hint" class="govuk-hint">
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<table class="govuk-table">
+  <tbody class="govuk-table__body">
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link" href="#"><strong>receipt1.jpg</strong></a></td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">uploaded</strong></td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "select-error",
+            name: "select-error",
+            errorMessage: {
+              text: "Select a file"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "empty-error",
+            name: "empty-error",
+            errorMessage: {
+              text: "The selected file is empty"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "smaller-error",
+            name: "smaller-error",
+            errorMessage: {
+              text: "The selected file must be smaller than 100MB"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "already-error",
+            name: "already-error",
+            errorMessage: {
+              text: "The selected file has already been uploaded"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "type-error",
+            name: "type-error",
+            errorMessage: {
+              text: "The selected file must be a JPG, PNG or PDF"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "virus-error",
+            name: "virus-error",
+            errorMessage: {
+              text: "The selected file contains a virus — upload a different one"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" colspan="2">
+        <div class="govuk-form-group--error">
+          {{ govukFileUpload({
+            id: "could-not-error",
+            name: "could-not-error",
+            errorMessage: {
+              text: "The selected file could not be uploaded"
+            }
+          }) }}
+        </div>
+        </td>
+      <td class="govuk-table__cell" style="text-align: right;"><a class="govuk-link" href="#">Remove</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<button class="govuk-button govuk-button--secondary">Upload another receipt</button>
+
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-form-group govuk-form-group--error">
+
+  <fieldset class="govuk-fieldset">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Add a different type of supporting evidence to your claim?</legend>
+
+ <p id="supporting-evidence-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Select yes if you want to add a different type of supporting evidence
+    </p>
+
+    <div class="govuk-radios">
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="another" name="another" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="another">Yes</label>
+    </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="another-2" name="another" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="another-2">No</label>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
