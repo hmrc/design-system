@@ -5,6 +5,7 @@ layout: layout-example.njk
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
   <h1 class="govuk-heading-xl">Upload invoice</h1>
 
 <div id="file-upload-1-hint" class="govuk-hint">
@@ -13,9 +14,21 @@ layout: layout-example.njk
 
   <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" value="C:\fakepath\text.txt">
 
-</div>
-
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <dl class="govuk-summary-list">
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">declaration.jpg</a><br>
+        <label class="govuk-label" for="file-upload-1">
+        Declaration
+        </label>
+        </dt>
+        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--green">uploaded</strong></dd>
+        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
+    </div>
+
+    </dl>
 
 <div class="govuk-form-group">
 
@@ -37,7 +50,7 @@ layout: layout-example.njk
     </div>
 
   </fieldset>
-
 </div>
 
+<br> 
 <button class="govuk-button" data-module="govuk-button">Continue</button>
