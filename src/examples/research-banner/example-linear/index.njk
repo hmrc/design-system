@@ -1,19 +1,11 @@
 ---
 layout: layout-example.njk
 ---
-{#%- from "hmrc/components/user-research-banner/macro.njk" import hmrcUserResearchBanner -%}
+{%- from "hmrc/components/user-research-banner/macro.njk" import hmrcUserResearchBanner -%}
 
 {{
   hmrcUserResearchBanner({
-    url: "https://www.gov.uk/government/organisations/hm-revenue-customs"
+    url: "https://www.gov.uk/government/organisations/hm-revenue-customs",
+    hideCloseButton: true
   })
-}#}
-
-<div class="hmrc-user-research-banner" data-module="hmrc-user-research-banner">
-  <div class="hmrc-user-research-banner__container govuk-width-container">
-    <div class="hmrc-user-research-banner__text">
-      <h2 class="govuk-heading-s hmrc-user-research-banner__title">Help make GOV.UK better</h2>
-      <a class="govuk-link hmrc-user-research-banner__link" rel="noopener noreferrer" href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank">Sign up to take part in research (opens in new tab)</a>
-    </div>
-  </div>
-</div>
+}}
