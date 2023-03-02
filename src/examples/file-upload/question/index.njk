@@ -1,56 +1,71 @@
 ---
 layout: layout-example.njk
 ---
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-<div class="govuk-form-group">
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-  <h1 class="govuk-heading-xl">Upload invoice</h1>
+    {{ govukFileUpload({
+      id: "file-upload-1",
+      name: "file-upload-1",
+      hint: {
+        text: "You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB."
+      },
+      label: {
+        text: "Upload invoice",
+        classes: "govuk-label--xl",
+        isPageHeading: true
+      }
+    }) }}
 
-<div id="file-upload-1-hint" class="govuk-hint">
-    You can upload your invoice as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
-</div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" value="C:\fakepath\text.txt">
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            html: '<a class="govuk-link" href="#">declaration.jpg</a><div class="govuk-body govuk-!-margin-0">Declaration</div>'
+          },
+          value: {
+            text: govukTag({ text: "uploaded", classes: "govuk-tag--green" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "declaration.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
 
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    {{ govukRadios({
+      name: "add-a-different-type-of-evidence",
+      fieldset: {
+        legend: {
+          text: "Add a different type of supporting evidence to your claim?",
+          classes: "govuk-fieldset__legend govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
 
-    <dl class="govuk-summary-list">
-
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">declaration.jpg</a><br>
-        <label class="govuk-label" for="file-upload-1">
-        Declaration
-        </label>
-        </dt>
-        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--green">uploaded</strong></dd>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-    </div>
-
-    </dl>
-
-<div class="govuk-form-group">
-
-  <fieldset class="govuk-fieldset">
-
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Add a different type of supporting evidence to your claim?</legend>
-
-    <div class="govuk-radios">
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="another" name="another" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="another">Yes</label>
-    </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="another-2" name="another" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="another-2">No</label>
-      </div>
-    </div>
-
-  </fieldset>
-</div>
-
-<br> 
-<button class="govuk-button" data-module="govuk-button">Continue</button>
+    {{ govukButton({
+      text: "Continue"
+    }) }}
