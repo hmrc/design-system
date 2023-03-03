@@ -12,39 +12,61 @@
 
   <body class="app-example-page">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-<h1 class="govuk-heading-xl">Upload receipts</h1>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-<div id="file-upload-1-hint" class="govuk-hint">
+    <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="file-upload-1">
+      Upload receipts
+    </label>
+    </h1>
+  <div id="file-upload-1-hint" class="govuk-hint">
     You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+  </div>
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
 </div>
 
-<div class="govuk-form-group">
-  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-</div>
 
-    <dl class="govuk-summary-list">
+    
+  <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            receipt2.jpg
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--yellow">
+  uploading
+</strong>
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">receipt2.jpg</dt>
-        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--yellow">uploading</strong></dd>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt1.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <a class="govuk-link" href="#">receipt1.jpg</a>
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--green">
+  uploaded
+</strong>
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key"><a class="govuk-link" href="#">receipt1.jpg</a></dt>
-        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--green">uploaded</strong></dd>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt1.jpg</span>
+            </a>
+            </dd>
+        </div>
+  </dl>
 
-    </dl>
-
+    <button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
   </div>
 </div>
-
-<button class="govuk-button" data-module="govuk-button">Continue</button>
 </body>
 
   <script src="/assets/javascripts/hmrc-design-system.js"></script>
