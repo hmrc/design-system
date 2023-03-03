@@ -1,8 +1,9 @@
 ---
 layout: layout-example.njk
 ---
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
 
 <h1 class="govuk-heading-xl">Upload receipt</h1>
 
@@ -12,18 +13,31 @@ layout: layout-example.njk
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "receipt1.jpg"
+          },
+          value: {
+            text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
 
-    <dl class="govuk-summary-list">
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">receipt1.jpg</dt>
-        <dd class="govuk-summary-list__actions"><strong class="govuk-tag govuk-tag--yellow">uploading</strong></dd>
-        <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Remove</a></dd>
-      </div>
-
-    </dl>
-
+    {{ govukButton({
+      text: "Continue"
+    }) }}
   </div>
 </div>
 
-<button class="govuk-button" data-module="govuk-button">Continue</button>
