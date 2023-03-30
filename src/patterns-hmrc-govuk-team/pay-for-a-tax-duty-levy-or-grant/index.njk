@@ -16,48 +16,30 @@ Use this pattern when a user needs to pay for a tax, duty, levy or grant.
 For an example of the pattern in use, go to ‘<a href="https://www.gov.uk/guidance/pay-stamp-duty-land-tax" class="govuk-link">Pay Stamp Duty Land Tax</a>’.
 </p>
 
-<h2 class="govuk-heading-l">How to design XML rates on HMRC.GOV.UK</h2>
-
-<p class="govuk-body">
-You need to add the XML file to the <a href="http://www.hmrc.gov.uk/softwaredevelopers/2022-exrates.html" class="govuk-link">software developer’s page</a> under the relevant sub heading.
-</p>
-
-<p class="govuk-body">
-The XML monthly rates page is located in Documentum at ‘/softwaredevelopers/[yyyy]-exrates.html’.
-</p>
-
-<p class="govuk-body">
-A new file will need to be created yearly. Use the previous year as a template.
-</p>
-
-<p class="govuk-body">
-The XML file must be uploaded to the Documentum folder at ‘/softwaredevelopers/rates/’.
-</p>
-
-<p class="govuk-body">
-You must name the XML file using the format ‘exrates-monthly-mmyy.xml’.
-</p>
-
-<p class="govuk-body">
-You must publish the XML file before you publish the CSV file on GOV.UK because you cannot schedule publishing in Documentum.
-</p>
-
 <h2 class="govuk-heading-l">How to design CVS rates on GOV.UK</h2>
 
 <h3 class="govuk-heading-m">Document type</h3>
 
-<p class="govuk-body">Publication: guidance (with a CSV attachment)</p>
+<p class="govuk-body">Detailed guide</p>
 
 <h3 class="govuk-heading-m">Publication</h3>
 
 <h4 class="govuk-heading-s">Title</h4>
 
 <p class="govuk-body">
-The title should be ‘HMRC exchange rates for [yyyy]: monthly’.
+The title should start with:
 </p>
 
 <p class="govuk-body">
-For example, ‘HMRC exchange rates for 2022: monthly’.
+‘Pay …’
+</p>
+
+<p class="govuk-body">
+‘Repay …’
+</p>
+
+<p class="govuk-body">
+Followed by the name of the tax, duty, levy or grant.
 </p>
 
 <h4 class="govuk-heading-s">Summary</h4>
