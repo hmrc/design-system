@@ -5,6 +5,7 @@ layout: twoColumnPage.njk
 status: development
 ---
 {% from "_codeSnippet.njk" import codeSnippet %}
+{% from "_example.njk" import example %}
 
 <h2 class="govuk-heading-l">When to use</h2>
 
@@ -22,9 +23,7 @@ For an example of the pattern in use, go to ‘<a href="https://www.gov.uk/guida
 
 <p class="govuk-body">Detailed guide</p>
 
-<h3 class="govuk-heading-m">Publication</h3>
-
-<h4 class="govuk-heading-s">Title</h4>
+<h3 class="govuk-heading-m">Title</h3>
 
 <p class="govuk-body">
 The title should start with:
@@ -42,13 +41,13 @@ The title should start with:
 Followed by the name of the tax, duty, levy or grant.
 </p>
 
-<h4 class="govuk-heading-s">Summary</h4>
+<h3 class="govuk-heading-m">Summary</h3>
 
 <p class="govuk-body">
 The summary should be: ‘How to pay xxxx, and how long it takes for your payment to reach HMRC’.
 </p>
 
-<h4 class="govuk-heading-s">Body</h4>
+<h3 class="govuk-heading-m">Body</h3>
 
 <p class="govuk-body">
 There are 3 optional payment methods that you may need to include:
@@ -72,24 +71,14 @@ Enter the contents in the following order and by using the following text.
 Do not include numbers in section headings.
 </p>
 
+<h3 class="govuk-heading-m">Headings and sub-headings</h3>
 
-
-
-
-
-
-
-
-
-<h4 class="govuk-heading-s">Details</h4>
-
-{{
-    codeSnippet({
-      code: '^Find [exchange rates in XML format for software developers](http://www.hmrc.gov.uk/softwaredevelopers/2021-exrates.html).^
-
-You should use these exchange rates if you have to convert any foreign currency to sterling for customs and VAT purposes.
-',
-      canCopy: true
-    })
-  }}
+{{ example({
+    item: 'pay-for-a-tax',
+    example: 'when-to-pay',
+    description: 'When to pay',
+    markdown: 'when-to-pay-markdown',
+    welsh: 'when-to-pay-welsh',
+    markdownOnly: true
+}) }}
 
