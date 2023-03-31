@@ -1,10 +1,33 @@
-## What you need
+## Pay by bank transfer
 
-You need your (number)-character reference number. This reference will always be made up of xx numbers and xx characters (for example, xxxx).
+If you pay by CHAPS (Clearing House Automated Payment System) or Faster Payments, you can submit your payment on the same or next day.
 
-You can find this on xxx.
+If you pay by Bacs (Bankers Automated Clearing System), allow 3 working days for the payment to reach HMRC.
 
-If you use an incorrect reference number:
+You should make separate payments for each unique transaction reference. 
 
-* there will be a delay in the payment being allocated correctly
-* you will receive a payment reminder
+We recommend you check the maximum transaction limit set by your bank.
+
+### Account details to use if your account is in the UK
+
+Use the following details to make a payment if your account is in the UK:
+
+* sort code — XX XX XX
+* account number — XXXXXXXX
+* account name — XXX
+
+### Account details to use if your account is overseas
+
+Use the following details to make a payment if your account is overseas:
+
+* account number (IBAN) — XXXX XXXX XXXX XXXX XXXX XX
+* bank identifier code (BIC) — XXXXXXXX
+* account name — XXX
+
+You must make all payments in sterling (GBP).
+
+If needed, you can provide your bank with the following HMRC banking address:
+
+$A
+Address
+$A
