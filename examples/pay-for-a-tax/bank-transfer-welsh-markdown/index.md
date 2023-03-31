@@ -23,7 +23,7 @@ Defnyddiwch y manylion canlynol i wneud taliad os yw’ch cyfrif yn y DU:
 Defnyddiwch y manylion canlynol i wneud taliad os yw’ch cyfrif dramor:
 
 - rhif y cyfrif (IBAN) — XXXX XXXX XXXX XXXX XXXX XX
-- cod adnabod y banc (BIC)— XXXXXXXX
+- cod adnabod y banc (BIC) — XXXXXXXX
 - enw’r cyfrif — XXX
 
 Mae’n rhaid i chi wneud pob taliad mewn punnoedd sterling (GBP).
