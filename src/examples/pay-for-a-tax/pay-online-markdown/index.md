@@ -6,7 +6,7 @@ You will be directed to sign in to your online or mobile banking account to appr
 
 The payment is usually instant but can sometimes take up to 2 hours to show in your account.
 
-Alternatively, you can make a full payment online using a card. There is a non-refundable fee if you use a corporate credit or debit card.
+Alternatively, you can make a full payment online using a debit or corporate credit card. There is a non-refundable fee if you use a corporate credit or debit card. You cannot pay by personal credit card.
 
 Your payment will be accepted on the date you make it and not the date it reaches HMRC’s account (including weekends and bank holidays).
 
