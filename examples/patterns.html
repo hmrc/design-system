@@ -12,6 +12,48 @@
 
   <body class="app-example-page">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+<!-- ACCOUNT MENU -->
+<nav id="secondary-nav" class="hmrc-account-menu" aria-label="Account" data-module="hmrc-account-menu">
+  <a href="#account-home" class="hmrc-account-menu__link hmrc-account-menu__link--home hmrc-account-menu__link--active">
+    <span class="hmrc-account-icon hmrc-account-icon--home">
+Account home    </span>
+  </a>
+
+  <a href="#" class="hmrc-account-menu__link hmrc-account-menu__link--menu js-hidden js-visible" tabindex="-1" aria-hidden="true" aria-expanded="false">
+Account menu  </a>
+
+  <ul class="hmrc-account-menu__main js-hidden">
+    <li class="hmrc-account-menu__link--back hidden" aria-hidden="true">
+      <a href="#" tabindex="-1" class="hmrc-account-menu__link">
+Back      </a>
+    </li>
+
+    <li>
+      <a href="#messages" class="hmrc-account-menu__link">
+Messages<span class="hmrc-notification-badge">2</span>
+</a>
+    </li>
+
+    <li>
+      <a href="#check-progress" class="hmrc-account-menu__link">
+Check progress      </a>
+    </li>
+
+    <li>
+      <a href="#" class="hmrc-account-menu__link">
+Profile and settings      </a>
+    </li>
+
+
+    <li>
+      <a href="#sign-out" class="hmrc-account-menu__link">
+Sign out      </a>
+    </li>
+  </ul>
+</nav>
+<!-- END ACCOUNT MENU -->
+
+
 
 
 
@@ -737,48 +779,6 @@ Anti-dumping duty is an import duty charged in addition to normal Customs Duty a
 
 <p class="govuk-body">
 It’s designed to allow the UK and EU to take action against goods that are sold at less than their normal value &mdash; that being defined as the price for ‘like goods’ sold in the exporter’s home market.</p>
-<!-- ACCOUNT MENU -->
-<nav id="secondary-nav" class="hmrc-account-menu" aria-label="Account" data-module="hmrc-account-menu">
-  <a href="#account-home" class="hmrc-account-menu__link hmrc-account-menu__link--home hmrc-account-menu__link--active">
-    <span class="hmrc-account-icon hmrc-account-icon--home">
-Account home    </span>
-  </a>
-
-  <a href="#" class="hmrc-account-menu__link hmrc-account-menu__link--menu js-hidden js-visible" tabindex="-1" aria-hidden="true" aria-expanded="false">
-Account menu  </a>
-
-  <ul class="hmrc-account-menu__main js-hidden">
-    <li class="hmrc-account-menu__link--back hidden" aria-hidden="true">
-      <a href="#" tabindex="-1" class="hmrc-account-menu__link">
-Back      </a>
-    </li>
-
-    <li>
-      <a href="#messages" class="hmrc-account-menu__link">
-Messages<span class="hmrc-notification-badge">2</span>
-</a>
-    </li>
-
-    <li>
-      <a href="#check-progress" class="hmrc-account-menu__link">
-Check progress      </a>
-    </li>
-
-    <li>
-      <a href="#" class="hmrc-account-menu__link">
-Profile and settings      </a>
-    </li>
-
-
-    <li>
-      <a href="#sign-out" class="hmrc-account-menu__link">
-Sign out      </a>
-    </li>
-  </ul>
-</nav>
-<!-- END ACCOUNT MENU -->
-
-
 
 
 <div class="govuk-form-group">
@@ -960,6 +960,26 @@ Sign out      </a>
 
 
 <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">We have confirmed your identity</h1></header>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Rydym wedi cadarnhau pwy ydych</h1></header>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Yn eich blaen
+</button>
+
+
+
+<header class="hmrc-page-heading">
   <h1 class="govuk-heading-xl">We could not confirm your identity</h1></header>
 
 
@@ -1025,26 +1045,6 @@ heb gadarnhau pwy ydych</p>
 
 <button class="govuk-button" data-module="govuk-button">
   Rhowch gynnig arall arni
-</button>
-
-
-
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">We have confirmed your identity</h1></header>
-
-
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-
-
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Rydym wedi cadarnhau pwy ydych</h1></header>
-
-
-<button class="govuk-button" data-module="govuk-button">
-  Yn eich blaen
 </button>
 
 
@@ -1184,18 +1184,6 @@ heb gadarnhau pwy ydych</p>
 <input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
 </div>
 
-
-
-
-<p class="govuk-body">
-Extra-Statutory Concessions for matters formerly administered by the Inland Revenue.
-</p>
-
-
-
-<p class="govuk-body">
-This guide details the Extra-Statutory Concessions previously operated by the Inland Revenue.
-</p>
 
 
 
@@ -1479,6 +1467,18 @@ This guide details the Extra-Statutory Concessions previously operated by the In
       <p class="govuk-body"><a href="#" class="govuk-link">Beth oedd eich barn am y gwasanaeth hwn?</a> (mae’n cymryd 30 eiliad)</p>
     </div>
   </div>
+
+
+<p class="govuk-body">
+Extra-Statutory Concessions for matters formerly administered by the Inland Revenue.
+</p>
+
+
+
+<p class="govuk-body">
+This guide details the Extra-Statutory Concessions previously operated by the Inland Revenue.
+</p>
+
 
 
 <div class="govuk-grid-row">
@@ -2067,59 +2067,6 @@ This guide details the Extra-Statutory Concessions previously operated by the In
 
 
 
-<div class="govspeak">
-  <div class="attachment-details">
-    <h2 class="govuk-heading-m documents">How to register</h2>
-  <p class="govuk-body">To register for the Soft Drinks Industry Levy, you need to have a Government Gateway user ID and password. If you do not have a user ID, you can create one the first time you register.</p>
-
-  <button class="govuk-button" data-module="govuk-button">
-  Register now
-</button>
-</div>
-</div>
-
-
-<div class="govspeak">
-  <div class="govuk-inset-text">
-    Online services may be slow during busy times. Check if there are any <a href="#" class="govuk-link">problems with this service</a>.
-  </div>
-
-
-<a href="#" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-  Start now
-  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
-  </svg></a>
-
-  <div class="attachment-details">
-  <h2 class="govuk-heading-m documents">Before you start</h2>
-  </div>
-
-  <p class="govuk-body">Check <a href="#" class="govuk-link">what to include on your return</a>.</p>
-  <p class="govuk-body">You'll need the Government Gateway user ID and password you used when you registered for the levy.</p>
-</div>
-
-
-<div class="govspeak">
-  <h2 class="govuk-heading-m documents">Documents<h2>
-  <div class="attachment">
-    <div class="attachment-thumb">
-      <a aria-hidden="true" class="thumbnail" tabindex="-1">
-        <img src="/assets/images/icon-attachment.png" alt="">
-      </a>
-    </div>
-    <div class="attachment-details">
-      <h2 class="govuk-heading-m"><a rel="external" href="#">Claim online (sign in using Government Gateway)</a></h2>
-      <p class="metadata">
-          <span class="url">https://www.tax.service.gov.uk/digital-forms/form/claim-tax-back-when-you-have-stopped-working/draft/guide</span>
-      </p>
-    </div>
-    </div>
-    </div>
-</div>
-
-
-
 <h2 class="govuk-heading-l">Example heading</h2>
 
 <p class="govuk-body">
@@ -2204,6 +2151,59 @@ This digital link is required where the data to be included in any of the boxes 
 prepared within a software program, product or application, and this data is then transferred to another program,
 product or application in order to submit the Example Return data to HMRC via the API platform.
 </p>
+
+
+
+<div class="govspeak">
+  <div class="attachment-details">
+    <h2 class="govuk-heading-m documents">How to register</h2>
+  <p class="govuk-body">To register for the Soft Drinks Industry Levy, you need to have a Government Gateway user ID and password. If you do not have a user ID, you can create one the first time you register.</p>
+
+  <button class="govuk-button" data-module="govuk-button">
+  Register now
+</button>
+</div>
+</div>
+
+
+<div class="govspeak">
+  <div class="govuk-inset-text">
+    Online services may be slow during busy times. Check if there are any <a href="#" class="govuk-link">problems with this service</a>.
+  </div>
+
+
+<a href="#" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Start now
+  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
+  </svg></a>
+
+  <div class="attachment-details">
+  <h2 class="govuk-heading-m documents">Before you start</h2>
+  </div>
+
+  <p class="govuk-body">Check <a href="#" class="govuk-link">what to include on your return</a>.</p>
+  <p class="govuk-body">You'll need the Government Gateway user ID and password you used when you registered for the levy.</p>
+</div>
+
+
+<div class="govspeak">
+  <h2 class="govuk-heading-m documents">Documents<h2>
+  <div class="attachment">
+    <div class="attachment-thumb">
+      <a aria-hidden="true" class="thumbnail" tabindex="-1">
+        <img src="/assets/images/icon-attachment.png" alt="">
+      </a>
+    </div>
+    <div class="attachment-details">
+      <h2 class="govuk-heading-m"><a rel="external" href="#">Claim online (sign in using Government Gateway)</a></h2>
+      <p class="metadata">
+          <span class="url">https://www.tax.service.gov.uk/digital-forms/form/claim-tax-back-when-you-have-stopped-working/draft/guide</span>
+      </p>
+    </div>
+    </div>
+    </div>
+</div>
 
 
 
@@ -4144,149 +4144,6 @@ Allgofnodi            </a>
 
 
 
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1></header>
-
-
-<p class="govuk-body">Try again later.</p>
-
-<p class="govuk-body">
-  You can <a class="govuk-link" href="#">change other VAT details</a>.
-</p>
-
-<p class="govuk-body">
-  <a class="govuk-link" href="#">Contact the Income Tax Helpline</a> if you need to speak to someone about your tax calculation.
-</p>
-
-
-
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1></header>
-
-
-<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
-
-<p class="govuk-body">
-  Gallwch <a class="govuk-link" href="#">newid manylion TAW eraill</a>.
-</p>
-
-<p class="govuk-body">
-  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi siarad â rhywun am eich cyfrifiad treth.
-</p>
-
-
-
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1></header>
-
-
-<p class="govuk-body">Try again later.</p>
-
-<p class="govuk-body">
-  We have not saved your answers. When the service is available, you will have to start again.
-</p>
-
-<p class="govuk-body">
-  Contact the Tax Credits Helpline if you need to make changes to your claim or speak to someone about your tax credits.
-</p>
-
-<p class="govuk-body">
-  Telephone:<br/>
-  <strong class="govuk-!-font-weight-bold">0345 300 3900</strong>
-</p>
-
-<p class="govuk-body">
-  Textphone:<br/>
-  <strong class="govuk-!-font-weight-bold">0345 300 3909</strong>
-</p>
-
-<p class="govuk-body">
-  Outside UK:<br/>
-  <strong class="govuk-!-font-weight-bold">+44 2890 538 192</strong>
-</p>
-
-<p class="govuk-body">
-  Opening times:<br/>
-  <strong class="govuk-!-font-weight-bold">Monday to Friday: 8am to 8pm
-
-  Saturday: 8am to 4pm<br/>
-  Sunday: 9am to 5pm</strong>
-</p>
-
-<p class="govuk-body">
-  Closed Easter Sunday, Christmas Day, Boxing Day and New Year’s Day.
-</p>
-
-
-
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1></header>
-
-
-<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
-
-<p class="govuk-body">
-  Nid ydym wedi cadw’ch atebion. Pan fydd y gwasanaeth ar gael, bydd yn rhaid i chi ddechrau eto.
-</p>
-
-<p class="govuk-body">
-  Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-</p>
-
-<p class="govuk-body">
-  Ffôn:<br/>
-  <strong class="govuk-!-font-weight-bold">0300 200 1900</strong>
-</p>
-
-<p class="govuk-body">
-  Ffôn testun (Saesneg yn unig):<br/>
-  <strong class="govuk-!-font-weight-bold">0345 300 3909</strong>
-</p>
-
-<p class="govuk-body">
-  Y tu allan i’r DU:<br/>
-  <strong class="govuk-!-font-weight-bold">+44 300 200 1900</strong>
-</p>
-
-<p class="govuk-body">
-  Oriau agor:<br/>
-  <strong class="govuk-!-font-weight-bold">Dydd Llun — Dydd Gwener: 08:30 — 17:30</strong>
-</p>
-
-<p class="govuk-body">
-  Ar gau ar Ddydd Sul y Pasg, Dydd Nadolig, Gŵyl San Steffan a Dydd Calan.
-</p>
-
-
-
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1></header>
-
-
-<p class="govuk-body">Try again later.</p>
-
-<p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
-
-<p class="govuk-body">
-  <a href="#" class="govuk-link">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
-</p>
-
-
-
-<header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1></header>
-
-
-<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
-
-<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
-
-<p class="govuk-body">
-  <a href="#" class="govuk-link">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
-</p>
-
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <ol class="app-task-list">
@@ -4456,6 +4313,149 @@ Allgofnodi            </a>
     </ol>
   </div>
 </div>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1></header>
+
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">
+  You can <a class="govuk-link" href="#">change other VAT details</a>.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Contact the Income Tax Helpline</a> if you need to speak to someone about your tax calculation.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1></header>
+
+
+<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
+
+<p class="govuk-body">
+  Gallwch <a class="govuk-link" href="#">newid manylion TAW eraill</a>.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="#">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi siarad â rhywun am eich cyfrifiad treth.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1></header>
+
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">
+  We have not saved your answers. When the service is available, you will have to start again.
+</p>
+
+<p class="govuk-body">
+  Contact the Tax Credits Helpline if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+<p class="govuk-body">
+  Telephone:<br/>
+  <strong class="govuk-!-font-weight-bold">0345 300 3900</strong>
+</p>
+
+<p class="govuk-body">
+  Textphone:<br/>
+  <strong class="govuk-!-font-weight-bold">0345 300 3909</strong>
+</p>
+
+<p class="govuk-body">
+  Outside UK:<br/>
+  <strong class="govuk-!-font-weight-bold">+44 2890 538 192</strong>
+</p>
+
+<p class="govuk-body">
+  Opening times:<br/>
+  <strong class="govuk-!-font-weight-bold">Monday to Friday: 8am to 8pm
+
+  Saturday: 8am to 4pm<br/>
+  Sunday: 9am to 5pm</strong>
+</p>
+
+<p class="govuk-body">
+  Closed Easter Sunday, Christmas Day, Boxing Day and New Year’s Day.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1></header>
+
+
+<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
+
+<p class="govuk-body">
+  Nid ydym wedi cadw’ch atebion. Pan fydd y gwasanaeth ar gael, bydd yn rhaid i chi ddechrau eto.
+</p>
+
+<p class="govuk-body">
+  Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
+
+<p class="govuk-body">
+  Ffôn:<br/>
+  <strong class="govuk-!-font-weight-bold">0300 200 1900</strong>
+</p>
+
+<p class="govuk-body">
+  Ffôn testun (Saesneg yn unig):<br/>
+  <strong class="govuk-!-font-weight-bold">0345 300 3909</strong>
+</p>
+
+<p class="govuk-body">
+  Y tu allan i’r DU:<br/>
+  <strong class="govuk-!-font-weight-bold">+44 300 200 1900</strong>
+</p>
+
+<p class="govuk-body">
+  Oriau agor:<br/>
+  <strong class="govuk-!-font-weight-bold">Dydd Llun — Dydd Gwener: 08:30 — 17:30</strong>
+</p>
+
+<p class="govuk-body">
+  Ar gau ar Ddydd Sul y Pasg, Dydd Nadolig, Gŵyl San Steffan a Dydd Calan.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1></header>
+
+
+<p class="govuk-body">Try again later.</p>
+
+<p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
+
+<p class="govuk-body">
+  <a href="#" class="govuk-link">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
+</p>
+
+
+
+<header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Mae’n ddrwg gennym, mae problem gyda’r gwasanaeth</h1></header>
+
+
+<p class="govuk-body">Rhowch gynnig arall arni yn nes ymlaen.</p>
+
+<p class="govuk-body">Gwnaethom gadw’ch atebion. Byddant ar gael am 30 diwrnod.</p>
+
+<p class="govuk-body">
+  <a href="#" class="govuk-link">Cysylltwch â Gwasanaeth Cwsmeriaid Cymraeg CThEM</a> os oes angen i chi wneud newidiadau i’ch cais neu siarad â rhywun am eich credydau treth.
+</p>
     <ol class="hmrc-timeline">
 <li class="hmrc-timeline__event">
         <h2 class="hmrc-timeline__event-title">Repayment complete</h2>
@@ -4640,6 +4640,57 @@ Allgofnodi            </a>
 
 
 
+<span class="govuk-caption-l">Guidance</span>
+
+<h1 class="govuk-heading-xl">Submit your Soft Drinks Industry Levy return</h1>
+
+<p class="govuk-body-l">
+Use this online service to submit a return.
+</p>
+
+<hr aria-hidden="true" class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<div class="govuk-body-s">
+ From: <a href="#" class="govuk-link">HM Revenue &amp; Customs</a>
+  Published 26 June 2018<br/>
+  Last updated 26 June 2018 — <a href="#history" class="govuk-link">see all updates</a><br/>
+</div>
+
+<div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+<button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
+</div>
+
+<p class="govuk-body">
+  Use this service to submit your Soft Drinks Industry Levy return if you’re <a href="#" class="govuk-link">registered for the levy</a>. After you’ve submitted the return, you’ll need to <a href="#" class="govuk-link">pay any levy due</a>.
+</p>
+
+<div class="govuk-inset-text">
+  Online services may be slow during busy times. Check if there are any <a href="#" class="govuk-link">problems with this service</a>.
+</div>
+
+<button class="govuk-button govuk-button--start" data-module="govuk-button">
+  Start now
+  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
+  </svg></button>
+
+<h2 class="govuk-heading-l" id="before">
+  Before you start
+</h2>
+
+<p class="govuk-body">
+  Check <a href="#" class="govuk-link">what to include on your return.</a>
+</p>
+
+<p class="govuk-body">
+  You’ll need the Government Gateway user ID and password you used when you registered for the levy.
+</p>
+
+<p class="govuk-body">
+  If you’re registered for the levy and have nothing to report for a period, you should submit a nil return, unless you’re only registered as a <a href="#" class="govuk-link">small producer</a>. If you do not submit your return when you should, HMRC can charge you an estimate of what you owe.
+</p>
+
+
 
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="vat-registration-number">
@@ -4775,58 +4826,7 @@ Allgofnodi            </a>
     </ul>
   </nav>
 
-
-
-
-<span class="govuk-caption-l">Guidance</span>
-
-<h1 class="govuk-heading-xl">Submit your Soft Drinks Industry Levy return</h1>
-
-<p class="govuk-body-l">
-Use this online service to submit a return.
-</p>
-
-<hr aria-hidden="true" class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-<div class="govuk-body-s">
- From: <a href="#" class="govuk-link">HM Revenue &amp; Customs</a>
-  Published 26 June 2018<br/>
-  Last updated 26 June 2018 — <a href="#history" class="govuk-link">see all updates</a><br/>
-</div>
-
-<div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
-<button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
-</div>
-
-<p class="govuk-body">
-  Use this service to submit your Soft Drinks Industry Levy return if you’re <a href="#" class="govuk-link">registered for the levy</a>. After you’ve submitted the return, you’ll need to <a href="#" class="govuk-link">pay any levy due</a>.
-</p>
-
-<div class="govuk-inset-text">
-  Online services may be slow during busy times. Check if there are any <a href="#" class="govuk-link">problems with this service</a>.
-</div>
-
-<button class="govuk-button govuk-button--start" data-module="govuk-button">
-  Start now
-  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
-  </svg></button>
-
-<h2 class="govuk-heading-l" id="before">
-  Before you start
-</h2>
-
-<p class="govuk-body">
-  Check <a href="#" class="govuk-link">what to include on your return.</a>
-</p>
-
-<p class="govuk-body">
-  You’ll need the Government Gateway user ID and password you used when you registered for the levy.
-</p>
-
-<p class="govuk-body">
-  If you’re registered for the levy and have nothing to report for a period, you should submit a nil return, unless you’re only registered as a <a href="#" class="govuk-link">small producer</a>. If you do not submit your return when you should, HMRC can charge you an estimate of what you owe.
-</p></body>
+</body>
 
   <script src="/assets/javascripts/hmrc-design-system.js"></script>
 </html>
