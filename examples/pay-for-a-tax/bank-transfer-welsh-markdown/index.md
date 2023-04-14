@@ -6,7 +6,7 @@ Os byddwch yn talu drwy Bacs, dylech ganiatáu 3 diwrnod gwaith i’ch taliad gy
 
 Dylech wneud taliadau ar wahân ar gyfer pob cyfeirnod trafodyn unigryw. 
 
-Rydym yn argymell eich bod yn gwirio uchafswm y terfynau trosglwyddo a osodir gan eich banc.
+Rydym yn argymell eich bod yn gwirio amserau prosesu ac uchafswm y terfynau trosglwyddo a osodir gan eich banc cyn i chi dalu.
 
 
 ### Y manylion cyfrif i’w defnyddio os yw’ch cyfrif yn y DU
