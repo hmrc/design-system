@@ -6,7 +6,7 @@ If you pay by Bacs (Bankers Automated Clearing System), allow 3 working days for
 
 You should make separate payments for each unique transaction reference. 
 
-We recommend you check your banks processing times and maximum transaction limits before you pay.
+We recommend you check your bank’s processing times and maximum transaction limits before you pay.
 
 ### Account details to use if your account is in the UK
 
