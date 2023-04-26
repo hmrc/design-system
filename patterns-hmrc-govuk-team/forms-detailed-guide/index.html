@@ -85,10 +85,6 @@
                       <a class="app-subnav__link govuk-link" href="/patterns-hmrc-govuk-team/force-of-law">
                         Force of law
                       </a>
-                    </li><li class="app-subnav__section-item">
-                      <a class="app-subnav__link govuk-link" href="/patterns-hmrc-govuk-team/forms-check">
-                        Forms: check which document type to use
-                      </a>
                     </li><li class="app-subnav__section-item app-subnav__section-item--current">
                       <a class="app-subnav__link govuk-link" href="/patterns-hmrc-govuk-team/forms-detailed-guide">
                         Forms: in a detailed guide
@@ -181,90 +177,224 @@
   
   
 
-<p class="govuk-body">
-Before you use this pattern, <a href="/patterns-hmrc-govuk-team/forms-check/" class="govuk-link">check which document type to use</a> to decide
-if you should use a publication instead.
-</p>
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
 <p class="govuk-body">
-For an example that includes a:
+Use this pattern if users need to read detailed guidance before using the form, such as:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
-<li>PDF form, check <a href="https://www.gov.uk/guidance/apply-to-use-the-freeport-customs-special-procedure" class="govuk-link">apply to use the UK Freeport customs special procedure</a></li>
-<li>Print and post form, check <a href="https://www.gov.uk/guidance/apply-for-an-advance-origin-ruling" class="govuk-link">apply for an Advance Origin Ruling</a></li>
+<li>how to use the form</li>
+<li>when to use the form</li>
+<li>eligibility criteria</li>
 </ul>
 
-
-<h2 class="govuk-heading-l">How to design using this pattern</h2>
-
-<h3 class="govuk-heading-m">Document type</h3>
-
-<p class="govuk-body">Detailed guide</p>
-
-<h3 class="govuk-heading-m">G-Forms</h3>
-
 <p class="govuk-body">
-G-Forms are hosted on https://tax.service.gov.uk. Depending on the design of the
-detailed guide, use either an inline link or a <a href="/patterns-hmrc-govuk-team/green-button/" class="govuk-link">green button</a>.
-</p>
-
-<p class="govuk-body">These forms will not need ‘Read the accessibility statement for HMRC forms’.</p>
-
-<h3 class="govuk-heading-m">Open Document Formats</h3>
-
-<p class="govuk-body">If the form is in Open Document Format, it will not need ‘Read the accessibility statement for HMRC forms’.</p>
-
-<p class="govuk-body">
-You must <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-
-uk/markdown#publication-box" class="govuk-link">use the publication box !@n markdown in
-Whitehall</a>.
-</p>
-
-<h3 class="govuk-heading-m">Print and post forms</h3>
-
-<p class="govuk-body">
-These will be hosted on https://public-online.hmrc.gov.uk/lc/content/.
+Before you create the new detailed guide, check if any of the information is already somewhere else, for example in mainstream content or a specialist guide. If it is, do not repeat it, insert a link instead.
 </p>
 
 <p class="govuk-body">
-If the form is print and post, include the following markdown:
+Types of form that can be included in this format are: 
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>PDFs that can be completed on-screen (interactive) — these are added as file attachments and require Adobe to open and complete</li>
+<li>PDFs that cannot be completed on screen (not interactive) — these are added as file attachments and do not require Adobe to open</li>
+<li>LC forms — these are added as external link attachments and the URL will begin with: https://public-online.hmrc.gov.uk/lc/content/</li>
+<li>G-forms — these are added as external link attachments and the URL will begin with: https://tax.service.gov.uk</li>
+<li>forms in open document formats — forms in .ods or odt. format are added as file attachments</li>
+<li>forms sent by email (also known as KANA forms) — these are added as external link attachments and the URL will begin with: https://online.hmrc.gov.uk/shortforms</li>
+</ul>
+
+<p class="govuk-body">
+More than one type of form can be hosted on the same page. You can still only use the green button once on the page (check the <a href="/patterns-hmrc-govuk-team/green-button/" class="govuk-link">green button pattern</a> for more information). For example: <a href="https://www.gov.uk/guidance/register-as-a-bingo-promoter" class="govuk-link">Register as a bingo promoter</a>.
+</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+
+<p class="govuk-body">
+Do not use this pattern if users do not need to read any detailed guidance before using the form, and only need to:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>check how to use the form</li>
+<li>check where to send the form</li>
+<li>get any contact information for help and advice</li>
+<li>sign into the Government Gateway</li>
+</ul>
+
+<p class="govuk-body">
+If this applies, you should use a <a href="/patterns-hmrc-govuk-team/forms-publication" class="govuk-link">publication guidance format</a>.
+</p>
+
+<h2 class="govuk-heading-l" id="how-to-design-using-this-pattern">How to design using this pattern</h2>
+
+<h3 class="govuk-heading-m" id="document-type">Document type</h3>
+
+<p class="govuk-body" id="detailed-guide">Detailed guide</p>
+
+<h3 class="govuk-heading-m" id="title">Title</h3>
+
+<p class="govuk-body" id="detailed-guide">
+Decide if the title should focus on the action a user needs to take or the name of the form. This will depend on how users will find and navigate to the form.
+</p>
+
+<p class="govuk-body">
+Try to avoid including the form number. 
+</p>
+
+<h3 class="govuk-heading-m" id="summary">Summary</h3>
+
+<p class="govuk-body">
+If there’s a form number, you should include it. For example, ‘Register your business for VAT if you’re distance selling into Northern Ireland using form VAT1A.’
+</p>
+
+<h3 class="govuk-heading-m" id="body">Body</h3>
+
+<p class="govuk-body">
+Link to any related guidance in a call to action box. For example, this guide might explain how to use the form, but there may also be mainstream guidance on eligibility.
+</p>
+
+<p class="govuk-body">
+When adding file attachments, <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown#publication-box" class="govuk-link">use the publication box !@n markdown in Whitehall</a>. 
+</p>
+
+<h4 class="govuk-heading-s" id="wales">If the form is applicable in Wales</h4>
+
+<p class="govuk-body">
+If the form is applicable in Wales, but is not translated, include the following text:
 </p>
 
     <div class="app-code-snippet app-code-snippet--copy">
-      <pre data-module="app-copy"><code class="govuk-body-s">s1. You need to open and complete this form online. As you cannot save your progress, you may want to get all your information together before you start.
-
-s2. Fill in [name of form](LINK).
-
-s3. Print and post it to HMRC, using the postal address shown on the form.
-
-^This file may not be suitable if you use assistive technology — such as a screen reader. If you need a more accessible format email &lt;different.format@hmrc.gov.uk&gt; and tell us what format you need. It will help if you tell us what assistive technology you use. Read the [accessibility statement for HMRC forms](https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms).</code></pre>
+      <pre data-module="app-copy"><code class="govuk-body-s">Email HMRC to [ask for the form in Welsh](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/welsh-language-helplines#email).</code></pre>
     </div>
 
 
-  <p class="govuk-body">You should check with the team who are building the form and the subject matter expert if you need to include the following:</p>
+<p class="govuk-body">
+If the form is translated into Welsh, you do not need to include this, but you must create a Welsh version of the entire page.
+</p>
 
-      <div class="app-code-snippet app-code-snippet--copy">
+<h4 class="govuk-heading-s" id="accessibility">Accessibility</h4>
+
+<p class="govuk-body">
+Do not tick ‘Attachment is accessible’ — the attachment must always have the ‘not suitable for assistive technology’ callout.
+</p>
+
+<p class="govuk-body">
+You do not need to include a link to the Accessibility Statement for forms in open document formats (odt. and .ods), G-forms or PDFs that you cannot complete on screen.
+</p>
+
+<p class="govuk-body">
+For any other formats, include the following text under the link to the form:
+</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+      <pre data-module="app-copy"><code class="govuk-body-s">^This file may not be suitable if you use assistive technology (such as a screen reader). If you need a more accessible format, email &lt;different.format@hmrc.gov.uk&gt; and tell us what format you need. It will help if you tell us what assistive technology you use. Read the [accessibility statement for HMRC forms](https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms).</code></pre>
+    </div>
+
+
+<h3 class="govuk-heading-m" id="formats">Specific form formats</h3>
+
+<h4 class="govuk-heading-s" id="gforms">PDFs that cannot be completed on screen</h4>
+
+<p class="govuk-body">
+These are PDFs that must be printed before they can be completed. They do not require Adobe.
+</p>
+
+<p class="govuk-body">
+These do not need any specific instructions for the user.
+</p>
+
+<p class="govuk-body">
+If the address to send the form is not included on the form itself, include the following text under the link to the form:
+</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+      <pre data-module="app-copy"><code class="govuk-body-s">## Where to send the form
+
+$A
+
+$A</code></pre>
+    </div>
+
+
+<h4 class="govuk-heading-s" id="LC-forms">LC forms</h4>
+
+<p class="govuk-body">
+These will be hosted on https://public-online.hmrc.gov.uk/lc/content/
+</p>
+
+<p class="govuk-body">
+The user will fill these forms online and then print and post them.
+</p>
+
+<p class="govuk-body">
+Include the following text:
+</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+      <pre data-module="app-copy"><code class="govuk-body-s">s1. Get all of your information together before you start. You will fill this form in online and you cannot save your progress.
+
+s2. Fill in [name of form](LINK).
+
+s3. Print and post it to HMRC, using the postal address shown on the form.</code></pre>
+    </div>
+
+
+<p class="govuk-body">
+If the address to send the form is not included on the form itself, remove ‘using the postal address shown on the form’ from step 3 and include the following text under the steps:
+</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+      <pre data-module="app-copy"><code class="govuk-body-s">## Where to send the form
+
+$A
+
+$A </code></pre>
+    </div>
+
+
+<p class="govuk-body">
+Check with the subject matter expert if you need to include the following text:
+</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
       <pre data-module="app-copy"><code class="govuk-body-s">If the form does not open, then [contact the Online services helpdesks for more help](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/online-services-helpdesk).</code></pre>
     </div>
 
 
-  <h3 class="govuk-heading-m">PDF forms that can be completed on-screen</h3>
+<h4 class="govuk-heading-s" id="gforms">G-forms (Government Gateway)</h4>
 
-  <p class="govuk-body">
-  You must <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-
-uk/markdown#publication-box" class="govuk-link">use the publication box !@n markdown in
-Whitehall</a> to attach the PDF form.
+<p class="govuk-body">
+G-Forms are hosted on: https://www.tax.service.gov.uk
 </p>
 
 <p class="govuk-body">
-Do not tick ‘Attachment is accessible’ — as the attachment must always have the ‘not
-suitable for assistive technology’ callout.
+If the URL includes ‘fill-online’, check the guidance page this links to and avoid any repetition.
 </p>
 
 <p class="govuk-body">
-If the form is in PDF format, include the following markdown:
+Depending on the design of the detailed guide, use either an inline link or a <a href="/patterns-hmrc-govuk-team/green-button/" class="govuk-link">green button</a>.
 </p>
+
+<p class="govuk-body">
+Use the following markdown before linking to the G-form:
+</p>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+      <pre data-module="app-copy"><code class="govuk-body-s">## Apply/Register online
+You’ll need to either:
+
+* sign in with your Government Gateway user ID and password (if you do not have a user ID, you can create one when you first try to sign in)
+
+* use your email address to get a confirmation code that you can use to sign in
+</code></pre>
+    </div>
+
+
+<h4 class="govuk-heading-s" id="PDF">PDF forms that can be completed on-screen</h4>
+
+<p class="govuk-body">Include the following markdown:</p>
 
     <div class="app-code-snippet app-code-snippet--copy">
       <pre data-module="app-copy"><code class="govuk-body-s">## How to complete the form
@@ -279,27 +409,25 @@ s3. Complete it on-screen.
 
 !@n
 
-Read the [accessibility statement for HMRC forms](https://www.gov.uk/guidance/accessibility-statement-for-hmrc-interactive-forms).
-
-^It may not work it you try to open it in your internet browser. If the form does not open, then contact the [Online services helpdesks] (https://www.gov.uk/government/organisations/hm-revenue-
-customs/contact/online-services-helpdesk) for more help.</code></pre>
+^The form may not work if you try to open it in your internet browser. If the form does not open, contact the [Online services helpdesk] (https://www.gov.uk/government/organisations/hm-revenue-customs/contact/online-services-helpdesk).
+</code></pre>
     </div>
 
 
-  <h3 class="govuk-heading-m">Welsh translation</h3>
+<h4 class="govuk-heading-s" id="open">Forms in open document formats</h4>
 
-  <p class="govuk-body">
-If the form is not translated into Welsh and is applicable in Wales, include:
-</p>
+<p class="govuk-body">These include .odt and .ods formats. </p>
 
-    <div class="app-code-snippet app-code-snippet--copy">
-      <pre data-module="app-copy"><code class="govuk-body-s">Email HMRC to [ask for the form in Welsh](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/welsh-language-helplines#email).</code></pre>
-    </div>
+<p class="govuk-body">These do not need any specific instructions for the user.</p>
 
+<h4 class="govuk-heading-s" id="kana">Forms sent by email (KANA forms)</h4>
 
-  <p class="govuk-body">
-  If the form is translated into Welsh, you do not need to include this in either the
-English or Welsh version.
+<p class="govuk-body">These do not need any specific instructions for the user.</p>
+
+<p class="govuk-body">These forms are hosted on: https://online.hmrc.gov.uk/shortforms</p>
+
+<p class="govuk-body">
+For example: <a href="https://www.tax.service.gov.uk/shortforms/form/AAG1_N?dept-name=&sub-dept-name=&location=35&origin=http://www.hmrc.gov.uk" class="govuk-link">Disclosure Of Avoidance Scheme - form AAG1</a>.
 </p></div>
         </div>
       </main>
