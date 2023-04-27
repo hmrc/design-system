@@ -37,28 +37,6 @@ status: development
   })
 }}
 
-<h3 class="govuk-heading-m" id="let-users-see-the-status-of-their-upload">Let users see the status of their upload</h3>
-
-<p class="govuk-body">Use a yellow 'UPLOADING' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file is being uploaded or scanned.</p>
-
-{{
-  example({
-    item: 'file-upload',
-    example: 'uploading',
-    description: 'Uploading'
-  })
-}}
-
-<p class="govuk-body">Use a green 'UPLOADED' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file has been uploaded and scanned successfully. Link to a copy of the file from the filename.</p>
-
-{{
-  example({
-    item: 'file-upload',
-    example: 'uploaded',
-    description: 'Uploaded'
-  })
-}}
-
 <h3 class="govuk-heading-m" id="let-users-upload-additional-files">Let users upload additional files</h3>
 
 <p class="govuk-body">If users need the option to upload more than one file include an 'Upload another...' button.</p>
@@ -114,6 +92,32 @@ status: development
     description: 'Let users upload multiple specifically required files'
   })
 }}
+
+<h3 class="govuk-heading-m" id="make-users-aware-of-the-status-of-their-upload">Make users aware of the status of their upload</h3>
+
+<p class="govuk-body">Use a yellow 'UPLOADING' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show that a file is being uploaded or scanned. When JavaScript isn’t available include ‘Refresh page to update file upload progress’ link to the same page above the summary list.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'uploading',
+    description: 'Uploading'
+  })
+}}
+
+<p class="govuk-body">Use a green 'UPLOADED' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file has been uploaded and scanned successfully. Announce '[file name] uploaded' in an aria-live region. Link to a copy of the file from the filename..</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'uploaded',
+    description: 'Uploaded'
+  })
+}}
+
+<h4 class="govuk-heading-s">Multiple file uploads (subtitle)</h4>
+
+<p class="govuk-body">Add a polite govuk-visually-hidden aria-live region above the summary list of files ‘X of X files uploaded.’. When JavaScript isn’t available ensure this otherwise visually hidden content is shown.</p>
 
 <h3 class="govuk-heading-m" id="accept-multiple-file-types">Accept multiple file types</h3>
 
