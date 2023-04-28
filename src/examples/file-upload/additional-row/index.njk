@@ -21,7 +21,12 @@ layout: layout-example.njk
       }
     }) }}
 
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 of 2 files uploaded.</div>
+
     {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
       rows: [
         {
           key: {
