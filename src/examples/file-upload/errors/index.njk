@@ -59,23 +59,29 @@ layout: layout-example.njk
 
     <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 of 1 files uploaded.</div>
 
-    <table class="govuk-table">
-      <colgroup>
-        <col>
-        <col span="2">
-        <col span="1">
-      </colgroup>
-
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link" href="#"><strong>receipt1.jpg</strong></a></td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">uploaded</strong></td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
+      rows: [
+        {
+          key: {
+            html: '<a class="govuk-link" href="#">receipt1.jpg</a>'
+          },
+          value: {
+            text: govukTag({ text: "uploaded", classes: "govuk-tag--green" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "select-error",
               name: "select-error",
               errorMessage: {
@@ -85,14 +91,24 @@ layout: layout-example.njk
                 text: "Receipt 2",
                 classes: "govuk-visually-hidden"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "empty-error",
               name: "empty-error",
               errorMessage: {
@@ -102,14 +118,24 @@ layout: layout-example.njk
                 text: "Receipt 3",
                 classes: "govuk-visually-hidden"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "smaller-error",
               name: "smaller-error",
               errorMessage: {
@@ -119,14 +145,24 @@ layout: layout-example.njk
                 text: "Receipt 4",
                 classes: "govuk-visually-hidden"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "already-error",
               name: "already-error",
               errorMessage: {
@@ -136,14 +172,24 @@ layout: layout-example.njk
                 text: "Receipt 5",
                 classes: "govuk-visually-hidden"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "type-error",
               name: "type-error",
               errorMessage: {
@@ -153,14 +199,24 @@ layout: layout-example.njk
                 text: "Receipt 6",
                 classes: "govuk-visually-hidden"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "virus-error",
               name: "virus-error",
               errorMessage: {
@@ -170,14 +226,24 @@ layout: layout-example.njk
                 text: "Receipt 7",
                 classes: "govuk-visually-hidden"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "could-not-error",
               name: "could-not-error",
               errorMessage: {
@@ -187,12 +253,23 @@ layout: layout-example.njk
                 text: "Receipt 8",
                 classes: "govuk-visually-hidden"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-      </tbody>
-    </table>
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
 
     {{ govukButton({
       text: "Upload another receipt",
