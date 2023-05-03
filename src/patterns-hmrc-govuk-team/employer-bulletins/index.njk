@@ -1,0 +1,75 @@
+---
+title: Employer bulletins
+menuText: Employer bulletins
+layout: twoColumnPage.njk
+---
+{% from "_codeSnippet.njk" import codeSnippet %}
+{% from "_example.njk" import example %}
+
+<h2 class="govuk-heading-l" id="when">When to use</h2>
+
+<p class="govuk-body">
+Use this pattern when creating or amending employer bulletins.
+</p>
+
+<h2 class="govuk-heading-l" id="how">How to design using this pattern</h2>
+
+<h3 class="govuk-heading-m" id="type">Document type</h3>
+
+<p class="govuk-body">Publication: guidance (with an HTML attachment)</p>
+
+<h3 class="govuk-heading-m">Publication</h3>
+
+<h4 class="govuk-heading-s" id="title">Title</h4>
+
+{{
+    codeSnippet({
+      code: 'Employer bulletin: xxx [Month] xxx [Year]',
+      canCopy: true
+    })
+  }}
+
+<h4 class="govuk-heading-s" id="summary">Summary</h4>
+
+{{
+    codeSnippet({
+      code: 'A bi-monthly magazine for employers and agents that gives up-to-date information on payroll topics.',
+      canCopy: true
+    })
+  }}
+
+<h4 class="govuk-heading-s">Body</h4>
+
+{{ example({
+    item: 'employer-bulletins',
+    example: 'body',
+    description: 'body',
+    markdown: 'body-markdown',
+    markdownOnly: true
+}) }}
+
+<h3 class="govuk-heading-m">HTML attachment</h3>
+
+<h4 class="govuk-heading-s">Title</h4>
+
+{{
+    codeSnippet({
+      code: 'xxx [Month] xxx [Year] issue of the employer bulletin',
+      canCopy: true
+    })
+  }}
+
+<h4 class="govuk-heading-s">Body</h4>
+
+<p class="govuk-body">
+Enter the contents of the employer bulletin.
+</p>
+
+<p class="govuk-body">
+Do not include numbers in section headings.
+</p>
+
+<h3 class="govuk-heading-m">Collection page</h3>
+
+<p class="govuk-body">Add the URL of any new page to the <a href="https://www.gov.uk/government/collections/hm-revenue-and-customs-employer-bulletin" class="govuk-link">HMRC employer bulletins collection</a>. Do not create a public change note.
+</p>
