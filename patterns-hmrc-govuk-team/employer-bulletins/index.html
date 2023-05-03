@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exchange rates — monthly - Patterns for the HMRC GOV.UK team - Design resources for HMRC — GOV.UK</title>
+  <title>Employer bulletins - Patterns for the HMRC GOV.UK team - Design resources for HMRC — GOV.UK</title>
   <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
   <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   <!--[if lt IE 8]>
@@ -73,11 +73,11 @@
 
           <h2 class="govuk-heading-m govuk-visually-hidden" id="nav-header"><a href="/patterns-hmrc-govuk-team/">Pages in this section</a></h2>
 
-          <div class="app-subnav"><ul class="app-subnav__section"><li class="app-subnav__section-item">
+          <div class="app-subnav"><ul class="app-subnav__section"><li class="app-subnav__section-item app-subnav__section-item--current">
                       <a class="app-subnav__link govuk-link" href="/patterns-hmrc-govuk-team/employer-bulletins">
                         Employer bulletins
                       </a>
-                    </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                    </li><li class="app-subnav__section-item">
                       <a class="app-subnav__link govuk-link" href="/patterns-hmrc-govuk-team/exchange-rates-monthly">
                         Exchange rates — monthly
                       </a>
@@ -174,134 +174,115 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <header class="hmrc-page-heading">
-  <h1 class="govuk-heading-xl">Exchange rates — monthly</h1></header>
+  <h1 class="govuk-heading-xl">Employer bulletins</h1></header>
 
 
             
   
   
 
-<h2 class="govuk-heading-l">When to use</h2>
+<h2 class="govuk-heading-l" id="when">When to use</h2>
 
 <p class="govuk-body">
-You should only use this pattern if you’re publishing monthly exchange rates in both CSV and XML. You will need to have access to Documentum.
+Use this pattern when creating or amending employer bulletins.
 </p>
 
-<h2 class="govuk-heading-l">How to design XML rates on HMRC.GOV.UK</h2>
+<h2 class="govuk-heading-l" id="how">How to design using this pattern</h2>
 
-<p class="govuk-body">
-You need to add the XML file to the <a href="http://www.hmrc.gov.uk/softwaredevelopers/2022-exrates.html" class="govuk-link">software developer’s page</a> under the relevant sub heading.
-</p>
+<h3 class="govuk-heading-m" id="type">Document type</h3>
 
-<p class="govuk-body">
-The XML monthly rates page is located in Documentum at ‘/softwaredevelopers/[yyyy]-exrates.html’.
-</p>
-
-<p class="govuk-body">
-A new file will need to be created yearly. Use the previous year as a template.
-</p>
-
-<p class="govuk-body">
-The XML file must be uploaded to the Documentum folder at ‘/softwaredevelopers/rates/’.
-</p>
-
-<p class="govuk-body">
-You must name the XML file using the format ‘exrates-monthly-mmyy.xml’.
-</p>
-
-<p class="govuk-body">
-You must publish the XML file before you publish the CSV file on GOV.UK because you cannot schedule publishing in Documentum.
-</p>
-
-<h2 class="govuk-heading-l">How to design CVS rates on GOV.UK</h2>
-
-<h3 class="govuk-heading-m">Document type</h3>
-
-<p class="govuk-body">Publication: guidance (with a CSV attachment)</p>
+<p class="govuk-body">Publication: guidance (with an HTML attachment)</p>
 
 <h3 class="govuk-heading-m">Publication</h3>
 
-<h4 class="govuk-heading-s">Title</h4>
-
-<p class="govuk-body">
-The title should be ‘HMRC exchange rates for [yyyy]: monthly’.
-</p>
-
-<p class="govuk-body">
-For example, ‘HMRC exchange rates for 2022: monthly’.
-</p>
-
-<h4 class="govuk-heading-s">Summary</h4>
-
-<p class="govuk-body">
-The summary should be ‘Find foreign exchange rates issued by HMRC in CSV and XML format.’
-</p>
-
-<h4 class="govuk-heading-s">Details</h4>
+<h4 class="govuk-heading-s" id="title">Title</h4>
 
     <div class="app-code-snippet app-code-snippet--copy">
-      <pre data-module="app-copy"><code class="govuk-body-s">^Find [exchange rates in XML format for software developers](http://www.hmrc.gov.uk/softwaredevelopers/2021-exrates.html).^
-
-You should use these exchange rates if you have to convert any foreign currency to sterling for customs and VAT purposes.
-
-The EU rate includes the following countries:
-
-- Austria
-- Belgium
-- Cyprus
-- Estonia
-- Finland
-- France
-- Germany
-- Greece
-- Ireland
-- Italy
-- Latvia
-- Lithuania
-- Luxembourg
-- Malta
-- Netherlands
-- Portugal
-- Slovakia
-- Slovenia
-- Spain
-
-You should only use the EU rate for conversion of invoices drawn in the euro. Do not confuse it with the euro rate published for Agricultural Levy purposes or the bit error rate (BER) daily rate set to help payment of taxes in the euro.
-</code></pre>
+      <pre data-module="app-copy"><code class="govuk-body-s">Employer bulletin: xxx [Month] xxx [Year]</code></pre>
     </div>
 
 
-<h3 class="govuk-heading-m">CSV attachment</h3>
+<h4 class="govuk-heading-s" id="summary">Summary</h4>
+
+    <div class="app-code-snippet app-code-snippet--copy">
+      <pre data-module="app-copy"><code class="govuk-body-s">A bi-monthly magazine for employers and agents that gives up-to-date information on payroll topics.</code></pre>
+    </div>
+
+
+<h4 class="govuk-heading-s">Body</h4>
+
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-body" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/employer-bulletins/body/" target="_blank" title="Open body example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: body</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/employer-bulletins/body/" title="body example"></iframe>
+    </div>
+
+      <div class="example-example-body-lang example-example-body-lang--en ">
+        <span id="options-example-body"></span>
+        <ul class="app-tabs" role="tablist">
+
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-body-markdown" role="tab"
+                  aria-controls="example-body-markdown"
+                  data-track="tab-markdown" title="Display body example as Markdown">Markdown</a>
+              </li>
+        </ul>
+
+
+
+            <div class="app-tabs__container js-tabs__container" id="example-body-markdown" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs md">HMRC publishes the employer bulletin 6 times a year, giving employers and agents the latest information on topics and issues that may affect them.
+
+The xxx [Month] edition of the employer bulletin includes articles on:
+<span class="hljs-bullet">*</span> xxx
+
+You can register for [<span class="hljs-string">HMRC’s employer email alert service</span>](<span class="hljs-link">https://www.public-inf.co.uk/</span>) to receive emails from HMRC which tell you when the latest issue is available.
+
+You can read the bulletin on screen or print it off. It’s compatible with most screen reading software packages.</code>
+              </pre>
+
+            </div>
+      </div>
+  </div>
+
+
+<h3 class="govuk-heading-m">HTML attachment</h3>
 
 <h4 class="govuk-heading-s">Title</h4>
 
+    <div class="app-code-snippet app-code-snippet--copy">
+      <pre data-module="app-copy"><code class="govuk-body-s">xxx [Month] xxx [Year] issue of the employer bulletin</code></pre>
+    </div>
+
+
+<h4 class="govuk-heading-s">Body</h4>
+
 <p class="govuk-body">
-The title should be ‘[Month] [yyyy]: monthly exchange rates’.
+Enter the contents of the employer bulletin.
 </p>
 
 <p class="govuk-body">
-For example, 'July 2022: monthly exchange rates’.
+Do not include numbers in section headings.
 </p>
-
-<h4 class="govuk-heading-s">Name of attachment</h4>
-
-<p class="govuk-body">
-You must make sure the name of the CSV file is ‘exrates-monthly-mmyy.csv’ before you upload it.
-</p>
-
-<h3 class="govuk-heading-m">Associations and specialist sector tags</h3>
-
-<ul class="govuk-list govuk-list--bullet">
-<li>Business and industry > Trade and investment > Customs declarations, duties and tariffs (import and export) > Exchange rates</li>
-<li>Business tax: Import, export and customs for businesses</li>
-</ul>
 
 <h3 class="govuk-heading-m">Collection page</h3>
 
-<p class="govuk-body">
-Add the URL of any new page to the <a href="https://www.gov.uk/government/collections/exchange-rates-for-customs-and-vat" class="govuk-link">HMRC exchange rates collection</a>. Do not create a public change note.
-</p>
-</div>
+<p class="govuk-body">Add the URL of any new page to the <a href="https://www.gov.uk/government/collections/hm-revenue-and-customs-employer-bulletin" class="govuk-link">HMRC employer bulletins collection</a>. Do not create a public change note.
+</p></div>
         </div>
       </main>
     </div>
