@@ -13,14 +13,14 @@ layout: layout-example.njk
         You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
     </div>
 
+    <p class="govuk-body">1 of 2 files uploaded</p>
+
     {{ govukButton({
       text: "Upload another receipt",
       classes: "govuk-button--secondary"
     }) }}
 
     <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
-
-    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 of 2 files uploaded.</div>
 
     {{ govukSummaryList({
       classes: 'govuk-summary-list--long-key',
