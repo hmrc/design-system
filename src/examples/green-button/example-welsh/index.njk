@@ -1,0 +1,24 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-xl">Gwirio’ch cofnod Yswiriant Gwladol</h1>
+
+<p class="govuk-body">Gallwch wirio’ch cofnod Yswiriant Gwladol ar-lein er mwyn gweld:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>yr hyn yr ydych wedi’i dalu, hyd at ddechrau’r flwyddyn dreth bresennol (6 Ebrill 2019)</li>
+  <li>unrhyw <a href="#" class="govuk-link">gredydau Yswiriant Gwladol</a> yr ydych wedi’u cael</li>
+  <li>a oes bylchau o ran cyfraniadau neu gredydau sy’n golygu bod yna flynyddoedd nad ydynt yn eu cyfrif tuag at eich Pensiwn y Wladwriaeth (nid ydynt yn ‘flynyddoedd cymhwysol’)</li>
+  <li>a allwch dalu <a href="#" class="govuk-link">cyfraniadau gwirfoddol</a> i lenwi unrhyw fylchau, a faint y bydd hyn yn ei gostio</li>
+</ul>
+
+<p class="govuk-body">
+  Nid yw’ch cofnod ar-lein yn cynnwys faint o <a href="#" class="govuk-link">Bensiwn y Wladwriaeth yr ydych yn debygol o’i gael</a>.
+</p>
+
+{{ govukButton({
+  text: "Dechrau nawr",
+  isStartButton: true
+}) }}
