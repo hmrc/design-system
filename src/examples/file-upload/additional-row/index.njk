@@ -8,16 +8,20 @@ layout: layout-example.njk
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Upload receipts</h1>
+
+    <div id="file-upload-1-hint" class="govuk-hint">
+        You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+    </div>
+
+    <p class="govuk-body" aria-live="polite">1 of 2 files uploaded</p>
+
     {{ govukFileUpload({
       id: "file-upload-1",
       name: "file-upload-1",
-      hint: {
-        text: "You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB."
-      },
       label: {
         text: "Upload receipts",
-        classes: "govuk-label--xl",
-        isPageHeading: true
+        classes: "govuk-visually-hidden"
       }
     }) }}
 

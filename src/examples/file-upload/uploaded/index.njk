@@ -16,7 +16,7 @@ layout: layout-example.njk
 
     <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
 
-    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 of 1 files uploaded.</div>
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">file uploaded.</div>
 
     {{ govukSummaryList({
       classes: 'govuk-summary-list--long-key',
@@ -40,6 +40,8 @@ layout: layout-example.njk
         }
       ]
     }) }}
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">file uploaded.</div>
 
     {{ govukButton({
       text: "Continue"
