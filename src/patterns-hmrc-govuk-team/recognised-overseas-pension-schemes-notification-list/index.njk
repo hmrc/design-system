@@ -34,11 +34,21 @@ layout: twoColumnPage.njk
     example: 'example',
     description: 'Recognised overseas pension schemes notification list',
     markdown: 'example-markdown',
+    welsh: 'example-welsh',
+    markdownWelsh: 'example-welsh-markdown',
     markdownOnly: true
 }) }}
 
 <h3 class="govuk-heading-m">Public change note</h3>
 
-<p class="govuk-body">Say ‘The recognised overseas pension schemes notification list has been updated, with [number] schemes added and [number] removed.’<p>
+{{ example({
+    item: 'recognised-overseas-pension-schemes-notification-list',
+    example: 'change',
+    description: 'Public change note',
+    markdown: 'change-markdown',
+    welsh: 'change-welsh',
+    markdownWelsh: 'change-welsh-markdown',
+    markdownOnly: true
+}) }}
 
 <p class="govuk-body">Do not include any company names in the change note.</p>
