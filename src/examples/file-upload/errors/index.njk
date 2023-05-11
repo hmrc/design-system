@@ -85,19 +85,15 @@ layout: layout-example.njk
         },
         {
           key: {
-            html: govukFileUpload({
-              id: "select-error",
-              name: "select-error",
-              errorMessage: {
-                text: "Select a file"
-              },
-              label: {
-                text: "receipt2.jpg"
-              }
-            })
+            html: '<div class="govuk-form-group govuk-form-group--error">
+              receipt2.jpg
+              <p id="select-error-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded
+              </p>
+            </div>'
           },
           value: {
-            text: ''
+            text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
           },
           actions: {
             items: [
@@ -112,10 +108,10 @@ layout: layout-example.njk
         {
           key: {
             html: govukFileUpload({
-              id: "empty-error",
-              name: "empty-error",
+              id: "select-error",
+              name: "select-error",
               errorMessage: {
-                text: "The selected file is empty"
+                text: "Select a file"
               },
               label: {
                 text: "receipt3.jpg"
@@ -138,10 +134,10 @@ layout: layout-example.njk
         {
           key: {
             html: govukFileUpload({
-              id: "smaller-error",
-              name: "smaller-error",
+              id: "empty-error",
+              name: "empty-error",
               errorMessage: {
-                text: "The selected file must be smaller than 100MB"
+                text: "The selected file is empty"
               },
               label: {
                 text: "receipt4.jpg"
@@ -164,10 +160,10 @@ layout: layout-example.njk
         {
           key: {
             html: govukFileUpload({
-              id: "already-error",
-              name: "already-error",
+              id: "smaller-error",
+              name: "smaller-error",
               errorMessage: {
-                text: "The selected file has already been uploaded"
+                text: "The selected file must be smaller than 100MB"
               },
               label: {
                 text: "receipt5.jpg"
@@ -190,10 +186,10 @@ layout: layout-example.njk
         {
           key: {
             html: govukFileUpload({
-              id: "type-error",
-              name: "type-error",
+              id: "already-error",
+              name: "already-error",
               errorMessage: {
-                text: "The selected file must be a JPG, PNG or PDF"
+                text: "The selected file has already been uploaded"
               },
               label: {
                 text: "receipt6.jpg"
@@ -216,10 +212,10 @@ layout: layout-example.njk
         {
           key: {
             html: govukFileUpload({
-              id: "virus-error",
-              name: "virus-error",
+              id: "type-error",
+              name: "type-error",
               errorMessage: {
-                text: "The selected file contains a virus — upload a different one"
+                text: "The selected file must be a JPG, PNG or PDF"
               },
               label: {
                 text: "receipt7.jpg"
@@ -242,10 +238,10 @@ layout: layout-example.njk
         {
           key: {
             html: govukFileUpload({
-              id: "could-not-error",
-              name: "could-not-error",
+              id: "virus-error",
+              name: "virus-error",
               errorMessage: {
-                text: "The selected file could not be uploaded"
+                text: "The selected file contains a virus — upload a different one"
               },
               label: {
                 text: "receipt8.jpg"
@@ -261,6 +257,32 @@ layout: layout-example.njk
                 href: "#",
                 text: "Remove",
                 visuallyHiddenText: "receipt8.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "could-not-error",
+              name: "could-not-error",
+              errorMessage: {
+                text: "The selected file could not be uploaded"
+              },
+              label: {
+                text: "receipt9.jpg"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt9.jpg"
               }
             ]
           }
