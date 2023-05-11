@@ -1,0 +1,1 @@
+Mae’r rhestr hysbysu cynlluniau pensiwn tramor cydnabyddedig wedi’i diweddaru, ychwanegwyd [number] a thynnwyd [number] cynllun.
