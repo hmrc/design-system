@@ -1,0 +1,1 @@
+The recognised overseas pension schemes notification list has been updated, with [number] schemes added and [number] removed.
