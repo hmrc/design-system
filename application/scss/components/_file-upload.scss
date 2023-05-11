@@ -1,18 +1,20 @@
 //Temporary styles to show style file upload components
-.govuk-summary-list.govuk-summary-list--long-key {
-  .govuk-summary-list__row {
-    display: flex;
-    justify-content: space-between;
-  }
+@include govuk-media-query($from: tablet) {
+  .govuk-summary-list.govuk-summary-list--long-key {
+    .govuk-summary-list__row {
+      display: flex;
+      justify-content: space-between;
+    }
 
-  .govuk-summary-list__key {
-    flex-grow: 1;
-    width: auto;
-    margin-bottom: 0;
-  }
+    .govuk-summary-list__key {
+      flex-grow: 1;
+      width: auto;
+      margin-bottom: 0;
+    }
 
-  .govuk-summary-list__actions {
-    width: auto;
-    margin-bottom: 0;
+    .govuk-summary-list__actions {
+      width: auto;
+      margin-bottom: 0;
+    }
   }
 }
