@@ -128,28 +128,25 @@ layout: twoColumnPage.njk
 
   <h3 class="govuk-heading-m" id="technical-details">Technical details</h3>
 
-  <p class="govuk-body">Add the hmrc-timeout-dialog meta tag and initialise the timeout dialog Javascript</p>
+  <p class="govuk-body">Add the hmrc-timeout-dialog meta tag, and when including the hmrc-frontend js a new
+    timeout dialog will be initialized on page load automatically.</p>
 
   {{
     codeSnippet({
       code: '<meta
   name="hmrc-timeout-dialog"
+  content="hmrc-timeout-dialog"
   data-timeout=""
   data-countdown=""
   data-keep-alive-url=""
   data-sign-out-url=""
   data-title=""
   data-message=""
-  dat-message-suffix=""
+  data-message-suffix=""
   data-keep-alive-button-text=""
   data-sign-out-button-text=""
+  data-synchronise-tabs=""
 />'
-    })
-  }}
-
-  {{
-    codeSnippet({
-code:'timeoutDialog = HMRC.TimeoutDialog.init()'
     })
   }}
 
@@ -163,6 +160,10 @@ code:'timeoutDialog = HMRC.TimeoutDialog.init()'
     <li>data-message-suffix is any additional text to be displayed after the timer</li>
     <li>data-keep-alive-button-text is the text on the button that keeps the user signed in</li>
     <li>data-sign-out-button-text is the text for the link which takes the user to a sign out page</li>
+    <li>data-synchronise-tabs is a boolean that enables synchronising timeout warnings across pages under the same
+        domain via a BrowserBroadcastChannel named "session-activity". It's disabled by default, and when enabled
+        if you open a second page, it will reset the timeout countdown on background tabs so that a background tab
+        can't trigger a timeout warning earlier than needed.</li>
   </ul>
 
   <ul class="govuk-list govuk-list--bullet">
