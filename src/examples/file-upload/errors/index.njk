@@ -16,6 +16,10 @@ layout: layout-example.njk
       href: "#select-error"
     },
     {
+      text: "The selected file has not fully uploaded",
+      href: "#uploaded"
+    },
+    {
       text: "The selected file is empty",
       href: "#empty-error"
     },
@@ -41,7 +45,7 @@ layout: layout-example.njk
     },
     {
       text: "Select yes if you want to add a different type of supporting evidence",
-      href: "#supporting-evidence-error"
+      href: "#add-a-different-type-of-evidence-error"
     }
   ]
 }) }}
@@ -54,140 +58,237 @@ layout: layout-example.njk
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <table class="govuk-table">
-      <colgroup>
-        <col>
-        <col span="2">
-        <col span="1">
-      </colgroup>
 
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link" href="#"><strong>receipt1.jpg</strong></a></td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">uploaded</strong></td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
 
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 of 1 files uploaded.</div>
+
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
+      rows: [
+        {
+          key: {
+            html: '<a class="govuk-link" href="#">receipt1.jpg</a>'
+          },
+          value: {
+            text: govukTag({ text: "uploaded", classes: "govuk-tag--green" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: '<div class="govuk-form-group govuk-form-group--error">
+              receipt2.jpg
+              <p id="select-error-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded
+              </p>
+            </div>'
+          },
+          value: {
+            text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt2.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "select-error",
               name: "select-error",
               errorMessage: {
                 text: "Select a file"
               },
               label: {
-                text: "Receipt 2",
-                classes: "govuk-visually-hidden"
+                text: "receipt3.jpg"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt3.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "empty-error",
               name: "empty-error",
               errorMessage: {
                 text: "The selected file is empty"
               },
               label: {
-                text: "Receipt 3",
-                classes: "govuk-visually-hidden"
+                text: "receipt4.jpg"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt4.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "smaller-error",
               name: "smaller-error",
               errorMessage: {
                 text: "The selected file must be smaller than 100MB"
               },
               label: {
-                text: "Receipt 4",
-                classes: "govuk-visually-hidden"
+                text: "receipt5.jpg"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt5.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "already-error",
               name: "already-error",
               errorMessage: {
                 text: "The selected file has already been uploaded"
               },
               label: {
-                text: "Receipt 5",
-                classes: "govuk-visually-hidden"
+                text: "receipt6.jpg"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt6.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "type-error",
               name: "type-error",
               errorMessage: {
                 text: "The selected file must be a JPG, PNG or PDF"
               },
               label: {
-                text: "Receipt 6",
-                classes: "govuk-visually-hidden"
+                text: "receipt7.jpg"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt7.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "virus-error",
               name: "virus-error",
               errorMessage: {
                 text: "The selected file contains a virus — upload a different one"
               },
               label: {
-                text: "Receipt 7",
-                classes: "govuk-visually-hidden"
+                text: "receipt8.jpg"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt8.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: "could-not-error",
               name: "could-not-error",
               errorMessage: {
                 text: "The selected file could not be uploaded"
               },
               label: {
-                text: "Receipt 8",
-                classes: "govuk-visually-hidden"
+                text: "receipt9.jpg"
               }
-            }) }}
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-      </tbody>
-    </table>
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt9.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
 
     {{ govukButton({
       text: "Upload another receipt",

@@ -24,7 +24,12 @@ layout: layout-example.njk
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 of 1 files uploaded.</div>
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
     {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
       rows: [
         {
           key: {
