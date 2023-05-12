@@ -24,6 +24,9 @@
             <a href="#select-error">Select a file</a>
           </li>
           <li>
+            <a href="#uploaded">The selected file has not fully uploaded</a>
+          </li>
+          <li>
             <a href="#empty-error">The selected file is empty</a>
           </li>
           <li>
@@ -42,7 +45,7 @@
             <a href="#could-not-error">The selected file could not be uploaded</a>
           </li>
           <li>
-            <a href="#supporting-evidence-error">Select yes if you want to add a different type of supporting evidence</a>
+            <a href="#add-a-different-type-of-evidence-error">Select yes if you want to add a different type of supporting evidence</a>
           </li>
       </ul>
     </div>
@@ -58,133 +61,205 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <table class="govuk-table">
-      <colgroup>
-        <col>
-        <col span="2">
-        <col span="1">
-      </colgroup>
 
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link" href="#"><strong>receipt1.jpg</strong></a></td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">uploaded</strong></td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
 
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 of 1 files uploaded.</div>
+
+    
+  <dl class="govuk-summary-list govuk-summary-list--long-key">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <a class="govuk-link" href="#">receipt1.jpg</a>
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--green">
+  uploaded
+</strong>
+
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt1.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             <div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label govuk-visually-hidden" for="select-error">
-    Receipt 2
-  </label>
-  <p id="select-error-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Error:</span> Select a file
-  </p>
-  <input class="govuk-file-upload govuk-file-upload--error" id="select-error" name="select-error" type="file" aria-describedby="select-error-error">
-</div>
+                  receipt2.jpg
+                  <p id="select-error-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded
+                  </p>
+                </div>
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--yellow">
+  uploading
+</strong>
 
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt2.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             <div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label govuk-visually-hidden" for="empty-error">
-    Receipt 3
-  </label>
-  <p id="empty-error-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Error:</span> The selected file is empty
-  </p>
-  <input class="govuk-file-upload govuk-file-upload--error" id="empty-error" name="empty-error" type="file" aria-describedby="empty-error-error">
-</div>
-
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
+      <label class="govuk-label" for="select-error">
+        receipt3.jpg
+      </label>
+      <p id="select-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Select a file
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="select-error" name="select-error" type="file" aria-describedby="select-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt3.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             <div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label govuk-visually-hidden" for="smaller-error">
-    Receipt 4
-  </label>
-  <p id="smaller-error-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Error:</span> The selected file must be smaller than 100MB
-  </p>
-  <input class="govuk-file-upload govuk-file-upload--error" id="smaller-error" name="smaller-error" type="file" aria-describedby="smaller-error-error">
-</div>
-
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
+      <label class="govuk-label" for="empty-error">
+        receipt4.jpg
+      </label>
+      <p id="empty-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> The selected file is empty
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="empty-error" name="empty-error" type="file" aria-describedby="empty-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt4.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             <div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label govuk-visually-hidden" for="already-error">
-    Receipt 5
-  </label>
-  <p id="already-error-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Error:</span> The selected file has already been uploaded
-  </p>
-  <input class="govuk-file-upload govuk-file-upload--error" id="already-error" name="already-error" type="file" aria-describedby="already-error-error">
-</div>
-
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
+      <label class="govuk-label" for="smaller-error">
+        receipt5.jpg
+      </label>
+      <p id="smaller-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> The selected file must be smaller than 100MB
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="smaller-error" name="smaller-error" type="file" aria-describedby="smaller-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt5.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             <div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label govuk-visually-hidden" for="type-error">
-    Receipt 6
-  </label>
-  <p id="type-error-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Error:</span> The selected file must be a JPG, PNG or PDF
-  </p>
-  <input class="govuk-file-upload govuk-file-upload--error" id="type-error" name="type-error" type="file" aria-describedby="type-error-error">
-</div>
-
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
+      <label class="govuk-label" for="already-error">
+        receipt6.jpg
+      </label>
+      <p id="already-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> The selected file has already been uploaded
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="already-error" name="already-error" type="file" aria-describedby="already-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt6.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             <div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label govuk-visually-hidden" for="virus-error">
-    Receipt 7
-  </label>
-  <p id="virus-error-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Error:</span> The selected file contains a virus — upload a different one
-  </p>
-  <input class="govuk-file-upload govuk-file-upload--error" id="virus-error" name="virus-error" type="file" aria-describedby="virus-error-error">
-</div>
-
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" colspan="2">
+      <label class="govuk-label" for="type-error">
+        receipt7.jpg
+      </label>
+      <p id="type-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> The selected file must be a JPG, PNG or PDF
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="type-error" name="type-error" type="file" aria-describedby="type-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt7.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             <div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label govuk-visually-hidden" for="could-not-error">
-    Receipt 8
-  </label>
-  <p id="could-not-error-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Error:</span> The selected file could not be uploaded
-  </p>
-  <input class="govuk-file-upload govuk-file-upload--error" id="could-not-error" name="could-not-error" type="file" aria-describedby="could-not-error-error">
-</div>
-
-          </td>
-          <td class="govuk-table__cell govuk-!-text-align-right"><a class="govuk-link" href="#">Remove</a></td>
-        </tr>
-      </tbody>
-    </table>
+      <label class="govuk-label" for="virus-error">
+        receipt8.jpg
+      </label>
+      <p id="virus-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> The selected file contains a virus — upload a different one
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="virus-error" name="virus-error" type="file" aria-describedby="virus-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt8.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label" for="could-not-error">
+        receipt9.jpg
+      </label>
+      <p id="could-not-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> The selected file could not be uploaded
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="could-not-error" name="could-not-error" type="file" aria-describedby="could-not-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt9.jpg</span>
+            </a>
+            </dd>
+        </div>
+  </dl>
 
     <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
   Upload another receipt

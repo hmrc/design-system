@@ -336,256 +336,6 @@
   </div>
 
 
-<h3 class="govuk-heading-m" id="let-users-see-the-status-of-their-upload">Let users see the status of their upload</h3>
-
-<p class="govuk-body">Use a yellow 'UPLOADING' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file is being uploaded or scanned.</p>
-
-
-
-
-
-
-
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-uploading" data-module="app-tabs app-language-switch-example">
-
-    <div class="app-example app-example--tabs">
-      <span class="app-example__link app-example__new-tab">
-        <a href="/examples/file-upload/uploading/" target="_blank" title="Open Uploading example in a new tab">
-          Open this example in a new tab<span class="govuk-visually-hidden">: Uploading</span>
-        </a>
-      </span>
-      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/file-upload/uploading/" title="Uploading example"></iframe>
-    </div>
-
-      <div class="example-example-uploading-lang example-example-uploading-lang--en ">
-        <span id="options-example-uploading"></span>
-        <ul class="app-tabs" role="tablist">
-            <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-uploading-html" role="tab"
-                aria-controls="example-uploading-html"
-                data-track="tab-html" title="Display Uploading example as HTML">HTML</a>
-            </li>
-              <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-uploading-nunjucks" role="tab"
-                  aria-controls="example-uploading-nunjucks"
-                  data-track="tab-nunjucks" title="Display Uploading example as Nunjucks">Nunjucks</a>
-              </li>
-
-        </ul>
-
-          <div class="app-tabs__container js-tabs__container" id="example-uploading-html" role="tabpanel">
-            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipt<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
-  You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
-          receipt1.jpg
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-tag--yellow&quot;</span>&gt;</span>
-  uploading
-<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
-            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-      Continue
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-            </pre>
-
-          </div>
-
-            <div class="app-tabs__container js-tabs__container" id="example-uploading-nunjucks" role="tabpanel">
-              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/summary-list/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukSummaryList %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/tag/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukTag %}
-
-&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Upload receipt&lt;/h1&gt;
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
-    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
-    {{ govukSummaryList({
-      rows: [
-        {
-          key: {
-            text: &quot;receipt1.jpg&quot;
-          },
-          value: {
-            text: govukTag({ text: &quot;uploading&quot;, classes: &quot;govuk-tag--yellow&quot; })
-          },
-          actions: {
-            items: [
-              {
-                href: &quot;#&quot;,
-                text: &quot;Remove&quot;,
-                visuallyHiddenText: &quot;receipt1.jpg&quot;
-              }
-            ]
-          }
-        }
-      ]
-    }) }}
-
-    {{ govukButton({
-      text: &quot;Continue&quot;
-    }) }}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
-              </pre>
-
-            </div>
-
-      </div>
-  </div>
-
-
-<p class="govuk-body">Use a green 'UPLOADED' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file has been uploaded and scanned successfully. Link to a copy of the file from the filename.</p>
-
-
-
-
-
-
-
-  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-uploaded" data-module="app-tabs app-language-switch-example">
-
-    <div class="app-example app-example--tabs">
-      <span class="app-example__link app-example__new-tab">
-        <a href="/examples/file-upload/uploaded/" target="_blank" title="Open Uploaded example in a new tab">
-          Open this example in a new tab<span class="govuk-visually-hidden">: Uploaded</span>
-        </a>
-      </span>
-      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
- src="/examples/file-upload/uploaded/" title="Uploaded example"></iframe>
-    </div>
-
-      <div class="example-example-uploaded-lang example-example-uploaded-lang--en ">
-        <span id="options-example-uploaded"></span>
-        <ul class="app-tabs" role="tablist">
-            <li class="app-tabs__item js-tabs__item" role="presentation">
-              <a href="#example-uploaded-html" role="tab"
-                aria-controls="example-uploaded-html"
-                data-track="tab-html" title="Display Uploaded example as HTML">HTML</a>
-            </li>
-              <li class="app-tabs__item js-tabs__item" role="presentation">
-                <a href="#example-uploaded-nunjucks" role="tab"
-                  aria-controls="example-uploaded-nunjucks"
-                  data-track="tab-nunjucks" title="Display Uploaded example as Nunjucks">Nunjucks</a>
-              </li>
-
-        </ul>
-
-          <div class="app-tabs__container js-tabs__container" id="example-uploaded-html" role="tabpanel">
-            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipt<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
-  You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-tag--green&quot;</span>&gt;</span>
-  uploaded
-<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
-            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-      Continue
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-            </pre>
-
-          </div>
-
-            <div class="app-tabs__container js-tabs__container" id="example-uploaded-nunjucks" role="tabpanel">
-              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/summary-list/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukSummaryList %}
-{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/tag/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukTag %}
-
-&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Upload receipt&lt;/h1&gt;
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
-    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
-    {{ govukSummaryList({
-      rows: [
-        {
-          key: {
-            html: &#x27;<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>&#x27;
-          },
-          value: {
-            text: govukTag({ text: &quot;uploaded&quot;, classes: &quot;govuk-tag--green&quot; })
-          },
-          actions: {
-            items: [
-              {
-                href: &quot;#&quot;,
-                text: &quot;Remove&quot;,
-                visuallyHiddenText: &quot;receipt1.jpg&quot;
-              }
-            ]
-          }
-        }
-      ]
-    }) }}
-
-    {{ govukButton({
-      text: &quot;Continue&quot;
-    }) }}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
-              </pre>
-
-            </div>
-
-      </div>
-  </div>
-
-
 <h3 class="govuk-heading-m" id="let-users-upload-additional-files">Let users upload additional files</h3>
 
 <p class="govuk-body">If users need the option to upload more than one file include an 'Upload another...' button.</p>
@@ -626,19 +376,23 @@
 
           <div class="app-tabs__container js-tabs__container" id="example-upload-additional-files-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipts<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipts<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
       You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span>&gt;</span>1 of 2 files uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button govuk-button--secondary&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
       Upload another receipt
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list govuk-summary-list--long-key&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           receipt2.jpg
@@ -688,20 +442,26 @@
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/tag/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukTag %}
 
-&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Upload receipts&lt;/h1&gt;
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipts<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
         You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span>&gt;</span>1 of 2 files uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     {{ govukButton({
       text: &quot;Upload another receipt&quot;,
       classes: &quot;govuk-button--secondary&quot;
     }) }}
 
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
     {{ govukSummaryList({
+      classes: &#x27;govuk-summary-list--long-key&#x27;,
       rows: [
         {
           key: {
@@ -743,8 +503,8 @@
     {{ govukButton({
       text: &quot;Continue&quot;
     }) }}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;/div&gt;</code>
               </pre>
 
             </div>
@@ -793,18 +553,24 @@
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
               <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label-wrapper&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--xl&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span>&gt;</span>
-          Upload receipts
-        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
-        You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipts<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+      You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span>&gt;</span>1 of 2 files uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span>&gt;</span>
+        Upload receipts
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list govuk-summary-list--long-key&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           receipt2.jpg
@@ -817,7 +583,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
-            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt2.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -857,20 +623,27 @@
 
 &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipts<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+        You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span>&gt;</span>1 of 2 files uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
     {{ govukFileUpload({
       id: &quot;file-upload-1&quot;,
       name: &quot;file-upload-1&quot;,
-      hint: {
-        text: &quot;You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.&quot;
-      },
       label: {
         text: &quot;Upload receipts&quot;,
-        classes: &quot;govuk-label--xl&quot;,
-        isPageHeading: true
+        classes: &quot;govuk-visually-hidden&quot;
       }
     }) }}
 
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
     {{ govukSummaryList({
+      classes: &#x27;govuk-summary-list--long-key&#x27;,
       rows: [
         {
           key: {
@@ -884,7 +657,7 @@
               {
                 href: &quot;#&quot;,
                 text: &quot;Remove&quot;,
-                visuallyHiddenText: &quot;receipt1.jpg&quot;
+                visuallyHiddenText: &quot;receipt2.jpg&quot;
               }
             ]
           }
@@ -1049,7 +822,16 @@
   </div>
 
 
-<p class="govuk-body">Use a Yes/No question to route the user back to file type selection. Label previous upload rows.</p>
+<p class="govuk-body">Use a Yes/No question to route the user back to file type selection. Label previous upload rows. In the following example the user has:</p>
+
+
+
+<ol class="govuk-list govuk-list--number">
+<li>Selected 'Declaration'</li>
+<li>Uploaded a declaration</li>
+<li>Selected 'Add a different type of supporting evidence to your claim?'</li>
+<li>Selected 'Invoice'</li>
+</ol>
 
 
 
@@ -1102,7 +884,11 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;statusInformation&quot;</span>&gt;</span>1 of 1 files uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list govuk-summary-list--long-key&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>declaration.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -1177,7 +963,12 @@
 
     &lt;hr class=&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;&gt;
 
+    &lt;div class=&quot;govuk-visually-hidden&quot; aria-live=&quot;polite&quot; id=&quot;statusInformation&quot;&gt;1 of 1 files uploaded.&lt;/div&gt;
+
+    &lt;p class=&quot;govuk-body govuk-!-display-none&quot; id=&quot;refreshPageProgress&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;Refresh page to update file upload progress&lt;/a&gt;&lt;/p&gt;
+
     {{ govukSummaryList({
+      classes: &#x27;govuk-summary-list--long-key&#x27;,
       rows: [
         {
           key: {
@@ -1279,7 +1070,11 @@
       You can upload a scanned copy or photo of the original. Each selected file must be smaller than 100MB.
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span>&gt;</span>1 of 3 files uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list govuk-summary-list--long-key&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>declaration.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -1340,7 +1135,12 @@
         You can upload a scanned copy or photo of the original. Each selected file must be smaller than 100MB.
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span>&gt;</span>1 of 3 files uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
     {{ govukSummaryList({
+      classes: &#x27;govuk-summary-list--long-key&#x27;,
       rows: [
         {
           key: {
@@ -1392,6 +1192,284 @@
       </div>
   </div>
 
+
+<h3 class="govuk-heading-m" id="make-users-aware-of-the-status-of-their-upload">Make users aware of the status of their upload</h3>
+
+<p class="govuk-body">Use a yellow 'UPLOADING' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show that a file is being uploaded or scanned. When JavaScript isn’t available include a ‘Refresh page to update file upload progress’ link to the same page above the summary list.</p>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-uploading" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/file-upload/uploading/" target="_blank" title="Open Uploading example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Uploading</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/file-upload/uploading/" title="Uploading example"></iframe>
+    </div>
+
+      <div class="example-example-uploading-lang example-example-uploading-lang--en ">
+        <span id="options-example-uploading"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-uploading-html" role="tab"
+                aria-controls="example-uploading-html"
+                data-track="tab-html" title="Display Uploading example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-uploading-nunjucks" role="tab"
+                  aria-controls="example-uploading-nunjucks"
+                  data-track="tab-nunjucks" title="Display Uploading example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-uploading-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipt<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+  You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;statusInformation&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list govuk-summary-list--long-key&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          receipt1.jpg
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-tag--yellow&quot;</span>&gt;</span>
+  uploading
+<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+      Continue
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-uploading-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/summary-list/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukSummaryList %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/tag/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukTag %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Upload receipt&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;statusInformation&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    {{ govukSummaryList({
+      classes: &#x27;govuk-summary-list--long-key&#x27;,
+      rows: [
+        {
+          key: {
+            text: &quot;receipt1.jpg&quot;
+          },
+          value: {
+            text: govukTag({ text: &quot;uploading&quot;, classes: &quot;govuk-tag--yellow&quot; })
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt1.jpg&quot;
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: &quot;Continue&quot;
+    }) }}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+
+      </div>
+  </div>
+
+
+<p class="govuk-body">Use a green 'UPLOADED' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file has been uploaded and scanned successfully. Announce 'file uploaded' in an aria-live region. Link to a copy of the file from the filename.</p>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-uploaded" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/file-upload/uploaded/" target="_blank" title="Open Uploaded example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Uploaded</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/file-upload/uploaded/" title="Uploaded example"></iframe>
+    </div>
+
+      <div class="example-example-uploaded-lang example-example-uploaded-lang--en ">
+        <span id="options-example-uploaded"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-uploaded-html" role="tab"
+                aria-controls="example-uploaded-html"
+                data-track="tab-html" title="Display Uploaded example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-uploaded-nunjucks" role="tab"
+                  aria-controls="example-uploaded-nunjucks"
+                  data-track="tab-nunjucks" title="Display Uploaded example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-uploaded-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Upload receipt<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+  You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;statusInformation&quot;</span>&gt;</span>File uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list govuk-summary-list--long-key&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-tag--green&quot;</span>&gt;</span>
+  uploaded
+<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;statusInformation&quot;</span>&gt;</span>file uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+      Continue
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-uploaded-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/summary-list/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukSummaryList %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/tag/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukTag %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Upload receipt&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;statusInformation&quot;</span>&gt;</span>File uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    {{ govukSummaryList({
+      classes: &#x27;govuk-summary-list--long-key&#x27;,
+      rows: [
+        {
+          key: {
+            html: &#x27;<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>&#x27;
+          },
+          value: {
+            text: govukTag({ text: &quot;uploaded&quot;, classes: &quot;govuk-tag--green&quot; })
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt1.jpg&quot;
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;statusInformation&quot;</span>&gt;</span>file uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    {{ govukButton({
+      text: &quot;Continue&quot;
+    }) }}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+
+      </div>
+  </div>
+
+
+<h4 class="govuk-heading-s">Multiple file uploads</h4>
+
+<p class="govuk-body">Add a polite govuk-visually-hidden aria-live region above the summary list of files ‘X of X files uploaded.’. When JavaScript isn’t available ensure this otherwise visually hidden content is shown.</p>
 
 <h3 class="govuk-heading-m" id="accept-multiple-file-types">Accept multiple file types</h3>
 
@@ -1451,6 +1529,9 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#select-error&quot;</span>&gt;</span>Select a file<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#uploaded&quot;</span>&gt;</span>The selected file has not fully uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#empty-error&quot;</span>&gt;</span>The selected file is empty<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
@@ -1469,7 +1550,7 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#could-not-error&quot;</span>&gt;</span>The selected file could not be uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#supporting-evidence-error&quot;</span>&gt;</span>Select yes if you want to add a different type of supporting evidence<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#add-a-different-type-of-evidence-error&quot;</span>&gt;</span>Select yes if you want to add a different type of supporting evidence<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1484,133 +1565,204 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">colgroup</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">col</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">col</span> <span class="hljs-attr">span</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">col</span> <span class="hljs-attr">span</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">colgroup</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__body&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-tag--green&quot;</span>&gt;</span>uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell govuk-!-text-align-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell&quot;</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;select-error&quot;</span>&gt;</span>
-                Receipt 2
-              <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Select a file
-              <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;select-error-error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;statusInformation&quot;</span>&gt;</span>1 of 1 files uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell govuk-!-text-align-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list govuk-summary-list--long-key&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-tag--green&quot;</span>&gt;</span>
+  uploaded
+<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell&quot;</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;empty-error&quot;</span>&gt;</span>
-                Receipt 3
-              <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file is empty
-              <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+            receipt2.jpg
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file has not fully uploaded
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-tag govuk-tag--yellow&quot;</span>&gt;</span>
+  uploading
+<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell govuk-!-text-align-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt2.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;select-error&quot;</span>&gt;</span>
+              receipt3.jpg
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Select a file
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;select-error-error&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell&quot;</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;smaller-error&quot;</span>&gt;</span>
-                Receipt 4
-              <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file must be smaller than 100MB
-              <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell govuk-!-text-align-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt3.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;empty-error&quot;</span>&gt;</span>
+              receipt4.jpg
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file is empty
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell&quot;</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;already-error&quot;</span>&gt;</span>
-                Receipt 5
-              <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file has already been uploaded
-              <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;already-error-error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell govuk-!-text-align-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt4.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;smaller-error&quot;</span>&gt;</span>
+              receipt5.jpg
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file must be smaller than 100MB
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell&quot;</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;type-error&quot;</span>&gt;</span>
-                Receipt 6
-              <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file must be a JPG, PNG or PDF
-              <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;type-error-error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell govuk-!-text-align-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt5.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;already-error&quot;</span>&gt;</span>
+              receipt6.jpg
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file has already been uploaded
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;already-error-error&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell&quot;</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;virus-error&quot;</span>&gt;</span>
-                Receipt 7
-              <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file contains a virus — upload a different one
-              <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell govuk-!-text-align-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt6.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;type-error&quot;</span>&gt;</span>
+              receipt7.jpg
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file must be a JPG, PNG or PDF
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;type-error-error&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell&quot;</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;could-not-error&quot;</span>&gt;</span>
-                Receipt 8
-              <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file could not be uploaded
-              <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
 
-          <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-table__cell govuk-!-text-align-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Remove<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt7.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;virus-error&quot;</span>&gt;</span>
+              receipt8.jpg
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file contains a virus — upload a different one
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt8.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;could-not-error&quot;</span>&gt;</span>
+              receipt9.jpg
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file could not be uploaded
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__actions&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+            Remove<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> receipt9.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button govuk-button--secondary&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
       Upload another receipt
@@ -1671,6 +1823,10 @@
       <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#select-error&quot;</span>
     },
     {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;The selected file has not fully uploaded&quot;</span>,
+      <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#uploaded&quot;</span>
+    },
+    {
       <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;The selected file is empty&quot;</span>,
       <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#empty-error&quot;</span>
     },
@@ -1696,7 +1852,7 @@
     },
     {
       <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Select yes if you want to add a different type of supporting evidence&quot;</span>,
-      <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#supporting-evidence-error&quot;</span>
+      <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#add-a-different-type-of-evidence-error&quot;</span>
     }
   ]
 }) }}
@@ -1707,149 +1863,246 @@
     You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 
-&lt;div class=&quot;govuk-grid-row&quot;&gt;
-  &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
-    &lt;table class=&quot;govuk-table&quot;&gt;
-      &lt;colgroup&gt;
-        &lt;col&gt;
-        &lt;col span=&quot;2&quot;&gt;
-        &lt;col span=&quot;1&quot;&gt;
-      &lt;/colgroup&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-grid-column-two-thirds&quot;</span>&gt;</span>
 
-      &lt;tbody class=&quot;govuk-table__body&quot;&gt;
-        &lt;tr class=&quot;govuk-table__row&quot;&gt;
-          &lt;td class=&quot;govuk-table__cell&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;&lt;strong&gt;receipt1.jpg&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
-          &lt;td class=&quot;govuk-table__cell&quot;&gt;&lt;strong class=&quot;govuk-tag govuk-tag--green&quot;&gt;uploaded&lt;/strong&gt;&lt;/td&gt;
-          &lt;td class=&quot;govuk-table__cell govuk-!-text-align-right&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Remove&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-        &lt;tr class=&quot;govuk-table__row&quot;&gt;
-          &lt;td class=&quot;govuk-table__cell&quot; colspan=&quot;2&quot;&gt;
-            {{ govukFileUpload({
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">&quot;polite&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;statusInformation&quot;</span>&gt;</span>1 of 1 files uploaded.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    {{ govukSummaryList({
+      classes: &#x27;govuk-summary-list--long-key&#x27;,
+      rows: [
+        {
+          key: {
+            html: &#x27;<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>receipt1.jpg<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>&#x27;
+          },
+          value: {
+            text: govukTag({ text: &quot;uploaded&quot;, classes: &quot;govuk-tag--green&quot; })
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt1.jpg&quot;
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: &#x27;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
+              receipt2.jpg
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file has not fully uploaded
+              <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&#x27;
+          },
+          value: {
+            text: govukTag({ text: &quot;uploading&quot;, classes: &quot;govuk-tag--yellow&quot; })
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt2.jpg&quot;
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: &quot;select-error&quot;,
               name: &quot;select-error&quot;,
               errorMessage: {
                 text: &quot;Select a file&quot;
               },
               label: {
-                text: &quot;Receipt 2&quot;,
-                classes: &quot;govuk-visually-hidden&quot;
+                text: &quot;receipt3.jpg&quot;
               }
-            }) }}
-          &lt;/td&gt;
-          &lt;td class=&quot;govuk-table__cell govuk-!-text-align-right&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Remove&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr class=&quot;govuk-table__row&quot;&gt;
-          &lt;td class=&quot;govuk-table__cell&quot; colspan=&quot;2&quot;&gt;
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: &#x27;&#x27;
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt3.jpg&quot;
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: &quot;empty-error&quot;,
               name: &quot;empty-error&quot;,
               errorMessage: {
                 text: &quot;The selected file is empty&quot;
               },
               label: {
-                text: &quot;Receipt 3&quot;,
-                classes: &quot;govuk-visually-hidden&quot;
+                text: &quot;receipt4.jpg&quot;
               }
-            }) }}
-          &lt;/td&gt;
-          &lt;td class=&quot;govuk-table__cell govuk-!-text-align-right&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Remove&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr class=&quot;govuk-table__row&quot;&gt;
-          &lt;td class=&quot;govuk-table__cell&quot; colspan=&quot;2&quot;&gt;
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: &#x27;&#x27;
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt4.jpg&quot;
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: &quot;smaller-error&quot;,
               name: &quot;smaller-error&quot;,
               errorMessage: {
                 text: &quot;The selected file must be smaller than 100MB&quot;
               },
               label: {
-                text: &quot;Receipt 4&quot;,
-                classes: &quot;govuk-visually-hidden&quot;
+                text: &quot;receipt5.jpg&quot;
               }
-            }) }}
-          &lt;/td&gt;
-          &lt;td class=&quot;govuk-table__cell govuk-!-text-align-right&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Remove&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr class=&quot;govuk-table__row&quot;&gt;
-          &lt;td class=&quot;govuk-table__cell&quot; colspan=&quot;2&quot;&gt;
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: &#x27;&#x27;
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt5.jpg&quot;
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: &quot;already-error&quot;,
               name: &quot;already-error&quot;,
               errorMessage: {
                 text: &quot;The selected file has already been uploaded&quot;
               },
               label: {
-                text: &quot;Receipt 5&quot;,
-                classes: &quot;govuk-visually-hidden&quot;
+                text: &quot;receipt6.jpg&quot;
               }
-            }) }}
-          &lt;/td&gt;
-          &lt;td class=&quot;govuk-table__cell govuk-!-text-align-right&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Remove&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr class=&quot;govuk-table__row&quot;&gt;
-          &lt;td class=&quot;govuk-table__cell&quot; colspan=&quot;2&quot;&gt;
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: &#x27;&#x27;
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt6.jpg&quot;
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: &quot;type-error&quot;,
               name: &quot;type-error&quot;,
               errorMessage: {
                 text: &quot;The selected file must be a JPG, PNG or PDF&quot;
               },
               label: {
-                text: &quot;Receipt 6&quot;,
-                classes: &quot;govuk-visually-hidden&quot;
+                text: &quot;receipt7.jpg&quot;
               }
-            }) }}
-          &lt;/td&gt;
-          &lt;td class=&quot;govuk-table__cell govuk-!-text-align-right&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Remove&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr class=&quot;govuk-table__row&quot;&gt;
-          &lt;td class=&quot;govuk-table__cell&quot; colspan=&quot;2&quot;&gt;
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: &#x27;&#x27;
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt7.jpg&quot;
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: &quot;virus-error&quot;,
               name: &quot;virus-error&quot;,
               errorMessage: {
                 text: &quot;The selected file contains a virus — upload a different one&quot;
               },
               label: {
-                text: &quot;Receipt 7&quot;,
-                classes: &quot;govuk-visually-hidden&quot;
+                text: &quot;receipt8.jpg&quot;
               }
-            }) }}
-          &lt;/td&gt;
-          &lt;td class=&quot;govuk-table__cell govuk-!-text-align-right&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Remove&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-
-        &lt;tr class=&quot;govuk-table__row&quot;&gt;
-          &lt;td class=&quot;govuk-table__cell&quot; colspan=&quot;2&quot;&gt;
-            {{ govukFileUpload({
+            })
+          },
+          value: {
+            text: &#x27;&#x27;
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt8.jpg&quot;
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
               id: &quot;could-not-error&quot;,
               name: &quot;could-not-error&quot;,
               errorMessage: {
                 text: &quot;The selected file could not be uploaded&quot;
               },
               label: {
-                text: &quot;Receipt 8&quot;,
-                classes: &quot;govuk-visually-hidden&quot;
+                text: &quot;receipt9.jpg&quot;
               }
-            }) }}
-          &lt;/td&gt;
-          &lt;td class=&quot;govuk-table__cell govuk-!-text-align-right&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Remove&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
+            })
+          },
+          value: {
+            text: &#x27;&#x27;
+          },
+          actions: {
+            items: [
+              {
+                href: &quot;#&quot;,
+                text: &quot;Remove&quot;,
+                visuallyHiddenText: &quot;receipt9.jpg&quot;
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
 
     {{ govukButton({
       text: &quot;Upload another receipt&quot;,
       classes: &quot;govuk-button--secondary&quot;
     }) }}
 
-    &lt;hr class=&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;&gt;
+    <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;</span>&gt;</span>
 
     {{ govukRadios({
       name: &quot;add-a-different-type-of-evidence&quot;,
@@ -1878,8 +2131,8 @@
       text: &quot;Continue&quot;
     }) }}
 
-  &lt;/div&gt;
-&lt;/div&gt;</code>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code>
               </pre>
 
             </div>
