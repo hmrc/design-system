@@ -1094,26 +1094,24 @@ height="400px" src="/examples/service-timeout/not-signed-in-static/" title="Not 
 
   <h3 class="govuk-heading-m" id="technical-details">Technical details</h3>
 
-  <p class="govuk-body">Add the hmrc-timeout-dialog meta tag and initialise the timeout dialog Javascript</p>
+  <p class="govuk-body">Add the hmrc-timeout-dialog meta tag, and when including the hmrc-frontend js a new
+    timeout dialog will be initialized on page load automatically.</p>
 
       <div class="app-code-snippet">
       <pre ><code class="govuk-body-s">&lt;meta
   name=&quot;hmrc-timeout-dialog&quot;
+  content=&quot;hmrc-timeout-dialog&quot;
   data-timeout=&quot;&quot;
   data-countdown=&quot;&quot;
   data-keep-alive-url=&quot;&quot;
   data-sign-out-url=&quot;&quot;
   data-title=&quot;&quot;
   data-message=&quot;&quot;
-  dat-message-suffix=&quot;&quot;
+  data-message-suffix=&quot;&quot;
   data-keep-alive-button-text=&quot;&quot;
   data-sign-out-button-text=&quot;&quot;
+  data-synchronise-tabs=&quot;&quot;
 /&gt;</code></pre>
-    </div>
-
-
-      <div class="app-code-snippet">
-      <pre ><code class="govuk-body-s">timeoutDialog = HMRC.TimeoutDialog.init()</code></pre>
     </div>
 
 
@@ -1127,6 +1125,10 @@ height="400px" src="/examples/service-timeout/not-signed-in-static/" title="Not 
     <li>data-message-suffix is any additional text to be displayed after the timer</li>
     <li>data-keep-alive-button-text is the text on the button that keeps the user signed in</li>
     <li>data-sign-out-button-text is the text for the link which takes the user to a sign out page</li>
+    <li>data-synchronise-tabs is a boolean that enables synchronising timeout warnings across pages under the same
+        domain via a BrowserBroadcastChannel named "session-activity". It's disabled by default, and when enabled
+        if you open a second page, it will reset the timeout countdown on background tabs so that a background tab
+        can't trigger a timeout warning earlier than needed.</li>
   </ul>
 
   <ul class="govuk-list govuk-list--bullet">
