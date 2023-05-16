@@ -109,6 +109,10 @@
                       <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/eori-numbers">
                         EORI numbers
                       </a>
+                    </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/file-upload">
+                        File upload
+                      </a>
                     </li><li class="app-subnav__section-item">
                       <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hiding-information">
                         Hiding information
@@ -211,17 +215,6 @@
 
             
   
-  
-    
-      
-    
-
-
-    
-    <div class="govuk-!-padding-bottom-8 govuk-!-padding-top-2 hmrc-phase-banner">
-      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2"><span class="govuk-visually-hidden">This pattern is&nbsp;</span>development</strong>
-      <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
-    </div>
   
 
 
@@ -1530,10 +1523,10 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-summary__body&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-list govuk-error-summary__list&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#select-error&quot;</span>&gt;</span>Select a file<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#not-uploaded-error&quot;</span>&gt;</span>The selected file has not fully uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#uploaded&quot;</span>&gt;</span>The selected file has not fully uploaded<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#select-error&quot;</span>&gt;</span>Select a file<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#empty-error&quot;</span>&gt;</span>The selected file is empty<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -1595,7 +1588,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
             receipt2.jpg
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;not-uploaded-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file has not fully uploaded
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1615,7 +1608,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;select-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-!-font-weight-bold&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;select-error&quot;</span>&gt;</span>
               receipt3.jpg
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
@@ -1637,7 +1630,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;empty-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-!-font-weight-bold&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;empty-error&quot;</span>&gt;</span>
               receipt4.jpg
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
@@ -1659,7 +1652,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;smaller-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-!-font-weight-bold&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;smaller-error&quot;</span>&gt;</span>
               receipt5.jpg
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
@@ -1681,7 +1674,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;already-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-!-font-weight-bold&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;already-error&quot;</span>&gt;</span>
               receipt6.jpg
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
@@ -1703,7 +1696,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;type-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-!-font-weight-bold&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;type-error&quot;</span>&gt;</span>
               receipt7.jpg
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
@@ -1725,7 +1718,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;virus-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-!-font-weight-bold&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;virus-error&quot;</span>&gt;</span>
               receipt8.jpg
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
@@ -1747,7 +1740,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__row&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__key&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;could-not-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-!-font-weight-bold&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;could-not-error&quot;</span>&gt;</span>
               receipt9.jpg
             <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
@@ -1823,12 +1816,12 @@
   <span class="hljs-attr">titleText</span>: <span class="hljs-string">&quot;There is a problem&quot;</span>,
   <span class="hljs-attr">errorList</span>: [
     {
-      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Select a file&quot;</span>,
-      <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#select-error&quot;</span>
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;The selected file has not fully uploaded&quot;</span>,
+      <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#not-uploaded-error&quot;</span>
     },
     {
-      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;The selected file has not fully uploaded&quot;</span>,
-      <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#uploaded&quot;</span>
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Select a file&quot;</span>,
+      <span class="hljs-attr">href</span>: <span class="hljs-string">&quot;#select-error&quot;</span>
     },
     {
       <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;The selected file is empty&quot;</span>,
@@ -1898,7 +1891,7 @@
           key: {
             html: &#x27;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group govuk-form-group--error&quot;</span>&gt;</span>
               receipt2.jpg
-              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;not-uploaded-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file has not fully uploaded
               <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>&#x27;
@@ -1925,7 +1918,8 @@
                 text: &quot;Select a file&quot;
               },
               label: {
-                text: &quot;receipt3.jpg&quot;
+                text: &quot;receipt3.jpg&quot;,
+                classes: &quot;govuk-!-font-weight-bold&quot;
               }
             })
           },
@@ -1951,7 +1945,8 @@
                 text: &quot;The selected file is empty&quot;
               },
               label: {
-                text: &quot;receipt4.jpg&quot;
+                text: &quot;receipt4.jpg&quot;,
+                classes: &quot;govuk-!-font-weight-bold&quot;
               }
             })
           },
@@ -1977,7 +1972,8 @@
                 text: &quot;The selected file must be smaller than 100MB&quot;
               },
               label: {
-                text: &quot;receipt5.jpg&quot;
+                text: &quot;receipt5.jpg&quot;,
+                classes: &quot;govuk-!-font-weight-bold&quot;
               }
             })
           },
@@ -2003,7 +1999,8 @@
                 text: &quot;The selected file has already been uploaded&quot;
               },
               label: {
-                text: &quot;receipt6.jpg&quot;
+                text: &quot;receipt6.jpg&quot;,
+                classes: &quot;govuk-!-font-weight-bold&quot;
               }
             })
           },
@@ -2029,7 +2026,8 @@
                 text: &quot;The selected file must be a JPG, PNG or PDF&quot;
               },
               label: {
-                text: &quot;receipt7.jpg&quot;
+                text: &quot;receipt7.jpg&quot;,
+                classes: &quot;govuk-!-font-weight-bold&quot;
               }
             })
           },
@@ -2055,7 +2053,8 @@
                 text: &quot;The selected file contains a virus — upload a different one&quot;
               },
               label: {
-                text: &quot;receipt8.jpg&quot;
+                text: &quot;receipt8.jpg&quot;,
+                classes: &quot;govuk-!-font-weight-bold&quot;
               }
             })
           },
@@ -2081,7 +2080,8 @@
                 text: &quot;The selected file could not be uploaded&quot;
               },
               label: {
-                text: &quot;receipt9.jpg&quot;
+                text: &quot;receipt9.jpg&quot;,
+                classes: &quot;govuk-!-font-weight-bold&quot;
               }
             })
           },
