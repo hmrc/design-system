@@ -51,6 +51,13 @@ nodeListForEach($printLinks, $printLink => {
 })
 
 hmrcFrontend.initAll()
-govUkFrontend.initAll()
+govUkFrontend.initAll({
+  errorSummary: {
+    disableAutoFocus: true
+  },
+  notificationBanner: {
+    disableAutoFocus: true
+  }
+})
 
 window.hmrcDesignSystem = { CopyToClipboard }
