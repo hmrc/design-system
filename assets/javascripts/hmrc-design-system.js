@@ -12008,7 +12008,14 @@
 	});
 
 	all.initAll();
-	all$1.initAll();
+	all$1.initAll({
+	  errorSummary: {
+	    disableAutoFocus: true
+	  },
+	  notificationBanner: {
+	    disableAutoFocus: true
+	  }
+	});
 
 	window.hmrcDesignSystem = { CopyToClipboard };
 
