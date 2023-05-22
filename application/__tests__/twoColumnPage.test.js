@@ -78,12 +78,12 @@ describe('Design pattern page', () => {
       expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
     })
 
-    it('should render the extra archived status text if the status flag is set to archived', () => {
+    it('should not render the extra archived status text if the status flag is set to archived', () => {
       const document = documentFactory({ status: 'archived' })
       const phaseBanner = document.querySelector('.hmrc-phase-banner')
 
       const expectedString = 'This pattern has been replaced by <a class="govuk-link" href=""></a>.'
-      expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
+      expect(phaseBanner.querySelector('p')).toBe(null)
     })
 
     it('should render the href and anchor text if they are set and status is archived', () => {
