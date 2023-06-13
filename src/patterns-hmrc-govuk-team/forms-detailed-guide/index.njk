@@ -4,6 +4,7 @@ menuText: "Forms: in a detailed guide"
 layout: twoColumnPage.njk
 ---
 {% from "_codeSnippet.njk" import codeSnippet %}
+{% from "_example.njk" import example %}
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
@@ -255,6 +256,14 @@ s3. Complete it on-screen.
       canCopy: true
     })
   }}
+
+{{ example({
+    item: 'forms-detailed',
+    example: 'pdf',
+    description: 'PDF forms',
+    markdown: 'pdf-markdown',
+    markdownOnly: true
+}) }}
 
 <h4 class="govuk-heading-s" id="open">Forms in open document formats</h4>
 
