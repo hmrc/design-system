@@ -4,8 +4,6 @@ Os byddwch yn talu drwy CHAPS neu Daliadau Cyflymach, gallwch gyflwyno’ch tali
 
 Os byddwch yn talu drwy Bacs, dylech ganiatáu 3 diwrnod gwaith i’ch taliad gyrraedd CThEF.
 
-Dylech wneud taliadau ar wahân ar gyfer pob cyfeirnod trafodyn unigryw. 
-
 Rydym yn argymell eich bod yn gwirio amserau prosesu ac uchafswm y terfynau trosglwyddo a osodir gan eich banc cyn i chi dalu.
 
 
