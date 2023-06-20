@@ -4,8 +4,6 @@ If you pay by CHAPS (Clearing House Automated Payment System) or Faster Payments
 
 If you pay by Bacs (Bankers Automated Clearing System), allow 3 working days for the payment to reach HMRC.
 
-You should make separate payments for each unique transaction reference. 
-
 We recommend you check your bank’s processing times and maximum transaction limits before you pay.
 
 ### Account details to use if your account is in the UK
@@ -24,7 +22,7 @@ Use the following details to make a payment if your account is overseas:
 * bank identifier code (BIC) — XXXXXXXX
 * account name — XXX
 
-You must make all payments in sterling (GBP).
+You should make overseas payments in sterling (GBP). Your bank may charge you if use any other currency.
 
 If needed, you can provide your bank with the following HMRC banking address:
 
