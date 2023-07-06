@@ -1000,6 +1000,65 @@ It’s designed to allow the UK and EU to take action against goods that are sol
 
 
 
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="currency">
+    How much does your employer pay towards this?
+  </label>
+  <div id="currency-hint" class="govuk-hint">
+    For example, £600 or £193.54.
+  </div>
+<div class="govuk-input__wrapper"><div class="govuk-input__prefix" aria-hidden="true">£</div>
+<input class="govuk-input govuk-input--width-10" id="currency" name="currency" type="text" spellcheck="false" aria-describedby="currency-hint"></div>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="currency">
+    Faint mae’ch cyflogwr yn ei dalu tuag at hyn?
+  </label>
+  <div id="currency-hint" class="govuk-hint">
+    Er enghraifft, £600 neu £193.54.
+  </div>
+<div class="govuk-input__wrapper"><div class="govuk-input__prefix" aria-hidden="true">£</div>
+<input class="govuk-input govuk-input--width-10" id="currency" name="currency" type="text" spellcheck="false" aria-describedby="currency-hint"></div>
+</div>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Yn eich blaen
+</button>
+
+
+
+<p class="govuk-body">
+HMRC publishes the employer bulletin 6 times a year, giving employers and agents the latest information on topics and issues that may affect them.
+</p>
+
+<p class="govuk-body">
+The xxx [Month] edition of the employer bulletin includes articles on:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>xxx</li>
+</ul>
+
+<p class="govuk-body">
+You can register for <a href="https://www.public-inf.co.uk/" class="govuk-link">HMRC’s employer email alert service</a> to receive emails from HMRC which tell you when the latest issue is available.
+</p>
+
+<p class="govuk-body">
+You can read the bulletin on screen or print it off. It’s compatible with most screen reading software packages.
+</p>
+
+
 <header class="hmrc-page-heading">
   <h1 class="govuk-heading-xl">We could not confirm your identity</h1></header>
 
@@ -1072,14 +1131,14 @@ heb gadarnhau pwy ydych</p>
 
 
 <div class="govuk-form-group">
-  <label class="govuk-label" for="currency">
-    How much does your employer pay towards this?
-  </label>
-  <div id="currency-hint" class="govuk-hint">
-    For example, £600 or £193.54.
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="employer-paye-reference">
+      What is Anycompany’s employer PAYE reference?
+    </label>
+    </h1>
+  <div id="employer-paye-reference-hint" class="govuk-hint">
+    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on your P60.
   </div>
-<div class="govuk-input__wrapper"><div class="govuk-input__prefix" aria-hidden="true">£</div>
-<input class="govuk-input govuk-input--width-10" id="currency" name="currency" type="text" spellcheck="false" aria-describedby="currency-hint"></div>
+<input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
 </div>
 
 
@@ -1091,14 +1150,14 @@ heb gadarnhau pwy ydych</p>
 
 
 <div class="govuk-form-group">
-  <label class="govuk-label" for="currency">
-    Faint mae’ch cyflogwr yn ei dalu tuag at hyn?
-  </label>
-  <div id="currency-hint" class="govuk-hint">
-    Er enghraifft, £600 neu £193.54.
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="employer-paye-reference">
+      Beth yw cyfeirnod TWE y cyflogwr ar gyfer Anycompany?
+    </label>
+    </h1>
+  <div id="employer-paye-reference-hint" class="govuk-hint">
+    Rhif swyddfa dreth 3 digid yw hwn, wedi’i ddilyn gan flaenslaes a chyfeirnod cyflogwr gan y swyddfa dreth, megis 123/AB456. Mae’n bosibl y cyfeirir ato fel ‘Cyfeirnod TWE y Cyflogwr’ neu fel ‘Cyfeirnod TWE’. Bydd hwn ar eich P60.
   </div>
-<div class="govuk-input__wrapper"><div class="govuk-input__prefix" aria-hidden="true">£</div>
-<input class="govuk-input govuk-input--width-10" id="currency" name="currency" type="text" spellcheck="false" aria-describedby="currency-hint"></div>
+<input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
 </div>
 
 
@@ -1108,25 +1167,66 @@ heb gadarnhau pwy ydych</p>
 
 
 
-<p class="govuk-body">
-HMRC publishes the employer bulletin 6 times a year, giving employers and agents the latest information on topics and issues that may affect them.
-</p>
 
-<p class="govuk-body">
-The xxx [Month] edition of the employer bulletin includes articles on:
-</p>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="employer-paye-reference">
+    Your employer PAYE reference
+  </label>
+  <div id="employer-paye-reference-hint" class="govuk-hint">
+    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on letters from HMRC about PAYE.
+  </div>
+<input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
+</div>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li>xxx</li>
-</ul>
 
-<p class="govuk-body">
-You can register for <a href="https://www.public-inf.co.uk/" class="govuk-link">HMRC’s employer email alert service</a> to receive emails from HMRC which tell you when the latest issue is available.
-</p>
 
-<p class="govuk-body">
-You can read the bulletin on screen or print it off. It’s compatible with most screen reading software packages.
-</p>
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="employer-paye-reference">
+    Your employer PAYE reference
+  </label>
+  <div id="employer-paye-reference-hint" class="govuk-hint">
+    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on letters from HMRC about PAYE.
+  </div>
+  <p id="employer-paye-reference-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Enter your employer PAYE reference
+  </p>
+<input class="govuk-input govuk-input--width-10 govuk-input--error" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint employer-paye-reference-error">
+</div>
+
+
+
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="employer-paye-reference">
+    Eich Cyfeirnod TWE y Cyflogwr
+  </label>
+  <div id="employer-paye-reference-hint" class="govuk-hint">
+    Rhif swyddfa dreth 3 digid yw hwn, wedi’i ddilyn gan flaenslaes a chyfeirnod cyflogwr gan y swyddfa dreth, megis 123/AB456. Mae’n bosibl y cyfeirir ato fel ‘Cyfeirnod TWE y Cyflogwr’ neu fel ‘Cyfeirnod TWE’. Bydd i’w weld ar lythyrau oddi wrth CThEM ynghylch TWE.
+  </div>
+  <p id="employer-paye-reference-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Gwall:</span> Nodwch eich Cyfeirnod TWE y Cyflogwr
+  </p>
+<input class="govuk-input govuk-input--width-10 govuk-input--error" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint employer-paye-reference-error">
+</div>
+
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="employer-paye-reference">
+    Eich Cyfeirnod TWE y Cyflogwr
+  </label>
+  <div id="employer-paye-reference-hint" class="govuk-hint">
+    Rhif swyddfa dreth 3 digid yw hwn, wedi’i ddilyn gan flaenslaes a chyfeirnod cyflogwr gan y swyddfa dreth, megis 123/AB456. Mae’n bosibl y cyfeirir ato fel ‘Cyfeirnod TWE y Cyflogwr’ neu fel ‘Cyfeirnod TWE’. Bydd i’w weld ar lythyrau oddi wrth CThEM ynghylch TWE.
+  </div>
+<input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
+</div>
+
+
 
 
 
@@ -1409,106 +1509,6 @@ You can read the bulletin on screen or print it off. It’s compatible with most
       <p class="govuk-body"><a href="#" class="govuk-link">Beth oedd eich barn am y gwasanaeth hwn?</a> (mae’n cymryd 30 eiliad)</p>
     </div>
   </div>
-
-
-
-<div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="employer-paye-reference">
-      What is Anycompany’s employer PAYE reference?
-    </label>
-    </h1>
-  <div id="employer-paye-reference-hint" class="govuk-hint">
-    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on your P60.
-  </div>
-<input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
-</div>
-
-
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-
-
-
-<div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="employer-paye-reference">
-      Beth yw cyfeirnod TWE y cyflogwr ar gyfer Anycompany?
-    </label>
-    </h1>
-  <div id="employer-paye-reference-hint" class="govuk-hint">
-    Rhif swyddfa dreth 3 digid yw hwn, wedi’i ddilyn gan flaenslaes a chyfeirnod cyflogwr gan y swyddfa dreth, megis 123/AB456. Mae’n bosibl y cyfeirir ato fel ‘Cyfeirnod TWE y Cyflogwr’ neu fel ‘Cyfeirnod TWE’. Bydd hwn ar eich P60.
-  </div>
-<input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
-</div>
-
-
-<button class="govuk-button" data-module="govuk-button">
-  Yn eich blaen
-</button>
-
-
-
-
-<div class="govuk-form-group">
-  <label class="govuk-label" for="employer-paye-reference">
-    Your employer PAYE reference
-  </label>
-  <div id="employer-paye-reference-hint" class="govuk-hint">
-    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on letters from HMRC about PAYE.
-  </div>
-<input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
-</div>
-
-
-
-
-
-<div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label" for="employer-paye-reference">
-    Your employer PAYE reference
-  </label>
-  <div id="employer-paye-reference-hint" class="govuk-hint">
-    This is a 3 digit tax office number, a forward slash, and a tax office employer reference, like 123/AB456. It may be called ‘Employer PAYE reference’ or ‘PAYE reference’. It will be on letters from HMRC about PAYE.
-  </div>
-  <p id="employer-paye-reference-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Error:</span> Enter your employer PAYE reference
-  </p>
-<input class="govuk-input govuk-input--width-10 govuk-input--error" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint employer-paye-reference-error">
-</div>
-
-
-
-
-
-<div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label" for="employer-paye-reference">
-    Eich Cyfeirnod TWE y Cyflogwr
-  </label>
-  <div id="employer-paye-reference-hint" class="govuk-hint">
-    Rhif swyddfa dreth 3 digid yw hwn, wedi’i ddilyn gan flaenslaes a chyfeirnod cyflogwr gan y swyddfa dreth, megis 123/AB456. Mae’n bosibl y cyfeirir ato fel ‘Cyfeirnod TWE y Cyflogwr’ neu fel ‘Cyfeirnod TWE’. Bydd i’w weld ar lythyrau oddi wrth CThEM ynghylch TWE.
-  </div>
-  <p id="employer-paye-reference-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Gwall:</span> Nodwch eich Cyfeirnod TWE y Cyflogwr
-  </p>
-<input class="govuk-input govuk-input--width-10 govuk-input--error" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint employer-paye-reference-error">
-</div>
-
-
-
-
-
-<div class="govuk-form-group">
-  <label class="govuk-label" for="employer-paye-reference">
-    Eich Cyfeirnod TWE y Cyflogwr
-  </label>
-  <div id="employer-paye-reference-hint" class="govuk-hint">
-    Rhif swyddfa dreth 3 digid yw hwn, wedi’i ddilyn gan flaenslaes a chyfeirnod cyflogwr gan y swyddfa dreth, megis 123/AB456. Mae’n bosibl y cyfeirir ato fel ‘Cyfeirnod TWE y Cyflogwr’ neu fel ‘Cyfeirnod TWE’. Bydd i’w weld ar lythyrau oddi wrth CThEM ynghylch TWE.
-  </div>
-<input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
-</div>
-
-
 
 
 <p class="govuk-body">
