@@ -1,0 +1,116 @@
+---
+title: Factsheets
+status: development
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+<h2 class="govuk-heading-l" id="when">When to use</h2>
+
+<p class="govuk-body">
+Use this pattern when creating or amending factsheets.
+</p>
+
+<h2 class="govuk-heading-l" id="how">How to design tax avoidance and compliance factsheets using this pattern</h2>
+
+<h3 class="govuk-heading-m" id="type">Document type</h3>
+
+<p class="govuk-body">Publication: guidance (with an HTML attachment)</p>
+
+<h3 class="govuk-heading-m">Publication</h3>
+
+<h4 class="govuk-heading-s" id="title">Title</h4>
+
+<p class="govuk-body">The title should be ‘Compliance checks: xxx [description] — CC/FSxx [factsheet number]’.</p>
+
+<p class="govuk-body">For example, ‘Compliance checks: electronic sales suppression — CC/FS68’.</p>
+
+<h4 class="govuk-heading-s" id="summary">Summary</h4>
+
+<p class="govuk-body">Begin with ‘This factsheet xxx.’. Then read the document and summarise the factsheet’s content.</p>
+
+<p class="govuk-body">For example, ‘This factsheet tells you about the penalties HMRC may charge if you are involved in electronic sales suppression (ESS).’.</p>
+
+<h4 class="govuk-heading-s">Body</h4>
+
+<p class="govuk-body">Read the document and summarise the factsheet’s content to create the body text.</p>
+
+<p class="govuk-body">It will also normally include, ‘Factsheets are for guidance only and reflect HMRC’s position at the time of writing.’.</p>
+
+<h3 class="govuk-heading-m">HTML attachment</h3>
+
+<h4 class="govuk-heading-s">Title</h4>
+
+<p class="govuk-body">Use the description that you’ve used in the title of the stub page. The titles can be similar but cannot be exactly the same.</p>
+
+<p class="govuk-body">[Description] — CC/FSxx [factsheet number]</p>
+
+<p class="govuk-body">For example, ‘Electronic sales suppression — CC/FS68’.</p>
+
+<h4 class="govuk-heading-s">Body</h4>
+
+<p class="govuk-body">Enter the contents of the factsheet.</p>
+
+<p class="govuk-body">Do not include numbers in section headings.</p>
+
+<p class="govuk-body">For a live example check <a href="https://www.gov.uk/government/publications/compliance-checks-electronic-sales-suppression-ccfs68" class="govuk-link">compliance checks: electronic sales suppression — CC/FS68</a>.</p>
+
+<h3 class="govuk-heading-m">Collection page</h3>
+
+<p class="govuk-body">Add the URL of any new page to the <a href="https://www.gov.uk/government/collections/hm-revenue-and-customs-compliance-checks-factsheets" class="govuk-link">HMRC compliance checks factsheets document collection</a>. Do not create a public change note.
+</p>
+
+<h2 class="govuk-heading-l" id="how">How to design other factsheets using this pattern</h2>
+
+<h3 class="govuk-heading-m" id="type">Document type</h3>
+
+<p class="govuk-body">Publication: guidance (with an ODT, or PDF plus ODT attachment)</p>
+
+<h3 class="govuk-heading-m">Publication</h3>
+
+<h4 class="govuk-heading-s" id="title">Title</h4>
+
+<p class="govuk-body">[Description]</p>
+
+<p class="govuk-body">For example, 'Tax credits: leaving the UK'.</p>
+
+<h4 class="govuk-heading-s" id="summary">Summary</h4>
+
+<p class="govuk-body">Read the document and summarise the factsheet’s content.</p>
+
+<p class="govuk-body">For example, ‘Use factsheet WTC/FS6 to find out what you need to do if you leave the UK, and how it affects your tax credits.’.</p>
+
+<h3 class="govuk-heading-m">HTML attachment</h3>
+
+<h4 class="govuk-heading-s">Title</h4>
+
+<p class="govuk-body">Use the description that you’ve used in the title of the stub page, and add the reference number at the end. The titles can be similar but cannot be exactly the same.</p>
+
+<p class="govuk-body">[Description] — xx/FSxx [factsheet reference number]</p>
+
+<p class="govuk-body">For example, ‘Tax credits: leaving the UK — WTC/FS6’.</p>
+
+<h4 class="govuk-heading-s">Body</h4>
+
+<p class="govuk-body">Include a description to tell the user what information the factsheet will tell them.</p>
+
+<p class="govuk-body">You can also include, ‘Factsheets are for guidance only and reflect HMRC’s position at the time of writing.’</p>
+
+<p class="govuk-body">For example:</p>
+
+{{ example({
+    item: 'factsheets',
+    example: 'body',
+    description: 'body',
+    markdown: 'body-markdown',
+    markdownOnly: true
+}) }}
+
+<p class="govuk-body">Do not include numbers in section headings.</p>
+
+<p class="govuk-body">For a live example check <a href="https://www.gov.uk/government/publications/tax-credits-leaving-the-uk-wtcfs6" class="govuk-link">tax credits: leaving the UK</a>.</p>
+
+<h3 class="govuk-heading-m">Collection page</h3>
+
+<p class="govuk-body">Add the URL of any new page to the <a href="https://www.gov.uk/government/collections/hm-revenue-and-customs-leaflets-factsheets-and-booklets" class="govuk-link">HMRC leaflets, factsheets and booklets document collection</a>. Do not create a public change note.
+</p>
