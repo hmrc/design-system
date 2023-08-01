@@ -1,7 +1,6 @@
 ---
 title: Service timeout
 menuText: Service timeout
-status: experimental
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
@@ -37,7 +36,7 @@ layout: twoColumnPage.njk
 
   <ul class="govuk-list govuk-list--bullet">
     <li>first say ‘For your security, we will sign you out in 2 minutes.’</li>
-    <li>countdown the seconds remaining when there is less than 1 minute to go (<a href="/examples/service-timeout/default/" target="_blank">check an example of this (opens in new tab)</a>)</li>
+    <li>countdown the seconds remaining when there is less than 1 minute to go (<a href="/examples/service-timeout/default/" target="_blank" class="govuk-link">check an example of this (opens in new tab)</a>)</li>
     <li>say what will happen to their answers, if needed</li>
     <li>have a ‘Stay signed in’ button</li>
     <li>have a ‘Sign out’ link that signs them out as normal</li>
@@ -96,7 +95,7 @@ layout: twoColumnPage.njk
 
   <ul class="govuk-list govuk-list--bullet">
     <li>first say ‘For your security, we will delete your answers in 2 minutes.’</li>
-    <li>countdown the seconds remaining when there is less than 1 minute to go (<a href="/examples/service-timeout/not-signed-in/" target="_blank">check an example of this (opens in new tab)</a>)</li>
+    <li>countdown the seconds remaining when there is less than 1 minute to go (<a href="/examples/service-timeout/not-signed-in/" target="_blank" class="govuk-link">check an example of this (opens in new tab)</a>)</li>
     <li>have a button to stay in the service</li>
     <li>have a ‘Delete your answers’ link that takes them to the ‘You deleted your answers’ page</li>
   </ul>
@@ -129,28 +128,25 @@ layout: twoColumnPage.njk
 
   <h3 class="govuk-heading-m" id="technical-details">Technical details</h3>
 
-  <p class="govuk-body">Add the hmrc-timeout-dialog meta tag and initialise the timeout dialog Javascript</p>
+  <p class="govuk-body">Add the hmrc-timeout-dialog meta tag, and when including the hmrc-frontend js a new
+    timeout dialog will be initialized on page load automatically.</p>
 
   {{
     codeSnippet({
       code: '<meta
   name="hmrc-timeout-dialog"
+  content="hmrc-timeout-dialog"
   data-timeout=""
   data-countdown=""
   data-keep-alive-url=""
   data-sign-out-url=""
   data-title=""
   data-message=""
-  dat-message-suffix=""
+  data-message-suffix=""
   data-keep-alive-button-text=""
   data-sign-out-button-text=""
+  data-synchronise-tabs=""
 />'
-    })
-  }}
-
-  {{
-    codeSnippet({
-code:'timeoutDialog = HMRC.TimeoutDialog.init()'
     })
   }}
 
@@ -164,6 +160,10 @@ code:'timeoutDialog = HMRC.TimeoutDialog.init()'
     <li>data-message-suffix is any additional text to be displayed after the timer</li>
     <li>data-keep-alive-button-text is the text on the button that keeps the user signed in</li>
     <li>data-sign-out-button-text is the text for the link which takes the user to a sign out page</li>
+    <li>data-synchronise-tabs is a boolean that enables synchronising timeout warnings across pages under the same
+        domain via a BrowserBroadcastChannel named "session-activity". It's disabled by default, and when enabled
+        if you open a second page, it will reset the timeout countdown on background tabs so that a background tab
+        can't trigger a timeout warning earlier than needed.</li>
   </ul>
 
   <ul class="govuk-list govuk-list--bullet">
@@ -186,7 +186,7 @@ code:'timeoutDialog = HMRC.TimeoutDialog.init()'
 
 <h2 class="govuk-heading-l" id="research">Research</h2>
 
-<p class="govuk-body">The warning was tested with 5 users for a service they signed in to. One person had dyslexia and the other was 70 years old. All 5 users understood the warning and managed to stay signed in.</p>
+<p class="govuk-body">The warning was tested with 5 users for a service they signed in to. One person had dyslexia and another was 70 years old. All 5 users understood the warning and managed to stay signed in.</p>
 
 <p class="govuk-body">We want to do more usability testing, especially with users who use assistive technology and with services you do not sign in to.</p>
 

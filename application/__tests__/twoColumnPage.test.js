@@ -25,7 +25,7 @@ const templateFactory = () => `{% include 'twoColumnPage.njk' %}`.toString()
 
 const documentFactory = (params) => {
   const templateString = templateFactory()
-  const html = nunjucks.render(templateString, { ...options, ...params}).body
+  const html = nunjucks.render(templateString, { ...options, ...params }).body
   return new JSDOM(html).window.document
 }
 
@@ -62,26 +62,57 @@ describe('Design pattern page', () => {
   })
 
   describe('Phase banner', () => {
-    let phaseBanner
-
-    beforeEach(() => {
-      const document = documentFactory({ status: 'experimental' })
-      phaseBanner = document.querySelector('.hmrc-phase-banner')
-    })
-
     it('should display the phase banner, with the correct text, when the status flag is set', () => {
+      const document = documentFactory({ status: 'experimental' })
+      const phaseBanner = document.querySelector('.hmrc-phase-banner')
+
       expect(phaseBanner).not.toBeNull()
-      expect(phaseBanner.querySelector('strong').innerHTML).toBe('<span class=\"govuk-visually-hidden\">This pattern is&nbsp;</span>experimental')
+      expect(phaseBanner.querySelector('strong').innerHTML).toBe('<span class="govuk-visually-hidden">This pattern is&nbsp;</span>experimental')
     })
 
     it('should render the default status text if the statusText flag is not set', () => {
-      const expectedString = 'This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed.'
+      const document = documentFactory({ status: 'experimental' })
+      const phaseBanner = document.querySelector('.hmrc-phase-banner')
+
+      const expectedString = 'This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed. You should continue using it until we collect more research.'
+      expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
+    })
+
+    it('should not render the extra archived status text if the status flag is set to archived', () => {
+      const document = documentFactory({ status: 'archived' })
+      const phaseBanner = document.querySelector('.hmrc-phase-banner')
+
+      const expectedString = 'This pattern has been replaced by <a class="govuk-link" href=""></a>.'
+      expect(phaseBanner.querySelector('p')).toBe(null)
+    })
+
+    it('should render the href and anchor text if they are set and status is archived', () => {
+      const document = documentFactory({ status: 'archived', statusLink: '/test/testing.html', statusLinkText: 'Test message' })
+      const phaseBanner = document.querySelector('.hmrc-phase-banner')
+
+      const expectedString = 'This pattern has been replaced by <a class="govuk-link" href="/test/testing.html">Test message</a>.'
+      expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
+    })
+
+    it('should render the extra experimental status text if the status flag is set to experimental', () => {
+      const document = documentFactory({ status: 'experimental' })
+      const phaseBanner = document.querySelector('.hmrc-phase-banner')
+      const expectedString = 'This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed. You should continue using it until we collect more research.'
+
+      expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
+    })
+
+    it('should not render the extra experimental status text if the status flag is not set to experimental', () => {
+      const document = documentFactory({ status: 'development' })
+      const phaseBanner = document.querySelector('.hmrc-phase-banner')
+
+      const expectedString = 'This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.'
       expect(phaseBanner.querySelector('p').innerHTML).toBe(expectedString)
     })
 
     it('should render the passed status text if the statusText flag is set', () => {
       const document = documentFactory({ status: 'experimental', statusText: 'Some status text' })
-      phaseBanner = document.querySelector('.hmrc-phase-banner')
+      const phaseBanner = document.querySelector('.hmrc-phase-banner')
       expect(phaseBanner.querySelector('p').textContent).toBe('Some status text')
     })
   })

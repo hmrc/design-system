@@ -1,0 +1,24 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+<div class="govuk-form-group">
+  {{ govukFileUpload({
+    id: "file-upload-1",
+    name: "file-upload-1",
+    hint: {
+      text: "You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB."
+    },
+    label: {
+      text: "Upload receipt",
+      classes: "govuk-label--xl",
+      isPageHeading: true
+    }
+  }) }}
+</div>
+
+{{ govukButton({
+  text: "Continue"
+}) }}

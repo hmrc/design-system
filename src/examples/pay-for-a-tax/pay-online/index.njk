@@ -1,0 +1,37 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h2 class="govuk-heading-l">Pay online</h2>
+
+<p class="govuk-body">
+You can pay by approving a payment through your online bank account by selecting the ‘pay by bank account’ option.
+</p>
+
+<p class="govuk-body">
+You will be directed to sign in to your online or mobile banking account to approve your payment.
+</p>
+
+<p class="govuk-body">
+The payment is usually instant but can sometimes take up to 2 hours to show in your account.
+</p>
+
+<p class="govuk-body">
+Alternatively, you can make a full payment online using a debit or corporate credit card. There is a non-refundable fee if you use a corporate credit or debit card. You cannot pay by personal credit card.
+</p>
+
+<p class="govuk-body">
+Your payment will be accepted on the date you make it and not the date it reaches HMRC’s account (including weekends and bank holidays).
+</p>
+
+<p class="govuk-body">
+You must make sure the details you enter match those held by your bank or card provider. For example, the billing address should match the one your card is currently registered with.
+</p>
+
+<p class="govuk-body">
+{{ govukButton({
+  text: "Pay now",
+  isStartButton: true
+}) }}
+</p>

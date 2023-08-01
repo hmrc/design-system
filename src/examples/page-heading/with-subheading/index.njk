@@ -1,10 +1,5 @@
 ---
 layout: layout-example.njk
 ---
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
-
-{{ hmrcPageHeading({
-  text: "What is your name?",
-  section: "Personal details",
-  headingClasses: "govuk-heading-l"
-}) }}
+<h2 class="govuk-caption-l hmrc-caption-l"><span class="govuk-visually-hidden">This section is </span>Your details</h2>
+<h1 class="govuk-heading-l">What is your name?</h1>

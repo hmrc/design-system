@@ -1,0 +1,67 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+<h1 class="govuk-heading-xl">Upload declaration, receipt and calculation worksheet</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div id="file-upload-1-hint" class="govuk-hint">
+        You can upload a scanned copy or photo of the original. Each selected file must be smaller than 100MB.
+    </div>
+
+    <p class="govuk-body" aria-live="polite">1 of 3 files uploaded</p>
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
+      rows: [
+        {
+          key: {
+            html: '<a class="govuk-link" href="#">declaration.jpg</a><div class="govuk-body govuk-!-margin-0">Declaration</div>'
+          },
+          value: {
+            text: govukTag({ text: "uploaded", classes: "govuk-tag--green" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "declaration.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukFileUpload({
+      id: "file-upload-1",
+      name: "file-upload-1",
+      label: {
+        text: "Receipt"
+      }
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    {{ govukFileUpload({
+      id: "file-upload-2",
+      name: "file-upload-2",
+      label: {
+        text: "Calculation worksheet"
+      }
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+</div>

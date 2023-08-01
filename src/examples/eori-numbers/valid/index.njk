@@ -6,7 +6,6 @@ layout: layout-example.njk
 
 {% from "govuk/components/panel/macro.njk" import govukPanel %}
 
-{% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       {{ govukPanel({
@@ -34,11 +33,6 @@ layout: layout-example.njk
 
       <p class="govuk-body"><a href="#" class="govuk-link">Check another EORI number</a></p>
 
-      <p class="govuk-body"><a href="#" class="govuk-link">Download this page (PDF)</a></p>
-
-      <p class="govuk-body"><a href="#" class="govuk-link">Print this page</a></p>
-
       <p class="govuk-body"><a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)</p>
     </div>
   </div>
-{% endblock %}

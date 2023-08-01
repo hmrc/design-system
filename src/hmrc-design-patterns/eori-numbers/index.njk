@@ -1,8 +1,7 @@
 ---
 title: EORI numbers
 menuText: EORI numbers
-# status: experimental
-status: development
+status: experimental
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
@@ -33,6 +32,7 @@ layout: twoColumnPage.njk
   example({
     item: 'eori-numbers',
     example: 'check',
+    welsh: 'check-welsh',
     description: 'Is this the EORI number you want to register?'
   })
 }}
@@ -45,11 +45,12 @@ layout: twoColumnPage.njk
   example({
     item: 'eori-numbers',
     example: 'ask',
+    welsh: 'ask-welsh',
     description: 'What is your EORI number?'
   })
 }}
 
-<p class="govuk-body">Use a single text input and allow the user to enter the EORI type (for example, ‘GB’ or ‘XI’) and numbers. This can be with or without spaces, and using uppercase or lowercase letters.</p>
+<p class="govuk-body">Use a single text input and allow the user to enter the EORI type (for example, ‘GB’ or ‘XI’) and numbers. This can be with or without spaces, and using uppercase or lowercase letters. You should ignore any unwanted characters.</p>
 
 <p class="govuk-body">EORI numbers starting with:</p>
 
@@ -60,12 +61,13 @@ layout: twoColumnPage.njk
 
 <h3 class="govuk-heading-m" id="asking-for-eori-number">Validating an EORI number</h3>
 
-<p class="govuk-body">When showing validation of an EORI number, use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/confirmation-pages/">confirmation pages pattern</a>.</p>
+<p class="govuk-body">If you’re validating an EORI number at the end of a service, use the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/confirmation-pages/">confirmation pages pattern</a>. Otherwise, take the user to the next question.</p>
 
 {{
   example({
     item: 'eori-numbers',
     example: 'valid',
+    welsh: 'valid-welsh',
     description: 'Valid EORI number'
   })
 }}
@@ -76,6 +78,7 @@ layout: twoColumnPage.njk
   example({
     item: 'eori-numbers',
     example: 'not-valid',
+    welsh: 'not-valid-welsh',
     description: 'Not valid EORI number'
   })
 }}
@@ -94,7 +97,7 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">You can use an image that shows where it is on documents and letters.</p>
 
-<p class="govuk-body">Do not use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/details/">details component</a> to hide any help. Users may:</p>
+<p class="govuk-body">Only use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/details/">details component</a> to show a list of EU country codes. Do not use it to hide any other help, as users may:</p>
 
 <ul class="govuk-list govuk-list--bullet">
   <li>not know what an EORI number is</li>
@@ -113,21 +116,18 @@ layout: twoColumnPage.njk
   example({
     item: 'eori-numbers',
     example: 'error',
+    welsh: 'error-welsh',
     description: 'What is your EORI number error'
   })
 }}
 
 <h4 class="govuk-heading-s">If the country code is wrong</h4>
 
-<p class="govuk-body">Say what the country code should be. For example: 'Country code can only be XI or an EU country code'.</p>
+<p class="govuk-body">Say what the country code should be. For example: ‘Country code can only be XI or an EU country code’.</p>
 
 <h4 class="govuk-heading-s">If there are too many or too few characters</h4>
 
 <p class="govuk-body">Say ‘EORI number is too long’ or ‘EORI number is not long enough’.</p>
-
-<h4 class="govuk-heading-s">If an invalid character is entered</h4>
-
-<p class="govuk-body">Say ‘EORI numbers can only have letters and numbers’.</p>
 
 <h2 class="govuk-heading-l" id="research">Research</h2>
 

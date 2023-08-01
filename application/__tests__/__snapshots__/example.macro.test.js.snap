@@ -63,7 +63,7 @@ exports[`Single page example macro should include the escaped HTML markup from t
     </span>
     &gt;
   </span>
-  Find out if you qualify for tax credits (opens in a new tab)
+  Find out if you qualify for tax credits (opens in new tab)
   <span
     class="hljs-tag"
   >

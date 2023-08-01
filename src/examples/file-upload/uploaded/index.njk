@@ -1,0 +1,50 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+<h1 class="govuk-heading-xl">Upload receipt</h1>
+
+<div id="file-upload-1-hint" class="govuk-hint">
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">File uploaded.</div>
+
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
+      rows: [
+        {
+          key: {
+            html: '<a class="govuk-link" href="#">receipt1.jpg</a>'
+          },
+          value: {
+            text: govukTag({ text: "uploaded", classes: "govuk-tag--green" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">file uploaded.</div>
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+</div>

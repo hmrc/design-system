@@ -1,0 +1,335 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "The selected file has not fully uploaded",
+      href: "#not-uploaded-error"
+    },
+    {
+      text: "Select a file",
+      href: "#select-error"
+    },
+    {
+      text: "The selected file is empty",
+      href: "#empty-error"
+    },
+    {
+      text: "The selected file must be smaller than 100MB",
+      href: "#smaller-error"
+    },
+    {
+      text: "The selected file has already been uploaded",
+      href: "#already-error"
+    },
+    {
+      text: "The selected file must be a JPG, PNG or PDF",
+      href: "#type-error"
+    },
+    {
+      text: "The selected file contains a virus — upload a different one",
+      href: "#virus-error"
+    },
+    {
+      text: "The selected file could not be uploaded",
+      href: "#could-not-error"
+    },
+    {
+      text: "Select yes if you want to add a different type of supporting evidence",
+      href: "#add-a-different-type-of-evidence-error"
+    }
+  ]
+}) }}
+
+<h1 class="govuk-heading-xl">Upload receipts</h1>
+
+<div id="file-upload-1-hint" class="govuk-hint">
+    You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 of 1 files uploaded.</div>
+
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
+      rows: [
+        {
+          key: {
+            html: '<a class="govuk-link" href="#">receipt1.jpg</a>'
+          },
+          value: {
+            text: govukTag({ text: "uploaded", classes: "govuk-tag--green" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: '<div class="govuk-form-group govuk-form-group--error">
+              receipt2.jpg
+              <p id="not-uploaded-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded
+              </p>
+            </div>'
+          },
+          value: {
+            text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt2.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "select-error",
+              name: "select-error",
+              errorMessage: {
+                text: "Select a file"
+              },
+              label: {
+                text: "receipt3.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt3.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "empty-error",
+              name: "empty-error",
+              errorMessage: {
+                text: "The selected file is empty"
+              },
+              label: {
+                text: "receipt4.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt4.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "smaller-error",
+              name: "smaller-error",
+              errorMessage: {
+                text: "The selected file must be smaller than 100MB"
+              },
+              label: {
+                text: "receipt5.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt5.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "already-error",
+              name: "already-error",
+              errorMessage: {
+                text: "The selected file has already been uploaded"
+              },
+              label: {
+                text: "receipt6.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt6.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "type-error",
+              name: "type-error",
+              errorMessage: {
+                text: "The selected file must be a JPG, PNG or PDF"
+              },
+              label: {
+                text: "receipt7.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt7.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "virus-error",
+              name: "virus-error",
+              errorMessage: {
+                text: "The selected file contains a virus — upload a different one"
+              },
+              label: {
+                text: "receipt8.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt8.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "could-not-error",
+              name: "could-not-error",
+              errorMessage: {
+                text: "The selected file could not be uploaded"
+              },
+              label: {
+                text: "receipt9.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Remove",
+                visuallyHiddenText: "receipt9.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Upload another receipt",
+      classes: "govuk-button--secondary"
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    {{ govukRadios({
+      name: "add-a-different-type-of-evidence",
+      fieldset: {
+        legend: {
+          text: "Add a different type of supporting evidence to your claim?",
+          classes: "govuk-fieldset__legend govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ],
+      errorMessage: {
+        text: "Select yes if you want to add a different type of supporting evidence"
+      }
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+  </div>
+</div>

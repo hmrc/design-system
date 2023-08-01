@@ -1,0 +1,158 @@
+---
+title: File upload
+menuText: File upload
+status: experimental
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+{% block content %}
+
+<p class="govuk-body">The file upload pattern lets users upload files to an HMRC service. It is optimised for integration with Upscan (the HMRC file upload service).</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
+
+<p class="govuk-body">Use this pattern when users must upload a file to complete their journey.</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
+
+<p class="govuk-body">Do not use this pattern if there is no need for users to upload a file, or no good reason to ask for one. The interaction of uploading a file can be challenging for some users.</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+{{ hmrcFrontendInfo() }}
+
+<p class="govuk-body">How it works depends on whether the user needs the option to upload a single file, more than one file, or select the file type.</p>
+
+<h3 class="govuk-heading-m" id="let-users-upload-a-single-file">Let users upload a single file</h3>
+
+<p class="govuk-body">Use the <a class="govuk-link" href="https://design-system.service.gov.uk/components/file-upload/">file upload component</a> to let users upload a single file.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'upload-a-single-file',
+    description: 'Let users upload a single file'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="let-users-upload-additional-files">Let users upload additional files</h3>
+
+<p class="govuk-body">If users need the option to upload more than one file include an 'Upload another...' button.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'upload-additional-files',
+    description: 'Let users upload additional files'
+  })
+}}
+
+<p class="govuk-body">The button adds a new upload row.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'additional-row',
+    description: 'Let users upload additional files with new row'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="let-users-select-file-types">Let users select file types</h3>
+
+<p class="govuk-body">If file type selection is required use a question page.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'types',
+    description: 'Optional yes/no question'
+  })
+}}
+
+<p class="govuk-body">Use a Yes/No question to route the user back to file type selection. Label previous upload rows. In the following example the user has:</p>
+
+
+
+<ol class="govuk-list govuk-list--number">
+<li>Selected 'Declaration'</li>
+<li>Uploaded a declaration</li>
+<li>Selected 'Add a different type of supporting evidence to your claim?'</li>
+<li>Selected 'Invoice'</li>
+</ol>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'question',
+    description: 'Optional yes/no question'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="let-users-upload-a-fixed-set-of-documents">Let users upload a fixed set of documents</h3>
+
+<p class="govuk-body">If multiple specific file uploads are required show labelled upload rows.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'fixed',
+    description: 'Let users upload multiple specifically required files'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="make-users-aware-of-the-status-of-their-upload">Make users aware of the status of their upload</h3>
+
+<p class="govuk-body">Use a yellow 'UPLOADING' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show that a file is being uploaded or scanned. When JavaScript isn’t available include a ‘Refresh page to update file upload progress’ link to the same page above the summary list.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'uploading',
+    description: 'Uploading'
+  })
+}}
+
+<p class="govuk-body">Use a green 'UPLOADED' <a class="govuk-link" href="https://design-system.service.gov.uk/components/tag/">tag</a> to show the user that their file has been uploaded and scanned successfully. Announce 'file uploaded' in an aria-live region. Link to a copy of the file from the filename.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'uploaded',
+    description: 'Uploaded'
+  })
+}}
+
+<h4 class="govuk-heading-s">Multiple file uploads</h4>
+
+<p class="govuk-body">Add a polite aria-live region above the summary list of files ‘X of X files uploaded.‘.</p>
+
+<h4 class="govuk-heading-s">Removing files</h4>
+
+<p class="govuk-body">When a file is removed add a polite visually hidden aria-live region ‘file [file name] removed’ above the summary list of files.</p>
+
+<h3 class="govuk-heading-m" id="accept-multiple-file-types">Accept multiple file types</h3>
+
+<p class="govuk-body">Let users upload as many different file types as possible. Convert them automatically, if you need to.</p>
+
+<p class="govuk-body">If you must limit file types, let users know by using hint text.</p>
+
+<h3 class="govuk-heading-m" id="error-messages">Error messages</h3>
+
+<p class="govuk-body">Use the file upload error messages below. Error 'The selected file could not be uploaded' should only be used if Upscan reports unknown problems with the file.</p>
+
+{{
+  example({
+    item: 'file-upload',
+    example: 'errors',
+    description: 'Errors'
+  })
+}}
+
+<h2 class="govuk-heading-l" id="research">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the file upload pattern get in touch to share your research findings.</p>
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/171">Discuss file upload on GitHub</a></p>
+
+{% endblock %}

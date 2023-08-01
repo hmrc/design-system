@@ -1,6 +1,6 @@
 ---
 title: Recognised overseas pension schemes notification list
-menuText: Recognised overseas pension schemes notification list
+status: archived
 layout: twoColumnPage.njk
 ---
 {% from "_example.njk" import example %}
@@ -29,14 +29,26 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">The heading date ‘Changes for [country] at [date]’ will change to reflect the publish date.</p>
 
-<h4 class="govuk-heading-s">Public change note</h4>
-
-<p class="govuk-body">Do not include any company names in the change note, for example ‘The recognised overseas pension schemes notification list has been updated, with [number] schemes added and [number] removed’<p>
-
 {{ example({
     item: 'recognised-overseas-pension-schemes-notification-list',
     example: 'example',
     description: 'Recognised overseas pension schemes notification list',
     markdown: 'example-markdown',
+    welsh: 'example-welsh',
+    markdownWelsh: 'example-welsh-markdown',
     markdownOnly: true
 }) }}
+
+<h3 class="govuk-heading-m">Public change note</h3>
+
+{{ example({
+    item: 'recognised-overseas-pension-schemes-notification-list',
+    example: 'change',
+    description: 'Public change note',
+    markdown: 'change-markdown',
+    welsh: 'change-welsh',
+    markdownWelsh: 'change-welsh-markdown',
+    markdownOnly: true
+}) }}
+
+<p class="govuk-body">Do not include any company names in the change note.</p>

@@ -37,8 +37,11 @@ layout: twoColumnPage.njk
   <li>full stops - to indicate pence</li>
 </ul>
 
-<p class="govuk-body">You should allow the user to enter numbers up to one or 2 decimal places, for example £10.4 or £10.40.</p>
-<p class="govuk-body">Remove these characters and round up or down any amounts if necessary before validating.</p>
+<p class="govuk-body">Only allow the user to enter whole numbers, or numbers with one or 2 decimal places, for example, £10, £10.4 or £10.40.</p>
+
+<p class="govuk-body">If necessary, remove any decimals and round up or down any amounts before validating.</p>
+
+<p class="govuk-body">Do not allow numbers with more than 2 decimal places.</p>
 
   {{
     example({
@@ -48,6 +51,14 @@ layout: twoColumnPage.njk
       description: 'Pounds only'
     })
   }}
+
+<h2 id="error-messages" class="govuk-heading-l">Error messages</h2>
+
+<p class="govuk-body">Make sure errors follow the <a class="govuk-link" href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> in the GOV.UK Design System and have specific error messages for specific error states.</p>
+
+<h4 class="govuk-heading-s">If there are more than 2 decimals places</h4>
+
+<p class="govuk-body">Say ‘[Whatever it is] can only include pounds and pence [optional example]’.</p>
 
 <h2 id="research" class="govuk-heading-l">Research</h2>
 

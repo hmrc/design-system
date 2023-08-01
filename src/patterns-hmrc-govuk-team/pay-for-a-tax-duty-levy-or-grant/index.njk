@@ -1,0 +1,135 @@
+---
+title: Pay for a tax, duty, levy or grant
+menuText: Pay for a tax, duty, levy or grant
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+
+<h2 class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">
+Use this pattern when a user needs to pay for a tax, duty, levy or grant.
+</p>
+
+<p class="govuk-body">
+For an example of the pattern in use, go to <a href="https://www.gov.uk/guidance/pay-stamp-duty-land-tax" class="govuk-link">Pay Stamp Duty Land Tax</a>.
+</p>
+
+<h2 class="govuk-heading-l">How to design using this pattern</h2>
+
+<h3 class="govuk-heading-m">Document type</h3>
+
+<p class="govuk-body">Detailed guide</p>
+
+<h3 class="govuk-heading-m">Title</h3>
+
+<p class="govuk-body">
+The title should start with:
+</p>
+
+<p class="govuk-body">
+‘Pay …’
+</p>
+
+<p class="govuk-body">
+‘Repay …’
+</p>
+
+<p class="govuk-body">
+Followed by the name of the tax, duty, levy or grant.
+</p>
+
+<h3 class="govuk-heading-m">Summary</h3>
+
+<p class="govuk-body">
+The summary should be: ‘How to pay xxxx, and how long it takes for your payment to reach HMRC’.
+</p>
+
+<h3 class="govuk-heading-m">Body</h3>
+
+<p class="govuk-body">
+There are 3 optional payment methods that you may need to include:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>Pay online</li>
+<li>Pay by bank transfer (this can include payments for both UK and overseas accounts)</li>
+<li>Pay by cheque</li>
+</ul>
+
+<p class="govuk-body">
+You may not need to include every option and can omit the sections accordingly.
+</p>
+
+<p class="govuk-body">
+Enter the contents in the following order and by using the following text.
+</p>
+
+<p class="govuk-body">
+Do not include numbers in section headings.
+</p>
+
+<h3 class="govuk-heading-m">Headings and sub-headings</h3>
+
+<p class="govuk-body">
+Begin by adding a heading 2 for ‘When to pay’ (or ‘Pryd i dalu’ in Welsh) and add either:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>guidance on how users can find out when they should pay</li>
+<li>a timeline of when the payment must be made</li>
+</ul>
+
+<p class="govuk-body">
+Then include the following:
+</p>
+
+{{ example({
+    item: 'pay-for-a-tax',
+    example: 'when-to-pay',
+    description: 'When to pay',
+    markdown: 'when-to-pay-markdown',
+    welsh: 'when-to-pay-welsh',
+    markdownWelsh: 'when-to-pay-welsh-markdown',
+    markdownOnly: true
+}) }}
+
+{{ example({
+    item: 'pay-for-a-tax',
+    example: 'what-you-need',
+    description: 'What you need',
+    markdown: 'what-you-need-markdown',
+    welsh: 'what-you-need-welsh',
+    markdownWelsh: 'what-you-need-welsh-markdown',
+    markdownOnly: true
+}) }}
+
+{{ example({
+    item: 'pay-for-a-tax',
+    example: 'pay-online',
+    description: 'Pay online',
+    markdown: 'pay-online-markdown',
+    welsh: 'pay-online-welsh',
+    markdownWelsh: 'pay-online-welsh-markdown',
+    markdownOnly: true
+}) }}
+
+{{ example({
+    item: 'pay-for-a-tax',
+    example: 'bank-transfer',
+    description: 'Pay by bank transfer',
+    markdown: 'bank-transfer-markdown',
+    welsh: 'bank-transfer-welsh',
+    markdownWelsh: 'bank-transfer-welsh-markdown',
+    markdownOnly: true
+}) }}
+
+{{ example({
+    item: 'pay-for-a-tax',
+    example: 'cheque',
+    description: 'Pay by cheque',
+    markdown: 'cheque-markdown',
+    welsh: 'cheque-welsh',
+    markdownWelsh: 'cheque-welsh-markdown',
+    markdownOnly: true
+}) }}

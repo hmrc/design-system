@@ -32,6 +32,12 @@
     {% set markdownExampleRef = params.markdown %}
     {% set markdownExampleURL = "/examples/" + params.item + "/" + markdownExampleRef + "/" %}
     {% set markdownExamplePath = "src" + markdownExampleURL + "index.md" %}
+
+    {% if params.markdownWelsh %}
+      {% set markdownWelshExampleRef = params.markdownWelsh %}
+      {% set markdownWelshExampleURL = "/examples/" + params.item + "/" + markdownWelshExampleRef + "/" %}
+      {% set markdownWelshExamplePath = "src" + markdownWelshExampleURL + "index.md" %}
+    {% endif %}
   {% endif %}
 
   <div class="app-example-wrapper app-example__language-switch--en-activated" id="{{ exampleId }}" data-module="app-tabs app-language-switch-example">
@@ -134,6 +140,14 @@
                   {{- getHTMLCode(markdownExamplePath) | highlight('md') | safe -}}
                 </code>
               </pre>
+
+              {% if welshExamplePath %}
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
+                  <code class="hljs md">
+                    {{- getHTMLCode(markdownWelshExamplePath) | highlight('md') | safe -}}
+                  </code>
+                </pre>
+              {% endif %}
             </div>
           {% endif %}
         {% endif %}

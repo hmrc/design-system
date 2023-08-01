@@ -1,0 +1,11 @@
+---
+layout: layout-example.njk
+---
+{%- from "hmrc/components/user-research-banner/macro.njk" import hmrcUserResearchBanner -%}
+
+{{
+  hmrcUserResearchBanner({
+    url: "https://www.gov.uk/government/organisations/hm-revenue-customs",
+    language: "cy"
+  })
+}}
