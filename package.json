@@ -63,7 +63,7 @@
     "jest-cli": "^29.0.2",
     "jest-environment-node": "^29.0.2",
     "jest-matcher-utils": "^24.9.0",
-    "jest-puppeteer": "^4.3.0",
+    "jest-puppeteer": "^9.0.0",
     "jest-resolve": "^24.9.0",
     "js-beautify": "^1.10.2",
     "jsdom": "^20.0.0",
