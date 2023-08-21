@@ -56,4 +56,6 @@ gulp.task('prepare', async (done) => {
   done()
 })
 
-gulp.task('generate-examples', gulp.series('prepare', gulp.parallel('scrape-patterns', 'scrape-layouts')))
+// Temporarily disabling patterns.html/layouts.html to fix DS working on Apple Silicon devices
+// gulp.task('generate-examples', gulp.series('prepare', gulp.parallel('scrape-patterns', 'scrape-layouts')))
+gulp.task('generate-examples', gulp.series('prepare'))
