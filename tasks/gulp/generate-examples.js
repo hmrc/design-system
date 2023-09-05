@@ -57,5 +57,6 @@ gulp.task('prepare', async (done) => {
 })
 
 // Temporarily disabling patterns.html/layouts.html to fix DS working on Apple Silicon devices
+// Make sure to remove src/examples/layouts.njk & src/examples/patterns.njk
 // gulp.task('generate-examples', gulp.series('prepare', gulp.parallel('scrape-patterns', 'scrape-layouts')))
 gulp.task('generate-examples', gulp.series('prepare'))
