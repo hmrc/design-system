@@ -1,0 +1,78 @@
+---
+layout: layout-example.njk
+---
+
+<h1 class="govuk-heading-xl">Give feedback</h1>
+
+<p class="govuk-body">We use your feedback to improve our services. To better understand it, we may link your feedback to other information we hold about you, like gender and age.</p>
+
+<p class="govuk-body">See the <a class="govuk-link" href="https://www.gov.uk/government/publications/data-protection-act-dpa-information-hm-revenue-and-customs-hold-about-you/data-protection-act-dpa-information-hm-revenue-and-customs-hold-about-you" rel="noreferrer noopener" target="_blank">HMRC Privacy Notice (opens in new tab)</a> for details about how we collect, use, protect and secure your personal information.</p>
+
+<p class="govuk-body">This optional survey is made up of 4 questions.</p>
+
+<form action="/form-handler" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+                <h2 class="govuk-heading-m">
+                  Were you able to do what you needed to do today? 
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="able" name="able" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="able">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="able-2" name="able" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="able-2">
+                    No
+                  </label>
+                </div>
+                
+                <h2 class="govuk-heading-m">
+                  How easy was it for you to do what you needed to do today? 
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy" name="easy" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="easy">
+                    Very easy
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy-2" name="easy" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="easy-2">
+                    Easy
+                  </label>
+                </div>   
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy-3" name="easy" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="easy-3">
+                    Neither easy or difficult
+                  </label>
+                </div>  
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy-4" name="easy" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="easy-4">
+                    Difficult
+                  </label>
+                </div>  
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy-5" name="easy" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="easy-5">
+                    Very difficult
+                  </label>
+                </div>              
+
+              </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Send feedback
+          </button>
+        </form>

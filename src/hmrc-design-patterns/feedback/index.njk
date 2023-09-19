@@ -19,7 +19,7 @@ layout: twoColumnPage.njk
 
 {{ hmrcFrontendInfo() }}
 
-<p class="govuk-body">If your service has a <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">phase banner</a> add the feedback page to the ‘feedback’ link.</p>
+<p class="govuk-body">If your service has a <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">phase banner</a> add the question page URL to the ‘feedback’ link.</p>
 
 <p class="govuk-body">For authenticated non-linear journeys, open the feedback page if the user clicks the sign out link. The form should open within the same tab.</p>
 
@@ -35,14 +35,13 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">It could also be shared as a link at the last transaction a user has with a service (for example by email). Services often have many different end points for users. Make sure there’s a way to collect feedback on all of them.</p>
 
-<h3 id="survey-example" class="govuk-heading-m">Example of the feedback survey</h3>
+<p class="govuk-body">The question page:</p>
 
 {{
   example({
-    item: 'research-banner',
-    description: 'Research-banner',
-    example: 'example-non-linear',
-    welsh: 'example-non-linear-welsh'
+    item: 'feedback',
+    description: 'Survey',
+    example: 'survey'
   })
 }}
 
