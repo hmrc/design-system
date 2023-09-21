@@ -47,10 +47,20 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">When the user has submitted the feedback, display a separate thank you page.</p>
 
+{{
+  example({
+    item: 'feedback',
+    description: 'Thanks',
+    example: 'thanks'
+  })
+}}
+
+<p class="govuk-body">To set up feedback for your service email <a class="govuk-link" href="mailto:paul.voller@hmrc.gov.uk.">paul.voller@hmrc.gov.uk</a>.</p>
+
 <h2 id="research" class="govuk-heading-l">Research</h2>
 
-<p class="govuk-body">We need more research. If you have used the research banner, get in touch to share your research findings.</p>
+<p class="govuk-body">We need more research. If you have used feedback, get in touch to share your research findings.</p>
 
-<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/175">Discuss the research banner on GitHub</a></p>
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/46">Discuss feedback on GitHub</a></p>
 
 {% endblock %}
