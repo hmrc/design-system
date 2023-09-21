@@ -10,14 +10,24 @@ layout: layout-example.njk
 
 <p class="govuk-body">This optional survey is made up of 4 questions.</p>
 
-<form action="/form-handler" method="post" novalidate>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<style>
 
-                <h2 class="govuk-heading-m">
+<!-- Tim, the class for the textarea is already used by https://www.tax.service.gov.uk/feedback/chb but isn't on design. -->
+
+.govuk-form-group {
+
+margin-bottom: 30px;
+
+}
+
+</style>
+
+<form action="/form-handler" method="post" novalidate>
+
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-form-group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                   Were you able to do what you needed to do today? 
-                </h2>
               </legend>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
@@ -32,11 +42,12 @@ layout: layout-example.njk
                     No
                   </label>
                 </div>
-                
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h2 class="govuk-heading-m">
+              </div>
+            </div>
+
+             <div class="govuk-form-group"> 
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                   How easy was it for you to do what you needed to do today? 
-                </h2>
               </legend>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
@@ -70,6 +81,7 @@ layout: layout-example.njk
                   </label>
                 </div>              
               </div>
+            </div>
 
             <h2 class="govuk-heading-m">
                   Why did you give this answer?
@@ -79,16 +91,16 @@ layout: layout-example.njk
             Please do not enter personal information such as your National Insurance number, Unique Tax Reference or address or telephone number in this box. Please note we are unable to reply to comments individually but we do use your feedback to help improve our services.
             </div>
 
-            <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+            <textarea class="govuk-textarea govuk-js-character-count" id="whyGiveScore" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+              <!-- Above textarea class name and ID exist on the live website but not here. The new textarea will have a smaller margin-bottom -->
 
             <div id="changedName-hint" class="govuk-hint">
             You have 1000 characters remaining.
             </div>
 
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h2 class="govuk-heading-m">
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                   Overall, how did you feel about the service you received today?
-                </h2>
               </legend>
 
             <div class="govuk-radios" data-module="govuk-radios">
