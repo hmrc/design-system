@@ -17,7 +17,7 @@ layout: layout-example.njk
 
                 <h2 class="govuk-heading-m">
                   Were you able to do what you needed to do today? 
-                </h1>
+                </h2>
               </legend>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
@@ -33,9 +33,10 @@ layout: layout-example.njk
                   </label>
                 </div>
                 
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h2 class="govuk-heading-m">
                   How easy was it for you to do what you needed to do today? 
-                </h1>
+                </h2>
               </legend>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
@@ -68,8 +69,61 @@ layout: layout-example.njk
                     Very difficult
                   </label>
                 </div>              
-
               </div>
+
+            <h2 class="govuk-heading-m">
+                  Why did you give this answer?
+            </h2>
+
+            <div id="changedName-hint" class="govuk-hint">
+            Please do not enter personal information such as your National Insurance number, Unique Tax Reference or address or telephone number in this box. Please note we are unable to reply to comments individually but we do use your feedback to help improve our services.
+            </div>
+
+            <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+            <div id="changedName-hint" class="govuk-hint">
+            You have 1000 characters remaining.
+            </div>
+
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h2 class="govuk-heading-m">
+                  Overall, how did you feel about the service you received today?
+                </h2>
+              </legend>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy" name="easy" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="easy">
+                    Very satisfied
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy-2" name="easy" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="easy-2">
+                    Satisfied
+                  </label>
+                </div>   
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy-3" name="easy" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="easy-3">
+                    Neither satisfied or dissatisfied
+                  </label>
+                </div>  
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy-4" name="easy" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="easy-4">
+                    Dissatisfied
+                  </label>
+                </div>  
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="easy-5" name="easy" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="easy-5">
+                    Very dissatisfied
+                  </label>
+                </div>              
+              </div>
+
             </fieldset>
           </div>
           <button class="govuk-button" data-module="govuk-button">
