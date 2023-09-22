@@ -9,6 +9,9 @@ layout: layout-example.njk
 
 <p class="govuk-body">You can <a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-lost-utr-number">find a lost UTR (opens in new tab)</a>.</p>
 
+<!-- The below line of code is a subsititute for the empty hint: text: text below which is where this text should be but unsure how to add a link there -->
+<p class="govuk-body">Your UTR can be 10 or 13 digits long. You can find it in your <a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-lost-utr-number">Personal Tax Account</a>, on tax returns and other documents from HMRC. It might be called ‘reference’, ‘UTR’ or ‘official use’.</p>
+
 {{ govukInput({
   label: {
     text: "What is your Self Assessment Unique Taxpayer Reference?",
@@ -16,7 +19,7 @@ layout: layout-example.njk
     classes: "govuk-visually-hidden"
   },
   hint: {
-    text: "This is 10 numbers, for example 1234567890. It will be on tax returns and other letters about Self Assessment. It may be called ‘reference’, ‘UTR’ or ‘official use’."
+    text: ""
   },
   id: "utr",
   name: "utr",
