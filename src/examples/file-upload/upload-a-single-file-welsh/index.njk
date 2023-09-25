@@ -1,0 +1,25 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+<div class="govuk-form-group">
+  {{ govukFileUpload({
+    id: "file-upload-1",
+    name: "file-upload-1",
+    hint: {
+      text: "Gallwch uwchlwytho’ch derbynneb fel copi wedi’i sganio neu lun o’r gwreiddiol. Mae’n 
+rhaid i’r ffeil dan sylw fod yn llai na 100 MB."
+    },
+    label: {
+      text: "Uwchlwytho derbynneb",
+      classes: "govuk-label--xl",
+      isPageHeading: true
+    }
+  }) }}
+</div>
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}

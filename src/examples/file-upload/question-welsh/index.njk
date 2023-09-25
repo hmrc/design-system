@@ -1,0 +1,77 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukFileUpload({
+      id: "file-upload-1",
+      name: "file-upload-1",
+      hint: {
+        text: "Gallwch uwchlwytho’ch derbynneb fel copi wedi’i sganio neu lun o’r gwreiddiol. Mae’n 
+rhaid i’r ffeil dan sylw fod yn llai na 100 MB."
+      },
+      label: {
+        text: "Uwchlwytho anfoneb",
+        classes: "govuk-label--xl",
+        isPageHeading: true
+      }
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 o 1 ffeil wedi’u huwchlwytho</div>
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
+      rows: [
+        {
+          key: {
+            html: '<a class="govuk-link" href="#">Datganiad.jpg</a><div class="govuk-body govuk-!-margin-0">Datganiad</div>'
+          },
+          value: {
+            text: govukTag({ text: "WEDI’I HUWCHLWYTHO", classes: "govuk-tag--green" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Datganiad.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukRadios({
+      name: "add-a-different-type-of-evidence",
+      fieldset: {
+        legend: {
+          text: "Ychwanegu math gwahanol o dystiolaeth ategol at eich hawliad?",
+          classes: "govuk-fieldset__legend govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Ie"
+        },
+        {
+          value: "no",
+          text: "Na"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Yn eich blaen"
+    }) }}
