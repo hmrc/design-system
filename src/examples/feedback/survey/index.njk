@@ -4,6 +4,7 @@ layout: layout-example.njk
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{% from "hmrc/components/character-count/macro.njk" import hmrcCharacterCount %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <h1 class="govuk-heading-xl">Give feedback</h1>
@@ -76,7 +77,7 @@ layout: layout-example.njk
     ]
   }) }}
 
-  {{ govukCharacterCount({
+  {{ hmrcCharacterCount({
     name: "moreDetail",
     id: "whyGiveScore",
     maxlength: 1000,
