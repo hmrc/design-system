@@ -2,6 +2,10 @@
 layout: layout-example.njk
 ---
 
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
 <h1 class="govuk-heading-xl">Give feedback</h1>
 
 <p class="govuk-body">We use your feedback to improve our services. To better understand it, we may link your feedback to other information we hold about you, like gender and age.</p>
@@ -10,126 +14,121 @@ layout: layout-example.njk
 
 <p class="govuk-body">This optional survey is made up of 4 questions.</p>
 
-
 <form action="/form-handler" method="post" novalidate>
+  {{ govukRadios({
+    name: "able",
+    fieldset: {
+      legend: {
+        text: "Were you able to do what you needed to do today?",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes",
+        id: "able-yes"
+      },
+      {
+        value: "no",
+        text: "No",
+        id: "able-no"
+      }
+    ]
+  }) }}
 
-            <fieldset class="govuk-fieldset">
-              <!-- Below is inline styling for spacing reasons -->
-              <div class="govuk-form-group" style="margin-bottom: 30px;">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  Were you able to do what you needed to do today? 
-              </legend>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="able" name="able" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="able">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="able-2" name="able" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="able-2">
-                    No
-                  </label>
-                </div>
-              </div>
-            </div>
+  {{ govukRadios({
+    name: "howEasyScore",
+    fieldset: {
+      legend: {
+        text: "How easy was it for you to do what you needed to do today?",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "VeryEasy",
+        text: "Very easy",
+        id: "howEasyQuestion-VeryEasy"
+      },
+      {
+        value: "Easy",
+        text: "Easy",
+        id: "howEasyQuestion-Easy"
+      },
+      {
+        value: "Moderate",
+        text: "Neither easy or difficult",
+        id: "howEasyQuestion-Moderate"
+      },
+      {
+        value: "Difficult",
+        text: "Difficult",
+        id: "howEasyQuestion-Difficult"
+      },
+      {
+        value: "VeryDifficult",
+        text: "Very difficult",
+        id: "howEasyQuestion-VeryDifficult"
+      }
+    ]
+  }) }}
 
-            <!-- Below is inline styling for spacing reasons -->
-            <div class="govuk-form-group" style="margin-bottom: 30px;"> 
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  How easy was it for you to do what you needed to do today? 
-              </legend>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy" name="easy" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="easy">
-                    Very easy
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy-2" name="easy" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="easy-2">
-                    Easy
-                  </label>
-                </div>   
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy-3" name="easy" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="easy-3">
-                    Neither easy or difficult
-                  </label>
-                </div>  
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy-4" name="easy" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="easy-4">
-                    Difficult
-                  </label>
-                </div>  
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy-5" name="easy" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="easy-5">
-                    Very difficult
-                  </label>
-                </div>              
-              </div>
-            </div>
+  {{ govukCharacterCount({
+    name: "moreDetail",
+    id: "whyGiveScore",
+    maxlength: 1000,
+    label: {
+      text: "Why did you give this answer?",
+      classes: "govuk-label--m",
+      isPageHeading: false
+    },
+    hint: {
+      text: "Please do not enter personal information such as your National Insurance number, Unique Tax Reference or address or telephone number in this box. Please note we are unable to reply to comments individually but we do use your feedback to help improve our services."
+    }
+  }) }}
 
-            <h2 class="govuk-heading-m">
-                  Why did you give this answer?
-            </h2>
+  {{ govukRadios({
+    name: "howDoYouFeelScore",
+    fieldset: {
+      legend: {
+        text: "Overall, how did you feel about the service you received today?",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "VerySatisfied",
+        text: "Very satisfied",
+        id: "howDoYouFeelQuestion-VerySatisfied"
+      },
+      {
+        value: "Satisfied",
+        text: "Satisfied",
+        id: "howDoYouFeelQuestion-Satisfied"
+      },
+      {
+        value: "Moderate",
+        text: "Neither satisfied or dissatisfied",
+        id: "howDoYouFeelQuestion-Moderate"
+      },
+      {
+        value: "Dissatisfied",
+        text: "Dissatisfied",
+        id: "howDoYouFeelQuestion-Dissatisfied"
+      },
+      {
+        value: "VeryDissatisfied",
+        text: "Very dissatisfied",
+        id: "howDoYouFeelQuestion-VeryDissatisfied"
+      }
+    ]
+  }) }}
 
-            <div id="changedName-hint" class="govuk-hint">
-            Please do not enter personal information such as your National Insurance number, Unique Tax Reference or address or telephone number in this box. Please note we are unable to reply to comments individually but we do use your feedback to help improve our services.
-            </div>
-            <!-- Below textarea class name and ID exist on the live website and is used here: https://www.tax.service.gov.uk/feedback/chb . The new textarea will have a smaller margin-bottom -->
-            <textarea class="govuk-textarea govuk-js-character-count" id="whyGiveScore" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-            <div id="changedName-hint" class="govuk-hint">
-            You have 1000 characters remaining.
-            </div>
-
-          <!-- Below is inline styling for spacing reasons -->
-          <div class="govuk-form-group" style="margin-bottom: 30px;">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  Overall, how did you feel about the service you received today?
-              </legend>
-
-            <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy" name="easy" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="easy">
-                    Very satisfied
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy-2" name="easy" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="easy-2">
-                    Satisfied
-                  </label>
-                </div>   
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy-3" name="easy" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="easy-3">
-                    Neither satisfied or dissatisfied
-                  </label>
-                </div>  
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy-4" name="easy" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="easy-4">
-                    Dissatisfied
-                  </label>
-                </div>  
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="easy-5" name="easy" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="easy-5">
-                    Very dissatisfied
-                  </label>
-                </div>              
-              </div>
-
-            </fieldset>
-          </div>
-          <button class="govuk-button" data-module="govuk-button">
-            Send feedback
-          </button>
-        </form>
+  {{ govukButton({
+    text: "Send feedback"
+  }) }}
+</form>
