@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
+
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="file-upload-1">
+      Uwchlwytho anfoneb
+    </label>
+    </h1>
+  <div id="file-upload-1-hint" class="govuk-hint">
+    Gallwch uwchlwytho’ch derbynneb fel copi wedi’i sganio neu lun o’r gwreiddiol. Mae’n 
+  rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
+  </div>
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+</div>
+
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 o 1 ffeil wedi’u huwchlwytho</div>
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    
+  <dl class="govuk-summary-list govuk-summary-list--long-key">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <a class="govuk-link" href="#">Datganiad.jpg</a><div class="govuk-body govuk-!-margin-0">Datganiad</div>
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--green">
+  WEDI’I HUWCHLWYTHO
+</strong>
+
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Datganiad.jpg</span>
+            </a>
+            </dd>
+        </div>
+  </dl>
+
+    <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+    Ychwanegu math gwahanol o dystiolaeth ategol at eich hawliad?
+  </legend>
+  <div class="govuk-radios"    data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-a-different-type-of-evidence" name="add-a-different-type-of-evidence" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="add-a-different-type-of-evidence">
+        Ie
+      </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-a-different-type-of-evidence-2" name="add-a-different-type-of-evidence" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="add-a-different-type-of-evidence-2">
+        Na
+      </label>
+        </div>
+  </div>
+
+</fieldset>
+</div>
+
+
+    <button class="govuk-button" data-module="govuk-button">
+  Yn eich blaen
+</button>
+</body>
+
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>

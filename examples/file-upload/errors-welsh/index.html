@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
+
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      Mae problem wedi codi
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#not-uploaded-error">Nid yw’r ffeil dan sylw wedi’i huwchlwytho llawn.</a>
+          </li>
+          <li>
+            <a href="#select-error">Dewiswch ffeil</a>
+          </li>
+          <li>
+            <a href="#empty-error">Mae’r ffeil dan sylw yn wag</a>
+          </li>
+          <li>
+            <a href="#smaller-error">Mae’n rhaid i’r ffeil dan sylw fod yn llai na 100 MB</a>
+          </li>
+          <li>
+            <a href="#already-error">Mae’r ffeil dan sylw eisoes wedi’i huwchlwytho</a>
+          </li>
+          <li>
+            <a href="#type-error">Mae’n rhaid i’r ffeil dan sylw fod ar ffurf JPG, PNG neu PDF</a>
+          </li>
+          <li>
+            <a href="#virus-error">Mae feirws yn y ffeil dan sylw</a>
+          </li>
+          <li>
+            <a href="#could-not-error">Nid oedd modd uwchlwytho’r ffeil dan sylw</a>
+          </li>
+          <li>
+            <a href="#add-a-different-type-of-evidence-error">Dewiswch ‘Iawn’ os ydych am ychwanegu math gwahanol o dystiolaeth ategol</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<h1 class="govuk-heading-xl">Uwchlwytho derbynebau</h1>
+
+<div id="file-upload-1-hint" class="govuk-hint">
+    Gallwch uwchlwytho’ch derbynneb fel copi wedi’i sganio neu lun o’r gwreiddiol. Mae’n 
+rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 o 1 ffeil wedi’u huwchlwytho</div>
+
+    
+  <dl class="govuk-summary-list govuk-summary-list--long-key">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <a class="govuk-link" href="#">Derbynneb1.jpg</a>
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--green">
+  WEDI’I HUWCHLWYTHO
+</strong>
+
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Derbynneb1.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group govuk-form-group--error">
+                  Derbynneb2.jpg
+                  <p id="not-uploaded-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Nid yw’r ffeil dan sylw wedi’i huwchlwytho llawn.
+                  </p>
+                </div>
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--yellow">
+  WRTHI’N UWCHLWYTHO
+</strong>
+
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Derbynneb2.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label govuk-!-font-weight-bold" for="select-error">
+        Derbynneb3.jpg
+      </label>
+      <p id="select-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Dewiswch ffeil
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="select-error" name="select-error" type="file" aria-describedby="select-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Derbynneb3.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label govuk-!-font-weight-bold" for="empty-error">
+        Derbynneb4.jpg
+      </label>
+      <p id="empty-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Mae’r ffeil dan sylw yn wag
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="empty-error" name="empty-error" type="file" aria-describedby="empty-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Derbynneb4.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label govuk-!-font-weight-bold" for="smaller-error">
+        Derbynneb5.jpg
+      </label>
+      <p id="smaller-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Mae’n rhaid i’r ffeil dan sylw fod yn llai na 100 MB
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="smaller-error" name="smaller-error" type="file" aria-describedby="smaller-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Derbynneb5.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label govuk-!-font-weight-bold" for="already-error">
+        Derbynneb6.jpg
+      </label>
+      <p id="already-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Mae’r ffeil dan sylw eisoes wedi’i huwchlwytho
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="already-error" name="already-error" type="file" aria-describedby="already-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Derbynneb6.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label govuk-!-font-weight-bold" for="type-error">
+        Derbynneb7.jpg
+      </label>
+      <p id="type-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Mae’n rhaid i’r ffeil dan sylw fod ar ffurf JPG, PNG neu PDF
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="type-error" name="type-error" type="file" aria-describedby="type-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Derbynneb7.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label govuk-!-font-weight-bold" for="virus-error">
+        Derbynneb8.jpg
+      </label>
+      <p id="virus-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Mae feirws yn y ffeil dan sylw
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="virus-error" name="virus-error" type="file" aria-describedby="virus-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Derbynneb8.jpg</span>
+            </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label govuk-!-font-weight-bold" for="could-not-error">
+        Derbynneb9.jpg
+      </label>
+      <p id="could-not-error-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Nid oedd modd uwchlwytho’r ffeil dan sylw
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="could-not-error" name="could-not-error" type="file" aria-describedby="could-not-error-error">
+    </div>
+    
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Dileu<span class="govuk-visually-hidden"> Derbynneb9.jpg</span>
+            </a>
+            </dd>
+        </div>
+  </dl>
+
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Uwchlwytho derbynneb arall
+</button>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <div class="govuk-form-group govuk-form-group--error">
+<fieldset class="govuk-fieldset" aria-describedby="add-a-different-type-of-evidence-error">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+    Ychwanegu math gwahanol o dystiolaeth ategol at eich hawliad?
+  </legend>
+  <p id="add-a-different-type-of-evidence-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> Dewiswch ‘Iawn’ os ydych am ychwanegu math gwahanol o dystiolaeth ategol
+  </p>
+  <div class="govuk-radios"    data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-a-different-type-of-evidence" name="add-a-different-type-of-evidence" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="add-a-different-type-of-evidence">
+        Ie
+      </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-a-different-type-of-evidence-2" name="add-a-different-type-of-evidence" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="add-a-different-type-of-evidence-2">
+        Na
+      </label>
+        </div>
+  </div>
+
+</fieldset>
+</div>
+
+
+    <button class="govuk-button" data-module="govuk-button">
+  Yn eich blaen
+</button>
+
+  </div>
+</div>
+</body>
+
+  <script src="/assets/javascripts/hmrc-design-system.js"></script>
+</html>
