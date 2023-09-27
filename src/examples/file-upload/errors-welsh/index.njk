@@ -1,0 +1,336 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukErrorSummary({
+  titleText: "Mae problem wedi codi",
+  errorList: [
+    {
+      text: "Nid yw’r ffeil dan sylw wedi’i huwchlwytho llawn.",
+      href: "#not-uploaded-error"
+    },
+    {
+      text: "Dewiswch ffeil",
+      href: "#select-error"
+    },
+    {
+      text: "Mae’r ffeil dan sylw yn wag",
+      href: "#empty-error"
+    },
+    {
+      text: "Mae’n rhaid i’r ffeil dan sylw fod yn llai na 100 MB",
+      href: "#smaller-error"
+    },
+    {
+      text: "Mae’r ffeil dan sylw eisoes wedi’i huwchlwytho",
+      href: "#already-error"
+    },
+    {
+      text: "Mae’n rhaid i’r ffeil dan sylw fod ar ffurf JPG, PNG neu PDF",
+      href: "#type-error"
+    },
+    {
+      text: "Mae feirws yn y ffeil dan sylw",
+      href: "#virus-error"
+    },
+    {
+      text: "Nid oedd modd uwchlwytho’r ffeil dan sylw",
+      href: "#could-not-error"
+    },
+    {
+      text: "Dewiswch ‘Iawn’ os ydych am ychwanegu math gwahanol o dystiolaeth ategol",
+      href: "#add-a-different-type-of-evidence-error"
+    }
+  ]
+}) }}
+
+<h1 class="govuk-heading-xl">Uwchlwytho derbynebau</h1>
+
+<div id="file-upload-1-hint" class="govuk-hint">
+    Gallwch uwchlwytho’ch derbynneb fel copi wedi’i sganio neu lun o’r gwreiddiol. Mae’n 
+rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">1 o 1 ffeil wedi’u huwchlwytho</div>
+
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
+      rows: [
+        {
+          key: {
+            html: '<a class="govuk-link" href="#">Derbynneb1.jpg</a>'
+          },
+          value: {
+            text: govukTag({ text: "WEDI’I HUWCHLWYTHO", classes: "govuk-tag--green" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb1.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: '<div class="govuk-form-group govuk-form-group--error">
+              Derbynneb2.jpg
+              <p id="not-uploaded-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Nid yw’r ffeil dan sylw wedi’i huwchlwytho llawn.
+              </p>
+            </div>'
+          },
+          value: {
+            text: govukTag({ text: "WRTHI’N UWCHLWYTHO", classes: "govuk-tag--yellow" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb2.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "select-error",
+              name: "select-error",
+              errorMessage: {
+                text: "Dewiswch ffeil"
+              },
+              label: {
+                text: "Derbynneb3.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb3.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "empty-error",
+              name: "empty-error",
+              errorMessage: {
+                text: "Mae’r ffeil dan sylw yn wag"
+              },
+              label: {
+                text: "Derbynneb4.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb4.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "smaller-error",
+              name: "smaller-error",
+              errorMessage: {
+                text: "Mae’n rhaid i’r ffeil dan sylw fod yn llai na 100 MB"
+              },
+              label: {
+                text: "Derbynneb5.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb5.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "already-error",
+              name: "already-error",
+              errorMessage: {
+                text: "Mae’r ffeil dan sylw eisoes wedi’i huwchlwytho"
+              },
+              label: {
+                text: "Derbynneb6.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb6.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "type-error",
+              name: "type-error",
+              errorMessage: {
+                text: "Mae’n rhaid i’r ffeil dan sylw fod ar ffurf JPG, PNG neu PDF"
+              },
+              label: {
+                text: "Derbynneb7.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb7.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "virus-error",
+              name: "virus-error",
+              errorMessage: {
+                text: "Mae feirws yn y ffeil dan sylw"
+              },
+              label: {
+                text: "Derbynneb8.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb8.jpg"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            html: govukFileUpload({
+              id: "could-not-error",
+              name: "could-not-error",
+              errorMessage: {
+                text: "Nid oedd modd uwchlwytho’r ffeil dan sylw"
+              },
+              label: {
+                text: "Derbynneb9.jpg",
+                classes: "govuk-!-font-weight-bold"
+              }
+            })
+          },
+          value: {
+            text: ''
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb9.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Uwchlwytho derbynneb arall",
+      classes: "govuk-button--secondary"
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    {{ govukRadios({
+      name: "add-a-different-type-of-evidence",
+      fieldset: {
+        legend: {
+          text: "Ychwanegu math gwahanol o dystiolaeth ategol at eich hawliad?",
+          classes: "govuk-fieldset__legend govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Ie"
+        },
+        {
+          value: "no",
+          text: "Na"
+        }
+      ],
+      errorMessage: {
+        text: "Dewiswch ‘Iawn’ os ydych am ychwanegu math gwahanol o dystiolaeth ategol"
+      }
+    }) }}
+
+    {{ govukButton({
+      text: "Yn eich blaen"
+    }) }}
+
+  </div>
+</div>

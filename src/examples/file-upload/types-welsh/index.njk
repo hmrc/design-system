@@ -1,0 +1,40 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukRadios({
+  classes: "govuk-radios",
+  idPrefix: "want-to-register",
+  name: "want-to-register",
+  hint: {
+    text: "Gallwch ailadrodd y cam hwn i ychwanegu gwahanol fathau o ddogfennau at eich hawliad."
+  },
+  fieldset: {
+    legend: {
+      text: "Ychwanegu dogfennau ategol at eich hawliad",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "declaration",
+      text: "Datganiad"
+    },
+    {
+      value: "invoice",
+      text: "Anfoneb"
+    },
+    {
+      value: "receipt",
+      text: "Derbynneb"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}
