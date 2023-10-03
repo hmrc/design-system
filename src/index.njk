@@ -1,38 +1,15 @@
 ---
-layout: oneColumnPage.njk
+layout: homepageLayout.njk
 ---
 {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
 
-<!-- Inline styling below for purpose of prototyping. As no local access to most class styling. -->
-<div class="app-masthead" style=" background-color:#008670; color: #fff; padding-top: 30px; padding-bottom: 30px; width: 1905px; height: 300px; margin-bottom: 50px;">
-  <div class="app-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds-from-desktop">
-        <h1 class="govuk-heading-xl app-masthead__title" style="color: #fff; margin-bottom: 30px;">Start using the HMRC <br>Design System</h1>
-        <p class="app-masthead__description" style="font-family: GDS Transport; font-size: 24px; margin: 0;">Use these design resources to make HMRC services consistent <br>with GOV.UK. Employ GOV.UK and HMRC-specific patterns to <br>save time and avoid designing things that already exist.</p>
-        <a href="/get-started/" role="button" draggable="false" class="govuk-button govuk-button--inverse govuk-!-margin-top-6 govuk-!-margin-bottom-0 govuk-button--start" data-module="govuk-button">
-          Get started
-          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false"">
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-          </svg></a>
-      </div>
-      <div class="govuk-grid-column-one-third-from-desktop">
-      </div>
-    </div>
-  </div>
-</div>
+{% include "homepageBanner.njk" %}
+{% include "whatsNew.njk" %}
 
-<div class="whats-new">
-  <div class="govuk-grid-row">
-    <h3 id="whats-new" class="govuk-heading-m">What’s new</h3>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>20 July 2023: <a href="/patterns-hmrc-govuk-team/factsheets/" class="govuk-link">Factsheets</a> published</li>
-      <li>6 July 2023: <a href="/hmrc-content-style-guide/#MRN" class="govuk-link">MRN (Movement Reference Number)</a> style published</li>
-      <li>16 May 2023: <a href="/hmrc-design-patterns/file-upload/" class="govuk-link">File upload</a> published</li>
-    </ul>
-    <p class="govuk-body"><a href="https://github.com/hmrc/design-system/pulls?q=is%3Apr" class="govuk-link">Check all updates to design resources</a></p>
-  </div>
-</div>
+<div class="govuk-width-container hmrc-width-container hmrc-width-container--wide">
+  <main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
 
 <hr aria-hidden="true" class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
@@ -60,6 +37,16 @@ layout: oneColumnPage.njk
     </a>
   </div>
 </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="govuk-width-container hmrc-width-container hmrc-width-container--wide">
+  <main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
 
 <hr aria-hidden="true" class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
@@ -102,6 +89,16 @@ layout: oneColumnPage.njk
   </div>
 </div>
 
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="govuk-width-container hmrc-width-container hmrc-width-container--wide">
+  <main class="govuk-main-wrapper" id="main-content" style="width: 1100px;">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
 <hr aria-hidden="true" class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
 <h2 class="govuk-heading-m">Accessibility and assisted digital</h2>
@@ -114,6 +111,16 @@ layout: oneColumnPage.njk
     </a>
   </div>
 </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="govuk-width-container hmrc-width-container hmrc-width-container--wide">
+  <main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
 
 <hr aria-hidden="true" class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
@@ -142,6 +149,16 @@ layout: oneColumnPage.njk
   </div>
 </div>
 
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="govuk-width-container hmrc-width-container hmrc-width-container--wide">
+  <main class="govuk-main-wrapper" id="main-content" style="width: 1100px;">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
 <hr aria-hidden="true" class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
 <footer>
@@ -161,3 +178,8 @@ layout: oneColumnPage.njk
     </ul>
   </div>
 </footer>
+
+      </div>
+    </div>
+  </main>
+</div>
