@@ -7,6 +7,8 @@ layout: layout-example.njk
 
 <h1 class="govuk-heading-l">What is your Self Assessment Unique Taxpayer Reference (UTR)?</h1>
 
+<p class="govuk-body">Your UTR can be 10 or 13 digits long. You can find it in your <a class="govuk-link" href="https://www.gov.uk/personal-tax-account">Personal Tax Account</a>, on tax returns and other documents from HMRC. It might be called ‘reference’, ‘UTR’ or ‘official use’.</p>
+
 <p class="govuk-body"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-lost-utr-number">Find a lost UTR (opens in new tab)</a>.</p>
 
 {{ govukInput({
@@ -14,9 +16,6 @@ layout: layout-example.njk
     text: "What is your Self Assessment Unique Taxpayer Reference?",
     isPageHeading: false,
     classes: "govuk-visually-hidden"
-  },
-  hint: {
-      html: 'Your UTR can be 10 or 13 digits long. You can find it in your <a class="govuk-link" href="https://www.gov.uk/personal-tax-account">Personal Tax Account</a>, on tax returns and other documents from HMRC. It might be called ‘reference’, ‘UTR’ or ‘official use’.'
   },
   id: "utr",
   name: "utr",
