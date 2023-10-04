@@ -1,7 +1,7 @@
 .hmrc-internal-header {
   box-sizing: border-box;
   padding: govuk-spacing(4) 0;
-  border-bottom: 10px solid govuk-organisation-colour("hm-revenue-customs");
+  border-bottom: 0px;
 
   @include govuk-media-query(desktop) {
     display: table;
