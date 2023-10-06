@@ -2,28 +2,24 @@
 
 background-color: #008670;
 color: #fff;
-padding-top: 30px;
+padding-top: 0px;
 padding-bottom: 30px;
 
 }
 
-.govuk-heading-xl {
+.hmrc-masthead__title {
 
 color: #fff;
 margin-bottom: 30px;
+font-family: 'GDS Transport';
+font-size: 48px;
 
 }
 
-.app-masthead__description {
+.hmrc-masthead__description {
 
 font-family: GDS Transport;
 font-size: 24px;
 margin: 0;
-
-}
-
-.govuk-grid-column-two-thirds-from-desktop {
-
-width: 100%;
 
 }
