@@ -1,0 +1,49 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+<h1 class="govuk-heading-xl">Uwchlwytho derbynneb</h1>
+
+<div id="file-upload-1-hint" class="govuk-hint">
+    Gallwch uwchlwytho’ch derbynneb fel copi wedi’i sganio neu lun o’r gwreiddiol. Mae’n 
+rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation"></div>
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
+      rows: [
+        {
+          key: {
+            text: "Derbynneb1.jpg"
+          },
+          value: {
+            text: govukTag({ text: "WRTHI’N UWCHLWYTHO", classes: "govuk-tag--yellow" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Derbynneb1.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Yn eich blaen"
+    }) }}
+  </div>
+</div>

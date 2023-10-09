@@ -1,0 +1,68 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+<h1 class="govuk-heading-xl">Uwchlwytho datganiad, derbynneb a thaflen waith cyfrifo</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div id="file-upload-1-hint" class="govuk-hint">
+      Gallwch uwchlwytho’ch derbynneb fel copi wedi’i sganio neu lun o’r gwreiddiol. Mae’n 
+rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
+    </div>
+
+    <p class="govuk-body" aria-live="polite">1 o 3 ffeil wedi’u huwchlwytho</p>
+
+    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
+
+    {{ govukSummaryList({
+      classes: 'govuk-summary-list--long-key',
+      rows: [
+        {
+          key: {
+            html: '<a class="govuk-link" href="#">Datganiad.jpg</a><div class="govuk-body govuk-!-margin-0">Datganiad</div>'
+          },
+          value: {
+            text: govukTag({ text: "WEDI’I HUWCHLWYTHO", classes: "govuk-tag--green" })
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Dileu",
+                visuallyHiddenText: "Datganiad.jpg"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukFileUpload({
+      id: "file-upload-1",
+      name: "file-upload-1",
+      label: {
+        text: "Derbynneb"
+      }
+    }) }}
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    {{ govukFileUpload({
+      id: "file-upload-2",
+      name: "file-upload-2",
+      label: {
+        text: "Taflen waith cyfrifo"
+      }
+    }) }}
+
+    {{ govukButton({
+      text: "Yn eich blaen"
+    }) }}
+  </div>
+</div>

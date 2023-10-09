@@ -1,0 +1,66 @@
+---
+title: Feedback
+status: development
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+{% block content %}
+
+<p class="govuk-body">This pattern lets users give feedback about HMRC services.</p>
+
+<h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">Use this pattern to encourage users to give feedback about a service.</p>
+
+<h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
+
+{{ hmrcFrontendInfo() }}
+
+<p class="govuk-body">Use HMRC’s microservice for feedback. To set up feedback for your service email <a class="govuk-link" href="mailto:paul.voller@hmrc.gov.uk">paul.voller@hmrc.gov.uk</a>.</p>
+
+<p class="govuk-body">If your service has a <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">phase banner</a> add the question page URL to the ‘feedback’ link.</p>
+
+<p class="govuk-body">For authenticated non-linear journeys, open the feedback page if the user clicks the sign out link. The form should open within the same tab.</p>
+
+<p class="govuk-body">For linear journeys, the feedback text below should appear at the bottom of the page, on the last page(s) a user sees within a service, such as the confirmation page or sign out page (including <a class="govuk-link" href="/hmrc-design-patterns/service-timeout/">service timeout</a> sign outs).</p>
+
+{{
+  example({
+    item: 'feedback',
+    description: 'Feedback link',
+    example: 'link'
+  })
+}}
+
+<p class="govuk-body">It could also be shared as a link at the last transaction a user has with a service (for example by email). Services often have many different end points for users. Make sure there’s a way to collect feedback on all of them.</p>
+
+<p class="govuk-body">The question page:</p>
+
+{{
+  example({
+    item: 'feedback',
+    description: 'Survey',
+    example: 'survey'
+  })
+}}
+
+<p class="govuk-body">When the user has submitted the feedback, display a separate thank you page.</p>
+
+{{
+  example({
+    item: 'feedback',
+    description: 'Thanks',
+    example: 'thanks'
+  })
+}}
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used feedback, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/46">Discuss feedback on GitHub</a></p>
+
+{% endblock %}
