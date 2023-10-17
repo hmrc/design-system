@@ -1,25 +1,24 @@
 .hmrc-masthead {
 
-background-color: #008670;
+background-color: $hmrc-green;
 color: #fff;
-padding-top: 0px;
+padding: 0px;
 padding-bottom: 30px;
 
-}
+    &__title {
 
-.hmrc-masthead__title {
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: 'GDS Transport';
+    font-size: 48px;
 
-color: #fff;
-margin-bottom: 30px;
-font-family: 'GDS Transport';
-font-size: 48px;
+    }
 
-}
+    &__description {
 
-.hmrc-masthead__description {
+    font-family: 'GDS Transport';
+    font-size: 24px;
+    margin: 0;
 
-font-family: GDS Transport;
-font-size: 24px;
-margin: 0;
-
+    }
 }
