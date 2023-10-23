@@ -82,6 +82,23 @@ We apologise for any inconvenience this may cause.',
     })
   }}
 
+<p class="govuk-body">If the planned downtime does not span over multiple days, include the date once, followed by the times. For example:</p> 
+
+{{
+  codeSnippet({
+    code: '$CTA
+
+Tuesday 16 May 2023 8am to 6pm
+
+$CTA
+
+Due to scheduled maintenance, you will be unable to access our online service from 8am to 6pm on Tuesday 16 May 2023.
+
+We apologise for any inconvenience this may cause.',
+    canCopy: true
+  })
+}}
+
 <h3 class="govuk-heading-m">Public change note</h3>
 
 <h4 class="govuk-heading-s">Service availability</h4>
@@ -89,7 +106,7 @@ We apologise for any inconvenience this may cause.',
 <p class="govuk-body">Examples:</p>
 <ul class="govuk-list govuk-list--bullet">
 <li> The agent services account is currently unavailable. Check the service availability page for updates. </li>
-<li> This service will be unavailable from 10pm on Thursday 14 October to 2am on Friday 15 October 2021. </li>
+<li> This service will be unavailable from 8am to 6pm on Tuesday 16 May 2023. </li>
 </ul>
 
 <p class="govuk-body">No public change note is needed when removing a service availability message.</p>
@@ -97,6 +114,8 @@ We apologise for any inconvenience this may cause.',
 <h4 class="govuk-heading-s">Planned downtime</h4>
 
 <p class="govuk-body">Example: Planned downtime from 5pm on Friday 17 December 2021 to 9am Monday 20 December 2021 has been added.</p>
+
+<p class="govuk-body">Example: Planned downtime from 8am to 6pm on Tuesday 16 May 2023 has been added.</p>
 
 <p class="govuk-body">No public change note is needed when removing a planned downtime message.</p>
 
