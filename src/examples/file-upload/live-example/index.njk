@@ -1,0 +1,58 @@
+---
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      File upload example
+    </h1>
+
+    <p class="govuk-body">JS files are currently {% if not data['no-in-page-js'] === true %}enabled{% else %}disabled{% endif %}</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="/disable-js" class="govuk-link">Disable JS files</a>
+      </li>
+      <li>
+        <a href="/enable-js" class="govuk-link">Enable JS files</a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-l">
+      Single file
+    </h2>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>
+        <a href="views/single-file/1-upload-a-single-file.html" class="govuk-link">Upload a single file</a>
+      </li>
+      <li>
+        <a href="views/single-file/2-uploading.html" class="govuk-link">Uploading</a>
+      </li>
+      <li>
+        <a href="views/single-file/3-uploaded.html" class="govuk-link">Uploaded</a>
+      </li>
+    </ol>
+
+    <h2 class="govuk-heading-l">
+      Multiple files
+    </h2>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>
+        <a href="views/multiple-files/1-upload-a-file.html" class="govuk-link">Upload a file</a>
+      </li>
+      <li>
+        <a href="views/multiple-files/2-upload-additional-files.html" class="govuk-link">Upload additional files</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+{% endblock %}
