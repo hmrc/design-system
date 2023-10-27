@@ -1,0 +1,69 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Upload receipt</h1>
+
+      <div id="file-upload-1-hint" class="govuk-hint">
+          You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+      </div>
+
+      <p class="govuk-body" id="refreshText">
+        <a href="./2-uploading.html" class="govuk-link">Refresh page to see update of uploading files.</a>
+      </p>
+
+      <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation"></div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukSummaryList({
+            classes: 'govuk-summary-list--long-key',
+            attributes: {
+              "id": "uploadingList",
+              "data-wait-time": data['wait-time']
+            },
+            rows: [
+              {
+                key: {
+                  text: data["single-file-file-upload-1"]
+                },
+                value: {
+                  text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "#",
+                      text: "Remove",
+                      visuallyHiddenText: data["single-file-file-upload-1"]
+                    }
+                  ]
+                }
+              }
+            ]
+          }) }}
+
+          {{ govukButton({ text: "Continue" }) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block bodyEnd %}
+  {% if not data['no-in-page-js'] %}
+    <script src="/public/javascripts/singleFile.js"></script>
+  {% endif %}
+{% endblock %}

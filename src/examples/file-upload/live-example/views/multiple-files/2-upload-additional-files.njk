@@ -1,0 +1,81 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+<div class="govuk-width-container">
+
+  {% set rows = [] %}
+  {% for file in data['files'] | reverse %}
+    {% if data.now > file['wait-time'] %}
+      {% set text = govukTag({ text: "uploaded", classes: "govuk-tag--green" })%}
+    {% else %}
+      {% set text = govukTag({ text: "uploading", classes: "govuk-tag--yellow"})%}
+    {% endif %}
+
+    {{ rows.push({
+      key: {
+        text: file.filename
+      },
+      value: {
+        text: text
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Remove",
+            visuallyHiddenText: file.filename,
+            attributes: {
+              "data-waitTime": file['wait-time']
+            }
+          }
+        ]
+      }
+    }) and '' }}
+  {% endfor %}
+
+  {% block content %}
+
+  <h1 class="govuk-heading-xl">Upload receipts</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div id="file-upload-1-hint" class="govuk-hint">
+          You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
+      </div>
+
+      {{ govukButton({
+        text: "Upload another receipt",
+        href: './1-upload-a-file.html',
+        classes: "govuk-button--secondary"
+      }) }}
+
+      <p class="govuk-body" id="refreshText">
+        <a href="./2-upload-additional-files.html" class="govuk-link">Refresh page to see update of uploading files.</a>
+      </p>
+
+      <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">
+        {{data['completed']}} of {{data['total']}} files uploaded.
+      </div>
+
+      {{ govukSummaryList({
+        rows: rows
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block bodyEnd %}
+  {% if not data['no-in-page-js'] %}
+    <script src="/public/javascripts/multipleFiles.js"></script>
+  {% endif %}
+{% endblock %}

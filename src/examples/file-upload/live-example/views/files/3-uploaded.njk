@@ -1,21 +1,16 @@
 ---
-layout: twoColumnPage.njk
+layout: layout-example.njk
 ---
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
-{% extends "layouts/main.html" %}
-
-{% block pageTitle %}
-Home – {{serviceName}} – GOV.UK Prototype Kit
-{% endblock %}
-
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">Upload receipt</h1>
 
@@ -26,13 +21,14 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         {{ govukSummaryList({
+          classes: 'govuk-summary-list--long-key',
           rows: [
             {
               key: {
-                text: "receipt1.jpg"
+                html: '<a class="govuk-link" href="#">receipt1.jpg</a>'
               },
               value: {
-                text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                text: govukTag({ text: "uploaded", classes: "govuk-tag--green" })
               },
               actions: {
                 items: [
@@ -52,8 +48,8 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
         }) }}
       </div>
     </div>
+    </div>
   </div>
 </div>
-
 {% endblock %}
 

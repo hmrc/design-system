@@ -1,0 +1,82 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukFileUpload({
+        id: "file-upload-1",
+        name: "file-upload-1",
+        hint: {
+          text: "You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB."
+        },
+        label: {
+          text: "Upload invoice",
+          classes: "govuk-label--xl",
+          isPageHeading: true
+        }
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--long-key',
+        rows: [
+          {
+            key: {
+              html: '<a class="govuk-link" href="#">declaration.jpg</a><div class="govuk-body govuk-!-margin-0">Declaration</div>'
+            },
+            value: {
+              text: govukTag({ text: "uploaded", classes: "govuk-tag--green" })
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Remove",
+                  visuallyHiddenText: "declaration.jpg"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        name: "add-a-different-type-of-evidence",
+        fieldset: {
+          legend: {
+            text: "Add a different type of supporting evidence to your claim?",
+            classes: "govuk-fieldset__legend govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
