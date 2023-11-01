@@ -1,168 +1,155 @@
 ---
 layout: homepageLayout.njk
 ---
-{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
 
-{% include "homepageBanner.njk" %}
+<main id="main-content">
+  {% include "homepageBanner.njk" %}
+  <div class="govuk-main-wrapper">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          {% include "whatsNew.njk" %}
 
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper" id="main-content">
+          <h2 class="govuk-heading-m">Styles, components and patterns</h2>
 
-{% include "whatsNew.njk" %}
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <a href="https://design-system.service.gov.uk" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">GOV.UK Design System</h3>
+                <p class="govuk-body">Make your service consistent with GOV.UK using approved styles, components and patterns.</p>
+              </a>
+            </div>
 
-<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl" aria-hidden="true">
+            <div class="govuk-grid-column-one-third">
+              <a href="/hmrc-design-patterns" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">HMRC Design Resources</h3>
+                <p class="govuk-body">Find patterns and guidance developed specifically for HMRC users.</p>
+              </a>
+            </div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+            <div class="govuk-grid-column-one-third">
+              <a href="interactive-guidance/" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">HMRC Interactive guidance</h3>
+                <p class="govuk-body">Help users filter complex content to match their personal circumstances using a set of questions.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<h2 class="govuk-heading-m">Styles, components and patterns</h2>
+      <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl" aria-hidden="true">
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <a href="https://design-system.service.gov.uk" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">GOV.UK Design System</h3>
-      <p class="govuk-body">Make your service consistent with GOV.UK using approved styles, components and patterns.</p>
-    </a>
-  </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Content design</h2>
 
-  <div class="govuk-grid-column-one-third">
-    <a href="/hmrc-design-patterns" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">HMRC Design Resources</h3>
-      <p class="govuk-body">Find patterns and guidance developed specifically for HMRC users.</p>
-    </a>
-  </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">GOV.UK content style guide</h3>
+                <p class="govuk-body">Use the same style, spelling and grammar conventions as GOV.UK.</p>
+              </a>
+            </div>
 
-  <div class="govuk-grid-column-one-third">
-    <a href="interactive-guidance/" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">HMRC Interactive guidance</h3>
-      <p class="govuk-body">Help users filter complex content to match their personal circumstances using a set of questions.</p>
-    </a>
-  </div>
-</div>
+            <div class="govuk-grid-column-one-third">
+              <a href="/hmrc-content-style-guide" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">HMRC content style guide</h3>
+                <p class="govuk-body">Use the HMRC style guide for HMRC-specific terms, styles and conventions.</p>
+              </a>
+            </div>
 
-  </div>
-</div>
+            <div class="govuk-grid-column-one-third">
+              <a href="/patterns-hmrc-govuk-team" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">Patterns for the HMRC GOV.UK team</h3>
+                <p class="govuk-body">Use these patterns when designing HMRC content on GOV.UK.</p>
+              </a>
+            </div>
 
-<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl" aria-hidden="true">
+            <div class="govuk-grid-column-one-third">
+              <a href="https://www.gov.uk/guidance/content-design" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">Planning, writing and managing content</h3>
+                <p class="govuk-body">Plan and manage content to meet the needs of HMRC users.</p>
+              </a>
+            </div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+            <div class="govuk-grid-column-one-third">
+              <a href="https://www.gov.uk/service-manual/design/writing-for-user-interfaces" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">Writing for user interfaces</h3>
+                <p class="govuk-body">Design content that is easy for users to understand.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<h2 class="govuk-heading-m">Content design</h2>
+      <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl" aria-hidden="true">
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">GOV.UK content style guide</h3>
-      <p class="govuk-body">Use the same style, spelling and grammar conventions as GOV.UK.</p>
-    </a>
-  </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Accessibility and assisted digital</h2>
 
-  <div class="govuk-grid-column-one-third">
-    <a href="/hmrc-content-style-guide" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">HMRC content style guide</h3>
-      <p class="govuk-body">Use the HMRC style guide for HMRC-specific terms, styles and conventions.</p>
-    </a>
-  </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">Accessibility and assisted digital</h3>
+                <p class="govuk-body">Help and encourage all users to use HMRC services.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="govuk-grid-column-one-third">
-    <a href="/patterns-hmrc-govuk-team" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">Patterns for the HMRC GOV.UK team</h3>
-      <p class="govuk-body">Use these patterns when designing HMRC content on GOV.UK.</p>
-    </a>
-  </div>
+      <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl" aria-hidden="true">
 
-  <div class="govuk-grid-column-one-third">
-    <a href="https://www.gov.uk/guidance/content-design" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">Planning, writing and managing content</h3>
-      <p class="govuk-body">Plan and manage content to meet the needs of HMRC users.</p>
-    </a>
-  </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Standards and principles</h2>
 
-  <div class="govuk-grid-column-one-third">
-    <a href="https://www.gov.uk/service-manual/design/writing-for-user-interfaces" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">Writing for user interfaces</h3>
-      <p class="govuk-body">Design content that is easy for users to understand.</p>
-    </a>
-  </div>
-</div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <a href="https://www.gov.uk/guidance/government-design-principles" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">Government design principles</h3>
+                <p class="govuk-body">Follow these 10 principles to design and build great digital services that work for everyone and are consistent across government.</p>
+              </a>
+            </div>
 
-  </div>
-</div>
+            <div class="govuk-grid-column-one-third">
+              <a href="https://www.gov.uk/service-manual/service-standard" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">Service Standard</h3>
+                <p class="govuk-body">Follow these 14 criteria for creating and running public services.</p>
+              </a>
+            </div>
 
-<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl" aria-hidden="true">
+            <div class="govuk-grid-column-one-third">
+              <a href="https://www.gov.uk/service-manual" class="app-card">
+                <h3 class="govuk-heading-s app-card__heading">Service Manual</h3>
+                <p class="govuk-body">Understand what teams can do to build great digital services that will meet the Service Standard.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl" aria-hidden="true">
+      <footer>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
 
-<h2 class="govuk-heading-m">Accessibility and assisted digital</h2>
+            <h2 class="govuk-heading-m">Support</h2>
+            <p class="govuk-body">If you have a question, idea or suggestion:</p>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">Accessibility and assisted digital</h3>
-      <p class="govuk-body">Help and encourage all users to use HMRC services.</p>
-    </a>
-  </div>
-</div>
-
-  </div>
-</div>
-
-<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl" aria-hidden="true">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-
-<h2 class="govuk-heading-m">Standards and principles</h2>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <a href="https://www.gov.uk/guidance/government-design-principles" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">Government design principles</h3>
-      <p class="govuk-body">Follow these 10 principles to design and build great digital services that work for everyone and are consistent across government.</p>
-    </a>
-  </div>
-
-  <div class="govuk-grid-column-one-third">
-    <a href="https://www.gov.uk/service-manual/service-standard" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">Service Standard</h3>
-      <p class="govuk-body">Follow these 14 criteria for creating and running public services.</p>
-    </a>
-  </div>
-
-  <div class="govuk-grid-column-one-third">
-    <a href="https://www.gov.uk/service-manual" class="app-card">
-      <h3 class="govuk-heading-s app-card__heading">Service Manual</h3>
-      <p class="govuk-body">Understand what teams can do to build great digital services that will meet the Service Standard.</p>
-    </a>
-  </div>
-</div>
-
-</div>
-  </div>
-
-<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl" aria-hidden="true">
-
-<footer>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-
-      <h2 class="govuk-heading-m">Support</h2>
-      <p class="govuk-body">If you have a question, idea or suggestion:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          email the design resources team at <a class="govuk-link" href="mailto:design.resources-g@digital.hmrc.gov.uk">design.resources-g@digital.hmrc.gov.uk</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="https://hmrcdigital.slack.com/archives/C014S77JCJW">get in touch through Slack (opens in app if you have it)</a>
-        </li>
-      </ul>
-
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+              email the design resources team at <a class="govuk-link" href="mailto:design.resources-g@digital.hmrc.gov.uk">design.resources-g@digital.hmrc.gov.uk</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="https://hmrcdigital.slack.com/archives/C014S77JCJW">get in touch through Slack (opens in app if you have it)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   </div>
-</footer>
-
-  </main>
-</div>
+</main>

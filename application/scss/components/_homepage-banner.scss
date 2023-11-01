@@ -1,24 +1,15 @@
 .hmrc-masthead {
+  @include govuk-responsive-padding(6, "top");
+  @include govuk-responsive-padding(6, "bottom");
+  background-color: govuk-organisation-colour("hm-revenue-customs");
+  color: govuk-colour("white");
 
-background-color: $hmrc-green;
-color: #fff;
-padding: 0px;
-padding-bottom: 30px;
+  &__title {
+    color: govuk-colour("white");
+    @include govuk-responsive-margin(6, "bottom");
+  }
 
-    &__title {
-
-    color: #fff;
-    margin-bottom: 30px;
-    font-family: 'GDS Transport';
-    font-size: 48px;
-
-    }
-
-    &__description {
-
-    font-family: 'GDS Transport';
-    font-size: 24px;
-    margin: 0;
-
-    }
+  &__description {
+    margin-bottom: 0;
+  }
 }
