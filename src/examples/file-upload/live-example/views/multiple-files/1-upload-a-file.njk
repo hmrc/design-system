@@ -1,11 +1,5 @@
----
-layout: layout-example.njk
----
-
 {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
-
-{% block content %}
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
@@ -33,11 +27,3 @@ layout: layout-example.njk
     </div>
   </div>
 </div>
-
-{% endblock %}
-
-{% block bodyEnd %}
-  {% if not data['no-in-page-js'] %}
-    <script src="/public/javascripts/multipleFiles.js"></script>
-  {% endif %}
-{% endblock %}

@@ -1,7 +1,3 @@
----
-layout: layout-example.njk
----
-
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/tag/macro.njk" import govukTag %}
@@ -72,10 +68,4 @@ layout: layout-example.njk
     </div>
   </div>
 </div>
-{% endblock %}
-
-{% block bodyEnd %}
-  {% if not data['no-in-page-js'] %}
-    <script src="/public/javascripts/multipleFiles.js"></script>
-  {% endif %}
 {% endblock %}
