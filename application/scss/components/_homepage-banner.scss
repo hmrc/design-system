@@ -10,6 +10,7 @@
   }
 
   &__description {
+    @include govuk-font(24);
     margin-bottom: 0;
   }
 }
