@@ -109,6 +109,10 @@
                       <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/eori-numbers">
                         EORI numbers
                       </a>
+                    </li><li class="app-subnav__section-item app-subnav__section-item--current">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/feedback">
+                        Feedback
+                      </a>
                     </li><li class="app-subnav__section-item">
                       <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/file-upload">
                         File upload
@@ -223,8 +227,8 @@
 
     
     <div class="govuk-!-padding-bottom-8 govuk-!-padding-top-2 hmrc-phase-banner">
-      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2"><span class="govuk-visually-hidden">This pattern is&nbsp;</span>development</strong>
-      <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
+      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2"><span class="govuk-visually-hidden">This pattern is&nbsp;</span>experimental</strong>
+      <p class="govuk-body">This is currently experimental because <a class="govuk-link" href="#research">more research</a> is needed. You should continue using it until we collect more research.</p>
     </div>
   
 
@@ -631,7 +635,7 @@
   </div>
 
 
-<p class="govuk-body">When the user has submitted the feedback, display a separate thank you page.</p>
+<p class="govuk-body">When the user has submitted the feedback, display a separate thank you page. Include a <a class="govuk-link" href="/hmrc-design-patterns/research-banner/">research banner</a> on this page.</p>
 
 
 
@@ -671,13 +675,7 @@
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
               <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Thank you for your feedback<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We will use your feedback to make our services better.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-m&quot;</span>&gt;</span>Help improve GOV.UK<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>GOV.UK needs your help to improve and to make sure the website works well for the people who need it.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://signup.take-part-in-research.service.gov.uk/?utm_campaign=PTAhome&amp;utm_source=PTAhome&amp;utm_medium=other&amp;t=HMRC&amp;id=4&quot;</span>&gt;</span>Help make GOV.UK better<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We will use your feedback to make our services better.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code>
             </pre>
 
           </div>
@@ -686,13 +684,7 @@
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
                 <code class="hljs js">&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Thank you <span class="hljs-keyword">for</span> your feedback&lt;/h1&gt;
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We will use your feedback to make our services better.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-m&quot;</span>&gt;</span>Help improve GOV.UK<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>GOV.UK needs your help to improve and to make sure the website works well for the people who need it.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
-
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://signup.take-part-in-research.service.gov.uk/?utm_campaign=PTAhome&amp;utm_source=PTAhome&amp;utm_medium=other&amp;t=HMRC&amp;id=4&quot;</span>&gt;</span>Help make GOV.UK better<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>We will use your feedback to make our services better.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code>
               </pre>
 
             </div>
