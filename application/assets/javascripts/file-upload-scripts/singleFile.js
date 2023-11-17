@@ -1,23 +1,20 @@
-window.GOVUKPrototypeKit = {
-  majorVersion: 13,
-  documentReady: (fn) => {
-    if (document.readyState !== 'loading') {
-      // IE9 support
-      fn()
-    } else {
-      // Everything else
-      document.addEventListener('DOMContentLoaded', fn)
-    }
-  },
-  internal: {}
+if (document.readyState === "loading") {
+  // Loading hasn't finished yet
+  document.addEventListener("DOMContentLoaded", fileUploadSetUp);
+} else {
+  fileUploadSetUp();
 }
 
-window.GOVUKPrototypeKit.documentReady(() => {
+  function fileUploadSetUp() {
   document.querySelector('#refreshText').remove();
 
+  const fileUploadTimeToComplete = Date.now() + 2000;
+
   poll(function () {
-    return Date.now() >= document.querySelector('#uploadingList').dataset.waitTime;
+
+    return Date.now() >= fileUploadTimeToComplete;
   }, 200000, 150).then(function () {
+
     const govukSummaryList = document.querySelector('#uploadingList');
     const fileStatus = govukSummaryList.querySelector('.govuk-tag');
     const fileNameEl = govukSummaryList.querySelector('.govuk-summary-list__key');
@@ -34,7 +31,7 @@ window.GOVUKPrototypeKit.documentReady(() => {
   }).catch(function () {
     console.error(`Poll timed out, Time now: ${Date.now()}, Wait time: ${document.querySelector('#uploadingList').dataset.waitTime}`);
   });
-});
+};
 
 // The polling function
 function poll(fn, timeout, interval) {

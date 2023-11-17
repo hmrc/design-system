@@ -25,13 +25,12 @@
           {{ govukSummaryList({
             classes: 'govuk-summary-list--long-key',
             attributes: {
-              "id": "uploadingList",
-              "data-wait-time": data['wait-time']
+              "id": "uploadingList"
             },
             rows: [
               {
                 key: {
-                  text: data["single-file-file-upload-1"]
+                  text: "fileNumber1.jpg"
                 },
                 value: {
                   text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })

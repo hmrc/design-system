@@ -14,14 +14,13 @@ layout: layout-example.njk
         File upload example
       </h1>
 
-      <p class="govuk-body">JS files are currently {% if not data['no-in-page-js'] === true %}enabled{% else %}disabled{% endif %}</p>
+<!--      <p class="govuk-body" id="jsEnabledOrDisabled">JS files are currently {% if not data['no-in-page-js'] === true %}enabled{% else %}disabled{% endif %}</p> -->
+
+          <p class="govuk-body" id="jsEnabledOrDisabled">JS files are currently <strong> disabled </strong></p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="/disable-js" class="govuk-link">Disable JS files</a>
-        </li>
-        <li>
-          <a href="/enable-js" class="govuk-link">Enable JS files</a>
+          <a href="../js-version/index.html"class="govuk-link">Enable JS files</a>
         </li>
       </ul>
 
@@ -31,13 +30,13 @@ layout: layout-example.njk
 
       <ol class="govuk-list govuk-list--number">
         <li>
-          <a href="views/js-version/single-file/1-upload-a-single-file.html" class="govuk-link">Upload a single file</a>
+          <a href="single-file/1-upload-a-single-file.html" class="govuk-link">Upload a single file</a>
         </li>
         <li>
-          <a href="views/js-version/single-file/2-uploading.html" class="govuk-link">Uploading</a>
+          <a href="single-file/2-uploading.html" class="govuk-link">Uploading</a>
         </li>
         <li>
-          <a href="views/js-version/single-file/3-uploaded.html" class="govuk-link">Uploaded</a>
+          <a href="single-file/3-uploaded.html" class="govuk-link">Uploaded</a>
         </li>
       </ol>
 
@@ -47,10 +46,10 @@ layout: layout-example.njk
 
       <ol class="govuk-list govuk-list--number">
         <li>
-          <a href="views/js-version/multiple-files/1-upload-a-file.html" class="govuk-link">Upload a file</a>
+          <a href="multiple-files/1-upload-a-file.html" class="govuk-link">Upload a file</a>
         </li>
         <li>
-          <a href="views/js-version/multiple-files/2-upload-additional-files.html" class="govuk-link">Upload additional files</a>
+          <a href="multiple-files/2-upload-additional-files.html" class="govuk-link">Upload additional files</a>
         </li>
       </ol>
     </div>

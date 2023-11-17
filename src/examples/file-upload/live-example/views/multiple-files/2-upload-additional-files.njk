@@ -4,36 +4,6 @@
 
 <div class="govuk-width-container">
 
-  {% set rows = [] %}
-  {% for file in data['files'] | reverse %}
-    {% if data.now > file['wait-time'] %}
-      {% set text = govukTag({ text: "uploaded", classes: "govuk-tag--green" })%}
-    {% else %}
-      {% set text = govukTag({ text: "uploading", classes: "govuk-tag--yellow"})%}
-    {% endif %}
-
-    {{ rows.push({
-      key: {
-        text: file.filename
-      },
-      value: {
-        text: text
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Remove",
-            visuallyHiddenText: file.filename,
-            attributes: {
-              "data-waitTime": file['wait-time']
-            }
-          }
-        ]
-      }
-    }) and '' }}
-  {% endfor %}
-
   {% block content %}
 
   <h1 class="govuk-heading-xl">Upload receipts</h1>
@@ -43,13 +13,13 @@
       <div id="file-upload-1-hint" class="govuk-hint">
           You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
       </div>
-
+      <div class="aria-live-container" id="ariaLiveContainer" aria-live="polite">
       {{ govukButton({
+        id: "uploadAnotherReceiptButton",
         text: "Upload another receipt",
-        href: './1-upload-a-file.html',
         classes: "govuk-button--secondary"
       }) }}
-
+      </div>
       <p class="govuk-body" id="refreshText">
         <a href="./2-upload-additional-files.html" class="govuk-link">Refresh page to see update of uploading files.</a>
       </p>
@@ -59,8 +29,89 @@
       </div>
 
       {{ govukSummaryList({
-        rows: rows
-      }) }}
+            classes: 'govuk-summary-list--long-key',
+            attributes: {
+              "id": "uploadingList"
+            },
+            rows: [
+              {
+                classes: "file1",
+                key: {
+                  text: "fileNumber1.jpg"
+                },
+                value: {
+                  text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                },
+                actions: {
+                  items: [
+                    {
+                      classes: "file1",
+                      href: "javascript:removeFileSetup()",
+                      text: "Remove",
+                      visuallyHiddenText: "fileNumber1.jpg"
+                    }
+                  ]
+                }
+              }, 
+              {
+                classes: "file2",
+                key: {
+                  text: "fileNumber2.jpg"
+                },
+                value: {
+                  text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                },
+                actions: {
+                  items: [
+                    {
+                      classes: "file2",
+                      href: "javascript:removeFileSetup()",
+                      text: "Remove",
+                      visuallyHiddenText: "fileNumber2.jpg"
+                    }
+                  ]
+                }
+              },
+              {
+                classes: "file3",
+                key: {
+                  text: "fileNumber3.jpg"
+                },
+                value: {
+                  text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                },
+                actions: {
+                  items: [
+                    {
+                      classes: "file3",
+                      href: "javascript:removeFileSetup()",
+                      text: "Remove",
+                      visuallyHiddenText: "fileNumber3.jpg"
+                    }
+                  ]
+                }
+              },
+              {
+                classes: "file4",
+                key: {
+                  text: "fileNumber4.jpg"
+                },
+                value: {
+                  text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                },
+                actions: {
+                  items: [
+                    {
+                      classes: "file4",
+                      href: "javascript:removeFileSetup()",
+                      text: "Remove",
+                      visuallyHiddenText: "fileNumber4.jpg"
+                    }
+                  ]
+                }
+              }
+            ]
+          }) }}
 
       {{ govukButton({
         text: "Continue"
