@@ -1,0 +1,135 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{% from "hmrc/components/character-count/macro.njk" import hmrcCharacterCount %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-xl">Rhoi adborth</h1>
+
+<p class="govuk-body">Rydym yn defnyddio’ch adborth i wella ein gwasanaethau. I ddeall eich adborth yn well, efallai y byddwn yn ei gysylltu â gwybodaeth arall sydd gennym amdanoch, megis eich rhywedd a’ch oedran.</p>
+
+<p class="govuk-body">Gweler <a class="govuk-link" href="https://www.gov.uk/government/publications/data-protection-act-dpa-information-hm-revenue-and-customs-hold-about-you/data-protection-act-dpa-information-hm-revenue-and-customs-hold-about-you" rel="noreferrer noopener" target="_blank">Hysbysiad Preifatrwydd CThEF (yn agor tab newydd)</a> i gael gwybod sut yr ydym yn casglu, defnyddio a diogelu’ch gwybodaeth bersonol.</p>
+
+<p class="govuk-body">Mae’r arolwg hwn yn cynnwys 4 cwestiwn dewisol.</p>
+
+<form action="/form-handler" method="post" novalidate>
+  {{ govukRadios({
+    name: "able",
+    fieldset: {
+      legend: {
+        text: "A oeddech wedi gallu gwneud yr hyn yr oedd angen i chi ei wneud heddiw?",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Iawn",
+        id: "able-yes"
+      },
+      {
+        value: "no",
+        text: "Na",
+        id: "able-no"
+      }
+    ]
+  }) }}
+
+  {{ govukRadios({
+    name: "howEasyScore",
+    fieldset: {
+      legend: {
+        text: "Pa mor hawdd oedd hi i wneud yr hyn yr oedd angen i chi ei wneud heddiw?",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "VeryEasy",
+        text: "Hawdd iawn",
+        id: "howEasyQuestion-VeryEasy"
+      },
+      {
+        value: "Easy",
+        text: "Hawdd",
+        id: "howEasyQuestion-Easy"
+      },
+      {
+        value: "Moderate",
+        text: "Ddim yn hawdd nac yn anodd",
+        id: "howEasyQuestion-Moderate"
+      },
+      {
+        value: "Difficult",
+        text: "Anodd",
+        id: "howEasyQuestion-Difficult"
+      },
+      {
+        value: "VeryDifficult",
+        text: "Anodd iawn",
+        id: "howEasyQuestion-VeryDifficult"
+      }
+    ]
+  }) }}
+
+  {{ hmrcCharacterCount({
+    name: "moreDetail",
+    id: "whyGiveScore",
+    maxlength: 1000,
+    label: {
+      text: "Pam y gwnaethoch roi’r ateb hwn?",
+      classes: "govuk-label--m",
+      isPageHeading: false
+    },
+    hint: {
+      text: "Peidiwch â nodi gwybodaeth bersonol, megis eich rhif Yswiriant Gwladol, eich Cyfeirnod Unigryw y Trethdalwr, eich cyfeiriad neu’ch rhif ffôn yn y blwch hwn. Sylwer – ni allwn ymateb i sylwadau’n unigol, ond mi ydym yn defnyddio’ch adborth i helpu i wella ein gwasanaethau."
+    }
+  }) }}
+
+  {{ govukRadios({
+    name: "howDoYouFeelScore",
+    fieldset: {
+      legend: {
+        text: "Yn gyffredinol, beth oedd eich barn am y gwasanaeth a gawsoch heddiw?",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "VerySatisfied",
+        text: "Bodlon iawn",
+        id: "howDoYouFeelQuestion-VerySatisfied"
+      },
+      {
+        value: "Satisfied",
+        text: "Bodlon",
+        id: "howDoYouFeelQuestion-Satisfied"
+      },
+      {
+        value: "Moderate",
+        text: "Ddim yn fodlon nac yn anfodlon",
+        id: "howDoYouFeelQuestion-Moderate"
+      },
+      {
+        value: "Dissatisfied",
+        text: "Anfodlon",
+        id: "howDoYouFeelQuestion-Dissatisfied"
+      },
+      {
+        value: "VeryDissatisfied",
+        text: "Anfodlon iawn",
+        id: "howDoYouFeelQuestion-VeryDissatisfied"
+      }
+    ]
+  }) }}
+
+  {{ govukButton({
+    text: "Anfon adborth"
+  }) }}
+</form>
