@@ -22,7 +22,7 @@
       }) }}
       </div>
       <p class="govuk-body" id="refreshText">
-        <a href="./4-uploaded.html" class="govuk-link">Refresh page to see update of uploading files.</a>
+        <a href="#" class="govuk-link">Refresh page to see update of uploading files.</a>
       </p>
 
       <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">
@@ -38,10 +38,10 @@
               {
                 classes: "file1",
                 key: {
-                  text: 'fileNumber1.jpg'
+                  html: '<a class="govuk-link" rel="noreferrer noopener" target="_blank" href="/fileNumber1.jpg">fileNumber1.jpg</a>'
                 },
                 value: {
-                  text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                  text: govukTag({ text: "uploading", classes: "govuk-tag--green" })
                 },
                 actions: {
                   items: [
@@ -57,10 +57,10 @@
               {
                 classes: "file2",
                 key: {
-                  text: 'fileNumber2.jpg'
+                  html: '<a class="govuk-link" rel="noreferrer noopener" target="_blank" href="/fileNumber2.jpg">fileNumber2.jpg</a>'
                 },
                 value: {
-                  text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                  text: govukTag({ text: "uploading", classes: "govuk-tag--green" })
                 },
                 actions: {
                   items: [
@@ -76,10 +76,10 @@
               {
                 classes: "file3",
                 key: {
-                  text: 'fileNumber3.jpg'
+                  html: '<a class="govuk-link" rel="noreferrer noopener" target="_blank" href="/fileNumber3.jpg">fileNumber3.jpg</a>'
                 },
                 value: {
-                  text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                  text: govukTag({ text: "uploading", classes: "govuk-tag--green" })
                 },
                 actions: {
                   items: [
@@ -95,10 +95,10 @@
               {
                 classes: "file4",
                 key: {
-                  text: 'fileNumber4.jpg'
+                  html: '<a class="govuk-link" rel="noreferrer noopener" target="_blank" href="/fileNumber4.jpg">fileNumber4.jpg</a>'
                 },
                 value: {
-                  text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
+                  text: govukTag({ text: "uploading", classes: "govuk-tag--green" })
                 },
                 actions: {
                   items: [
@@ -116,7 +116,7 @@
 
       {{ govukButton({
         text: "Continue",
-        href: "./5-uploading.html"
+        href: "./3-additional-row.html"
       }) }}
     </div>
   </div>

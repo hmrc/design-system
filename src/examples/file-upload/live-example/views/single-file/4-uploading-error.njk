@@ -30,7 +30,8 @@
             rows: [
               {
                 key: {
-                  text: "fileNumber1.jpg"
+                  html: '<div class="govuk-form-group govuk-form-group--error">fileNumber1.jpg<p id="not-uploaded-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded</p></div>'
                 },
                 value: {
                   text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
@@ -38,9 +39,9 @@
                 actions: {
                   items: [
                     {
-                      href: "../single-file/1-upload-a-single-file.html",
+                      href: "./1-upload-a-single-file.html",
                       text: "Remove",
-                      visuallyHiddenText: data["single-file-file-upload-1"]
+                      visuallyHiddenText: "fileNumber1.jpg"
                     }
                   ]
                 }
@@ -48,10 +49,7 @@
             ]
           }) }}
 
-          {{ govukButton({ 
-            text: "Continue",
-            href: "./4-uploading-error.html"
-            }) }}
+          {{ govukButton({ text: "Continue" }) }}
         </div>
       </div>
     </div>

@@ -36,9 +36,9 @@
             },
             rows: [
               {
-                classes: "file1",
                 key: {
-                  text: 'fileNumber1.jpg'
+                  html: '<div class="govuk-form-group govuk-form-group--error">fileNumber1.jpg<p id="not-uploaded-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded</p></div>'
                 },
                 value: {
                   text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
@@ -46,8 +46,7 @@
                 actions: {
                   items: [
                     {
-                      classes: "file1",
-                      href: "javascript:removeFileSetup()",
+                      href: "#",
                       text: "Remove",
                       visuallyHiddenText: "fileNumber1.jpg"
                     }
@@ -55,9 +54,9 @@
                 }
               }, 
               {
-                classes: "file2",
                 key: {
-                  text: 'fileNumber2.jpg'
+                  html: '<div class="govuk-form-group govuk-form-group--error">fileNumber2.jpg<p id="not-uploaded-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded</p></div>'
                 },
                 value: {
                   text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
@@ -65,8 +64,7 @@
                 actions: {
                   items: [
                     {
-                      classes: "file2",
-                      href: "javascript:removeFileSetup()",
+                      href: "#",
                       text: "Remove",
                       visuallyHiddenText: "fileNumber2.jpg"
                     }
@@ -74,9 +72,9 @@
                 }
               },
               {
-                classes: "file3",
                 key: {
-                  text: 'fileNumber3.jpg'
+                  html: '<div class="govuk-form-group govuk-form-group--error">fileNumber3.jpg<p id="not-uploaded-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded</p></div>'
                 },
                 value: {
                   text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
@@ -84,8 +82,7 @@
                 actions: {
                   items: [
                     {
-                      classes: "file3",
-                      href: "javascript:removeFileSetup()",
+                      href: "#",
                       text: "Remove",
                       visuallyHiddenText: "fileNumber3.jpg"
                     }
@@ -93,9 +90,9 @@
                 }
               },
               {
-                classes: "file4",
                 key: {
-                  text: 'fileNumber4.jpg'
+                  html: '<div class="govuk-form-group govuk-form-group--error">fileNumber4.jpg<p id="not-uploaded-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded</p></div>'
                 },
                 value: {
                   text: govukTag({ text: "uploading", classes: "govuk-tag--yellow" })
@@ -103,8 +100,7 @@
                 actions: {
                   items: [
                     {
-                      classes: "file4",
-                      href: "javascript:removeFileSetup()",
+                      href: "#",
                       text: "Remove",
                       visuallyHiddenText: "fileNumber4.jpg"
                     }
@@ -116,7 +112,7 @@
 
       {{ govukButton({
         text: "Continue",
-        href: "./5-uploading.html"
+        href: "./3-additional-row.html"
       }) }}
     </div>
   </div>
