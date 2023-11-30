@@ -614,20 +614,21 @@
 	      // store referrer value to cater for IE
 	      var docReferrer = this.document.referrer;
 
-	      // prevent resubmit warning
-	      if (this.window.history.replaceState && typeof this.window.history.replaceState === 'function') {
-	        this.window.history.replaceState(null, null, this.window.location.href);
-	      }
-
-	      // handle 'Back' click, dependent upon presence of referrer & no host change
-	      this.$module.addEventListener('click', function (event) {
-	        event.preventDefault();
-	        if (_this.window.history.back && typeof _this.window.history.back === 'function') {
-	          if (docReferrer !== '' && docReferrer.indexOf(_this.window.location.host) !== -1) {
+	      // hide the backlink if the referrer is on a different domain or the referrer is not set
+	      if (docReferrer === '' || docReferrer.indexOf(this.window.location.host) === -1) {
+	        this.$module.classList.add('hmrc-hidden-backlink');
+	      } else {
+	        // prevent resubmit warning
+	        if (this.window.history.replaceState && typeof this.window.history.replaceState === 'function') {
+	          this.window.history.replaceState(null, null, this.window.location.href);
+	        }
+	        this.$module.addEventListener('click', function (event) {
+	          event.preventDefault();
+	          if (_this.window.history.back && typeof _this.window.history.back === 'function') {
 	            _this.window.history.back();
 	          }
-	        }
-	      });
+	        });
+	      }
 	    }
 	  };
 
@@ -1121,7 +1122,8 @@
 	        messageSuffix: validate.string(lookupData('data-message-suffix')),
 	        keepAliveButtonText: validate.string(lookupData('data-keep-alive-button-text')),
 	        signOutButtonText: validate.string(lookupData('data-sign-out-button-text')),
-	        synchroniseTabs: validate["boolean"](lookupData('data-synchronise-tabs') || false)
+	        synchroniseTabs: validate["boolean"](lookupData('data-synchronise-tabs') || false),
+	        hideSignOutButton: validate["boolean"](lookupData('data-hide-sign-out-button') || false)
 	      };
 
 	      // Default timeoutUrl to signOutUrl if not set
@@ -1204,15 +1206,17 @@
 	        $visualMessge.appendChild(document.createTextNode(" ".concat(settings.messageSuffix)));
 	      }
 	      var $staySignedInButton = utils.generateDomElementFromStringAndAppendText('<button id="hmrc-timeout-keep-signin-btn" class="govuk-button">', settings.keepAliveButtonText);
-	      var $signOutButton = utils.generateDomElementFromStringAndAppendText('<a id="hmrc-timeout-sign-out-link" class="govuk-link hmrc-timeout-dialog__link">', settings.signOutButtonText);
-	      $staySignedInButton.addEventListener('click', keepAliveAndClose);
-	      $signOutButton.addEventListener('click', signOut);
-	      $signOutButton.setAttribute('href', settings.signOutUrl);
 	      $element.appendChild($visualMessge);
 	      $element.appendChild($audibleMessage);
 	      $element.appendChild($staySignedInButton);
+	      $staySignedInButton.addEventListener('click', keepAliveAndClose);
 	      $element.appendChild(document.createTextNode(' '));
-	      $element.appendChild(wrapLink($signOutButton));
+	      if (!settings.hideSignOutButton) {
+	        var $signOutButton = utils.generateDomElementFromStringAndAppendText('<a id="hmrc-timeout-sign-out-link" class="govuk-link hmrc-timeout-dialog__link">', settings.signOutButtonText);
+	        $signOutButton.addEventListener('click', signOut);
+	        $signOutButton.setAttribute('href', settings.signOutUrl);
+	        $element.appendChild(wrapLink($signOutButton));
+	      }
 	      var dialogControl = dialog.displayDialog($element);
 	      cleanupFunctions.push(function () {
 	        dialogControl.closeDialog();
@@ -1396,11 +1400,27 @@
 	    return SessionActivityService;
 	  }();
 
+	  function HmrcPrintLink($module, window) {
+	    this.$module = $module;
+	    this.window = window;
+	  }
+	  HmrcPrintLink.prototype.init = function init() {
+	    var _this = this;
+	    this.$module.addEventListener('click', function (event) {
+	      event.preventDefault();
+	      _this.window.print();
+	    });
+	  };
+
 	  function initAll() {
 	    var $AccountMenuSelector = '[data-module="hmrc-account-menu"]';
 	    if (document.querySelector($AccountMenuSelector)) {
 	      new AccountMenu($AccountMenuSelector).init();
 	    }
+	    var $HmrcPrintLinks = document.querySelectorAll('a[data-module="hmrc-print-link"]');
+	    nodeListForEach($HmrcPrintLinks, function ($HmrcPrintLink) {
+	      new HmrcPrintLink($HmrcPrintLink, window).init();
+	    });
 	    var sessionActivityService = new SessionActivityService(window.BroadcastChannel);
 	    sessionActivityService.logActivity();
 	    var $TimeoutDialog = document.querySelector('meta[name="hmrc-timeout-dialog"]');
