@@ -5,7 +5,7 @@
   padding: 20px;
   margin-bottom: 20px;
   @include govuk-media-query(desktop) {
-    min-height: 168px;
+    min-height: 145px;
   }
 }
 
@@ -20,4 +20,8 @@
   & > * {
     color: inherit;
   }
+}
+
+.app-card p:last-child {
+  margin-bottom: 0;
 }
