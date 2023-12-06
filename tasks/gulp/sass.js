@@ -38,6 +38,7 @@ gulp.task('scss:hmrc-design-system', (done) => {
     .pipe(header('$hmrc-assets-path: "/extension-assets/hmrc-frontend/hmrc/";\n'))
     .pipe(plumber(errorHandler))
     .pipe(sass({
+      quietDeps: true,
       outputStyle: 'compressed'
     }))
     .pipe(postcss([
@@ -57,6 +58,7 @@ gulp.task('scss:pattern-libraries', (done) => {
   gulp.src(scssPaths, { base: 'node_modules' })
     .pipe(plumber(errorHandler))
     .pipe(sass({
+      quietDeps: true,
       outputStyle: 'compressed'
     }))
     // minify css add vendor prefixes and normalize to compiled css
