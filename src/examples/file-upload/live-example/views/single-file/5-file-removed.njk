@@ -7,13 +7,16 @@
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="../single-file/2-uploading.html" method="get" novalidate>
-
+      <form action="./2-uploading.html" method="get" novalidate>
+        <div class="govuk-form-group">
           {{ govukFileUpload({
             id: "file-upload-1",
             name: "single-file-file-upload-1",
             hint: {
-              text: "You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB."
+              html: "<p class='govuk-hint'>You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.</p>
+                    <div class='govuk-hint' aria-live='polite' id='statusInformationUAF'>
+                      File fileNumber1.jpg removed
+                    </div>"
             },
             label: {
               text: "Upload receipt",
@@ -21,6 +24,7 @@
               isPageHeading: true
             }
           }) }}
+        </div>
 
         {{ govukButton({
           text: "Continue"

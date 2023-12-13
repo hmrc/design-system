@@ -13,6 +13,11 @@
       <div id="file-upload-1-hint" class="govuk-hint">
           You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
       </div>
+
+      <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">
+        {{data['completed']}} of {{data['total']}} files uploaded
+      </div>
+
       <div class="aria-live-container" id="ariaLiveContainer" aria-live="polite">
       {{ govukButton({
         id: "uploadAnotherReceiptButton",
@@ -24,10 +29,6 @@
       <p class="govuk-body" id="refreshText">
         <a href="./4-uploaded.html" class="govuk-link">Refresh page to see update of uploading files.</a>
       </p>
-
-      <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">
-        {{data['completed']}} of {{data['total']}} files uploaded.
-      </div>
 
       {{ govukSummaryList({
             classes: 'govuk-summary-list--long-key',
@@ -115,6 +116,7 @@
           }) }}
 
       {{ govukButton({
+        classes: "govuk-button continue",
         text: "Continue",
         href: "./5-uploading.html"
       }) }}
