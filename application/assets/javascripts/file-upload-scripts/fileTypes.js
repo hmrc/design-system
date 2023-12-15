@@ -4,13 +4,47 @@ if (document.readyState === "loading") {
 } else {
   fileUploadSetUp();
 }
+function fileTypeSelection(selectedDocument) {
+  console.log('file type function');
+  
+  switch(selectedDocument) {
+    case 'declaration':
+      window.location.assign("../file-types/2-type-question-declaration.html");
+      break;
+    case 'invoice':
+      window.location.assign("../file-types/2-type-question-invoice.html");
+      break;
+    case 'receipt':
+      window.location.assign("../file-types/2-type-question-receipt.html");
+      break;
+  }
+}
 
   function fileUploadSetUp() {
-  document.querySelector('#refreshText').remove();
+  //document.querySelector('#refreshText').remove();
+
+  // selected file event listeners
+  var selectedDocument = '';
+  document.querySelector('#want-to-register').addEventListener('change', ()=> {
+    selectedDocument = 'declaration';
+  })
+  document.querySelector('#want-to-register-2').addEventListener('change', ()=> {
+    selectedDocument = 'invoice';
+  })
+  document.querySelector('#want-to-register-3').addEventListener('change', ()=> {
+    selectedDocument = 'receipt';
+  })
+
+  const btn = document.querySelector('.govuk-button');
+  console.log(btn);
+  btn.addEventListener('click', (continueEvent)=> {
+    continueEvent.preventDefault();
+    fileTypeSelection(selectedDocument);
+  });
 
   const fileUploadTimeToComplete = Date.now() + 2000;
 
-  poll(function () {
+  poll(()=> {
 
     return Date.now() >= fileUploadTimeToComplete;
   }, 200000, 150).then(function () {

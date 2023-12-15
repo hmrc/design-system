@@ -95,7 +95,7 @@ function fileUploadSetUp() {
     const fileNameEl = govukSummaryList.querySelector('.govuk-summary-list__key');
     const statusInformation = document.querySelector('#statusInformation');
     fileNameElText = fileNameEl.innerHTML;
-    newFileNameElHtml = `<a href="#" class="govuk-link">${fileNameElText}</a>`;
+    newFileNameElHtml = `<a href="/fileNumber1.jpg" class="govuk-link">${fileNameElText}</a>`;
     fileNameEl.innerHTML = newFileNameElHtml;
     fileStatus.textContent = 'uploaded';
     fileStatus.classList.remove('govuk-tag--yellow');

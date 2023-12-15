@@ -45,6 +45,7 @@ function handleFileUploadButton() {
 
 function statusInformationSetUp() {
   const statusInformationDiv = document.querySelector('#statusInformation');
+  // flag in doc
   statusInformationDiv.classList.remove('govuk-visually-hidden');
   statusInformationDiv.classList.add('govuk-hint');
 
@@ -91,7 +92,7 @@ function selectAFile() {
       window.location.assign("../multiple-files/2-upload-additional-files.html");
   }
   else {
-    console.log('unknown error...');
+    console.error('unknown error...');
   }
 }
 
@@ -115,23 +116,23 @@ function fileUploadingError() {
   else if (uploadedArray.length < 4) {
     const allRows = Array.from(document.querySelectorAll('.govuk-summary-list__row'));
     allRows.forEach((row)=> {
+      // change to querySelector and check for null
       if(Array.from(row.querySelectorAll('.govuk-tag.govuk-tag--yellow')).length === 1) {
         const summaryListParent = row.querySelector('.govuk-summary-list__key');
         summaryListParent.innerHTML = `<div class="govuk-form-group govuk-form-group--error">fileNumber`+ Number((allRows.indexOf(row))+1) + `.jpg<p id="not-uploaded-error" class="govuk-error-message">
         <span class="govuk-visually-hidden">Error:</span> The selected file has not fully uploaded</p></div>`;
       }
       else if(Array.from(row.querySelectorAll('.govuk-tag.govuk-tag--yellow')).length === 0) {
-        console.log('file ' + Number((allRows.indexOf(row))+1) + ' has uploaded');
         const summaryListParent = row.querySelector('.govuk-summary-list__key');
-        summaryListParent.innerHTML = `<a href="#" class="govuk-link">fileNumber`+ Number((allRows.indexOf(row))+1) + `.jpg</a>`;
+        summaryListParent.innerHTML = `<a href="/fileNumber` + Number((allRows.indexOf(row))+1) + `.jpg" class="govuk-link">fileNumber`+ Number((allRows.indexOf(row))+1) + `.jpg</a>`;
       }
       else {
-        alert('forEach unknown error');
+        console.error('forEach unknown error');
       }
     });
   }
   else {
-    alert('unknown error...');
+    console.error('unknown error...');
   }
 }
 
@@ -140,7 +141,6 @@ function fileUploadingEventListener() {
   uploadingContinueBtn.addEventListener('click', (uploadEvent)=> {
     uploadEvent.preventDefault();
     fileUploadingError();
-    console.log('event listener working');
   });
 }
 
@@ -177,7 +177,7 @@ function fileUploadSetUp() {
 
       fileNameElText = fileNameEl.innerHTML;
 
-      newFileNameElHtml = `<a href="#" class="govuk-link">${fileNameElText}</a>`;
+      newFileNameElHtml = `<a href="/fileNumberX.jpg" class="govuk-link">${fileNameElText}</a>`;
       fileNameEl.innerHTML = newFileNameElHtml;
 
       fileStatus.textContent = 'uploaded';
