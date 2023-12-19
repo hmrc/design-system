@@ -1,5 +1,5 @@
 .hmrc-masthead {
-  @include govuk-responsive-padding(6, "top");
+  @include govuk-responsive-padding(4, "top");
   @include govuk-responsive-padding(6, "bottom");
   background-color: govuk-organisation-colour("hm-revenue-customs");
   color: govuk-colour("white");
