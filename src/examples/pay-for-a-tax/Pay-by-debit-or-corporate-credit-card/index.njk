@@ -1,8 +1,23 @@
-## Pay by debit or corporate credit card
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h3 class="govuk-heading-l">Pay by debit or corporate credit card</h3>
+
+<p class="govuk-body">
 You can make a full payment online using a debit or corporate credit card. There is a non-refundable fee if you use a corporate credit or debit card. You cannot pay by personal credit card.
+</p>
 
+<p class="govuk-body">
 Your payment will be accepted on the date you make it and not the date it reaches HMRC’s account (including weekends and bank holidays).
+</p>
 
+<p class="govuk-body">
 You must make sure the details you enter match those held by your bank or card provider. For example, the billing address should match the one your card is currently registered with.
+</p>
 
-{button start}[Start now](){/button}
+{{ govukButton({
+  text: "Start now",
+  isStartButton: true
+}) }}
