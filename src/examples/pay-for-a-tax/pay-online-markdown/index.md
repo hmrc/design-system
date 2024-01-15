@@ -1,15 +1,8 @@
 ## Pay online
+### Pay by Direct Debit
 
-You can pay by approving a payment through your online bank account by selecting the ‘pay by bank account’ option.
+Set up a Direct Debit through your HMRC online account.
 
-You will be directed to sign in to your online or mobile banking account to approve your payment.
+You’ll need the Government Gateway user ID and password you used when you registered for the account.
 
-The payment is usually instant but can sometimes take up to 2 hours to show in your account.
-
-Alternatively, you can make a full payment online using a debit or corporate credit card. There is a non-refundable fee if you use a corporate credit or debit card. You cannot pay by personal credit card.
-
-Your payment will be accepted on the date you make it and not the date it reaches HMRC’s account (including weekends and bank holidays).
-
-You must make sure the details you enter match those held by your bank or card provider. For example, the billing address should match the one your card is currently registered with.
-
-{button start}[Pay now](link to online service){button}
+The Direct Debit will not collect return payments over £20 million. If you owe more, you will need to pay another way.
