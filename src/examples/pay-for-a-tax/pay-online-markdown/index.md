@@ -1,8 +1,6 @@
 ## Pay online
 ### Pay by Direct Debit
 
-Pay by Direct Debit
-
 Set up a Direct Debit through your HMRC online account.
 
 You’ll need the Government Gateway user ID and password you used when you registered for the account.

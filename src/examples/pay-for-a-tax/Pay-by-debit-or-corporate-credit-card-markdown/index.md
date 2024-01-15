@@ -1,4 +1,5 @@
 ## Pay by debit or corporate credit card
+
 You can make a full payment online using a debit or corporate credit card. There is a non-refundable fee if you use a corporate credit or debit card. You cannot pay by personal credit card.
 
 Your payment will be accepted on the date you make it and not the date it reaches HMRC’s account (including weekends and bank holidays).

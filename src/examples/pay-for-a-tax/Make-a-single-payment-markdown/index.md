@@ -3,7 +3,6 @@
 You’ll need to set up a payment each time you pay HMRC. 
 
 You should set up the payment at least:
-* xxx
 
 5 working days before your return due date (the first time you do it)
 3 working days before your return due date if you use the same bank details as a previous single payment
