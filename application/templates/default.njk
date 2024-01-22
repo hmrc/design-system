@@ -1,5 +1,5 @@
 {% set titleSuffix = "Design resources for HMRC — GOV.UK" %}
-{% from "govuk/components/skip-link/macro.njk" import govukSkipLink %}
+{% from "govuk-frontend/dist/govuk/components/skip-link/macro.njk" import govukSkipLink %}
 
 <!DOCTYPE html>
 <html class="govuk-template" lang="en">
@@ -33,7 +33,7 @@
     {%- block page -%}{%- endblock -%}
   </div>
 
-  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-  <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
+  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+  <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
 </body>
 </html>

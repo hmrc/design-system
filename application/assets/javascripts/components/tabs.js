@@ -1,12 +1,5 @@
 // Taken from https://github.com/alphagov/govuk-design-system/blob/29b9cf8c30ac1514d16fc97adaf15100e5040f7d/src/javascripts/components/tabs.js
 
-import 'govuk-frontend/dist/govuk/vendor/polyfills/Function/prototype/bind'
-import 'govuk-frontend/dist/govuk/vendor/polyfills/Element/prototype/classList'
-import 'govuk-frontend/dist/govuk/vendor/polyfills/Event'
-import common from 'govuk-frontend/dist/govuk/common'
-
-var nodeListForEach = common.nodeListForEach
-
 var tabsItemClass = 'app-tabs__item'
 var tabsItemCurrentClass = tabsItemClass + '--current'
 var tabsItemJsClass = 'js-tabs__item'
@@ -35,7 +28,7 @@ AppTabs.prototype.init = function () {
   // add close to each tab
   this.$module.addEventListener('click', this.handleClick.bind(this))
 
-  nodeListForEach(this.$allTabTogglersMarkedOpen, function ($tabToggler) {
+  this.$allTabTogglersMarkedOpen.forEach(function ($tabToggler) {
     $tabToggler.click()
   })
 }
@@ -51,7 +44,7 @@ AppTabs.prototype.activateAndToggle = function (event) {
   if (isTabAlreadyOpen) {
     $tabContainer.classList.add(tabContainerHiddenClass)
     $tabContainer.setAttribute('aria-hidden', 'true')
-    nodeListForEach($currentTogglerSiblings, function ($tabToggler) {
+    $currentTogglerSiblings.forEach(function ($tabToggler) {
       $tabToggler.setAttribute('aria-expanded', 'false')
       // desktop and mobile
       $tabToggler.parentNode.classList.remove(tabsItemCurrentClass, headingItemCurrentClass)
@@ -63,7 +56,7 @@ AppTabs.prototype.activateAndToggle = function (event) {
     $tabContainer.classList.remove(tabContainerHiddenClass)
     $tabContainer.setAttribute('aria-hidden', 'false')
 
-    nodeListForEach($currentTogglerSiblings, function ($tabToggler) {
+    $currentTogglerSiblings.forEach(function ($tabToggler) {
       $tabToggler.setAttribute('aria-expanded', 'true')
       if ($tabToggler.parentNode.classList.contains(tabsItemClass)) {
         $tabToggler.parentNode.classList.add(tabsItemCurrentClass)
@@ -75,7 +68,7 @@ AppTabs.prototype.activateAndToggle = function (event) {
 }
 // reset aria attributes to default and close the tab content container
 AppTabs.prototype.resetTabs = function () {
-  nodeListForEach(this.$allTabContainers, function ($tabContainer) {
+  this.$allTabContainers.forEach(function ($tabContainer) {
     // unless the tab content has not tabs and it's been set as open
     if (!$tabContainer.classList.contains(tabContainerNoTabsJsClass)) {
       $tabContainer.classList.add(tabContainerHiddenClass)
@@ -83,7 +76,7 @@ AppTabs.prototype.resetTabs = function () {
     }
   })
 
-  nodeListForEach(this.$allTabTogglers, function ($tabToggler) {
+  this.$allTabTogglers.forEach(function ($tabToggler) {
     $tabToggler.setAttribute('aria-expanded', 'false')
     // desktop and mobile
     $tabToggler.parentNode.classList.remove(tabsItemCurrentClass, headingItemCurrentClass)
