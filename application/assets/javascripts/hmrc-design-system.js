@@ -1,6 +1,6 @@
-import common from 'govuk-frontend/govuk/common'
+import common from 'govuk-frontend/dist/govuk/common'
 import hmrcFrontend from 'hmrc-frontend/hmrc/all'
-import govUkFrontend from 'govuk-frontend/govuk/all'
+import govUkFrontend from 'govuk-frontend/dist/govuk/all'
 
 import AppTabs from './components/tabs'
 import SubNavToggle from './components/subnav'
