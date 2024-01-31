@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <p class="govuk-body">
 The next paragraph has force of law under regulation 3 of the Example Regulations 1995.
 </p>
@@ -21,7 +21,7 @@ This digital link is required where the data to be included in any of the boxes 
 prepared within a software program, product or application, and this data is then transferred to another program,
 product or application in order to submit the Example Return data to HMRC via the API platform.
 </p>
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <h1 class="govuk-heading-xl">Rydych wedi ychwanegu 4 o gyfarwyddwyr</h1>
 <div class="govuk-form-group">
   
@@ -61,7 +61,7 @@
   <div id="add-another-hint" class="govuk-hint">
     Mae’n rhaid i chi roi gwybod i ni am eich holl gyfarwyddwyr.
   </div>
-  <div class="govuk-radios govuk-radios--inline"    data-module="govuk-radios">
+  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
           <label class="govuk-label govuk-radios__label" for="add-another">
@@ -79,12 +79,12 @@
 </fieldset>
 </div>
 
-  <button class="govuk-button" data-module="govuk-button">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
   Yn eich blaen
 </button>
 </form>
 
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

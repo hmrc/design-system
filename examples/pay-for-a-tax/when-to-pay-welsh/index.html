@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <p class="govuk-body">
 Os bydd y dyddiad cau ar y penwythnos neu ar ŵyl y banc, gwnewch yn siŵr bod eich taliad yn dod i law CThEF erbyn y diwrnod gwaith olaf cyn hynny.
 </p>
 
 <p class="govuk-body">
 Os na fyddwch yn talu erbyn y dyddiad cau, efallai y bydd yn rhaid i chi dalu cosb, llog, neu’r ddau.
-</p><script src="/assets/javascripts/hmrc-design-system.js"></script>
+</p><script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

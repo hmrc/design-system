@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
 <h1 class="govuk-heading-xl">Rhoi adborth</h1>
 
@@ -27,7 +27,7 @@
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
     A oeddech wedi gallu gwneud yr hyn yr oedd angen i chi ei wneud heddiw?
   </legend>
-  <div class="govuk-radios"    data-module="govuk-radios">
+  <div class="govuk-radios" data-module="govuk-radios">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="able-yes" name="able" type="radio" value="yes">
           <label class="govuk-label govuk-radios__label" for="able-yes">
@@ -51,7 +51,7 @@
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
     Pa mor hawdd oedd hi i wneud yr hyn yr oedd angen i chi ei wneud heddiw?
   </legend>
-  <div class="govuk-radios"    data-module="govuk-radios">
+  <div class="govuk-radios" data-module="govuk-radios">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="howEasyQuestion-VeryEasy" name="howEasyScore" type="radio" value="VeryEasy">
           <label class="govuk-label govuk-radios__label" for="howEasyQuestion-VeryEasy">
@@ -89,9 +89,7 @@
 
 
   
-  
-
-<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000" data-i18n.characters-under-limit.other="Mae gennych %{count} o gymeriadau yn weddill" data-i18n.characters-under-limit.one="Mae gennych 1 cymeriad yn weddill" data-i18n.characters-at-limit="Mae gennych 0 o gymeriadau yn weddill" data-i18n.characters-over-limit.other="Mae gennych %{count} o gymeriadau yn ormod" data-i18n.characters-over-limit.one="Mae gennych 1 cymeriad yn ormod" data-i18n.words-under-limit.other="Mae gennych %{count} o eiriau yn weddill" data-i18n.words-under-limit.one="Mae gennych 1 gair yn weddill" data-i18n.words-at-limit="Mae gennych 0 o eiriau yn weddill" data-i18n.words-over-limit.other="Mae gennych %{count} o eiriau yn ormod" data-i18n.words-over-limit.one="Mae gennych 1 gair yn ormod">
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000" data-i18n.characters-under-limit.other="Mae gennych %{count} o gymeriadau yn weddill" data-i18n.characters-under-limit.one="Mae gennych 1 cymeriad yn weddill" data-i18n.characters-at-limit="Mae gennych 0 o gymeriadau yn weddill" data-i18n.characters-over-limit.other="Mae gennych %{count} o gymeriadau yn ormod" data-i18n.characters-over-limit.one="Mae gennych 1 cymeriad yn ormod" data-i18n.words-under-limit.other="Mae gennych %{count} o eiriau yn weddill" data-i18n.words-under-limit.one="Mae gennych 1 gair yn weddill" data-i18n.words-at-limit="Mae gennych 0 o eiriau yn weddill" data-i18n.words-over-limit.other="Mae gennych %{count} o eiriau yn ormod" data-i18n.words-over-limit.one="Mae gennych 1 gair yn ormod">
   <div class="govuk-form-group">
   <label class="govuk-label govuk-label--m" for="whyGiveScore">
     Pam y gwnaethoch roi’r ateb hwn?
@@ -101,7 +99,7 @@
   </div>
   <textarea class="govuk-textarea govuk-js-character-count" id="whyGiveScore" name="moreDetail" rows="5" aria-describedby="whyGiveScore-info whyGiveScore-hint"></textarea>
 </div>
-  
+
   <div id="whyGiveScore-info" class="govuk-hint govuk-character-count__message">
   Gallwch nodi hyd at 1000 o gymeriadau
 </div>
@@ -115,7 +113,7 @@
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
     Yn gyffredinol, beth oedd eich barn am y gwasanaeth a gawsoch heddiw?
   </legend>
-  <div class="govuk-radios"    data-module="govuk-radios">
+  <div class="govuk-radios" data-module="govuk-radios">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="howDoYouFeelQuestion-VerySatisfied" name="howDoYouFeelScore" type="radio" value="VerySatisfied">
           <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-VerySatisfied">
@@ -152,11 +150,11 @@
 </div>
 
 
-  <button class="govuk-button" data-module="govuk-button">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
   Anfon adborth
 </button>
 </form>
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>
