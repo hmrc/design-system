@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <div class="govuk-error-summary" data-module="govuk-error-summary">
-  
   <div role="alert">
     <h2 class="govuk-error-summary__title">
       Mae problem wedi codi
@@ -80,9 +79,7 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
 
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb1.jpg</span>
-            </a>
+                <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb1.jpg</span></a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -101,9 +98,7 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
 
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb2.jpg</span>
-            </a>
+                <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb2.jpg</span></a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -123,9 +118,7 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb3.jpg</span>
-            </a>
+                <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb3.jpg</span></a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -145,9 +138,7 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb4.jpg</span>
-            </a>
+                <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb4.jpg</span></a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -167,9 +158,7 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb5.jpg</span>
-            </a>
+                <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb5.jpg</span></a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -189,9 +178,7 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb6.jpg</span>
-            </a>
+                <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb6.jpg</span></a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -211,9 +198,7 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb7.jpg</span>
-            </a>
+                <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb7.jpg</span></a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -233,9 +218,7 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb8.jpg</span>
-            </a>
+                <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb8.jpg</span></a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -255,14 +238,12 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb9.jpg</span>
-            </a>
+                <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb9.jpg</span></a>
             </dd>
         </div>
   </dl>
 
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
   Uwchlwytho derbynneb arall
 </button>
 
@@ -276,7 +257,7 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
   <p id="add-a-different-type-of-evidence-error" class="govuk-error-message">
   <span class="govuk-visually-hidden">Error:</span> Dewiswch ‘Iawn’ os ydych am ychwanegu math gwahanol o dystiolaeth ategol
   </p>
-  <div class="govuk-radios"    data-module="govuk-radios">
+  <div class="govuk-radios" data-module="govuk-radios">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="add-a-different-type-of-evidence" name="add-a-different-type-of-evidence" type="radio" value="yes">
           <label class="govuk-label govuk-radios__label" for="add-a-different-type-of-evidence">
@@ -295,13 +276,13 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
 </div>
 
 
-    <button class="govuk-button" data-module="govuk-button">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
   Yn eich blaen
 </button>
 
   </div>
 </div>
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

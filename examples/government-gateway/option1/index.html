@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <div class="govspeak">
   <div class="attachment-details">
     <h2 class="govuk-heading-m documents">How to register</h2>
   <p class="govuk-body">To register for the Soft Drinks Industry Levy, you need to have a Government Gateway user ID and password. If you do not have a user ID, you can create one the first time you register.</p>
 
-  <button class="govuk-button" data-module="govuk-button">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
   Register now
 </button>
 </div>
-</div><script src="/assets/javascripts/hmrc-design-system.js"></script>
+</div><script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>
