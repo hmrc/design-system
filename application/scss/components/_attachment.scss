@@ -31,7 +31,12 @@
           height: 140px;
           background: govuk-colour("white");
           outline: $govuk-border-width solid transparentize(govuk-colour("black"), .9);
-    
+  
+          @include govuk-if-ie8 {
+            max-width: none;
+            border: $govuk-border-width solid govuk-colour("mid-grey", $legacy: "grey-3");
+          }
+  
           box-shadow: 0 2px 2px rgba(govuk-colour("black"), .4);
         }
       }
