@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
 <div class="govuk-error-summary" data-module="govuk-error-summary">
+  
   <div role="alert">
     <h2 class="govuk-error-summary__title">
       There is a problem
@@ -43,7 +44,7 @@
 <input class="govuk-input govuk-input--error" id="eori-number" name="eori-number" type="text" aria-describedby="eori-number-hint eori-number-error">
 </div>
 
-<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
+<script src="/assets/javascripts/hmrc-design-system.js"></script>
   </body>
 
 </html>

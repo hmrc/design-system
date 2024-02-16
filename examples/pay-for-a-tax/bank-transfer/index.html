@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 <h2 class="govuk-heading-l">Pay by bank transfer</h2>
 
 <p class="govuk-body">
@@ -60,7 +60,7 @@ If needed, you can provide your bank with the following HMRC banking address:
 
 <p class="govuk-body" style="border-left: 1px solid #b1b4b6; padding-left: 15px; margin-bottom: 30px; margin-top: 30px;">
 Address
-</p><script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
+</p><script src="/assets/javascripts/hmrc-design-system.js"></script>
   </body>
 
 </html>

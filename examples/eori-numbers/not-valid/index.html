@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 <h1 class="govuk-heading-xl">Your EORI number did not match any registered business</h1>
 
 <p class="govuk-body">You searched for ‘<strong>GB123456123456</strong>’.</p>
@@ -21,7 +21,7 @@
 <p class="govuk-body"><a href="#" class="govuk-link">Check another EORI number</a></p>
 
 <p class="govuk-body"><a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)</p>
-<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
+<script src="/assets/javascripts/hmrc-design-system.js"></script>
   </body>
 
 </html>
