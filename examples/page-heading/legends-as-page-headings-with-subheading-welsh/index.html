@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 <h2 class="govuk-caption-xl hmrc-caption-xl"><span class="govuk-visually-hidden">Yr adran hon yw: </span>Eich manylion</h2>
 
 <form action="#" method="get" novalidate>
@@ -33,7 +33,7 @@
     </fieldset>
   </div>
 </form>
-<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
+<script src="/assets/javascripts/hmrc-design-system.js"></script>
   </body>
 
 </html>

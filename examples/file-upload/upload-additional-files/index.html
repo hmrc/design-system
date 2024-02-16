@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -23,7 +23,7 @@
 
     <p class="govuk-body" aria-live="polite">1 of 2 files uploaded</p>
 
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
   Upload another receipt
 </button>
 
@@ -37,12 +37,14 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <strong class="govuk-tag govuk-tag--yellow">
-  Uploading
+  uploading
 </strong>
 
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> receipt1.jpg</span></a>
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt1.jpg</span>
+            </a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -51,22 +53,24 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <strong class="govuk-tag govuk-tag--green">
-  Uploaded
+  uploaded
 </strong>
 
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> receipt1.jpg</span></a>
+                <a class="govuk-link" href="#">
+                Remove<span class="govuk-visually-hidden"> receipt1.jpg</span>
+            </a>
             </dd>
         </div>
   </dl>
 
-    <button type="submit" class="govuk-button" data-module="govuk-button">
+    <button class="govuk-button" data-module="govuk-button">
   Continue
 </button>
   </div>
 </div>
-<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
+<script src="/assets/javascripts/hmrc-design-system.js"></script>
   </body>
 
 </html>

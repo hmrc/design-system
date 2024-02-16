@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
@@ -27,7 +27,9 @@
             Elizabeth Kean
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">Newid<span class="govuk-visually-hidden"> name</span></a>
+                <a class="govuk-link" href="#">
+                Newid<span class="govuk-visually-hidden"> name</span>
+            </a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -38,7 +40,9 @@
             12 Hydref 1984
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">Newid<span class="govuk-visually-hidden"> date of birth</span></a>
+                <a class="govuk-link" href="#">
+                Newid<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -49,7 +53,9 @@
             Iawn
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">Newid<span class="govuk-visually-hidden"> if they have National Insurance number</span></a>
+                <a class="govuk-link" href="#">
+                Newid<span class="govuk-visually-hidden"> if they have National Insurance number</span>
+            </a>
             </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -60,7 +66,9 @@
             QQ 12 34 56 C
           </dd>
             <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">Newid<span class="govuk-visually-hidden"> National Insurance number</span></a>
+                <a class="govuk-link" href="#">
+                Newid<span class="govuk-visually-hidden"> National Insurance number</span>
+            </a>
             </dd>
         </div>
   </dl>
@@ -69,14 +77,14 @@
 
         <input type="hidden" name="answers-checked" value="true">
 
-        <button type="submit" class="govuk-button" data-module="govuk-button">
+        <button class="govuk-button" data-module="govuk-button">
   Yn eich blaen
 </button>
 
       </form>
     </div>
   </div>
-<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
+<script src="/assets/javascripts/hmrc-design-system.js"></script>
   </body>
 
 </html>
