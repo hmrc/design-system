@@ -4,13 +4,14 @@ layout: layout-example.njk
 {% from "hmrc/components/header/macro.njk" import hmrcHeader %}
 
 {{ hmrcHeader({
-  "serviceName": "Service Name",
-  "serviceUrl" : "/",
-  "phaseBanner" : {
+  serviceName: "Service Name",
+  serviceUrl : "/",
+  phaseBanner : {
     tag: {
       text: "alpha"
   },
   html: "This is a new service — your <a class='govuk-link' href='#'>feedback</a> will help us to improve it."
   },
-  "signOutHref" : "?sign-out"
+  signOutHref : "?sign-out",
+  useTudorCrown: "true"
 }) }}
