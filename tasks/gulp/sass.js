@@ -34,7 +34,7 @@ gulp.task('scss:hmrc-design-system', (done) => {
   // TODO: compile an Old IE version of our local css
   // Also pertains to PLATUI-161: https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   gulp.src('./application/scss/hmrc-design-system.scss')
-    .pipe(header('$govuk-assets-path: "/extension-assets/govuk-frontend/dist/govuk/assets/";\n'))
+    .pipe(header('$govuk-assets-path: "/extension-assets/govuk-frontend/govuk/assets/";\n'))
     .pipe(header('$hmrc-assets-path: "/extension-assets/hmrc-frontend/hmrc/";\n'))
     .pipe(plumber(errorHandler))
     .pipe(sass({

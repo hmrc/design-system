@@ -46,6 +46,13 @@
     }
   }
 
+  // IE8 does not support the video element, so we hide the element entirely.
+  @if $govuk-is-ie8 == true {
+    video {
+      display: none;
+    }
+  }
+
   // Fix monospace font size when used with relative typography
   //
   // Browsers automatically reduce monospace font size
