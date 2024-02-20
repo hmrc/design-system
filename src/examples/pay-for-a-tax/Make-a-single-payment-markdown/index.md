@@ -1,4 +1,4 @@
-### Make a single payment
+### Making a single payment
 
 You’ll need to set up a payment each time you pay HMRC. 
 
@@ -9,7 +9,7 @@ You should set up the payment at least:
 
 The payments will show on your bank statement as ‘HMRC NDDS’.
 
-### Pay your bill automatically
+### Paying your bill automatically
 
 HMRC will automatically collect the payment from your bank account based on the amount in your return. You’ll only need to set the Direct Debit up once.
 

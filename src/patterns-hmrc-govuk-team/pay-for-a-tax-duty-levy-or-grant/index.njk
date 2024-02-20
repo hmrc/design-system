@@ -36,16 +36,13 @@ For an example of the pattern in use, go to <a href="https://www.gov.uk/guidance
 <h3 class="govuk-heading-m">Body</h3>
 
 <p class="govuk-body">
-There are 3 optional payment methods that you may need to include:
+There are 5 optional payment methods that you may need to include:
 </p>
 
 <ol class="govuk-list govuk-list--number">
-    <li>Pay online – this section may include one or more of the following subheadings: 
-    <ul class="govuk-list govuk-list--bullet">
-    <li>Pay by Direct Debit</li>
-    <li>Approve a payment through your online bank account</li>
+    <li>Pay through your online bank account</li>
+    <li>Pay by Direct Debit </li>
     <li>Pay by debit or corporate credit card </li>
-  </ul>
     <li>Pay by bank transfer (this can include payments for both UK and overseas accounts)</li>
     <li>Pay by cheque</li>
   </ol>
@@ -91,8 +88,19 @@ Then include the following:
     markdownWelsh: 'what-you-need-welsh-markdown',
     markdownOnly: true
 }) }}
-<h3 class="govuk-heading-m">Pay online</h3>
-<p class="govuk-body">If there are multiple methods of paying online, separate the methods by using a heading 3.</p>
+<h3 class="govuk-heading-m">Online payment methods</h3>
+<p class="govuk-body">Start with the businesses’ preferred method, through your bank account, and follow with Direct Debit, if customers can pay that way.
+    </p>
+    {{ example({
+        item: 'pay-for-a-tax',
+        example: 'Approve-a-payment-through-your-online-bank-account',
+        description: 'Approve a payment through your online bank account',
+        markdown: 'Approve-a-payment-through-your-online-bank-account-markdown',
+        welsh: 'bank-transfer-welsh',
+        markdownWelsh: 'bank-transfer-welsh-markdown',
+        markdownOnly: true
+    }) }}
+    <p class="govuk-body">If there are two ways to pay by Direct Debit, separate the methods by using a heading 3. If only one method can be used, a heading will not be needed.</p>
 {{ example({
     item: 'pay-for-a-tax',
     example: 'pay-online',
@@ -102,7 +110,7 @@ Then include the following:
     markdownWelsh: 'pay-online-welsh-markdown',
     markdownOnly: true
 }) }}
-<p class="govuk-body">If there are two ways to pay by Direct Debit, separate the methods by using a heading 3. If only one method can be used, a heading will not be needed.</p>
+
 {{ example({
     item: 'pay-for-a-tax',
     example: 'Make-a-single-payment',
@@ -115,19 +123,22 @@ Then include the following:
 
 {{ example({
     item: 'pay-for-a-tax',
-    example: 'Approve-a-payment-through-your-online-bank-account',
-    description: 'Approve a payment through your online bank account',
-    markdown: 'Approve-a-payment-through-your-online-bank-account-markdown',
+    example: 'Pay-by-debit-or-corporate-credit-card',
+    description: 'Pay by debit or corporate credit card',
+    markdown: 'Pay-by-debit-or-corporate-credit-card-markdown',
     welsh: 'bank-transfer-welsh',
     markdownWelsh: 'bank-transfer-welsh-markdown',
     markdownOnly: true
 }) }}
+<h3 class="govuk-heading-m">Green button for online payment methods</h3>
+<p class="govuk-body">For accessibility the green ‘pay now’ button must be under a heading and section that refers to all online payment methods. This is so screen reader users understand that the button applies to all payment methods under this heading. 
+</p>
 
 {{ example({
     item: 'pay-for-a-tax',
-    example: 'Pay-by-debit-or-corporate-credit-card',
-    description: 'Pay by debit or corporate credit card',
-    markdown: 'Pay-by-debit-or-corporate-credit-card-markdown',
+    example: 'pay-online-with-green-button',
+    description: 'Pay online',
+    markdown: 'pay-online-with-green-button-markdown',
     welsh: 'bank-transfer-welsh',
     markdownWelsh: 'bank-transfer-welsh-markdown',
     markdownOnly: true
