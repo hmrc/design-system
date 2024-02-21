@@ -1,0 +1,21 @@
+---
+layout: layout-example.njk
+---
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h3 class="govuk-heading-l">Pay online</h3>
+
+<p class="govuk-body">
+You can pay online using one of the following methods: 
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>approve a payment through your online bank account</li>
+<li>Direct Debit</li>
+<li>debit or corporate credit card</li>
+</ul>
+
+{{ govukButton({
+  text: "Start now",
+  isStartButton: true
+}) }}
