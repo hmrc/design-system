@@ -1,4 +1,4 @@
-## Paying online by direct debit
+## Paying online by Direct Debit
 
 Set up a Direct Debit through your HMRC online account.
 
