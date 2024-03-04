@@ -66,15 +66,6 @@ gulp.task('scss:pattern-libraries', (done) => {
       autoprefixer,
       cssnano
     ]))
-    .pipe(gulpif(isIE, postcss([
-      require('oldie')({
-        rgba: { filter: true },
-        rem: { disable: true },
-        unmq: { disable: true },
-        pseudo: { disable: true }
-        // more rules go here
-      })
-    ])))
     .pipe(rename((path) => {
       path.basename = path.dirname
       path.dirname = 'assets/stylesheets'
