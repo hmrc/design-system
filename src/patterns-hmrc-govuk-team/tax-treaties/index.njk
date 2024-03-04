@@ -19,6 +19,7 @@ layout: twoColumnPage.njk
     <li>mutual agreement procedure</li>
     <li>protocol to the double taxation convention</li>
     <li>tax information exchange agreement</li>
+    <li>synthesised text</li>
 </ul>
 
 <h2 class="govuk-heading-l">How to design using this pattern</h2>
@@ -92,6 +93,35 @@ The [thing] was signed on [date] and has not yet entered into force.',
     })
   }}
 
+  <h4 class="govuk-heading-s">Synthesised text</h4>
+
+  <p class="govuk-body">For an example, check <a href="https://www.gov.uk/government/publications/norway-tax-treaties#:~:text=The%202013%20UK%2DNorway%20Double%20Taxation%20Convention%20has%20been%20modified,for%20taxes%20withheld%20at%20source">Norway: tax treaties</a>.
+Do not include a year at the beginning of the attachment or in the ‘Details’ section.</p>
+
+{{
+    codeSnippet({
+      code: '### [Name of HTML attachment]
+
+The [thing] has been modified by the [thing].
+
+The modifications made by the [thing] are effective in respect of the [thing].
+
+It is effective in the UK from:
+  * [date] for [tax]
+  * [date] for [tax]
+
+
+It is effective in [country] from:
+
+
+  * [date] for [tax]
+  * [date] for [tax]',
+      canCopy: true
+    })
+  }}
+
+  <p class="govuk-body">If the effective date is different for each country, include on separate lines but ensure that the UK is shown first.</p>
+
 <h3 class="govuk-heading-m">HTML attachment</h3>
 
 <p class="govuk-body">The HTML attachment should be in this order:</p>
@@ -112,6 +142,7 @@ in force</li>
     <li>[yyyy] UK-[country] Double Taxation Convention and Protocol, as amended in [yyyy] —
 in force</li>
     <li>[yyyy] UK-[country] Protocol to the [yyyy] Double Taxation Convention — not in force</li>
+    <li>Synthesised text of the Multilateral Instrument and the [yyyy] UK-[country] Double Taxation Convention — in force/li>
 </ul>
 
 <h3 class="govuk-heading-m">Collection</h3>
