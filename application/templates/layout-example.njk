@@ -11,12 +11,12 @@
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
     {%- block body -%}
       {{ contents | safe }}
     {%- endblock -%}
 
-    <script src="/assets/javascripts/hmrc-design-system.js"></script>
+    <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>
