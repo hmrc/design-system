@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
 <div class="govuk-form-group govuk-form-group--error">
   <label class="govuk-label" for="utr">
@@ -21,12 +21,12 @@
     Mae hwn yn cynnwys 10 rhif, er enghraifft 1234567890. Bydd i’w weld ar Ffurflenni Treth a llythyrau eraill ynghylch Treth Gorfforaeth. Efallai y cyfeirir ato gan ddefnyddio’r geiriau ‘cyfeirnod’, ‘UTR’ neu ‘defnydd swyddogol’. <a class="govuk-link" href="https://www.gov.uk/find-lost-utr-number">Mae modd dod o hyd i UTR sydd ar goll</a>.
   </div>
   <p id="utr-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Gwall:</span> Nodwch eich Cyfeirnod Unigryw y Trethdalwr ar gyfer Treth Gorfforaeth
+    <span class="govuk-visually-hidden">Gwall:</span> Nodwch eich Cyfeirnod Unigryw y Trethdalwr ar gyfer Treth Gorfforaeth
   </p>
-<input class="govuk-input govuk-input--width-10 govuk-input--error" id="utr" name="utr" type="text" aria-describedby="utr-hint utr-error">
+  <input class="govuk-input govuk-input--width-10 govuk-input--error" id="utr" name="utr" type="text" aria-describedby="utr-hint utr-error">
 </div>
 
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

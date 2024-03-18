@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
 <div class="govuk-form-group govuk-form-group--error">
   <label class="govuk-label" for="employer-paye-reference">
@@ -21,12 +21,12 @@
     Rhif swyddfa dreth 3 digid yw hwn, wedi’i ddilyn gan flaenslaes a chyfeirnod cyflogwr gan y swyddfa dreth, megis 123/AB456. Mae’n bosibl y cyfeirir ato fel ‘Cyfeirnod TWE y Cyflogwr’ neu fel ‘Cyfeirnod TWE’. Bydd i’w weld ar lythyrau oddi wrth CThEM ynghylch TWE.
   </div>
   <p id="employer-paye-reference-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Gwall:</span> Nodwch eich Cyfeirnod TWE y Cyflogwr
+    <span class="govuk-visually-hidden">Gwall:</span> Nodwch eich Cyfeirnod TWE y Cyflogwr
   </p>
-<input class="govuk-input govuk-input--width-10 govuk-input--error" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint employer-paye-reference-error">
+  <input class="govuk-input govuk-input--width-10 govuk-input--error" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint employer-paye-reference-error">
 </div>
 
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

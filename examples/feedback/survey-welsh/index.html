@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
 <h1 class="govuk-heading-xl">Rhoi adborth</h1>
 
@@ -23,75 +23,71 @@
 
 <form action="/form-handler" method="post" novalidate>
   <div class="govuk-form-group">
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-    A oeddech wedi gallu gwneud yr hyn yr oedd angen i chi ei wneud heddiw?
-  </legend>
-  <div class="govuk-radios"    data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="able-yes" name="able" type="radio" value="yes">
-          <label class="govuk-label govuk-radios__label" for="able-yes">
-        Iawn
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="able-no" name="able" type="radio" value="no">
-          <label class="govuk-label govuk-radios__label" for="able-no">
-        Na
-      </label>
-        </div>
-  </div>
-
-</fieldset>
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      A oeddech wedi gallu gwneud yr hyn yr oedd angen i chi ei wneud heddiw?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="able-yes" name="able" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="able-yes">
+          Iawn
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="able-no" name="able" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="able-no">
+          Na
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
 
 
   <div class="govuk-form-group">
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-    Pa mor hawdd oedd hi i wneud yr hyn yr oedd angen i chi ei wneud heddiw?
-  </legend>
-  <div class="govuk-radios"    data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howEasyQuestion-VeryEasy" name="howEasyScore" type="radio" value="VeryEasy">
-          <label class="govuk-label govuk-radios__label" for="howEasyQuestion-VeryEasy">
-        Hawdd iawn
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howEasyQuestion-Easy" name="howEasyScore" type="radio" value="Easy">
-          <label class="govuk-label govuk-radios__label" for="howEasyQuestion-Easy">
-        Hawdd
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howEasyQuestion-Moderate" name="howEasyScore" type="radio" value="Moderate">
-          <label class="govuk-label govuk-radios__label" for="howEasyQuestion-Moderate">
-        Ddim yn hawdd nac yn anodd
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howEasyQuestion-Difficult" name="howEasyScore" type="radio" value="Difficult">
-          <label class="govuk-label govuk-radios__label" for="howEasyQuestion-Difficult">
-        Anodd
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howEasyQuestion-VeryDifficult" name="howEasyScore" type="radio" value="VeryDifficult">
-          <label class="govuk-label govuk-radios__label" for="howEasyQuestion-VeryDifficult">
-        Anodd iawn
-      </label>
-        </div>
-  </div>
-
-</fieldset>
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      Pa mor hawdd oedd hi i wneud yr hyn yr oedd angen i chi ei wneud heddiw?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howEasyQuestion-VeryEasy" name="howEasyScore" type="radio" value="VeryEasy">
+        <label class="govuk-label govuk-radios__label" for="howEasyQuestion-VeryEasy">
+          Hawdd iawn
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howEasyQuestion-Easy" name="howEasyScore" type="radio" value="Easy">
+        <label class="govuk-label govuk-radios__label" for="howEasyQuestion-Easy">
+          Hawdd
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howEasyQuestion-Moderate" name="howEasyScore" type="radio" value="Moderate">
+        <label class="govuk-label govuk-radios__label" for="howEasyQuestion-Moderate">
+          Ddim yn hawdd nac yn anodd
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howEasyQuestion-Difficult" name="howEasyScore" type="radio" value="Difficult">
+        <label class="govuk-label govuk-radios__label" for="howEasyQuestion-Difficult">
+          Anodd
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howEasyQuestion-VeryDifficult" name="howEasyScore" type="radio" value="VeryDifficult">
+        <label class="govuk-label govuk-radios__label" for="howEasyQuestion-VeryDifficult">
+          Anodd iawn
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
 
 
   
-  
-
-<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000" data-i18n.characters-under-limit.other="Mae gennych %{count} o gymeriadau yn weddill" data-i18n.characters-under-limit.one="Mae gennych 1 cymeriad yn weddill" data-i18n.characters-at-limit="Mae gennych 0 o gymeriadau yn weddill" data-i18n.characters-over-limit.other="Mae gennych %{count} o gymeriadau yn ormod" data-i18n.characters-over-limit.one="Mae gennych 1 cymeriad yn ormod" data-i18n.words-under-limit.other="Mae gennych %{count} o eiriau yn weddill" data-i18n.words-under-limit.one="Mae gennych 1 gair yn weddill" data-i18n.words-at-limit="Mae gennych 0 o eiriau yn weddill" data-i18n.words-over-limit.other="Mae gennych %{count} o eiriau yn ormod" data-i18n.words-over-limit.one="Mae gennych 1 gair yn ormod">
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000" data-i18n.characters-under-limit.other="Mae gennych %{count} o gymeriadau yn weddill" data-i18n.characters-under-limit.one="Mae gennych 1 cymeriad yn weddill" data-i18n.characters-at-limit="Mae gennych 0 o gymeriadau yn weddill" data-i18n.characters-over-limit.other="Mae gennych %{count} o gymeriadau yn ormod" data-i18n.characters-over-limit.one="Mae gennych 1 cymeriad yn ormod" data-i18n.words-under-limit.other="Mae gennych %{count} o eiriau yn weddill" data-i18n.words-under-limit.one="Mae gennych 1 gair yn weddill" data-i18n.words-at-limit="Mae gennych 0 o eiriau yn weddill" data-i18n.words-over-limit.other="Mae gennych %{count} o eiriau yn ormod" data-i18n.words-over-limit.one="Mae gennych 1 gair yn ormod">
   <div class="govuk-form-group">
   <label class="govuk-label govuk-label--m" for="whyGiveScore">
     Pam y gwnaethoch roi’r ateb hwn?
@@ -101,62 +97,60 @@
   </div>
   <textarea class="govuk-textarea govuk-js-character-count" id="whyGiveScore" name="moreDetail" rows="5" aria-describedby="whyGiveScore-info whyGiveScore-hint"></textarea>
 </div>
-  
-  <div id="whyGiveScore-info" class="govuk-hint govuk-character-count__message">
-  Gallwch nodi hyd at 1000 o gymeriadau
-</div>
 
+  <div id="whyGiveScore-info" class="govuk-hint govuk-character-count__message">
+    Gallwch nodi hyd at 1000 o gymeriadau
+  </div>
 </div>
 
 
 
   <div class="govuk-form-group">
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-    Yn gyffredinol, beth oedd eich barn am y gwasanaeth a gawsoch heddiw?
-  </legend>
-  <div class="govuk-radios"    data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howDoYouFeelQuestion-VerySatisfied" name="howDoYouFeelScore" type="radio" value="VerySatisfied">
-          <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-VerySatisfied">
-        Bodlon iawn
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howDoYouFeelQuestion-Satisfied" name="howDoYouFeelScore" type="radio" value="Satisfied">
-          <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-Satisfied">
-        Bodlon
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howDoYouFeelQuestion-Moderate" name="howDoYouFeelScore" type="radio" value="Moderate">
-          <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-Moderate">
-        Ddim yn fodlon nac yn anfodlon
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howDoYouFeelQuestion-Dissatisfied" name="howDoYouFeelScore" type="radio" value="Dissatisfied">
-          <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-Dissatisfied">
-        Anfodlon
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="howDoYouFeelQuestion-VeryDissatisfied" name="howDoYouFeelScore" type="radio" value="VeryDissatisfied">
-          <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-VeryDissatisfied">
-        Anfodlon iawn
-      </label>
-        </div>
-  </div>
-
-</fieldset>
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      Yn gyffredinol, beth oedd eich barn am y gwasanaeth a gawsoch heddiw?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howDoYouFeelQuestion-VerySatisfied" name="howDoYouFeelScore" type="radio" value="VerySatisfied">
+        <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-VerySatisfied">
+          Bodlon iawn
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howDoYouFeelQuestion-Satisfied" name="howDoYouFeelScore" type="radio" value="Satisfied">
+        <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-Satisfied">
+          Bodlon
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howDoYouFeelQuestion-Moderate" name="howDoYouFeelScore" type="radio" value="Moderate">
+        <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-Moderate">
+          Ddim yn fodlon nac yn anfodlon
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howDoYouFeelQuestion-Dissatisfied" name="howDoYouFeelScore" type="radio" value="Dissatisfied">
+        <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-Dissatisfied">
+          Anfodlon
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="howDoYouFeelQuestion-VeryDissatisfied" name="howDoYouFeelScore" type="radio" value="VeryDissatisfied">
+        <label class="govuk-label govuk-radios__label" for="howDoYouFeelQuestion-VeryDissatisfied">
+          Anfodlon iawn
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
 
 
-  <button class="govuk-button" data-module="govuk-button">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
   Anfon adborth
 </button>
 </form>
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>
