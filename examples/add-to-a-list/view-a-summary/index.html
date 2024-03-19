@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <h1 class="govuk-heading-xl">You have added 3 directors</h1>
 <div class="govuk-form-group">
   
@@ -46,38 +46,37 @@
 </div>
 <form method="post" novalidate action="">
   <div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
-    Do you need to add another director?
-  </legend>
-  <div id="add-another-hint" class="govuk-hint">
-    You must tell us about all your directors.
-  </div>
-  <div class="govuk-radios govuk-radios--inline"    data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
-          <label class="govuk-label govuk-radios__label" for="add-another">
-        Yes
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
-          <label class="govuk-label govuk-radios__label" for="add-another-2">
-        No
-      </label>
-        </div>
-  </div>
-
-</fieldset>
+  <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+      Do you need to add another director?
+    </legend>
+    <div id="add-another-hint" class="govuk-hint">
+      You must tell us about all your directors.
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+        <label class="govuk-label govuk-radios__label" for="add-another">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+        <label class="govuk-label govuk-radios__label" for="add-another-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
 
-  <button class="govuk-button" data-module="govuk-button">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
   Continue
 </button>
 </form>
 
 
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

@@ -6,29 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
 <div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="employer-paye-reference">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="employer-paye-reference">
       Beth yw cyfeirnod TWE y cyflogwr ar gyfer Anycompany?
     </label>
-    </h1>
+  </h1>
   <div id="employer-paye-reference-hint" class="govuk-hint">
     Rhif swyddfa dreth 3 digid yw hwn, wedi’i ddilyn gan flaenslaes a chyfeirnod cyflogwr gan y swyddfa dreth, megis 123/AB456. Mae’n bosibl y cyfeirir ato fel ‘Cyfeirnod TWE y Cyflogwr’ neu fel ‘Cyfeirnod TWE’. Bydd hwn ar eich P60.
   </div>
-<input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
+  <input class="govuk-input govuk-input--width-10" id="employer-paye-reference" name="employer-paye-reference" type="text" aria-describedby="employer-paye-reference-hint">
 </div>
 
 
-<button class="govuk-button" data-module="govuk-button">
+<button type="submit" class="govuk-button" data-module="govuk-button">
   Yn eich blaen
 </button>
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

@@ -7,11 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HMRC content style guide - Design resources for HMRC — GOV.UK</title>
-  <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
-  <!-- TODO: PLATUI-161 https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
-  <!--[if lt IE 8]>
-    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/govuk-frontend-ie8.min.css">
-  <[endif]-->
+  <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
   <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
 </head>
 
@@ -28,23 +24,18 @@
 			<div class="hmrc-internal-header__logo">
 					<a href="https://www.gov.uk/government/organisations/hm-revenue-customs" class="hmrc-internal-header__logo-link">
 					
-            <!--[if gt IE 8]><!-->
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="52px" height="32px" viewBox="0 0 45.35 45.35" focusable="false" aria-hidden="true">
-                    <path class="cls-1" d="m28.5,16.6c.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9-.84.34-1.23,1.31-.89,2.14.34.83,1.3,1.23,2.14.88Z"/>
-                    <path class="cls-1" d="m22.06,19.36c-.84.34-1.23,1.31-.89,2.14.34.83,1.3,1.23,2.14.88.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9Z"/>
-                    <path class="cls-1" d="m32.86,19.2c.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9-.84.34-1.23,1.31-.89,2.14.34.83,1.3,1.23,2.14.88Z"/>
-                    <path class="cls-1" d="m33.62,22.63c.34.83,1.3,1.23,2.14.88.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9-.84.34-1.23,1.31-.89,2.14Z"/>
-                    <path class="cls-1" d="m21.81,11.4c.06.08.13.15.21.21l-1.19,3.58s0,0,0,.01h0s0,0,0,0c-.06.18-.09.37-.09.56,0,.97.71,1.77,1.64,1.9.01,0,.03,0,.04,0,.08.01.16.02.24.02h0c.08,0,.16,0,.24-.02.01,0,.03,0,.04,0,.93-.14,1.64-.94,1.64-1.9,0-.2-.03-.39-.08-.56h0s0,0,0,0c0,0,0,0,0-.01l-1.19-3.58c.08-.06.15-.13.21-.21h0s2.06,1.08,2.06,1.08v-3.04l-2.06.65h0c-.06-.08-.12-.15-.2-.21h0s.83-2.62.83-2.62h-1.49s-1.49,0-1.49,0l.83,2.61h0c-.08.06-.14.13-.2.21h0s-2.06-.65-2.06-.65v3.04l2.06-1.08h0Z"/>
-                    <path class="cls-1" d="m16.83,16.6c.84.35,1.79-.05,2.14-.88.34-.83-.05-1.79-.89-2.14-.82-.34-1.78.07-2.12.9-.34.83.05,1.78.88,2.12Z"/>
-                    <path class="cls-1" d="m12.46,19.2c.84.35,1.79-.05,2.14-.88.34-.83-.05-1.79-.89-2.14-.82-.34-1.78.07-2.12.9-.34.83.05,1.78.88,2.12Z"/>
-                    <path class="cls-1" d="m9.57,23.51c.84.35,1.79-.05,2.14-.88.34-.83-.05-1.79-.89-2.14-.82-.34-1.78.07-2.12.9-.34.83.05,1.78.88,2.12Z"/>
-                    <path class="cls-1" d="m34.61,25.35c.22,1.12.26,1.65,0,2.37-.37-.36-.71-1.01-.98-2.02l-1.07,3.57c.65-.45,1.16-.74,1.73-.75-1.02,2.2-2.3,2.77-3.12,2.61-1.01-.19-1.47-1.09-1.32-1.85.23-1.08,1.34-1.36,1.86-.11.99-2.02-.69-2.65-1.77-2.05,1.66-1.66,1.85-3.13.51-4.92-1.87,1.43-1.89,2.84-1.05,4.84-1.09-1.25-2.79-.58-2.18,1.44.79-1.22,1.83-.45,1.67.71-.14,1.01-1.47,1.82-3.13,1.68-2.38-.22-2.52-1.86-2.58-3.21.58-.11,1.64.43,2.53,1.69l.33-3.79c-.98,1.02-1.86,1.21-2.85,1.24.33-1.02,1.84-2.7,1.84-2.7h-4.73s1.51,1.68,1.84,2.7c-.99-.03-1.87-.22-2.85-1.24l.33,3.79c.9-1.26,1.95-1.8,2.53-1.69-.06,1.36-.2,3-2.58,3.21-1.66.14-2.99-.67-3.13-1.68-.16-1.16.88-1.92,1.67-.71.61-2.02-1.09-2.69-2.18-1.44.84-1.99.82-3.41-1.05-4.84-1.34,1.78-1.15,3.26.51,4.92-1.08-.6-2.76.03-1.77,2.05.52-1.26,1.63-.98,1.86.11.16.76-.31,1.66-1.32,1.85-.83.15-2.1-.41-3.12-2.61.58.01,1.08.3,1.73.75l-1.07-3.57c-.27,1-.62,1.66-.98,2.02-.25-.72-.21-1.25,0-2.37l-2.21.79c1.18,1.6,2.31,3.86,3.25,7.79,3.29-.47,6.99-.74,10.9-.74s7.61.26,10.9.74c.94-3.93,2.07-6.19,3.25-7.79l-2.21-.79Z"/>
-                    <path class="cls-1" d="m22.68.57C10.47.57.57,10.47.57,22.68s9.9,22.11,22.11,22.11,22.11-9.9,22.11-22.11S34.89.57,22.68.57Zm0,41.69c-10.81,0-19.58-8.77-19.58-19.58S11.86,3.1,22.68,3.1s19.58,8.77,19.58,19.58-8.77,19.58-19.58,19.58Z"/>
-                </svg>
-            <!--<![endif]-->
-            <!--[if IE 8]>
-                <img src="/assets/components/banner/images/hmrc_tudor_crest_18px_x2.png">
-            <![endif]-->
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="52px" height="32px" viewBox="0 0 45.35 45.35" focusable="false" aria-hidden="true">
+                  <path class="cls-1" d="m28.5,16.6c.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9-.84.34-1.23,1.31-.89,2.14.34.83,1.3,1.23,2.14.88Z"/>
+                  <path class="cls-1" d="m22.06,19.36c-.84.34-1.23,1.31-.89,2.14.34.83,1.3,1.23,2.14.88.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9Z"/>
+                  <path class="cls-1" d="m32.86,19.2c.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9-.84.34-1.23,1.31-.89,2.14.34.83,1.3,1.23,2.14.88Z"/>
+                  <path class="cls-1" d="m33.62,22.63c.34.83,1.3,1.23,2.14.88.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9-.84.34-1.23,1.31-.89,2.14Z"/>
+                  <path class="cls-1" d="m21.81,11.4c.06.08.13.15.21.21l-1.19,3.58s0,0,0,.01h0s0,0,0,0c-.06.18-.09.37-.09.56,0,.97.71,1.77,1.64,1.9.01,0,.03,0,.04,0,.08.01.16.02.24.02h0c.08,0,.16,0,.24-.02.01,0,.03,0,.04,0,.93-.14,1.64-.94,1.64-1.9,0-.2-.03-.39-.08-.56h0s0,0,0,0c0,0,0,0,0-.01l-1.19-3.58c.08-.06.15-.13.21-.21h0s2.06,1.08,2.06,1.08v-3.04l-2.06.65h0c-.06-.08-.12-.15-.2-.21h0s.83-2.62.83-2.62h-1.49s-1.49,0-1.49,0l.83,2.61h0c-.08.06-.14.13-.2.21h0s-2.06-.65-2.06-.65v3.04l2.06-1.08h0Z"/>
+                  <path class="cls-1" d="m16.83,16.6c.84.35,1.79-.05,2.14-.88.34-.83-.05-1.79-.89-2.14-.82-.34-1.78.07-2.12.9-.34.83.05,1.78.88,2.12Z"/>
+                  <path class="cls-1" d="m12.46,19.2c.84.35,1.79-.05,2.14-.88.34-.83-.05-1.79-.89-2.14-.82-.34-1.78.07-2.12.9-.34.83.05,1.78.88,2.12Z"/>
+                  <path class="cls-1" d="m9.57,23.51c.84.35,1.79-.05,2.14-.88.34-.83-.05-1.79-.89-2.14-.82-.34-1.78.07-2.12.9-.34.83.05,1.78.88,2.12Z"/>
+                  <path class="cls-1" d="m34.61,25.35c.22,1.12.26,1.65,0,2.37-.37-.36-.71-1.01-.98-2.02l-1.07,3.57c.65-.45,1.16-.74,1.73-.75-1.02,2.2-2.3,2.77-3.12,2.61-1.01-.19-1.47-1.09-1.32-1.85.23-1.08,1.34-1.36,1.86-.11.99-2.02-.69-2.65-1.77-2.05,1.66-1.66,1.85-3.13.51-4.92-1.87,1.43-1.89,2.84-1.05,4.84-1.09-1.25-2.79-.58-2.18,1.44.79-1.22,1.83-.45,1.67.71-.14,1.01-1.47,1.82-3.13,1.68-2.38-.22-2.52-1.86-2.58-3.21.58-.11,1.64.43,2.53,1.69l.33-3.79c-.98,1.02-1.86,1.21-2.85,1.24.33-1.02,1.84-2.7,1.84-2.7h-4.73s1.51,1.68,1.84,2.7c-.99-.03-1.87-.22-2.85-1.24l.33,3.79c.9-1.26,1.95-1.8,2.53-1.69-.06,1.36-.2,3-2.58,3.21-1.66.14-2.99-.67-3.13-1.68-.16-1.16.88-1.92,1.67-.71.61-2.02-1.09-2.69-2.18-1.44.84-1.99.82-3.41-1.05-4.84-1.34,1.78-1.15,3.26.51,4.92-1.08-.6-2.76.03-1.77,2.05.52-1.26,1.63-.98,1.86.11.16.76-.31,1.66-1.32,1.85-.83.15-2.1-.41-3.12-2.61.58.01,1.08.3,1.73.75l-1.07-3.57c-.27,1-.62,1.66-.98,2.02-.25-.72-.21-1.25,0-2.37l-2.21.79c1.18,1.6,2.31,3.86,3.25,7.79,3.29-.47,6.99-.74,10.9-.74s7.61.26,10.9.74c.94-3.93,2.07-6.19,3.25-7.79l-2.21-.79Z"/>
+                  <path class="cls-1" d="m22.68.57C10.47.57.57,10.47.57,22.68s9.9,22.11,22.11,22.11,22.11-9.9,22.11-22.11S34.89.57,22.68.57Zm0,41.69c-10.81,0-19.58-8.77-19.58-19.58S11.86,3.1,22.68,3.1s19.58,8.77,19.58,19.58-8.77,19.58-19.58,19.58Z"/>
+              </svg>
 					
 					<span class="hmrc-internal-header__logo-text">
 									HM Revenue &amp; Customs
@@ -88,573 +79,551 @@
       <a class="govuk-link" href="https://github.com/hmrc/HMRC-content-style-guide/">propose a new entry or suggest a change to an existing one</a>.
     </p>
   </div>
-</div>
-<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-              A
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-            
-<h3 class='govuk-heading-s' id='abbreviations-and-acronyms'>abbreviations and acronyms</h3>
-<p class='govuk-body'>Try to avoid using them. They are not accessible for all users. Only use them when
-they make it easier for users.</p>
-<p class='govuk-body'>Plurals of acronyms, like ‘MPs’ and ‘GPs’, do not have apostrophes.</p>
-<h3 class='govuk-heading-s' id='adoption-pay'>Adoption Pay</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='apostrophes'>apostrophes</h3>
-<p class='govuk-body'>Use ‘smart’ (curly) apostrophes rather than 'dumb' (straight) apostrophes.</p>
-<p class='govuk-body'>For GOV.UK content designers, Whitehall automatically does this.</p>
-<p class='govuk-body'>See <a href='http://smartquotesforsmartpeople.com/' class='govuk-link'>Smart Quotes
-for Smart People</a> to find out how to create these in different operating systems.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-              B
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-            
-<h3 class='govuk-heading-s' id='bereavement-allowance'>Bereavement Allowance</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='business'>business</h3>
-<p class='govuk-body'>Use business as generic term and ‘company’ only when referring to a limited company.</p>
-<h3 class='govuk-heading-s' id='business-tax-account'>business tax account</h3>
-<p class='govuk-body'>Lower case.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-              C
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-            
-<h3 class='govuk-heading-s' id='capital-bonds'>Capital Bonds</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='capitalisation'>capitalisation</h3>
-<p class='govuk-body'>For general terms, follow the guidance in the <a href='https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#capitalisation'
-class='govuk-link'>GOV.UK style guide</a>. Follow HMRC guidance about the <a href='#capitalisation-of-taxes'
-class='govuk-link'>capitalisation of taxes, duties and levies</a>.</p>
-<p class='govuk-body'>If there is no specific entry about capitalising a term, then use sentence case. For
-example:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>limited company</li>
-  <li>limited partnership</li>
-  <li>sole trader</li>
-  <li>employment benefits</li>
-</ul>
-<h3 class='govuk-heading-s' id='capitalisation-of-taxes'>capitalisation of taxes, duties and levies</h3>
-<p class='govuk-body'>Always capitalise initial letters when referring to a specific tax, duty or levy by
-its full name. For example, Beer Duty.</p>
-<p class='govuk-body'>Do not capitalise if you’re referring generally to a:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>tax or taxes</li>
-  <li>duty or duties</li>
-  <li>levy or levies</li>
-  <li>benefit or benefits</li>
-</ul>
-<p class='govuk-body'>For example, if you say ‘Income Tax’ and later refer to it as ‘tax’, do not
-capitalise ‘tax’. Also, do not capitalise groups of things, like;</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>excise duty or excise duties</li>
-  <li>alcohol duties</li>
-  <li>tax credits</li>
-
-</ul>
-<h3 class='govuk-heading-s' id='changes-tax-rates'>changes to tax rates</h3>
-<p class='govuk-body'>See <a class='govuk-link' href='#percentage-changes'>percentage changes</a>.</p>
-<h3 class='govuk-heading-s' id='child-trust-fund'>Child Trust Fund</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='code-of-practice'>Code of Practice and code of practice</h3>
-<p class='govuk-body'>Capitalise ‘C’ and ‘P’ when referring to a specific product, for example ‘Code of Practice 9’. Otherwise, it should be lower case.</p>
-<h3 class='govuk-heading-s' id='colons'>colons</h3>
-<p class='govuk-body'>Only use colons:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>to introduce lists</li>
-  <li>next to short labels like ‘Telephone:’</li>
-</ul>
-<h3 class='govuk-heading-s' id='complete'>complete</h3>
-<p class='govuk-body'>See <a class='govuk-link' href='#fill-in'>fill in</a>.</p>
-<h3 class='govuk-heading-s'>compliance checks</h3>
-<p class='govuk-body'>Lower case, unless referring to a product or process, for example ‘Compliance Checks
-learning’ or ‘A New Approach to Compliance Checks’. Try to use informal language like ‘checking your tax
-return’ if possible.</p>
-<h3 class='govuk-heading-s' id='customs-declarations'>Customs declarations</h3>
-<p class='govuk-body'>When referring to making a declaration use:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>“full import declaration” or “full export declaration”</li>
-  <li>“supplementary declaration” — lowercase and do not use “SD”</li>
-  <li>“simplified frontier declaration” — lowercase and do not use “SFD”</li>
-  <li>“final supplementary declaration” — lowercase</li>
-  <li>“pre-shipment advice” — lowercase and do not use “PSA”</li>
-  <li>plain English to describe the task for “making an import declaration in your records” or “declaring
-     your goods by entering them in your own records” (only use “entry in the declarant’s records” to describe the authorisation to use the customs procedure)</li>
-</ul>
-<p class='govuk-body'>Do not use “customs declarations”.</p>
-<h3 class='govuk-heading-s' id='customs-declaration-service'>Customs Declaration Service</h3>
-<p class='govuk-body'>Do not abbreviate unless services linked from your content reference ‘CDS’ due to character limits. In this case include ‘Customs Declaration Service (CDS)’ in the page summary for context.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-              D
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-            
-<h3 class='govuk-heading-s' id='dashes'>dashes</h3>
-<p class='govuk-body'>Dashes separate groups of words into clauses. They are longer than a hyphen and always
-have spaces either side of them. For example ‘You can claim the actual amount you’ve spent &mdash; you’ll need to keep receipts.’</p>
-
-<p class='govuk-body'>Dashes usually make sentences more complicated. Before using a dash, or pair of dashes, consider using separate sentences.</p>
-
-<p class='govuk-body'>There are different ways to include an em dash in content. You can:</p>
-
-<ul class='govuk-list govuk-list--bullet'>
-  <li>use option + shift + minus key on an Apple Mac</li>
-  <li>use alt + 0151 on a PC with a number pad</li>
-  <li>use the HMTL <code>&ampmdash;</code></li>
-  <li>copy &mdash; into your content</li>
-</ul>
-
-<p class='govuk-body'>Avoid the shorter en dash as they are treated differently by different screen readers.</p>
-
-<h3 class='govuk-heading-s' id='defined-benefit'>defined benefit</h3>
-<p class='govuk-body'>Lower case.</p>
-<h3 class='govuk-heading-s' id='defined-contribution'>defined contribution</h3>
-<p class='govuk-body'>Lower case.</p>
-<h3 class='govuk-heading-s' id='drop-down-menu'>drop-down menu</h3>
-<p class='govuk-body'>1 hyphen.</p>
-<h3 class='govuk-heading-s' id='due'>due, overdue</h3>
-<p class='govuk-body'>Avoid ‘due’ and ‘overdue’ and use plain English instead, for example ‘You need to pay
-your return by 31 January 2020’ or ‘Your payment is late’.</p>
-<p class='govuk-body'>If you need to use them, it should be when a user has to do something by a specific
-time or date only. For example, ‘Your payment is due on 31 January 2018’. Do not use them when there is no
-specific time or date, for example ‘Your £5,000
-is now due’.</p>
-<h3 class='govuk-heading-s' id='duty'>duty</h3>
-<p class='govuk-body'>See <a class='govuk-link' href='#capitalisation-of-taxes'>capitalisation of taxes, duties and levies</a>.</p>
-<h3 class='govuk-heading-s' id='duty-free'>duty-free</h3>
-<p class='govuk-body'>Hyphenated.</p>
-<h3 class='govuk-heading-s' id='duty-paid'>duty-paid</h3>
-<p class='govuk-body'>Hyphenated when used as an adjective.</p>
-<h3 class='govuk-heading-s' id='duty-suspended'>duty-suspended</h3>
-<p class='govuk-body'>Hyphenated when used as an adjective.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
-              E
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
-            
-<h3 class='govuk-heading-s' id='employer-compliance-review'>Employer Compliance Review</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='employers-annual-return'>Employer’s Annual Return</h3>
-<p class='govuk-body'>Initial caps, apostrophe before ‘s’.</p>
-<h3 class='govuk-heading-s' id='eori-number'>EORI number</h3>
-<p class='govuk-body'>There is no need to expand the acronym the first time it’s used. If you’re describing a specific EORI number for Great Britain or Northern Ireland you should use either:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>an EORI number starting GB</li>
-  <li>an EORI number starting XI</li>
-  </ul>
-  <p class='govuk-body'>Do not refer to GB EORI number or XI EORI number. Do not use EORI without suffixing it with “number”.</p>
-<h3 class='govuk-heading-s' id='e-service'>e-service</h3>
-<p class='govuk-body'>Lower case, 1 hyphen.</p>
-<h3 class='govuk-heading-s' id='exclamation-marks'>exclamation marks</h3>
-<p class='govuk-body'>Do not use.</p>
-<h3 class='govuk-heading-s' id='extra-statutory-concessions'>Extra-Statutory Concessions</h3>
-<p class='govuk-body'>Initial caps, 1 hyphen.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-6">
-              F
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-6">
-            
-<h3 class='govuk-heading-s' id='fill-in'>fill in</h3>
-<p class='govuk-body'>Use ‘fill in’ for the act of doing returns and forms, whether paper or online.</p>
-<h3 class='govuk-heading-s' id='fine'>fine</h3>
-<p class='govuk-body'>See <a class='govuk-link' href='#penalty'>penalty</a>.</p>
-<h3 class='govuk-heading-s' id='full-stops'>full stops</h3>
-<p class='govuk-body'>Only use a full stop to end a complete sentence. Do not use them to end headings,
-sub-headings or form labels.</p>
-<h3 class='govuk-heading-s' id='funding-notification-form'>Funding Notification form</h3>
-<p class='govuk-body'>Upper case ‘F’ and ‘N’, lower case ‘f’ for ‘form’.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-7">
-              G
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-7" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-7">
-            
-<h3 class='govuk-heading-s' id='gender-recognition-certificate'>Gender Recognition Certificate</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='gift-aid'>Gift Aid</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='gift-aid-declaration'>Gift Aid declaration</h3>
-<p class='govuk-body'>Upper case ‘G’ and ‘A’, lower case ‘d’.</p>
-<h3 class='govuk-heading-s' id='government-gateway'>Government Gateway</h3>
-<p class='govuk-body'>Use ‘Government Gateway user ID’. Never use:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>Government Gateway ID</li>
-  <li>Government Gateway account</li>
-  <li>HMRC online account</li>
-</ul>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-8">
-              H
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-8" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-8">
-            
-<h3 class='govuk-heading-s' id='hmrc'>HMRC</h3>
-<p class='govuk-body'>GOV.UK ​designers should use ‘HMRC’ in specialist (detailed) content. They do not
-need to:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>spell out the acronym in full</li>
-  <li>use the acronym markdown</li>
-</ul>
-<h3 class='govuk-heading-s' id='hyphens'>hyphens</h3>
-<p class='govuk-body'>Hyphens connect words together. They are shorter than a dash and never have spaces
-next to them. For example ‘work-related’, ‘self-employed’ and ‘tax-free’.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-9">
-              I
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-9" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-9">
-            
-<h3 class='govuk-heading-s' id='income-bearing-asset'>income-bearing asset</h3>
-<p class='govuk-body'>1 hyphen.</p>
-<h3 class='govuk-heading-s' id='interest-bearing-securities'>interest-bearing securities</h3>
-<p class='govuk-body'>1 hyphen.</p>
-<h3 class='govuk-heading-s' id='in-year-payment'>in-year payment</h3>
-<p class='govuk-body'>1 hyphen.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-10">
-              L
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-10" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-10">
-            
-<h3 class='govuk-heading-s' id='levy'>levy</h3>
-<p class='govuk-body'>See <a class='govuk-link' href='#capitalisation-of-taxes'>capitalisation of taxes, duties and levies</a>.</p>
-<h3 class='govuk-heading-s' id='link-text-and-punctuation'>link text and punctuation</h3>
-<p class='govuk-body'>Always place punctuation outside of link text unless the link is the entire sentence
-and it is a question. For example:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>part of a sentence — ‘...tell the Tax Credit Office about <a href='#' class='govuk-link'>changes to
-  your circumstances</a>, like...’</li>
-  <li>end of a sentence — ‘...find out more about <a href='#' class='govuk-link'>uniforms, tools and
-  clothing</a>.’</li>
-  <li>complete sentence or part or whole of a paragraph — ‘<a class='govuk-link' href='#'>Contact the Tax Credit Helpline if
-  you need to speak to someone about your tax credits</a>.’</li>
-  <li>complete sentence with a question — ‘<a class='govuk-link' href='#'>What do you think of the service?</a>’</li>
-</ul>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-11">
-              M
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-11" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-11">
-            
-<h3 class='govuk-heading-s' id='making-tax-digital'>Making Tax Digital</h3>
-<p class='govuk-body'>Initial caps, no acronym.</p>
-<p class='govuk-body'>This is the brand name of digital transformation programmes not users’ tasks. Avoid
-the term in user guidance but use it in guidance for software vendors and agents who know the brand.</p>
-<p class='govuk-body'>Programmes within Making Tax Digital follow the same rules but have a lower case ‘f’,
-for example ‘Making Tax Digital for Business’ and ‘Making Tax Digital for VAT’.</p>
-<h3 class='govuk-heading-s' id='married-couples-allowance'>Married Couple’s Allowance</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='maternity-pay'>Maternity Pay</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='MRN'>MRN (Movement Reference Number)</h3>
-<p class='govuk-body'>MRN should be written out in full (Movement Reference Number) on the first page of the journey and then written as an acronym (MRN) after that.</p>
-<p class='govuk-body'>Use <a href='https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown#acronyms' class='govuk-link'>acronym Markdown</a> so the full explanation is available as hover text.</p>
-
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-12">
-              N
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-12" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-12">
-            
-<h3 class='govuk-heading-s' id='national-insurance-number-verification-request'>National Insurance Number
-Verification Request</h3>
-<p class='govuk-body'>Initial caps.</p>
-<p class='govuk-body'>This is an electronic request sent to HMRC from a customer’s payroll software.</p>
-<h3 class='govuk-heading-s' id='national-insurance-recording-system'>National Insurance Recording System</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='national-minimum-wage'>National Minimum Wage</h3>
-<p class='govuk-body'>Initial caps.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-13">
-              P
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-13" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-13">
-            
-<h3 class='govuk-heading-s' id='p11-deductions-working-sheets'>P11 Deductions Working Sheets</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='paternity-pay'>Paternity Pay</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='payable'>payable</h3>
-<p class='govuk-body'>Avoid ‘payable’, unless referring to cheques. You can say who the cheque should be
-‘payable’ to. For example, ‘Make the cheque payable to ‘HM Revenue and Customs’, not ‘This amount is
-payable in monthly instalments’.</p>
-<h3 class='govuk-heading-s' id='paye'>PAYE (Pay As You Earn)</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='payroll-accreditation-process'>Payroll Accreditation process</h3>
-<p class='govuk-body'>Upper case ‘P’ and ‘A’, lower case ‘p’ for ‘process’.</p>
-<h3 class='govuk-heading-s' id='payroll-giving'>Payroll Giving</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='penalty'>penalty</h3>
-<p class='govuk-body'>Use ‘penalty’ for the sake of consistency. All fines are penalties but not all
-penalties are fines.</p>
-<h3 class='govuk-heading-s' id='percentage-changes'>percentage changes</h3>
-<p class='govuk-body'>For changes to tax rates, say what the rate was and what it is changing to. For example, ‘The rate is changing from 10% to 12%’.</p>
-<p class='govuk-body'>Do not say how much the rate is changing, for example, ‘The rate is changing by 2%’, as this may not be factually accurate.</p>
-<h3 class='govuk-heading-s' id='permanent-interest-bearing-shares'>permanent interest-bearing shares</h3>
-<p class='govuk-body'>Lower case, 1 hyphen.</p>
-<h3 class='govuk-heading-s' id='personal-allowance'>Personal Allowance</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='personal-tax-account'>personal tax account</h3>
-<p class='govuk-body'>Lower case.</p>
-<h3 class='govuk-heading-s' id='private-residence-relief'>Private Residence Relief</h3>
-<p class='govuk-body'>Initial caps.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-14">
-              Q
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-14" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-14">
-            
-<h3 class='govuk-heading-s' id='quotation-marks'>quotation marks</h3>
-<p class='govuk-body'>Use ‘smart’ (curly) quotes rather than 'dumb' (straight) quotes.</p>
-<p class='govuk-body'>For GOV.UK content designers, Whitehall automatically does this.</p>
-<p class='govuk-body'>See <a href='http://smartquotesforsmartpeople.com/' class='govuk-link'>Smart Quotes
-for Smart People</a> to find out how to create these in different operating systems.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-15">
-              R
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-15" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-15">
-            
-<h3 class='govuk-heading-s' id='re-acquire'>re-acquire, re-acquisition</h3>
-<p class='govuk-body'>Hyphenated.</p>
-<h3 class='govuk-heading-s' id='r-and-d-tax-releif'>Research and Development (R&amp;D) tax relief</h3>
-<p class='govuk-body'>Upper case ‘R’ and ‘D’, lower case ‘a’, ‘t’ and ‘r’. Use ampersand in acronym.</p>
-<h3 class='govuk-heading-s' id='r-and-d-tax-credits'>Research and Development (R&amp;D) tax credits</h3>
-<p class='govuk-body'>Upper case ‘R’ and ‘D’, lower case ‘a’, ‘t’ and ‘c’. Use ampersand in acronym.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-16">
-              S
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-16" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-16">
-            
-<h3 class='govuk-heading-s' id='schemes'>schemes</h3>
-<p class='govuk-body'>Follow the <a href='https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#capitalisation'
-class='govuk-link'>GOV.UK style guide on capitalising specific, named government schemes known to
-people outside government</a>.</p>
-<p class='govuk-body'>Some government schemes are styled in a specific way. These are:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>Contracted-out Salary Related Scheme — upper case ‘C’, ‘S’, ‘R’ and ‘S’, lower case ‘o’, 1 hyphen</li>
-  <li>Non-resident Landlord Scheme — upper case ‘N’, ‘L’ and ‘S’, lower case ‘r’, 1 hyphen</li>
-  <li>Rent-a-Room — upper case ‘R’ and ‘R’, lower case ‘a’, 2 hyphens</li>
-  <li>Rent-a-Room for traders — Upper case ‘R’ and ‘R’, lower case ‘a’, ‘f’ and ‘t’, 2 hyphens</li>
-  <li>Rent-a-Room Scheme — upper case ‘R’, ‘R’ and ‘S’, lower case ‘a’, 2 hyphens</li>
-  <li>Repayment of Teachers’ Loans scheme — upper case ‘R’, ‘T’ and ‘L’, lower case ‘o’ and ‘s’</li>
-  <li>Save As You Earn schemes (SAYE) — upper case ‘S’, ‘A’, ‘Y’ and ‘E’, lower case ‘s’ for schemes</li>
-</ul>
-<h3 class='govuk-heading-s' id='seafarers-earnings-deduction'>Seafarers’ Earnings Deduction</h3>
-<p class='govuk-body'>Initial caps, with apostrophe.</p>
-<h3 class='govuk-heading-s' id='send-file-submit'>send, file or submit</h3>
-<p class='govuk-body'>Regular users running their own business seem to prefer ‘file’ and ‘submit’, but
-individuals doing Self Assessment prefer ‘send’.</p>
-<p class='govuk-body'>User research shows that ‘submit VAT return’ is more popular than ‘send VAT return’,
-but ‘send tax return’ is more popular than ‘submit tax return’.</p>
-<p class='govuk-body'>You should consider the existing content, what the business areas use in external
-communications and any user research findings.</p>
-<h3 class='govuk-heading-s' id='set-off'>set off</h3>
-<p class='govuk-body'>Hyphenated when used as a noun. For example, ‘a subsequent agreement between the
-parties to set-off a claim’. Not hyphenated when used as a verb. For example, ‘losses from earlier years
-set off’.</p>
-<h3 class='govuk-heading-s' id='short-tax-return'>Short Tax Return</h3>
-<p class='govuk-body'>Initial caps.</p>
-<h3 class='govuk-heading-s' id='simplified-declarations'>Simplified declarations</h3>
-<p class='govuk-body'>When generally talking about the different simplified declarations as a group, use either:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>simplified declarations for imports</li>
-  <li>simplified declarations for exports</li>
-</ul>
-<p class='govuk-body'>Do not use ‘Customs Freight Simplified Procedures’ or ‘CFSP’ to describe simplified declarations for imports.</p>
-<p class='govuk-body'>When talking about the two specific procedures use:</p>
-<ul class='govuk-list govuk-list--bullet'>
-  <li>“entry in the declarant’s records” to describe the authorisation to use the customs procedure - do not use “EIDR”</li>
-  <li>“simplified declaration procedure” to describe the authorisation to use the customs procedure - do not use “SDP”</li>
-</ul>
-<p class='govuk-body'>See style for specific declarations types <a class='govuk-link' href='#customs-declarations'>style for specific declarations types</a>.</p>
-
-<h3 class='govuk-heading-s' id='small-earnings-exception'>small earnings exception</h3>
-<p class='govuk-body'>Lower case.</p>
-<h3 class='govuk-heading-s' id='standard-rated'>standard-rated</h3>
-<p class='govuk-body'>Hyphenated, but no hyphen in standard rate or standard rating.</p>
-<h3 class='govuk-heading-s' id='student-loan'>student loan</h3>
-<p class='govuk-body'>Lower case unless you are referring to the Student Loans Company.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-17">
-              T
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-17" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-17">
-            
-<h3 class='govuk-heading-s' id='take-home-pay'>take-home pay</h3>
-<p class='govuk-body'>1 hyphen.</p>
-<h3 class='govuk-heading-s' id='tax'>tax</h3>
-<p class='govuk-body'>See <a class='govuk-link' href='#capitalisation-of-taxes'>capitalisation of taxes, duties and levies</a>.</p>
-<h3 class='govuk-heading-s' id='tax-free'>tax-free and tax free</h3>
-<p class='govuk-body'>Hyphenated when it is before a noun, for example ‘tax-free amount’. Not hyphenated
-when it appears after a noun, for example ‘the amount is tax free’.</p>
-<h3 class='govuk-heading-s' id='tax-rates'>tax rates</h3>
-<p class='govuk-body'>See <a class='govuk-link' href='#percentage-changes'>percentage changes</a>.</p>
-<h3 class='govuk-heading-s' id='trust-unique-taxpayer-reference'>Trust Unique Taxpayer Reference</h3>
-<p class='govuk-body'>Initial caps.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-18">
-              U
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-18" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-18">
-            
-<h3 class='govuk-heading-s' id='unique-taxpayer-reference'>Unique Taxpayer Reference</h3>
-<p class='govuk-body'>Initial caps. Not ‘Unique Taxpayer Reference number’ or ‘Unique Taxpayer Reference
-Number’.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-19">
-              W
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-19" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-19">
-            
-<h3 class='govuk-heading-s' id='war-widows-and-dependants-pension'>war widow’s and dependant’s pension</h3>
-<p class='govuk-body'>Lower case, with apostrophes before each ‘s’.</p>
-<h3 class='govuk-heading-s' id='we'>we</h3>
-<p class='govuk-body'>
-You can use ‘we’ to describe HMRC in content, as long as it is clear to the user who ‘we’ are. For
-example, ‘HM Revenue and Customs is the UK tax authority. We collect the money that pays for the UK’s
-public services and help families and individuals with targeted financial support.’
-</p>
-<h3 class='govuk-heading-s' id='widows-pension-or-bereavement-allowance'>Widow’s Pension or Bereavement
-Allowance</h3>
-<p class='govuk-body'>Initial caps, with an apostrophe before the ‘s’ in ‘Widow’s’.</p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-20">
-              Z
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-20" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-20">
-            
-<h3 class='govuk-heading-s' id='zero-rated'>zero-rated</h3>
-<p class='govuk-body'>Hyphenated, but no hyphen in ‘zero rate’ or ‘zero rating’.</p>
-        </div>
-      </div>
+</div><div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          A
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='abbreviations-and-acronyms'>abbreviations and acronyms</h3>
+      <p class='govuk-body'>Try to avoid using them. They are not accessible for all users. Only use them when
+      they make it easier for users.</p>
+      <p class='govuk-body'>Plurals of acronyms, like ‘MPs’ and ‘GPs’, do not have apostrophes.</p>
+      <h3 class='govuk-heading-s' id='adoption-pay'>Adoption Pay</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='apostrophes'>apostrophes</h3>
+      <p class='govuk-body'>Use ‘smart’ (curly) apostrophes rather than 'dumb' (straight) apostrophes.</p>
+      <p class='govuk-body'>For GOV.UK content designers, Whitehall automatically does this.</p>
+      <p class='govuk-body'>See <a href='http://smartquotesforsmartpeople.com/' class='govuk-link'>Smart Quotes
+      for Smart People</a> to find out how to create these in different operating systems.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          B
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='bereavement-allowance'>Bereavement Allowance</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='business'>business</h3>
+      <p class='govuk-body'>Use business as generic term and ‘company’ only when referring to a limited company.</p>
+      <h3 class='govuk-heading-s' id='business-tax-account'>business tax account</h3>
+      <p class='govuk-body'>Lower case.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          C
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='capital-bonds'>Capital Bonds</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='capitalisation'>capitalisation</h3>
+      <p class='govuk-body'>For general terms, follow the guidance in the <a href='https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#capitalisation'
+      class='govuk-link'>GOV.UK style guide</a>. Follow HMRC guidance about the <a href='#capitalisation-of-taxes'
+      class='govuk-link'>capitalisation of taxes, duties and levies</a>.</p>
+      <p class='govuk-body'>If there is no specific entry about capitalising a term, then use sentence case. For
+      example:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>limited company</li>
+        <li>limited partnership</li>
+        <li>sole trader</li>
+        <li>employment benefits</li>
+      </ul>
+      <h3 class='govuk-heading-s' id='capitalisation-of-taxes'>capitalisation of taxes, duties and levies</h3>
+      <p class='govuk-body'>Always capitalise initial letters when referring to a specific tax, duty or levy by
+      its full name. For example, Beer Duty.</p>
+      <p class='govuk-body'>Do not capitalise if you’re referring generally to a:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>tax or taxes</li>
+        <li>duty or duties</li>
+        <li>levy or levies</li>
+        <li>benefit or benefits</li>
+      </ul>
+      <p class='govuk-body'>For example, if you say ‘Income Tax’ and later refer to it as ‘tax’, do not
+      capitalise ‘tax’. Also, do not capitalise groups of things, like;</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>excise duty or excise duties</li>
+        <li>alcohol duties</li>
+        <li>tax credits</li>
+      
+      </ul>
+      <h3 class='govuk-heading-s' id='changes-tax-rates'>changes to tax rates</h3>
+      <p class='govuk-body'>See <a class='govuk-link' href='#percentage-changes'>percentage changes</a>.</p>
+      <h3 class='govuk-heading-s' id='child-trust-fund'>Child Trust Fund</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='code-of-practice'>Code of Practice and code of practice</h3>
+      <p class='govuk-body'>Capitalise ‘C’ and ‘P’ when referring to a specific product, for example ‘Code of Practice 9’. Otherwise, it should be lower case.</p>
+      <h3 class='govuk-heading-s' id='colons'>colons</h3>
+      <p class='govuk-body'>Only use colons:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>to introduce lists</li>
+        <li>next to short labels like ‘Telephone:’</li>
+      </ul>
+      <h3 class='govuk-heading-s' id='complete'>complete</h3>
+      <p class='govuk-body'>See <a class='govuk-link' href='#fill-in'>fill in</a>.</p>
+      <h3 class='govuk-heading-s'>compliance checks</h3>
+      <p class='govuk-body'>Lower case, unless referring to a product or process, for example ‘Compliance Checks
+      learning’ or ‘A New Approach to Compliance Checks’. Try to use informal language like ‘checking your tax
+      return’ if possible.</p>
+      <h3 class='govuk-heading-s' id='customs-declarations'>Customs declarations</h3>
+      <p class='govuk-body'>When referring to making a declaration use:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>“full import declaration” or “full export declaration”</li>
+        <li>“supplementary declaration” — lowercase and do not use “SD”</li>
+        <li>“simplified frontier declaration” — lowercase and do not use “SFD”</li>
+        <li>“final supplementary declaration” — lowercase</li>
+        <li>“pre-shipment advice” — lowercase and do not use “PSA”</li>
+        <li>plain English to describe the task for “making an import declaration in your records” or “declaring
+           your goods by entering them in your own records” (only use “entry in the declarant’s records” to describe the authorisation to use the customs procedure)</li>
+      </ul>
+      <p class='govuk-body'>Do not use “customs declarations”.</p>
+      <h3 class='govuk-heading-s' id='customs-declaration-service'>Customs Declaration Service</h3>
+      <p class='govuk-body'>Do not abbreviate unless services linked from your content reference ‘CDS’ due to character limits. In this case include ‘Customs Declaration Service (CDS)’ in the page summary for context.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          D
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='dashes'>dashes</h3>
+      <p class='govuk-body'>Dashes separate groups of words into clauses. They are longer than a hyphen and always
+      have spaces either side of them. For example ‘You can claim the actual amount you’ve spent &mdash; you’ll need to keep receipts.’</p>
+      
+      <p class='govuk-body'>Dashes usually make sentences more complicated. Before using a dash, or pair of dashes, consider using separate sentences.</p>
+      
+      <p class='govuk-body'>There are different ways to include an em dash in content. You can:</p>
+      
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>use option + shift + minus key on an Apple Mac</li>
+        <li>use alt + 0151 on a PC with a number pad</li>
+        <li>use the HMTL <code>&ampmdash;</code></li>
+        <li>copy &mdash; into your content</li>
+      </ul>
+      
+      <p class='govuk-body'>Avoid the shorter en dash as they are treated differently by different screen readers.</p>
+      
+      <h3 class='govuk-heading-s' id='defined-benefit'>defined benefit</h3>
+      <p class='govuk-body'>Lower case.</p>
+      <h3 class='govuk-heading-s' id='defined-contribution'>defined contribution</h3>
+      <p class='govuk-body'>Lower case.</p>
+      <h3 class='govuk-heading-s' id='drop-down-menu'>drop-down menu</h3>
+      <p class='govuk-body'>1 hyphen.</p>
+      <h3 class='govuk-heading-s' id='due'>due, overdue</h3>
+      <p class='govuk-body'>Avoid ‘due’ and ‘overdue’ and use plain English instead, for example ‘You need to pay
+      your return by 31 January 2020’ or ‘Your payment is late’.</p>
+      <p class='govuk-body'>If you need to use them, it should be when a user has to do something by a specific
+      time or date only. For example, ‘Your payment is due on 31 January 2018’. Do not use them when there is no
+      specific time or date, for example ‘Your £5,000
+      is now due’.</p>
+      <h3 class='govuk-heading-s' id='duty'>duty</h3>
+      <p class='govuk-body'>See <a class='govuk-link' href='#capitalisation-of-taxes'>capitalisation of taxes, duties and levies</a>.</p>
+      <h3 class='govuk-heading-s' id='duty-free'>duty-free</h3>
+      <p class='govuk-body'>Hyphenated.</p>
+      <h3 class='govuk-heading-s' id='duty-paid'>duty-paid</h3>
+      <p class='govuk-body'>Hyphenated when used as an adjective.</p>
+      <h3 class='govuk-heading-s' id='duty-suspended'>duty-suspended</h3>
+      <p class='govuk-body'>Hyphenated when used as an adjective.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-5">
+          E
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-5" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='employer-compliance-review'>Employer Compliance Review</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='employers-annual-return'>Employer’s Annual Return</h3>
+      <p class='govuk-body'>Initial caps, apostrophe before ‘s’.</p>
+      <h3 class='govuk-heading-s' id='eori-number'>EORI number</h3>
+      <p class='govuk-body'>There is no need to expand the acronym the first time it’s used. If you’re describing a specific EORI number for Great Britain or Northern Ireland you should use either:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>an EORI number starting GB</li>
+        <li>an EORI number starting XI</li>
+        </ul>
+        <p class='govuk-body'>Do not refer to GB EORI number or XI EORI number. Do not use EORI without suffixing it with “number”.</p>
+      <h3 class='govuk-heading-s' id='e-service'>e-service</h3>
+      <p class='govuk-body'>Lower case, 1 hyphen.</p>
+      <h3 class='govuk-heading-s' id='exclamation-marks'>exclamation marks</h3>
+      <p class='govuk-body'>Do not use.</p>
+      <h3 class='govuk-heading-s' id='extra-statutory-concessions'>Extra-Statutory Concessions</h3>
+      <p class='govuk-body'>Initial caps, 1 hyphen.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-6">
+          F
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-6" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='fill-in'>fill in</h3>
+      <p class='govuk-body'>Use ‘fill in’ for the act of doing returns and forms, whether paper or online.</p>
+      <h3 class='govuk-heading-s' id='fine'>fine</h3>
+      <p class='govuk-body'>See <a class='govuk-link' href='#penalty'>penalty</a>.</p>
+      <h3 class='govuk-heading-s' id='full-stops'>full stops</h3>
+      <p class='govuk-body'>Only use a full stop to end a complete sentence. Do not use them to end headings,
+      sub-headings or form labels.</p>
+      <h3 class='govuk-heading-s' id='funding-notification-form'>Funding Notification form</h3>
+      <p class='govuk-body'>Upper case ‘F’ and ‘N’, lower case ‘f’ for ‘form’.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-7">
+          G
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-7" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='gender-recognition-certificate'>Gender Recognition Certificate</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='gift-aid'>Gift Aid</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='gift-aid-declaration'>Gift Aid declaration</h3>
+      <p class='govuk-body'>Upper case ‘G’ and ‘A’, lower case ‘d’.</p>
+      <h3 class='govuk-heading-s' id='government-gateway'>Government Gateway</h3>
+      <p class='govuk-body'>Use ‘Government Gateway user ID’. Never use:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>Government Gateway ID</li>
+        <li>Government Gateway account</li>
+        <li>HMRC online account</li>
+      </ul>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-8">
+          H
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-8" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='hmrc'>HMRC</h3>
+      <p class='govuk-body'>GOV.UK ​designers should use ‘HMRC’ in specialist (detailed) content. They do not
+      need to:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>spell out the acronym in full</li>
+        <li>use the acronym markdown</li>
+      </ul>
+      <h3 class='govuk-heading-s' id='hyphens'>hyphens</h3>
+      <p class='govuk-body'>Hyphens connect words together. They are shorter than a dash and never have spaces
+      next to them. For example ‘work-related’, ‘self-employed’ and ‘tax-free’.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-9">
+          I
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-9" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='income-bearing-asset'>income-bearing asset</h3>
+      <p class='govuk-body'>1 hyphen.</p>
+      <h3 class='govuk-heading-s' id='interest-bearing-securities'>interest-bearing securities</h3>
+      <p class='govuk-body'>1 hyphen.</p>
+      <h3 class='govuk-heading-s' id='in-year-payment'>in-year payment</h3>
+      <p class='govuk-body'>1 hyphen.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-10">
+          L
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-10" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='levy'>levy</h3>
+      <p class='govuk-body'>See <a class='govuk-link' href='#capitalisation-of-taxes'>capitalisation of taxes, duties and levies</a>.</p>
+      <h3 class='govuk-heading-s' id='link-text-and-punctuation'>link text and punctuation</h3>
+      <p class='govuk-body'>Always place punctuation outside of link text unless the link is the entire sentence
+      and it is a question. For example:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>part of a sentence — ‘...tell the Tax Credit Office about <a href='#' class='govuk-link'>changes to
+        your circumstances</a>, like...’</li>
+        <li>end of a sentence — ‘...find out more about <a href='#' class='govuk-link'>uniforms, tools and
+        clothing</a>.’</li>
+        <li>complete sentence or part or whole of a paragraph — ‘<a class='govuk-link' href='#'>Contact the Tax Credit Helpline if
+        you need to speak to someone about your tax credits</a>.’</li>
+        <li>complete sentence with a question — ‘<a class='govuk-link' href='#'>What do you think of the service?</a>’</li>
+      </ul>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-11">
+          M
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-11" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='making-tax-digital'>Making Tax Digital</h3>
+      <p class='govuk-body'>Initial caps, no acronym.</p>
+      <p class='govuk-body'>This is the brand name of digital transformation programmes not users’ tasks. Avoid
+      the term in user guidance but use it in guidance for software vendors and agents who know the brand.</p>
+      <p class='govuk-body'>Programmes within Making Tax Digital follow the same rules but have a lower case ‘f’,
+      for example ‘Making Tax Digital for Business’ and ‘Making Tax Digital for VAT’.</p>
+      <h3 class='govuk-heading-s' id='married-couples-allowance'>Married Couple’s Allowance</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='maternity-pay'>Maternity Pay</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='MRN'>MRN (Movement Reference Number)</h3>
+      <p class='govuk-body'>MRN should be written out in full (Movement Reference Number) on the first page of the journey and then written as an acronym (MRN) after that.</p>
+      <p class='govuk-body'>Use <a href='https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown#acronyms' class='govuk-link'>acronym Markdown</a> so the full explanation is available as hover text.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-12">
+          N
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-12" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='national-insurance-number-verification-request'>National Insurance Number
+      Verification Request</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <p class='govuk-body'>This is an electronic request sent to HMRC from a customer’s payroll software.</p>
+      <h3 class='govuk-heading-s' id='national-insurance-recording-system'>National Insurance Recording System</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='national-minimum-wage'>National Minimum Wage</h3>
+      <p class='govuk-body'>Initial caps.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-13">
+          P
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-13" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='p11-deductions-working-sheets'>P11 Deductions Working Sheets</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='paternity-pay'>Paternity Pay</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='payable'>payable</h3>
+      <p class='govuk-body'>Avoid ‘payable’, unless referring to cheques. You can say who the cheque should be
+      ‘payable’ to. For example, ‘Make the cheque payable to ‘HM Revenue and Customs’, not ‘This amount is
+      payable in monthly instalments’.</p>
+      <h3 class='govuk-heading-s' id='paye'>PAYE (Pay As You Earn)</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='payroll-accreditation-process'>Payroll Accreditation process</h3>
+      <p class='govuk-body'>Upper case ‘P’ and ‘A’, lower case ‘p’ for ‘process’.</p>
+      <h3 class='govuk-heading-s' id='payroll-giving'>Payroll Giving</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='penalty'>penalty</h3>
+      <p class='govuk-body'>Use ‘penalty’ for the sake of consistency. All fines are penalties but not all
+      penalties are fines.</p>
+      <h3 class='govuk-heading-s' id='percentage-changes'>percentage changes</h3>
+      <p class='govuk-body'>For changes to tax rates, say what the rate was and what it is changing to. For example, ‘The rate is changing from 10% to 12%’.</p>
+      <p class='govuk-body'>Do not say how much the rate is changing, for example, ‘The rate is changing by 2%’, as this may not be factually accurate.</p>
+      <h3 class='govuk-heading-s' id='permanent-interest-bearing-shares'>permanent interest-bearing shares</h3>
+      <p class='govuk-body'>Lower case, 1 hyphen.</p>
+      <h3 class='govuk-heading-s' id='personal-allowance'>Personal Allowance</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='personal-tax-account'>personal tax account</h3>
+      <p class='govuk-body'>Lower case.</p>
+      <h3 class='govuk-heading-s' id='private-residence-relief'>Private Residence Relief</h3>
+      <p class='govuk-body'>Initial caps.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-14">
+          Q
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-14" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='quotation-marks'>quotation marks</h3>
+      <p class='govuk-body'>Use ‘smart’ (curly) quotes rather than 'dumb' (straight) quotes.</p>
+      <p class='govuk-body'>For GOV.UK content designers, Whitehall automatically does this.</p>
+      <p class='govuk-body'>See <a href='http://smartquotesforsmartpeople.com/' class='govuk-link'>Smart Quotes
+      for Smart People</a> to find out how to create these in different operating systems.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-15">
+          R
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-15" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='re-acquire'>re-acquire, re-acquisition</h3>
+      <p class='govuk-body'>Hyphenated.</p>
+      <h3 class='govuk-heading-s' id='r-and-d-tax-releif'>Research and Development (R&amp;D) tax relief</h3>
+      <p class='govuk-body'>Upper case ‘R’ and ‘D’, lower case ‘a’, ‘t’ and ‘r’. Use ampersand in acronym.</p>
+      <h3 class='govuk-heading-s' id='r-and-d-tax-credits'>Research and Development (R&amp;D) tax credits</h3>
+      <p class='govuk-body'>Upper case ‘R’ and ‘D’, lower case ‘a’, ‘t’ and ‘c’. Use ampersand in acronym.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-16">
+          S
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-16" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='schemes'>schemes</h3>
+      <p class='govuk-body'>Follow the <a href='https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#capitalisation'
+      class='govuk-link'>GOV.UK style guide on capitalising specific, named government schemes known to
+      people outside government</a>.</p>
+      <p class='govuk-body'>Some government schemes are styled in a specific way. These are:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>Contracted-out Salary Related Scheme — upper case ‘C’, ‘S’, ‘R’ and ‘S’, lower case ‘o’, 1 hyphen</li>
+        <li>Non-resident Landlord Scheme — upper case ‘N’, ‘L’ and ‘S’, lower case ‘r’, 1 hyphen</li>
+        <li>Rent-a-Room — upper case ‘R’ and ‘R’, lower case ‘a’, 2 hyphens</li>
+        <li>Rent-a-Room for traders — Upper case ‘R’ and ‘R’, lower case ‘a’, ‘f’ and ‘t’, 2 hyphens</li>
+        <li>Rent-a-Room Scheme — upper case ‘R’, ‘R’ and ‘S’, lower case ‘a’, 2 hyphens</li>
+        <li>Repayment of Teachers’ Loans scheme — upper case ‘R’, ‘T’ and ‘L’, lower case ‘o’ and ‘s’</li>
+        <li>Save As You Earn schemes (SAYE) — upper case ‘S’, ‘A’, ‘Y’ and ‘E’, lower case ‘s’ for schemes</li>
+      </ul>
+      <h3 class='govuk-heading-s' id='seafarers-earnings-deduction'>Seafarers’ Earnings Deduction</h3>
+      <p class='govuk-body'>Initial caps, with apostrophe.</p>
+      <h3 class='govuk-heading-s' id='send-file-submit'>send, file or submit</h3>
+      <p class='govuk-body'>Regular users running their own business seem to prefer ‘file’ and ‘submit’, but
+      individuals doing Self Assessment prefer ‘send’.</p>
+      <p class='govuk-body'>User research shows that ‘submit VAT return’ is more popular than ‘send VAT return’,
+      but ‘send tax return’ is more popular than ‘submit tax return’.</p>
+      <p class='govuk-body'>You should consider the existing content, what the business areas use in external
+      communications and any user research findings.</p>
+      <h3 class='govuk-heading-s' id='set-off'>set off</h3>
+      <p class='govuk-body'>Hyphenated when used as a noun. For example, ‘a subsequent agreement between the
+      parties to set-off a claim’. Not hyphenated when used as a verb. For example, ‘losses from earlier years
+      set off’.</p>
+      <h3 class='govuk-heading-s' id='short-tax-return'>Short Tax Return</h3>
+      <p class='govuk-body'>Initial caps.</p>
+      <h3 class='govuk-heading-s' id='simplified-declarations'>Simplified declarations</h3>
+      <p class='govuk-body'>When generally talking about the different simplified declarations as a group, use either:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>simplified declarations for imports</li>
+        <li>simplified declarations for exports</li>
+      </ul>
+      <p class='govuk-body'>Do not use ‘Customs Freight Simplified Procedures’ or ‘CFSP’ to describe simplified declarations for imports.</p>
+      <p class='govuk-body'>When talking about the two specific procedures use:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>“entry in the declarant’s records” to describe the authorisation to use the customs procedure - do not use “EIDR”</li>
+        <li>“simplified declaration procedure” to describe the authorisation to use the customs procedure - do not use “SDP”</li>
+      </ul>
+      <p class='govuk-body'>See style for specific declarations types <a class='govuk-link' href='#customs-declarations'>style for specific declarations types</a>.</p>
+      
+      <h3 class='govuk-heading-s' id='small-earnings-exception'>small earnings exception</h3>
+      <p class='govuk-body'>Lower case.</p>
+      <h3 class='govuk-heading-s' id='standard-rated'>standard-rated</h3>
+      <p class='govuk-body'>Hyphenated, but no hyphen in standard rate or standard rating.</p>
+      <h3 class='govuk-heading-s' id='student-loan'>student loan</h3>
+      <p class='govuk-body'>Lower case unless you are referring to the Student Loans Company.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-17">
+          T
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-17" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='take-home-pay'>take-home pay</h3>
+      <p class='govuk-body'>1 hyphen.</p>
+      <h3 class='govuk-heading-s' id='tax'>tax</h3>
+      <p class='govuk-body'>See <a class='govuk-link' href='#capitalisation-of-taxes'>capitalisation of taxes, duties and levies</a>.</p>
+      <h3 class='govuk-heading-s' id='tax-free'>tax-free and tax free</h3>
+      <p class='govuk-body'>Hyphenated when it is before a noun, for example ‘tax-free amount’. Not hyphenated
+      when it appears after a noun, for example ‘the amount is tax free’.</p>
+      <h3 class='govuk-heading-s' id='tax-rates'>tax rates</h3>
+      <p class='govuk-body'>See <a class='govuk-link' href='#percentage-changes'>percentage changes</a>.</p>
+      <h3 class='govuk-heading-s' id='trust-unique-taxpayer-reference'>Trust Unique Taxpayer Reference</h3>
+      <p class='govuk-body'>Initial caps.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-18">
+          U
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-18" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='unique-taxpayer-reference'>Unique Taxpayer Reference</h3>
+      <p class='govuk-body'>Initial caps. Not ‘Unique Taxpayer Reference number’ or ‘Unique Taxpayer Reference
+      Number’.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-19">
+          W
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-19" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='war-widows-and-dependants-pension'>war widow’s and dependant’s pension</h3>
+      <p class='govuk-body'>Lower case, with apostrophes before each ‘s’.</p>
+      <h3 class='govuk-heading-s' id='we'>we</h3>
+      <p class='govuk-body'>
+      You can use ‘we’ to describe HMRC in content, as long as it is clear to the user who ‘we’ are. For
+      example, ‘HM Revenue and Customs is the UK tax authority. We collect the money that pays for the UK’s
+      public services and help families and individuals with targeted financial support.’
+      </p>
+      <h3 class='govuk-heading-s' id='widows-pension-or-bereavement-allowance'>Widow’s Pension or Bereavement
+      Allowance</h3>
+      <p class='govuk-body'>Initial caps, with an apostrophe before the ‘s’ in ‘Widow’s’.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-20">
+          Z
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-20" class="govuk-accordion__section-content">
+      <h3 class='govuk-heading-s' id='zero-rated'>zero-rated</h3>
+      <p class='govuk-body'>Hyphenated, but no hyphen in ‘zero rate’ or ‘zero rating’.</p>
+    </div>
+  </div>
 </div>
 
 </div>
@@ -682,7 +651,7 @@ Allowance</h3>
 
 </div>
 
-  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-  <script src="/assets/javascripts/hmrc-design-system.js" type="application/javascript"></script>
+  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+  <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
 </body>
 </html>

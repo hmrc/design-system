@@ -6,54 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <div class="govuk-form-group">
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-    <h1 class="govuk-fieldset__heading">
-      Pa fath o fusnes ydych chi?
-    </h1>
-  </legend>
-  <div class="govuk-radios govuk-radios"    data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="business-type" name="business-type" type="radio" value="limited-company">
-          <label class="govuk-label govuk-radios__label" for="business-type">
-        Cwmni Cyfyngedig
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="business-type-2" name="business-type" type="radio" value="sole-trader">
-          <label class="govuk-label govuk-radios__label" for="business-type-2">
-        Unig fasnachwr
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="business-type-3" name="business-type" type="radio" value="partnership">
-          <label class="govuk-label govuk-radios__label" for="business-type-3">
-        Partneriaeth
-      </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="business-type-4" name="business-type" type="radio" value="trust">
-          <label class="govuk-label govuk-radios__label" for="business-type-4">
-        Ymddiriedolaeth
-      </label>
-        </div>
-  </div>
-
-</fieldset>
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Pa fath o fusnes ydych chi?
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="business-type" name="business-type" type="radio" value="limited-company">
+        <label class="govuk-label govuk-radios__label" for="business-type">
+          Cwmni Cyfyngedig
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="business-type-2" name="business-type" type="radio" value="sole-trader">
+        <label class="govuk-label govuk-radios__label" for="business-type-2">
+          Unig fasnachwr
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="business-type-3" name="business-type" type="radio" value="partnership">
+        <label class="govuk-label govuk-radios__label" for="business-type-3">
+          Partneriaeth
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="business-type-4" name="business-type" type="radio" value="trust">
+        <label class="govuk-label govuk-radios__label" for="business-type-4">
+          Ymddiriedolaeth
+        </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
 
 
-<button class="govuk-button" data-module="govuk-button">
+<button type="submit" class="govuk-button" data-module="govuk-button">
   Yn eich blaen
 </button>
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>
