@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <p class="govuk-body">
 HMRC publishes the employer bulletin 6 times a year, giving employers and agents the latest information on topics and issues that may affect them.
 </p>
@@ -30,7 +30,7 @@ You can register for <a href="https://www.public-inf.co.uk/" class="govuk-link">
 
 <p class="govuk-body">
 You can read the bulletin on screen or print it off. It’s compatible with most screen reading software packages.
-</p><script src="/assets/javascripts/hmrc-design-system.js"></script>
+</p><script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

@@ -6,29 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
 <div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="vat-registration-number">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="vat-registration-number">
       What is Anycompany’s VAT registration number?
     </label>
-    </h1>
+  </h1>
   <div id="vat-registration-number-hint" class="govuk-hint">
     This is 9 numbers, sometimes with ‘GB’ at the start, for example 123456789 or GB123456789. You can find it on Anycompany’s VAT registration certificate.
   </div>
-<input class="govuk-input govuk-input--width-10" id="vat-registration-number" name="vat-registration-number" type="text" aria-describedby="vat-registration-number-hint">
+  <input class="govuk-input govuk-input--width-10" id="vat-registration-number" name="vat-registration-number" type="text" aria-describedby="vat-registration-number-hint">
 </div>
 
 
-<button class="govuk-button" data-module="govuk-button">
+<button type="submit" class="govuk-button" data-module="govuk-button">
   Continue
 </button>
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>
