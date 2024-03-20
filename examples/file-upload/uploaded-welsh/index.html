@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <h1 class="govuk-heading-xl">Uwchlwytho derbynneb</h1>
 
 <div id="file-upload-1-hint" class="govuk-hint">
@@ -26,34 +26,31 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
 
     <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">File uploaded.</div>
 
-    
-  <dl class="govuk-summary-list govuk-summary-list--long-key">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            <a class="govuk-link" href="#">Derbynneb1.jpg</a>
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <strong class="govuk-tag govuk-tag--green">
+    <dl class="govuk-summary-list govuk-summary-list--long-key">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Derbynneb1.jpg</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--green">
   WEDI’I HUWCHLWYTHO
 </strong>
 
-          </dd>
-            <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                Dileu<span class="govuk-visually-hidden"> Derbynneb1.jpg</span>
-            </a>
-            </dd>
-        </div>
-  </dl>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">Dileu<span class="govuk-visually-hidden"> Derbynneb1.jpg</span></a>
+    </dd>
+  </div>
+</dl>
 
     <div class="govuk-visually-hidden" aria-live="polite" id="statusInformation">file uploaded.</div>
 
-    <button class="govuk-button" data-module="govuk-button">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
   Yn eich blaen
 </button>
   </div>
 </div>
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

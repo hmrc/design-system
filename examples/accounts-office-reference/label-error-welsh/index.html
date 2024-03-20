@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
 <div class="govuk-form-group govuk-form-group--error">
   <label class="govuk-label" for="accounts-office-reference">
@@ -21,12 +21,12 @@
     Mae hwn yn 13 o gymeriadau, megis 123PX00123456 neu 123PX0012345X. Bydd hwn i’w gael ar lythyrau oddi wrth CThEM ynghylch TWE ac ar lythyrau a gawsoch wrth gofrestru fel cyflogwr.
   </div>
   <p id="accounts-office-reference-error" class="govuk-error-message">
-  <span class="govuk-visually-hidden">Gwall:</span> Nodwch eich cyfeirnod Swyddfa Gyfrifon
+    <span class="govuk-visually-hidden">Gwall:</span> Nodwch eich cyfeirnod Swyddfa Gyfrifon
   </p>
-<input class="govuk-input govuk-input--width-10 govuk-input--error" id="accounts-office-reference" name="accounts-office-reference" type="text" aria-describedby="accounts-office-reference-hint accounts-office-reference-error">
+  <input class="govuk-input govuk-input--width-10 govuk-input--error" id="accounts-office-reference" name="accounts-office-reference" type="text" aria-describedby="accounts-office-reference-hint accounts-office-reference-error">
 </div>
 
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>

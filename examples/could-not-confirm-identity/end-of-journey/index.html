@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
 
-    <link rel="icon" href="/extension-assets/govuk-frontend/govuk/assets/images/favicon.ico">
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 <header class="hmrc-page-heading">
   <h1 class="govuk-heading-xl">We could not confirm your identity</h1></header>
 
@@ -20,7 +20,7 @@
 times. For security reasons, you must wait 24 hours and then sign in to try again.</p>
 <p class="govuk-body">You can <a class="govuk-link" href="#">change other VAT details</a>
 without confirming your identity</p>
-<script src="/assets/javascripts/hmrc-design-system.js"></script>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
 </html>
