@@ -21,7 +21,7 @@
   <div class="app-pane__header">
     
 
-<header role="banner" class="hmrc-internal-header">
+<header class="hmrc-internal-header">
     <div class="govuk-width-container">
 			<div class="hmrc-internal-header__logo">
 					<a href="https://www.gov.uk/government/organisations/hm-revenue-customs" class="hmrc-internal-header__logo-link">
@@ -328,7 +328,7 @@
 {% set exampleContent2 %}&lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;We repaid you £<span class="hljs-number">50.</span> It will take <span class="hljs-number">3</span> days <span class="hljs-keyword">for</span> the money to reach your account.&lt;/p&gt;{% endset %}
 
   {{ hmrcTimeline({
-    <span class="hljs-attr">headingLevel</span>: <span class="hljs-string">&quot;2&quot;</span>,
+    <span class="hljs-attr">headingLevel</span>: <span class="hljs-number">2</span>,
     <span class="hljs-attr">events</span>: [
       {
         <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;Repayment complete&#x27;</span>,
@@ -353,7 +353,7 @@
 {% set exampleContent2 %}&lt;p class=&quot;govuk-body&quot;&gt;Gwnaethom ad-dalu £50 i chi. Bydd yn cymryd hyd at 3 diwrnod i&#x27;r arian gyrraedd eich cyfrif.&lt;/p&gt;{% endset %}
 
   {{ hmrcTimeline({
-    headingLevel: &quot;2&quot;,
+    headingLevel: 2,
     events: [
       {
         title: &#x27;Ad-daliad wedi’i wneud&#x27;,
