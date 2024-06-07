@@ -4,6 +4,7 @@ layout: twoColumnPage.njk
 ---
 
 {% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
 {% block content %}
 
@@ -31,40 +32,11 @@ layout: twoColumnPage.njk
   How it works
 </h2>
 
-<p class="govuk-body">
-  You can ask for the Accounts Office reference as the main heading or <code>&lt;h1&gt;</code> of the screen. It can be a question or statement.
-</p>
-
-{{ example({
-    item: 'accounts-office-reference',
-    example: 'heading',
-    welsh: 'heading-welsh',
-    description: 'Accounts Office reference as main heading'
-}) }}
+{{ hmrcFrontendInfo() }}
 
 <p class="govuk-body">
-  Or you can ask for the Accounts Office reference as a form label, separate from the <code>&lt;h1&gt;</code>.
+  This pattern lets users search for a UK address (using HMRC’s <a class="govuk-link" href="https://github.com/hmrc/address-lookup-frontend">Address Lookup Frontend</a>) or manually enter any address.
 </p>
-
-{{
-  example({
-    item: 'accounts-office-reference',
-    example: 'label',
-    welsh: 'label-welsh',
-    description: 'Accounts Office reference as form label'
-  })
-}}
-
-<p class="govuk-body">
-  Use a single text input and get the user to enter the reference formatted as:
-</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>3 numbers</li>
-  <li>‘P’</li>
-  <li>a letter</li>
-  <li>8 numbers or 7 numbers and an ‘X’</li>
-</ul>
 
 <h3 class="govuk-heading-m" id="provide-help">
   Provide help
