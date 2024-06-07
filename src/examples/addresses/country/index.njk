@@ -1,0 +1,26 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{
+  govukInput({
+    label: {
+      text: "Select your country",
+      isPageHeading: true,
+      classes: "govuk-label--l"
+    },
+    hint: {
+      text: 'Select country'
+    },
+    id: "accounts-office-reference",
+    name: "accounts-office-reference",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
