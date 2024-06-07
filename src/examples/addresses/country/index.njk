@@ -2,24 +2,17 @@
 layout: layout-example.njk
 ---
 
-{% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{
-  govukInput({
-    label: {
-      text: "Select your country",
-      isPageHeading: true,
-      classes: "govuk-label--l"
-    },
-    hint: {
-      text: 'Select country'
-    },
-    id: "accounts-office-reference",
-    name: "accounts-office-reference",
-    classes: "govuk-input--width-10"
-  })
-}}
+<form action="#" method="get" novalidate>
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="example">Select your country</label>
+    </h1>
+
+    <input class="govuk-input" id="example" name="example" type="text" aria-describedby="example-hint">
+  </div>
+</form>
 
 {{ govukButton({
   text: "Continue"
