@@ -13,17 +13,20 @@
   <body class="app-example-page">
     <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
-<h1 class="govuk-heading-l">What is your Self Assessment Unique Taxpayer Reference (UTR)?</h1>
+<h1 class="govuk-heading-l">Your Self Assessment Unique Taxpayer Reference (UTR)</h1>
 
-<p class="govuk-body">Your UTR can be 10 or 13 digits long. You can find it in your Personal Tax Account, the HMRC app or on tax returns and other documents from HMRC. It might be called ‘reference’, ‘UTR’ or ‘official use’.</p>
+<p class="govuk-body">You can find it in your Personal Tax Account, the HMRC app or on tax returns and other documents from HMRC. It might be called ‘reference’, ‘UTR’ or ‘official use’.</p>
 
-<p class="govuk-body"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-utr-number">How to find your UTR (opens in new tab)</a></p>
+<p class="govuk-body"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-utr-number">Get more help to find your UTR (opens in new tab)</a></p>
 
 <div class="govuk-form-group">
-  <label class="govuk-label govuk-visually-hidden" for="utr">
-    What is your Self Assessment Unique Taxpayer Reference?
+  <label class="govuk-label govuk-label--m" for="utr">
+    What is your Self Assessment UTR?
   </label>
-  <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text">
+  <div id="utr-hint" class="govuk-hint">
+    Your UTR can be 10 or 13 digits long.
+  </div>
+  <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint">
 </div>
 
 
