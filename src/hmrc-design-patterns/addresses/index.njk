@@ -1,6 +1,7 @@
 ---
 title: Addresses
 layout: twoColumnPage.njk
+status: development
 ---
 
 {% from "_example.njk" import example %}
@@ -62,7 +63,13 @@ layout: twoColumnPage.njk
   This is the default way to look up addresses in HMRC services. Most services will use this method.
 </p>
 
-
+{{
+  example({
+    item: 'addresses',
+    example: 'find',
+    description: 'Find your address'
+  })
+}}
 
 
 
