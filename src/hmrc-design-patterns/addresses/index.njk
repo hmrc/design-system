@@ -1,0 +1,130 @@
+---
+title: Addresses
+layout: twoColumnPage.njk
+status: development
+---
+
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+{% block content %}
+
+<p class="govuk-body">
+  This guidance supplements the GOV.UK <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/addresses/">Addresses</a> pattern.
+</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+  When to use
+</h2>
+
+<p class="govuk-body">
+  Use this pattern when a journey requires an address to be entered.
+</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">
+  When not to use
+</h2>
+
+<p class="govuk-body">
+  If there is no good reason for asking for an address, do not ask for one.
+</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">
+  How it works
+</h2>
+
+{{ hmrcFrontendInfo() }}
+
+<p class="govuk-body">
+  This pattern lets users search for a UK address (using HMRC’s <a class="govuk-link" href="https://github.com/hmrc/address-lookup-frontend">Address Lookup Frontend</a>) or manually enter any address.
+</p>
+
+<h3 class="govuk-heading-m" id="country">
+  UK and international addresses
+</h3>
+
+<p class="govuk-body">
+  If both UK and international addresses are expected, use a question to direct users to either search for a UK address or manually enter an international address.
+</p>
+
+{{
+  example({
+    item: 'addresses',
+    example: 'country',
+    description: 'Select your country'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="uk">
+  Search for a UK address
+</h3>
+
+<p class="govuk-body">
+  This is the default way to look up addresses in HMRC services. Most services will use this method.
+</p>
+
+{{
+  example({
+    item: 'addresses',
+    example: 'find',
+    description: 'Find your address'
+  })
+}}
+
+<h3 class="govuk-heading-m" id="uk">
+  Search results
+</h3>
+
+{{
+  example({
+    item: 'addresses',
+    example: 'results',
+    description: 'Choose your address'
+  })
+}}
+
+<p class="govuk-body">
+  Only show search results if there are multiple results. If there is a single result go directly to the review and confirm screen.
+</p>
+
+<h3 class="govuk-heading-m" id="uk">
+  Manually enter or edit
+</h3>
+
+{{
+  example({
+    item: 'addresses',
+    example: 'manual',
+    description: 'Enter your address'
+  })
+}}
+
+<p class="govuk-body">
+  If international addresses are expected replace ‘Postcode’ with ‘Postal code’. Only include ‘Organisation’ if relevant.
+</p>
+
+<h3 class="govuk-heading-m" id="uk">
+  Review and confirm
+</h3>
+
+{{
+  example({
+    item: 'addresses',
+    example: 'review',
+    description: 'Review and confirm'
+  })
+}}
+
+<h2 class="govuk-heading-l" id="research">
+  Research
+</h2>
+
+<p class="govuk-body">
+  We need more research. If you have used Addresses, get in touch to share your research findings.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/178">Discuss Addresses on GitHub</a>
+</p>
+
+{% endblock %}
