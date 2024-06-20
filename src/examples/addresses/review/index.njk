@@ -1,0 +1,21 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-xl">Review and confirm</h1>
+
+<p class="govuk-body">
+  18 Warwick Gardens<br />
+  Worthing<br />
+  BN11 1PE<br />
+  United Kingdom
+</p>
+
+<p class="govuk-body"><a class="govuk-link" href="#">Edit address</a></p>
+
+  {{ govukButton({
+    text: "Confirm address"
+  }) }}
+</form>
