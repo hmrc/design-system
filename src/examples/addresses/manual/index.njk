@@ -1,0 +1,83 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<h1 class="govuk-heading-l">Enter your address</h1>
+
+{{
+  govukInput({
+    label: {
+      text: "Organisation (optional)"
+    },
+    id: "organisation",
+    name: "organisation"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Address line 1"
+    },
+    id: "line1",
+    name: "line1"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Address line 2 (optional)"
+    },
+    id: "line2",
+    name: "line2"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Town or city"
+    },
+    id: "town-city",
+    name: "town-city"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "County (optional)"
+    },
+    id: "county",
+    name: "county"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Postcode"
+    },
+    id: "postcode",
+    name: "postcode",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Country"
+    },
+    id: "country",
+    name: "country"
+  })
+}}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
