@@ -1,0 +1,38 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<h1 class="govuk-heading-l">Find your address</h1>
+
+{{
+  govukInput({
+    label: {
+      text: "Postcode"
+    },
+    id: "postcode",
+    name: "postcode",
+    classes: "govuk-input--width-10"
+  })
+}}
+
+<p class="govuk-body"><a class="govuk-link" href="#">Enter the address manually</a></p>
+
+{{
+  govukInput({
+    label: {
+      text: "Property name or number (optional)"
+    },
+    hint: {
+      text: 'For example, The Mill, 116 or Flat 37a.'
+    },
+    id: "property",
+    name: "property"
+  })
+}}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
