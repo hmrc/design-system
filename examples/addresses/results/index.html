@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
+
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+<h1 class="govuk-heading-xl">Choose your address</h1>
+
+<p class="govuk-body"><a class="govuk-link" href="#">Enter the address manually</a></p>
+
+<form action="/form-handler" method="post" novalidate>
+  <div class="govuk-form-group">
+  <div class="govuk-radios" data-module="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="1" name="results" type="radio" value="1">
+      <label class="govuk-label govuk-radios__label" for="1">
+        1 Warwick Gardens, Worthing, BN11 1PE
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="2a" name="results" type="radio" value="2a">
+      <label class="govuk-label govuk-radios__label" for="2a">
+        2a Warwick Gardens, Worthing, BN11 1PE
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="Flat 1, 3" name="results" type="radio" value="Flat 1, 3">
+      <label class="govuk-label govuk-radios__label" for="Flat 1, 3">
+        Flat 1, 3 Warwick Gardens, Worthing, BN11 1PE
+      </label>
+    </div>
+  </div>
+</div>
+
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+</form>
+<script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
+  </body>
+
+</html>
