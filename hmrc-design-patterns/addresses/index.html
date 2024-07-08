@@ -1,0 +1,903 @@
+
+
+
+<!DOCTYPE html>
+<html class="govuk-template" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Addresses - HMRC design patterns - Design resources for HMRC — GOV.UK</title>
+  <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css">
+</head>
+
+<body class="govuk-template__body">
+
+  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+  
+  <!-- TODO: tidy up the below -->
+  <div class="app-pane app-pane--enabled">
+  <div class="app-pane__header">
+    
+
+<header class="hmrc-internal-header">
+    <div class="govuk-width-container">
+			<div class="hmrc-internal-header__logo">
+					<a href="https://www.gov.uk/government/organisations/hm-revenue-customs" class="hmrc-internal-header__logo-link">
+					
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="52px" height="32px" viewBox="0 0 45.35 45.35" focusable="false" aria-hidden="true">
+                  <path class="cls-1" d="m28.5,16.6c.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9-.84.34-1.23,1.31-.89,2.14.34.83,1.3,1.23,2.14.88Z"/>
+                  <path class="cls-1" d="m22.06,19.36c-.84.34-1.23,1.31-.89,2.14.34.83,1.3,1.23,2.14.88.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9Z"/>
+                  <path class="cls-1" d="m32.86,19.2c.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9-.84.34-1.23,1.31-.89,2.14.34.83,1.3,1.23,2.14.88Z"/>
+                  <path class="cls-1" d="m33.62,22.63c.34.83,1.3,1.23,2.14.88.82-.34,1.22-1.29.88-2.12-.34-.83-1.3-1.24-2.12-.9-.84.34-1.23,1.31-.89,2.14Z"/>
+                  <path class="cls-1" d="m21.81,11.4c.06.08.13.15.21.21l-1.19,3.58s0,0,0,.01h0s0,0,0,0c-.06.18-.09.37-.09.56,0,.97.71,1.77,1.64,1.9.01,0,.03,0,.04,0,.08.01.16.02.24.02h0c.08,0,.16,0,.24-.02.01,0,.03,0,.04,0,.93-.14,1.64-.94,1.64-1.9,0-.2-.03-.39-.08-.56h0s0,0,0,0c0,0,0,0,0-.01l-1.19-3.58c.08-.06.15-.13.21-.21h0s2.06,1.08,2.06,1.08v-3.04l-2.06.65h0c-.06-.08-.12-.15-.2-.21h0s.83-2.62.83-2.62h-1.49s-1.49,0-1.49,0l.83,2.61h0c-.08.06-.14.13-.2.21h0s-2.06-.65-2.06-.65v3.04l2.06-1.08h0Z"/>
+                  <path class="cls-1" d="m16.83,16.6c.84.35,1.79-.05,2.14-.88.34-.83-.05-1.79-.89-2.14-.82-.34-1.78.07-2.12.9-.34.83.05,1.78.88,2.12Z"/>
+                  <path class="cls-1" d="m12.46,19.2c.84.35,1.79-.05,2.14-.88.34-.83-.05-1.79-.89-2.14-.82-.34-1.78.07-2.12.9-.34.83.05,1.78.88,2.12Z"/>
+                  <path class="cls-1" d="m9.57,23.51c.84.35,1.79-.05,2.14-.88.34-.83-.05-1.79-.89-2.14-.82-.34-1.78.07-2.12.9-.34.83.05,1.78.88,2.12Z"/>
+                  <path class="cls-1" d="m34.61,25.35c.22,1.12.26,1.65,0,2.37-.37-.36-.71-1.01-.98-2.02l-1.07,3.57c.65-.45,1.16-.74,1.73-.75-1.02,2.2-2.3,2.77-3.12,2.61-1.01-.19-1.47-1.09-1.32-1.85.23-1.08,1.34-1.36,1.86-.11.99-2.02-.69-2.65-1.77-2.05,1.66-1.66,1.85-3.13.51-4.92-1.87,1.43-1.89,2.84-1.05,4.84-1.09-1.25-2.79-.58-2.18,1.44.79-1.22,1.83-.45,1.67.71-.14,1.01-1.47,1.82-3.13,1.68-2.38-.22-2.52-1.86-2.58-3.21.58-.11,1.64.43,2.53,1.69l.33-3.79c-.98,1.02-1.86,1.21-2.85,1.24.33-1.02,1.84-2.7,1.84-2.7h-4.73s1.51,1.68,1.84,2.7c-.99-.03-1.87-.22-2.85-1.24l.33,3.79c.9-1.26,1.95-1.8,2.53-1.69-.06,1.36-.2,3-2.58,3.21-1.66.14-2.99-.67-3.13-1.68-.16-1.16.88-1.92,1.67-.71.61-2.02-1.09-2.69-2.18-1.44.84-1.99.82-3.41-1.05-4.84-1.34,1.78-1.15,3.26.51,4.92-1.08-.6-2.76.03-1.77,2.05.52-1.26,1.63-.98,1.86.11.16.76-.31,1.66-1.32,1.85-.83.15-2.1-.41-3.12-2.61.58.01,1.08.3,1.73.75l-1.07-3.57c-.27,1-.62,1.66-.98,2.02-.25-.72-.21-1.25,0-2.37l-2.21.79c1.18,1.6,2.31,3.86,3.25,7.79,3.29-.47,6.99-.74,10.9-.74s7.61.26,10.9.74c.94-3.93,2.07-6.19,3.25-7.79l-2.21-.79Z"/>
+                  <path class="cls-1" d="m22.68.57C10.47.57.57,10.47.57,22.68s9.9,22.11,22.11,22.11,22.11-9.9,22.11-22.11S34.89.57,22.68.57Zm0,41.69c-10.81,0-19.58-8.77-19.58-19.58S11.86,3.1,22.68,3.1s19.58,8.77,19.58,19.58-8.77,19.58-19.58,19.58Z"/>
+              </svg>
+					
+					<span class="hmrc-internal-header__logo-text">
+									HM Revenue &amp; Customs
+							</span>
+					</a>
+			</div><div class="hmrc-internal-header__service-name">
+					<a href="/" class="hmrc-internal-header__link">
+					 HMRC design resources
+					</a>
+			</div></div>
+</header>
+
+
+  </div>
+
+  <div class="app-pane__body govuk-width-container">
+
+    
+    
+    <div data-module="subnav-toggle">
+      <div class="app-subnav-toggle">
+        <button hidden aria-controls="app-navigation" class="app-subnav-toggle__button">Menu</button>
+      </div>
+
+        <nav role="navigation" aria-labelledby="nav-header" class="app-pane__subnav" id="app-navigation">
+
+          <h2 class="govuk-heading-m govuk-visually-hidden" id="nav-header"><a href="/hmrc-design-patterns/">Pages in this section</a></h2>
+
+          <div class="app-subnav"><ul class="app-subnav__section"><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/account-header">
+                        Account header
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/accounts-office-reference">
+                        Accounts office reference
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/add-to-a-list">
+                        Add to a list
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/ask-the-user-for-their-consent">
+                        Ask the user for their consent
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/confirmed-identity">
+                        Confirmed identity
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/could-not-confirm-identity">
+                        Could not confirm identity
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/currency-input">
+                        Currency input
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/employer-paye-reference">
+                        Employer PAYE reference
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/eori-numbers">
+                        EORI numbers
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/feedback">
+                        Feedback
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/file-upload">
+                        File upload
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hiding-information">
+                        Hiding information
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-banner">
+                        HMRC banner
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/internal-header">
+                        Internal header
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/match-an-organisation-to-HMRC-records">
+                        Match an organisation to HMRC records
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/notification-badge">
+                        Notification badge
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-heading">
+                        Page heading
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-not-found">
+                        Page not found
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/page-title">
+                        Page title
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/research-banner">
+                        Research banner
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-timeout">
+                        Service timeout
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/service-unavailable">
+                        Service unavailable
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/sign-out">
+                        Sign out
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/there-is-a-problem-with-the-service">
+                        There is a problem with the service
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/timeline">
+                        Timeline
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/unique-taxpayer-reference">
+                        Unique Taxpayer Reference
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/vat-registration-number">
+                        VAT registration number
+                      </a>
+                    </li><li class="app-subnav__section-item">
+                      <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/welsh-language-toggle">
+                        Welsh language toggle
+                      </a>
+                    </li></ul><ul class="app-subnav__section"><li class="app-subnav__section-item">
+                    <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-archive">
+                      HMRC design patterns archive
+                    </a>
+                  </li><li class="app-subnav__section-item">
+                    <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/hmrc-design-patterns-backlog">
+                      HMRC design patterns backlog
+                    </a>
+                  </li><li class="app-subnav__section-item">
+                    <a class="app-subnav__link govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype">
+                      Installing HMRC Frontend in your prototype
+                    </a>
+                  </li></ul></div>
+        </nav>
+    </div>
+    <div class="app-pane__content">
+      
+        <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+      
+
+      <main class="app-content" id="main-content">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <header class="hmrc-page-heading">
+  <h1 class="govuk-heading-xl">Addresses</h1></header>
+
+
+            
+  
+  
+    
+      
+    
+
+
+    
+    <div class="govuk-!-padding-bottom-8 govuk-!-padding-top-2 hmrc-phase-banner">
+      <strong class="govuk-tag govuk-!-margin-top-4 govuk-!-margin-bottom-2"><span class="govuk-visually-hidden">This pattern is&nbsp;</span>development</strong>
+      <p class="govuk-body">This is currently development because <a class="govuk-link" href="#research">more research</a> is needed.</p>
+    </div>
+  
+
+
+
+<p class="govuk-body">
+  This guidance supplements the GOV.UK <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/addresses/">Addresses</a> pattern.
+</p>
+
+<h2 class="govuk-heading-l" id="when-to-use">
+  When to use
+</h2>
+
+<p class="govuk-body">
+  Use this pattern when a journey requires an address to be entered.
+</p>
+
+<h2 class="govuk-heading-l" id="when-not-to-use">
+  When not to use
+</h2>
+
+<p class="govuk-body">
+  If there is no good reason for asking for an address, do not ask for one.
+</p>
+
+<h2 class="govuk-heading-l" id="how-it-works">
+  How it works
+</h2>
+
+  <div class="govuk-inset-text">
+    You need HMRC Frontend to use this pattern — <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro into your code.
+  </div>
+
+
+<p class="govuk-body">
+  This pattern lets users search for a UK address (using HMRC’s <a class="govuk-link" href="https://github.com/hmrc/address-lookup-frontend">Address Lookup Frontend</a>) or manually enter any address.
+</p>
+
+<h3 class="govuk-heading-m" id="country">
+  UK and international addresses
+</h3>
+
+<p class="govuk-body">
+  If both UK and international addresses are expected, use a question to direct users to either search for a UK address or manually enter an international address.
+</p>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-country" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/addresses/country/" target="_blank" title="Open Select your country example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Select your country</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/addresses/country/" title="Select your country example"></iframe>
+    </div>
+
+      <div class="example-example-country-lang example-example-country-lang--en ">
+        <span id="options-example-country"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-country-html" role="tab"
+                aria-controls="example-country-html"
+                data-track="tab-html" title="Display Select your country example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-country-nunjucks" role="tab"
+                  aria-controls="example-country-nunjucks"
+                  data-track="tab-nunjucks" title="Display Select your country example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-country-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;get&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label-wrapper&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--l&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;example&quot;</span>&gt;</span>Select your country<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;example-hint&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-country-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;form action=<span class="hljs-string">&quot;#&quot;</span> method=<span class="hljs-string">&quot;get&quot;</span> novalidate&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label-wrapper&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--l&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;example&quot;</span>&gt;</span>Select your country<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;example-hint&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+}) }}</code>
+              </pre>
+
+            </div>
+
+      </div>
+  </div>
+
+
+<h3 class="govuk-heading-m" id="uk">
+  Search for a UK address
+</h3>
+
+<p class="govuk-body">
+  This is the default way to look up addresses in HMRC services. Most services will use this method.
+</p>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-find" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/addresses/find/" target="_blank" title="Open Find your address example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Find your address</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/addresses/find/" title="Find your address example"></iframe>
+    </div>
+
+      <div class="example-example-find-lang example-example-find-lang--en ">
+        <span id="options-example-find"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-find-html" role="tab"
+                aria-controls="example-find-html"
+                data-track="tab-html" title="Display Find your address example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-find-nunjucks" role="tab"
+                  aria-controls="example-find-nunjucks"
+                  data-track="tab-nunjucks" title="Display Find your address example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-find-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Find your address<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;postcode&quot;</span>&gt;</span>
+    Postcode
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Enter the address manually<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;property&quot;</span>&gt;</span>
+    Property name or number (optional)
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;property-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+    For example, The Mill, 116 or Flat 37a.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;property&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;property&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;property-hint&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-find-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Find your address&lt;/h1&gt;
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Postcode&quot;</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>
+  })
+}}
+
+&lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Enter the address manually<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>&lt;/p&gt;
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Property name or number (optional)&quot;</span>
+    },
+    <span class="hljs-attr">hint</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;For example, The Mill, 116 or Flat 37a.&#x27;</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;property&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;property&quot;</span>
+  })
+}}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+}) }}</code>
+              </pre>
+
+            </div>
+
+      </div>
+  </div>
+
+
+<h3 class="govuk-heading-m" id="uk">
+  Search results
+</h3>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-results" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/addresses/results/" target="_blank" title="Open Choose your address example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Choose your address</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/addresses/results/" title="Choose your address example"></iframe>
+    </div>
+
+      <div class="example-example-results-lang example-example-results-lang--en ">
+        <span id="options-example-results"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-results-html" role="tab"
+                aria-controls="example-results-html"
+                data-track="tab-html" title="Display Choose your address example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-results-nunjucks" role="tab"
+                  aria-controls="example-results-nunjucks"
+                  data-track="tab-nunjucks" title="Display Choose your address example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-results-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Choose your address<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Enter the address manually<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;results&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
+          1 Warwick Gardens, Worthing, BN11 1PE
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;2a&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;results&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;2a&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;2a&quot;</span>&gt;</span>
+          2a Warwick Gardens, Worthing, BN11 1PE
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;Flat 1, 3&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;results&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Flat 1, 3&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;Flat 1, 3&quot;</span>&gt;</span>
+          Flat 1, 3 Warwick Gardens, Worthing, BN11 1PE
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+    Continue
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-results-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/radios/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukRadios %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Choose your address&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Enter the address manually<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+  {{ govukRadios({
+    name: &quot;results&quot;,
+    items: [
+      {
+        value: &quot;1&quot;,
+        text: &quot;1 Warwick Gardens, Worthing, BN11 1PE&quot;,
+        id: &quot;1&quot;
+      },
+      {
+        value: &quot;2a&quot;,
+        text: &quot;2a Warwick Gardens, Worthing, BN11 1PE&quot;,
+        id: &quot;2a&quot;
+      },
+      {
+        value: &quot;Flat 1, 3&quot;,
+        text: &quot;Flat 1, 3 Warwick Gardens, Worthing, BN11 1PE&quot;,
+        id: &quot;Flat 1, 3&quot;
+      }
+    ]
+  }) }}
+
+  {{ govukButton({
+    text: &quot;Continue&quot;
+  }) }}
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span></code>
+              </pre>
+
+            </div>
+
+      </div>
+  </div>
+
+
+<p class="govuk-body">
+  Only show search results if there are multiple results. If there is a single result go directly to the review and confirm screen.
+</p>
+
+<h3 class="govuk-heading-m" id="uk">
+  Manually enter or edit
+</h3>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-manual" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/addresses/manual/" target="_blank" title="Open Enter your address example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Enter your address</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/addresses/manual/" title="Enter your address example"></iframe>
+    </div>
+
+      <div class="example-example-manual-lang example-example-manual-lang--en ">
+        <span id="options-example-manual"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-manual-html" role="tab"
+                aria-controls="example-manual-html"
+                data-track="tab-html" title="Display Enter your address example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-manual-nunjucks" role="tab"
+                  aria-controls="example-manual-nunjucks"
+                  data-track="tab-nunjucks" title="Display Enter your address example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-manual-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Enter your address<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;organisation&quot;</span>&gt;</span>
+    Organisation (optional)
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;line1&quot;</span>&gt;</span>
+    Address line 1
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;line1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;line1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;line2&quot;</span>&gt;</span>
+    Address line 2 (optional)
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;town-city&quot;</span>&gt;</span>
+    Town or city
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;county&quot;</span>&gt;</span>
+    County (optional)
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;county&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;county&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;postcode&quot;</span>&gt;</span>
+    Postcode
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;country&quot;</span>&gt;</span>
+    Country
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-manual-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Enter your address&lt;/h1&gt;
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Organisation (optional)&quot;</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;organisation&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;organisation&quot;</span>
+  })
+}}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Address line 1&quot;</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;line1&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;line1&quot;</span>
+  })
+}}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Address line 2 (optional)&quot;</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;line2&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;line2&quot;</span>
+  })
+}}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Town or city&quot;</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;town-city&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;town-city&quot;</span>
+  })
+}}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;County (optional)&quot;</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;county&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;county&quot;</span>
+  })
+}}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Postcode&quot;</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>
+  })
+}}
+
+{{
+  govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Country&quot;</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;country&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;country&quot;</span>
+  })
+}}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+}) }}</code>
+              </pre>
+
+            </div>
+
+      </div>
+  </div>
+
+
+<p class="govuk-body">
+  If international addresses are expected replace ‘Postcode’ with ‘Postal code’. Only include ‘Organisation’ if relevant.
+</p>
+
+<h3 class="govuk-heading-m" id="uk">
+  Review and confirm
+</h3>
+
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-review" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/addresses/review/" target="_blank" title="Open Review and confirm example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Review and confirm</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/addresses/review/" title="Review and confirm example"></iframe>
+    </div>
+
+      <div class="example-example-review-lang example-example-review-lang--en ">
+        <span id="options-example-review"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-review-html" role="tab"
+                aria-controls="example-review-html"
+                data-track="tab-html" title="Display Review and confirm example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-review-nunjucks" role="tab"
+                  aria-controls="example-review-nunjucks"
+                  data-track="tab-nunjucks" title="Display Review and confirm example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-review-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;</span>Review and confirm<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+  18 Warwick Gardens<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  Worthing<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  BN11 1PE<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  United Kingdom
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Edit address<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Confirm address
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-review-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-xl&quot;</span>&gt;Review and confirm&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
+  18 Warwick Gardens<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  Worthing<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  BN11 1PE<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  United Kingdom
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Edit address<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+  {{ govukButton({
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Confirm address&quot;</span>
+  }) }}
+&lt;/form&gt;</code>
+              </pre>
+
+            </div>
+
+      </div>
+  </div>
+
+
+<h2 class="govuk-heading-l" id="research">
+  Research
+</h2>
+
+<p class="govuk-body">
+  We need more research. If you have used Addresses, get in touch to share your research findings.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/178">Discuss Addresses on GitHub</a>
+</p>
+
+</div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="govuk-footer" role="contentinfo">
+  <div class="govuk-width-container app-width-container--full">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+  <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+  <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
+</body>
+</html>
