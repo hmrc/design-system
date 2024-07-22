@@ -1959,7 +1959,7 @@
 	      return;
 	    }
 	    const $target = document.getElementById(targetId);
-	    if ($target && $target.classList.contains('govuk-checkboxes__conditional')) {
+	    if ($target != null && $target.classList.contains('govuk-checkboxes__conditional')) {
 	      const inputIsChecked = $input.checked;
 	      $input.setAttribute('aria-expanded', inputIsChecked.toString());
 	      $target.classList.toggle('govuk-checkboxes__conditional--hidden', !inputIsChecked);
@@ -3099,15 +3099,35 @@
 	  const components = [[Accordion, config.accordion], [Button, config.button], [CharacterCount, config.characterCount], [Checkboxes], [ErrorSummary, config.errorSummary], [ExitThisPage, config.exitThisPage], [Header], [NotificationBanner, config.notificationBanner], [PasswordInput, config.passwordInput], [Radios], [SkipLink], [Tabs]];
 	  const $scope = (_config$scope = config.scope) != null ? _config$scope : document;
 	  components.forEach(([Component, config]) => {
-	    const $elements = $scope.querySelectorAll(`[data-module="${Component.moduleName}"]`);
-	    $elements.forEach($element => {
-	      try {
-	        'defaults' in Component ? new Component($element, config) : new Component($element);
-	      } catch (error) {
-	        console.log(error);
-	      }
-	    });
+	    createAll(Component, config, $scope);
 	  });
+	}
+
+	/**
+	 * Create all instances of a specific component on the page
+	 *
+	 * Uses the `data-module` attribute to find all elements matching the specified
+	 * component on the page, creating instances of the component object for each
+	 * of them.
+	 *
+	 * Any component errors will be caught and logged to the console.
+	 *
+	 * @template {CompatibleClass} T
+	 * @param {T} Component - class of the component to create
+	 * @param {T["defaults"]} [config] - config for the component
+	 * @param {Element|Document} [$scope] - scope of the document to search within
+	 * @returns {Array<InstanceType<T>>} - array of instantiated components
+	 */
+	function createAll(Component, config, $scope = document) {
+	  const $elements = $scope.querySelectorAll(`[data-module="${Component.moduleName}"]`);
+	  return Array.from($elements).map($element => {
+	    try {
+	      return 'defaults' in Component && typeof config !== 'undefined' ? new Component($element, config) : new Component($element);
+	    } catch (error) {
+	      console.log(error);
+	      return null;
+	    }
+	  }).filter(Boolean);
 	}
 
 	// Taken from https://github.com/alphagov/govuk-design-system/blob/29b9cf8c30ac1514d16fc97adaf15100e5040f7d/src/javascripts/components/tabs.js
