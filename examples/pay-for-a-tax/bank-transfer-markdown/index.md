@@ -19,7 +19,7 @@ Use the following details to make a payment if your account is in the UK:
 Use the following details to make a payment if your account is overseas:
 
 * account number (IBAN) — XXXX XXXX XXXX XXXX XXXX XX
-* bank identifier code (BIC) — XXXXXXXX
+* Business Identifier Code (BIC) — XXXXXXXX
 * account name — XXX
 
 You should make overseas payments in sterling (GBP). Your bank may charge you if use any other currency.
