@@ -1237,7 +1237,6 @@
 	    this.sectionSummaryFocusClass = 'govuk-accordion__section-summary-focus';
 	    this.sectionContentClass = 'govuk-accordion__section-content';
 	    this.$sections = void 0;
-	    this.browserSupportsSessionStorage = false;
 	    this.$showAllButton = null;
 	    this.$showAllIcon = null;
 	    this.$showAllText = null;
@@ -1259,11 +1258,9 @@
 	      });
 	    }
 	    this.$sections = $sections;
-	    this.browserSupportsSessionStorage = helper.checkForSessionStorage();
 	    this.initControls();
 	    this.initSectionHeaders();
-	    const areAllSectionsOpen = this.checkIfAllSectionsOpen();
-	    this.updateShowAllButton(areAllSectionsOpen);
+	    this.updateShowAllButton(this.areAllSectionsOpen());
 	  }
 	  initControls() {
 	    this.$showAllButton = document.createElement('button');
@@ -1320,8 +1317,8 @@
 	    $button.setAttribute('type', 'button');
 	    $button.setAttribute('aria-controls', `${this.$module.id}-content-${index + 1}`);
 	    for (const attr of Array.from($span.attributes)) {
-	      if (attr.nodeName !== 'id') {
-	        $button.setAttribute(attr.nodeName, `${attr.nodeValue}`);
+	      if (attr.name !== 'id') {
+	        $button.setAttribute(attr.name, attr.value);
 	      }
 	    }
 	    const $headingText = document.createElement('span');
@@ -1330,7 +1327,7 @@
 	    const $headingTextFocus = document.createElement('span');
 	    $headingTextFocus.classList.add(this.sectionHeadingTextFocusClass);
 	    $headingText.appendChild($headingTextFocus);
-	    $headingTextFocus.innerHTML = $span.innerHTML;
+	    Array.from($span.childNodes).forEach($child => $headingTextFocus.appendChild($child));
 	    const $showHideToggle = document.createElement('span');
 	    $showHideToggle.classList.add(this.sectionShowHideToggleClass);
 	    $showHideToggle.setAttribute('data-nosnippet', '');
@@ -1345,16 +1342,16 @@
 	    $showHideToggleFocus.appendChild($showHideText);
 	    $button.appendChild($headingText);
 	    $button.appendChild(this.getButtonPunctuationEl());
-	    if ($summary != null && $summary.parentNode) {
+	    if ($summary) {
 	      const $summarySpan = document.createElement('span');
 	      const $summarySpanFocus = document.createElement('span');
 	      $summarySpanFocus.classList.add(this.sectionSummaryFocusClass);
 	      $summarySpan.appendChild($summarySpanFocus);
 	      for (const attr of Array.from($summary.attributes)) {
-	        $summarySpan.setAttribute(attr.nodeName, `${attr.nodeValue}`);
+	        $summarySpan.setAttribute(attr.name, attr.value);
 	      }
-	      $summarySpanFocus.innerHTML = $summary.innerHTML;
-	      $summary.parentNode.replaceChild($summarySpan, $summary);
+	      Array.from($summary.childNodes).forEach($child => $summarySpanFocus.appendChild($child));
+	      $summary.remove();
 	      $button.appendChild($summarySpan);
 	      $button.appendChild(this.getButtonPunctuationEl());
 	    }
@@ -1373,15 +1370,15 @@
 	    }
 	  }
 	  onSectionToggle($section) {
-	    const expanded = this.isExpanded($section);
-	    this.setExpanded(!expanded, $section);
-	    this.storeState($section);
+	    const nowExpanded = !this.isExpanded($section);
+	    this.setExpanded(nowExpanded, $section);
+	    this.storeState($section, nowExpanded);
 	  }
 	  onShowOrHideAllToggle() {
-	    const nowExpanded = !this.checkIfAllSectionsOpen();
+	    const nowExpanded = !this.areAllSectionsOpen();
 	    this.$sections.forEach($section => {
 	      this.setExpanded(nowExpanded, $section);
-	      this.storeState($section);
+	      this.storeState($section, nowExpanded);
 	    });
 	    this.updateShowAllButton(nowExpanded);
 	  }
@@ -1423,17 +1420,13 @@
 	      $section.classList.remove(this.sectionExpandedClass);
 	      $showHideIcon.classList.add(this.downChevronIconClass);
 	    }
-	    const areAllSectionsOpen = this.checkIfAllSectionsOpen();
-	    this.updateShowAllButton(areAllSectionsOpen);
+	    this.updateShowAllButton(this.areAllSectionsOpen());
 	  }
 	  isExpanded($section) {
 	    return $section.classList.contains(this.sectionExpandedClass);
 	  }
-	  checkIfAllSectionsOpen() {
-	    const sectionsCount = this.$sections.length;
-	    const expandedSectionCount = this.$module.querySelectorAll(`.${this.sectionExpandedClass}`).length;
-	    const areAllSectionsOpen = sectionsCount === expandedSectionCount;
-	    return areAllSectionsOpen;
+	  areAllSectionsOpen() {
+	    return Array.from(this.$sections).every($section => this.isExpanded($section));
 	  }
 	  updateShowAllButton(expanded) {
 	    if (!this.$showAllButton || !this.$showAllText || !this.$showAllIcon) {
@@ -1443,37 +1436,90 @@
 	    this.$showAllText.textContent = expanded ? this.i18n.t('hideAllSections') : this.i18n.t('showAllSections');
 	    this.$showAllIcon.classList.toggle(this.downChevronIconClass, !expanded);
 	  }
-	  storeState($section) {
-	    if (this.browserSupportsSessionStorage && this.config.rememberExpanded) {
-	      const $button = $section.querySelector(`.${this.sectionButtonClass}`);
-	      if ($button) {
-	        const contentId = $button.getAttribute('aria-controls');
-	        const contentState = $button.getAttribute('aria-expanded');
-	        if (contentId && contentState) {
-	          window.sessionStorage.setItem(contentId, contentState);
-	        }
-	      }
+
+	  /**
+	   * Get the identifier for a section
+	   *
+	   * We need a unique way of identifying each content in the Accordion.
+	   * Since an `#id` should be unique and an `id` is required for `aria-`
+	   * attributes `id` can be safely used.
+	   *
+	   * @param {Element} $section - Section element
+	   * @returns {string | undefined | null} Identifier for section
+	   */
+	  getIdentifier($section) {
+	    const $button = $section.querySelector(`.${this.sectionButtonClass}`);
+	    return $button == null ? void 0 : $button.getAttribute('aria-controls');
+	  }
+	  storeState($section, isExpanded) {
+	    if (!this.config.rememberExpanded) {
+	      return;
+	    }
+	    const id = this.getIdentifier($section);
+	    if (id) {
+	      try {
+	        window.sessionStorage.setItem(id, isExpanded.toString());
+	      } catch (exception) {}
 	    }
 	  }
 	  setInitialState($section) {
-	    if (this.browserSupportsSessionStorage && this.config.rememberExpanded) {
-	      const $button = $section.querySelector(`.${this.sectionButtonClass}`);
-	      if ($button) {
-	        const contentId = $button.getAttribute('aria-controls');
-	        const contentState = contentId ? window.sessionStorage.getItem(contentId) : null;
-	        if (contentState !== null) {
-	          this.setExpanded(contentState === 'true', $section);
+	    if (!this.config.rememberExpanded) {
+	      return;
+	    }
+	    const id = this.getIdentifier($section);
+	    if (id) {
+	      try {
+	        const state = window.sessionStorage.getItem(id);
+	        if (state !== null) {
+	          this.setExpanded(state === 'true', $section);
 	        }
-	      }
+	      } catch (exception) {}
 	    }
 	  }
 	  getButtonPunctuationEl() {
 	    const $punctuationEl = document.createElement('span');
 	    $punctuationEl.classList.add('govuk-visually-hidden', this.sectionHeadingDividerClass);
-	    $punctuationEl.innerHTML = ', ';
+	    $punctuationEl.textContent = ', ';
 	    return $punctuationEl;
 	  }
 	}
+
+	/**
+	 * Accordion config
+	 *
+	 * @see {@link Accordion.defaults}
+	 * @typedef {object} AccordionConfig
+	 * @property {AccordionTranslations} [i18n=Accordion.defaults.i18n] - Accordion translations
+	 * @property {boolean} [rememberExpanded] - Whether the expanded and collapsed
+	 *   state of each section is remembered and restored when navigating.
+	 */
+
+	/**
+	 * Accordion translations
+	 *
+	 * @see {@link Accordion.defaults.i18n}
+	 * @typedef {object} AccordionTranslations
+	 *
+	 * Messages used by the component for the labels of its buttons. This includes
+	 * the visible text shown on screen, and text to help assistive technology users
+	 * for the buttons toggling each section.
+	 * @property {string} [hideAllSections] - The text content for the 'Hide all
+	 *   sections' button, used when at least one section is expanded.
+	 * @property {string} [hideSection] - The text content for the 'Hide'
+	 *   button, used when a section is expanded.
+	 * @property {string} [hideSectionAriaLabel] - The text content appended to the
+	 *   'Hide' button's accessible name when a section is expanded.
+	 * @property {string} [showAllSections] - The text content for the 'Show all
+	 *   sections' button, used when all sections are collapsed.
+	 * @property {string} [showSection] - The text content for the 'Show'
+	 *   button, used when a section is collapsed.
+	 * @property {string} [showSectionAriaLabel] - The text content appended to the
+	 *   'Show' button's accessible name when a section is expanded.
+	 */
+
+	/**
+	 * @typedef {import('../../common/index.mjs').Schema} Schema
+	 */
 	Accordion.moduleName = 'govuk-accordion';
 	Accordion.defaults = Object.freeze({
 	  i18n: {
@@ -1496,25 +1542,6 @@
 	    }
 	  }
 	});
-	const helper = {
-	  /**
-	   * Check for `window.sessionStorage`, and that it actually works.
-	   *
-	   * @returns {boolean} True if session storage is available
-	   */
-	  checkForSessionStorage: function () {
-	    const testString = 'this is the test string';
-	    let result;
-	    try {
-	      window.sessionStorage.setItem(testString, testString);
-	      result = window.sessionStorage.getItem(testString) === testString.toString();
-	      window.sessionStorage.removeItem(testString);
-	      return result;
-	    } catch (exception) {
-	      return false;
-	    }
-	  }
-	};
 
 	const DEBOUNCE_TIMEOUT_IN_SECONDS = 1;
 
@@ -2987,16 +3014,12 @@
 	  onTabKeydown(event) {
 	    switch (event.key) {
 	      case 'ArrowLeft':
-	      case 'ArrowUp':
 	      case 'Left':
-	      case 'Up':
 	        this.activatePreviousTab();
 	        event.preventDefault();
 	        break;
 	      case 'ArrowRight':
-	      case 'ArrowDown':
 	      case 'Right':
-	      case 'Down':
 	        this.activateNextTab();
 	        event.preventDefault();
 	        break;
