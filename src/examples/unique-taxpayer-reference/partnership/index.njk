@@ -1,0 +1,30 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-l">Your Partnership Unique Taxpayer Reference (UTR)</h1>
+
+<p class="govuk-body">You can find it in your Business Tax Account, the HMRC app or on tax returns and other documents from HMRC. It might be called ‘reference’, ‘UTR’ or ‘official use’.</p>
+
+<p class="govuk-body"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-utr-number">Get more help to find your UTR (opens in new tab)</a></p>
+
+{{ govukInput({
+  label: {
+    text: "What is your Partnership UTR?",
+    classes: "govuk-label--m",
+    isPageHeading: false
+  },
+  hint: {
+    text: "Your UTR can be 10 or 13 digits long."
+  },
+  id: "utr",
+  name: "utr",
+  classes: "govuk-input--width-10"
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
