@@ -552,6 +552,101 @@
   </div>
 
 
+
+
+
+
+
+
+  <div class="app-example-wrapper app-example__language-switch--en-activated" id="example-partnership" data-module="app-tabs app-language-switch-example">
+
+    <div class="app-example app-example--tabs">
+      <span class="app-example__link app-example__new-tab">
+        <a href="/examples/unique-taxpayer-reference/partnership/" target="_blank" title="Open Unique Taxpayer Reference - Partnership example in a new tab">
+          Open this example in a new tab<span class="govuk-visually-hidden">: Unique Taxpayer Reference - Partnership</span>
+        </a>
+      </span>
+      <iframe data-module="app-example-frame" class="app-example__frame app-example__frame--resizable"
+ src="/examples/unique-taxpayer-reference/partnership/" title="Unique Taxpayer Reference - Partnership example"></iframe>
+    </div>
+
+      <div class="example-example-partnership-lang example-example-partnership-lang--en ">
+        <span id="options-example-partnership"></span>
+        <ul class="app-tabs" role="tablist">
+            <li class="app-tabs__item js-tabs__item" role="presentation">
+              <a href="#example-partnership-html" role="tab"
+                aria-controls="example-partnership-html"
+                data-track="tab-html" title="Display Unique Taxpayer Reference - Partnership example as HTML">HTML</a>
+            </li>
+              <li class="app-tabs__item js-tabs__item" role="presentation">
+                <a href="#example-partnership-nunjucks" role="tab"
+                  aria-controls="example-partnership-nunjucks"
+                  data-track="tab-nunjucks" title="Display Unique Taxpayer Reference - Partnership example as Nunjucks">Nunjucks</a>
+              </li>
+
+        </ul>
+
+          <div class="app-tabs__container js-tabs__container" id="example-partnership-html" role="tabpanel">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Your Partnership Unique Taxpayer Reference (UTR)<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>You can find it in your Business Tax Account, the HMRC app or on tax returns and other documents from HMRC. It might be called ‘reference’, ‘UTR’ or ‘official use’.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noreferrer noopener&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.gov.uk/find-utr-number&quot;</span>&gt;</span>Get more help to find your UTR (opens in new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--m&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;utr&quot;</span>&gt;</span>
+    What is your Partnership UTR?
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;utr-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+    Your UTR can be 10 or 13 digits long.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;utr&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;utr&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;utr-hint&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+            </pre>
+
+          </div>
+
+            <div class="app-tabs__container js-tabs__container" id="example-partnership-nunjucks" role="tabpanel">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
+                <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Your Partnership Unique Taxpayer Reference (UTR)&lt;/h1&gt;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>You can find it in your Business Tax Account, the HMRC app or on tax returns and other documents from HMRC. It might be called ‘reference’, ‘UTR’ or ‘official use’.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noreferrer noopener&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.gov.uk/find-utr-number&quot;</span>&gt;</span>Get more help to find your UTR (opens in new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+
+{{ govukInput({
+  <span class="hljs-attr">label</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;What is your Partnership UTR?&quot;</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-label--m&quot;</span>,
+    <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">false</span>
+  },
+  <span class="hljs-attr">hint</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Your UTR can be 10 or 13 digits long.&quot;</span>
+  },
+  <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;utr&quot;</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;utr&quot;</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>
+}) }}
+
+{{ govukButton({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+}) }}</code>
+              </pre>
+
+            </div>
+
+      </div>
+  </div>
+
+
 <p class="govuk-body">
   Do not use hint text to explain where to find the UTR.
 </p>

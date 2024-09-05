@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example — HMRC Design Patterns — Design resources for HMRC — GOV.UK</title>
+
+    <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
+  </head>
+
+  <body class="app-example-page">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+<h1 class="govuk-heading-l">Your Partnership Unique Taxpayer Reference (UTR)</h1>
+
+<p class="govuk-body">You can find it in your Business Tax Account, the HMRC app or on tax returns and other documents from HMRC. It might be called ‘reference’, ‘UTR’ or ‘official use’.</p>
+
+<p class="govuk-body"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-utr-number">Get more help to find your UTR (opens in new tab)</a></p>
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="utr">
+    What is your Partnership UTR?
+  </label>
+  <div id="utr-hint" class="govuk-hint">
+    Your UTR can be 10 or 13 digits long.
+  </div>
+  <input class="govuk-input govuk-input--width-10" id="utr" name="utr" type="text" aria-describedby="utr-hint">
+</div>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button><script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
+  </body>
+
+</html>
