@@ -11,25 +11,37 @@
   </head>
 
   <body class="app-example-page">
-    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script><form>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+<form>
   <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">Are you sure you want to remove Elizabeth Kean?</h1>
-      </legend>
-      <div class="govuk-radios">
-        <div class="govuk-radios__item">
-          <input id="yes" type="radio" name="delete" class="govuk-radios__input" value="Yes">
-          <label class="govuk-label govuk-radios__label" for="yes">Yes</label>
-        </div>
-        <div class="govuk-radios__item">
-          <input id="no" type="radio" name="delete" class="govuk-radios__input" value="No">
-          <label class="govuk-radios__label" for="no">No</label>
-        </div>
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Are you sure you want to remove Elizabeth Kean?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="delete" name="delete" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="delete">
+          Yes
+        </label>
       </div>
-    </fieldset>
-  </div>
-  <button type="submit" class="govuk-button">Continue</button>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="delete-2" name="delete" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="delete-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
 </form>
 <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
