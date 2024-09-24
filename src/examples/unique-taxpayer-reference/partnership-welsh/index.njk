@@ -1,0 +1,28 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-l">Cyfeirnod Unigryw y Trethdalwr (UTR) eich Partneriaeth</h1>
+
+<p class="govuk-body">Bydd i’w weld yn eich Cyfrif Treth Busnes, yn ap CThEF, neu ar Ffurflenni Treth a dogfennau eraill oddi wrth CThEF. Efallai y cyfeirir ato gan ddefnyddio’r geiriau ‘cyfeirnod’, ‘UTR’ neu ‘defnydd swyddogol’.</p>
+
+<p class="govuk-body"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-utr-number">Sut i ddod o hyd i’ch UTR (yn agor tab newydd)</a></p>
+
+{{ govukInput({
+  label: {
+    text: "Beth yw UTR eich Partneriaeth?",
+    classes: "govuk-label--m",
+    isPageHeading: false
+  },
+  
+  id: "utr",
+  name: "utr",
+  classes: "govuk-input--width-10"
+}) }}
+
+{{ govukButton({
+  text: "Yn eich blaen"
+}) }}
