@@ -228,11 +228,13 @@
   </div>
 
 
+<p class="govuk-body">The HMRC banner sits above optional elements like the <a class="govuk-link" href="https://design-system.service.gov.uk/components/service-navigation/">service navigation</a> component.</p>
+
 <p class="govuk-body">The internal header should have:</p>
 
 <ul class="govuk-list govuk-list--bullet">
   <li>the HMRC logo</li>
-  <li>the name of the service</li>
+  <li>a vertical teal bar on the left side</li>
   <li>a green bar</li>
 </ul>
 
@@ -304,11 +306,6 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header__service-name&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header__link&quot;</span>&gt;</span>
-        Service name
-      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
             </pre>
@@ -334,11 +331,6 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header__service-name&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-internal-header__link&quot;</span>&gt;</span>
-        Enw’r gwasanaeth
-      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code>
               </pre>
@@ -351,7 +343,6 @@
 
 {{ hmrcInternalHeader({
   <span class="hljs-attr">homepageUrl</span>: <span class="hljs-string">&#x27;https://www.gov.uk/government/organisations/hm-revenue-customs&#x27;</span>,
-  <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&#x27;Service name&#x27;</span>,
   <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">&#x27;#&#x27;</span>,
   <span class="hljs-attr">useTudorCrown</span>: <span class="hljs-literal">true</span>
 }) }}</code>
@@ -362,7 +353,6 @@
 
 {{ hmrcInternalHeader({
   <span class="hljs-attr">homepageUrl</span>: <span class="hljs-string">&#x27;https://www.gov.uk/government/organisations/hm-revenue-customs&#x27;</span>,
-  <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&#x27;Enw’r gwasanaeth&#x27;</span>,
   <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">&#x27;#&#x27;</span>,
   <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;cy&#x27;</span>,
   <span class="hljs-attr">useTudorCrown</span>: <span class="hljs-literal">true</span>
