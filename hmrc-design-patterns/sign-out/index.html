@@ -289,9 +289,6 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header__content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header__link govuk-header__service-name&quot;</span>&gt;</span>
-          Service Name
-        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-sign-out-nav&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link hmrc-sign-out-nav__link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;?sign-out&quot;</span>&gt;</span>
             Sign out <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -329,9 +326,6 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header__content&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-header__link govuk-header__service-name&quot;</span>&gt;</span>
-          Enw<span class="hljs-symbol">&amp;#39;</span>r gwasanaeth
-        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-sign-out-nav&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link hmrc-sign-out-nav__link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;?sign-out&quot;</span>&gt;</span>
             Allgofnodi <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -362,7 +356,6 @@
                 <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/header/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcHeader %}
 
 {{ hmrcHeader({
-  <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&quot;Service Name&quot;</span>,
   <span class="hljs-attr">serviceUrl</span> : <span class="hljs-string">&quot;/&quot;</span>,
   <span class="hljs-attr">phaseBanner</span> : {
     <span class="hljs-attr">tag</span>: {
@@ -379,7 +372,6 @@
                   <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/header/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcHeader %}
 
 {{ hmrcHeader({
-  <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&quot;Enw&#x27;r gwasanaeth&quot;</span>,
   <span class="hljs-attr">serviceUrl</span> : <span class="hljs-string">&quot;/&quot;</span>,
   <span class="hljs-attr">phaseBanner</span> : {
     <span class="hljs-attr">tag</span>: {
