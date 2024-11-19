@@ -9,7 +9,7 @@ layout: twoColumnPage.njk
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
 <p class="govuk-body">
-Use this pattern if users need to read detailed guidance before using the form, such as:
+Use this pattern if users need to read detailed guidance before they complete a form, such as:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
@@ -19,17 +19,22 @@ Use this pattern if users need to read detailed guidance before using the form, 
 </ul>
 
 <p class="govuk-body">
-Before you create the new detailed guide, check if any of the information is already somewhere else, for example in mainstream content or a specialist guide. If it is, do not repeat it, insert a link instead.
+Before you create the new detailed guide or add the form pattern to an existing guide, check if any of the information is already somewhere else, for example in mainstream content or a specialist guide. If it is, do not repeat it, insert a link instead.
 </p>
 
 <p class="govuk-body">
-Types of form that can be included in this format are: 
+If it is, do not repeat it. Add a link and journey to that content instead.
+</p>
+
+<p class="govuk-body">
+Types of form that you can use in a detailed guide include the following: 
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
-<li>Interactive guidance forms — these are added as external links. The URL will begin with https://www.tax.service.gov.uk/guidance</li>
-<li>PDFs that can be completed on-screen (interactive) — these are added as file attachments and require Adobe to open and complete</li>
-<li>PDFs that cannot be completed on screen (not interactive) — these are added as file attachments and do not require Adobe to open</li>
+<li>Online services — These are built by service teams on the tax platform behind the Government Gateway, accessed with a green button with a URL, starting with https://www.tax.service.gov.uk</li>
+<li>Interactive guidance (IG) forms — these are added as external links. The URL will begin with https://www.tax.service.gov.uk/guidance</li>
+<li>Interactive PDFs that can be completed on-screen — these are added as file attachments and require Adobe to open and complete</li>
+<li>PDFs that cannot be completed on screen — these are added as file attachments and do not require Adobe to open</li>
 <li>LC forms — these are added as external links. The URL will begin with https://public-online.hmrc.gov.uk/lc/content</li>
 <li>G-forms — these are added as external links. The URL will begin with https://tax.service.gov.uk</li>
 <li>forms in open document formats — forms in .ods or odt. format are added as file attachments</li>
@@ -39,6 +44,13 @@ Types of form that can be included in this format are:
 <p class="govuk-body">
 More than one type of form can be hosted on the same page. You can still only use the green button once on the page (check the <a href="/patterns-hmrc-govuk-team/green-button/" class="govuk-link">green button pattern</a> for more information). For example: <a href="https://www.gov.uk/guidance/register-as-a-bingo-promoter" class="govuk-link">Register as a bingo promoter</a>.
 </p>
+
+<h3 class="govuk-heading-m" id="Detailed examples">Detailed guidance examples</h3>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="https://www.gov.uk/guidance/register-as-a-bingo-promoter" class="govuk-link">Register as a bingo promoter</a> - an example of an online service with a green button and LC form to register by print and post</li>
+  <li><a href="https://www.gov.uk/guidance/claim-a-tax-refund-if-youve-stopped-work-and-flexibly-accessed-all-of-your-pension-p50z" class="govuk-link">Claim a tax refund if you've stopped work and flexibly accessed all of your pension (P50Z)</a> —  example of a service with a green button and both an interactive guidance (print and post) form and a PDF (print and post) form for digitally excluded users</li>
+  </ul>
+
 
 <h2 class="govuk-heading-l" id="when-not-to-use">When not to use</h2>
 
@@ -134,22 +146,65 @@ For any other formats, include the following text under the link to the form:
     })
   }}
 
-<h3 class="govuk-heading-m" id="formats">Specific form formats</h3>
+<h3 class="govuk-heading-m" id="formats">How to design for specific form formats</h3>
 
 <h4 class="govuk-heading-s" id="gforms">Interactive guidance forms</h4>
 
 <p class="govuk-body">
-Interactive guidance forms are hosted on: https://www.tax.service.gov.uk/guidance.</p>
+Interactive guidance (IG) forms start with the URL:  https://www.tax.service.gov.uk/guidance.</p>
 
 <p class="govuk-body">
-If the interactive guidance gives the different methods of submitting the form as
-options, do not include them in the body text on Whitehall. There should be no
-repetition.</p>
+If the interactive guidance form comes after a form asking for Government Gateway credentials, use sub-heading level 3: ‘If you cannot sign in’: 
+If it’s the first online form on the guide, use ‘### Complete this form online’
+</p>
+
+
+{{
+  codeSnippet({
+    code: '### If you cannot sign in
+
+To use this form, you’ll need to:
+
+1. Get all of your information together before you start. You will fill this form in online and you cannot save your progress
+
+s2. [Start your claim online](https://www.tax.service.gov.uk/guidance/claim-for-repayment-of-tax-when-you-have-stopped-working-P50z).
+
+s3. Print the form
+
+s4. Sign the declaration
+
+s5. Post to HMRC (the address is at the end of the form)',
+    canCopy: true
+  })
+}}
+
+<h3 class="govuk-heading-s" id="formats">Interactive guidance forms that host different ways to submit forms</h3>
+<p class="govuk-body">
+  Some trials are taking place to look at user demand for existing PDFs. To support this a page owner may agree to move the different form choices (an existing PDF and online service) into an interactive guide away from detailed guide. 
+  </p>
+  
+  <p class="govuk-body">
+  Read ‘Instructions: forms in a detailed guide’ to find out when you can move form choices into and IG tool and how you must format content.
+  </p>
+  
+  <p class="govuk-body">
+  IG tools with form options must follow this pattern and other GOV.UK patterns for form choices — unless evidence of a strong user need demonstrates a reason not to.
+  </p>
+  
+  <p class="govuk-body">
+  The detailed guide must use a ‘single green button’ to send users into the IG tool. Do not use the Government Gateway user ID pattern. 
+  </p>
+  
+  <h3 class="govuk-heading-s" id="formats">Example</h3> 
+  
+  <p class="govuk-body">
+  A detailed guide takes users to an interactive guidance tool that signposts them to two form options. Tell HMRC about any errors in your VAT Return (VAT652) —  form choices in this example do not follow GOV.UK patterns yet.
+  </p>
 
 <h4 class="govuk-heading-s" id="gforms">PDFs that cannot be completed on screen</h4>
 
 <p class="govuk-body">
-These are PDFs that must be printed before they can be completed. They do not require Adobe.
+These are PDFs the user must print and then complete. They do not require Adobe.
 </p>
 
 <p class="govuk-body">
@@ -174,15 +229,11 @@ $A',
 <h4 class="govuk-heading-s" id="LC-forms">LC forms</h4>
 
 <p class="govuk-body">
-These will be hosted on https://public-online.hmrc.gov.uk/lc/content/
+  These are hosted on <a href="/public-online.hmrc.gov.uk/lc/content/" class="govuk-link">https://public-online.hmrc.gov.uk/lc/content/</a>. The user will fill in the form online and then print and post it.
 </p>
 
 <p class="govuk-body">
-The user will fill these forms online and then print and post them.
-</p>
-
-<p class="govuk-body">
-Include the following text:
+Add the following text and add the link to the form:
 </p>
 
 {{
@@ -222,11 +273,22 @@ Check with the subject matter expert if you need to include the following text:
     })
   }}
 
-<h4 class="govuk-heading-s" id="gforms">G-forms (Government Gateway)</h4>
+  <h3 class="govuk-heading-m" id="G-forms">G-forms (Government Gateway)</h3>
 
-<p class="govuk-body">
-  G-forms are hosted on https://www.tax.service.gov.uk. Not to be confused with interactive guidance forms hosted in the '/guidance' directory of the domain. 
-</p>
+  <p class="govuk-body">
+    G-forms:
+   </p>
+    
+    <ul class="govuk-list govuk-list--bullet">
+    <li>sit behind the Government Gateway (exceptions to this are rare) —  but they’re not the same as online services.</li>
+    <li>start with https://www.tax.service.gov.uk/submissions  —  not to the same as interactive guidance forms hosted in the '/guidance' directory of the tax service platform</li>
+    </ul>
+
+      <h3 class="govuk-heading-s" id="formats">Example</h3> 
+      
+      <p class="govuk-body">
+      A detailed guide Send your Landfill Tax return online has a G-form with the URL https://www.tax.service.gov.uk/submissions/new-form/send-your-landfill-tax-return.
+      </p>
 
 <p class="govuk-body">
 If the URL includes ‘fill-online’, check the guidance page this links to and avoid any repetition.
@@ -237,7 +299,7 @@ Depending on the design of the detailed guide, use either an inline link or a <
 </p>
 
 <p class="govuk-body">
-If users can only sign in with their Government Gateway user ID and password, use the following markdown before linking to the G-form. Remember to delete 'apply' or 'register' as appropriate:
+If users can only sign in with their Government Gateway user ID and password, use the following markdown before linking to the G-form. Remember to delete ‘apply’ or ‘register’ as appropriate:
 </p>
 
 {{
@@ -251,7 +313,7 @@ You’ll need to sign in with your Government Gateway user ID and password (if y
   }}
 
 <p class="govuk-body">
-If users can also sign in with their email address, use the following markdown before linking to the G-form. Remember to delete 'apply' or 'register' as appropriate:
+If users can also sign in with their email address, use the following markdown before linking to the G-form. Remember to delete ‘apply’ or ‘register’ as appropriate:
 </p>
 
 {{
