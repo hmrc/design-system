@@ -198,9 +198,14 @@ You will [find out/learn about]:
 
 <h4 class="govuk-heading-s">Linking to upcoming webinars</h4>
 
-  {{
+
+ {{
     codeSnippet({
-      code: 'Register for the next [live webinar about [sub topic]](link).
+      code: '## [sub topic]
+
+### [Live webinar]
+      
+      Register for the next [live webinar about [sub topic]](link).
 
 You will [find out/learn about]:
 
@@ -213,6 +218,8 @@ You will [find out/learn about]:
 <p class="govuk-body">For example:</p>
 
 <p class="govuk-body">## New VAT reverse charge for construction services</p>
+
+<p class="govuk-body">### Live webinar</p>
 
 <p class="govuk-body">Register for the next [live webinar on the new VAT reverse charge for construction services](link).</p>
 
@@ -247,7 +254,10 @@ If you're publishing a live webinar that supersedes an existing webinar that has
 
   {{
     codeSnippet({
-      code: '## [sub topic]
+      code:
+'## [sub topic]
+
+### [Live webinar]
 
 ### Recorded webinar
 
@@ -266,6 +276,8 @@ For example:
 </p>
 
 <p class="govuk-body">## How to do your VAT Return</p>
+
+<p class="govuk-body">### Recorded webinar</p>
 
 <p class="govuk-body">Watch a [recorded webinar about VAT Returns](link).</p>
 
