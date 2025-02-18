@@ -12,12 +12,13 @@
 
   <body class="app-example-page">
     <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
-<h1 class="govuk-heading-l">What is your company registration number?</h1>
+<h1 class="govuk-heading-l">Company registration number</h1>
 
 <p class="govuk-body">You can <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/" rel="noreferrer noopener" target="_blank">search Companies House for your company registration number (opens in new tab)</a>.</p>
 
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-visually-hidden" for="company-registration-number">
+<form action="/form-handler" method="post" novalidate>
+  <div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="company-registration-number">
     What is your company registration number?
   </label>
   <div id="company-registration-number-hint" class="govuk-hint">
@@ -27,9 +28,10 @@
 </div>
 
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
   Continue
 </button>
+</form>
 <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 

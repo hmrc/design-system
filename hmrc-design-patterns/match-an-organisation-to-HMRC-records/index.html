@@ -727,23 +727,25 @@
 
           <div class="app-tabs__container js-tabs__container" id="example-company-reg-number-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>What is your company registration number?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Company registration number<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://find-and-update.company-information.service.gov.uk/&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noreferrer noopener&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>search Companies House for your company registration number (opens in new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;company-registration-number&quot;</span>&gt;</span>
-    What is your company registration number?
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;company-registration-number-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
-    It is 8 characters. For example, 01234567 or AC012345.
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--m&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;company-registration-number&quot;</span>&gt;</span>
+      What is your company registration number?
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;company-registration-number-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
+      It is 8 characters. For example, 01234567 or AC012345.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;company-registration-number&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;company-registration-number-hint&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;company-registration-number&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;company-registration-number-hint&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+    Continue
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
             </pre>
 
               <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
@@ -772,25 +774,27 @@
                 <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
 
-&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;What is your company registration number?&lt;/h1&gt;
+&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Company registration number&lt;/h1&gt;
 
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>You can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://find-and-update.company-information.service.gov.uk/&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;noreferrer noopener&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>search Companies House for your company registration number (opens in new tab)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 
-{{ govukInput({
-  <span class="hljs-attr">label</span>: {
-    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;What is your company registration number?&quot;</span>,
-    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>
-  },
-  <span class="hljs-attr">hint</span>: {
-    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;It is 8 characters. For example, 01234567 or AC012345.&quot;</span>
-  },
-  <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;company-registration-number&quot;</span>,
-  <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>
-}) }}
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+  {{ govukInput({
+    label: {
+      text: &quot;What is your company registration number?&quot;,
+      classes: &quot;govuk-label--m&quot;
+    },
+    hint: {
+      text: &quot;It is 8 characters. For example, 01234567 or AC012345.&quot;
+    },
+    id: &quot;company-registration-number&quot;,
+    classes: &quot;govuk-input--width-10&quot;
+  }) }}
 
-{{ govukButton({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
-}) }}</code>
+  {{ govukButton({
+    text: &quot;Continue&quot;
+  }) }}
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span></code>
               </pre>
 
                 <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
