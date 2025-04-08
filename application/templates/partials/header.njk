@@ -1,8 +1,35 @@
 {% from "hmrc/components/internal-header/macro.njk"  import hmrcInternalHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
 {{ hmrcInternalHeader({
   homepageUrl: 'https://www.gov.uk/government/organisations/hm-revenue-customs',
-  serviceName: 'Design resources',
   serviceUrl: '/',
   useTudorCrown: true
+}) }}
+
+{{ govukServiceNavigation({
+  serviceName: serviceName,
+  serviceUrl: "/",
+  navigation: [
+    {
+      href: "/get-started/",
+      text: "Start now"
+    },
+    {
+      href: "/hmrc-design-patterns/",
+      text: "Patterns for services"
+    },
+    {
+      href: "/patterns-hmrc-govuk-team/",
+      text: "Patterns for GOV.UK"
+    },
+    {
+      href: "/hmrc-content-style-guide/",
+      text: "Style guide"
+    },
+    {
+      href: "#",
+      text: "Prototyping"
+    }
+  ]
 }) }}
