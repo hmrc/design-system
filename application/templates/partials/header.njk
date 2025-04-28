@@ -1,6 +1,47 @@
 {% from "hmrc/components/internal-header/macro.njk"  import hmrcInternalHeader %}
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
+{% set sections = {
+  'get-started': { "text": "Start now", "href": "get-started" },
+  'hmrc-design-patterns': { "text": "Patterns for services", "href": "hmrc-design-patterns" },
+  'govuk-patterns': { "text": "Patterns for GOV.UK", "href": "patterns-hmrc-govuk-team" },
+  'style-guide': { "text": "Style guide", "href": "hmrc-content-style-guide" },
+  'prototyping': { "text": "Prototyping", "href": "#" }
+} %}
+
+{% set navigationItems = [
+  {
+    href: "/" ~ sections['get-started']['href'] ~ "/",
+    text: sections['get-started']['text'],
+    active: filepath.startsWith(sections['get-started']['href']),
+    current: filepath === sections['get-started']['href'] ~ "/"
+  },
+  {
+    href: "/" ~ sections['hmrc-design-patterns']['href'] ~ "/",
+    text: sections['hmrc-design-patterns']['text'],
+    active: filepath.startsWith(sections['hmrc-design-patterns']['href']),
+    current: filepath === sections['hmrc-design-patterns']['href'] ~ "/"
+  },
+  {
+    href: "/" ~ sections['govuk-patterns']['href'] ~ "/",
+    text: sections['govuk-patterns']['text'],
+    active: filepath.startsWith(sections['govuk-patterns']['href']),
+    current: filepath === sections['govuk-patterns']['href'] ~ "/"
+  },
+  {
+    href: "/" ~ sections['style-guide']['href'] ~ "/",
+    text: sections['style-guide']['text'],
+    active: filepath.startsWith(sections['style-guide']['href']),
+    current: filepath === sections['style-guide']['href'] ~ "/"
+  },
+  {
+    href: "/" ~ sections['prototyping']['href'] ~ "/",
+    text: sections['prototyping']['text'],
+    active: filepath.startsWith(sections['prototyping']['href']),
+    current: filepath === sections['prototyping']['href'] ~ "/"
+  }
+] %}
+
 {{ hmrcInternalHeader({
   homepageUrl: 'https://www.gov.uk/government/organisations/hm-revenue-customs',
   serviceUrl: '/',
@@ -10,26 +51,5 @@
 {{ govukServiceNavigation({
   serviceName: serviceName,
   serviceUrl: "/",
-  navigation: [
-    {
-      href: "/get-started/",
-      text: "Start now"
-    },
-    {
-      href: "/hmrc-design-patterns/",
-      text: "Patterns for services"
-    },
-    {
-      href: "/patterns-hmrc-govuk-team/",
-      text: "Patterns for GOV.UK"
-    },
-    {
-      href: "/hmrc-content-style-guide/",
-      text: "Style guide"
-    },
-    {
-      href: "#",
-      text: "Prototyping"
-    }
-  ]
+  navigation: navigationItems
 }) }}
