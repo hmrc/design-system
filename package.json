@@ -14,7 +14,8 @@
     "audit": "better-npm-audit audit"
   },
   "engines": {
-    "node": "^18.16.1"
+    "node": "v22.15.0",
+    "npm": "10.9.2"
   },
   "repository": {
     "type": "git",
