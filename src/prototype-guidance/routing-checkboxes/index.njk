@@ -1,0 +1,26 @@
+---
+title: Routing checkboxes
+layout: twoColumnPage.njk
+---
+
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+<p class="govuk-body">Create a new page and follow the examples on the <a href="https://design-system.service.gov.uk/">GOV.UK design system</a> for the <a href="https://design-system.service.gov.uk/components/checkboxes/">checkboxes component</a> and <a href="https://design-system.service.gov.uk/components/button/"></a>button component</a> in the GOV.UK design system..</p>
+
+<h2 class="govuk-heading-l">Example code Javascript</h2>
+
+
+{{ codeSnippet({
+  code: "router.post('/checkboxes', function(request, response) {
+  let exampleRoutes = request.session.data['example']
+
+  if(exampleRoutes.includes('this')) {
+    response.redirect('page-title');
+  } else if(exampleRoute.includes('this') && exampleRoute.includes('that')) {
+    response.redirect('page-title');
+  } else {
+    response.redirect('page-title');
+  }
+})",
+  canCopy: true
+}) }}

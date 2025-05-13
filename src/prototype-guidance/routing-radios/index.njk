@@ -1,0 +1,20 @@
+---
+title: Routing radios
+layout: twoColumnPage.njk
+---
+
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+<p class="govuk-body">Create a new page and follow the examples on the <a href="https://design-system.service.gov.uk/">GOV.UK design system</a> for the <a href="https://design-system.service.gov.uk/components/radios/">radios component</a> and <a href="https://design-system.service.gov.uk/components/button/"></a>button component</a>in the GOV.UK design system.</p>
+
+<h2 class="govuk-heading-l">Example code Javascript</h2>
+{{ codeSnippet({
+  code: "router.post('/radios', function(request, response) {
+  if (req.session.data['this'] == 'Yes') {
+      res.redirect('page-title');
+  } else {
+      res.redirect('page-title');
+  }
+})",
+  canCopy: true
+}) }}
