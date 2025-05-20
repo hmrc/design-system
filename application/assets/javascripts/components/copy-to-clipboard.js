@@ -4,10 +4,17 @@ function CopyToClipboard ($module) {
   this.$module = $module
 }
 
+CopyToClipboard.prototype.isSupported = function () {
+  if (!ClipboardJS.isSupported()) {
+    throw Error('ClipboardJS is not supported in this browser')
+  }
+}
+
 CopyToClipboard.prototype.init = function () {
-  if (!this.$module) {
+  if (!this.$module || !this.isSupported()) {
     return
   }
+
   var $button = document.createElement('button')
   $button.className = 'app-copy-button js-copy-button'
   $button.setAttribute('aria-live', 'assertive')
