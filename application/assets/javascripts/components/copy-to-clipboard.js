@@ -1,38 +1,41 @@
 import ClipboardJS from 'clipboard'
 
 function CopyToClipboard ($module) {
-  this.$module = $module
-}
-
-CopyToClipboard.prototype.isSupported = function () {
-  if (!ClipboardJS.isSupported()) {
-    throw Error('ClipboardJS is not supported in this browser')
+  if (!($module instanceof HTMLElement) || !ClipboardJS.isSupported()) {
+    return this
   }
+
+  this.$module = $module
+  this.$button = null
+  this.$status = null
 }
 
 CopyToClipboard.prototype.init = function () {
-  if (!this.$module || !this.isSupported()) {
-    return
-  }
+  this.$button = document.createElement('button')
+  this.$button.className = 'app-copy-button js-copy-button'
+  this.$button.textContent = 'Copy'
 
-  var $button = document.createElement('button')
-  $button.className = 'app-copy-button js-copy-button'
-  $button.setAttribute('aria-live', 'assertive')
-  $button.textContent = 'Copy'
+  this.$status = document.createElement('span')
+  this.$status.className = 'govuk-visually-hidden'
+  this.$status.setAttribute('aria-live', 'assertive')
 
-  this.$module.insertBefore($button, this.$module.firstChild)
+  this.$module.insertBefore(this.$status, this.$module.firstChild)
+  this.$module.insertBefore(this.$button, this.$module.firstChild)
+
   this.copyAction()
 }
 
 CopyToClipboard.prototype.copyAction = function () {
   try {
-    new ClipboardJS('.js-copy-button', {
-      target: trigger => trigger.nextElementSibling
-    }).on('success', function (e) {
-      e.trigger.textContent = 'Copied'
-      e.clearSelection()
+    new ClipboardJS(this.$button, {
+      target: () => this.$module
+    }).on('success', (event) => {
+      this.$button.textContent = 'Copied'
+      this.$status.textContent = 'Copied'
+      event.clearSelection()
       setTimeout(() => {
-        e.trigger.textContent = 'Copy'
+        this.$button.textContent = 'Copy'
+        this.$status.textContent = ''
       }, 5000)
     })
   } catch (err) {
