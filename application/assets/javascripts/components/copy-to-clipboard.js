@@ -19,8 +19,8 @@ CopyToClipboard.prototype.init = function () {
   this.$status.className = 'govuk-visually-hidden'
   this.$status.setAttribute('aria-live', 'assertive')
 
-  this.$module.insertBefore(this.$status, this.$module.firstChild)
-  this.$module.insertBefore(this.$button, this.$module.firstChild)
+  this.$module.prepend(this.$button)
+  this.$module.prepend(this.$status)
 
   this.copyAction()
 }
@@ -28,7 +28,7 @@ CopyToClipboard.prototype.init = function () {
 CopyToClipboard.prototype.copyAction = function () {
   try {
     new ClipboardJS(this.$button, {
-      target: () => this.$module
+      target: (trigger) => trigger.nextElementSibling
     }).on('success', (event) => {
       this.$button.textContent = 'Copied'
       this.$status.textContent = 'Copied'
