@@ -4,8 +4,15 @@ layout: layout-example.njk
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
 
-<h1 class="govuk-heading-l">Enter your address</h1>
+{% call govukFieldset({
+  legend: {
+    text: "Enter your address",
+    classes: "govuk-fieldset__legend--l",
+    isPageHeading: true
+  }
+}) %}
 
 {{
   govukInput({
@@ -23,7 +30,8 @@ layout: layout-example.njk
       text: "Address line 1"
     },
     id: "line1",
-    name: "line1"
+    name: "line1",
+    autocomplete: "address-line1"
   })
 }}
 
@@ -81,3 +89,5 @@ layout: layout-example.njk
 {{ govukButton({
   text: "Continue"
 }) }}
+
+{% endcall %}

@@ -5,13 +5,20 @@ layout: layout-example.njk
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<h1 class="govuk-heading-xl">Choose your address</h1>
+<h1 class="govuk-heading-l">Choose your address</h1>
 
 <p class="govuk-body"><a class="govuk-link" href="#">Enter the address manually</a></p>
 
 <form action="/form-handler" method="post" novalidate>
   {{ govukRadios({
     name: "results",
+    fieldset: {
+      legend: {
+        text: "What is your address?",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
     items: [
       {
         value: "1",
