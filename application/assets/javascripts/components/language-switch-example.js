@@ -17,8 +17,19 @@ LanguageSwitchExample.prototype.init = function () {
     return
   }
 
-  this.$switches.forEach(function ($this) {
-    $this.addEventListener('click', self.handleClick.bind(self))
+  this.$switches.forEach(function ($switch) {
+    const $button = document.createElement('button')
+    $button.setAttribute('data-iframe-src', $switch.getAttribute('href'))
+    $button.setAttribute('aria-controls', $switch.getAttribute('aria-controls'))
+    $button.setAttribute('data-lang', $switch.getAttribute('data-lang'))
+    $button.setAttribute('data-track', $switch.getAttribute('data-track'))
+
+    $button.innerHTML = $switch.innerHTML
+
+    $switch.parentElement.appendChild($button)
+    $switch.parentElement.removeChild($switch)
+
+    $button.addEventListener('click', self.handleClick.bind(self))
   })
 }
 
@@ -29,9 +40,9 @@ LanguageSwitchExample.prototype.handleClick = function (event) {
   var $target = event.target
   this.$module.querySelectorAll('.' + this.currentClassName).forEach(function ($option) {
     $option.classList.remove(self.currentClassName)
-    $option.querySelector('a').focus()
+    $option.querySelector('button').focus()
   })
-  this.$iframe.setAttribute('src', $target.getAttribute('href'))
+  this.$iframe.setAttribute('src', $target.getAttribute('data-iframe-src'))
   $target.parentNode.classList.add(this.currentClassName)
   this.$module.classList.remove(this.getLanguageClass('en'), this.getLanguageClass('cy'))
   this.$module.classList.add(this.getLanguageClass($target.getAttribute('data-lang')))
