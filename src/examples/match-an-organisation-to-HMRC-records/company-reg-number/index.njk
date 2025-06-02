@@ -4,22 +4,24 @@ layout: layout-example.njk
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<h1 class="govuk-heading-l">What is your company registration number?</h1>
+<h1 class="govuk-heading-l">Company registration number</h1>
 
 <p class="govuk-body">You can <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/" rel="noreferrer noopener" target="_blank">search Companies House for your company registration number (opens in new tab)</a>.</p>
 
-{{ govukInput({
-  label: {
-    text: "What is your company registration number?",
-    classes: "govuk-visually-hidden"
-  },
-  hint: {
-    text: "It is 8 characters. For example, 01234567 or AC012345."
-  },
-  id: "company-registration-number",
-  classes: "govuk-input--width-10"
-}) }}
+<form action="/form-handler" method="post" novalidate>
+  {{ govukInput({
+    label: {
+      text: "What is your company registration number?",
+      classes: "govuk-label--m"
+    },
+    hint: {
+      text: "It is 8 characters. For example, 01234567 or AC012345."
+    },
+    id: "company-registration-number",
+    classes: "govuk-input--width-10"
+  }) }}
 
-{{ govukButton({
-  text: "Continue"
-}) }}
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>

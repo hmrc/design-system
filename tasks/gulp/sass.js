@@ -8,6 +8,7 @@ const rename = require('gulp-rename')
 const header = require('gulp-header')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
+const sourcemaps = require('gulp-sourcemaps')
 
 const pathFromRoot = require('../../util/pathFromRoot')
 
@@ -34,20 +35,14 @@ gulp.task('scss:hmrc-design-system', (done) => {
   // TODO: compile an Old IE version of our local css
   // Also pertains to PLATUI-161: https://jira.tools.tax.service.gov.uk/browse/PLATUI-161 -->
   gulp.src('./application/scss/hmrc-design-system.scss')
+    .pipe(sourcemaps.init())
     .pipe(header('$govuk-assets-path: "/extension-assets/govuk-frontend/dist/govuk/assets/";\n'))
     .pipe(header('$hmrc-assets-path: "/extension-assets/hmrc-frontend/hmrc/";\n'))
     .pipe(plumber(errorHandler))
-    .pipe(sass({
-      quietDeps: true,
-      outputStyle: 'compressed'
-    }))
-    .pipe(postcss([
-      autoprefixer,
-      cssnano
-    ]))
-    .pipe(rename({
-      extname: '.min.css'
-    }))
+    .pipe(sass({ quietDeps: true }))
+    .pipe(postcss([ autoprefixer, cssnano ]))
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'))
     .on('end', done)
 })
@@ -56,21 +51,17 @@ gulp.task('scss:pattern-libraries', (done) => {
   const isIE = (file) => path.parse(file.path).name.includes('ie')
 
   gulp.src(scssPaths, { base: 'node_modules' })
+    .pipe(sourcemaps.init())
     .pipe(plumber(errorHandler))
-    .pipe(sass({
-      quietDeps: true,
-      outputStyle: 'compressed'
-    }))
+    .pipe(sass({ quietDeps: true }))
     // minify css add vendor prefixes and normalize to compiled css
-    .pipe(postcss([
-      autoprefixer,
-      cssnano
-    ]))
+    .pipe(postcss([ autoprefixer, cssnano ]))
     .pipe(rename((path) => {
       path.basename = path.dirname
       path.dirname = 'assets/stylesheets'
       path.extname = '.min.css'
     }))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'))
     .on('end', done)
 })
