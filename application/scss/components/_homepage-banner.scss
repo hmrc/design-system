@@ -31,7 +31,7 @@ $hmrc-inverse-button-shadow-colour: govuk-shade($hmrc-inverse-button-text-colour
 // increase the bottom margin to include it (s2).
 $button-shadow-size: $govuk-border-width-form-element;
 
-.hmrc-button--inverse {
+.hmrc-button-inverse {
   background-color: $hmrc-inverse-button-colour;
   box-shadow: 0 $button-shadow-size 0 $hmrc-inverse-button-shadow-colour;
 
