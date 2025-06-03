@@ -3,17 +3,21 @@ layout: layout-example.njk
 ---
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
 
 <form action="#" method="get" novalidate>
-  <div class="govuk-form-group">
-    <h1 class="govuk-label-wrapper">
-      <label class="govuk-label govuk-label--l" for="example">Select your country</label>
-    </h1>
+  {{ govukInput({
+    label: {
+      text: "Select your country",
+      classes: "govuk-label--l",
+      isPageHeading: true
+    },
+    id: "example",
+    name: "example"
+  }) }}
 
-    <input class="govuk-input" id="example" name="example" type="text" aria-describedby="example-hint">
-  </div>
+  {{ govukButton({
+    text: "Continue"
+  }) }}
 </form>
 
-{{ govukButton({
-  text: "Continue"
-}) }}
