@@ -6,25 +6,25 @@ order: 1
 
 {% from "_codeSnippet.njk" import codeSnippet %}
 
-<p class="govuk-body">You should implement version control in your prototype. <a class="govuk-link" href="https://github.com/harry-uxd/GOVUK_prototype_kit_version_control">Here's a working example</a>.</p>
+<p class="govuk-body">You should implement version control in your prototype. <a class="govuk-link" href="https://github.com/harry-uxd/GOVUK_prototype_kit_version_control">Here’s a working example</a>.</p>
 
 <h2 class="govuk-heading-l">Why use versioning?</h2>
-<p class="govuk-body">Versioning allows you to maintain multiple iterations of your prototype without affecting previous versions. This is particularly useful for:</p>
 
+<p class="govuk-body">Versioning allows you to maintain multiple iterations of your prototype without affecting previous versions. This is particularly useful for:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li><strong>User testing:</strong> You can keep an older version live while testing a new one.</li>
-  <li><strong>Stakeholder feedback:</strong> Different teams can compare multiple versions side by side.</li>
-  <li><strong>Incremental changes:</strong> It's easier to modify and improve designs without breaking existing functionality.</li>
+  <li>User testing: You can keep an older version live while testing a new one.</li>
+  <li>Stakeholder feedback: Different teams can compare multiple versions side by side.</li>
+  <li>Incremental changes: It’s easier to modify and improve designs without breaking existing functionality.</li>
 </ul>
 
-<p class="govuk-body">It's important to keep track of what changes you make and why. Consider using an index page to note these down or a separate changelog.</p>
+<p class="govuk-body">It’s important to keep track of what changes you make and why. Consider using an index page to note these down or a separate changelog.</p>
 
 <h2 class="govuk-heading-l">Key features</h2>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li><strong>Version-agnostic forms:</strong> HTML forms do not require hardcoded <code class="govuk-code">action</code> attributes.</li>
-  <li><strong>Automated routing and redirects:</strong> A function automatically prefixes all redirects.</li>
-  <li><strong>Scalable and maintainable:</strong> Adding a new version is straightforward.</li>
+  <li>Version-agnostic forms: HTML forms do not require hardcoded <code class="govuk-code">action</code> attributes.</li>
+  <li>Automated routing and redirects: A function automatically prefixes all redirects.</li>
+  <li>Scalable and maintainable: Adding a new version is straightforward.</li>
 </ul>
 
 <h2 class="govuk-heading-l">Code structure</h2>
@@ -49,8 +49,8 @@ order: 1
  }) }}
 
 <ul class="govuk-list govuk-list--bullet">
-    <li><code class="govuk-code">routes.js</code>: This is the central routing file. It mounts each version’s router under its respective path (such as, <code class="govuk-code">/v1</code> or <code class="govuk-code">/v2</code>).</li>
-    <li><code class="govuk-code">routing.js</code>: These files define the routes and ensure that all navigation stays within the correct version.</li>
+  <li><code class="govuk-code">routes.js</code>: This is the central routing file. It mounts each version’s router under its respective path (such as, <code class="govuk-code">/v1</code> or <code class="govuk-code">/v2</code>).</li>
+  <li><code class="govuk-code">routing.js</code>: These files define the routes and ensure that all navigation stays within the correct version.</li>
 </ul>
 
 <h2 class="govuk-heading-l">Example question page</h2>
@@ -64,6 +64,7 @@ order: 1
 </form>",
   canCopy: true
 }) }}
+
 <p class="govuk-body">The <code class="govuk-code">&lt;form&gt;</code> element should not have an <code class="govuk-code">action</code> attribute.</p>
 
 <h2 class="govuk-heading-l">Automatic redirects</h2>
@@ -124,10 +125,10 @@ module.exports = router;",
 <ol class="govuk-list govuk-list--number">
   <li>Duplicate the <code class="govuk-code">v2</code> folder and rename it to <code class="govuk-code">v3</code>. This will create a copy of all pages and routes, so you can update them without affecting previous versions.</li>
   <li>Open the <code class="govuk-code">routes.js</code> file and add the following line to mount your new version:
-    {{ codeSnippet({
-      code: "router.use('/v3', require('./views/v3/routing')());",
-      canCopy: true
-    }) }}
-    This ensures that requests to <code class="govuk-code">/v3</code> are handled by the <code class="govuk-code">v3</code> routing file.</li>
+      {{ codeSnippet({
+        code: "router.use('/v3', require('./views/v3/routing')());",
+        canCopy: true
+      }) }}
+      This ensures that requests to <code class="govuk-code">/v3</code> are handled by the <code class="govuk-code">v3</code> routing file.</li>
   <li>Edit the files inside the <code class="govuk-code">v3</code> folder to make your changes.</li>
 </ol>
