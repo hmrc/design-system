@@ -2,11 +2,11 @@ const path = require('path')
 const gulp = require('gulp')
 const log = require('fancy-log')
 const Metalsmith = require('metalsmith')
-const inPlace = require('metalsmith-in-place')
+const inPlace = require('@metalsmith/in-place')
 const debug = require('metalsmith-debug')
 const metalsmithPath = require('metalsmith-path')
-const layouts = require('metalsmith-layouts')
-const ignore = require('metalsmith-ignore')
+const layouts = require('@metalsmith/layouts')
+const ignore = require('@metalsmith/remove')
 const rollup = require('metalsmith-rollup')
 const resolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
@@ -51,7 +51,7 @@ gulp.task('compile', (done) => {
       ]
     }))
     .use(inPlace({
-      engine: 'nunjucks',
+      transform: 'jstransformer-nunjucks',
       pattern: pattern,
       engineOptions: {
         noCache: true,
@@ -68,7 +68,8 @@ gulp.task('compile', (done) => {
       pattern: '**/*.html',
       engineOptions: {
         path: templatePaths
-      }
+      },
+      transform: 'nunjucks'
     }))
     .use(debug())
     .build((err) => {
