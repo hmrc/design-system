@@ -1,5 +1,7 @@
+{%- set _rebrand = govukRebrand() if govukRebrand is callable else govukRebrand -%}
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="govuk-template {%- if _rebrand %} govuk-template--rebranded{% endif %} app-example-page__wrapper">
   <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
@@ -10,7 +12,7 @@
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
   </head>
 
-  <body class="app-example-page">
+  <body class="app-example-page govuk-template__body">
     <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
     {%- block body -%}
       {{ contents | safe }}

@@ -15,8 +15,13 @@
   background: govuk-colour("light-grey");
 }
 
+.app-example-page__wrapper {
+  overflow: auto;
+  background-color: govuk-colour("white");
+}
+
 .app-example-page {
-  padding: govuk-spacing(6) * 2 govuk-spacing(6) govuk-spacing(6);
+  padding: govuk-spacing(9) govuk-spacing(6) govuk-spacing(6);
 }
 
 .app-example--tabs {
@@ -47,7 +52,7 @@
 
   a {
     @extend %govuk-link;
-    
+
     display: inline-block;
   }
 }
