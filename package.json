@@ -34,7 +34,7 @@
   "homepage": "https://github.com/hmrc/design-system#readme",
   "dependencies": {
     "govuk-frontend": "^5.10.2",
-    "hmrc-frontend": "^6.68.0"
+    "hmrc-frontend": "^6.70.0"
   },
   "devDependencies": {
     "@metalsmith/in-place": "^5.0.0",
