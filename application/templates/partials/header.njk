@@ -5,8 +5,7 @@
   'get-started': { "text": "Start now", "href": "get-started" },
   'hmrc-design-patterns': { "text": "Patterns for services", "href": "hmrc-design-patterns" },
   'govuk-patterns': { "text": "Patterns for GOV.UK", "href": "patterns-hmrc-govuk-team" },
-  'style-guide': { "text": "Style guide", "href": "hmrc-content-style-guide" },
-  'prototyping': { "text": "Prototyping", "href": "#" }
+  'style-guide': { "text": "Style guide", "href": "hmrc-content-style-guide" }
 } %}
 
 {% set navigationItems = [
@@ -33,12 +32,6 @@
     text: sections['style-guide']['text'],
     active: filepath.startsWith(sections['style-guide']['href']),
     current: filepath === sections['style-guide']['href'] ~ "/"
-  },
-  {
-    href: "/" ~ sections['prototyping']['href'] ~ "/",
-    text: sections['prototyping']['text'],
-    active: filepath.startsWith(sections['prototyping']['href']),
-    current: filepath === sections['prototyping']['href'] ~ "/"
   }
 ] %}
 
