@@ -14,3 +14,40 @@
     margin-bottom: 0;
   }
 }
+
+// Inverse button variables
+$hmrc-brand-colour: govuk-organisation-colour("hm-revenue-customs") !default;
+$hmrc-inverse-button-text-colour: $hmrc-brand-colour !default;
+
+$hmrc-inverse-button-background-colour: govuk-colour("white") !default;
+
+$hmrc-inverse-button-colour: $hmrc-inverse-button-background-colour;
+$hmrc-inverse-button-text-colour: $hmrc-inverse-button-text-colour;
+$hmrc-inverse-button-hover-colour: govuk-tint($hmrc-inverse-button-text-colour, 90%);
+$hmrc-inverse-button-shadow-colour: govuk-shade($hmrc-inverse-button-text-colour, 30%);
+
+// Because the shadow (s0) is visually 'part of' the button, we need to reduce
+// the height of the button to compensate by adjusting its padding (s1) and
+// increase the bottom margin to include it (s2).
+$button-shadow-size: $govuk-border-width-form-element;
+
+.hmrc-button-inverse {
+  background-color: $hmrc-inverse-button-colour;
+  box-shadow: 0 $button-shadow-size 0 $hmrc-inverse-button-shadow-colour;
+
+  &,
+  &:link,
+  &:visited,
+  &:active,
+  &:hover {
+    color: $hmrc-inverse-button-text-colour;
+  }
+
+  &:hover {
+    background-color: $hmrc-inverse-button-hover-colour;
+
+    &[disabled] {
+      background-color: $hmrc-inverse-button-colour;
+    }
+  }
+}
