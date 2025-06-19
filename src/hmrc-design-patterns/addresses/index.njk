@@ -5,7 +5,6 @@ status: development
 ---
 
 {% from "_example.njk" import example %}
-{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
 {% block content %}
 
@@ -33,8 +32,6 @@ status: development
   How it works
 </h2>
 
-{{ hmrcFrontendInfo() }}
-
 <p class="govuk-body">
   This pattern lets users search for a UK address (using HMRC’s <a class="govuk-link" href="https://github.com/hmrc/address-lookup-frontend">Address Lookup Frontend</a>) or manually enter any address.
 </p>
@@ -44,7 +41,7 @@ status: development
 </h3>
 
 <p class="govuk-body">
-  If both UK and international addresses are expected, use a question to direct users to either search for a UK address or manually enter an international address.
+  If both UK and international addresses are expected, include a page to direct users to either search for a UK address or manually enter an international address.
 </p>
 
 {{
@@ -114,6 +111,30 @@ status: development
     description: 'Review and confirm'
   })
 }}
+
+<h3 class="govuk-heading-m" id="error-messages">
+  Error messages
+</h3>
+
+<p class="govuk-body">
+Make sure errors follow the <a class="govuk-link" href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> and the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/addresses/">addresses pattern</a> in the GOV.UK Design System. Have specific error messages for specific error states.
+</p>
+
+<h4 class="govuk-heading-s" id="address-wrong-format">
+  If the postcode is in the wrong format
+</h4>
+
+<p class="govuk-body">
+  Say ‘Enter postcode in the correct format’.
+</p>
+
+<h4 class="govuk-heading-s" id="address-forbidden-characters">
+  If the postcode field contains forbidden characters
+</h4>
+
+<p class="govuk-body">
+  Say ‘Postcode must only include letters a to z, numbers 0 to 9 and spaces’.
+</p>
 
 <h2 class="govuk-heading-l" id="research">
   Research
