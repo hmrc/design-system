@@ -2,19 +2,18 @@
 title: Version control in the GOV.UK Prototype Kit
 layout: twoColumnPage.njk
 order: 1
+status: development
 ---
 
 {% from "_codeSnippet.njk" import codeSnippet %}
 
-<p class="govuk-body">You should implement version control in your prototype. <a class="govuk-link" href="https://github.com/hmrc/govuk-prototype-kit-version-control">Here’s a working example</a>.</p>
+<p class="govuk-body">Versioning allows you to maintain multiple iterations of your prototype without affecting previous versions.</p>
 
-<h2 class="govuk-heading-l">Why use versioning?</h2>
-
-<p class="govuk-body">Versioning allows you to maintain multiple iterations of your prototype without affecting previous versions. This is particularly useful for:</p>
+<p class="govuk-body">This is particularly useful for:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>User testing: You can keep an older version live while testing a new one.</li>
-  <li>Stakeholder feedback: Different teams can compare multiple versions side by side.</li>
-  <li>Incremental changes: It’s easier to modify and improve designs without breaking existing functionality.</li>
+  <li>user research — keep an older version live while testing a new one</li>
+  <li>stakeholder feedback — compare multiple versions side-by-side to collaborate more effectively</li>
+  <li>incremental changes — modify and improve designs easily without breaking existing functionality</li>
 </ul>
 
 <p class="govuk-body">It’s important to keep track of what changes you make and why. Consider using an index page to note these down or a separate changelog.</p>
@@ -27,7 +26,7 @@ order: 1
   <li>Scalable and maintainable: Adding a new version is straightforward.</li>
 </ul>
 
-<h2 class="govuk-heading-l">Code structure</h2>
+<h2 class="govuk-heading-l">Folder structure</h2>
 
 {{ codeSnippet({
   code: "/project-root
