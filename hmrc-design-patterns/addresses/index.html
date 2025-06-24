@@ -245,11 +245,6 @@
   How it works
 </h2>
 
-  <div class="govuk-inset-text">
-    You need HMRC Frontend to use this pattern — <a class="govuk-link" href="/hmrc-design-patterns/install-hmrc-frontend-in-your-prototype/">find out how to install HMRC Frontend</a>. If you use the HMRC Nunjucks macro, you must copy and paste the entire macro into your code.
-  </div>
-
-
 <p class="govuk-body">
   This pattern lets users search for a UK address (using HMRC’s <a class="govuk-link" href="https://github.com/hmrc/address-lookup-frontend">Address Lookup Frontend</a>) or manually enter any address.
 </p>
@@ -259,7 +254,7 @@
 </h3>
 
 <p class="govuk-body">
-  If both UK and international addresses are expected, use a question to direct users to either search for a UK address or manually enter an international address.
+  If both UK and international addresses are expected, include a page to direct users to either search for a UK address or manually enter an international address.
 </p>
 
 
@@ -301,16 +296,17 @@
               <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;get&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label-wrapper&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--l&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;example&quot;</span>&gt;</span>Select your country<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--l&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;example&quot;</span>&gt;</span>
+        Select your country
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;example-hint&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+    Continue
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
             </pre>
 
           </div>
@@ -318,20 +314,23 @@
             <div class="app-tabs__container js-tabs__container" id="example-country-nunjucks" role="tabpanel">
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
                 <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
 
 &lt;form action=<span class="hljs-string">&quot;#&quot;</span> method=<span class="hljs-string">&quot;get&quot;</span> novalidate&gt;
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label-wrapper&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-label--l&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;example&quot;</span>&gt;</span>Select your country<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  {{ govukInput({
+    <span class="hljs-attr">label</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Select your country&quot;</span>,
+      <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-label--l&quot;</span>,
+      <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>
+    },
+    <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;example&quot;</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;example&quot;</span>
+  }) }}
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;example-hint&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
-
-{{ govukButton({
-  <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
-}) }}</code>
+  {{ govukButton({
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+  }) }}
+&lt;/form&gt;</code>
               </pre>
 
             </div>
@@ -502,26 +501,31 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;results&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
-          1 Warwick Gardens, Worthing, BN11 1PE
-        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--m&quot;</span>&gt;</span>
+        What is your address?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-radios&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;results&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
+            1 Arundel Mews, Worthing, BN11 5RG
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;2a&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;results&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;2a&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;2a&quot;</span>&gt;</span>
+            2a Arundel Mews, Worthing, BN11 5RG
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;Flat 1, 3&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;results&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Flat 1, 3&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;Flat 1, 3&quot;</span>&gt;</span>
+            Flat 1, 3 Arundel Mews, Worthing, BN11 5RG
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;2a&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;results&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;2a&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;2a&quot;</span>&gt;</span>
-          2a Warwick Gardens, Worthing, BN11 1PE
-        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-radios__input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;Flat 1, 3&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;results&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Flat 1, 3&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-radios__label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;Flat 1, 3&quot;</span>&gt;</span>
-          Flat 1, 3 Warwick Gardens, Worthing, BN11 1PE
-        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
@@ -544,20 +548,27 @@
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/form-handler&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">novalidate</span>&gt;</span>
   {{ govukRadios({
     name: &quot;results&quot;,
+    fieldset: {
+      legend: {
+        text: &quot;What is your address?&quot;,
+        isPageHeading: false,
+        classes: &quot;govuk-fieldset__legend--m&quot;
+      }
+    },
     items: [
       {
         value: &quot;1&quot;,
-        text: &quot;1 Warwick Gardens, Worthing, BN11 1PE&quot;,
+        text: &quot;1 Arundel Mews, Worthing, BN11 5RG&quot;,
         id: &quot;1&quot;
       },
       {
         value: &quot;2a&quot;,
-        text: &quot;2a Warwick Gardens, Worthing, BN11 1PE&quot;,
+        text: &quot;2a Arundel Mews, Worthing, BN11 5RG&quot;,
         id: &quot;2a&quot;
       },
       {
         value: &quot;Flat 1, 3&quot;,
-        text: &quot;Flat 1, 3 Warwick Gardens, Worthing, BN11 1PE&quot;,
+        text: &quot;Flat 1, 3 Arundel Mews, Worthing, BN11 5RG&quot;,
         id: &quot;Flat 1, 3&quot;
       }
     ]
@@ -619,60 +630,67 @@
 
           <div class="app-tabs__container js-tabs__container" id="example-manual-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Enter your address<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__legend govuk-fieldset__legend--l&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-fieldset__heading&quot;</span>&gt;</span>
+      Enter your address
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;organisation&quot;</span>&gt;</span>
-    Organisation (optional)
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;organisation&quot;</span>&gt;</span>
+      Organisation (optional)
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;line1&quot;</span>&gt;</span>
-    Address line 1
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;line1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;line1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;line1&quot;</span>&gt;</span>
+      Address line 1
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;line1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;line1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;address-line1&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;line2&quot;</span>&gt;</span>
-    Address line 2 (optional)
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;line2&quot;</span>&gt;</span>
+      Address line 2 (optional)
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;town-city&quot;</span>&gt;</span>
-    Town or city
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;town-city&quot;</span>&gt;</span>
+      Town or city
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;county&quot;</span>&gt;</span>
-    County (optional)
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;county&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;county&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;county&quot;</span>&gt;</span>
+      County (optional)
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;county&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;county&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;postcode&quot;</span>&gt;</span>
-    Postcode
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;postcode&quot;</span>&gt;</span>
+      Postcode
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;country&quot;</span>&gt;</span>
-    Country
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;country&quot;</span>&gt;</span>
+      Country
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
+    Continue
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span></code>
             </pre>
 
           </div>
@@ -681,8 +699,15 @@
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
                 <code class="hljs js">{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/button/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukButton %}
 {% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/input/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukInput %}
+{% <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/fieldset/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukFieldset %}
 
-&lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Enter your address&lt;/h1&gt;
+{% call govukFieldset({
+  <span class="hljs-attr">legend</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Enter your address&quot;</span>,
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-fieldset__legend--l&quot;</span>,
+    <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>
+  }
+}) %}
 
 {{
   govukInput({
@@ -700,7 +725,8 @@
       <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Address line 1&quot;</span>
     },
     <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;line1&quot;</span>,
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;line1&quot;</span>
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;line1&quot;</span>,
+    <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;address-line1&quot;</span>
   })
 }}
 
@@ -757,7 +783,9 @@
 
 {{ govukButton({
   <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Continue&quot;</span>
-}) }}</code>
+}) }}
+
+{% endcall %}</code>
               </pre>
 
             </div>
@@ -812,10 +840,10 @@
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
               <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;</span>Review and confirm<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
-  18 Warwick Gardens<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span> <span class="hljs-attr">translate</span>=<span class="hljs-string">&quot;no&quot;</span>&gt;</span>
+  18 Arundel Mews<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
   Worthing<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  BN11 1PE<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  BN11 5RG<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
   United Kingdom
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
@@ -835,10 +863,10 @@
 
 &lt;h1 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;govuk-heading-l&quot;</span>&gt;Review and confirm&lt;/h1&gt;
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>
-  18 Warwick Gardens<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span> <span class="hljs-attr">translate</span>=<span class="hljs-string">&quot;no&quot;</span>&gt;</span>
+  18 Arundel Mews<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
   Worthing<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  BN11 1PE<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  BN11 5RG<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
   United Kingdom
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 
@@ -855,6 +883,30 @@
       </div>
   </div>
 
+
+<h3 class="govuk-heading-m" id="error-messages">
+  Error messages
+</h3>
+
+<p class="govuk-body">
+Make sure errors follow the <a class="govuk-link" href="https://design-system.service.gov.uk/components/error-message/">guidance about error messages</a> and the <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/addresses/">addresses pattern</a> in the GOV.UK Design System. Have specific error messages for specific error states.
+</p>
+
+<h4 class="govuk-heading-s" id="address-wrong-format">
+  If the postcode is in the wrong format
+</h4>
+
+<p class="govuk-body">
+  Say ‘Enter postcode in the correct format’.
+</p>
+
+<h4 class="govuk-heading-s" id="address-forbidden-characters">
+  If the postcode field contains forbidden characters
+</h4>
+
+<p class="govuk-body">
+  Say ‘Postcode must only include letters a to z, numbers 0 to 9 and spaces’.
+</p>
 
 <h2 class="govuk-heading-l" id="research">
   Research

@@ -13,7 +13,12 @@
   <body class="app-example-page">
     <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
 
-<h1 class="govuk-heading-l">Enter your address</h1>
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Enter your address
+    </h1>
+  </legend>
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="organisation">
@@ -27,7 +32,7 @@
   <label class="govuk-label" for="line1">
     Address line 1
   </label>
-  <input class="govuk-input" id="line1" name="line1" type="text">
+  <input class="govuk-input" id="line1" name="line1" type="text" autocomplete="address-line1">
 </div>
 
 
@@ -74,6 +79,9 @@
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Continue
 </button>
+
+
+</fieldset>
 <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
   </body>
 
