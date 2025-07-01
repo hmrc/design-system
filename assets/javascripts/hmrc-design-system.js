@@ -725,27 +725,45 @@
 	  };
 
 	  function initAll() {
+	    function logAndIgnoreErrors(init) {
+	      try {
+	        init();
+	      } catch (error) {
+	        // eslint-disable-next-line no-console
+	        console.error('hmrc-frontend component initialisation failed', error);
+	      }
+	    }
 	    var $AccountMenuSelector = '[data-module="hmrc-account-menu"]';
 	    if (document.querySelector($AccountMenuSelector)) {
-	      new AccountMenu($AccountMenuSelector).init();
+	      logAndIgnoreErrors(function () {
+	        new AccountMenu($AccountMenuSelector).init();
+	      });
 	    }
 	    var $HmrcPrintLinks = document.querySelectorAll('a[data-module="hmrc-print-link"]');
 	    $HmrcPrintLinks.forEach(function ($HmrcPrintLink) {
-	      new HmrcPrintLink($HmrcPrintLink, window).init();
+	      logAndIgnoreErrors(function () {
+	        new HmrcPrintLink($HmrcPrintLink, window).init();
+	      });
 	    });
 	    var sessionActivityService = new SessionActivityService(window.BroadcastChannel);
 	    sessionActivityService.logActivity();
 	    var $TimeoutDialog = document.querySelector('meta[name="hmrc-timeout-dialog"]');
 	    if ($TimeoutDialog) {
-	      new TimeoutDialog($TimeoutDialog, sessionActivityService).init();
+	      logAndIgnoreErrors(function () {
+	        new TimeoutDialog($TimeoutDialog, sessionActivityService).init();
+	      });
 	    }
 	    var $UserResearchBanner = document.querySelector('[data-module="hmrc-user-research-banner"]');
 	    if ($UserResearchBanner) {
-	      new UserResearchBanner($UserResearchBanner).init();
+	      logAndIgnoreErrors(function () {
+	        new UserResearchBanner($UserResearchBanner).init();
+	      });
 	    }
 	    var $BackLinks = document.querySelectorAll('[data-module="hmrc-back-link"]');
 	    $BackLinks.forEach(function ($BackLink) {
-	      new BackLinkHelper($BackLink, window, document).init();
+	      logAndIgnoreErrors(function () {
+	        new BackLinkHelper($BackLink, window, document).init();
+	      });
 	    });
 	  }
 	  var all = {
@@ -768,7 +786,7 @@
 	  return url.split('#').pop();
 	}
 	function getBreakpoint(name) {
-	  const property = `--govuk-frontend-breakpoint-${name}`;
+	  const property = `--govuk-breakpoint-${name}`;
 	  const value = window.getComputedStyle(document.documentElement).getPropertyValue(property);
 	  return {
 	    property,
