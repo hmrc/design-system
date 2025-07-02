@@ -1,7 +1,3 @@
 {% from "govuk/components/footer/macro.njk" import govukFooter %}
 
-{%- set _rebrand = govukRebrand() if govukRebrand is callable else govukRebrand -%}
-
-{{ govukFooter({
-  rebrand: _rebrand
-}) }}
+{{ govukFooter() }}
