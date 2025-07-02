@@ -75,7 +75,8 @@ gulp.task('compile', (done) => {
           ...globals,
           govukRebrand: true
         }
-      }
+      },
+      transform: 'nunjucks'
     }))
     .use(debug())
     .build((err) => {
