@@ -298,7 +298,7 @@
         Select your country
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;example&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;country-name&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
@@ -322,7 +322,8 @@
       <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>
     },
     <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;example&quot;</span>,
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;example&quot;</span>
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;example&quot;</span>,
+    <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;country-name&quot;</span>
   }) }}
 
   {{ govukButton({
@@ -387,7 +388,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;postcode&quot;</span>&gt;</span>
     Postcode
   <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;postal-code&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Enter the address manually<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -423,7 +424,8 @@
     },
     <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
     <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
-    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>,
+    <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;postal-code&quot;</span>
   })
 }}
 
@@ -639,7 +641,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;organisation&quot;</span>&gt;</span>
       Organisation (optional)
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;organisation&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;organization&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
@@ -653,14 +655,14 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;line2&quot;</span>&gt;</span>
       Address line 2 (optional)
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;line2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;address-line2&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;town-city&quot;</span>&gt;</span>
       Town or city
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;town-city&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;address-level2&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
@@ -674,14 +676,14 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;postcode&quot;</span>&gt;</span>
       Postcode
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input govuk-input--width-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;postcode&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;postal-code&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-form-group&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;country&quot;</span>&gt;</span>
       Country
     <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">&quot;country-name&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
@@ -713,7 +715,8 @@
       <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Organisation (optional)&quot;</span>
     },
     <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;organisation&quot;</span>,
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;organisation&quot;</span>
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;organisation&quot;</span>,
+    <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;organization&quot;</span>
   })
 }}
 
@@ -734,7 +737,8 @@
       <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Address line 2 (optional)&quot;</span>
     },
     <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;line2&quot;</span>,
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;line2&quot;</span>
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;line2&quot;</span>,
+    <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;address-line2&quot;</span>
   })
 }}
 
@@ -744,7 +748,8 @@
       <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Town or city&quot;</span>
     },
     <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;town-city&quot;</span>,
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;town-city&quot;</span>
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;town-city&quot;</span>,
+    <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;address-level2&quot;</span>
   })
 }}
 
@@ -765,7 +770,8 @@
     },
     <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
     <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;postcode&quot;</span>,
-    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>
+    <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-input--width-10&quot;</span>,
+    <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;postal-code&quot;</span>
   })
 }}
 
@@ -775,7 +781,8 @@
       <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Country&quot;</span>
     },
     <span class="hljs-attr">id</span>: <span class="hljs-string">&quot;country&quot;</span>,
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;country&quot;</span>
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;country&quot;</span>,
+    <span class="hljs-attr">autocomplete</span>: <span class="hljs-string">&quot;country-name&quot;</span>
   })
 }}
 
