@@ -7,8 +7,6 @@ layout: layout-example.njk
 
 <h1 class="govuk-heading-l">Choose your address</h1>
 
-<p class="govuk-body"><a class="govuk-link" href="#">Enter the address manually</a></p>
-
 <form action="/form-handler" method="post" novalidate>
   {{ govukRadios({
     name: "results",
@@ -37,6 +35,8 @@ layout: layout-example.njk
       }
     ]
   }) }}
+
+<p class="govuk-body"><a class="govuk-link" href="#">Enter the address manually</a></p>
 
   {{ govukButton({
     text: "Continue"
