@@ -19,8 +19,6 @@ layout: layout-example.njk
   })
 }}
 
-<p class="govuk-body"><a class="govuk-link" href="#">Enter the address manually</a></p>
-
 {{
   govukInput({
     label: {
@@ -33,6 +31,8 @@ layout: layout-example.njk
     name: "property"
   })
 }}
+
+<p class="govuk-body"><a class="govuk-link" href="#">Enter the address manually</a></p>
 
 {{ govukButton({
   text: "Continue"
