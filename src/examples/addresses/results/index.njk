@@ -7,8 +7,6 @@ layout: layout-example.njk
 
 <h1 class="govuk-heading-l">Choose your address</h1>
 
-<p class="govuk-body"><a class="govuk-link" href="#">Enter the address manually</a></p>
-
 <form action="/form-handler" method="post" novalidate>
   {{ govukRadios({
     name: "results",
@@ -34,6 +32,14 @@ layout: layout-example.njk
         value: "Flat 1, 3",
         text: "Flat 1, 3 Arundel Mews, Worthing, BN11 5RG",
         id: "Flat 1, 3"
+      },
+      {
+        divider: "or"
+      },
+      {
+        value: "None of the above",
+        text: "None of the above",
+        id: "None of the above"
       }
     ]
   }) }}

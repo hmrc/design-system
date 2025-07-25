@@ -84,6 +84,10 @@ status: development
   Only show search results if there are multiple results. If there is a single result go directly to the review and confirm screen.
 </p>
 
+<p class="govuk-body">
+If a user selects ‘None of the above’, take them to the ‘Manually enter or edit’ screen. Pre-populate the postcode field.
+</p>
+
 <h3 class="govuk-heading-m" id="uk">
   Manually enter or edit
 </h3>
@@ -97,7 +101,11 @@ status: development
 }}
 
 <p class="govuk-body">
-  If international addresses are expected replace ‘Postcode’ with ‘Postal code’. Only include ‘Organisation’ if relevant.
+  If international addresses are expected replace ‘Postcode’ with ‘Postal code’.
+</p>
+
+<p class="govuk-body">
+Only include the ‘Organisation’ field if it is relevant to your service, for example, when dealing with business addresses. If you include this field, decide if it is a required piece of information for your service. If not, mark it as ‘(optional)’.
 </p>
 
 <h3 class="govuk-heading-m" id="uk">
@@ -111,6 +119,10 @@ status: development
     description: 'Review and confirm'
   })
 }}
+
+<p class="govuk-body">
+  The ‘Edit address’ link takes users back to the previous screen with the address details pre-populated.
+</p>
 
 <h3 class="govuk-heading-m" id="error-messages">
   Error messages
@@ -133,7 +145,7 @@ Make sure errors follow the <a class="govuk-link" href="https://design-system.se
 </h4>
 
 <p class="govuk-body">
-  Say ‘Postcode must only include letters a to z, numbers 0 to 9 and spaces’.
+  Say ‘Postcode can only include letters a to z, numbers 0 to 9 or spaces’.
 </p>
 
 <h2 class="govuk-heading-l" id="research">
