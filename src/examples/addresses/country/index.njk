@@ -3,22 +3,26 @@ layout: layout-example.njk
 ---
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
-{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "hmrc/components/accessible-autocomplete/macro.njk" import hmrcAccessibleAutocomplete %}
 
 <form action="#" method="get" novalidate>
-  {{ govukInput({
+  {{ hmrcAccessibleAutocomplete({
     label: {
       text: "Select your country",
       classes: "govuk-label--l",
       isPageHeading: true
     },
-    id: "example",
-    name: "example",
-    autocomplete: "country-name"
+    describedBy: "location-picker",
+    id: "location-picker",
+        select: '
+          <select id="location-picker" data-show-all-values="false" data-auto-select="false" data-default-value="" data-module="hmrc-accessible-autocomplete">
+            <option value="fr">France</option>
+            <option value="de">Germany</option>
+            <option value="gb">United Kingdom</option>
+          </select>'
   }) }}
 
   {{ govukButton({
     text: "Continue"
   }) }}
 </form>
-

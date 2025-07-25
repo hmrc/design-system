@@ -8,7 +8,8 @@ const assetsFromExtensions = readExtensionConfigSync('assets').map(item => pathF
 const assetPaths = [
   pathFromRoot('application', 'assets', '**', '*'),
   '!' + pathFromRoot('application', 'assets', 'javascripts', 'components', '**', '*'),
-  '!' + pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js')
+  '!' + pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js'),
+  pathFromRoot('node_modules', 'hmrc-frontend', 'hmrc', 'accessible-autocomplete-*')
 ]
 
 gulp.task('copy-assets', (done) => {
