@@ -10,7 +10,7 @@
 
     <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/rebrand/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
-    <link type="text/css" rel="stylesheet" href="/assets/accessible-autocomplete-{{ hmrcFrontendVersion }}.css" media="all">
+    <link type="text/css" rel="stylesheet" href="/assets/accessible-autocomplete-{{ getHMRCFrontendVersion() }}.css" media="all">
   </head>
 
   <body class="app-example-page govuk-template__body">
@@ -20,7 +20,7 @@
     {%- endblock -%}
 
     <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
-    <script src="/assets/accessible-autocomplete-{{ hmrcFrontendVersion }}.js" type="module"></script>
+    <script src="/assets/accessible-autocomplete-{{ getHMRCFrontendVersion() }}.js" type="module"></script>
   </body>
 
 </html>

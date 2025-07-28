@@ -23,9 +23,6 @@ const projectRoot = pathFromRoot()
 
 const pattern = '**/*{.njk,.html}'
 
-const hmrcFrontendPkg = require('../../node_modules/hmrc-frontend/package.json')
-const pkgVersion = hmrcFrontendPkg.version
-
 gulp.task('compile', (done) => {
   log('Metalsmith build starting')
 
@@ -64,8 +61,7 @@ gulp.task('compile', (done) => {
         filters,
         globals: {
           ...globals,
-          govukRebrand: true,
-          hmrcFrontendVersion: hmrcFrontendPkg.version
+          govukRebrand: true
         }
       }
     }))
@@ -77,8 +73,7 @@ gulp.task('compile', (done) => {
         path: templatePaths,
         globals: {
           ...globals,
-          govukRebrand: true,
-          hmrcFrontendVersion: hmrcFrontendPkg.version
+          govukRebrand: true
         }
       },
       transform: 'nunjucks'
