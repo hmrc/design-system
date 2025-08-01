@@ -7,6 +7,7 @@ const assetsFromExtensions = readExtensionConfigSync('assets').map(item => pathF
 
 const assetPaths = [
   pathFromRoot('application', 'assets', '**', '*'),
+  pathFromRoot('node_modules', 'hmrc-frontend', 'hmrc', 'accessible-autocomplete-*'),
   '!' + pathFromRoot('application', 'assets', 'javascripts', 'components', '**', '*'),
   '!' + pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js')
 ]
