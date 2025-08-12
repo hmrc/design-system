@@ -3,6 +3,8 @@ title: Insolvency practitioner bulletins
 menuText: Insolvency practitioner bulletins
 layout: twoColumnPage.njk
 ---
+{% from "_codeSnippet.njk" import codeSnippet %}
+{% from "_example.njk" import example %}
 
 <h2 class="govuk-heading-l">When to use</h2>
 
@@ -18,44 +20,49 @@ layout: twoColumnPage.njk
 
 <h4 class="govuk-heading-s">Title</h4>
 
-<p class="govuk-body">The title should be: Insolvency practitioner bulletin [issue number] [(year)]: [insert title]</p>
-<p class="govuk-body">For example: ‘Insolvency practitioner bulletin 9 (2025): changes to the insolvency customer services mailbox’</p>
+{{
+  codeSnippet({
+    code: 'Insolvency practitioner bulletin [issue number] [(year)]: [title]',
+    canCopy: true
+  })
+}}
 
 <h4 class="govuk-heading-s">Summary</h4>
 
-<p class="govuk-body">Begin with:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>This bulletin explains ... [then summarise the content].</li>
-  <li>This bulletin tells you about ... [then summarise the content].</li>
-  <li>This bulletin gives an update ... [then summarise the content].</li>
-</ul>
-<p class="govuk-body">For example: ‘This bulletin tells you about the new rules when sending emails to the mailbox, and how it will support you with repayments or refund requests.’</p>
+{{
+  codeSnippet({
+    code: 'This bulletin tells you about [give a brief summary of the content].',
+    canCopy: true
+  })
+}}
 
-<h4 class="govuk-heading-s">Details</h4>
+<h4 class="govuk-heading-s">Body</h4>
 
-<p class="govuk-body">Begin with:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>This bulletin explains ... [insert detail].</p>
-  
-  <p class="govuk-body">or</p>
-  <li>This bulletin explains:<br>[detail]<br>[detail]</li>
-</ul>
-<p class="govuk-body">Then read the document and summarise the content to create the body text under the ‘Details’ section.</p>
+<p class="govuk-body">Read the document and summarise the content to create the body text under the 'Details' section.</p>
 
-<h3 class="govuk-heading-m">Tagging content</h3>
-
-<p class="govuk-body">No specific tagging guidance.</p>
+{{ example({
+  item: 'insolvency-practitioner-bulletins',
+  example: 'body',
+  description: 'body',
+  markdown: 'body-markdown',
+  markdownOnly: true
+}) }}
 
 <h3 class="govuk-heading-m">HTML attachment</h3>
 
 <h4 class="govuk-heading-s">Title</h4>
 
-<p class="govuk-body">[insert title] — Insolvency practitioner bulletin [issue number] [(year)]</p>
-<p class="govuk-body">For example: ‘Changes to the insolvency customer services mailbox — insolvency practitioner bulletin 9 (2025)’</p>
+{{
+  codeSnippet({
+    code: '[title] — Insolvency practitioner bulletin [issue number] [(year)]',
+    canCopy: true
+  })
+}}
 
 <h4 class="govuk-heading-s">Body</h4>
 <p class="govuk-body">Enter the contents of the bulletin. Do not include numbers in section headings.</p>
 
 <h3 class="govuk-heading-m">Collection</h3>
 
-<p class="govuk-body">Add the URL of any new page to the relevant year of the HMRC insolvency practitioner bulletin collection. Do not create a public change note.</p>
+<p class="govuk-body">Add the URL of any new page to the relevant year of the <a href="https://www.gov.uk/government/collections/hmrc-insolvency-practitioner-bulletins" class="govuk-link">HMRC insolvency practitioner bulletin collection</a>. Do not create a public change note.
+
