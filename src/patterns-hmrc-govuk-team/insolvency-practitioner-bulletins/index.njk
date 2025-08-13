@@ -40,13 +40,12 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">Read the document and summarise the content to create the body text under the 'Details' section.</p>
 
-{{ example({
-  item: 'insolvency-practitioner-bulletins',
-  example: 'body',
-  description: 'body',
-  markdown: 'body-markdown',
-  markdownOnly: true
-}) }}
+{{
+  codeSnippet({
+    code: 'This bulletin explains: [then summarise the content using a bulleted list]\n\n* ',
+    canCopy: true
+  })
+}}
 
 <h3 class="govuk-heading-m">HTML attachment</h3>
 
