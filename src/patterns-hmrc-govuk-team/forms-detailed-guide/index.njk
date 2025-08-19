@@ -4,7 +4,6 @@ menuText: "Forms: in a detailed guide"
 layout: twoColumnPage.njk
 ---
 {% from "_codeSnippet.njk" import codeSnippet %}
-{% from "_example.njk" import example %}
 
 <h2 class="govuk-heading-l" id="when-to-use">When to use</h2>
 
@@ -27,7 +26,7 @@ If it is, do not repeat it. Add a link and journey to that content instead.
 </p>
 
 <p class="govuk-body">
-Types of form that you can use in a detailed guide include the following: 
+Types of form that you can use in a detailed guide include the following:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
@@ -82,7 +81,7 @@ Decide if the title should focus on the action a user needs to take or the name 
 </p>
 
 <p class="govuk-body">
-Try to avoid including the form number. 
+Try to avoid including the form number.
 </p>
 
 <h3 class="govuk-heading-m" id="summary">Summary</h3>
@@ -154,7 +153,7 @@ For any other formats, include the following text under the link to the form:
 Interactive guidance (IG) forms start with the URL:  https://www.tax.service.gov.uk/guidance.</p>
 
 <p class="govuk-body">
-If the interactive guidance form comes after a form asking for Government Gateway credentials, use sub-heading level 3: ‘If you cannot sign in’: 
+If the interactive guidance form comes after a form asking for Government Gateway credentials, use sub-heading level 3: ‘If you cannot sign in’:
 If it’s the first online form on the guide, use ‘### Complete this form online’
 </p>
 
@@ -180,23 +179,23 @@ s5. Post to HMRC (the address is at the end of the form)',
 
 <h3 class="govuk-heading-s" id="formats">Interactive guidance forms that host different ways to submit forms</h3>
 <p class="govuk-body">
-  Some trials are taking place to look at user demand for existing PDFs. To support this a page owner may agree to move the different form choices (an existing PDF and online service) into an interactive guide away from detailed guide. 
+  Some trials are taking place to look at user demand for existing PDFs. To support this a page owner may agree to move the different form choices (an existing PDF and online service) into an interactive guide away from detailed guide.
   </p>
-  
+
   <p class="govuk-body">
   Read ‘Instructions: forms in a detailed guide’ to find out when you can move form choices into and IG tool and how you must format content.
   </p>
-  
+
   <p class="govuk-body">
   IG tools with form options must follow this pattern and other GOV.UK patterns for form choices — unless evidence of a strong user need demonstrates a reason not to.
   </p>
-  
+
   <p class="govuk-body">
-  The detailed guide must use a ‘single green button’ to send users into the IG tool. Do not use the Government Gateway user ID pattern. 
+  The detailed guide must use a ‘single green button’ to send users into the IG tool. Do not use the Government Gateway user ID pattern.
   </p>
-  
-  <h3 class="govuk-heading-s" id="formats">Example</h3> 
-  
+
+  <h3 class="govuk-heading-s" id="formats">Example</h3>
+
   <p class="govuk-body">
   A detailed guide takes users to an interactive guidance tool that signposts them to two form options. Tell HMRC about any errors in your VAT Return (VAT652) —  form choices in this example do not follow GOV.UK patterns yet.
   </p>
@@ -278,14 +277,14 @@ Check with the subject matter expert if you need to include the following text:
   <p class="govuk-body">
     G-forms:
    </p>
-    
+
     <ul class="govuk-list govuk-list--bullet">
     <li>sit behind the Government Gateway (exceptions to this are rare) —  but they’re not the same as online services.</li>
     <li>start with https://www.tax.service.gov.uk/submissions  —  not to the same as interactive guidance forms hosted in the '/guidance' directory of the tax service platform</li>
     </ul>
 
-      <h3 class="govuk-heading-s" id="formats">Example</h3> 
-      
+      <h3 class="govuk-heading-s" id="formats">Example</h3>
+
       <p class="govuk-body">
       A detailed guide Send your Landfill Tax return online has a G-form with the URL https://www.tax.service.gov.uk/submissions/new-form/send-your-landfill-tax-return.
       </p>
@@ -304,7 +303,7 @@ If users can only sign in with their Government Gateway user ID and password, us
 
 {{
     codeSnippet({
-      code: '## Apply online [or] Register online 
+      code: '## Apply online [or] Register online
 
 You’ll need to sign in with your Government Gateway user ID and password (if you do not have a user ID, you can create one when you first try to sign in).
 ',
@@ -319,7 +318,7 @@ If users can also sign in with their email address, use the following markdown b
 {{
     codeSnippet({
       code: '## Apply online [or] Register online
-      
+
 You’ll need to either:
 
 * sign in with your Government Gateway user ID and password (if you do not have a user ID, you can create one when you first try to sign in)
@@ -349,14 +348,6 @@ The form may not work if you try to open it in your internet browser. If the for
       canCopy: true
     })
   }}
-
-{{ example({
-    item: 'forms-detailed',
-    example: 'pdf',
-    description: 'PDF forms',
-    markdown: 'pdf-markdown',
-    markdownOnly: true
-}) }}
 
 <h4 class="govuk-heading-s" id="open">Forms in open document formats</h4>
 
