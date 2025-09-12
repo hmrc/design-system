@@ -1,0 +1,53 @@
+---
+title: Caseworker guidance banner
+layout: twoColumnPage.njk
+---
+
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+{% block content %}
+
+<p class="govuk-body">.</p>
+
+<h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">.</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">.</p>
+
+<h2 id="how-it-works" class="govuk-heading-l">How it works</h2>
+
+{{ hmrcFrontendInfo() }}
+
+<p class="govuk-body">:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li></li>
+</ul>
+
+
+
+<h3 class="govuk-heading-m">L</h3>
+
+<p class="govuk-body">.</p>
+
+{{
+  example({
+    item: 'research-banner',
+    description: 'Research-banner',
+    example: 'example-linear',
+    welsh: 'example-linear-welsh'
+  })
+}}
+
+
+<h2 id="research" class="govuk-heading-l">Research</h2>
+
+<p class="govuk-body">We need more research. If you have used the caseworker guidance banner, get in touch to share your research findings.</p>
+
+<p class="govuk-body"><a class="govuk-link" href="https://github.com/hmrc/design-patterns/issues/174">Discuss the caseworker guidance banner on GitHub</a></p>
+
+{% endblock %}
