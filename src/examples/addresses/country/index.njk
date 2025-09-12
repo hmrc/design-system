@@ -3,14 +3,11 @@ layout: layout-example.njk
 ---
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
-{% from "hmrc/components/accessible-autocomplete/macro.njk" import hmrcAccessibleAutocomplete %}
 {% from "govuk/components/select/macro.njk" import govukSelect %}
 
 <form action="#" method="get" novalidate>
-  {{ hmrcAccessibleAutocomplete({
-    describedBy: "location-picker-select",
-    id: "location-picker",
-    select: govukSelect({
+  {{
+    govukSelect({
       id: "location-picker-select",
       name: "location-picker-select",
       label: {
@@ -293,7 +290,7 @@ layout: layout-example.njk
         { value: "ZW-Zimbabwe", text: "Zimbabwe"}
       ]
     })
-  }) }}
+  }}
 
   {{ govukButton({
     text: "Continue"
