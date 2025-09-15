@@ -779,12 +779,6 @@
 	})));
 	});
 
-	function getFragmentFromUrl(url) {
-	  if (!url.includes('#')) {
-	    return undefined;
-	  }
-	  return url.split('#').pop();
-	}
 	function getBreakpoint(name) {
 	  const property = `--govuk-breakpoint-${name}`;
 	  const value = window.getComputedStyle(document.documentElement).getPropertyValue(property);
@@ -842,6 +836,9 @@
 	function isObject(option) {
 	  return !!option && typeof option === 'object' && !isArray(option);
 	}
+	function isScope($scope) {
+	  return !!$scope && ($scope instanceof Element || $scope instanceof Document);
+	}
 	function formatErrorMessage(Component, message) {
 	  return `${Component.moduleName}: ${message}`;
 	}
@@ -873,7 +870,7 @@
 	class ElementError extends GOVUKFrontendError {
 	  constructor(messageOrOptions) {
 	    let message = typeof messageOrOptions === 'string' ? messageOrOptions : '';
-	    if (typeof messageOrOptions === 'object') {
+	    if (isObject(messageOrOptions)) {
 	      const {
 	        component,
 	        identifier,
@@ -882,7 +879,9 @@
 	      } = messageOrOptions;
 	      message = identifier;
 	      message += element ? ` is not of type ${expectedType != null ? expectedType : 'HTMLElement'}` : ' not found';
-	      message = formatErrorMessage(component, message);
+	      if (component) {
+	        message = formatErrorMessage(component, message);
+	      }
 	    }
 	    super(message);
 	    this.name = 'ElementError';
@@ -1019,6 +1018,30 @@
 	  }
 	  return out;
 	}
+	function normaliseOptions(scopeOrOptions) {
+	  let $scope = document;
+	  let onError;
+	  if (isObject(scopeOrOptions)) {
+	    const options = scopeOrOptions;
+	    if (isScope(options.scope) || options.scope === null) {
+	      $scope = options.scope;
+	    }
+	    if (typeof options.onError === 'function') {
+	      onError = options.onError;
+	    }
+	  }
+	  if (isScope(scopeOrOptions)) {
+	    $scope = scopeOrOptions;
+	  } else if (scopeOrOptions === null) {
+	    $scope = null;
+	  } else if (typeof scopeOrOptions === 'function') {
+	    onError = scopeOrOptions;
+	  }
+	  return {
+	    scope: $scope,
+	    onError
+	  };
+	}
 	function mergeConfigs(...configObjects) {
 	  const formattedConfigObject = {};
 	  for (const configObject of configObjects) {
@@ -1094,7 +1117,7 @@
 	      throw new Error('i18n: lookup key missing');
 	    }
 	    let translation = this.translations[lookupKey];
-	    if (typeof (options == null ? void 0 : options.count) === 'number' && typeof translation === 'object') {
+	    if (typeof (options == null ? void 0 : options.count) === 'number' && isObject(translation)) {
 	      const translationPluralForm = translation[this.getPluralSuffix(lookupKey, options.count)];
 	      if (translationPluralForm) {
 	        translation = translationPluralForm;
@@ -1137,7 +1160,7 @@
 	    }
 	    const translation = this.translations[lookupKey];
 	    const preferredForm = this.hasIntlPluralRulesSupport() ? new Intl.PluralRules(this.locale).select(count) : this.selectPluralFormUsingFallbackRules(count);
-	    if (typeof translation === 'object') {
+	    if (isObject(translation)) {
 	      if (preferredForm in translation) {
 	        return preferredForm;
 	      } else if ('other' in translation) {
@@ -1473,11 +1496,11 @@
 	    const ariaLabelParts = [];
 	    const $headingText = $section.querySelector(`.${this.sectionHeadingTextClass}`);
 	    if ($headingText) {
-	      ariaLabelParts.push(`${$headingText.textContent}`.trim());
+	      ariaLabelParts.push($headingText.textContent.trim());
 	    }
 	    const $summary = $section.querySelector(`.${this.sectionSummaryClass}`);
 	    if ($summary) {
-	      ariaLabelParts.push(`${$summary.textContent}`.trim());
+	      ariaLabelParts.push($summary.textContent.trim());
 	    }
 	    const ariaLabelMessage = expanded ? this.i18n.t('hideSectionAriaLabel') : this.i18n.t('showSectionAriaLabel');
 	    ariaLabelParts.push(ariaLabelMessage);
@@ -1530,7 +1553,7 @@
 	    if (id) {
 	      try {
 	        window.sessionStorage.setItem(id, isExpanded.toString());
-	      } catch (exception) {}
+	      } catch (_unused) {}
 	    }
 	  }
 	  setInitialState($section) {
@@ -1544,7 +1567,7 @@
 	        if (state !== null) {
 	          this.setExpanded(state === 'true', $section);
 	        }
-	      } catch (exception) {}
+	      } catch (_unused2) {}
 	    }
 	  }
 	  getButtonPunctuationEl() {
@@ -1753,7 +1776,7 @@
 	      });
 	    }
 	    this.$errorMessage = this.$root.querySelector('.govuk-error-message');
-	    if (`${$textareaDescription.textContent}`.match(/^\s*$/)) {
+	    if ($textareaDescription.textContent.match(/^\s*$/)) {
 	      $textareaDescription.textContent = this.i18n.t('textareaDescription', {
 	        count: this.maxLength
 	      });
@@ -2113,7 +2136,7 @@
 	    if (!($target instanceof HTMLAnchorElement)) {
 	      return false;
 	    }
-	    const inputId = getFragmentFromUrl($target.href);
+	    const inputId = $target.hash.replace('#', '');
 	    if (!inputId) {
 	      return false;
 	    }
@@ -2426,7 +2449,6 @@
 	      throw new ElementError(formatErrorMessage(FileUpload, 'File input (`<input type="file">`) attribute (`type`) is not `file`'));
 	    }
 	    this.$input = $input;
-	    this.$input.setAttribute('hidden', 'true');
 	    if (!this.$input.id) {
 	      throw new ElementError({
 	        component: FileUpload,
@@ -2442,6 +2464,7 @@
 	      $label.id = `${this.id}-label`;
 	    }
 	    this.$input.id = `${this.id}-input`;
+	    this.$input.setAttribute('hidden', 'true');
 	    const $button = document.createElement('button');
 	    $button.classList.add('govuk-file-upload-button');
 	    $button.type = 'button';
@@ -3059,16 +3082,10 @@
 	    super($root);
 	    const hash = this.$root.hash;
 	    const href = (_this$$root$getAttrib = this.$root.getAttribute('href')) != null ? _this$$root$getAttrib : '';
-	    let url;
-	    try {
-	      url = new window.URL(this.$root.href);
-	    } catch (error) {
-	      throw new ElementError(`Skip link: Target link (\`href="${href}"\`) is invalid`);
-	    }
-	    if (url.origin !== window.location.origin || url.pathname !== window.location.pathname) {
+	    if (this.$root.origin !== window.location.origin || this.$root.pathname !== window.location.pathname) {
 	      return;
 	    }
-	    const linkedElementId = getFragmentFromUrl(hash);
+	    const linkedElementId = hash.replace('#', '');
 	    if (!linkedElementId) {
 	      throw new ElementError(`Skip link: Target link (\`href="${href}"\`) has no hash fragment`);
 	    }
@@ -3224,7 +3241,7 @@
 	    return this.$root.querySelector(`a.govuk-tabs__tab[href="${hash}"]`);
 	  }
 	  setAttributes($tab) {
-	    const panelId = getFragmentFromUrl($tab.href);
+	    const panelId = $tab.hash.replace('#', '');
 	    if (!panelId) {
 	      return;
 	    }
@@ -3328,7 +3345,7 @@
 	    this.createHistoryEntry($previousTab);
 	  }
 	  getPanel($tab) {
-	    const panelId = getFragmentFromUrl($tab.href);
+	    const panelId = $tab.hash.replace('#', '');
 	    if (!panelId) {
 	      return null;
 	    }
@@ -3376,28 +3393,34 @@
 	 * Use the `data-module` attributes to find, instantiate and init all of the
 	 * components provided as part of GOV.UK Frontend.
 	 *
-	 * @param {Config & { scope?: Element, onError?: OnErrorCallback<CompatibleClass> }} [config] - Config for all components (with optional scope)
+	 * @param {Config | Element | Document | null} [scopeOrConfig] - Scope of the document to search within or config for all components (with optional scope)
 	 */
-	function initAll(config) {
-	  var _config$scope;
-	  config = typeof config !== 'undefined' ? config : {};
-	  if (!isSupported()) {
-	    if (config.onError) {
-	      config.onError(new SupportError(), {
+	function initAll(scopeOrConfig = {}) {
+	  const config = isObject(scopeOrConfig) ? scopeOrConfig : {};
+	  const options = normaliseOptions(scopeOrConfig);
+	  try {
+	    if (!isSupported()) {
+	      throw new SupportError();
+	    }
+	    if (options.scope === null) {
+	      throw new ElementError({
+	        element: options.scope,
+	        identifier: 'GOV.UK Frontend scope element (`$scope`)'
+	      });
+	    }
+	  } catch (error) {
+	    if (options.onError) {
+	      options.onError(error, {
 	        config
 	      });
 	    } else {
-	      console.log(new SupportError());
+	      console.log(error);
 	    }
 	    return;
 	  }
 	  const components = [[Accordion, config.accordion], [Button, config.button], [CharacterCount, config.characterCount], [Checkboxes], [ErrorSummary, config.errorSummary], [ExitThisPage, config.exitThisPage], [FileUpload, config.fileUpload], [Header], [NotificationBanner, config.notificationBanner], [PasswordInput, config.passwordInput], [Radios], [ServiceNavigation], [SkipLink], [Tabs]];
-	  const options = {
-	    scope: (_config$scope = config.scope) != null ? _config$scope : document,
-	    onError: config.onError
-	  };
-	  components.forEach(([Component, config]) => {
-	    createAll(Component, config, options);
+	  components.forEach(([Component, componentConfig]) => {
+	    createAll(Component, componentConfig, options);
 	  });
 	}
 
@@ -3413,42 +3436,42 @@
 	 * @template {CompatibleClass} ComponentClass
 	 * @param {ComponentClass} Component - class of the component to create
 	 * @param {ComponentConfig<ComponentClass>} [config] - Config supplied to component
-	 * @param {OnErrorCallback<ComponentClass> | Element | Document | CreateAllOptions<ComponentClass> } [createAllOptions] - options for createAll including scope of the document to search within and callback function if error throw by component on init
+	 * @param {OnErrorCallback<ComponentClass> | Element | Document | null | CreateAllOptions<ComponentClass>} [scopeOrOptions] - options for createAll including scope of the document to search within and callback function if error throw by component on init
 	 * @returns {Array<InstanceType<ComponentClass>>} - array of instantiated components
 	 */
-	function createAll(Component, config, createAllOptions) {
-	  let $scope = document;
-	  let onError;
-	  if (typeof createAllOptions === 'object') {
-	    var _createAllOptions$sco;
-	    createAllOptions = createAllOptions;
-	    $scope = (_createAllOptions$sco = createAllOptions.scope) != null ? _createAllOptions$sco : $scope;
-	    onError = createAllOptions.onError;
-	  }
-	  if (typeof createAllOptions === 'function') {
-	    onError = createAllOptions;
-	  }
-	  if (createAllOptions instanceof HTMLElement) {
-	    $scope = createAllOptions;
-	  }
-	  const $elements = $scope.querySelectorAll(`[data-module="${Component.moduleName}"]`);
-	  if (!isSupported()) {
-	    if (onError) {
-	      onError(new SupportError(), {
+	function createAll(Component, config, scopeOrOptions) {
+	  let $elements;
+	  const options = normaliseOptions(scopeOrOptions);
+	  try {
+	    var _options$scope;
+	    if (!isSupported()) {
+	      throw new SupportError();
+	    }
+	    if (options.scope === null) {
+	      throw new ElementError({
+	        element: options.scope,
+	        component: Component,
+	        identifier: 'Scope element (`$scope`)'
+	      });
+	    }
+	    $elements = (_options$scope = options.scope) == null ? void 0 : _options$scope.querySelectorAll(`[data-module="${Component.moduleName}"]`);
+	  } catch (error) {
+	    if (options.onError) {
+	      options.onError(error, {
 	        component: Component,
 	        config
 	      });
 	    } else {
-	      console.log(new SupportError());
+	      console.log(error);
 	    }
 	    return [];
 	  }
-	  return Array.from($elements).map($element => {
+	  return Array.from($elements != null ? $elements : []).map($element => {
 	    try {
 	      return typeof config !== 'undefined' ? new Component($element, config) : new Component($element);
 	    } catch (error) {
-	      if (onError) {
-	        onError(error, {
+	      if (options.onError) {
+	        options.onError(error, {
 	          element: $element,
 	          component: Component,
 	          config
