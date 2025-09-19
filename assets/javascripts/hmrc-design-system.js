@@ -14,7 +14,7 @@
 	var all = createCommonjsModule(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory();
-	}(commonjsGlobal, (function () {
+	})(commonjsGlobal, (function () {
 	  // Returns a function, that, as long as it continues to be invoked, will not
 	  // be triggered. The function will be called after it stops being called for
 	  // N milliseconds. If `immediate` is passed, trigger the function on the
@@ -31,12 +31,10 @@
 	      var context = _this;
 	      var later = function later() {
 	        timeout = null;
-	        if (!immediate) func.apply(context, theParams);
+	        func.apply(context, theParams);
 	      };
-	      var callNow = immediate && !timeout;
 	      clearTimeout(timeout);
 	      timeout = setTimeout(later, wait);
-	      if (callNow) func.apply(context, theParams);
 	    };
 	  }
 
@@ -152,20 +150,20 @@
 	  function _defineProperties(e, r) {
 	    for (var t = 0; t < r.length; t++) {
 	      var o = r[t];
-	      o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o);
+	      o.enumerable = o.enumerable || false, o.configurable = true, "value" in o && (o.writable = true), Object.defineProperty(e, _toPropertyKey(o.key), o);
 	    }
 	  }
 	  function _createClass(e, r, t) {
-	    return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", {
-	      writable: !1
+	    return r && _defineProperties(e.prototype, r), Object.defineProperty(e, "prototype", {
+	      writable: false
 	    }), e;
 	  }
 	  function _defineProperty(e, r, t) {
 	    return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, {
 	      value: t,
-	      enumerable: !0,
-	      configurable: !0,
-	      writable: !0
+	      enumerable: true,
+	      configurable: true,
+	      writable: true
 	    }) : e[r] = t, e;
 	  }
 	  function ownKeys(e, r) {
@@ -181,7 +179,7 @@
 	  function _objectSpread2(e) {
 	    for (var r = 1; r < arguments.length; r++) {
 	      var t = null != arguments[r] ? arguments[r] : {};
-	      r % 2 ? ownKeys(Object(t), !0).forEach(function (r) {
+	      r % 2 ? ownKeys(Object(t), true).forEach(function (r) {
 	        _defineProperty(e, r, t[r]);
 	      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) {
 	        Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
@@ -193,7 +191,7 @@
 	    if ("object" != typeof t || !t) return t;
 	    var e = t[Symbol.toPrimitive];
 	    if (void 0 !== e) {
-	      var i = e.call(t, r || "default");
+	      var i = e.call(t, r);
 	      if ("object" != typeof i) return i;
 	      throw new TypeError("@@toPrimitive must return a primitive value.");
 	    }
@@ -776,7 +774,7 @@
 
 	  return all;
 
-	})));
+	}));
 	});
 
 	function getBreakpoint(name) {
