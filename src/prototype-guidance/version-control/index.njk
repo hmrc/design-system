@@ -1,5 +1,5 @@
 ---
-title: Version control in the GOV.UK Prototype Kit
+title: Versioning in the GOV.UK Prototype Kit
 layout: twoColumnPage.njk
 order: 1
 status: development
@@ -86,8 +86,13 @@ status: development
     next();
   });
 
-  subRouter.post('/question-1', (req, res) => { res.redirect('/question-2'); });
-  subRouter.post('/question-2', (req, res) => { res.redirect('/question-1'); });
+  subRouter.post('/question-1', (req, res) => {
+    res.redirect('/question-2');
+  });
+
+  subRouter.post('/question-2', (req, res) => {
+    res.redirect('/question-1');
+  });
 
   return subRouter;
 };",
