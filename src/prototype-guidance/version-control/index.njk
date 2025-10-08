@@ -1,0 +1,137 @@
+---
+title: Versioning in the GOV.UK Prototype Kit
+layout: twoColumnPage.njk
+status: development
+---
+
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+<p class="govuk-body">Versioning allows you to maintain multiple iterations of your prototype without affecting previous versions.</p>
+
+<p class="govuk-body">This is particularly useful for:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>user research — keep an older version live while testing a new one</li>
+  <li>stakeholder feedback — compare multiple versions side-by-side to collaborate more effectively</li>
+  <li>incremental changes — modify and improve designs easily without breaking existing functionality</li>
+</ul>
+
+<p class="govuk-body">It’s important to keep track of what changes you make and why. Consider using an index page to note these down or a separate changelog.</p>
+
+<h2 class="govuk-heading-l">Key features</h2>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>version-agnostic forms — HTML forms do not require hardcoded <code class="govuk-code">action</code> attributes</li>
+  <li>automated routing and redirects — a function automatically prefixes all redirects</li>
+  <li>scalable and maintainable — adding a new version is straightforward</li>
+</ul>
+
+<h2 class="govuk-heading-l">Folder structure</h2>
+
+{{ codeSnippet({
+  code: "/project-root
+├── app/
+│   ├── routes.js
+│   └── views/
+│       ├── v1/
+│       │   ├── routing.js
+│       │   ├── question-1.html
+│       │   ├── question-2.html
+│       │   └── nested/
+│       │       ├── question-1.html
+│       │       └── question-2.html
+│       └── v2/
+│           ├── routing.js
+│           ├── question-1.html
+│           └── question-2.html",
+  canCopy: false
+ }) }}
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><code class="govuk-code">routes.js</code> — this is the central routing file, it mounts each version’s router under its respective path (such as, <code class="govuk-code">/v1</code> or <code class="govuk-code">/v2</code>)</li>
+  <li><code class="govuk-code">routing.js</code> — these files define the routes and ensure that all navigation stays within the correct version</li>
+</ul>
+
+<h2 class="govuk-heading-l">Example question page</h2>
+
+{{ codeSnippet({
+  code: "<form method=\"post\" novalidate>
+    <h1 class=\"govuk-heading-xl\">Question 1</h1>
+    <button type=\"submit\" class=\"govuk-button\" data-module=\"govuk-button\">
+        Continue
+    </button>
+</form>",
+  canCopy: true
+}) }}
+
+<p class="govuk-body">The <code class="govuk-code">&lt;form&gt;</code> element should not have an <code class="govuk-code">action</code> attribute.</p>
+
+<h2 class="govuk-heading-l">Automatic redirects</h2>
+
+<p class="govuk-body">This ensures that redirects always include the correct version prefix. If you call <code class="govuk-code">res.redirect('/question-2')</code>, it automatically updates to <code class="govuk-code">/v1/question-2</code> or <code class="govuk-code">/v2/question-2</code>, depending on the version.</p>
+
+<p class="govuk-body">This code should go in the <code class="govuk-code">routing.js</code> file for each version.</p>
+
+{{ codeSnippet({
+  code: "module.exports = () => {
+  const govukPrototypeKit = require('govuk-prototype-kit');
+  const subRouter = govukPrototypeKit.requests.setupRouter();
+
+  subRouter.use((req, res, next) => {
+    const originalRedirect = res.redirect;
+    res.redirect = function(url) {
+      if (url.startsWith('/') && !url.startsWith(req.baseUrl)) {
+        url = req.baseUrl + url;
+      }
+
+      return originalRedirect.call(this, url);
+    };
+
+    next();
+  });
+
+  subRouter.post('/question-1', (req, res) => {
+    res.redirect('/question-2');
+  });
+
+  subRouter.post('/question-2', (req, res) => {
+    res.redirect('/question-1');
+  });
+
+  return subRouter;
+};",
+canCopy: true
+}) }}
+
+<p class="govuk-body">You must type out the full path for the question page and the redirect page (for example, <code class="govuk-code">/question-1</code> or <code class="govuk-code">/question-2</code>). You do not need to include <code class="govuk-code">v1</code> or <code class="govuk-code">v2</code>—this is handled automatically. However, if your version folder contains subdirectories, you should include the full nested path (such as, <code class="govuk-code">/nested/question-1</code>).</p>
+
+<p class="govuk-body">The <code class="govuk-code">subRouter</code> function should be used instead of the main <code class="govuk-code">router</code> function.</p>
+
+<p class="govuk-body">Check out the <a class="govuk-link" href="https://github.com/hmrc/govuk-prototype-kit-version-control" target="_blank">GitHub repository</a> for a working example.</p>
+
+<h2 class="govuk-heading-l">Mounting version-specific routers</h2>
+
+{{ codeSnippet({
+  code: "const govukPrototypeKit = require('govuk-prototype-kit');
+const router = govukPrototypeKit.requests.setupRouter();
+
+router.use('/v1', require('./views/v1/routing')());
+router.use('/v2', require('./views/v2/routing')());
+
+module.exports = router;",
+  canCopy: true
+}) }}
+
+<p class="govuk-body">This is the <code class="govuk-code">routes.js</code> file. It mounts the <code class="govuk-code">routing.js</code> files from each version.</p>
+
+<h2 class="govuk-heading-l">Creating a new version</h2>
+
+<ol class="govuk-list govuk-list--number">
+  <li>Duplicate the <code class="govuk-code">v2</code> folder and rename it to <code class="govuk-code">v3</code>. This will create a copy of all pages and routes, so you can update them without affecting previous versions.</li>
+  <li>Open the <code class="govuk-code">routes.js</code> file and add the following line to mount your new version:
+      {{ codeSnippet({
+        code: "router.use('/v3', require('./views/v3/routing')());",
+        canCopy: true
+      }) }}
+      This ensures that requests to <code class="govuk-code">/v3</code> are handled by the <code class="govuk-code">v3</code> routing file.</li>
+  <li>Edit the files inside the <code class="govuk-code">v3</code> folder to make your changes.</li>
+</ol>
