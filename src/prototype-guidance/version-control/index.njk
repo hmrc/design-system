@@ -67,6 +67,10 @@ status: development
 
 <h2 class="govuk-heading-l">Automatic redirects</h2>
 
+<p class="govuk-body">This ensures that redirects always include the correct version prefix. If you call <code class="govuk-code">res.redirect('/question-2')</code>, it automatically updates to <code class="govuk-code">/v1/question-2</code> or <code class="govuk-code">/v2/question-2</code>, depending on the version.</p>
+
+<p class="govuk-body">This code should go in the <code class="govuk-code">routing.js</code> file for each version.</p>
+
 {{ codeSnippet({
   code: "module.exports = () => {
   const govukPrototypeKit = require('govuk-prototype-kit');
@@ -98,13 +102,9 @@ status: development
 canCopy: true
 }) }}
 
-<p class="govuk-body">This ensures that redirects always include the correct version prefix. If you call <code class="govuk-code">res.redirect('/question-2')</code>, it automatically updates to <code class="govuk-code">/v1/question-2</code> or <code class="govuk-code">/v2/question-2</code>, depending on the version.</p>
+<p class="govuk-body">You must type out the full path for the question page and the redirect page (for example, <code class="govuk-code">/question-1</code> or <code class="govuk-code">/question-2</code>). You do not need to include <code class="govuk-code">v1</code> or <code class="govuk-code">v2</code>—this is handled automatically. However, if your version folder contains subdirectories, you should include the full nested path (such as, <code class="govuk-code">/nested/question-1</code>).</p>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li>This code should go in the <code class="govuk-code">routing.js</code> file for each version.</li>
-  <li>You must type out the full path for the question page and the redirect page (for example, <code class="govuk-code">/question-1</code> or <code class="govuk-code">/question-2</code>). You do not need to include <code class="govuk-code">v1</code> or <code class="govuk-code">v2</code>—this is handled automatically. However, if your version folder contains subdirectories, you should include the full nested path (such as, <code class="govuk-code">/nested/question-1</code>).</li>
-  <li>The <code class="govuk-code">subRouter</code> function should be used instead of the main <code class="govuk-code">router</code> function.</li>
-</ul>
+<p class="govuk-body">The <code class="govuk-code">subRouter</code> function should be used instead of the main <code class="govuk-code">router</code> function.</p>
 
 <p class="govuk-body">Check out the <a class="govuk-link" href="https://github.com/hmrc/govuk-prototype-kit-version-control" target="_blank">GitHub repository</a> for a working example.</p>
 
