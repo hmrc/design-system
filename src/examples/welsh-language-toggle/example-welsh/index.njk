@@ -2,16 +2,23 @@
   layout: layout-example.njk
 ---
 
-{%- from "hmrc/components/language-select/macro.njk" import hmrcLanguageSelect -%}
+{%- from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation -%}
+{%- from "hmrc/components/service-navigation-language-select/macro.njk" import hmrcServiceNavigationLanguageSelect -%}
 
-{{
-  hmrcLanguageSelect({
-    language: 'cy',
-    en: {
-      href: '?en'
-    },
-    cy: {
-      href: '?cy'
-    }
-  })
-}}
+{{ govukServiceNavigation({
+  serviceName: "Enw'r gwasanaethcy",
+  serviceUrl: "#",
+  classes: "hmrc-service-navigation--with-language-select",
+  slots: {
+    end: hmrcServiceNavigationLanguageSelect({
+      language: 'cy',
+      en: {
+        href: '?en'
+      },
+      cy: {
+        href: '?cy'
+      }
+    })
+  }
+}) }}
+
