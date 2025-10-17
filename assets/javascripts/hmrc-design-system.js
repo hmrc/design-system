@@ -669,7 +669,9 @@
 	    var cookieData = getCookie(this.cookieName);
 	    if (cookieData == null) {
 	      this.$module.classList.add('hmrc-user-research-banner--show');
-	      this.$closeLink.addEventListener('click', this.eventHandlers.noThanksClick.bind(this));
+	      if (this.$closeLink) {
+	        this.$closeLink.addEventListener('click', this.eventHandlers.noThanksClick.bind(this));
+	      }
 	    }
 	  };
 	  UserResearchBanner.prototype.eventHandlers = {
@@ -1157,7 +1159,7 @@
 	      return 'other';
 	    }
 	    const translation = this.translations[lookupKey];
-	    const preferredForm = this.hasIntlPluralRulesSupport() ? new Intl.PluralRules(this.locale).select(count) : this.selectPluralFormUsingFallbackRules(count);
+	    const preferredForm = this.hasIntlPluralRulesSupport() ? new Intl.PluralRules(this.locale).select(count) : 'other';
 	    if (isObject(translation)) {
 	      if (preferredForm in translation) {
 	        return preferredForm;
@@ -1168,132 +1170,7 @@
 	    }
 	    throw new Error(`i18n: Plural form ".other" is required for "${this.locale}" locale`);
 	  }
-	  selectPluralFormUsingFallbackRules(count) {
-	    count = Math.abs(Math.floor(count));
-	    const ruleset = this.getPluralRulesForLocale();
-	    if (ruleset) {
-	      return I18n.pluralRules[ruleset](count);
-	    }
-	    return 'other';
-	  }
-	  getPluralRulesForLocale() {
-	    const localeShort = this.locale.split('-')[0];
-	    for (const pluralRule in I18n.pluralRulesMap) {
-	      const languages = I18n.pluralRulesMap[pluralRule];
-	      if (languages.includes(this.locale) || languages.includes(localeShort)) {
-	        return pluralRule;
-	      }
-	    }
-	  }
 	}
-	I18n.pluralRulesMap = {
-	  arabic: ['ar'],
-	  chinese: ['my', 'zh', 'id', 'ja', 'jv', 'ko', 'ms', 'th', 'vi'],
-	  french: ['hy', 'bn', 'fr', 'gu', 'hi', 'fa', 'pa', 'zu'],
-	  german: ['af', 'sq', 'az', 'eu', 'bg', 'ca', 'da', 'nl', 'en', 'et', 'fi', 'ka', 'de', 'el', 'hu', 'lb', 'no', 'so', 'sw', 'sv', 'ta', 'te', 'tr', 'ur'],
-	  irish: ['ga'],
-	  russian: ['ru', 'uk'],
-	  scottish: ['gd'],
-	  spanish: ['pt-PT', 'it', 'es'],
-	  welsh: ['cy']
-	};
-	I18n.pluralRules = {
-	  arabic(n) {
-	    if (n === 0) {
-	      return 'zero';
-	    }
-	    if (n === 1) {
-	      return 'one';
-	    }
-	    if (n === 2) {
-	      return 'two';
-	    }
-	    if (n % 100 >= 3 && n % 100 <= 10) {
-	      return 'few';
-	    }
-	    if (n % 100 >= 11 && n % 100 <= 99) {
-	      return 'many';
-	    }
-	    return 'other';
-	  },
-	  chinese() {
-	    return 'other';
-	  },
-	  french(n) {
-	    return n === 0 || n === 1 ? 'one' : 'other';
-	  },
-	  german(n) {
-	    return n === 1 ? 'one' : 'other';
-	  },
-	  irish(n) {
-	    if (n === 1) {
-	      return 'one';
-	    }
-	    if (n === 2) {
-	      return 'two';
-	    }
-	    if (n >= 3 && n <= 6) {
-	      return 'few';
-	    }
-	    if (n >= 7 && n <= 10) {
-	      return 'many';
-	    }
-	    return 'other';
-	  },
-	  russian(n) {
-	    const lastTwo = n % 100;
-	    const last = lastTwo % 10;
-	    if (last === 1 && lastTwo !== 11) {
-	      return 'one';
-	    }
-	    if (last >= 2 && last <= 4 && !(lastTwo >= 12 && lastTwo <= 14)) {
-	      return 'few';
-	    }
-	    if (last === 0 || last >= 5 && last <= 9 || lastTwo >= 11 && lastTwo <= 14) {
-	      return 'many';
-	    }
-	    return 'other';
-	  },
-	  scottish(n) {
-	    if (n === 1 || n === 11) {
-	      return 'one';
-	    }
-	    if (n === 2 || n === 12) {
-	      return 'two';
-	    }
-	    if (n >= 3 && n <= 10 || n >= 13 && n <= 19) {
-	      return 'few';
-	    }
-	    return 'other';
-	  },
-	  spanish(n) {
-	    if (n === 1) {
-	      return 'one';
-	    }
-	    if (n % 1000000 === 0 && n !== 0) {
-	      return 'many';
-	    }
-	    return 'other';
-	  },
-	  welsh(n) {
-	    if (n === 0) {
-	      return 'zero';
-	    }
-	    if (n === 1) {
-	      return 'one';
-	    }
-	    if (n === 2) {
-	      return 'two';
-	    }
-	    if (n === 3) {
-	      return 'few';
-	    }
-	    if (n === 6) {
-	      return 'many';
-	    }
-	    return 'other';
-	  }
-	};
 
 	/**
 	 * Accordion component
@@ -2529,7 +2406,7 @@
 	    if (this.$button.disabled) return;
 	    if (event.target instanceof Node) {
 	      if (this.$root.contains(event.target)) {
-	        if (event.dataTransfer && isContainingFiles(event.dataTransfer)) {
+	        if (event.dataTransfer && this.canDrop(event.dataTransfer)) {
 	          if (!this.$button.classList.contains('govuk-file-upload-button--dragging')) {
 	            this.showDraggingState();
 	            this.$announcements.innerText = this.i18n.t('enteredDropZone');
@@ -2551,11 +2428,29 @@
 	  }
 	  onDrop(event) {
 	    event.preventDefault();
-	    if (event.dataTransfer && isContainingFiles(event.dataTransfer)) {
+	    if (event.dataTransfer && this.canFillInput(event.dataTransfer)) {
 	      this.$input.files = event.dataTransfer.files;
 	      this.$input.dispatchEvent(new CustomEvent('change'));
 	      this.hideDraggingState();
 	    }
+	  }
+	  canFillInput(dataTransfer) {
+	    return this.matchesInputCapacity(dataTransfer.files.length);
+	  }
+	  canDrop(dataTransfer) {
+	    if (dataTransfer.items.length) {
+	      return this.matchesInputCapacity(countFileItems(dataTransfer.items));
+	    }
+	    if (dataTransfer.types.length) {
+	      return dataTransfer.types.includes('Files');
+	    }
+	    return true;
+	  }
+	  matchesInputCapacity(numberOfFiles) {
+	    if (this.$input.multiple) {
+	      return numberOfFiles > 0;
+	    }
+	    return numberOfFiles === 1;
 	  }
 	  onChange() {
 	    const fileCount = this.$input.files.length;
@@ -2603,6 +2498,13 @@
 	    this.$root.classList.toggle('govuk-drop-zone--disabled', this.$button.disabled);
 	  }
 	}
+
+	/**
+	 * Counts the number of `DataTransferItem` whose kind is `file`
+	 *
+	 * @param {DataTransferItemList} list - The list
+	 * @returns {number} - The number of items whose kind is `file` in the list
+	 */
 	FileUpload.moduleName = 'govuk-file-upload';
 	FileUpload.defaults = Object.freeze({
 	  i18n: {
@@ -2624,10 +2526,14 @@
 	    }
 	  }
 	});
-	function isContainingFiles(dataTransfer) {
-	  const hasNoTypesInfo = dataTransfer.types.length === 0;
-	  const isDraggingFiles = dataTransfer.types.some(type => type === 'Files');
-	  return hasNoTypesInfo || isDraggingFiles;
+	function countFileItems(list) {
+	  let result = 0;
+	  for (let i = 0; i < list.length; i++) {
+	    if (list[i].kind === 'file') {
+	      result++;
+	    }
+	  }
+	  return result;
 	}
 
 	/**

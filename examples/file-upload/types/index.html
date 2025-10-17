@@ -8,7 +8,7 @@
 
     <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/rebrand/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
-    <link type="text/css" rel="stylesheet" href="/assets/accessible-autocomplete-6.93.0.css" media="all">
+    <link type="text/css" rel="stylesheet" href="/assets/accessible-autocomplete-6.97.0.css" media="all">
   </head>
 
   <body class="app-example-page govuk-template__body">
@@ -16,35 +16,35 @@
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="want-to-register-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Add supporting documents to your claim
-      </h1>
-    </legend>
-    <div id="want-to-register-hint" class="govuk-hint">
-      You can repeat this step to add more types of documents to your claim.
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Add supporting documents to your claim
+    </h1>
+  </legend>
+  <div id="want-to-register-hint" class="govuk-hint">
+    You can repeat this step to add more types of documents to your claim.
+  </div>
+  <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="want-to-register" name="want-to-register" type="radio" value="declaration">
+      <label class="govuk-label govuk-radios__label" for="want-to-register">
+        Declaration
+      </label>
     </div>
-    <div class="govuk-radios govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="want-to-register" name="want-to-register" type="radio" value="declaration">
-        <label class="govuk-label govuk-radios__label" for="want-to-register">
-          Declaration
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="want-to-register-2" name="want-to-register" type="radio" value="invoice">
-        <label class="govuk-label govuk-radios__label" for="want-to-register-2">
-          Invoice
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="want-to-register-3" name="want-to-register" type="radio" value="receipt">
-        <label class="govuk-label govuk-radios__label" for="want-to-register-3">
-          Receipt
-        </label>
-      </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="want-to-register-2" name="want-to-register" type="radio" value="invoice">
+      <label class="govuk-label govuk-radios__label" for="want-to-register-2">
+        Invoice
+      </label>
     </div>
-  </fieldset>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="want-to-register-3" name="want-to-register" type="radio" value="receipt">
+      <label class="govuk-label govuk-radios__label" for="want-to-register-3">
+        Receipt
+      </label>
+    </div>
+  </div>
+</fieldset>
 </div>
 
 
@@ -52,7 +52,7 @@
   Continue
 </button>
 <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
-    <script src="/assets/accessible-autocomplete-6.93.0.js" type="module"></script>
+    <script src="/assets/accessible-autocomplete-6.97.0.js" type="module"></script>
   </body>
 
 </html>

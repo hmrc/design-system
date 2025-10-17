@@ -8,7 +8,7 @@
 
     <link rel="icon" href="/extension-assets/govuk-frontend/dist/govuk/assets/rebrand/images/favicon.ico">
     <link type="text/css" rel="stylesheet" href="/hmrc-design-system.min.css" media="all">
-    <link type="text/css" rel="stylesheet" href="/assets/accessible-autocomplete-6.93.0.css" media="all">
+    <link type="text/css" rel="stylesheet" href="/assets/accessible-autocomplete-6.97.0.css" media="all">
   </head>
 
   <body class="app-example-page govuk-template__body">
@@ -48,27 +48,27 @@
 <form method="post" novalidate action="">
   <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
-      Oes angen i chi ychwanegu cyfarwyddwr arall?
-    </legend>
-    <div id="add-another-hint" class="govuk-hint">
-      Mae’n rhaid i chi roi gwybod i ni am eich holl gyfarwyddwyr.
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+    Oes angen i chi ychwanegu cyfarwyddwr arall?
+  </legend>
+  <div id="add-another-hint" class="govuk-hint">
+    Mae’n rhaid i chi roi gwybod i ni am eich holl gyfarwyddwyr.
+  </div>
+  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+      <label class="govuk-label govuk-radios__label" for="add-another">
+        Iawn
+      </label>
     </div>
-    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
-        <label class="govuk-label govuk-radios__label" for="add-another">
-          Iawn
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
-        <label class="govuk-label govuk-radios__label" for="add-another-2">
-          Na
-        </label>
-      </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+      <label class="govuk-label govuk-radios__label" for="add-another-2">
+        Na
+      </label>
     </div>
-  </fieldset>
+  </div>
+</fieldset>
 </div>
 
   <button type="submit" class="govuk-button" data-module="govuk-button">
@@ -77,7 +77,7 @@
 </form>
 
 <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
-    <script src="/assets/accessible-autocomplete-6.93.0.js" type="module"></script>
+    <script src="/assets/accessible-autocomplete-6.97.0.js" type="module"></script>
   </body>
 
 </html>
