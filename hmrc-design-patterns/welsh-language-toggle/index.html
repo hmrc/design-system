@@ -225,16 +225,9 @@
   </div>
 
 
-<p class="govuk-body"> Put the Welsh language toggle  on the right hand side below the: </p>
-<ul class="govuk-list govuk-list--bullet">
-  <li><a class="govuk-link" href="https://design-system.service.gov.uk/components/header/">GOV.UK header</a></li>
-  <li> <a class="govuk-link" href="https://design-system.service.gov.uk/components/phase-banner/">phase banner</a></li>
-  <li> <a class="govuk-link" href="/hmrc-design-patterns/hmrc-banner/">HMRC banner</a> if you are using it</li>
-</ul>
+<p class="govuk-body">The Welsh language toggle sits inside the service navigation component. Follow the GOV.UK guidance about how to position the <a href="https://design-system.service.gov.uk/components/service-navigation/" class="govuk-link">service navigation component</a> on the page.</p>
 
-<p class="govuk-body">The Welsh language toggle must be above the <a class="govuk-link" href="https://design-system.service.gov.uk/components/back-link/">back link</a>.</p>
-
-<p class="govuk-body">Any information entered before switching language should be retained.</p>
+<p class="govuk-body">When a user switches the language, they should stay on the same page of the service. Any information they have already entered should be kept.</p>
 
 
 
@@ -284,69 +277,112 @@
 
           <div class="app-tabs__container js-tabs__container" id="example-example-html" role="tabpanel">
             <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Language switcher&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list-item&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>English<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list-item&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;?cy&quot;</span> <span class="hljs-attr">hreflang</span>=<span class="hljs-string">&quot;cy&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;cy&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;alternate&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Newid yr iaith i’r Gymraeg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Cymraeg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code>
+              <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Service information&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-service-navigation hmrc-service-navigation--with-language-select&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-service-navigation&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-width-container&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-service-navigation__container&quot;</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-service-navigation__service-name&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-service-navigation__link&quot;</span>&gt;</span>
+          Service name
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-service-navigation-language-select&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Language switcher&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-service-navigation-language-select__list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-service-navigation-language-select__list-item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>ENG<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-service-navigation-language-select__list-item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;?cy&quot;</span> <span class="hljs-attr">hreflang</span>=<span class="hljs-string">&quot;cy&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;cy&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;alternate&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link govuk-service-navigation__link&quot;</span>&gt;</span>
+            CYM<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> – Newid yr iaith i’r Gymraeg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code>
             </pre>
 
               <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
-                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Switcher iaith&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list-item&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;?en&quot;</span> <span class="hljs-attr">hreflang</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;alternate&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Change the language to English<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>English<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-language-select__list-item&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Cymraeg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code>
+                <code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Service information&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-service-navigation hmrc-service-navigation--with-language-select&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-service-navigation&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-width-container&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-service-navigation__container&quot;</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-service-navigation__service-name&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-service-navigation__link&quot;</span>&gt;</span>
+          Enw’r gwasanaethcy
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-service-navigation-language-select&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Switcher iaith&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-service-navigation-language-select__list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-service-navigation-language-select__list-item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;?en&quot;</span> <span class="hljs-attr">hreflang</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;alternate&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link govuk-service-navigation__link&quot;</span>&gt;</span>
+            ENG<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span> – Change the language to English<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hmrc-service-navigation-language-select__list-item&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>CYM<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code>
               </pre>
           </div>
 
             <div class="app-tabs__container js-tabs__container" id="example-example-nunjucks" role="tabpanel">
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcLanguageSelect -%}
+                <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/service-navigation/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukServiceNavigation -%}
+{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/service-navigation-language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcServiceNavigationLanguageSelect -%}
 
-{{
-  hmrcLanguageSelect({
-    <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;en&#x27;</span>,
-    <span class="hljs-attr">en</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?en&#x27;</span>
-    },
-    <span class="hljs-attr">cy</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?cy&#x27;</span>
-    }
-  })
-}}</code>
+{{ govukServiceNavigation({
+  <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&quot;Service name&quot;</span>,
+  <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">&quot;#&quot;</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;hmrc-service-navigation--with-language-select&quot;</span>,
+  <span class="hljs-attr">slots</span>: {
+    <span class="hljs-attr">end</span>: hmrcServiceNavigationLanguageSelect({
+      <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;en&#x27;</span>,
+      <span class="hljs-attr">en</span>: {
+        <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?en&#x27;</span>
+      },
+      <span class="hljs-attr">cy</span>: {
+        <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?cy&#x27;</span>
+      }
+    })
+  }
+}) }}</code>
               </pre>
 
                 <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
-                  <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcLanguageSelect -%}
+                  <code class="hljs js">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/service-navigation/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukServiceNavigation -%}
+{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/service-navigation-language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcServiceNavigationLanguageSelect -%}
 
-{{
-  hmrcLanguageSelect({
-    <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;cy&#x27;</span>,
-    <span class="hljs-attr">en</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?en&#x27;</span>
-    },
-    <span class="hljs-attr">cy</span>: {
-      <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?cy&#x27;</span>
-    }
-  })
-}}</code>
+{{ govukServiceNavigation({
+  <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&quot;Enw’r gwasanaethcy&quot;</span>,
+  <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">&quot;#&quot;</span>,
+  <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;hmrc-service-navigation--with-language-select&quot;</span>,
+  <span class="hljs-attr">slots</span>: {
+    <span class="hljs-attr">end</span>: hmrcServiceNavigationLanguageSelect({
+      <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;cy&#x27;</span>,
+      <span class="hljs-attr">en</span>: {
+        <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?en&#x27;</span>
+      },
+      <span class="hljs-attr">cy</span>: {
+        <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?cy&#x27;</span>
+      }
+    })
+  }
+}) }}</code>
                 </pre>
             </div>
 

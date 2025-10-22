@@ -12,23 +12,43 @@
   </head>
 
   <body class="app-example-page govuk-template__body">
-    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>  <nav class="hmrc-language-select" aria-label="Language switcher">
-    <ul class="hmrc-language-select__list">
-      <li class="hmrc-language-select__list-item">
-        <span aria-current="true">English</span>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+  <section aria-label="Service information" class="govuk-service-navigation hmrc-service-navigation--with-language-select"
+data-module="govuk-service-navigation"
+>
+      <div class="govuk-width-container">
+
+    <div class="govuk-service-navigation__container">
+      
+        <span class="govuk-service-navigation__service-name">
+            <a href="#" class="govuk-service-navigation__link">
+              Service name
+            </a>
+        </span>
+
+      
+    </div>
+
+      <nav class="hmrc-service-navigation-language-select" aria-label="Language switcher">
+    <ul class="hmrc-service-navigation-language-select__list">
+      <li class="hmrc-service-navigation-language-select__list-item">
+        <span aria-current="true">ENG</span>
       </li>
-      <li class="hmrc-language-select__list-item">
+      <li class="hmrc-service-navigation-language-select__list-item">
         <a href="?cy"
           hreflang="cy"
           lang="cy"
           rel="alternate"
-          class="govuk-link">
-          <span class="govuk-visually-hidden">Newid yr iaith i’r Gymraeg</span>
-          <span aria-hidden="true">Cymraeg</span>
+          class="govuk-link govuk-service-navigation__link">
+          CYM<span class="govuk-visually-hidden"> – Newid yr iaith i’r Gymraeg</span>
         </a>
       </li>
     </ul>
   </nav>
+
+</div>
+
+  </section>
 
 
 <script src="/assets/javascripts/hmrc-design-system.js" type="module"></script>
