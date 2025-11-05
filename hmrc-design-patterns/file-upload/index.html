@@ -292,7 +292,9 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
       You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -314,7 +316,9 @@
       Gallwch uwchlwytho’ch derbynneb fel copi wedi’i sganio neu lun o’r gwreiddiol. Mae’n
       rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -341,7 +345,8 @@
       <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Upload receipt&quot;</span>,
       <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;govuk-label--l&quot;</span>,
       <span class="hljs-attr">isPageHeading</span>: <span class="hljs-literal">true</span>
-    }
+    },
+    <span class="hljs-attr">javascript</span>: <span class="hljs-literal">true</span>
   }) }}
 &lt;/div&gt;
 
@@ -366,7 +371,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.&quot;
       text: &quot;Uwchlwytho derbynneb&quot;,
       classes: &quot;govuk-label--l&quot;,
       isPageHeading: true
-    }
+    },
+    chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+    dropInstructionText: &quot;neu ollwng ffeil&quot;,
+    noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+    multipleFilesChosenText: {
+      one: &quot;%{count} ffeil wedi’i dewis&quot;,
+      other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+      },
+    enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+    leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+    javascript: true
   }) }}
 &lt;/div&gt;
 
@@ -754,7 +769,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span>&gt;</span>
         Upload receipts
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -813,7 +830,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label govuk-visually-hidden&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span>&gt;</span>
         Uwchlwytho derbynebau
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -880,7 +899,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
       label: {
         text: &quot;Upload receipts&quot;,
         classes: &quot;govuk-visually-hidden&quot;
-      }
+      },
+      javascript: true
     }) }}
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -955,7 +975,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
       label: {
         text: &quot;Uwchlwytho derbynebau&quot;,
         classes: &quot;govuk-visually-hidden&quot;
-      }
+      },
+      chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+      dropInstructionText: &quot;neu ollwng ffeil&quot;,
+      noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+      multipleFilesChosenText: {
+        one: &quot;%{count} ffeil wedi’i dewis&quot;,
+        other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+        },
+      enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+      leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+      javascript: true
     }) }}
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body govuk-!-display-none&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;refreshPageProgress&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-link&quot;</span>&gt;</span>Refresh page to update file upload progress<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -1296,7 +1326,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-hint&quot;</span>&gt;</span>
         You can upload your receipt as a scanned copy or photo of the original. The selected file must be smaller than 100MB.
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;</span>&gt;</span>
@@ -1363,7 +1395,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
         Gallwch uwchlwytho’ch derbynneb fel copi wedi’i sganio neu lun o’r gwreiddiol. Mae’n
         rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;file-upload-1-hint&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;</span>&gt;</span>
@@ -1438,7 +1472,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
         text: &quot;Upload invoice&quot;,
         classes: &quot;govuk-label--l&quot;,
         isPageHeading: true
-      }
+      },
+      javascript: true
     }) }}
 
     &lt;hr class=&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;&gt;
@@ -1515,7 +1550,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.&quot;
         text: &quot;Uwchlwytho anfoneb&quot;,
         classes: &quot;govuk-label--l&quot;,
         isPageHeading: true
-      }
+      },
+      chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+      dropInstructionText: &quot;neu ollwng ffeil&quot;,
+      noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+      multipleFilesChosenText: {
+        one: &quot;%{count} ffeil wedi’i dewis&quot;,
+        other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+        },
+      enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+      leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+      javascript: true
     }) }}
 
     &lt;hr class=&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;&gt;
@@ -1664,7 +1709,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.&quot;
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span>&gt;</span>
         Receipt
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;</span>&gt;</span>
@@ -1673,7 +1720,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.&quot;
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span>&gt;</span>
         Calculation worksheet
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
@@ -1720,7 +1769,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.&quot;
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span>&gt;</span>
         Derbynneb
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;</span>&gt;</span>
@@ -1729,7 +1780,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.&quot;
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-label&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span>&gt;</span>
         Taflen waith cyfrifo
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;file-upload-2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-button&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-button&quot;</span>&gt;</span>
@@ -1788,7 +1841,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.&quot;
       name: &quot;file-upload-1&quot;,
       label: {
         text: &quot;Receipt&quot;
-      }
+      },
+      javascript: true
     }) }}
 
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;</span>&gt;</span>
@@ -1798,7 +1852,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.&quot;
       name: &quot;file-upload-2&quot;,
       label: {
         text: &quot;Calculation worksheet&quot;
-      }
+      },
+      javascript: true
     }) }}
 
     {{ govukButton({
@@ -1856,7 +1911,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
       name: &quot;file-upload-1&quot;,
       label: {
         text: &quot;Derbynneb&quot;
-      }
+      },
+      chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+      dropInstructionText: &quot;neu ollwng ffeil&quot;,
+      noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+      multipleFilesChosenText: {
+        one: &quot;%{count} ffeil wedi’i dewis&quot;,
+        other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+        },
+      enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+      leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+      javascript: true
     }) }}
 
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;</span>&gt;</span>
@@ -1866,7 +1931,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
       name: &quot;file-upload-2&quot;,
       label: {
         text: &quot;Taflen waith cyfrifo&quot;
-      }
+      },
+      chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+      dropInstructionText: &quot;neu ollwng ffeil&quot;,
+      noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+      multipleFilesChosenText: {
+        one: &quot;%{count} ffeil wedi’i dewis&quot;,
+        other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+        },
+      enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+      leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+      javascript: true
     }) }}
 
     {{ govukButton({
@@ -2512,7 +2587,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Select a file
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;select-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;select-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2531,7 +2608,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file is empty
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2550,7 +2629,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file must be smaller than 100MB
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2569,7 +2650,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file has already been uploaded
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;already-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;already-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2588,7 +2671,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file must be a JPG, PNG or PDF
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;type-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;type-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2607,7 +2692,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file contains a virus
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2626,7 +2713,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> The selected file could not be uploaded
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2774,7 +2863,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Dewiswch ffeil
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;select-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;select-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;select-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2793,7 +2884,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Mae’r ffeil dan sylw yn wag
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;empty-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;empty-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2812,7 +2905,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Mae’n rhaid i’r ffeil dan sylw fod yn llai na 100 MB
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;smaller-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;smaller-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2831,7 +2926,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Mae’r ffeil dan sylw eisoes wedi’i huwchlwytho
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;already-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;already-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;already-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2850,7 +2947,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Mae’n rhaid i’r ffeil dan sylw fod ar ffurf JPG, PNG neu PDF
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;type-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;type-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;type-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2869,7 +2968,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Mae feirws yn y ffeil dan sylw
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;virus-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;virus-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -2888,7 +2989,9 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-error-message&quot;</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-visually-hidden&quot;</span>&gt;</span>Error:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Nid oedd modd uwchlwytho’r ffeil dan sylw
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-drop-zone&quot;</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-file-upload&quot;</span> <span class="hljs-attr">data-i18n.choose-files-button</span>=<span class="hljs-string">&quot;Dewis ffeil&quot;</span> <span class="hljs-attr">data-i18n.no-file-chosen</span>=<span class="hljs-string">&quot;Dim ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.one</span>=<span class="hljs-string">&quot;%{count} ffeil wedi’i dewis&quot;</span> <span class="hljs-attr">data-i18n.multiple-files-chosen.other</span>=<span class="hljs-string">&quot;%{count} o ffeiliau wedi’u dewis&quot;</span> <span class="hljs-attr">data-i18n.drop-instruction</span>=<span class="hljs-string">&quot;neu ollwng ffeil&quot;</span> <span class="hljs-attr">data-i18n.entered-drop-zone</span>=<span class="hljs-string">&quot;Yn y man gollwng&quot;</span> <span class="hljs-attr">data-i18n.left-drop-zone</span>=<span class="hljs-string">&quot;Wedi gadael y man gollwng&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-file-upload govuk-file-upload--error&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;could-not-error&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;could-not-error-error&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-summary-list__value&quot;</span>&gt;</span>
@@ -3057,7 +3160,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;receipt3.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              javascript: true
             })
           },
           value: {
@@ -3084,7 +3188,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;receipt4.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              javascript: true
             })
           },
           value: {
@@ -3111,7 +3216,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;receipt5.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              javascript: true
             })
           },
           value: {
@@ -3138,7 +3244,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;receipt6.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              javascript: true
             })
           },
           value: {
@@ -3165,7 +3272,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;receipt7.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              javascript: true
             })
           },
           value: {
@@ -3192,7 +3300,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;receipt8.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              javascript: true
             })
           },
           value: {
@@ -3219,7 +3328,8 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;receipt9.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              javascript: true
             })
           },
           value: {
@@ -3393,7 +3503,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;Derbynneb3.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+              dropInstructionText: &quot;neu ollwng ffeil&quot;,
+              noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+              multipleFilesChosenText: {
+                one: &quot;%{count} ffeil wedi’i dewis&quot;,
+                other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+                },
+              enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+              leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+              javascript: true
             })
           },
           value: {
@@ -3420,7 +3540,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;Derbynneb4.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+              dropInstructionText: &quot;neu ollwng ffeil&quot;,
+              noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+              multipleFilesChosenText: {
+                one: &quot;%{count} ffeil wedi’i dewis&quot;,
+                other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+                },
+              enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+              leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+              javascript: true
             })
           },
           value: {
@@ -3447,7 +3577,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;Derbynneb5.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+              dropInstructionText: &quot;neu ollwng ffeil&quot;,
+              noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+              multipleFilesChosenText: {
+                one: &quot;%{count} ffeil wedi’i dewis&quot;,
+                other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+                },
+              enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+              leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+              javascript: true
             })
           },
           value: {
@@ -3474,7 +3614,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;Derbynneb6.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+              dropInstructionText: &quot;neu ollwng ffeil&quot;,
+              noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+              multipleFilesChosenText: {
+                one: &quot;%{count} ffeil wedi’i dewis&quot;,
+                other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+                },
+              enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+              leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+              javascript: true
             })
           },
           value: {
@@ -3501,7 +3651,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;Derbynneb7.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+              dropInstructionText: &quot;neu ollwng ffeil&quot;,
+              noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+              multipleFilesChosenText: {
+                one: &quot;%{count} ffeil wedi’i dewis&quot;,
+                other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+                },
+              enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+              leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+              javascript: true
             })
           },
           value: {
@@ -3528,7 +3688,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;Derbynneb8.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+              dropInstructionText: &quot;neu ollwng ffeil&quot;,
+              noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+              multipleFilesChosenText: {
+                one: &quot;%{count} ffeil wedi’i dewis&quot;,
+                other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+                },
+              enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+              leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+              javascript: true
             })
           },
           value: {
@@ -3555,7 +3725,17 @@ rhaid i’r ffeil dan sylw fod yn llai na 100 MB.
               label: {
                 text: &quot;Derbynneb9.jpg&quot;,
                 classes: &quot;govuk-!-font-weight-bold&quot;
-              }
+              },
+              chooseFilesButtonText: &quot;Dewis ffeil&quot;,
+              dropInstructionText: &quot;neu ollwng ffeil&quot;,
+              noFileChosenText: &quot;Dim ffeil wedi’i dewis&quot;,
+              multipleFilesChosenText: {
+                one: &quot;%{count} ffeil wedi’i dewis&quot;,
+                other: &quot;%{count} o ffeiliau wedi’u dewis&quot;
+                },
+              enteredDropZoneText: &quot;Yn y man gollwng&quot;,
+              leftDropZoneText: &quot;Wedi gadael y man gollwng&quot;,
+              javascript: true
             })
           },
           value: {
