@@ -1,0 +1,304 @@
+---
+layout: layout-example.njk
+accessibleAutocompleteAssets: true
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{% call govukFieldset({
+  legend: {
+    text: "Nodwch eich cyfeiriad",
+    classes: "govuk-fieldset__legend--l",
+    isPageHeading: true
+  }
+}) %}
+
+{{
+  govukInput({
+    label: {
+      text: "Sefydliad (dewisol)"
+    },
+    id: "organisation",
+    name: "organisation",
+    autocomplete: "organization"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Cyfeiriad – llinell 1"
+    },
+    id: "line1",
+    name: "line1",
+    autocomplete: "address-line1"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Cyfeiriad – llinell 2 (dewisol)"
+    },
+    id: "line2",
+    name: "line2",
+    autocomplete: "address-line2"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Tref neu ddinas"
+    },
+    id: "town-city",
+    name: "town-city",
+    autocomplete: "address-level2"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Sir (dewisol)"
+    },
+    id: "county",
+    name: "county"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Cod post"
+    },
+    id: "postcode",
+    name: "postcode",
+    classes: "govuk-input--width-10",
+    autocomplete: "postal-code"
+  })
+}}
+
+{{
+    govukSelect({
+      label: {
+        text: "Gwlad"
+      },
+      id: "country",
+      name: "country",
+      attributes: {
+        "data-show-all-values": "false",
+        "data-auto-select": "false",
+        "data-default-value":"",
+        "data-module": "hmrc-accessible-autocomplete"
+      },
+      items: [
+        { value: "", text: "Select country or territory"},
+        { value: "AF-Afghanistan", text: "Afghanistan"},
+        { value: "AL-Albania", text: "Albania"},
+        { value: "DZ-Algeria", text: "Algeria"},
+        { value: "AD-Andorra", text: "Andorra"},
+        { value: "AO-Angola", text: "Angola"},
+        { value: "AG-Antigua_and_Barbuda", text: "Antigua and Barbuda"},
+        { value: "AR-Argentina", text: "Argentina"},
+        { value: "AM-Armenia", text: "Armenia"},
+        { value: "AU-Australia", text: "Australia"},
+        { value: "AT-Austria", text: "Austria"},
+        { value: "AZ-Azerbaijan", text: "Azerbaijan"},
+        { value: "BH-Bahrain", text: "Bahrain"},
+        { value: "BD-Bangladesh", text: "Bangladesh"},
+        { value: "BB-Barbados", text: "Barbados"},
+        { value: "BY-Belarus", text: "Belarus"},
+        { value: "BE-Belgium", text: "Belgium"},
+        { value: "BZ-Belize", text: "Belize"},
+        { value: "BJ-Benin", text: "Benin"},
+        { value: "BT-Bhutan", text: "Bhutan"},
+        { value: "BO-Bolivia", text: "Bolivia"},
+        { value: "BA-Bosnia_and_Herzegovina", text: "Bosnia and Herzegovina"},
+        { value: "BW-Botswana", text: "Botswana"},
+        { value: "BR-Brazil", text: "Brazil"},
+        { value: "BN-Brunei", text: "Brunei"},
+        { value: "BG-Bulgaria", text: "Bulgaria"},
+        { value: "BF-Burkina_Faso", text: "Burkina Faso"},
+        { value: "BI-Burundi", text: "Burundi"},
+        { value: "KH-Cambodia", text: "Cambodia"},
+        { value: "CM-Cameroon", text: "Cameroon"},
+        { value: "CA-Canada", text: "Canada"},
+        { value: "CV-Cape_Verde", text: "Cape Verde"},
+        { value: "CF-Central_African_Republic", text: "Central African Republic"},
+        { value: "TD-Chad", text: "Chad"},
+        { value: "CL-Chile", text: "Chile"},
+        { value: "CN-China", text: "China"},
+        { value: "CO-Colombia", text: "Colombia"},
+        { value: "KM-Comoros", text: "Comoros"},
+        { value: "CG-Congo", text: "Congo"},
+        { value: "CD-Congo_(Democratic_Republic)", text: "Congo (Democratic Republic)"},
+        { value: "CR-Costa_Rica", text: "Costa Rica"},
+        { value: "HR-Croatia", text: "Croatia"},
+        { value: "CU-Cuba", text: "Cuba"},
+        { value: "CY-Cyprus", text: "Cyprus"},
+        { value: "CZ-Czechia", text: "Czechia"},
+        { value: "DK-Denmark", text: "Denmark"},
+        { value: "DJ-Djibouti", text: "Djibouti"},
+        { value: "DM-Dominica", text: "Dominica"},
+        { value: "DO-Dominican_Republic", text: "Dominican Republic"},
+        { value: "TL-East_Timor", text: "East Timor"},
+        { value: "EC-Ecuador", text: "Ecuador"},
+        { value: "EG-Egypt", text: "Egypt"},
+        { value: "SV-El_Salvador", text: "El Salvador"},
+        { value: "GQ-Equatorial_Guinea", text: "Equatorial Guinea"},
+        { value: "ER-Eritrea", text: "Eritrea"},
+        { value: "EE-Estonia", text: "Estonia"},
+        { value: "SZ-Eswatini", text: "Eswatini"},
+        { value: "ET-Ethiopia", text: "Ethiopia"},
+        { value: "FJ-Fiji", text: "Fiji"},
+        { value: "FI-Finland", text: "Finland"},
+        { value: "FR-France", text: "France"},
+        { value: "GA-Gabon", text: "Gabon"},
+        { value: "GE-Georgia", text: "Georgia"},
+        { value: "DE-Germany", text: "Germany"},
+        { value: "GH-Ghana", text: "Ghana"},
+        { value: "GR-Greece", text: "Greece"},
+        { value: "GD-Grenada", text: "Grenada"},
+        { value: "GT-Guatemala", text: "Guatemala"},
+        { value: "GN-Guinea", text: "Guinea"},
+        { value: "GW-Guinea-Bissau", text: "Guinea-Bissau"},
+        { value: "GY-Guyana", text: "Guyana"},
+        { value: "HT-Haiti", text: "Haiti"},
+        { value: "HN-Honduras", text: "Honduras"},
+        { value: "HU-Hungary", text: "Hungary"},
+        { value: "IS-Iceland", text: "Iceland"},
+        { value: "IN-India", text: "India"},
+        { value: "ID-Indonesia", text: "Indonesia"},
+        { value: "IR-Iran", text: "Iran"},
+        { value: "IQ-Iraq", text: "Iraq"},
+        { value: "IE-Ireland", text: "Ireland"},
+        { value: "IL-Israel", text: "Israel"},
+        { value: "IT-Italy", text: "Italy"},
+        { value: "CI-Ivory_Coast", text: "Ivory Coast"},
+        { value: "JM-Jamaica", text: "Jamaica"},
+        { value: "JP-Japan", text: "Japan"},
+        { value: "JO-Jordan", text: "Jordan"},
+        { value: "KZ-Kazakhstan", text: "Kazakhstan"},
+        { value: "KE-Kenya", text: "Kenya"},
+        { value: "KI-Kiribati", text: "Kiribati"},
+        { value: "XK-Kosovo", text: "Kosovo"},
+        { value: "KW-Kuwait", text: "Kuwait"},
+        { value: "KG-Kyrgyzstan", text: "Kyrgyzstan"},
+        { value: "LA-Laos", text: "Laos"},
+        { value: "LV-Latvia", text: "Latvia"},
+        { value: "LB-Lebanon", text: "Lebanon"},
+        { value: "LS-Lesotho", text: "Lesotho"},
+        { value: "LR-Liberia", text: "Liberia"},
+        { value: "LY-Libya", text: "Libya"},
+        { value: "LI-Liechtenstein", text: "Liechtenstein"},
+        { value: "LT-Lithuania", text: "Lithuania"},
+        { value: "LU-Luxembourg", text: "Luxembourg"},
+        { value: "MG-Madagascar", text: "Madagascar"},
+        { value: "MW-Malawi", text: "Malawi"},
+        { value: "MY-Malaysia", text: "Malaysia"},
+        { value: "MV-Maldives", text: "Maldives"},
+        { value: "ML-Mali", text: "Mali"},
+        { value: "MT-Malta", text: "Malta"},
+        { value: "MH-Marshall_Islands", text: "Marshall Islands"},
+        { value: "MR-Mauritania", text: "Mauritania"},
+        { value: "MU-Mauritius", text: "Mauritius"},
+        { value: "MX-Mexico", text: "Mexico"},
+        { value: "FM-Federated_States_of_Micronesia", text: "Federated States of Micronesia"},
+        { value: "MD-Moldova", text: "Moldova"},
+        { value: "MC-Monaco", text: "Monaco"},
+        { value: "MN-Mongolia", text: "Mongolia"},
+        { value: "ME-Montenegro", text: "Montenegro"},
+        { value: "MA-Morocco", text: "Morocco"},
+        { value: "MZ-Mozambique", text: "Mozambique"},
+        { value: "MM-Myanmar_(Burma)", text: "Myanmar (Burma)"},
+        { value: "NA-Namibia", text: "Namibia"},
+        { value: "NR-Nauru", text: "Nauru"},
+        { value: "NP-Nepal", text: "Nepal"},
+        { value: "NL-Netherlands", text: "Netherlands"},
+        { value: "NZ-New_Zealand", text: "New Zealand"},
+        { value: "NI-Nicaragua", text: "Nicaragua"},
+        { value: "NE-Niger", text: "Niger"},
+        { value: "NG-Nigeria", text: "Nigeria"},
+        { value: "KP-North_Korea", text: "North Korea"},
+        { value: "MK-North_Macedonia", text: "North Macedonia"},
+        { value: "NO-Norway", text: "Norway"},
+        { value: "OM-Oman", text: "Oman"},
+        { value: "PK-Pakistan", text: "Pakistan"},
+        { value: "PW-Palau", text: "Palau"},
+        { value: "PS-Palestine", text: "Palestine"},
+        { value: "PA-Panama", text: "Panama"},
+        { value: "PG-Papua_New_Guinea", text: "Papua New Guinea"},
+        { value: "PY-Paraguay", text: "Paraguay"},
+        { value: "PE-Peru", text: "Peru"},
+        { value: "PH-Philippines", text: "Philippines"},
+        { value: "PL-Poland", text: "Poland"},
+        { value: "PT-Portugal", text: "Portugal"},
+        { value: "QA-Qatar", text: "Qatar"},
+        { value: "RO-Romania", text: "Romania"},
+        { value: "RU-Russia", text: "Russia"},
+        { value: "RW-Rwanda", text: "Rwanda"},
+        { value: "KN-St_Kitts_and_Nevis", text: "St Kitts and Nevis"},
+        { value: "LC-St_Lucia", text: "St Lucia"},
+        { value: "VC-St_Vincent", text: "St Vincent"},
+        { value: "WS-Samoa", text: "Samoa"},
+        { value: "SM-San_Marino", text: "San Marino"},
+        { value: "ST-Sao_Tome_and_Principe", text: "Sao Tome and Principe"},
+        { value: "SA-Saudi_Arabia", text: "Saudi Arabia"},
+        { value: "SN-Senegal", text: "Senegal"},
+        { value: "RS-Serbia", text: "Serbia"},
+        { value: "SC-Seychelles", text: "Seychelles"},
+        { value: "SL-Sierra_Leone", text: "Sierra Leone"},
+        { value: "SG-Singapore", text: "Singapore"},
+        { value: "SK-Slovakia", text: "Slovakia"},
+        { value: "SI-Slovenia", text: "Slovenia"},
+        { value: "SB-Solomon_Islands", text: "Solomon Islands"},
+        { value: "SO-Somalia", text: "Somalia"},
+        { value: "ZA-South_Africa", text: "South Africa"},
+        { value: "KR-South_Korea", text: "South Korea"},
+        { value: "SS-South_Sudan", text: "South Sudan"},
+        { value: "ES-Spain", text: "Spain"},
+        { value: "LK-Sri_Lanka", text: "Sri Lanka"},
+        { value: "SD-Sudan", text: "Sudan"},
+        { value: "SR-Suriname", text: "Suriname"},
+        { value: "SE-Sweden", text: "Sweden"},
+        { value: "CH-Switzerland", text: "Switzerland"},
+        { value: "SY-Syria", text: "Syria"},
+        { value: "TJ-Tajikistan", text: "Tajikistan"},
+        { value: "TZ-Tanzania", text: "Tanzania"},
+        { value: "TH-Thailand", text: "Thailand"},
+        { value: "BS-The_Bahamas", text: "The Bahamas"},
+        { value: "GM-The_Gambia", text: "The Gambia"},
+        { value: "TG-Togo", text: "Togo"},
+        { value: "TO-Tonga", text: "Tonga"},
+        { value: "TT-Trinidad_and_Tobago", text: "Trinidad and Tobago"},
+        { value: "TN-Tunisia", text: "Tunisia"},
+        { value: "TR-Turkey", text: "Turkey"},
+        { value: "TM-Turkmenistan", text: "Turkmenistan"},
+        { value: "TV-Tuvalu", text: "Tuvalu"},
+        { value: "UG-Uganda", text: "Uganda"},
+        { value: "UA-Ukraine", text: "Ukraine"},
+        { value: "AE-United_Arab_Emirates", text: "United Arab Emirates"},
+        { value: "GB-United_Kingdom", text: "United Kingdom"},
+        { value: "US-United_States", text: "United States"},
+        { value: "UY-Uruguay", text: "Uruguay"},
+        { value: "UZ-Uzbekistan", text: "Uzbekistan"},
+        { value: "VU-Vanuatu", text: "Vanuatu"},
+        { value: "VA-Vatican_City", text: "Vatican City"},
+        { value: "VE-Venezuela", text: "Venezuela"},
+        { value: "VN-Vietnam", text: "Vietnam"},
+        { value: "YE-Yemen", text: "Yemen"},
+        { value: "ZM-Zambia", text: "Zambia"},
+        { value: "ZW-Zimbabwe", text: "Zimbabwe"}
+      ]
+    })
+  }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+{% endcall %}
