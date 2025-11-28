@@ -1,0 +1,43 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-l">Dewiswch eich cyfeiriad</h1>
+
+<form action="/form-handler" method="post" novalidate>
+  {{ govukRadios({
+    name: "results",
+    items: [
+      {
+        value: "1",
+        text: "1 Arundel Mews, Worthing, BN11 5RG",
+        id: "1"
+      },
+      {
+        value: "2a",
+        text: "2a Arundel Mews, Worthing, BN11 5RG",
+        id: "2a"
+      },
+      {
+        value: "Flat 1, 3",
+        text: "Flat 1, 3 Arundel Mews, Worthing, BN11 5RG",
+        id: "Flat 1, 3"
+      },
+      {
+        divider: "neu"
+      },
+      {
+        value: "None of these",
+        text: "Dim un o’r rhain",
+        id: "None of these"
+      }
+    ]
+  }) }}
+
+  {{ govukButton({
+    text: "Parhau"
+  }) }}
+</form>

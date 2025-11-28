@@ -1,0 +1,39 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<h1 class="govuk-heading-l">Chwilio am eich cyfeiriad</h1>
+
+{{
+  govukInput({
+    label: {
+      text: "Cod post"
+    },
+    id: "postcode",
+    name: "postcode",
+    classes: "govuk-input--width-10",
+    autocomplete: "postal-code"
+  })
+}}
+
+{{
+  govukInput({
+    label: {
+      text: "Enw neu rif yr eiddo (dewisol)"
+    },
+    hint: {
+      text: 'Er enghraifft, Tegfan, 116 neu Fflat 37a.'
+    },
+    id: "property",
+    name: "property"
+  })
+}}
+
+<p class="govuk-body"><a class="govuk-link" href="#">Nodwch y cyfeiriad â llaw</a></p>
+
+{{ govukButton({
+  text: "Parhau"
+}) }}
