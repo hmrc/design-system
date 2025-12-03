@@ -2,7 +2,17 @@
 layout: layout-example.njk
 ---
 
-<p class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span>
-    Postcode can only contain letters a to z, numbers 0 to 9 or spaces
-</p>
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Postcode"
+  },
+  classes: "govuk-input--width-10",
+  id: "postcode",
+  name: "postcode",
+  errorMessage: {
+    text: "Postcode can only contain letters a to z, numbers 0 to 9 or spaces"
+  },
+  autocomplete: "postal-code"
+}) }}

@@ -2,7 +2,16 @@
 layout: layout-example.njk
 ---
 
-<p class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span>
-    Enter postcode in correct format
-</p>
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{{ govukInput({
+  label: {
+    text: "Postcode"
+  },
+  classes: "govuk-input--width-10",
+  id: "postcode",
+  name: "postcode",
+  errorMessage: {
+    text: "Enter postcode in correct format"
+  },
+  autocomplete: "postal-code"
+}) }}

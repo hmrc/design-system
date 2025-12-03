@@ -2,7 +2,17 @@
 layout: layout-example.njk
 ---
 
-<p class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span>
-    Nodwch god post yn y fformat cywir
-</p>
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Cod post"
+  },
+  classes: "govuk-input--width-10",
+  id: "postcode",
+  name: "postcode",
+  errorMessage: {
+    text: "Nodwch god post yn y fformat cywir"
+  },
+  autocomplete: "postal-code"
+}) }}
