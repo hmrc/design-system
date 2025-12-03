@@ -1,0 +1,18 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Postcode"
+  },
+  classes: "govuk-input--width-10",
+  id: "postcode",
+  name: "postcode",
+  errorMessage: {
+    text: "We could not find any addresses for that postcode. Enter a known postcode, or enter the address manually."
+  },
+  autocomplete: "postal-code"
+}) }}

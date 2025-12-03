@@ -1,0 +1,18 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Cod post"
+  },
+  classes: "govuk-input--width-10",
+  id: "postcode",
+  name: "postcode",
+  errorMessage: {
+    text: "Nodwch god post yn y fformat cywir"
+  },
+  autocomplete: "postal-code"
+}) }}

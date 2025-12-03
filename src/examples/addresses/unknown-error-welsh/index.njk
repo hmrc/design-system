@@ -1,0 +1,18 @@
+---
+layout: layout-example.njk
+---
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Cod post"
+  },
+  classes: "govuk-input--width-10",
+  id: "postcode",
+  name: "postcode",
+  errorMessage: {
+    text: "Nid oedd modd i ni ddod o hyd i unrhyw gyfeiriadau ar gyfer cod post hynny. Nodwch god post sy’n hysbys, neu nodwch y cyfeiriad â llaw."
+  },
+  autocomplete: "postal-code"
+}) }}

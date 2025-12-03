@@ -51,6 +51,7 @@ layout: twoColumnPage.njk
   example({
     item: 'addresses',
     example: 'country',
+    welsh: 'country-welsh',
     description: 'Select your country'
   })
 }}
@@ -67,6 +68,7 @@ layout: twoColumnPage.njk
   example({
     item: 'addresses',
     example: 'find',
+    welsh: 'find-welsh',
     description: 'Find your address'
   })
 }}
@@ -79,6 +81,7 @@ layout: twoColumnPage.njk
   example({
     item: 'addresses',
     example: 'results',
+    welsh: 'results-welsh',
     description: 'Choose your address'
   })
 }}
@@ -99,6 +102,7 @@ If a user selects ‘None of the these’, take them to the ‘Manually enter or
   example({
     item: 'addresses',
     example: 'manual',
+    welsh: 'manual-welsh',
     description: 'Enter your address'
   })
 }}
@@ -119,6 +123,7 @@ Only include the ‘Organisation’ field if it is relevant to your service, for
   example({
     item: 'addresses',
     example: 'review',
+    welsh: 'review-welsh',
     description: 'Review and confirm'
   })
 }}
@@ -136,32 +141,47 @@ Make sure errors follow the <a class="govuk-link" href="https://design-system.se
 </p>
 
 <p class="govuk-body">
-  If there is a problem with the postcode after ignoring any unwanted characters:
+  Only show these errors if there is a problem with the postcode after ignoring any unwanted characters.
 </p>
-
-<h4 class="govuk-heading-s" id="address-wrong-format">
-  If the postcode is in the wrong format
-</h4>
 
 <p class="govuk-body">
-  Say ‘Enter postcode in the correct format’.
+  If the postcode is in the wrong format:
 </p>
 
-<h4 class="govuk-heading-s" id="address-forbidden-characters">
-  If the postcode field contains forbidden characters
-</h4>
+{{
+  example({
+    item: 'addresses',
+    example: 'format-error',
+    welsh: 'format-error-welsh',
+    description: 'Postcode format error'
+  })
+}}
 
 <p class="govuk-body">
-  Say ‘Postcode can only include letters a to z, numbers 0 to 9 or spaces’.
+  If the postcode field contains forbidden characters:
 </p>
 
-<h4 class="govuk-heading-s" id="postcode-not-found">
-  If the postcode is in the correct format but does not match any known addresses
-</h4>
+{{
+  example({
+    item: 'addresses',
+    example: 'forbidden-characters-error',
+    welsh: 'forbidden-characters-error-welsh',
+    description: 'Postcode forbidden character error'
+  })
+}}
 
 <p class="govuk-body">
-  Say ‘We could not find any addresses for that postcode. Enter a known postcode, or enter the address manually.’.
+  If the postcode is in the correct format but does not match any known addresses:
 </p>
+
+{{
+  example({
+    item: 'addresses',
+    example: 'unknown-error',
+    welsh: 'unknown-error-welsh',
+    description: 'Postcode unknown error'
+  })
+}}
 
 <h2 class="govuk-heading-l" id="research">
   Research
