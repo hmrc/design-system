@@ -1,0 +1,74 @@
+---
+title: Sign in to use a service
+layout: twoColumnPage.njk
+---
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+{% from "_codeSnippet.njk" import codeSnippet %}
+
+<h2 id="when-to-use" class="govuk-heading-l">When to use</h2>
+
+<p class="govuk-body">Use this pattern to create a GOV.UK page that directs users to sign in to an HMRC service.</p>
+
+<h2 id="when-not-to-use" class="govuk-heading-l">When not to use</h2>
+
+<p class="govuk-body">Do not use when the service does not need the user to sign in.</p>
+
+<h2 id="how-to-design-using-this-pattern" class="govuk-heading-l">How to design using this pattern</h2>
+
+<p class="govuk-body">Check there isn’t already a pattern for your service. If your service doesn’t have a pattern, add the following text before linking to the service:</p>
+
+{{
+    codeSnippet({
+      code: 'You will need to sign in to use this service. If you do not already have sign in details, you will be able to create them.',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">If the service asks users to prove their identity, include the following text:</p>
+
+{{
+    codeSnippet({
+      code: 'You will be told when you sign in if you need to prove your identity. This is to keep your details safe and usually involves using a photo ID like a passport or driving licence.',
+      canCopy: true
+    })
+  }}
+
+<h3 id="referencing-a-specific-account-or-task" class="govuk-heading-m">Referencing a specific account or task</h3>
+
+{{
+    codeSnippet({
+      code: 'You will need to sign in to your personal tax account to find your National Insurance number online. If you do not already have sign in details, you will be able to create them.',
+      canCopy: true
+    })
+  }}
+
+<h3 id="referencing-in-a-bulleted-list" class="govuk-heading-m">Referencing in a bulleted list</h3>
+
+{{ example({
+    item: 'sign-in-to-use-a-service',
+    example: 'body',
+    description: 'body',
+    markdown: 'body-markdown',
+    markdownOnly: true
+}) }}
+
+  <h3 id="when-users-need-the-same-sign-in-details-used-previously" class="govuk-heading-m">When users need the same sign in details used previously</h3>
+
+  {{
+    codeSnippet({
+      code: 'You will need the sign in details you used when you [action and name of service].',
+      canCopy: true
+    })
+  }}
+
+<p class="govuk-body">Use this content when the user could have carried out other actions such as applying, registering, claiming and so on.</p>
+  
+<h3 id="when-registering-for-a-service" class="govuk-heading-m">When registering for a service </h3>
+
+{{
+    codeSnippet({
+      code: 'You need to sign in to [action and name of service]. If you do not already have sign in details, you will be able to create them when you sign in for the first time.',
+      canCopy: true
+    })
+  }}
