@@ -1,5 +1,6 @@
 {% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 {% from "_phaseBanner.njk" import phaseBanner %}
 
 {% extends 'default.njk' %}
@@ -10,27 +11,26 @@
   </div>
 
   <div class="app-pane__body govuk-width-container">
-
     {% set primaryNavItems = [] %}
     {% set secondaryNavItems = [] %}
 
     {%- for navSection in navigation -%}
-      {%- if navSection.title === section -%}
+      {%- if navSection.href === section -%}
         {% set items = navSection.items %}
-        {%- for item in items -%}
-          {%- if item.placement === 'primary' -%}
+        {% for item in items %}
+          {% if item.placement === 'primary' %}
             {% set primaryNavItems = navSection.items %}
-          {%- endif -%}
+          {% endif %}
 
           {%- if item.placement === 'secondary' -%}
             {% set secondaryNavItems = navSection.items %}
           {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-    {%- endfor -%}
-
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
 
     {% set indexPageLink = '/' ~ section ~ '/' %}
+
     <div data-module="subnav-toggle">
       <div class="app-subnav-toggle">
         <button hidden aria-controls="app-navigation" class="app-subnav-toggle__button">Menu</button>
@@ -45,10 +45,10 @@
 
           <div class="app-subnav">
 
-            {%- if primaryNavItems | length > 0 -%}
-              <ul class="app-subnav__section">
-                {%- for item in primaryNavItems -%}
-                  {%- set isActive = item.filepath ~ '/' === filepath -%}
+              {%- if primaryNavItems | length > 0 -%}
+                <ul class="app-subnav__section">
+                  {%- for item in primaryNavItems -%}
+                    {%- set isActive = item.filepath ~ '/' === filepath -%}
 
                   {%- if item.placement === 'primary' -%}
                     <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
@@ -67,7 +67,7 @@
                 {%- set isActive = item.filepath ~ '/' === filepath -%}
 
                 {%- if item.placement === 'secondary' -%}
-                  <li class="app-subnav__section-item{%if isActive%} app-subnav__section-item--current{% endif %}">
+                  <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
                     <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
                       {{item.text}}
                     </a>

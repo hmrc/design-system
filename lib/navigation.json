@@ -1,0 +1,18 @@
+[
+  {
+    "text": "Start now",
+    "href": "get-started"
+  },
+  {
+    "text": "Patterns for services",
+    "href": "hmrc-design-patterns"
+  },
+  {
+    "text": "Patterns for GOV.UK",
+    "href": "patterns-hmrc-govuk-team"
+  },
+  {
+    "text": "Style guide",
+    "href": "hmrc-content-style-guide"
+  }
+]
