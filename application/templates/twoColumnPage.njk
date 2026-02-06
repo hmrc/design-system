@@ -17,10 +17,10 @@
     {%- for navSection in navigation -%}
       {%- if navSection.href === section -%}
         {% set items = navSection.items %}
-        {% for item in items %}
-          {% if item.placement === 'primary' %}
+        {%- for item in items -%}
+          {%- if item.placement === 'primary' -%}
             {% set primaryNavItems = navSection.items %}
-          {% endif %}
+          {%- endif -%}
 
           {%- if item.placement === 'secondary' -%}
             {% set secondaryNavItems = navSection.items %}
@@ -36,33 +36,32 @@
         <button hidden aria-controls="app-navigation" class="app-subnav-toggle__button">Menu</button>
       </div>
 
-        <nav role="navigation" aria-labelledby="nav-header" class="app-pane__subnav" id="app-navigation">
+      <nav role="navigation" aria-labelledby="nav-header" class="app-pane__subnav" id="app-navigation">
 
-          <h2 class="govuk-heading-m govuk-visually-hidden" id="nav-header">
-            {%- set isRoot = '/' ~ filepath === indexPageLink %}
-            {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}Pages in this section{%- if not isRoot -%}</a>{%- endif -%}
-          </h2>
+        <h2 class="govuk-heading-m govuk-visually-hidden" id="nav-header">
+          {%- set isRoot = '/' ~ filepath === indexPageLink %}
+          {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}Pages in this section{%- if not isRoot -%}</a>{%- endif -%}
+        </h2>
 
-          <div class="app-subnav">
+        <div class="app-subnav">
+          {%- if primaryNavItems | length > 0 -%}
+            <ul class="app-subnav__section">
+              {%- for item in primaryNavItems -%}
+                {%- set isActive = item.filepath ~ '/' === filepath -%}
 
-              {%- if primaryNavItems | length > 0 -%}
-                <ul class="app-subnav__section">
-                  {%- for item in primaryNavItems -%}
-                    {%- set isActive = item.filepath ~ '/' === filepath -%}
+                {%- if item.placement === 'primary' -%}
+                  <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
+                    <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
+                      {{item.text}}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
 
-                  {%- if item.placement === 'primary' -%}
-                    <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
-                      <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
-                        {{item.text}}
-                      </a>
-                    </li>
-                  {%- endif -%}
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
-
-            {%- if secondaryNavItems | length > 0 -%}
-              <ul class="app-subnav__section">
+          {%- if secondaryNavItems | length > 0 -%}
+            <ul class="app-subnav__section">
               {%- for item in secondaryNavItems -%}
                 {%- set isActive = item.filepath ~ '/' === filepath -%}
 
@@ -74,11 +73,12 @@
                   </li>
                 {%- endif -%}
               {%- endfor -%}
-              </ul>
-            {%- endif -%}
-          </div>
-        </nav>
+            </ul>
+          {%- endif -%}
+        </div>
+      </nav>
     </div>
+
     <div class="app-pane__content">
       {% if (not pageHeading) %}
         {{ govukBackLink({
