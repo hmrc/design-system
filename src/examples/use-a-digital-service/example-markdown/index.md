@@ -6,4 +6,6 @@ Use this service to ...
 
 ## Before you start 
 
+You’ll need the sign in details you used when you registered for the levy.
+
 ## When you cannot use this service (optional)
