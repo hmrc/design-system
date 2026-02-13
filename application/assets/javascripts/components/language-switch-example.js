@@ -2,7 +2,7 @@
 
 function LanguageSwitchExample ($module) {
   this.$module = $module
-  this.$switches = this.$module.querySelectorAll('.app-example__language-switch a')
+  this.$switches = this.$module.querySelectorAll('.app-example__language-switch button')
   this.$iframe = this.$module.querySelector('[data-module~="app-example-frame"]')
   this.currentClassName = 'app-example__language-switch--current'
   this.getLanguageClass = function (lang) {
@@ -29,12 +29,12 @@ LanguageSwitchExample.prototype.handleClick = function (event) {
   var $target = event.target
   this.$module.querySelectorAll('.' + this.currentClassName).forEach(function ($option) {
     $option.classList.remove(self.currentClassName)
-    $option.querySelector('a').focus()
+    $option.querySelector('button').focus()
   })
-  this.$iframe.setAttribute('src', $target.getAttribute('href'))
+  this.$iframe.setAttribute('src', $target.dataset.link)
   $target.parentNode.classList.add(this.currentClassName)
   this.$module.classList.remove(this.getLanguageClass('en'), this.getLanguageClass('cy'))
-  this.$module.classList.add(this.getLanguageClass($target.getAttribute('data-lang')))
+  this.$module.classList.add(this.getLanguageClass($target.dataset.lang))
 }
 
 export default LanguageSwitchExample
