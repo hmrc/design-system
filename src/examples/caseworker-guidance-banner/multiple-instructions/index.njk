@@ -1,16 +1,20 @@
 ---
 layout: layout-example.njk
 ---
-<div class="caseworker-guidance-banner" data-module="caseworker-guidance-banner">
-  <div class="caseworker-guidance-banner__container govuk-width-container">
-    <div class="caseworker-guidance-banner__text">
-      <h2 class="govuk-heading-s caseworker-guidance-banner__title">
-        Caseworker guidance
-      </h2>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the account balance shown on this page is restricted information, do not disclose to callers</li>
-        <li><a class="govuk-link caseworker-guidance-banner__link" rel="noopener noreferrer" href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank">Debt management guidance</a> (opens in new tab)</li>
-      </ul>
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" style="border-color: #0b0c0c; background-color: #0b0c0c;">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Caseworker guidance</h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        <ul class="govuk-list govuk-list--bullet govuk-!-font-weight-bold">
+          <li>the account balance shown on this page is restricted information, do not disclose to callers</li>
+          <li><a class="govuk-link caseworker-guidance-banner__link" rel="noopener noreferrer" href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank">Debt management guidance</a> (opens in new tab)</li>
+        </ul>
+      </strong>
     </div>
   </div>
 </div>

@@ -1,13 +1,17 @@
 ---
 layout: layout-example.njk
 ---
-<div class="caseworker-guidance-banner" data-module="caseworker-guidance-banner">
-  <div class="caseworker-guidance-banner__container govuk-width-container">
-    <div class="caseworker-guidance-banner__text">
-      <h2 class="govuk-heading-s caseworker-guidance-banner__title">
-        Caseworker guidance
-      </h2>
-      Use HMRC records to complete this page. Do not request this information from the user.
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" style="border-color: #0b0c0c; background-color: #0b0c0c;">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Caseworker guidance</h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        Use HMRC records to complete this page. Do not request this information from the user.
+      </strong>
     </div>
   </div>
 </div>
