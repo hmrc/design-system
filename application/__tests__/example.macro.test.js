@@ -83,15 +83,15 @@ describe('Single page example macro', () => {
   })
 
   it('should not have a language toggle for English only examples', () => {
-    const languageToggleLink = document.querySelector('a.language-toggle')
-    expect(languageToggleLink).toBeNull()
+    const languageToggleButton = document.querySelector('button.language-toggle')
+    expect(languageToggleButton).toBeNull()
   })
 
   it('should have a language toggle for dual language examples', () => {
     const welshParameters = { ...parameters, welsh: 'example-welsh' }
     const welshDocument = documentFactory(welshParameters, options)
-    const languageToggleLink = welshDocument.querySelector('a[href="/examples/open-links-in-a-new-window-or-tab/example-welsh/"]')
-    expect(languageToggleLink).not.toBeNull()
+    const languageToggleButton = welshDocument.querySelector('button[data-link="/examples/open-links-in-a-new-window-or-tab/example-welsh/"]')
+    expect(languageToggleButton).not.toBeNull()
   })
 
   it('should have a button to show HTML code examples', () => {

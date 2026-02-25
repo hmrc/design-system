@@ -40,7 +40,8 @@
   @include govuk-font(16);
   background: govuk-colour("light-grey");
 
-  a {
+  a, 
+  button {
     color: $govuk-link-colour;
     text-decoration: none;
   }
@@ -61,10 +62,12 @@
   right: 0;
   padding: 5px govuk-spacing(2);
 
-  a {
+  button {
     @extend %govuk-link;
 
     display: inline-block;
+    border: 0;
+    cursor: pointer;
   }
 }
 
