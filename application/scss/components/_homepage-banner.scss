@@ -23,8 +23,8 @@ $hmrc-inverse-button-background-colour: govuk-colour("white") !default;
 
 $hmrc-inverse-button-colour: $hmrc-inverse-button-background-colour;
 $hmrc-inverse-button-text-colour: $hmrc-inverse-button-text-colour;
-$hmrc-inverse-button-hover-colour: govuk-tint($hmrc-inverse-button-text-colour, 90%);
-$hmrc-inverse-button-shadow-colour: govuk-shade($hmrc-inverse-button-text-colour, 30%);
+$hmrc-inverse-button-hover-colour: #e6f3f1;
+$hmrc-inverse-button-shadow-colour: #005e4e;
 
 // Because the shadow (s0) is visually 'part of' the button, we need to reduce
 // the height of the button to compensate by adjusting its padding (s1) and
