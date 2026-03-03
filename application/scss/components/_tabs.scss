@@ -105,7 +105,7 @@
 }
 
 .app-tabs__heading--current {
-  background-color: darken(govuk-colour("light-grey"), 3%);
+  background-color: darken(govuk-colour("black", $variant: "tint-95"), 3%);
 }
 
 // Tab containers
