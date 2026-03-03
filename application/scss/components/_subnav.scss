@@ -61,13 +61,13 @@ $_current-indicator-width: 4px;
     &:hover,
     &:active,
     &:visited {
-      color: $govuk-link-colour;
+      color: govuk-functional-colour(link);
     }
 
     &:focus {
-      outline: 3px solid $govuk-focus-colour;
+      outline: 3px solid govuk-functional-colour(focus);
       outline-offset: 0;
-      background-color: $govuk-focus-colour;
+      background-color: govuk-functional-colour(focus);
     }
   }
   @include govuk-media-query($until: desktop) {
@@ -87,7 +87,7 @@ $_current-indicator-width: 4px;
 .app-subnav__section {
   padding: 0 0 govuk-spacing(4);
   list-style-type: none;
-  border-bottom: 1px solid $govuk-border-colour;
+  border-bottom: 1px solid govuk-functional-colour(border);
 
   &:last-child {
     border-bottom: none;
@@ -106,7 +106,7 @@ $_current-indicator-width: 4px;
       margin-left: -(govuk-spacing(2) + $_current-indicator-width);
       padding-left: govuk-spacing(2);
       border-left: $_current-indicator-width solid govuk-colour("blue");
-      border-left-color: $govuk-link-hover-colour;
+      border-left-color: govuk-functional-colour(link-hover);
     }
   }
 }

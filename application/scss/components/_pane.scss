@@ -88,7 +88,7 @@
 
     .app-pane__content {
       overflow-x: hidden;
-      border-left: 1px solid $govuk-border-colour;
+      border-left: 1px solid govuk-functional-colour(border);
       margin-left: -1px;
     }
   }
