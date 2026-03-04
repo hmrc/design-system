@@ -15,113 +15,6 @@
 	(function (global, factory) {
 	  module.exports = factory();
 	})(commonjsGlobal, (function () {
-	  // Returns a function, that, as long as it continues to be invoked, will not
-	  // be triggered. The function will be called after it stops being called for
-	  // N milliseconds. If `immediate` is passed, trigger the function on the
-	  // leading edge, instead of the trailing.
-
-	  // eslint-disable-next-line  import/prefer-default-export
-	  function debounce(func, wait, immediate) {
-	    var _this = this;
-	    var timeout;
-	    return function () {
-	      for (var _len = arguments.length, theParams = new Array(_len), _key = 0; _key < _len; _key++) {
-	        theParams[_key] = arguments[_key];
-	      }
-	      var context = _this;
-	      var later = function later() {
-	        timeout = null;
-	        func.apply(context, theParams);
-	      };
-	      clearTimeout(timeout);
-	      timeout = setTimeout(later, wait);
-	    };
-	  }
-
-	  // TODO
-	  // Retrieve breakpoints from Sass vars?
-	  var breakpoints = {
-	    xs: 0,
-	    mobile: 320,
-	    tablet: 641,
-	    desktop: 769
-	  };
-	  function getCurrentBreakpoint(windowWidth) {
-	    var reducer = function reducer(acc, curr) {
-	      var windowInsideBreakpoint = (windowWidth || window.innerWidth) >= breakpoints[curr];
-	      return windowInsideBreakpoint ? curr : acc;
-	    };
-	    return Object.keys(breakpoints).reduce(reducer);
-	  }
-
-	  var isSmall = function isSmall(element) {
-	    return element.innerWidth <= 768;
-	  };
-	  function AccountMenu($module) {
-	    this.$module = document.querySelector($module);
-	    this.$moduleBottomMargin = this.$module.style.marginBottom;
-	    this.$mainNav = this.$module.querySelector('.hmrc-account-menu__main');
-	    this.$showNavLinkMobile = this.$module.querySelector('.hmrc-account-menu__link--menu');
-	    this.$currentBreakpoint = getCurrentBreakpoint();
-	  }
-	  AccountMenu.prototype.init = function init() {
-	    this.setup();
-	    this.$showNavLinkMobile.addEventListener('click', this.eventHandlers.showNavLinkMobileClick.bind(this));
-	    window.addEventListener('resize', debounce(this.reinstantiate.bind(this)));
-	  };
-	  AccountMenu.prototype.reinstantiate = function reinstantiate(resizeEvent) {
-	    var newBreakpoint = getCurrentBreakpoint(resizeEvent.target.innerWidth);
-	    var hasCrossedBreakpoint = this.$currentBreakpoint !== newBreakpoint;
-	    if (hasCrossedBreakpoint) {
-	      this.$currentBreakpoint = newBreakpoint;
-	      this.setup();
-	    }
-	  };
-	  AccountMenu.prototype.eventHandlers = {
-	    showNavLinkMobileClick: function showNavLinkMobileClick(event) {
-	      event.preventDefault();
-	      if (isSmall(window)) {
-	        if (this.$mainNav.classList.contains('main-nav-is-open')) {
-	          this.hideMainNavMobile(event.currentTarget);
-	        } else {
-	          this.showMainNavMobile();
-	        }
-	      }
-	    }
-	  };
-	  AccountMenu.prototype.setup = function setup() {
-	    if (isSmall(window)) {
-	      this.$module.classList.add('is-smaller');
-	      this.$showNavLinkMobile.setAttribute('aria-hidden', 'false');
-	      this.$showNavLinkMobile.removeAttribute('tabindex');
-	      this.$showNavLinkMobile.classList.remove('js-hidden');
-	      this.hideMainNavMobile(this.$showNavLinkMobile);
-	    } else {
-	      this.$module.classList.remove('is-smaller');
-	      this.$mainNav.classList.remove('main-nav-is-open', 'js-hidden');
-	      this.$showNavLinkMobile.setAttribute('aria-hidden', 'true');
-	      this.$showNavLinkMobile.setAttribute('tabindex', '-1');
-	      this.$showNavLinkMobile.classList.add('js-hidden');
-	    }
-	  };
-	  AccountMenu.prototype.showMainNavMobile = function showMainNavMobile() {
-	    // TODO: shall we add main-nav-is-open to `nav`????
-	    this.$mainNav.classList.remove('js-hidden');
-	    this.$mainNav.classList.add('main-nav-is-open');
-	    this.$mainNav.setAttribute('aria-expanded', 'true');
-	    this.$showNavLinkMobile.setAttribute('aria-expanded', 'true');
-	    this.$showNavLinkMobile.classList.add('hmrc-account-home--account--is-open');
-	  };
-	  AccountMenu.prototype.hideMainNavMobile = function hideMainNavMobile(element) {
-	    this.$mainNav.classList.remove('main-nav-is-open');
-	    this.$mainNav.setAttribute('aria-expanded', 'false');
-	    if (element.classList.contains('hmrc-account-menu__link--menu')) {
-	      this.$mainNav.classList.add('js-hidden');
-	      this.$showNavLinkMobile.setAttribute('aria-expanded', 'false');
-	      this.$showNavLinkMobile.classList.remove('hmrc-account-home--account--is-open');
-	    }
-	  };
-
 	  function BackLinkHelper($module, window, document) {
 	    this.$module = $module;
 	    this.window = window;
@@ -733,12 +626,6 @@
 	        console.error('hmrc-frontend component initialisation failed', error);
 	      }
 	    }
-	    var $AccountMenuSelector = '[data-module="hmrc-account-menu"]';
-	    if (document.querySelector($AccountMenuSelector)) {
-	      logAndIgnoreErrors(function () {
-	        new AccountMenu($AccountMenuSelector).init();
-	      });
-	    }
 	    var $HmrcPrintLinks = document.querySelectorAll('a[data-module="hmrc-print-link"]');
 	    $HmrcPrintLinks.forEach(function ($HmrcPrintLink) {
 	      logAndIgnoreErrors(function () {
@@ -768,7 +655,6 @@
 	  }
 	  var all = {
 	    initAll: initAll,
-	    AccountMenu: AccountMenu,
 	    TimeoutDialog: TimeoutDialog,
 	    UserResearchBanner: UserResearchBanner,
 	    BackLinkHelper: BackLinkHelper
@@ -1616,6 +1502,7 @@
 	    var _ref, _this$config$maxwords;
 	    super($root, config);
 	    this.$textarea = void 0;
+	    this.count = 0;
 	    this.$visibleCountMessage = void 0;
 	    this.$screenReaderCountMessage = void 0;
 	    this.lastInputTimestamp = null;
@@ -1671,15 +1558,22 @@
 	    $textareaDescription.classList.add('govuk-visually-hidden');
 	    this.$textarea.removeAttribute('maxlength');
 	    this.bindChangeEvents();
-	    window.addEventListener('pageshow', () => this.updateCountMessage());
+	    window.addEventListener('pageshow', () => {
+	      if (this.$textarea.value !== this.$textarea.textContent) {
+	        this.updateCount();
+	        this.updateCountMessage();
+	      }
+	    });
+	    this.updateCount();
 	    this.updateCountMessage();
 	  }
 	  bindChangeEvents() {
-	    this.$textarea.addEventListener('keyup', () => this.handleKeyUp());
+	    this.$textarea.addEventListener('input', () => this.handleInput());
 	    this.$textarea.addEventListener('focus', () => this.handleFocus());
 	    this.$textarea.addEventListener('blur', () => this.handleBlur());
 	  }
-	  handleKeyUp() {
+	  handleInput() {
+	    this.updateCount();
 	    this.updateVisibleCountMessage();
 	    this.lastInputTimestamp = Date.now();
 	  }
@@ -1706,7 +1600,7 @@
 	    this.updateScreenReaderCountMessage();
 	  }
 	  updateVisibleCountMessage() {
-	    const remainingNumber = this.maxLength - this.count(this.$textarea.value);
+	    const remainingNumber = this.maxLength - this.count;
 	    const isError = remainingNumber < 0;
 	    this.$visibleCountMessage.classList.toggle('govuk-character-count__message--disabled', !this.isOverThreshold());
 	    if (!this.$errorMessage) {
@@ -1724,16 +1618,18 @@
 	    }
 	    this.$screenReaderCountMessage.textContent = this.getCountMessage();
 	  }
-	  count(text) {
+	  updateCount() {
+	    const text = this.$textarea.value;
 	    if (this.config.maxwords) {
 	      var _text$match;
 	      const tokens = (_text$match = text.match(/\S+/g)) != null ? _text$match : [];
-	      return tokens.length;
+	      this.count = tokens.length;
+	      return;
 	    }
-	    return text.length;
+	    this.count = text.length;
 	  }
 	  getCountMessage() {
-	    const remainingNumber = this.maxLength - this.count(this.$textarea.value);
+	    const remainingNumber = this.maxLength - this.count;
 	    const countType = this.config.maxwords ? 'words' : 'characters';
 	    return this.formatCountMessage(remainingNumber, countType);
 	  }
@@ -1750,7 +1646,7 @@
 	    if (!this.config.threshold) {
 	      return true;
 	    }
-	    const currentLength = this.count(this.$textarea.value);
+	    const currentLength = this.count;
 	    const maxLength = this.maxLength;
 	    const thresholdValue = maxLength * this.config.threshold / 100;
 	    return thresholdValue <= currentLength;
@@ -2537,89 +2433,6 @@
 	}
 
 	/**
-	 * Header component
-	 *
-	 * @preserve
-	 */
-	class Header extends Component {
-	  /**
-	   * Apply a matchMedia for desktop which will trigger a state sync if the
-	   * browser viewport moves between states.
-	   *
-	   * @param {Element | null} $root - HTML element to use for header
-	   */
-	  constructor($root) {
-	    super($root);
-	    this.$menuButton = void 0;
-	    this.$menu = void 0;
-	    this.menuIsOpen = false;
-	    this.mql = null;
-	    const $menuButton = this.$root.querySelector('.govuk-js-header-toggle');
-	    if (!$menuButton) {
-	      return this;
-	    }
-	    this.$root.classList.add('govuk-header--with-js-navigation');
-	    const menuId = $menuButton.getAttribute('aria-controls');
-	    if (!menuId) {
-	      throw new ElementError({
-	        component: Header,
-	        identifier: 'Navigation button (`<button class="govuk-js-header-toggle">`) attribute (`aria-controls`)'
-	      });
-	    }
-	    const $menu = document.getElementById(menuId);
-	    if (!$menu) {
-	      throw new ElementError({
-	        component: Header,
-	        element: $menu,
-	        identifier: `Navigation (\`<ul id="${menuId}">\`)`
-	      });
-	    }
-	    this.$menu = $menu;
-	    this.$menuButton = $menuButton;
-	    this.setupResponsiveChecks();
-	    this.$menuButton.addEventListener('click', () => this.handleMenuButtonClick());
-	  }
-	  setupResponsiveChecks() {
-	    const breakpoint = getBreakpoint('desktop');
-	    if (!breakpoint.value) {
-	      throw new ElementError({
-	        component: Header,
-	        identifier: `CSS custom property (\`${breakpoint.property}\`) on pseudo-class \`:root\``
-	      });
-	    }
-	    this.mql = window.matchMedia(`(min-width: ${breakpoint.value})`);
-	    if ('addEventListener' in this.mql) {
-	      this.mql.addEventListener('change', () => this.checkMode());
-	    } else {
-	      this.mql.addListener(() => this.checkMode());
-	    }
-	    this.checkMode();
-	  }
-	  checkMode() {
-	    if (!this.mql || !this.$menu || !this.$menuButton) {
-	      return;
-	    }
-	    if (this.mql.matches) {
-	      this.$menu.removeAttribute('hidden');
-	      this.$menuButton.setAttribute('hidden', '');
-	    } else {
-	      this.$menuButton.removeAttribute('hidden');
-	      this.$menuButton.setAttribute('aria-expanded', this.menuIsOpen.toString());
-	      if (this.menuIsOpen) {
-	        this.$menu.removeAttribute('hidden');
-	      } else {
-	        this.$menu.setAttribute('hidden', '');
-	      }
-	    }
-	  }
-	  handleMenuButtonClick() {
-	    this.menuIsOpen = !this.menuIsOpen;
-	    this.checkMode();
-	  }
-	}
-	Header.moduleName = 'govuk-header';
-
-	/**
 	 * Notification Banner component
 	 *
 	 * @preserve
@@ -2950,9 +2763,9 @@
 	    }
 	    if (this.mql.matches) {
 	      this.$menu.removeAttribute('hidden');
-	      this.$menuButton.setAttribute('hidden', '');
+	      setAttributes(this.$menuButton, attributesForHidingButton);
 	    } else {
-	      this.$menuButton.removeAttribute('hidden');
+	      removeAttributes(this.$menuButton, Object.keys(attributesForHidingButton));
 	      this.$menuButton.setAttribute('aria-expanded', this.menuIsOpen.toString());
 	      if (this.menuIsOpen) {
 	        this.$menu.removeAttribute('hidden');
@@ -2967,6 +2780,34 @@
 	  }
 	}
 	ServiceNavigation.moduleName = 'govuk-service-navigation';
+	const attributesForHidingButton = {
+	  hidden: '',
+	  'aria-hidden': 'true'
+	};
+
+	/**
+	 * Sets a group of attributes on the given element
+	 *
+	 * @param {Element} $element - The element to set the attribute on
+	 * @param {{[attributeName: string]: string}} attributes - The attributes to set
+	 */
+	function setAttributes($element, attributes) {
+	  for (const attributeName in attributes) {
+	    $element.setAttribute(attributeName, attributes[attributeName]);
+	  }
+	}
+
+	/**
+	 * Removes a list of attributes from the given element
+	 *
+	 * @param {Element} $element - The element to remove the attributes from
+	 * @param {string[]} attributeNames - The names of the attributes to remove
+	 */
+	function removeAttributes($element, attributeNames) {
+	  for (const attributeName of attributeNames) {
+	    $element.removeAttribute(attributeName);
+	  }
+	}
 
 	/**
 	 * Skip link component
@@ -3322,7 +3163,7 @@
 	    }
 	    return;
 	  }
-	  const components = [[Accordion, config.accordion], [Button, config.button], [CharacterCount, config.characterCount], [Checkboxes], [ErrorSummary, config.errorSummary], [ExitThisPage, config.exitThisPage], [FileUpload, config.fileUpload], [Header], [NotificationBanner, config.notificationBanner], [PasswordInput, config.passwordInput], [Radios], [ServiceNavigation], [SkipLink], [Tabs]];
+	  const components = [[Accordion, config.accordion], [Button, config.button], [CharacterCount, config.characterCount], [Checkboxes], [ErrorSummary, config.errorSummary], [ExitThisPage, config.exitThisPage], [FileUpload, config.fileUpload], [NotificationBanner, config.notificationBanner], [PasswordInput, config.passwordInput], [Radios], [ServiceNavigation], [SkipLink], [Tabs]];
 	  components.forEach(([Component, componentConfig]) => {
 	    createAll(Component, componentConfig, options);
 	  });
