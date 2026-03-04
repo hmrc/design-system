@@ -11,17 +11,12 @@ const entryPoint = './src/all-patterns/index.njk'
 
 const rootPath = pathFromRoot('src', 'examples')
 
-const layouts = [
-  `${rootPath}/account-header/*/index.njk`
-]
-
 gulp.task('scrape-patterns', (done) => {
   let isFirstMatch = true
   gulp.src([
     entryPoint,
     // All pattern examples
-    `${rootPath}/*/*/index.njk`,
-    ...layouts.map(layout => `!${layout}`)
+    `${rootPath}/*/*/index.njk`
   ])
     .pipe(concat('patterns.njk'))
     // Remove all tags except first
@@ -36,10 +31,7 @@ gulp.task('scrape-patterns', (done) => {
 
 gulp.task('scrape-layouts', (done) => {
   let isFirstMatch = true
-  gulp.src([
-    entryPoint,
-    ...layouts
-  ])
+  gulp.src([entryPoint])
     .pipe(concat('layouts.njk'))
     // Remove all tags except first
     .pipe(replace(njkTagRegEx, (match) => {

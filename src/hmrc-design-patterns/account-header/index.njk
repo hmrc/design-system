@@ -4,7 +4,6 @@ layout: twoColumnPage.njk
 status: archived
 ---
 
-{% from "_example.njk" import example %}
 {% from "_codeSnippet.njk" import codeSnippet %}
 {% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
 
@@ -33,14 +32,7 @@ status: archived
   <li>the Welsh language toggle, if your service is available in Welsh</li>
 </ul>
 
-{{
-  example({
-    item: 'account-header',
-    description: 'Account header',
-    example: 'example',
-    welsh: 'example-welsh'
-  })
-}}
+<div class="govuk-inset-text">Example removed due to the component being removed from hmrc-frontend.</div>
 
 <p class="govuk-body">
   You can also use a layout designed for the account header. Change the first line of code to
