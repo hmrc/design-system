@@ -6,7 +6,7 @@
   padding: 0;
   overflow: visible;
   list-style-type: none;
-  border: 1px solid $govuk-border-colour;
+  border: 1px solid govuk-functional-colour(border);
 
   .app-prose-scope & { // A specific selector to reset .app-prose-scope ul
     margin-bottom: 0;
@@ -28,18 +28,18 @@
     margin-top: -1px;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
-    color: $govuk-link-colour;
+    color: govuk-functional-colour(link);
     background: inherit;
     font-weight: bold;
     text-decoration: none;
 
     .app-prose-scope &:focus { // A specific selector to reset .app-prose-scope a:focus
-      color: $govuk-link-colour;
+      color: govuk-functional-colour(link);
       background: inherit;
     }
 
     .app-prose-scope &:visited {
-      color: $govuk-link-colour;
+      color: govuk-functional-colour(link);
     }
   }
 
@@ -49,8 +49,8 @@
 }
 
 .app-tabs__item--current {
-  border-right: 1px solid $govuk-border-colour;
-  border-left: 1px solid $govuk-border-colour;
+  border-right: 1px solid govuk-functional-colour(border);
+  border-left: 1px solid govuk-functional-colour(border);
   background: govuk-colour("white");
 
   // Offset the added borders
@@ -70,7 +70,7 @@
 
   a {
     .app-prose-scope & {
-      color: $govuk-text-colour;
+      color: govuk-functional-colour(text);
       @include govuk-link-style-no-underline;
     }
   }
@@ -83,15 +83,15 @@
     position: relative;
     z-index: 2;
     padding: govuk-spacing(3);
-    border: 1px solid $govuk-border-colour;
+    border: 1px solid govuk-functional-colour(border);
     border-top: 0;
-    color: $govuk-link-colour;
+    color: govuk-functional-colour(link);
     background: inherit;
     font-weight: bold;
     text-decoration: none;
 
     &:visited {
-      color: $govuk-link-colour;
+      color: govuk-functional-colour(link);
     }
 
     &:focus {
@@ -105,12 +105,12 @@
 }
 
 .app-tabs__heading--current {
-  background-color: darken(govuk-colour("light-grey"), 3%);
+  background-color: darken(govuk-colour("black", $variant: "tint-95"), 3%);
 }
 
 // Tab containers
 .app-tabs__container {
-  border: 1px solid $govuk-border-colour;
+  border: 1px solid govuk-functional-colour(border);
   padding: govuk-spacing(2);
 }
 

@@ -60,7 +60,7 @@ $arrowSprite: "https://assets.publishing.service.gov.uk/manuals-frontend/arrows_
         // We're nesting quite deep here...
         // scss-lint:disable NestingDepth
         &.disabled {
-          color: $govuk-secondary-text-colour;
+          color: govuk-functional-colour(secondary-text);
           text-decoration: none;
           cursor: default;
         }
@@ -72,7 +72,7 @@ $arrowSprite: "https://assets.publishing.service.gov.uk/manuals-frontend/arrows_
 }
 
 .js-openable {
-  border-top: 1px solid $govuk-border-colour;
+  border-top: 1px solid govuk-functional-colour(border);
   padding-bottom: govuk-spacing(6);
 
   @include govuk-media-query($from: tablet) {
@@ -150,7 +150,7 @@ $arrowSprite: "https://assets.publishing.service.gov.uk/manuals-frontend/arrows_
 
 .subsection-id {
   min-width: 135px;
-  color: $govuk-secondary-text-colour;
+  color: govuk-functional-colour(secondary-text);
   padding-right: govuk-spacing(6);
 }
 

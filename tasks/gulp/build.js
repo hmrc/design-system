@@ -59,10 +59,7 @@ gulp.task('compile', (done) => {
         lstripBlocks: true,
         path: templatePaths,
         filters,
-        globals: {
-          ...globals,
-          govukRebrand: true
-        }
+        globals
       }
     }))
     .use(layouts({
@@ -71,10 +68,7 @@ gulp.task('compile', (done) => {
       pattern: '**/*.html',
       engineOptions: {
         path: templatePaths,
-        globals: {
-          ...globals,
-          govukRebrand: true
-        }
+        globals
       },
       transform: 'nunjucks'
     }))

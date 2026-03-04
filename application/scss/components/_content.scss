@@ -33,7 +33,7 @@
     height: auto;
     @include govuk-responsive-margin(2, "top");
     @include govuk-responsive-margin(6, "bottom");
-    border: 1px solid $govuk-border-colour;
+    border: 1px solid govuk-functional-colour(border);
   }
 
   img {
@@ -68,7 +68,7 @@
     margin: 0;
     padding: govuk-spacing(4);
     overflow: auto;
-    border: 1px solid $govuk-border-colour;
+    border: 1px solid govuk-functional-colour(border);
     background-color: $app-light-grey;
     font-size: 16px;
     @include govuk-responsive-margin(4, "bottom");

@@ -18,15 +18,15 @@
   cursor: pointer;
 
   &:focus:not(:hover) {
-    color: $govuk-focus-text-colour;
-    background-color: $govuk-focus-colour;
-    box-shadow: 0 2px 0 0 $govuk-focus-text-colour;
+    color: govuk-functional-colour(focus-text);
+    background-color: govuk-functional-colour(focus);
+    box-shadow: 0 2px 0 0 govuk-functional-colour(focus-text);
   }
 
   &:active,
   &:focus {
     padding: 2px 10px; // Counter increased border size
-    border: 2px solid $govuk-focus-colour;
+    border: 2px solid govuk-functional-colour(focus);
     outline: 2px solid transparent;
     box-shadow: none;
   }
