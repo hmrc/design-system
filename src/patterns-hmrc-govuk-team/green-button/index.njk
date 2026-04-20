@@ -79,16 +79,3 @@ layout: twoColumnPage.njk
     markdownWelsh: 'example-markdown-welsh',
     markdownOnly: true
 }) }}
-
-<h3 class="govuk-heading-m">Adding analytics</h3>
-
-<p class="govuk-body">
-  To track the user journey from GOV.UK to the end of a digital service, get the Google Analytics tracking code from the digital service team and use this markdown:
-</p>
-
-  {{
-    codeSnippet({
-      code: '{button start cross-domain-tracking:UA-XXXXXX-Y}[Start now](){/button}',
-      canCopy: true
-    })
-  }}

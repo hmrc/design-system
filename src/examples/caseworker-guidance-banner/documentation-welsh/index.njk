@@ -1,0 +1,10 @@
+---
+layout: layout-example.njk
+---
+{%- from "hmrc/components/caseworker-banner/macro.njk" import hmrcCaseworkerBanner -%}
+
+{{ hmrcCaseworkerBanner({
+  language: "cy",
+  html: '<a class="govuk-link caseworker-guidance-banner__link" rel="noopener noreferrer" href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank">Arweiniad Rheoli Dyledion (yn agor tab newydd)</a>'
+}) }}
+
