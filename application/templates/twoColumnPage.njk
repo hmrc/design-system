@@ -15,25 +15,6 @@
     {% set secondaryNavItems = [] %}
 
     {%- for navSection in navigation -%}
-
-{#
-      {%- if navSection.href === section -%}
-        {% if navSection.items %}
-          {% for topic, items in navSection.items | groupby("topic") %}
-            {% if topic !== "none" %}
-              <h2>{{ topic }}</h2>
-            {% endif %}
-
-            <ul>
-              {% for item in items %}
-                <li>{{ item.text }}</li>
-              {% endfor %}
-            </ul>
-          {% endfor %}
-        {% endif %}
-      {% endif %}
-#}
-
       {%- if navSection.href === section -%}
         {% set items = navSection.items %}
         {%- for item in items -%}
@@ -73,26 +54,34 @@
                 {% for item in items %}
                   {%- set isActive = item.filepath ~ '/' === filepath -%}
 
-                  <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
-                    <a class="app-subnav__link govuk-link" href="/{{ item.href }}">{{item.text}}</a>
-                  </li>
+                  {%- if item.placement === 'primary' -%}
+                    <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
+                      <a class="app-subnav__link govuk-link" href="/{{ item.href }}">{{item.text}}</a>
+                    </li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             {%- endfor -%}
           {%- endif -%}
 
           {%- if secondaryNavItems | length > 0 -%}
-            <ul class="app-subnav__section">
-              {%- for item in secondaryNavItems -%}
-                {%- set isActive = item.filepath ~ '/' === filepath -%}
+            {%- for topic, items in secondaryNavItems | groupby("topic") -%}
+              {% if topic !== "none" %}
+                <h3>{{ topic }}</h3>
+              {% endif %}
 
-                <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
-                  <a class="app-subnav__link govuk-link" href="/{{ item.href }}">
-                    {{item.text}}
-                  </a>
-                </li>
-              {%- endfor -%}
-            </ul>
+              <ul class="app-subnav__section">
+                {%- for item in items -%}
+                  {%- set isActive = item.filepath ~ '/' === filepath -%}
+
+                  {%- if item.placement === 'secondary' -%}
+                    <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
+                      <a class="app-subnav__link govuk-link" href="/{{ item.href }}">{{item.text}}</a>
+                    </li>
+                  {% endif %}
+                {%- endfor -%}
+              </ul>
+            {% endfor %}
           {%- endif -%}
         </div>
       </nav>
