@@ -17,10 +17,10 @@
     {%- for navSection in navigation -%}
       {%- if navSection.href === section -%}
         {% set items = navSection.items %}
-        {%- for item in items -%}
-          {%- if item.placement === 'primary' -%}
+        {% for item in items %}
+          {% if item.placement === 'primary' %}
             {% set primaryNavItems = navSection.items %}
-          {%- endif -%}
+          {% endif %}
 
           {%- if item.placement === 'secondary' -%}
             {% set secondaryNavItems = navSection.items %}
