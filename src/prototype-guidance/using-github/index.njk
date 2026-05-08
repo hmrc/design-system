@@ -5,15 +5,104 @@ order: 4
 layout: twoColumnPage.njk
 ---
 
-<p class="govuk-body">In HMRC we store our prototypes on GitHub, so every designer needs a GitHub account and to know how to share and manage their prototypes on the platform.</p>
+<p class="govuk-body">HMRC prototypes are stored on GitHub. GitHub makes it easy to update and collaborate on files, including code, content, and design assets.</p>
 
-<p class="govuk-body">GitHub makes it easy to store, update, and collaborate on files — including code, content, and design assets. It also helps us work in the open when appropriate, and track changes over time.</p>
+<p class="govuk-body">Interaction designers in HMRC need a GitHub account and an understanding of how to share and manage their prototypes on the platform.</p>
 
-<h2 class="govuk-heading-l">Get set up on GitHub</h2>
+<h2 class="govuk-heading-l">Before you start</h2>
 
-<p class="govuk-body">You can use an existing GitHub account if you have one or you can create a new one. Full guidance on setting up your account and being added to the HMRC organisation is available in the <a href="https://docs.tax.service.gov.uk/mdtp-handbook/documentation/developer-set-up/join-hmrc-on-github.html" class="govuk-link">MDTP handbook</a>.</p>
+<p class="govuk-body">You must:</p>
 
-<p class="govuk-body">Please remember that a GitHub account is a public profile, linking you to HMRC.</p>
+<ol class="govuk-list govuk-list--number">
+<li><a href="https://docs.tax.service.gov.uk/mdtp-handbook/documentation/developer-set-up/install-git.html" class="govuk-link">Install Git on your computer</a></li>
+  <li><a href="https://docs.tax.service.gov.uk/mdtp-handbook/documentation/developer-set-up/join-hmrc-on-github.html#join-hmrc-on-github" class="govuk-link">Join HMRC on GitHub and set up commit signing</a></li>
+  <li><a href="https://docs.tax.service.gov.uk/mdtp-handbook/documentation/developer-set-up/join-hmrc-on-github.html#if-you-39-re-an-interaction-designer" class="govuk-link">Join the ‘Designers’ GitHub team</a> (if you’re an interaction designer)</li>
+</ol>
+
+<h2 class="govuk-heading-l">How GitHub works</h2>
+
+<p class="govuk-body">Git is a <a href="https://en.wikipedia.org/wiki/Version_control" class="govuk-link">version control</a> tool used to track and manage code changes. GitHub is the cloud-based platform we use in HMRC to store, share, and collaborate on our projects.</p>
+
+<h3 class="govuk-heading-m">Git workflow</h3>
+
+<p class="govuk-body">A basic project using git has three parts:</p>
+
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Working Directory — where you’ll be doing all the work: creating, editing, deleting and organising files</li>
+  <li>Staging Area — where you’ll list changes you make to the working directory</li>
+  <li>Repository — where Git permanently stores those changes as different versions</li>
+</ul>
+
+<img src="" alt="Basic git workflow">
+
+<p class="govuk-body">The repository can be ‘local’ (stored on your computer) or ‘remote’ (stored on GitHub).</p>
+
+<h3 class="govuk-heading-m">Branches</h3>
+
+<p class="govuk-body">A branch is a way of pinpointing specific changes. Branches allow developers and designers to work on code in isolation. A designer’s work can then be reviewed against the ‘main’ branch of code.</p>
+
+<p class="govuk-body">You can check what branch you are working on by typing ‘git status’ into your terminal:</p>
+
+<img src="" alt="Terminal example">
+
+<p class="govuk-body">Once you have found the correct branch, you can run ‘git pull’ to download the latest version of code from the remote repository.</p>
+
+<p class="govuk-body">You will need to include in your pull command the name of your ‘remote’ and the name of the branch you want to download. In our example, the remote is called ‘origin’ and the branch we want to copy down is called ‘main’. This is a standard set up, and is likely to be the same for you.</p>
+
+<p class="govuk-body">Now you can use your code editor, such as <a href="https://design.tax.service.gov.uk/prototype-guidance/vs-code/" class="govuk-link">Visual Studio Code</a>, to update any files you want to change.</p>
+
+<h3 class="govuk-heading-m">Saving changes</h3>
+
+<p class="govuk-body">In Git, changes are saved with a 'commit'. A commit captures the changes you have made at a certain time.</p>
+
+<p class="govuk-body">Each commit has an associated commit message, which explains why a particular change was made. Commit messages capture the history of your changes so that other contributors can understand what you’ve done and why.</p>
+
+<p class="govuk-body">Commit messages start with '-m' followed by a message describing what changed.</p>
+
+<p class="govuk-body">For example:</p>
+
+<img src="" alt="Another terminal example">
+
+<p class="govuk-body">Standard conventions for commit messages are:</p>
+
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>must be in quotation marks</li>
+  <li>written in the present tense</li>
+  <li>should be brief (50 characters or less) when using -m</li>
+</ul>
+
+<h3 class="govuk-heading-m">Sharing changes</h3>
+
+<p class="govuk-body">Once you have made changes to your git repository on your local machine, you can share them to your remote repository.</p>
+
+<p class="govuk-body">In the example below, the commits are being pushed to a branch called ‘newFeature’, on a remote repository called ‘origin’.</p>
+
+<p class="govuk-body">It is best practice not to push your changes directly to main and instead navigate to GitHub to check and merge those changes into main once you are happy.</p>
+
+<img src="" alt="Yet another terminal example">
+
+<h3 class="govuk-heading-m">Merging changes</h3>
+
+<p class="govuk-body">Now that you have pushed your changes to the external repository, you can open a ‘pull request’on GitHub. A pull request is a proposal to merge a set of changes from one branch into another.</p>
+
+<p class="govuk-body">In HMRC, designers often work in project teams that review each other’s pull requests to ensure that no issues have been created because designers have been working on the same files within a prototype.</p>
+
+<p class="govuk-body">How to open a pull request:</p>
+
+
+<ol class="govuk-list govuk-list--number">
+  <li>Click ‘create pull request’ at the bottom of the pull request form.</li>
+  <li>If no issues are detected, you can go ahead and press ‘merge pull request’. This action merges your changes into the main repository.</li>
+  <li>To keep things tidy, once the merge is complete, you can delete your branch from the remote repository to keep things tidy using the purple button that appears on the page.</li>
+</ol>
+
+<p class="govuk-body">The branch you have been working on should now be merged with your repository. If your GitHub repository is linked to hosting services such as Heroku, this code will be used to run your updated prototype.</p>
+
+<p class="govuk-body">Don’t forget that when you go to make your next set of changes, it’s important to set up your new working branch, and pull down any new changes that have been made to the main codebase on GitHub, particularly if you are collaborating with other designers.</p>
+
+<p class="govuk-body">You can use GitHub with software like GitHub Desktop or by inputting commands directly using the Terminal on a Mac. This guide focuses on working with GitHub using the Terminal. If you are unsure which method would work best for you, speak to your manager/senior designer in your area.</p>
 
 <h2 class="govuk-heading-l">GitHub guidance</h2>
 
