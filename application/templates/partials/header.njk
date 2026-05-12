@@ -2,39 +2,29 @@
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
 {% set sections = {
-  'get-started': { "text": "Start now", "href": "get-started" },
   'hmrc-design-patterns': { "text": "Patterns for services", "href": "hmrc-design-patterns" },
   'govuk-patterns': { "text": "Patterns for GOV.UK", "href": "patterns-hmrc-govuk-team" },
   'style-guide': { "text": "Style guide", "href": "hmrc-content-style-guide" },
   'guidance-for-designers': { "text": "Guidance for designers", "href": "guidance-for-designers" }
 } %}
 
-{% set navigationItems = [
-  {
-    href: "/" ~ sections['hmrc-design-patterns']['href'] ~ "/",
-    text: sections['hmrc-design-patterns']['text'],
-    active: filepath.startsWith(sections['hmrc-design-patterns']['href']),
-    current: filepath === sections['hmrc-design-patterns']['href'] ~ "/"
-  },
-  {
-    href: "/" ~ sections['govuk-patterns']['href'] ~ "/",
-    text: sections['govuk-patterns']['text'],
-    active: filepath.startsWith(sections['govuk-patterns']['href']),
-    current: filepath === sections['govuk-patterns']['href'] ~ "/"
-  },
-  {
-    href: "/" ~ sections['style-guide']['href'] ~ "/",
-    text: sections['style-guide']['text'],
-    active: filepath.startsWith(sections['style-guide']['href']),
-    current: filepath === sections['style-guide']['href'] ~ "/"
-  },
-  {
-    href: "/" ~ sections['guidance-for-designers']['href'] ~ "/",
-    text: sections['guidance-for-designers']['text'],
-    active: filepath.startsWith(sections['guidance-for-designers']['href']),
-    current: filepath === sections['guidance-for-designers']['href'] ~ "/"
-  }
-] %}
+{% set listHTML = '<ul><li><a href="#">Item 1</a></li><li><a href="#">Item 2</a></li><li><a href="#">Item 3</a></li></ul>' %}
+
+    {# href: "/" ~ sections['hmrc-design-patterns']['href'] ~ "/", #}
+
+{% set navigationItems = [] %}
+
+{% for section, item in navigationItems %}
+  {% set isActive = filepath.startsWith(item.href) %}
+  {% set isCurrent = filepath === item.href ~ "/" %}
+
+  {% set navigationItems= (navigationItems.push({
+    href: ("/" ~ item.href ~ "/") if not isActive,
+    text: item.text,
+    active: isActive,
+    current: isCurrent 
+  }), navigationItems) %}
+{% endfor %}
 
 {{ hmrcInternalHeader({
   homepageUrl: 'https://www.gov.uk/government/organisations/hm-revenue-customs',
@@ -47,3 +37,4 @@
   serviceUrl: "/",
   navigation: navigationItems
 }) }}
+
