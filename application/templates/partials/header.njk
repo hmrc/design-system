@@ -1,28 +1,42 @@
 {% from "hmrc/components/internal-header/macro.njk"  import hmrcInternalHeader %}
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
-{% set sections = {
-  'hmrc-design-patterns': { "text": "Patterns for services", "href": "hmrc-design-patterns" },
-  'govuk-patterns': { "text": "Patterns for GOV.UK", "href": "patterns-hmrc-govuk-team" },
-  'style-guide': { "text": "Style guide", "href": "hmrc-content-style-guide" },
-  'guidance-for-designers': { "text": "Guidance for designers", "href": "guidance-for-designers" }
-} %}
-
-{% set listHTML = '<ul><li><a href="#">Item 1</a></li><li><a href="#">Item 2</a></li><li><a href="#">Item 3</a></li></ul>' %}
-
-    {# href: "/" ~ sections['hmrc-design-patterns']['href'] ~ "/", #}
-
 {% set navigationItems = [] %}
 
-{% for section, item in navigationItems %}
-  {% set isActive = filepath.startsWith(item.href) %}
-  {% set isCurrent = filepath === item.href ~ "/" %}
+{% for section in navigation %}
+  {% set isActive = filepath.startsWith(section.href) %}
+  {% set isCurrent = filepath === section.href ~ "/" %}
+  {% set subsection = '' %}
 
-  {% set navigationItems= (navigationItems.push({
-    href: ("/" ~ item.href ~ "/") if not isActive,
-    text: item.text,
+  {% if section.items and isActive %}
+    {% set subsection %}
+      {% for placement, items in section.items | groupby("placement") %}
+        {% if placement === 'primary' %}
+          <h3>Primary</h3>
+        {% elif placement === 'secondary' %}
+          <h3>Secondary</h3>
+        {% endif %}
+
+        <ul>
+          {% for topic, items in items | groupby("topic") %}
+            {% if topic !== 'none' %}
+              <h3>{{ topic }}</h3>
+            {% endif %}
+
+            {% for item in items %}
+              <li><a href="/{{item.href}}/">{{item.text}}</a></li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    {% endset %}
+  {% endif %}
+
+  {% set navigationItems = (navigationItems.push({
+    href: ("/" ~ section.href ~ "/") if not isActive,
+    html: section.text ~ (subsection if isActive),
     active: isActive,
-    current: isCurrent 
+    current: isCurrent
   }), navigationItems) %}
 {% endfor %}
 
