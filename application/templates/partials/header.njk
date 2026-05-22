@@ -10,25 +10,25 @@
 
   {% if section.items and isActive %}
     {% set subsection %}
-      {% for placement, items in section.items | groupby("placement") %}
-        {% if placement === 'primary' %}
-          <h3>Primary</h3>
-        {% elif placement === 'secondary' %}
-          <h3>Secondary</h3>
-        {% endif %}
+      <div class="mobile-navigation">
+        {% for placement, items in section.items | groupby("placement") %}
+          <ul class="placement-list">
+            {% for topic, items in items | groupby("topic") %}
+              <li class="placement-list-item">
+                {% if topic !== 'none' %}
+                  <h3 class="topic-heading">{{ topic }}</h3>
+                {% endif %}
 
-        <ul>
-          {% for topic, items in items | groupby("topic") %}
-            {% if topic !== 'none' %}
-              <h3>{{ topic }}</h3>
-            {% endif %}
-
-            {% for item in items %}
-              <li><a href="/{{item.href}}/">{{item.text}}</a></li>
+                <ul class="topic-list">
+                  {% for item in items %}
+                    <li class="topic-list-item"><a href="/{{item.href}}/">{{item.text}}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
             {% endfor %}
-          {% endfor %}
-        </ul>
-      {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
     {% endset %}
   {% endif %}
 
@@ -42,13 +42,9 @@
 
 {{ hmrcInternalHeader({
   homepageUrl: 'https://www.gov.uk/government/organisations/hm-revenue-customs',
-  serviceName: 'Design resources',
+  serviceName: serviceName,
   serviceUrl: '/'
 }) }}
 
-{{ govukServiceNavigation({
-  serviceName: serviceName,
-  serviceUrl: "/",
-  navigation: navigationItems
-}) }}
+{{ govukServiceNavigation({ navigation: navigationItems }) }}
 
