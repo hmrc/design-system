@@ -4,6 +4,7 @@ menuText: Using GitHub
 order: 4
 layout: twoColumnPage.njk
 ---
+{% from "_codeSnippet.njk" import codeSnippet %}
 
 <p class="govuk-body">HMRC prototypes are stored on GitHub. GitHub makes it easy to update and collaborate on files, including code, content, and design assets.</p>
 
@@ -18,6 +19,8 @@ layout: twoColumnPage.njk
   <li><a href="https://docs.tax.service.gov.uk/mdtp-handbook/documentation/developer-set-up/join-hmrc-on-github.html#join-hmrc-on-github" class="govuk-link">Join HMRC on GitHub and set up commit signing</a></li>
   <li><a href="https://docs.tax.service.gov.uk/mdtp-handbook/documentation/developer-set-up/join-hmrc-on-github.html#if-you-39-re-an-interaction-designer" class="govuk-link">Join the ‘Designers’ GitHub team</a> (if you’re an interaction designer)</li>
 </ol>
+
+<p class="govuk-body">You can use GitHub with software like GitHub Desktop or by inputting commands directly using the Terminal on a Mac. This guide focuses on working with GitHub using the Terminal. If you are unsure which method would work best for you, speak to your manager/senior designer in your area.</p>
 
 <h2 class="govuk-heading-l">How GitHub works</h2>
 
@@ -44,7 +47,16 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">You can check what branch you are working on by typing ‘git status’ into your terminal:</p>
 
-<img src="" alt="Terminal example">
+{{
+  codeSnippet({
+    code: "user@computer my-prototype % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean",
+    canCopy: false
+  })
+}}
 
 <p class="govuk-body">Once you have found the correct branch, you can run ‘git pull’ to download the latest version of code from the remote repository.</p>
 
@@ -54,15 +66,25 @@ layout: twoColumnPage.njk
 
 <h3 class="govuk-heading-m">Saving changes</h3>
 
-<p class="govuk-body">In Git, changes are saved with a 'commit'. A commit captures the changes you have made at a certain time.</p>
+<p class="govuk-body">In Git, changes are saved with a ‘commit’. A commit captures the changes you have made at a certain time.</p>
 
 <p class="govuk-body">Each commit has an associated commit message, which explains why a particular change was made. Commit messages capture the history of your changes so that other contributors can understand what you’ve done and why.</p>
 
-<p class="govuk-body">Commit messages start with '-m' followed by a message describing what changed.</p>
+<p class="govuk-body">Commit messages start with ‘-m’ followed by a message describing what changed.</p>
 
 <p class="govuk-body">For example:</p>
 
-<img src="" alt="Another terminal example">
+{{
+  codeSnippet({
+    code: "user@computer my-prototype % git commit -m 'an example commit'
+[newFeature c684b1a] an example commit
+1 file changed, 1 insertion(+), 2 deletions(-)
+user@computer my-prototype % git status                                                                                                 (newFeature)pagination-prototype
+On branch newFeature
+nothing to commit, working tree clean",
+    canCopy: false
+  })
+}}
 
 <p class="govuk-body">Standard conventions for commit messages are:</p>
 
@@ -81,11 +103,11 @@ layout: twoColumnPage.njk
 
 <p class="govuk-body">It is best practice not to push your changes directly to main and instead navigate to GitHub to check and merge those changes into main once you are happy.</p>
 
-<img src="" alt="Yet another terminal example">
+<img src="" alt="Another terminal example">
 
 <h3 class="govuk-heading-m">Merging changes</h3>
 
-<p class="govuk-body">Now that you have pushed your changes to the external repository, you can open a ‘pull request’on GitHub. A pull request is a proposal to merge a set of changes from one branch into another.</p>
+<p class="govuk-body">Now that you have pushed your changes to the external repository, you can open a ‘pull request’ on GitHub. A pull request is a proposal to merge a set of changes from one branch into another.</p>
 
 <p class="govuk-body">In HMRC, designers often work in project teams that review each other’s pull requests to ensure that no issues have been created because designers have been working on the same files within a prototype.</p>
 
@@ -93,16 +115,14 @@ layout: twoColumnPage.njk
 
 
 <ol class="govuk-list govuk-list--number">
-  <li>Click ‘create pull request’ at the bottom of the pull request form.</li>
-  <li>If no issues are detected, you can go ahead and press ‘merge pull request’. This action merges your changes into the main repository.</li>
+  <li>Click ‘create pull request’ at the bottom of the pull request form. <img src="" alt="screenshot of a PR page"></li>
+  <li>If no issues are detected, you can go ahead and press ‘merge pull request’. This action merges your changes into the main repository. <img src="" alt="screenshot of a PR page"></li>
   <li>To keep things tidy, once the merge is complete, you can delete your branch from the remote repository to keep things tidy using the purple button that appears on the page.</li>
 </ol>
 
 <p class="govuk-body">The branch you have been working on should now be merged with your repository. If your GitHub repository is linked to hosting services such as Heroku, this code will be used to run your updated prototype.</p>
 
 <p class="govuk-body">Don’t forget that when you go to make your next set of changes, it’s important to set up your new working branch, and pull down any new changes that have been made to the main codebase on GitHub, particularly if you are collaborating with other designers.</p>
-
-<p class="govuk-body">You can use GitHub with software like GitHub Desktop or by inputting commands directly using the Terminal on a Mac. This guide focuses on working with GitHub using the Terminal. If you are unsure which method would work best for you, speak to your manager/senior designer in your area.</p>
 
 <h2 class="govuk-heading-l">GitHub guidance</h2>
 
