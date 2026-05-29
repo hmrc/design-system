@@ -31,61 +31,54 @@
 
     {% set indexPageLink = '/' ~ section ~ '/' %}
 
-    <div data-module="subnav-toggle">
-      <div class="app-subnav-toggle">
-        <button hidden aria-controls="app-navigation" class="app-subnav-toggle__button">Menu</button>
+    <nav role="navigation" aria-labelledby="nav-header" class="app-pane__subnav">
+      <h2 class="govuk-heading-m govuk-visually-hidden" id="nav-header">
+        {%- set isRoot = '/' ~ filepath === indexPageLink %}
+        {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}Pages in this section{%- if not isRoot -%}</a>{%- endif -%}
+      </h2>
+
+      <div class="app-subnav">
+        {%- if primaryNavItems | length > 0 -%}
+          {%- for topic, items in primaryNavItems | groupby("topic") -%}
+            {% if topic !== "none" %}
+              <h3>{{ topic }}</h3>
+            {% endif %}
+
+            <ul class="app-subnav__section">
+              {% for item in items %}
+                {%- set isActive = item.filepath ~ '/' === filepath -%}
+
+                {%- if item.placement === 'primary' -%}
+                  <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
+                    <a class="app-subnav__link govuk-link" href="/{{ item.href }}">{{item.text}}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {%- endfor -%}
+        {%- endif -%}
+
+        {%- if secondaryNavItems | length > 0 -%}
+          {%- for topic, items in secondaryNavItems | groupby("topic") -%}
+            {% if topic !== "none" %}
+              <h3>{{ topic }}</h3>
+            {% endif %}
+
+            <ul class="app-subnav__section">
+              {%- for item in items -%}
+                {%- set isActive = item.filepath ~ '/' === filepath -%}
+
+                {%- if item.placement === 'secondary' -%}
+                  <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
+                    <a class="app-subnav__link govuk-link" href="/{{ item.href }}">{{item.text}}</a>
+                  </li>
+                {% endif %}
+              {%- endfor -%}
+            </ul>
+          {% endfor %}
+        {%- endif -%}
       </div>
-
-      <nav role="navigation" aria-labelledby="nav-header" class="app-pane__subnav" id="app-navigation">
-
-        <h2 class="govuk-heading-m govuk-visually-hidden" id="nav-header">
-          {%- set isRoot = '/' ~ filepath === indexPageLink %}
-          {%- if not isRoot -%}<a href="{{ indexPageLink }}">{%- endif -%}Pages in this section{%- if not isRoot -%}</a>{%- endif -%}
-        </h2>
-
-        <div class="app-subnav">
-          {%- if primaryNavItems | length > 0 -%}
-            {%- for topic, items in primaryNavItems | groupby("topic") -%}
-              {% if topic !== "none" %}
-                <h3>{{ topic }}</h3>
-              {% endif %}
-
-              <ul class="app-subnav__section">
-                {% for item in items %}
-                  {%- set isActive = item.filepath ~ '/' === filepath -%}
-
-                  {%- if item.placement === 'primary' -%}
-                    <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
-                      <a class="app-subnav__link govuk-link" href="/{{ item.href }}">{{item.text}}</a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            {%- endfor -%}
-          {%- endif -%}
-
-          {%- if secondaryNavItems | length > 0 -%}
-            {%- for topic, items in secondaryNavItems | groupby("topic") -%}
-              {% if topic !== "none" %}
-                <h3>{{ topic }}</h3>
-              {% endif %}
-
-              <ul class="app-subnav__section">
-                {%- for item in items -%}
-                  {%- set isActive = item.filepath ~ '/' === filepath -%}
-
-                  {%- if item.placement === 'secondary' -%}
-                    <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
-                      <a class="app-subnav__link govuk-link" href="/{{ item.href }}">{{item.text}}</a>
-                    </li>
-                  {% endif %}
-                {%- endfor -%}
-              </ul>
-            {% endfor %}
-          {%- endif -%}
-        </div>
-      </nav>
-    </div>
+    </nav>
 
     <div class="app-pane__content">
       {% if (not pageHeading) %}

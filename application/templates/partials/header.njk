@@ -4,27 +4,44 @@
 {% set navigationItems = [] %}
 
 {% for section in navigation %}
-  {% set isActive = filepath.startsWith(section.href) %}
-  {% set isCurrent = filepath === section.href ~ "/" %}
+  {% set isSectionActive = filepath.startsWith(section.href) %}
+  {% set isSectionCurrent = filepath === section.href ~ "/" %}
   {% set subsection = '' %}
 
-  {% if section.items and isActive %}
+  {% if section.items and isSectionActive %}
     {% set subsection %}
-      <div class="mobile-navigation">
+      <a href="{{ section.href }}"
+        {%- if isSectionActive or isSectionCurrent %} aria-current="{{ 'page' if isSectionCurrent else 'true' }}"{% endif %}
+      >{{ section.text }}</a>
+      <div class="app-mobile-subnav">
         {% for placement, items in section.items | groupby("placement") %}
-          <ul class="placement-list">
+          {% set hasMultiplePlacements = true if loop.length > 1 %}
+
+          <ul class="app-mobile-subnav__section {{placement}}">
             {% for topic, items in items | groupby("topic") %}
-              <li class="placement-list-item">
+              {% set hasTopics = true if loop.length > 1 %}
+
                 {% if topic !== 'none' %}
-                  <h3 class="topic-heading">{{ topic }}</h3>
+                  <li class="app-mobile-subnav__topic-item">
+                    <h3 class="topic-heading">{{ topic }}</h3>
+
+                    <ul class="topic-list">
                 {% endif %}
 
-                <ul class="topic-list">
-                  {% for item in items %}
-                    <li class="topic-list-item"><a href="/{{item.href}}/">{{item.text}}</a></li>
-                  {% endfor %}
-                </ul>
-              </li>
+                {% for item in items %}
+                  {% set isItemActive = filepath.startsWith(section.href) %}
+                  {% set isItemCurrent = filepath === item.href ~ "/" %}
+                  <li class="app-mobile-subnav__section-item {%- if isItemCurrent %} app-mobile-subnav__section-item--active{% endif %}">
+                    <a href="/{{item.href}}/"
+                      {%- if isItemCurrent %} aria-current="page"{% endif %}
+                    >{{item.text}}</a>
+                  </li>
+                {% endfor %}
+
+                {% if topic !== 'none' %}
+                  </ul>
+                </li>
+              {% endif %}
             {% endfor %}
           </ul>
         {% endfor %}
@@ -33,10 +50,9 @@
   {% endif %}
 
   {% set navigationItems = (navigationItems.push({
-    href: ("/" ~ section.href ~ "/") if not isActive,
-    html: section.text ~ (subsection if isActive),
-    active: isActive,
-    current: isCurrent
+    href: ("/" ~ section.href ~ "/") if not isSectionActive,
+    text: (section.text if not isSectionActive),
+    html: (subsection if isSectionActive)
   }), navigationItems) %}
 {% endfor %}
 

@@ -2,14 +2,14 @@ $_current-indicator-width: 4px;
 
 // New navigation
 
-.mobile-navigation {
+.app-mobile-subnav {
   @include govuk-media-query($from: tablet) {
     display: none;
   }
 
   padding-left: 20px;
 
-  .placement-list {
+  .app-mobile-subnav__section {
     border-bottom: 1px solid #000;
     padding: 0;
     padding-top: 20px;
@@ -21,75 +21,29 @@ $_current-indicator-width: 4px;
   }
 
   .topic-heading {
-    margin-left: -40px;
+    margin-left: -20px;
   }
 
   .topic-list {
     padding-left: 0;
   }
 
-  .placement-list-item, .topic-list-item {
+  .app-mobile-subnav__section-item, .topic-list-item {
     list-style-type: none;
   }
-}
 
-//Navigation toggle
-
-.app-subnav-toggle + input {
-  display: none;
-}
-
-.app-subnav-toggle + input:checked + .app-pane__subnav {
-  display: block;
-}
-
-.app-subnav-toggle {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  text-align: right;
-  padding: 15px;
-  float: right;
-
-  @include govuk-media-query(desktop) {
-    display: none;
-    padding: 20px;
+  .app-mobile-subnav__section-item--active {
+    border-left: 3px solid blue;
   }
-}
-
-.app-subnav-toggle__button {
-  @include govuk-font(19);
-  cursor: pointer;
-  border: 0px solid $black;
-  margin-top: 40px;
-  font-size: 19px;
-  display: inline-block;
-  background: transparent;
-
-  &:focus {
-    @include govuk-focused-text;
-  }
-}
-
-.app-subnav-toggle__button::after {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
-  border-width: 8.66px 5px 0 5px;
-  content: "";
-  border-color: #0b0c0c;
-  margin-left: 5px;
-}
-
-.app-subnav-toggle.active .app-subnav-toggle__button::after{
-  transform: rotate(180deg);
 }
 
 //Navigation
 
 .app-pane__subnav {
+  @include govuk-media-query($until: tablet) {
+    display: none;
+  }
+
   .govuk-heading-m > a {
     &:hover,
     &:active,
@@ -102,14 +56,6 @@ $_current-indicator-width: 4px;
       outline-offset: 0;
       background-color: govuk-functional-colour(focus);
     }
-  }
-  @include govuk-media-query($until: desktop) {
-    display: block;
-  }
-
-  .js-enabled [hidden],
-  .js-enabled &[hidden] {
-    display: none;
   }
 }
 
