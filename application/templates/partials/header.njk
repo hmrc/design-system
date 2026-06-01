@@ -10,10 +10,11 @@
 
   {% if section.items and isSectionActive %}
     {% set subsection %}
-      <a href="{{ section.href }}"
+      <a href="/{{- section.href -}}/"
+        class="govuk-service-navigation__link"
         {%- if isSectionActive or isSectionCurrent %} aria-current="{{ 'page' if isSectionCurrent else 'true' }}"{% endif %}
       >{{ section.text }}</a>
-      <div class="app-mobile-subnav">
+      <span class="app-mobile-subnav">
         {% for placement, items in section.items | groupby("placement") %}
           {% set hasMultiplePlacements = true if loop.length > 1 %}
 
@@ -45,14 +46,16 @@
             {% endfor %}
           </ul>
         {% endfor %}
-      </div>
+      </span>
     {% endset %}
   {% endif %}
 
   {% set navigationItems = (navigationItems.push({
-    href: ("/" ~ section.href ~ "/") if not isSectionActive,
-    text: (section.text if not isSectionActive),
-    html: (subsection if isSectionActive)
+    href: ("/" ~ section.href ~ "/") if not subsection or not isSectionActive,
+    text: section.text,
+    html: (subsection if subsection or isSectionActive),
+    active: isSectionActive,
+    current: isSectionCurrent
   }), navigationItems) %}
 {% endfor %}
 
