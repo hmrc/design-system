@@ -16,17 +16,17 @@
     {%- for navSection in navigation -%}
       {%- if navSection.href === section -%}
         {% set items = navSection.items %}
-        {% for item in items %}
-          {% if item.placement === 'primary' %}
+        {%- for item in items -%}
+          {%- if item.placement === 'primary' -%}
             {% set primaryNavItems = navSection.items %}
-          {% endif %}
+          {%- endif -%}
 
           {%- if item.placement === 'secondary' -%}
             {% set secondaryNavItems = navSection.items %}
           {%- endif -%}
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
 
     {% set indexPageLink = '/' ~ section ~ '/' %}
 
@@ -71,10 +71,10 @@
                   <li class="app-subnav__section-item{% if isActive %} app-subnav__section-item--current{% endif %}">
                     <a class="app-subnav__link govuk-link" href="/{{ item.href }}">{{item.text}}</a>
                   </li>
-                {% endif %}
+                {%- endif -%}
               {%- endfor -%}
             </ul>
-          {% endfor %}
+          {%- endfor -%}
         {%- endif -%}
       </div>
     </nav>
