@@ -1,6 +1,5 @@
 {% from "hmrc/components/page-heading/macro.njk" import hmrcPageHeading %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 {% from "_phaseBanner.njk" import phaseBanner %}
 
 {% extends 'default.njk' %}
@@ -41,7 +40,7 @@
         {%- if primaryNavItems | length > 0 -%}
           {%- for topic, items in primaryNavItems | groupby("topic") -%}
             {% if topic !== "none" %}
-              <h3>{{ topic }}</h3>
+              <h3 class="app-subnav__topic-heading">{{ topic }}</h3>
             {% endif %}
 
             <ul class="app-subnav__section">
@@ -61,7 +60,7 @@
         {%- if secondaryNavItems | length > 0 -%}
           {%- for topic, items in secondaryNavItems | groupby("topic") -%}
             {% if topic !== "none" %}
-              <h3>{{ topic }}</h3>
+              <h3 class="app-subnav__topic-heading">{{ topic }}</h3>
             {% endif %}
 
             <ul class="app-subnav__section">
@@ -82,18 +81,13 @@
 
     <div class="app-pane__content">
       {% if (not pageHeading) %}
-        {{ govukBackLink({
-          text: "Back",
-          href: "javascript:history.back()"
-        }) }}
+        {{ govukBackLink({ text: "Back", href: "javascript:history.back()" }) }}
       {% endif %}
 
       <main class="app-content" id="main-content">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
-            {{ hmrcPageHeading({
-              text: pageHeading or title
-            }) }}
+            {{ hmrcPageHeading({ text: pageHeading or title }) }}
 
             {{ phaseBanner({
               status: status,

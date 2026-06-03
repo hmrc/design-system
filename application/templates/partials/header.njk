@@ -16,24 +16,21 @@
       >{{ section.text }}</a>
       <span class="app-mobile-subnav">
         {% for placement, items in section.items | groupby("placement") %}
-          {% set hasMultiplePlacements = true if loop.length > 1 %}
-
           <ul class="app-mobile-subnav__section {{placement}}">
             {% for topic, items in items | groupby("topic") %}
-              {% set hasTopics = true if loop.length > 1 %}
-
                 {% if topic !== 'none' %}
                   <li class="app-mobile-subnav__topic-item">
-                    <h3 class="topic-heading">{{ topic }}</h3>
+                    <h3 class="app-mobile-subnav__topic-heading">{{ topic }}</h3>
 
-                    <ul class="topic-list">
+                    <ul class="app-mobile-subnav__topic-list">
                 {% endif %}
 
                 {% for item in items %}
-                  {% set isItemActive = filepath.startsWith(section.href) %}
                   {% set isItemCurrent = filepath === item.href ~ "/" %}
                   <li class="app-mobile-subnav__section-item {%- if isItemCurrent %} app-mobile-subnav__section-item--active{% endif %}">
-                    <a href="/{{item.href}}/"
+                    <a
+                      class="govuk-service-navigation__link"
+                      href="/{{- item.href -}}/"
                       {%- if isItemCurrent %} aria-current="page"{% endif %}
                     >{{item.text}}</a>
                   </li>
@@ -51,7 +48,7 @@
   {% endif %}
 
   {% set navigationItems = (navigationItems.push({
-    href: ("/" ~ section.href ~ "/") if not subsection or not isSectionActive,
+    href: ("/" ~ section.href ~ "/" if not subsection or not isSectionActive),
     text: section.text,
     html: (subsection if subsection or isSectionActive),
     active: isSectionActive,
