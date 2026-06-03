@@ -1,9 +1,5 @@
 [
   {
-    "text": "Start now",
-    "href": "get-started"
-  },
-  {
     "text": "Patterns for services",
     "href": "hmrc-design-patterns"
   },
