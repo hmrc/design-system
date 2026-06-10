@@ -3,11 +3,11 @@
 const { JSDOM } = require('jsdom')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
 
-const filters = require('../../lib/filters')
-const globals = require('../../lib/globals')
-const pathFromRoot = require('../../util/pathFromRoot')
+const filters = require('../../../lib/filters')
+const globals = require('../../../lib/globals')
+const pathFromRoot = require('../../../util/pathFromRoot')
 const templatePaths = [
-  ...require('../../lib/templatePaths'),
+  ...require('../../../lib/templatePaths'),
   pathFromRoot('application', '__tests__', 'fixtures')
 ]
 

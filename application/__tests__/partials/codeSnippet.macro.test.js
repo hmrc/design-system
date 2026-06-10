@@ -3,9 +3,9 @@
 const { JSDOM } = require('jsdom')
 const nunjucks = require('jstransformer')(require('jstransformer-nunjucks'))
 
-const filters = require('../../lib/filters')
-const globals = require('../../lib/globals')
-const templatePaths = require('../../lib/templatePaths')
+const filters = require('../../../lib/filters')
+const globals = require('../../../lib/globals')
+const templatePaths = require('../../../lib/templatePaths')
 
 const options = {
   path: templatePaths,
