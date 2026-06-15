@@ -2205,6 +2205,7 @@
 	    this.$input = void 0;
 	    this.$button = void 0;
 	    this.$status = void 0;
+	    this.$label = void 0;
 	    this.i18n = void 0;
 	    this.id = void 0;
 	    this.$announcements = void 0;
@@ -2234,8 +2235,30 @@
 	    if (!$label.id) {
 	      $label.id = `${this.id}-label`;
 	    }
+	    this.$label = $label;
 	    this.$input.id = `${this.id}-input`;
-	    this.$input.setAttribute('hidden', 'true');
+	    this.$input.setAttribute('hidden', 'hidden');
+	    this.$status = this.createStatus();
+	    this.$button = this.createButton();
+	    this.$root.insertAdjacentElement('afterbegin', this.$button);
+	    this.$input.addEventListener('change', this.onChange.bind(this));
+	    this.updateDisabledState();
+	    this.observeDisabledState();
+	    this.$announcements = document.createElement('span');
+	    this.$announcements.classList.add('govuk-file-upload-announcements');
+	    this.$announcements.classList.add('govuk-visually-hidden');
+	    this.$announcements.setAttribute('aria-live', 'assertive');
+	    this.$root.insertAdjacentElement('afterend', this.$announcements);
+	    this.bindDraggingEvents();
+	  }
+	  createStatus() {
+	    const $status = document.createElement('span');
+	    $status.className = 'govuk-body govuk-file-upload-button__status';
+	    $status.setAttribute('aria-live', 'polite');
+	    $status.innerText = this.i18n.t('noFileChosen');
+	    return $status;
+	  }
+	  createButton() {
 	    const $button = document.createElement('button');
 	    $button.classList.add('govuk-file-upload-button');
 	    $button.type = 'button';
@@ -2245,11 +2268,7 @@
 	    if (ariaDescribedBy) {
 	      $button.setAttribute('aria-describedby', ariaDescribedBy);
 	    }
-	    const $status = document.createElement('span');
-	    $status.className = 'govuk-body govuk-file-upload-button__status';
-	    $status.setAttribute('aria-live', 'polite');
-	    $status.innerText = this.i18n.t('noFileChosen');
-	    $button.appendChild($status);
+	    $button.appendChild(this.$status);
 	    const commaSpan = document.createElement('span');
 	    commaSpan.className = 'govuk-visually-hidden';
 	    commaSpan.innerText = ', ';
@@ -2267,24 +2286,14 @@
 	    instructionSpan.innerText = this.i18n.t('dropInstruction');
 	    containerSpan.appendChild(instructionSpan);
 	    $button.appendChild(containerSpan);
-	    $button.setAttribute('aria-labelledby', `${$label.id} ${commaSpan.id} ${$button.id}`);
+	    $button.setAttribute('aria-labelledby', `${this.$label.id} ${commaSpan.id} ${$button.id}`);
 	    $button.addEventListener('click', this.onClick.bind(this));
 	    $button.addEventListener('dragover', event => {
 	      event.preventDefault();
 	    });
-	    this.$root.insertAdjacentElement('afterbegin', $button);
-	    this.$input.setAttribute('tabindex', '-1');
-	    this.$input.setAttribute('aria-hidden', 'true');
-	    this.$button = $button;
-	    this.$status = $status;
-	    this.$input.addEventListener('change', this.onChange.bind(this));
-	    this.updateDisabledState();
-	    this.observeDisabledState();
-	    this.$announcements = document.createElement('span');
-	    this.$announcements.classList.add('govuk-file-upload-announcements');
-	    this.$announcements.classList.add('govuk-visually-hidden');
-	    this.$announcements.setAttribute('aria-live', 'assertive');
-	    this.$root.insertAdjacentElement('afterend', this.$announcements);
+	    return $button;
+	  }
+	  bindDraggingEvents() {
 	    this.$button.addEventListener('drop', this.onDrop.bind(this));
 	    document.addEventListener('dragenter', this.updateDropzoneVisibility.bind(this));
 	    document.addEventListener('dragenter', () => {
@@ -2391,7 +2400,7 @@
 	  }
 	  updateDisabledState() {
 	    this.$button.disabled = this.$input.disabled;
-	    this.$root.classList.toggle('govuk-drop-zone--disabled', this.$button.disabled);
+	    this.$root.classList.toggle('govuk-file-upload-wrapper--disabled', this.$button.disabled);
 	  }
 	}
 
