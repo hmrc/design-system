@@ -2,21 +2,23 @@
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
 {% set navigationItems = [] %}
-
 {% for section in navigation %}
   {% set isSectionActive = filepath.startsWith(section.href) %}
   {% set isSectionCurrent = filepath === section.href ~ "/" %}
+  {% set showSubSection = section.items and isSectionActive %}
   {% set subsection = '' %}
 
-  {% if section.items and isSectionActive %}
+
+  {% if showSubSection %}
     {% set subsection %}
       <a href="/{{- section.href -}}/"
-        class="govuk-service-navigation__link"
+        class="govuk-service-navigation__link app-service-navigation__link"
         {%- if isSectionActive or isSectionCurrent %} aria-current="{{ 'page' if isSectionCurrent else 'true' }}"{% endif %}
       >{{ section.text }}</a>
+
       <span class="app-mobile-subnav">
         {% for placement, items in section.items | groupby("placement") %}
-          <ul class="app-mobile-subnav__section {{placement}}">
+          <ul class="app-mobile-subnav__section">
             {% for topic, items in items | groupby("topic") %}
                 {% if topic !== 'none' %}
                   <li class="app-mobile-subnav__topic-item">
@@ -29,7 +31,7 @@
                   {% set isItemCurrent = filepath === item.href ~ "/" %}
                   <li class="app-mobile-subnav__section-item {%- if isItemCurrent %} app-mobile-subnav__section-item--active{% endif %}">
                     <a
-                      class="govuk-service-navigation__link"
+                      class="govuk-service-navigation__link app-service-navigation__link"
                       href="/{{- item.href -}}/"
                       {%- if isItemCurrent %} aria-current="page"{% endif %}
                     >{{item.text}}</a>
@@ -48,9 +50,9 @@
   {% endif %}
 
   {% set navigationItems = (navigationItems.push({
-    href: ("/" ~ section.href ~ "/" if not subsection or not isSectionActive),
-    text: section.text,
-    html: (subsection if subsection or isSectionActive),
+    href: ("/" ~ section.href ~ "/" if not showSubSection),
+    text: section.text + ,
+    html: (subsection if showSubSection or isSectionActive),
     active: isSectionActive,
     current: isSectionCurrent
   }), navigationItems) %}
@@ -62,5 +64,8 @@
   serviceUrl: '/'
 }) }}
 
-{{ govukServiceNavigation({ navigation: navigationItems }) }}
+{{ govukServiceNavigation({
+  navigation: navigationItems,
+  classes: "app-service-navigation"
+}) }}
 
