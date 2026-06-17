@@ -51,7 +51,7 @@
 
   {% set navigationItems = (navigationItems.push({
     href: ("/" ~ section.href ~ "/" if not showSubSection),
-    text: section.text + ,
+    text: section.text,
     html: (subsection if showSubSection or isSectionActive),
     active: isSectionActive,
     current: isSectionCurrent
