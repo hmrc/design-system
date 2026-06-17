@@ -103,7 +103,28 @@ nothing to commit, working tree clean",
 
 <p class="govuk-body">It is best practice not to push your changes directly to main and instead navigate to GitHub to check and merge those changes into main once you are happy.</p>
 
-<img src="" alt="Another terminal example">
+{{
+  codeSnippet({
+    code: "user@computer my-prototype % git push origin newFeature
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.06 KiB | 1.06 MiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+remote:
+remote: Create a pull request for 'newFeature' on GitHub by visiting:
+remote:      https://github.com/hmrc/my-prototype/pull/new/newFeature
+remote:
+remote: GitHub found 18 vulnerabilities on hmrc/my-prototype's default branch (9 high, 8 moderate, 1 low). To find out more, visit:
+remote:      https://github.com/hmrc/my-prototype/security/dependabot
+remote:
+To github.com:hmrc/my-prototype.git
+ * [new branch]      newFeature -> newFeature",
+    canCopy: false
+  })
+}}
 
 <h3 class="govuk-heading-m">Merging changes</h3>
 
