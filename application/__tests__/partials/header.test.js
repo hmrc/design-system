@@ -39,7 +39,7 @@ const templateFactory = () => `{% include 'header.njk' %}`.toString()
 
 const documentFactory = (params) => {
   const templateString = templateFactory()
-  const html = nunjucks.render(templateString, { ...options, ...params}).body
+  const html = nunjucks.render(templateString, { ...options, ...params }).body
   return new JSDOM(html).window.document
 }
 
@@ -53,7 +53,7 @@ describe('Header partial', () => {
 
   it('should render links to each section ', () => {
     const navigation = [
-      { "text": "Section 1", "href": "section-1", "items": []},
+      { "text": "Section 1", "href": "section-1", "items": [] },
       { "text": "Section 2", "href": "section-2", }
     ]
     const document = documentFactory({ "navigation": navigation, filepath: "/" })
@@ -68,7 +68,7 @@ describe('Header partial', () => {
 
   it('should have aria-current=page if the current page is the top-level section page', () => {
     const navigation = [
-      { "text": "Section 1", "href": "section-1", "items": []},
+      { "text": "Section 1", "href": "section-1", "items": [] },
       { "text": "Section 2", "href": "section-2", }
     ]
     const document = documentFactory({ "navigation": navigation, filepath: "section-1/" })
@@ -80,7 +80,7 @@ describe('Header partial', () => {
 
   it('should have aria-current=true if the current page is a sub page of the section', () => {
     const navigation = [
-      { "text": "Section 1", "href": "section-1", "items": []},
+      { "text": "Section 1", "href": "section-1", "items": [] },
       { "text": "Section 2", "href": "section-2", }
     ]
     const document = documentFactory({ "navigation": navigation, filepath: "section-1/item-1" })
@@ -100,7 +100,7 @@ describe('Header partial', () => {
   })
 
   it('should show the gov.uk service navigation link if the section is not active', () => {
-    const navigation = [{ "text": "Section 1", "href": "section-1", items: [{"item": "item1"}] }]
+    const navigation = [{ "text": "Section 1", "href": "section-1", items: [{ "item": "item1" }] }]
     const document = documentFactory({ "navigation": navigation, filepath: "not-section-1" })
     const serviceNavigation = document.querySelector('.govuk-service-navigation')
     const sectionLinkNoSubItems = serviceNavigation.querySelectorAll('.govuk-service-navigation__link:not(.app-service-navigation__link)')
@@ -121,7 +121,7 @@ describe('Header partial', () => {
           "topic": "none"
         }]
       }
-    ]
+      ]
       const document = documentFactory({ "navigation": navigation, filepath: "section-1" })
       const serviceNavigationSubNav = document.querySelector('.govuk-service-navigation .app-mobile-subnav')
 
@@ -165,7 +165,7 @@ describe('Header partial', () => {
           "text": "Item 1",
           "topic": "none"
         }]
-      },{
+      }, {
         "text": "Section 1",
         "href": "section-1",
         "items": [{
@@ -175,7 +175,7 @@ describe('Header partial', () => {
           "text": "Item 2",
           "topic": "none"
         }]
-      },{
+      }, {
         "text": "Section 1",
         "href": "section-1",
         "items": [{
@@ -203,7 +203,7 @@ describe('Header partial', () => {
           "placement": "primary",
           "text": "Item 1",
           "topic": "none"
-        },{
+        }, {
           "filepath": "section-1/item-2",
           "href": "section-1/item-2",
           "placement": "secondary",
@@ -235,7 +235,7 @@ describe('Header partial', () => {
           "placement": "primary",
           "text": "Item 1",
           "topic": "topic 1"
-        },{
+        }, {
           "filepath": "section-1/item-2",
           "href": "section-1/item-2",
           "placement": "secondary",
@@ -277,7 +277,7 @@ describe('Header partial', () => {
           "placement": "primary",
           "text": "Item 1",
           "topic": "topic 1"
-        },{
+        }, {
           "filepath": "section-1/item-2",
           "href": "section-1/item-2",
           "placement": "secondary",
@@ -319,13 +319,13 @@ describe('Header partial', () => {
           "placement": "primary",
           "text": "Item 1",
           "topic": "none"
-        },{
+        }, {
           "filepath": "section-1/item-2",
           "href": "section-1/item-2",
           "placement": "primary",
           "text": "Item 2",
           "topic": "none"
-        },{
+        }, {
           "filepath": "section-1/item-3",
           "href": "section-1/item-3",
           "placement": "primary",
@@ -350,13 +350,13 @@ describe('Header partial', () => {
           "placement": "primary",
           "text": "Item 1",
           "topic": "none"
-        },{
+        }, {
           "filepath": "section-1/item-2",
           "href": "section-1/item-2",
           "placement": "primary",
           "text": "Item 2",
           "topic": "none"
-        },{
+        }, {
           "filepath": "section-1/item-3",
           "href": "section-1/item-3",
           "placement": "primary",
