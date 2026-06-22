@@ -13,7 +13,7 @@ $_mobile-list-spacing: govuk-spacing(6);
 }
 
 .app-mobile-subnav__section {
-  border-bottom: 1px solid var(--govuk-border-colour, #cecece);
+  border-bottom: 1px solid govuk-functional-colour("border");
   padding: govuk-spacing(3) 0;
   list-style-type: none;
 
@@ -39,7 +39,7 @@ $_mobile-list-spacing: govuk-spacing(6);
 }
 
 .app-mobile-subnav__section-item--active a:not(:hover):not(:active) {
-  border-bottom: $govuk-link-hover-underline-thickness solid var(--govuk-link-colour, #1a65a6);
+  border-bottom: $govuk-link-hover-underline-thickness solid govuk-functional-colour("link");
 }
 
 //Navigation
