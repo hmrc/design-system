@@ -5,6 +5,7 @@ function LanguageSwitchExample ($module) {
   this.$switches = this.$module.querySelectorAll('.app-example__language-switch a')
   this.$iframe = this.$module.querySelector('[data-module~="app-example-frame"]')
   this.currentClassName = 'app-example__language-switch--current'
+  this.$newTabLink = this.$module.querySelector('.app-example__new-tab a')
   this.getLanguageClass = function (lang) {
     return ['app-example__language-switch--', lang, '-activated'].join('')
   }
@@ -35,6 +36,11 @@ LanguageSwitchExample.prototype.handleClick = function (event) {
   $target.parentNode.classList.add(this.currentClassName)
   this.$module.classList.remove(this.getLanguageClass('en'), this.getLanguageClass('cy'))
   this.$module.classList.add(this.getLanguageClass($target.getAttribute('data-lang')))
+
+  this.newTabhref = this.$newTabLink.getAttribute('href')
+  this.newTabAltHref = this.$newTabLink.getAttribute('data-alt-href')
+  this.$newTabLink.setAttribute('href', this.newTabAltHref)
+  this.$newTabLink.setAttribute('data-alt-href', this.newTabhref)
 }
 
 export default LanguageSwitchExample

@@ -44,7 +44,7 @@
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-tab">
-        <a href="{{ newTabExampleURL }}" target="_blank" title="Open {{description}} example in a new tab">
+        <a href="{{ newTabExampleURL }}" {% if newTabWelshExampleURL %}data-alt-href="{{ newTabWelshExampleURL }}"{% endif %} target="_blank" title="Open {{description}} example in a new tab">
           Open this example in a new tab<span class="govuk-visually-hidden">: {{description}}</span>
         </a>
       </span>
