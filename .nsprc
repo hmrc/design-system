@@ -1,4 +1,12 @@
 {
-  "GHSA-ww39-953v-wcq6": "glob-parent - devDependency, no risk given our usage",
-  "GHSA-4gmj-3p3h-gm8h": "es5-ext - not using vulnerable functions, no risk given our usage"
+  "GHSA-grv7-fg5c-xmjg": "braces - devDependency, no risk given our usage",
+  "GHSA-h67p-54hq-rp68": "js-yaml - devDependency, no risk given our usage",
+  "GHSA-952p-6rrq-rcjv": "micromatch - devDependency, no risk given our usage",
+  "GHSA-7fh5-64p2-3v2j": "postcss - PostCSS line return parsing error, no risk given our usage",
+  "GHSA-qx2v-qp2m-jg93": "postcss - PostCSS has XSS via Unescaped </style> in its CSS Stringify Output, no risk given our usage",
+  "GHSA-gcx4-mw62-g8wm": "rollup - devDependency, no risk given our usage",
+  "GHSA-mw96-cpmx-2vgc": "rollup - devDependency, no risk given our usage",
+  "GHSA-m6fv-jmcg-4jfg": "send - devDependency, no risk given our usage",
+  "GHSA-52f5-9888-hmc6": "tmp - devDependency, no risk given our usage",
+  "GHSA-ph9p-34f9-6g65": "tmp - devDependency, no risk given our usage"
 }
