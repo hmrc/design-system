@@ -8,6 +8,7 @@
     "test:integration": "gulp integration",
     "test:watch": "gulp jest:unit:watch",
     "test:unit": "gulp jest:unit",
+    "lint:html": "html-validate \"dist/**/*.html\"",
     "test": "npm run test:unit",
     "build": "npm run test && gulp generate-examples && gulp build",
     "serve": "gulp serve",

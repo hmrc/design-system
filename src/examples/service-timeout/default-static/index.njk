@@ -2,6 +2,7 @@
 layout: layout-example.njk
 ---
 
+{% block thing %}
 <div id="hmrc-timeout-dialog" tabindex="-1" role="dialog" aria-modal="true" class="hmrc-timeout-dialog" aria-labelledby="hmrc-timeout-heading hmrc-timeout-message">
   <div>
     <h1 id="hmrc-timeout-heading" class="govuk-heading-m push--top">You’re about to be signed out</h1>
@@ -14,3 +15,4 @@ layout: layout-example.njk
   </div>
 </div>
 <div id="hmrc-timeout-overlay" class="hmrc-timeout-overlay"></div>
+{% endblock %}
