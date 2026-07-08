@@ -1,3 +1,6 @@
+// based on GOV.UK Design System html-validate config
+// https://github.com/alphagov/govuk-design-system/blob/bfd61dfc59d1598e9217e917de91d4d8375bb4ba/.htmlvalidate.js
+
 const { defineConfig } = require('html-validate')
 
 module.exports = defineConfig({
@@ -61,7 +64,12 @@ module.exports = defineConfig({
     // code does not have a submit button. This is because we wrap our
     // examples in <form> elements to disable browser validation:
     // https://github.com/alphagov/govuk-design-system/pull/522
-    'wcag/h32': 'off'
+    'wcag/h32': 'off',
+
+    // HMRC overrides from GOV.UK Design System
+
+    // We don't have 'back to top' anchor links so we can enable this.
+    'wcag/h30': 'error'
   },
   elements: [
     'html5',

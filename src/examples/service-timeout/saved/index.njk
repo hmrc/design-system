@@ -4,12 +4,10 @@ layout: layout-example.njk
 
 {%- from  "hmrc/components/timeout-dialog/macro.njk" import hmrcTimeoutDialog -%}
 
-{% block head %}
-  {{ hmrcTimeoutDialog ({
-    timeout: 70,
-    countdown: 68,
-    keepAliveUrl: "?continue=true",
-    signOutUrl: "?lang=English",
-    messageSuffix: "We saved your answers"
-  }) }}
-{% endblock %}
+{{ hmrcTimeoutDialog ({
+  timeout: 70,
+  countdown: 68,
+  keepAliveUrl: "?continue=true",
+  signOutUrl: "?lang=English",
+  messageSuffix: "We saved your answers"
+}) }}
