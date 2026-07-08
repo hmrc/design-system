@@ -17,12 +17,12 @@ describe('HMRC content style guide', () => {
 
   it('should have the correct meta title', async () => {
     const title = await page.title()
-    expect(title).toBe('HMRC content style guide - Design resources for HMRC — GOV.UK')
+    expect(title).toBe('HMRC style guide - Design resources for HMRC — GOV.UK')
   })
 
   it('should have the correct page heading', async () => {
     const heading = await page.$eval('h1', el => el.textContent)
-    expect(heading).toBe('HMRC content style guide')
+    expect(heading).toBe('HMRC style guide')
   })
 
   describe('Accordion', () => {
