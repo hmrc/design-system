@@ -1,0 +1,65 @@
+---
+title: Bar chart
+menuText: Bar chart
+layout: twoColumnPage.njk
+status: development
+---
+{% from "_example.njk" import example %}
+{% from "hmrcFrontendInfo.njk" import hmrcFrontendInfo %}
+
+<style>
+.graph-green-bar {
+	border-bottom: 10px solid #28a197;
+	}
+
+	.graph-grey-bar {
+	border-top: 2px solid #b1b4b6;
+	}
+  </style>
+{% block content %}
+
+  <div class="govuk-summary-list__row content">
+        <dt id="Health" class="govuk-summary-list__key">Health
+          <span>&nbsp;(21.9%)</span>
+        </dt>
+         <dd class="govuk-summary-list__value">£1,231</dd>
+      </div>
+      <div aria-hidden="true">
+        <dt class="graph-green-bar" style="width:21.9%;"></dt>
+        <dd class="graph-grey-bar"></dd>
+      </div>
+      
+       <div class="govuk-summary-list__row content">
+        <dt id="Welfare" class="govuk-summary-list__key">Welfare
+          <span>&nbsp;(19.6%)</span>
+        </dt>
+        <dd class="govuk-summary-list__value">£1,111</dd>
+      </div>
+      <div aria-hidden="true">
+        <dt class="graph-green-bar" style="width:19.6%;"></dt>
+        <dd class="graph-grey-bar"></dd>
+      </div>
+      
+       <div class="govuk-summary-list__row content">
+        <dt id="Business" class="govuk-summary-list__key">Business and Industry
+          <span>&nbsp;(14.4%)</span>
+        </dt>
+        <dd class="govuk-summary-list__value">£816</dd>
+      </div>
+      <div aria-hidden="true">
+        <dt class="graph-green-bar" style="width:14.4%;"></dt>
+        <dd class="graph-grey-bar"></dd>
+      </div>
+
+       <div class="govuk-summary-list__row content">
+        <dt id="Health" class="govuk-summary-list__key">State pensions
+          <span>&nbsp;(10.1%)</span>
+        </dt>
+        <dd class="govuk-summary-list__value">£572</dd>
+      </div>
+      <div aria-hidden="true">
+        <dt class="graph-green-bar" style="width:10.1%;"></dt>
+        <dd class="graph-grey-bar"></dd>
+      </div>
+
+{% endblock %}
