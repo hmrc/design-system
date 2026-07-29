@@ -2,12 +2,12 @@
   {% if params.code %}
     <div class="app-code-snippet{%if params.canCopy%} app-code-snippet--copy{% endif %}">
       <pre {% if params.canCopy %}data-module="app-copy"{% endif %}><code class="govuk-body-s">
-        {%- if params.isSafe -%}
-          {{- params.code | safe -}}
-        {%- else -%}
-          {{- params.code -}}
-        {%- endif -%}
-      </code></pre>
+          {%- if params.isSafe -%}
+            {{- params.code | safe -}}
+          {%- else -%}
+            {{- params.code -}}
+          {%- endif -%}
+        </code></pre>
     </div>
   {% endif %}
 {% endmacro %}
