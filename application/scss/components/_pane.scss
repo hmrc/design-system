@@ -58,7 +58,7 @@
       margin-left: auto;
       flex: 1 1 auto;
       flex-direction: column;
-      align-items: flex-start;
+      min-width: 0; // Fixes pre element being wider than we want due to flex items automatic minimum size
 
       // Stick footer to bottom of screen if content is shorter than viewport
       main {
