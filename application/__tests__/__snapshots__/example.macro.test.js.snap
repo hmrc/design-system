@@ -3,6 +3,7 @@
 exports[`Single page example macro should include the escaped HTML markup from the examples 1`] = `
 <code
   class="hljs html"
+  tabindex="0"
 >
   <span
     class="hljs-tag"
