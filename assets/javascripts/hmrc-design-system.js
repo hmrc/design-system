@@ -336,7 +336,7 @@
 	      // Default timeoutUrl to signOutUrl if not set
 	      options.timeoutUrl = options.timeoutUrl || options.signOutUrl;
 	      validateInput(options);
-	      settings = mergeOptionsWithDefaults(options, localisedDefaults);
+	      settings = _mergeOptionsWithDefaults(options, localisedDefaults);
 	      setupDialogTimer();
 	      listenForSessionActivityAndResetDialogTimer();
 	    }
@@ -364,11 +364,11 @@
 	        throw new Error("Missing config item(s): [".concat(missingRequiredConfig.join(', '), "]"));
 	      }
 	    };
-	    var mergeOptionsWithDefaults = function mergeOptionsWithDefaults(theOptions, localisedDefaults) {
+	    var _mergeOptionsWithDefaults = function mergeOptionsWithDefaults(theOptions, localisedDefaults) {
 	      var clone = _objectSpread2({}, theOptions);
 	      Object.keys(localisedDefaults).forEach(function (key) {
 	        if (_typeof(clone[key]) === 'object') {
-	          clone[key] = mergeOptionsWithDefaults(theOptions[key], localisedDefaults[key]);
+	          clone[key] = _mergeOptionsWithDefaults(theOptions[key], localisedDefaults[key]);
 	        }
 	        if (clone[key] === undefined || clone[key] === '') {
 	          clone[key] = localisedDefaults[key];
@@ -481,16 +481,16 @@
 	        }
 	        return remaining - (roundedRemaining - (roundedRemaining % 60000 || 60000));
 	      };
-	      var runUpdate = function runUpdate() {
+	      var _runUpdate = function runUpdate() {
 	        var counter = Math.max(getSecondsRemaining(), 0);
 	        updateCountdown(counter);
 	        if (counter === 0) {
 	          timeout();
 	        } else {
-	          currentTimer = window.setTimeout(runUpdate, getNextTimeout());
+	          currentTimer = window.setTimeout(_runUpdate, getNextTimeout());
 	        }
 	      };
-	      runUpdate();
+	      _runUpdate();
 	    };
 	    var keepAliveAndClose = function keepAliveAndClose() {
 	      cleanup();
@@ -582,7 +582,7 @@
 	      _classCallCheck(this, SessionActivityService);
 	      this.activityChannel = BrowserBroadcastChannel && new BrowserBroadcastChannel('session-activity');
 	    }
-	    _createClass(SessionActivityService, [{
+	    return _createClass(SessionActivityService, [{
 	      key: "logActivity",
 	      value: function logActivity() {
 	        if (this.activityChannel) {
@@ -602,7 +602,6 @@
 	        }
 	      }
 	    }]);
-	    return SessionActivityService;
 	  }();
 
 	  function HmrcPrintLink($module, window) {
@@ -2210,15 +2209,12 @@
 	    this.id = void 0;
 	    this.$announcements = void 0;
 	    this.enteredAnotherElement = void 0;
-	    const $input = this.$root.querySelector('input');
+	    const $input = this.$root.querySelector('input[type="file"]');
 	    if ($input === null) {
 	      throw new ElementError({
 	        component: FileUpload,
 	        identifier: 'File inputs (`<input type="file">`)'
 	      });
-	    }
-	    if ($input.type !== 'file') {
-	      throw new ElementError(formatErrorMessage(FileUpload, 'File input (`<input type="file">`) attribute (`type`) is not `file`'));
 	    }
 	    this.$input = $input;
 	    if (!this.$input.id) {

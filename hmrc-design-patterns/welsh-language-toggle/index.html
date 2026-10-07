@@ -335,6 +335,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
@@ -344,40 +345,48 @@
               <pre class="app-example__language-switch--en-only-content" data-module="app-copy"><code class="hljs js" tabindex="0">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/service-navigation/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukServiceNavigation -%}
 {%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/service-navigation-language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcServiceNavigationLanguageSelect -%}
 
+{% set hmrcLanguageToggle %}
+  {{ hmrcServiceNavigationLanguageSelect({
+    <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;en&#x27;</span>,
+    <span class="hljs-attr">en</span>: {
+      <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?en&#x27;</span>
+    },
+    <span class="hljs-attr">cy</span>: {
+      <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?cy&#x27;</span>
+    }
+  }) }}
+{% endset %}
+
 {{ govukServiceNavigation({
   <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&quot;Service name&quot;</span>,
   <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">&quot;#&quot;</span>,
   <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;hmrc-service-navigation--with-language-select&quot;</span>,
   <span class="hljs-attr">slots</span>: {
-    <span class="hljs-attr">end</span>: hmrcServiceNavigationLanguageSelect({
-      <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;en&#x27;</span>,
-      <span class="hljs-attr">en</span>: {
-        <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?en&#x27;</span>
-      },
-      <span class="hljs-attr">cy</span>: {
-        <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?cy&#x27;</span>
-      }
-    })
+    <span class="hljs-attr">end</span>: hmrcLanguageToggle
   }
 }) }}</code></pre>
 
                 <pre class="app-example__language-switch--cy-only-content" data-module="app-copy"><code class="hljs js" tabindex="0">{%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;govuk/components/service-navigation/macro.njk&quot;</span> <span class="hljs-keyword">import</span> govukServiceNavigation -%}
 {%- <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;hmrc/components/service-navigation-language-select/macro.njk&quot;</span> <span class="hljs-keyword">import</span> hmrcServiceNavigationLanguageSelect -%}
 
+{% set hmrcLanguageToggle %}
+  {{ hmrcServiceNavigationLanguageSelect({
+    <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;cy&#x27;</span>,
+    <span class="hljs-attr">en</span>: {
+      <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?en&#x27;</span>
+    },
+    <span class="hljs-attr">cy</span>: {
+      <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?cy&#x27;</span>
+    }
+  }) }}
+{% endset %}
+
 {{ govukServiceNavigation({
   <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&quot;Enw’r gwasanaethcy&quot;</span>,
   <span class="hljs-attr">serviceUrl</span>: <span class="hljs-string">&quot;#&quot;</span>,
   <span class="hljs-attr">classes</span>: <span class="hljs-string">&quot;hmrc-service-navigation--with-language-select&quot;</span>,
   <span class="hljs-attr">slots</span>: {
-    <span class="hljs-attr">end</span>: hmrcServiceNavigationLanguageSelect({
-      <span class="hljs-attr">language</span>: <span class="hljs-string">&#x27;cy&#x27;</span>,
-      <span class="hljs-attr">en</span>: {
-        <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?en&#x27;</span>
-      },
-      <span class="hljs-attr">cy</span>: {
-        <span class="hljs-attr">href</span>: <span class="hljs-string">&#x27;?cy&#x27;</span>
-      }
-    })
+    <span class="hljs-attr">end</span>:hmrcLanguageToggle
   }
 }) }}</code></pre>
             </div>
