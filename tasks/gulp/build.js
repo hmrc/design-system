@@ -1,6 +1,5 @@
 const path = require('path')
 const gulp = require('gulp')
-const log = require('fancy-log')
 const Metalsmith = require('metalsmith')
 const inPlace = require('@metalsmith/in-place')
 const debug = require('metalsmith-debug')
@@ -25,7 +24,7 @@ const pattern = '**/*{.njk,.html}'
 const sections = require('../../lib/navigation.json')
 
 gulp.task('compile', (done) => {
-  log('Metalsmith build starting')
+  console.log('Metalsmith build starting')
 
   Metalsmith(projectRoot)
     .use(ignore(['**/__tests__/*', 'all-patterns/*']))

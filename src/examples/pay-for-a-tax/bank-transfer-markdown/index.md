@@ -22,7 +22,7 @@ Use the following details to make a payment if your account is overseas:
 * Business Identifier Code (BIC) — XXXXXXXX
 * account name — XXX
 
-You should make overseas payments in sterling (GBP). Your bank may charge you if use any other currency.
+You must make all payments in sterling (GBP). Your bank may charge you if use any other currency.
 
 If needed, you can provide your bank with the following HMRC banking address:
 

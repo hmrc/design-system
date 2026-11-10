@@ -127,14 +127,21 @@
 
 .app-tabs__container pre code {
   display: block;
+  padding-top: 48px; // button height + border + top/bottom position
   padding-right: govuk-spacing(4);
   padding-bottom: govuk-spacing(4);
   overflow-x: auto;
+  border: 3px solid transparent;
+
+  &:focus {
+    border-color: var(--govuk-input-border-colour, #0b0c0c);
+    outline: 3px solid var(--govuk-focus-colour, #fd0);
+  }
 }
 
 .app-tabs__container pre {
-  padding-right: 0;
-  padding-bottom: 0;
+  overflow: visible;
+  padding: 0;
 }
 
 

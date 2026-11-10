@@ -1,6 +1,6 @@
 ## Pay by cheque
 
-Allow 3 working days for your payment to reach HMRC.
+Make sure your payment will reach HMRC before the deadline.
 
 Make your cheque payable to ‘HM Revenue and Customs only’ and write your reference number on the back.
 

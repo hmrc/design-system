@@ -44,7 +44,7 @@
 
     <div class="app-example app-example--tabs">
       <span class="app-example__link app-example__new-tab">
-        <a href="{{ newTabExampleURL }}" target="_blank" title="Open {{description}} example in a new tab">
+        <a href="{{ newTabExampleURL }}" {% if newTabWelshExampleURL %}data-alt-href="{{ newTabWelshExampleURL }}"{% endif %} target="_blank" title="Open {{description}} example in a new tab">
           Open this example in a new tab<span class="govuk-visually-hidden">: {{description}}</span>
         </a>
       </span>
@@ -61,7 +61,7 @@
         </span>
       {% endif %}
       <iframe data-module="app-example-frame" class="app-example__frame {% if not params.height %}app-example__frame--resizable{% endif %}"
-      {% if params.height %}height="{{ params.height}}px"{% endif %} src="{{ exampleURL }}"{% if description %} title="{{description}} example"{% endif %}></iframe>
+      {% if params.height %}height="{{ params.height}}"{% endif %} src="{{ exampleURL }}"{% if description %} title="{{description}} example"{% endif %}></iframe>
     </div>
 
     {% if not params.hideTabs%}
@@ -96,18 +96,14 @@
 
         {% if not params.markdownOnly %}
           <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-html" role="tabpanel">
-            <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-              <code class="hljs html">
+            <pre class="app-example__language-switch--en-only-content" data-module="app-copy"><code class="hljs html" tabindex="0">
                 {{- getHTMLCode(newTabExamplePath) | highlight('html') | safe -}}
-              </code>
-            </pre>
+              </code></pre>
 
             {% if welshExamplePath %}
-              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
-                <code class="hljs html">
+              <pre class="app-example__language-switch--cy-only-content" data-module="app-copy"><code class="hljs html" tabindex="0">
                   {{- getHTMLCode(newTabWelshExamplePath) | highlight('html') | safe -}}
-                </code>
-              </pre>
+                </code></pre>
             {% endif %}
           </div>
         {% endif %}
@@ -115,18 +111,14 @@
         {% if not params.htmlOnly %}
           {% if not params.markdownOnly %}
             <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-nunjucks" role="tabpanel">
-              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs js">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy"><code class="hljs js" tabindex="0">
                 {{- getNunjucksCode(newTabExamplePath) | highlight('js') | safe -}}
-                </code>
-              </pre>
+                </code></pre>
 
               {% if welshExamplePath %}
-                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
-                  <code class="hljs js">
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy"><code class="hljs js" tabindex="0">
                     {{- getNunjucksCode(newTabWelshExamplePath) | highlight('js') | safe -}}
-                  </code>
-                </pre>
+                  </code></pre>
               {% endif %}
             </div>
           {% endif %}
@@ -135,18 +127,14 @@
         {% if not params.htmlOnly %}
           {% if params.markdown %}
             <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-markdown" role="tabpanel">
-              <pre class="app-example__language-switch--en-only-content" data-module="app-copy">
-                <code class="hljs md">
+              <pre class="app-example__language-switch--en-only-content" data-module="app-copy"><code class="hljs md" tabindex="0">
                   {{- getHTMLCode(markdownExamplePath) | highlight('md') | safe -}}
-                </code>
-              </pre>
+                </code></pre>
 
               {% if welshExamplePath %}
-                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy">
-                  <code class="hljs md">
+                <pre class="app-example__language-switch--cy-only-content" data-module="app-copy"><code class="hljs md" tabindex="0">
                     {{- getHTMLCode(markdownWelshExamplePath) | highlight('md') | safe -}}
-                  </code>
-                </pre>
+                  </code></pre>
               {% endif %}
             </div>
           {% endif %}
