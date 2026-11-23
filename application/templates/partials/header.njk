@@ -16,15 +16,14 @@
         {%- if isSectionActive or isSectionCurrent %} aria-current="{{ 'page' if isSectionCurrent else 'true' }}"{% endif %}
       >{{ section.text }}</a>
 
-      <span class="app-mobile-subnav">
+      <div class="app-mobile-subnav">
         {% for placement, items in section.items | groupby("placement") %}
-          <ul class="app-mobile-subnav__section">
+          <ul class="app-mobile-subnav__section" aria-label="{{ section.text if placement === "primary" else "Related guidance" }}">
             {% for topic, items in items | groupby("topic") %}
                 {% if topic !== 'none' %}
                   <li class="app-mobile-subnav__topic-item">
                     <h3 class="app-mobile-subnav__topic-heading">{{ topic }}</h3>
-
-                    <ul class="app-mobile-subnav__topic-list">
+                    <ul class="app-mobile-subnav__topic-list" aria-label="{{ topic }}">
                 {% endif %}
 
                 {% for item in items %}
@@ -45,14 +44,14 @@
             {% endfor %}
           </ul>
         {% endfor %}
-      </span>
+      </div>
     {% endset %}
   {% endif %}
 
   {% set navigationItems = (navigationItems.push({
     href: ("/" ~ section.href ~ "/" if not showSubSection),
     text: section.text,
-    html: (subsection if showSubSection or isSectionActive),
+    html: (subsection if showSubSection or isSectionActive else section.text),
     active: isSectionActive,
     current: isSectionCurrent
   }), navigationItems) %}
@@ -66,6 +65,7 @@
 
 {{ govukServiceNavigation({
   navigation: navigationItems,
-  classes: "app-service-navigation"
+  classes: "app-serv§ice-navigation",
+  navigationLabel: "Sections menu"
 }) }}
 
