@@ -17,13 +17,13 @@ title: Page title
 <p class="govuk-body">The page title can have up to 4 items separated by dashes. They are:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li>the same &lt;h1&gt; as the page</li>
+  <li>the same <code>&lt;h1&gt;</code> as the page, unless it contains personally identifiable information</li>
   <li>section name, which you should only include if the service has more than one section</li>
   <li>service name</li>
-  <li>GOV.UK (do not include 'GOV.UK' on internal services)</li>
+  <li>GOV.UK (do not include ‘GOV.UK’ on internal services)</li>
 </ul>
 
-  <h3 class="govuk-heading-m" id="using-the-gov-uk-protype-kit">Using the GOV.UK Prototype kit</h3>
+  <h3 class="govuk-heading-m" id="using-the-gov-uk-prototype-kit">Using the GOV.UK Prototype kit</h3>
 
   <p class="govuk-body">Change your page title by updating the default <code>page_title</code> block on each page.</p>
 
@@ -40,7 +40,7 @@ title: Page title
 
   {{
     codeSnippet({
-      code: '<title>Do you live in the UK? — Your details — Manage your tax credits — GOV.UK<title>',
+      code: '<title>Do you live in the UK? — Your details — Manage your tax credits — GOV.UK</title>',
       canCopy: true
     })
   }}
@@ -51,22 +51,28 @@ title: Page title
 
   {{
     codeSnippet({
-      code: '<title>Error: Do you live in the UK? — Your details — Manage your tax credits — GOV.UK<title>',
+      code: '<title>Error: Do you live in the UK? — Your details — Manage your tax credits — GOV.UK</title>',
       canCopy: true
     })
   }}
 
-  <h3 class="govuk-heading-m" id="personally-identifiable-information">Personally identifiable information</h3>
+<h3 class="govuk-heading-m" id="personally-identifiable-information">Personally identifiable information</h3>
 
-  <p class="govuk-body">If there is personally identifiable information in the &lt;h1&gt;, you must make sure it is not recorded in your analytics package.</p>
+  <p class="govuk-body">Do not include personally identifiable information in the page title.</p>
 
-  <p class="govuk-body">For example, if the &lt;h1&gt; is ‘What is Gordon's date of birth?’, record ‘What is their date of birth?’.</p>
+  <p class="govuk-body">Page titles can be exposed outside your service, including in:</p>
 
-  <p class="govuk-body">To do this you could change the page title to use ‘their’ but keep ‘Gordon’ in the &lt;h1&gt;. Or you could keep ‘Gordon’ in the page title and send a different page title to your analytics package.</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>browser history and autocomplete, which can stay visible on shared computers even after someone signs out</li>
+    <li>open browser tabs, window titles and synced browser accounts</li>
+    <li>analytics packages and other monitoring tools</li>
+  </ul>
+
+  <p class="govuk-body">If the <code>&lt;h1&gt;</code> contains personally identifiable information, use a generic version in the page title instead. For example, if the <code>&lt;h1&gt;</code> is ‘What is Gordon’s date of birth?’, use ‘What is their date of birth?’ in the <code>&lt;title&gt;</code>.</p>
 
 <h2 class="govuk-heading-l" id="research">Research</h2>
 
-<p class="govuk-body">This guidance is based on the format recommended by the Web Content Accessibility Guidelines. See <a class="govuk-link" href="https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G88">Providing descriptive titles for Web pages</a>.</p>
+<p class="govuk-body">This guidance is based on the format recommended by the Web Content Accessibility Guidelines. See <a class="govuk-link" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G88">Providing descriptive titles for web pages</a>.</p>
 
 <p class="govuk-body">It is more accessible and is consistent with GOV.UK guidance pages.</p>
 
