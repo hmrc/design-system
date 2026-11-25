@@ -120,8 +120,7 @@ describe('Header partial', () => {
           "text": "Item 1",
           "topic": "none"
         }]
-      }
-      ]
+      }]
       const document = documentFactory({ "navigation": navigation, filepath: "section-1" })
       const serviceNavigationSubNav = document.querySelector('.govuk-service-navigation .app-mobile-subnav')
 
@@ -369,6 +368,38 @@ describe('Header partial', () => {
 
       expect(serviceNavigationSubNavItem.length).toBe(1)
       expect(serviceNavigationSubNavItem[0].textContent.trim()).toBe("Item 1")
+    })
+
+    it('should have an aria-label in the list of subsection pages with the name of the section when the placement is primary', () => {
+      const navigation = [{
+        "text": "Section 1",
+        "href": "section-1",
+        "items": [{
+          "filepath": "section-1/item-1",
+          "placement": "primary"
+        }]
+      }]
+      const document = documentFactory({ "navigation": navigation, filepath: "section-1/item-1" })
+      const serviceNavigationSubNavItem = document.querySelector('.govuk-service-navigation .app-mobile-subnav__section[aria-label]')
+
+      expect(serviceNavigationSubNavItem).not.toBeNull()
+      expect(serviceNavigationSubNavItem.getAttribute("aria-label")).toBe("Section 1")
+    })
+
+    it('should have an aria-label in the list of subsection pages with the name of the section when the placement is not primary', () => {
+      const navigation = [{
+        "text": "Section 1",
+        "href": "section-1",
+        "items": [{
+          "filepath": "section-1/item-1",
+          "placement": "secondary"
+        }]
+      }]
+      const document = documentFactory({ "navigation": navigation, filepath: "section-1/item-1" })
+      const serviceNavigationSubNavItem = document.querySelector('.govuk-service-navigation .app-mobile-subnav__section[aria-label]')
+
+      expect(serviceNavigationSubNavItem).not.toBeNull()
+      expect(serviceNavigationSubNavItem.getAttribute("aria-label")).toBe("Related guidance")
     })
   })
 })
