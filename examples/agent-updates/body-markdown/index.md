@@ -1,4 +1,4 @@
-Agent updates give guidance and news to tax agents and advisers.
+Agent Updates give guidance and news to tax agents and advisers.
 
 The next edition will be out on xxx [date].
 
