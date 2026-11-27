@@ -1,5 +1,3 @@
-// Taken from https://github.com/alphagov/govuk-design-system/blob/6ad3d9189230d15b395af297c2fa8becd4ebb4e6/src/stylesheets/components/_pane.scss on 2018-10-18
-
 @include govuk-exports("app-pane") {
   $toc-width: 260px;
   $toc-width-tablet: 210px;
@@ -10,17 +8,6 @@
     @include govuk-media-query($from: tablet) {
       display: flex;
       flex-direction: column;
-    }
-  }
-
-  .govuk-back-link {
-    display: none;
-    @include govuk-responsive-margin(6, "left");
-  }
-
-  .js-enabled {
-    .govuk-back-link {
-      display: inline-block;
     }
   }
 
@@ -37,7 +24,7 @@
   }
 
   .app-pane__body {
-    @include govuk-media-query($from: desktop) {
+    @include govuk-media-query($from: tablet) {
       display: flex;
       position: relative;
       min-height: 0;
@@ -46,6 +33,11 @@
   }
 
   .app-pane__subnav {
+    @include govuk-media-query($from: tablet) {
+      flex: 0 0 auto;
+      width: $toc-width-tablet;
+    }
+
     @include govuk-media-query($from: desktop) {
       flex: 0 0 auto;
       width: $toc-width;
@@ -68,28 +60,14 @@
     }
   }
 
-  .no-flexbox {
-    .app-pane {
-      height: auto;
-      overflow: visible;
-      @include govuk-clearfix;
-    }
+  .govuk-back-link {
+    display: none;
+    @include govuk-responsive-margin(6, "left");
+  }
 
-    .app-pane__body {
-      display: block;
-    }
-
-    .app-pane__subnav {
-      width: $toc-width-tablet;
-      float: left;
-      overflow-x: hidden;
-      border-right: none;
-    }
-
-    .app-pane__content {
-      overflow-x: hidden;
-      border-left: 1px solid govuk-functional-colour(border);
-      margin-left: -1px;
+  .js-enabled {
+    .govuk-back-link {
+      display: inline-block;
     }
   }
 }

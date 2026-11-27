@@ -2,7 +2,6 @@ import hmrcFrontend from 'hmrc-frontend/hmrc/all'
 import { initAll } from 'govuk-frontend/dist/govuk/all'
 
 import AppTabs from './components/tabs'
-import SubNavToggle from './components/subnav'
 import CopyToClipboard from './components/copy-to-clipboard'
 import Accordion from './components/accordion'
 import PrintLink from './components/print-link'
@@ -15,12 +14,6 @@ import './components/example'
 const $tabs = document.querySelectorAll('[data-module~="app-tabs"]')
 $tabs.forEach($tab => {
   new AppTabs($tab).init()
-})
-
-// Initialise nav toggles
-const $toggles = document.querySelectorAll('[data-module~="subnav-toggle"]')
-$toggles.forEach($toggle => {
-  new SubNavToggle($toggle).init()
 })
 
 // Initialise language switch

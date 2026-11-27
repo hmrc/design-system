@@ -96,6 +96,12 @@ module.exports = defineConfig({
             deprecated: false
           }
         }
+      },
+      // Allow aria-labels on ul - not recommended but ok for our use
+      ul: {
+        attributes: {
+          'aria-label': {}
+        }
       }
     }
   ]

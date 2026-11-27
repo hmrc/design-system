@@ -1,62 +1,54 @@
 $_current-indicator-width: 4px;
+$_mobile-list-spacing: govuk-spacing(6);
 
-//Navigation toggle
+// Mobile navigation
 
-.app-subnav-toggle + input {
-  display: none;
-}
-
-.app-subnav-toggle + input:checked + .app-pane__subnav {
+.app-mobile-subnav {
   display: block;
-}
+  padding-left: $_mobile-list-spacing;
 
-.app-subnav-toggle {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  text-align: right;
-  padding: 15px;
-  float: right;
-
-  @include govuk-media-query(desktop) {
+  @include govuk-media-query($from: tablet) {
     display: none;
-    padding: 20px;
   }
 }
 
-.app-subnav-toggle__button {
-  @include govuk-font(19);
-  cursor: pointer;
-  border: 0px solid $black;
-  margin-top: 40px;
-  font-size: 19px;
-  display: inline-block;
-  background: transparent;
+.app-mobile-subnav__section {
+  border-bottom: 1px solid govuk-functional-colour("border");
+  padding: govuk-spacing(3) 0;
+  list-style-type: none;
 
-  &:focus {
-    @include govuk-focused-text;
+  &:last-child {
+    border-bottom: none;
   }
 }
 
-.app-subnav-toggle__button::after {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
-  border-width: 8.66px 5px 0 5px;
-  content: "";
-  border-color: #0b0c0c;
-  margin-left: 5px;
+.app-mobile-subnav__section-item {
+  padding: govuk-spacing(2) 0;
 }
 
-.app-subnav-toggle.active .app-subnav-toggle__button::after{
-  transform: rotate(180deg);
+.app-mobile-subnav__topic-heading {
+  margin-top: govuk-spacing(4);
+  margin-bottom: govuk-spacing(1);
+  margin-left: $_mobile-list-spacing * -1;
+  font: inherit;
+}
+
+.app-mobile-subnav__topic-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.app-mobile-subnav__section-item--active a:not(:hover):not(:active) {
+  border-bottom: $govuk-link-hover-underline-thickness solid govuk-functional-colour("link");
 }
 
 //Navigation
 
 .app-pane__subnav {
+  @include govuk-media-query($until: tablet) {
+    display: none;
+  }
+
   .govuk-heading-m > a {
     &:hover,
     &:active,
@@ -69,14 +61,6 @@ $_current-indicator-width: 4px;
       outline-offset: 0;
       background-color: govuk-functional-colour(focus);
     }
-  }
-  @include govuk-media-query($until: desktop) {
-    display: block;
-  }
-
-  .js-enabled [hidden],
-  .js-enabled &[hidden] {
-    display: none;
   }
 }
 
@@ -92,6 +76,10 @@ $_current-indicator-width: 4px;
   &:last-child {
     border-bottom: none;
   }
+}
+
+.app-subnav__topic-heading {
+  font: inherit;
 }
 
 .app-subnav__link {

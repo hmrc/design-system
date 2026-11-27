@@ -21,6 +21,7 @@ const pathFromRoot = require('../../util/pathFromRoot')
 const projectRoot = pathFromRoot()
 
 const pattern = '**/*{.njk,.html}'
+const sections = require('../../lib/navigation.json')
 
 gulp.task('compile', (done) => {
   console.log('Metalsmith build starting')
@@ -36,7 +37,7 @@ gulp.task('compile', (done) => {
       directoryIndex: 'index.njk'
     }))
     .use(section())
-    .use(navigation())
+    .use(navigation(sections))
     .use(rollup({
       input: pathFromRoot('application', 'assets', 'javascripts', 'hmrc-design-system.js'),
       output: {

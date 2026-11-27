@@ -1,7 +1,71 @@
 {% from "hmrc/components/internal-header/macro.njk"  import hmrcInternalHeader %}
+{% from "_serviceNavigation.njk" import govukServiceNavigation %}
+
+{% set navigationItems = [] %}
+{% for section in navigation %}
+  {% set isSectionActive = filepath.startsWith(section.href) %}
+  {% set isSectionCurrent = filepath === section.href ~ "/" %}
+  {% set showSubSection = section.items and isSectionActive %}
+  {% set subsection = '' %}
+
+
+  {% if showSubSection %}
+    {% set subsection %}
+      <a href="/{{- section.href -}}/"
+        class="govuk-service-navigation__link app-service-navigation__link"
+        {%- if isSectionActive or isSectionCurrent %} aria-current="{{ 'page' if isSectionCurrent else 'true' }}"{% endif %}
+      >{{ section.text }}</a>
+
+      <div class="app-mobile-subnav">
+        {% for placement, items in section.items | groupby("placement") %}
+          <ul class="app-mobile-subnav__section" aria-label="{{ section.text if placement === "primary" else "Related guidance" }}">
+            {% for topic, items in items | groupby("topic") %}
+                {% if topic !== 'none' %}
+                  <li class="app-mobile-subnav__topic-item">
+                    <h3 class="app-mobile-subnav__topic-heading">{{ topic }}</h3>
+                    <ul class="app-mobile-subnav__topic-list" aria-label="{{ topic }}">
+                {% endif %}
+
+                {% for item in items %}
+                  {% set isItemCurrent = filepath === item.href ~ "/" %}
+                  <li class="app-mobile-subnav__section-item {%- if isItemCurrent %} app-mobile-subnav__section-item--active{% endif %}">
+                    <a
+                      class="govuk-service-navigation__link app-service-navigation__link"
+                      href="/{{- item.href -}}/"
+                      {%- if isItemCurrent %} aria-current="page"{% endif %}
+                    >{{item.text}}</a>
+                  </li>
+                {% endfor %}
+
+                {% if topic !== 'none' %}
+                  </ul>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+    {% endset %}
+  {% endif %}
+
+  {% set navigationItems = (navigationItems.push({
+    href: ("/" ~ section.href ~ "/" if not showSubSection),
+    text: section.text,
+    html: (subsection if showSubSection or isSectionActive else section.text),
+    active: isSectionActive,
+    current: isSectionCurrent
+  }), navigationItems) %}
+{% endfor %}
 
 {{ hmrcInternalHeader({
   homepageUrl: 'https://www.gov.uk/government/organisations/hm-revenue-customs',
-  serviceName: 'Design resources',
+  serviceName: serviceName,
   serviceUrl: '/'
 }) }}
+
+{{ govukServiceNavigation({
+  navigation: navigationItems,
+  classes: "app-service-navigation",
+  navigationLabel: "Sections menu"
+}) }}
+
